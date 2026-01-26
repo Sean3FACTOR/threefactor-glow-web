@@ -31,7 +31,7 @@ const Authority = () => {
             Proven Cloud Security.
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
-            We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need.
+            We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need. Securing the cloud requires more than just tools; it requires architectural expertise. As the largest provider of advisory and engineering services to the cloud market, we help you build security into every layer of your environment.
           </p>
         </div>
 
