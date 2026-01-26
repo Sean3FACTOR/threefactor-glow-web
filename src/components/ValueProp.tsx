@@ -38,7 +38,7 @@ const ValueProp = () => {
         {/* Experience Statement */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises across every major industry. We don't guess; we know the specific risks facing your sector. We provide the customized leadership, staffing, and technical skills required to build resilience and secure executive confidence.
+            Since 2008, 3FACTOR has served as the trusted advisor to thousands of enterprises across every major industry. We don't guess; we know the specific risks facing your sector. We provide the customized leadership, staffing, and technical skills required to build resilience and secure executive confidence.
           </p>
         </div>
 

@@ -94,7 +94,7 @@ const ComplianceServicesPage = () => {
                 <TrendingUp className="w-10 h-10 text-primary" strokeWidth={1} />
               </div>
               <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
-                With 3Factor
+                With 3FACTOR
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-8">
                 The Path
@@ -165,7 +165,7 @@ const ComplianceServicesPage = () => {
             <Button 
               asChild 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
             >
               <Link to="/contact">
                 Schedule a Discovery Call

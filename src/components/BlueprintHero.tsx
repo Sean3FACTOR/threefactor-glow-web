@@ -51,11 +51,11 @@ const BlueprintHero = ({
               {subhead}
             </p>
 
-            {/* CTA Button */}
+            {/* CTA Button - Grey default → Orange hover */}
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
             >
               <Link to={ctaLink}>
                 {ctaText}

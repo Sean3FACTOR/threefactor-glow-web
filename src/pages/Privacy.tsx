@@ -15,7 +15,7 @@ const Privacy = () => {
             
             <div className="prose prose-invert max-w-none space-y-8 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                At 3Factor, we value your privacy and are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your information when you visit our website.
+                At 3FACTOR, we value your privacy and are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your information when you visit our website.
               </p>
 
               <section>

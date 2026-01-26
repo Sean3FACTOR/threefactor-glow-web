@@ -56,7 +56,7 @@ const AboutSection = () => {
             About Us
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4">
-            Why 3Factor?
+            Why 3FACTOR?
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
             True security requires objectivity. We act as an extension of your leadership team, delivering programs based on your needs, not sales quotas.
