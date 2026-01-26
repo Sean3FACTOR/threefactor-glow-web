@@ -11,10 +11,9 @@ import {
 import Logo from "@/assets/3F_Grey.png";
 
 const serviceItems = [
-  { name: "Compliance Services", href: "/services/compliance" },
-  { name: "Strategy & Risk Services", href: "/services/strategy-risk" },
-  { name: "Cyber Defense Services", href: "/services/cyber-defense" },
-  { name: "Cyber Maturity Assessment (AWS)", href: "/services/cyber-maturity-aws" },
+  { name: "Compliance", href: "/services/compliance" },
+  { name: "Cyber Risk Advisory", href: "/services/cyber-defense" },
+  { name: "Cloud Security", href: "/services/strategy-risk" },
 ];
 
 const Navigation = () => {
