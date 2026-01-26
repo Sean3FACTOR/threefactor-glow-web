@@ -2,65 +2,57 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-architecture.jpg";
-import greyLogo from "@/assets/3F_Grey.png";
+import whiteLogo from "@/assets/White_3F_logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      {/* Background Image with Gradient Fade */}
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Architectural precision - steel cables" 
+          alt="Steel suspension cables - architectural precision" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        {/* Gradient fade to white on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       </div>
 
-      {/* Large 3F Logo on the right */}
+      {/* 3F Logo Overlay - Right Side */}
       <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 z-[5] hidden md:block">
         <img 
-          src={greyLogo} 
+          src={whiteLogo} 
           alt="3Factor" 
           className="w-64 lg:w-80 xl:w-96 opacity-100"
         />
       </div>
 
+      {/* Content */}
       <div className="container relative z-10 mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
-          {/* Tagline */}
-          <span className="text-sm text-primary uppercase tracking-[0.3em] font-semibold mb-6 block">
-            Enterprise Security Advisory
-          </span>
-
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] tracking-tight">
-            <span className="block text-foreground">Expert Security</span>
-            <span className="block text-foreground">Strategies Built</span>
-            <span className="block text-muted-foreground">to Last.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
+            Expert Security Strategies Built to Last.
           </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-xl leading-relaxed font-light">
-            Move beyond checklists. We architect security programs that protect your value and accelerate your growth.
+          
+          {/* Subhead */}
+          <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl leading-relaxed">
+            We move beyond standard checklists. We tailor proactive defenses to your specific needs, ensuring your most valuable assets are protected by systems you can believe in.
           </p>
-
-          {/* CTA */}
-          <Link to="/contact">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all group"
-            >
-              Book Your Strategy Session
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          
+          {/* CTA Button - Solid Orange with White Arrow */}
+          <div className="mt-12">
+            <Link to="/contact">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
+              >
+                Book Your Strategy Session
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[1px] h-16 bg-gradient-to-b from-muted-foreground/50 to-transparent" />
       </div>
     </section>
   );
