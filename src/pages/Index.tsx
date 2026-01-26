@@ -1,7 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import ValueProp from "@/components/ValueProp";
-import Authority from "@/components/Authority";
 import TheHow from "@/components/TheHow";
 import AboutSection from "@/components/AboutSection";
 import TheWho from "@/components/TheWho";
@@ -14,8 +12,6 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
-      <ValueProp />
-      <Authority />
       <TheHow />
       <AboutSection />
       <TheWho />
