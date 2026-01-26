@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TheHow from "@/components/TheHow";
-import Authority from "@/components/Authority";
 import AboutSection from "@/components/AboutSection";
 import TheWho from "@/components/TheWho";
 import CTASection from "@/components/CTASection";
@@ -14,7 +13,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       <TheHow />
-      <Authority />
       <AboutSection />
       <TheWho />
       <CTASection />
