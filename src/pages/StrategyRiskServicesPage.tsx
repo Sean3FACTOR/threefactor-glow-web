@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack, Lock } from "lucide-react";
+import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -56,7 +56,6 @@ const StrategyRiskServicesPage = () => {
         subhead="We don't just scan for bugs; we architect the environment. Build security into your infrastructure from day one."
         ctaText="See Cloud Solutions"
         ctaLink="/contact"
-        OverlayIcon={Lock}
       />
 
       {/* Proven Cloud Security - Authority Section */}
