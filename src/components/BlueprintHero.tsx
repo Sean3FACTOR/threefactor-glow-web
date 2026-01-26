@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import greyLogo from "@/assets/3F_Grey.png";
 import hexagonNetwork from "@/assets/hexagon-network.png";
@@ -10,7 +10,6 @@ interface BlueprintHeroProps {
   subhead: string;
   ctaText: string;
   ctaLink: string;
-  OverlayIcon: LucideIcon;
 }
 
 const BlueprintHero = ({
@@ -19,7 +18,6 @@ const BlueprintHero = ({
   subhead,
   ctaText,
   ctaLink,
-  OverlayIcon,
 }: BlueprintHeroProps) => {
   return (
     <section className="pt-32 pb-20 relative overflow-hidden">
@@ -70,7 +68,7 @@ const BlueprintHero = ({
           <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
             {/* Layer 1: Hexagon Network Texture - Background Pattern */}
             <div 
-              className="absolute inset-0 opacity-25"
+              className="absolute inset-0 opacity-50"
               style={{
                 backgroundImage: `url(${hexagonNetwork})`,
                 backgroundSize: 'cover',
@@ -82,21 +80,13 @@ const BlueprintHero = ({
               aria-hidden="true"
             />
 
-            {/* Layer 2: 3F Grey Logo - Brand Anchor Watermark */}
+            {/* Layer 2: 3F Grey Logo - Brand Anchor (in front of hexagons) */}
             <img
               src={greyLogo}
               alt=""
-              className="absolute w-80 lg:w-96 opacity-10 grayscale select-none pointer-events-none"
+              className="relative z-10 w-48 lg:w-56 opacity-40 grayscale select-none pointer-events-none"
               aria-hidden="true"
             />
-
-            {/* Layer 3: Orange Vector Icon Overlay - Service Identifier */}
-            <div className="relative z-10">
-              <OverlayIcon
-                className="w-32 h-32 lg:w-40 lg:h-40 text-primary"
-                strokeWidth={1.5}
-              />
-            </div>
           </div>
         </div>
       </div>
