@@ -80,11 +80,11 @@ const BlueprintHero = ({
               aria-hidden="true"
             />
 
-            {/* Layer 2: 3F Grey Logo - Brand Anchor (in front of hexagons) */}
+            {/* Layer 2: 3F Logo - Brand Anchor (in front of hexagons) */}
             <img
               src={greyLogo}
               alt=""
-              className="relative z-10 w-48 lg:w-56 opacity-40 grayscale select-none pointer-events-none"
+              className="relative z-10 w-48 lg:w-56 opacity-50 select-none pointer-events-none"
               aria-hidden="true"
             />
           </div>
