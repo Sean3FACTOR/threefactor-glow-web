@@ -14,6 +14,7 @@ const serviceItems = [
   { name: "Compliance", href: "/services/compliance" },
   { name: "Cyber Risk Advisory", href: "/services/cyber-defense" },
   { name: "Cloud Security", href: "/services/strategy-risk" },
+  { name: "Virtual CISO", href: "/services/vciso" },
 ];
 
 const Navigation = () => {
