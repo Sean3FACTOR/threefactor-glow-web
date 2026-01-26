@@ -1,61 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import greyLogo from "@/assets/3F_Grey.png";
+import heroImage from "@/assets/hero-architecture.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="container relative z-10 mx-auto px-4 pt-24 pb-16">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Logo */}
-          <div className="mb-8">
-            <img 
-              src={greyLogo} 
-              alt="3FACTOR - Cybersecurity Consulting" 
-              className="h-40 md:h-56 lg:h-64 w-auto object-contain"
-            />
-          </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="Architectural precision - steel cables" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-3xl">
+          {/* Tagline */}
+          <span className="text-sm text-primary uppercase tracking-[0.3em] font-semibold mb-6 block">
+            Enterprise Security Advisory
+          </span>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-[1.1]">
-            <span className="block text-foreground">Unmatched Expertise.</span>
-            <span className="block text-muted-foreground">Unfettered Advice.</span>
-            <span className="block text-foreground">Believable Security.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] tracking-tight">
+            <span className="block text-foreground">Expert Security</span>
+            <span className="block text-foreground">Strategies Built</span>
+            <span className="block text-muted-foreground">to Last.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            3FACTOR is a different kind of cybersecurity consulting and advisory firm. 
-            We focus on solving unique cybersecurity problems with customized white-glove solutions.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-xl leading-relaxed font-light">
+            Move beyond checklists. We architect security programs that protect your value and accelerate your growth.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all"
-              >
-                Get a Risk Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          {/* CTA */}
+          <Link to="/contact">
             <Button 
-              variant="outline"
               size="lg" 
-              className="border-border text-foreground font-semibold text-lg px-8 py-6 w-full sm:w-auto hover:bg-muted transition-all"
-              onClick={() => {
-                const element = document.getElementById("services");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-all group"
             >
-              Learn More
+              Book Your Strategy Session
+              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </div>
+          </Link>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-[1px] h-16 bg-gradient-to-b from-muted-foreground/50 to-transparent" />
       </div>
     </section>
   );
