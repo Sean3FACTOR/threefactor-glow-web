@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
           {/* Headline - Split into two lines */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
             Expert Security Strategies,
             <span className="block mt-2">Built to Last.</span>
           </h1>
