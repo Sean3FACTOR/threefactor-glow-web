@@ -1,23 +1,23 @@
-import { Cloud, Shield, AlertTriangle } from "lucide-react";
+import { Cloud, Shield, FileStack } from "lucide-react";
 
 const stats = [
   {
     icon: Cloud,
     stat: "9 of 10",
     label: "Top Cloud Providers",
-    description: "Our team includes the lead architects who secured 9 of the top 10 Cloud Service Providers.",
+    context: "Our team includes the lead architects who secured 9 of the top 10 Cloud Service Providers.",
   },
   {
     icon: Shield,
     stat: "FedRAMP",
     label: "Industry Standard",
-    description: "Navigate FedRAMP with a leadership team that defined the industry standard for cloud authorization.",
+    context: "Navigate FedRAMP with a leadership team that defined the industry standard for cloud authorization.",
   },
   {
-    icon: AlertTriangle,
-    stat: "6 of 10",
-    label: "Major Breaches",
-    description: "Our principals led the recovery on the frontlines of 6 of the 10 largest security breaches in North America.",
+    icon: FileStack,
+    stat: "Architecture",
+    label: "First",
+    context: "We built the security standards the big cloud providers use. Now, we use those same standards to build yours.",
   },
 ];
 
@@ -27,41 +27,38 @@ const Authority = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-sm text-primary uppercase tracking-[0.3em] font-semibold">
-            Proven Leadership
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-6">
-            We've Been There.
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Proven Cloud Security.
           </h2>
+          <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+            We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need.
+          </p>
         </div>
 
-        {/* Trust Grid */}
-        <div className="grid md:grid-cols-3 gap-px bg-border max-w-6xl mx-auto">
+        {/* Trust Grid - Three Columns */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {stats.map((item) => (
-            <div
-              key={item.label}
-              className="bg-card p-10 md:p-12 text-center group hover:bg-muted/30 transition-colors"
-            >
-              {/* Icon */}
-              <div className="mb-6 flex justify-center">
-                <div className="w-16 h-16 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                  <item.icon className="w-7 h-7 text-muted-foreground group-hover:text-primary transition-colors" strokeWidth={1.5} />
-                </div>
+            <div key={item.label} className="text-center">
+              {/* Icon in Light Grey Circle */}
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-muted border border-border mb-8">
+                <item.icon className="w-10 h-10 text-muted-foreground" strokeWidth={1} />
               </div>
-
-              {/* Stat */}
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                {item.stat}
+              
+              {/* Massive Bold Stat */}
+              <div className="mb-2">
+                <span className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
+                  {item.stat}
+                </span>
               </div>
-
+              
               {/* Label */}
-              <div className="text-sm uppercase tracking-[0.15em] text-primary font-semibold mb-6">
+              <span className="text-lg font-semibold text-foreground">
                 {item.label}
-              </div>
-
-              {/* Description */}
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {item.description}
+              </span>
+              
+              {/* Context - Small and Crisp */}
+              <p className="text-sm text-muted-foreground mt-4 leading-relaxed max-w-xs mx-auto">
+                {item.context}
               </p>
             </div>
           ))}
