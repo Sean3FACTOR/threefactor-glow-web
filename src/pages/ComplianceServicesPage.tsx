@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Grid3X3, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, Grid3X3, TrendingUp, CheckSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -137,15 +137,13 @@ const ComplianceServicesPage = () => {
           </div>
           
           <div className="max-w-3xl mx-auto">
-            {certifications.map((cert, index) => (
+            {certifications.map((cert) => (
               <div 
                 key={cert.title}
                 className="border-b border-border last:border-b-0 py-8 first:pt-0 last:pb-0"
               >
-                <div className="flex items-start gap-6">
-                  <span className="text-4xl font-bold text-primary/20 leading-none">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
+                <div className="flex items-start gap-4">
+                  <CheckSquare className="w-6 h-6 text-muted-foreground/50 mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
                       {cert.title}
