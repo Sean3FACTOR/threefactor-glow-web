@@ -59,10 +59,10 @@ const services = [
 
 const TheHow = () => {
   return (
-    <section className="py-24 relative bg-background">
+    <section className="py-16 relative bg-background border-t border-border">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Our Services.
           </h2>

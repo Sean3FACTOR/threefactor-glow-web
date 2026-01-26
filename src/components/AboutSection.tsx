@@ -48,10 +48,10 @@ const aboutCards = [
 
 const AboutSection = () => {
   return (
-    <section id="company" className="py-24 relative bg-background">
+    <section id="company" className="py-16 relative bg-background border-t border-border">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
             About Us
           </span>

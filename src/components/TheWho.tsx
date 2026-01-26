@@ -3,9 +3,9 @@ import { Users, Wrench } from "lucide-react";
 
 const TheWho = () => {
   return (
-    <section className="py-32 relative bg-card border-y border-border">
+    <section className="py-16 relative bg-card border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left - Image (Grainy, Documentary Style) */}
           <div className="relative group">
             <div className="aspect-[4/3] overflow-hidden">

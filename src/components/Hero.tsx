@@ -6,7 +6,7 @@ import greyLogo from "@/assets/3F_Grey.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-background">
       {/* Background Image with increased transparency */}
       <div className="absolute inset-0">
         <img 

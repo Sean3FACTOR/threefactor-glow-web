@@ -22,19 +22,19 @@ const steps = [
 
 const CTASection = () => {
   return (
-    <section className="py-32 relative bg-background">
+    <section className="py-16 relative bg-background border-t border-border">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Ready to scale?
           </h2>
-          <p className="text-xl text-muted-foreground mb-20">
+          <p className="text-xl text-muted-foreground mb-12">
             Don't wait for a breach or a failed audit.
           </p>
 
           {/* Horizontal Timeline / Roadmap */}
-          <div className="relative flex items-start justify-center mb-20">
+          <div className="relative flex items-start justify-center mb-12">
             {/* Connecting Orange Line */}
             <div className="absolute top-10 left-1/4 right-1/4 h-[3px] bg-primary hidden md:block" />
             
