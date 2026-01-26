@@ -1,7 +1,7 @@
-import monolithFoundation from "@/assets/about/monolith-foundation.jpg";
-import impactResistance from "@/assets/about/impact-resistance.jpg";
-import schematicPlanning from "@/assets/about/schematic-planning.jpg";
-import bridgeConnection from "@/assets/about/bridge-connection.jpg";
+import globeExperience from "@/assets/about/globe-experience.jpg";
+import shieldProtection from "@/assets/about/shield-protection.jpg";
+import lensClarity from "@/assets/about/lens-clarity.jpg";
+import partnershipInterlock from "@/assets/about/partnership-interlock.jpg";
 
 const aboutCards = [
   {
@@ -11,8 +11,8 @@ const aboutCards = [
       "Lineage from the world's most respected global security firms.",
       "Decades of practical, hands-on leadership—not just theory.",
     ],
-    image: monolithFoundation,
-    imageAlt: "Pristine white marble cornerstone representing foundational strength",
+    image: globeExperience,
+    imageAlt: "White wireframe globe representing global experience",
   },
   {
     headline: "Battle-Tested in the Biggest Breaches.",
@@ -21,8 +21,8 @@ const aboutCards = [
       "Strategies based on frontline reality, not textbook theory.",
       "Proven crisis management for attorneys and public officials.",
     ],
-    image: impactResistance,
-    imageAlt: "Layered bullet-resistant glass representing protection under pressure",
+    image: shieldProtection,
+    imageAlt: "Layered impact-resistant glass representing protection under pressure",
   },
   {
     headline: "Security That Speaks Your Language.",
@@ -31,8 +31,8 @@ const aboutCards = [
       "Evolve your culture from 'security as a blocker' to 'security as an asset.'",
       "Transform your organization into a vertical leader.",
     ],
-    image: schematicPlanning,
-    imageAlt: "White architectural blueprints representing precision planning",
+    image: lensClarity,
+    imageAlt: "Optical lens focusing light representing clarity and translation",
   },
   {
     headline: "A True Trusted Advisor.",
@@ -41,8 +41,8 @@ const aboutCards = [
       "Long-term partnership beyond the immediate project scope.",
       "Vendor-agnostic advice with zero product sales agendas.",
     ],
-    image: bridgeConnection,
-    imageAlt: "White tension cable representing connection and support",
+    image: partnershipInterlock,
+    imageAlt: "Interlocking geometric shapes representing partnership",
   },
 ];
 
@@ -87,14 +87,14 @@ const AboutSection = () => {
                   {card.headline}
                 </h3>
 
-                {/* Bullet Points */}
+                {/* Bullet Points - Dark Charcoal */}
                 <ul className="space-y-2 flex-grow">
                   {card.bullets.map((bullet, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-2 text-sm text-muted-foreground"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#333333] mt-1.5 shrink-0" />
                       {bullet}
                     </li>
                   ))}
