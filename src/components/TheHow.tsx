@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import keyUnlock from "@/assets/services/key-unlock.jpg";
 import chessStrategy from "@/assets/services/chess-strategy.jpg";
-import networkMesh from "@/assets/services/network-mesh.jpg";
-import compassDirection from "@/assets/services/compass-direction.jpg";
+import vaultCompliance from "@/assets/services/vault-compliance.jpg";
+import compassLeadership from "@/assets/services/compass-leadership.jpg";
 
 const services = [
   {
@@ -17,7 +17,7 @@ const services = [
     linkText: "Explore Compliance",
     href: "/services/compliance",
     image: keyUnlock,
-    imageAlt: "Silver key entering lock mechanism representing unlocking new markets",
+    imageAlt: "Polished silver skeleton key on white surface representing unlocking new markets",
   },
   {
     headline: "Protect Enterprise Value.",
@@ -29,7 +29,7 @@ const services = [
     linkText: "View Advisory Services",
     href: "/services/cyber-defense",
     image: chessStrategy,
-    imageAlt: "Crystal chess piece representing strategic thinking",
+    imageAlt: "Clear crystal chess king piece representing board-level strategy",
   },
   {
     headline: "Proven Cloud Security.",
@@ -40,8 +40,8 @@ const services = [
     ],
     linkText: "See Cloud Solutions",
     href: "/services/strategy-risk",
-    image: networkMesh,
-    imageAlt: "Abstract white mesh network representing cloud architecture",
+    image: vaultCompliance,
+    imageAlt: "Chrome bank vault locking bolts representing security and strength",
   },
   {
     headline: "Executive Leadership on Demand.",
@@ -52,8 +52,8 @@ const services = [
     ],
     linkText: "Explore vCISO Plans",
     href: "/services/vciso",
-    image: compassDirection,
-    imageAlt: "Silver nautical compass representing guidance and direction",
+    image: compassLeadership,
+    imageAlt: "Executive hand pointing at architectural blueprint representing leadership guidance",
   },
 ];
 
