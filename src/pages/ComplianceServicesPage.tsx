@@ -60,8 +60,11 @@ const ComplianceServicesPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground uppercase tracking-[0.15em]">
+            <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
               The Value Proposition
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
+              Turn Compliance Into Revenue.
             </h2>
           </div>
 
