@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Grid3X3, TrendingUp, CheckSquare, Key } from "lucide-react";
+import { ArrowRight, Grid3X3, TrendingUp, CheckSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -54,7 +54,6 @@ const ComplianceServicesPage = () => {
         subhead="Don't just tick boxes. We navigate the maze of regulated data to help you achieve the certifications that unlock new markets and close bigger deals."
         ctaText="Explore Compliance"
         ctaLink="/contact"
-        OverlayIcon={Key}
       />
 
       {/* Value Proposition Section */}
