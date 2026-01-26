@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 z-[5] hidden md:block">
         <img 
           src={greyLogo} 
-          alt="3Factor" 
+          alt="3FACTOR" 
           className="w-64 lg:w-80 xl:w-96 opacity-100"
         />
       </div>
@@ -47,12 +47,12 @@ const Hero = () => {
             <span className="text-sm font-medium text-foreground">Unbiased Expertise. No Product Agendas.</span>
           </div>
           
-          {/* CTA Button - Solid Orange with White Arrow */}
+          {/* CTA Button - Grey default → Orange hover */}
           <div className="mt-12">
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
+                className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
               >
                 Book Your Strategy Session
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -124,13 +124,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button asChild className="bg-foreground hover:bg-foreground/90 text-background font-semibold px-6 shadow-md">
-              <Link to="/contact">Let's Talk</Link>
-            </Button>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden text-foreground"
@@ -181,9 +174,6 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild className="bg-foreground hover:bg-foreground/90 text-background font-semibold w-full mt-2">
-                <Link to="/contact">Let's Talk</Link>
-              </Button>
             </div>
           </div>
         )}

@@ -259,7 +259,7 @@ const VCISOPage = () => {
               <p className="text-muted-foreground mb-8">
                 Schedule a discovery call to discuss your security needs and find the right plan for your organization.
               </p>
-              <Button asChild className="glow-button bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button asChild className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors">
                 <Link to="/contact">Schedule a Discovery Call</Link>
               </Button>
             </div>
