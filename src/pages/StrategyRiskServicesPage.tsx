@@ -1,25 +1,45 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Settings, Shield, Code } from "lucide-react";
+import { ArrowLeft, ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import vaultImage from "@/assets/services/vault-compliance.jpg";
 
-const pillars = [
+const authorityStats = [
   {
-    icon: Settings,
-    title: "Cloud Config Review",
-    description: "Validate AWS/Azure/GCP against hardening standards. We audit your cloud configuration to identify misconfigurations and security gaps before attackers do.",
+    icon: Cloud,
+    stat: "9 of 10",
+    label: "Top Cloud Providers",
+    context: "Our team includes the lead architects who secured 9 of the top 10 Cloud Service Providers.",
   },
   {
     icon: Shield,
-    title: "Authorization Experts",
-    description: "Unlock Federal markets with proven architecture. Our team has guided dozens of organizations through FedRAMP and other government authorization processes.",
+    stat: "FedRAMP",
+    label: "Industry Standard",
+    context: "Navigate FedRAMP with a leadership team that defined the industry standard for cloud authorization.",
+  },
+  {
+    icon: FileStack,
+    stat: "Architecture",
+    label: "First",
+    context: "We built the security standards the big cloud providers use. Now, we use those same standards to build yours.",
+  },
+];
+
+const pillars = [
+  {
+    icon: Cloud,
+    title: "Cloud Architecture Review",
+    description: "Whether you are new to the cloud, migrating, or developing a new architecture, our certified cloud security experts help you implement, maintain, and optimize the security of your cloud environments.",
   },
   {
     icon: Code,
-    title: "Engineering First",
-    description: "Build security into every layer, from code to container. We embed security controls into your development pipeline, not as an afterthought.",
+    title: "Application Security",
+    description: "Applications have become the security Achilles heel in most organizations. Our Secure Software Development (SSDLC) experts will help you build and maintain secure applications from the ground up.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Continuous Monitoring",
+    description: "Security doesn't stop at deployment. We help you implement the tools, processes, and alerting needed to detect and respond to threats in real-time across your cloud infrastructure.",
   },
 ];
 
@@ -28,21 +48,9 @@ const StrategyRiskServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Architectural Split Hero */}
-      <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
-        {/* Blended Watermark Image - Right Side */}
-        <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none hidden md:block">
-          <img 
-            src={vaultImage} 
-            alt=""
-            className="w-full h-full object-cover opacity-[0.18]"
-          />
-          {/* Gradient fade to blend into white */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        <div className="container mx-auto px-4">
           <Link 
             to="/" 
             className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
@@ -51,51 +59,94 @@ const StrategyRiskServicesPage = () => {
             Back to Home
           </Link>
           
-          <div className="max-w-2xl">
-            {/* Breadcrumb Label */}
+          <div className="max-w-4xl">
+            {/* Breadcrumb */}
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium text-primary">Services</span>
               <span className="text-muted-foreground">/</span>
-              <span className="text-sm text-muted-foreground">Cloud Security Architecture</span>
+              <span className="text-sm text-muted-foreground">Cloud Security</span>
             </div>
             
-            {/* H1 Headline */}
+            {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Secure the Providers<br />Who Build the Cloud.
+              Secure Your Cloud<br />From the Ground Up.
             </h1>
             
-            {/* Subhead */}
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
-              We don't just scan for bugs. We architect the environment. From FedRAMP strategy to final code, we build security into the foundation of your infrastructure.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+              The cloud changes everything—including your attack surface. Our certified experts help you build, migrate, and operate secure cloud environments with confidence.
             </p>
             
-            {/* CTA Button */}
             <Button 
               asChild 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link to="/contact">
                 Secure Your Cloud
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
+          </div>
+        </div>
+        
+        {/* Visual: Cloud/abstract geometric pattern */}
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-l from-primary/20 to-transparent" />
+        </div>
+      </section>
+
+      {/* Proven Cloud Security - Authority Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Proven Cloud Security.
+            </h2>
+            <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+              We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need. Securing the cloud requires more than just tools; it requires architectural expertise. As the largest provider of advisory and engineering services to the cloud market, we help you build security into every layer of your environment.
+            </p>
+          </div>
+
+          {/* Trust Grid - Three Columns */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {authorityStats.map((item) => (
+              <div key={item.label} className="text-center">
+                {/* Icon in Light Grey Circle */}
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-background border border-border mb-8">
+                  <item.icon className="w-10 h-10 text-muted-foreground" strokeWidth={1} />
+                </div>
+                
+                {/* Massive Bold Stat */}
+                <div className="mb-2">
+                  <span className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
+                    {item.stat}
+                  </span>
+                </div>
+                
+                {/* Label */}
+                <span className="text-lg font-semibold text-foreground">
+                  {item.label}
+                </span>
+                
+                {/* Context - Small and Crisp */}
+                <p className="text-sm text-muted-foreground mt-4 leading-relaxed max-w-xs mx-auto">
+                  {item.context}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* The Pillars */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
-              Our Expertise
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Cloud Security Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Three ways we help you build security into your cloud infrastructure.
+              Three ways we help you secure your cloud transformation.
             </p>
           </div>
           
@@ -105,8 +156,8 @@ const StrategyRiskServicesPage = () => {
                 key={pillar.title}
                 className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
               >
-                <div className="w-14 h-14 rounded-full bg-muted border border-border flex items-center justify-center mb-6">
-                  <pillar.icon className="w-7 h-7 text-muted-foreground" strokeWidth={1.5} />
+                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-4">
@@ -123,7 +174,7 @@ const StrategyRiskServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
