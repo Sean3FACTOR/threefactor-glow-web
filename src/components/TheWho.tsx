@@ -7,13 +7,12 @@ const TheWho = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Left - Image (Grainy, Documentary Style) */}
-          <div className="relative">
+          <div className="relative group">
             <div className="aspect-[4/3] overflow-hidden">
               <img 
                 src={teamWorking} 
                 alt="Team working at whiteboard" 
-                className="w-full h-full object-cover grayscale contrast-125"
-                style={{ filter: 'grayscale(100%) contrast(1.1)' }}
+                className="w-full h-full object-cover img-grayscale-hover contrast-125"
               />
             </div>
             {/* Accent Line */}

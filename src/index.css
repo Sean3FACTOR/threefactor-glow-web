@@ -145,4 +145,14 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent;
   }
+
+  /* Grayscale to color hover effect */
+  .img-grayscale-hover {
+    @apply grayscale transition-all duration-500;
+  }
+
+  .group:hover .img-grayscale-hover,
+  .img-grayscale-hover:hover {
+    @apply grayscale-0;
+  }
 }
