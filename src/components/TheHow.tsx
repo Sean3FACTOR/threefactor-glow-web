@@ -1,4 +1,4 @@
-import { FileCheck, Shield, Cloud, ArrowRight } from "lucide-react";
+import { FileCheck, Shield, Cloud, UserCheck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -23,6 +23,13 @@ const services = [
     linkText: "See Cloud Solutions",
     href: "/services/strategy-risk",
   },
+  {
+    icon: UserCheck,
+    title: "Virtual CISO",
+    description: "Get executive-level security leadership without the executive-level price tag. Fixed monthly cost, no surprises.",
+    linkText: "Explore vCISO Plans",
+    href: "/services/vciso",
+  },
 ];
 
 const TheHow = () => {
@@ -37,14 +44,14 @@ const TheHow = () => {
         </div>
 
         {/* Clickable Card Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {services.map((service) => (
             <Link
               key={service.title}
               to={service.href}
               className="group block"
             >
-              <div className="h-full p-8 bg-background border border-border rounded-lg transition-all duration-300 hover:border-primary hover:shadow-lg">
+              <div className="h-full p-8 bg-background border border-border rounded-lg transition-all duration-300 hover:border-primary hover:shadow-lg flex flex-col">
                 {/* Icon */}
                 <div className="w-16 h-16 rounded-full bg-muted border border-border flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-primary/10 group-hover:border-primary">
                   <service.icon 
@@ -59,12 +66,12 @@ const TheHow = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   {service.description}
                 </p>
 
-                {/* Link */}
-                <span className="inline-flex items-center text-muted-foreground font-medium transition-all duration-300 group-hover:text-primary group-hover:underline">
+                {/* Link - Always at bottom */}
+                <span className="inline-flex items-center text-muted-foreground font-medium transition-all duration-300 group-hover:text-primary group-hover:underline mt-auto">
                   {service.linkText}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
