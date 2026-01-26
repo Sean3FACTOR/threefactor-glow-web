@@ -2,26 +2,26 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-architecture.jpg";
-import whiteLogo from "@/assets/White_3F_logo.png";
+import greyLogo from "@/assets/3F_Grey.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Background Image with Gradient Fade */}
+      {/* Background Image with increased transparency */}
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
           alt="Steel suspension cables - architectural precision" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-40"
         />
         {/* Gradient fade to white on the right */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       </div>
 
-      {/* 3F Logo Overlay - Right Side */}
+      {/* 3F Logo Overlay - Right Side (Grey) */}
       <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 z-[5] hidden md:block">
         <img 
-          src={whiteLogo} 
+          src={greyLogo} 
           alt="3Factor" 
           className="w-64 lg:w-80 xl:w-96 opacity-100"
         />
@@ -30,9 +30,10 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
-          {/* Headline */}
+          {/* Headline - Split into two lines */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
-            Expert Security Strategies Built to Last.
+            Expert Security Strategies,
+            <span className="block mt-2">Built to Last.</span>
           </h1>
           
           {/* Subhead */}
