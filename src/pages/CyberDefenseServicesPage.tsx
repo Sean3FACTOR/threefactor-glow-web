@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck, Crown } from "lucide-react";
+import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -59,7 +59,6 @@ const CyberDefenseServicesPage = () => {
         subhead="Stop getting lost in translation. We turn technical complexity into executive confidence and Board-level clarity."
         ctaText="View Advisory Services"
         ctaLink="/contact"
-        OverlayIcon={Crown}
       />
 
       {/* The 3 A's - How We Work */}

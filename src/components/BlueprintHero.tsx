@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import greyLogo from "@/assets/3F_Grey.png";
 import hexagonNetwork from "@/assets/hexagon-network.png";
@@ -10,7 +10,6 @@ interface BlueprintHeroProps {
   subhead: string;
   ctaText: string;
   ctaLink: string;
-  OverlayIcon?: LucideIcon;
 }
 
 const BlueprintHero = ({
@@ -19,7 +18,6 @@ const BlueprintHero = ({
   subhead,
   ctaText,
   ctaLink,
-  OverlayIcon,
 }: BlueprintHeroProps) => {
   return (
     <section className="pt-32 pb-20 relative overflow-hidden">
@@ -82,23 +80,13 @@ const BlueprintHero = ({
               aria-hidden="true"
             />
 
-            {/* Layer 2: 3F Logo - Brand Anchor Watermark (15% opacity) */}
+            {/* Layer 2: 3F Logo - Brand Anchor (more visible) */}
             <img
               src={greyLogo}
               alt=""
-              className="absolute w-56 lg:w-72 opacity-15 select-none pointer-events-none"
+              className="relative z-10 w-56 lg:w-72 opacity-60 select-none pointer-events-none"
               aria-hidden="true"
             />
-
-            {/* Layer 3: Orange Vector Icon Overlay - Service Identifier */}
-            {OverlayIcon && (
-              <div className="relative z-10">
-                <OverlayIcon
-                  className="w-28 h-28 lg:w-36 lg:h-36 text-primary"
-                  strokeWidth={1.25}
-                />
-              </div>
-            )}
           </div>
         </div>
       </div>
