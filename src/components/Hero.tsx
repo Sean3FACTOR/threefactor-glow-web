@@ -12,7 +12,7 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Steel suspension cables - architectural precision" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-40 grayscale"
         />
         {/* Gradient fade to white on the right */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />

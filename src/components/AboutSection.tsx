@@ -75,7 +75,7 @@ const AboutSection = () => {
                 <img
                   src={card.image}
                   alt={card.imageAlt}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-110 img-grayscale-hover"
                 />
                 {/* Orange accent line */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
