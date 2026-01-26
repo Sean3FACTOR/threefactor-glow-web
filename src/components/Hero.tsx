@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-architecture.jpg";
+import greyLogo from "@/assets/3F_Grey.png";
 
 const Hero = () => {
   return (
@@ -14,6 +15,15 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+      </div>
+
+      {/* Large 3F Logo on the right */}
+      <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 z-[5] hidden md:block">
+        <img 
+          src={greyLogo} 
+          alt="3Factor" 
+          className="w-64 lg:w-80 xl:w-96 opacity-20"
+        />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 pt-32 pb-20">
