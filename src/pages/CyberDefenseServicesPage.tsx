@@ -1,48 +1,25 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, UserCheck, Cloud, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
-const threeAs = [
-  {
-    icon: Search,
-    step: "Step 1",
-    title: "Assessment",
-    tagline: "Unvarnished Truth",
-    description: "We deliver a clear-eyed view of your security posture. No sugar-coating. No vendor bias. Just the facts your board needs to make decisions.",
-  },
-  {
-    icon: Compass,
-    step: "Step 2",
-    title: "Advisory",
-    tagline: "Closing the Gaps",
-    description: "We architect practical solutions that align with your business reality. Prioritized roadmaps that balance risk reduction with operational feasibility.",
-  },
-  {
-    icon: ShieldCheck,
-    step: "Step 3",
-    title: "Assurance",
-    tagline: "Proof for the Board",
-    description: "We provide the evidence and certifications that stakeholders, customers, and regulators demand. Defensible security that stands up to scrutiny.",
-  },
-];
+import chessImage from "@/assets/services/chess-strategy.jpg";
 
 const pillars = [
   {
     icon: UserCheck,
     title: "Virtual CISO",
-    description: "Get executive-level security leadership without the executive-level price tag. Our vCISOs integrate with your team to provide strategic direction and board-level communication.",
+    description: "Instant access to executive leadership. Our vCISOs integrate with your team to provide strategic direction and board-level communication without the full-time cost.",
   },
   {
-    icon: Target,
-    title: "Security Strategy",
-    description: "We translate technical threats into business risk. Our frameworks help you prioritize investments and communicate clearly with stakeholders.",
+    icon: Cloud,
+    title: "Cloud Architecture",
+    description: "Design scalable, compliant environments. We help you build cloud infrastructure that meets the most demanding security and regulatory requirements.",
   },
   {
-    icon: Users,
-    title: "Board Advisory",
-    description: "Cyber risk is business risk. We help you build the metrics, dashboards, and narratives that give your board confidence in your security posture.",
+    icon: FileText,
+    title: "Policy & Governance",
+    description: "Replace red tape with enforceable engineering standards. We create policies that actually work in practice, not just on paper.",
   },
 ];
 
@@ -51,9 +28,21 @@ const CyberDefenseServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="container mx-auto px-4">
+      {/* Architectural Split Hero */}
+      <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
+        {/* Blended Watermark Image - Right Side */}
+        <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none hidden md:block">
+          <img 
+            src={chessImage} 
+            alt=""
+            className="w-full h-full object-cover opacity-[0.18]"
+          />
+          {/* Gradient fade to blend into white */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <Link 
             to="/" 
             className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
@@ -62,109 +51,47 @@ const CyberDefenseServicesPage = () => {
             Back to Home
           </Link>
           
-          <div className="max-w-4xl">
-            {/* Breadcrumb */}
+          <div className="max-w-2xl">
+            {/* Breadcrumb Label */}
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium text-primary">Services</span>
               <span className="text-muted-foreground">/</span>
               <span className="text-sm text-muted-foreground">Cyber Risk Advisory</span>
             </div>
             
-            {/* Headline */}
+            {/* H1 Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Translate Technical Threats<br />Into Board-Level Strategy.
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the customized leadership and clarity required to build resilience and secure executive confidence.
+            {/* Subhead */}
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
+              Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the clarity required to build resilience and secure executive confidence.
             </p>
             
+            {/* CTA Button */}
             <Button 
               asChild 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
             >
               <Link to="/contact">
                 Get Strategic Guidance
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
           </div>
         </div>
-        
-        {/* Visual: Architecture imagery - grid pattern */}
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
-                               linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)`,
-              backgroundSize: '40px 40px'
-            }}
-          />
-        </div>
       </section>
 
-      {/* The 3 A's - How We Work */}
+      {/* The Pillars */}
       <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
-              The 3 A's
+            <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
+              Our Expertise
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
-              How We Work.
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A proven methodology that transforms security from a problem into a strategic advantage.
-            </p>
-          </div>
-          
-          {/* Timeline Grid */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-            {/* Connecting Line - Desktop Only */}
-            <div className="hidden md:block absolute top-[72px] left-1/6 right-1/6 h-px bg-border" style={{ left: '16%', right: '16%' }} />
-            
-            {threeAs.map((item) => (
-              <div key={item.title} className="text-center relative">
-                {/* Icon Circle */}
-                <div className="w-36 h-36 rounded-full bg-background border-2 border-border flex items-center justify-center mx-auto mb-6 relative z-10">
-                  <item.icon 
-                    className="w-12 h-12 text-primary" 
-                    strokeWidth={1} 
-                  />
-                </div>
-                
-                {/* Step Label */}
-                <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
-                  {item.step}
-                </span>
-                
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mt-2 mb-2">
-                  {item.title}
-                </h3>
-                
-                {/* Tagline */}
-                <span className="text-xs uppercase tracking-[0.15em] text-primary font-medium">
-                  {item.tagline}
-                </span>
-                
-                {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mt-4 max-w-xs mx-auto">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advisory Services */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Advisory Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -178,8 +105,8 @@ const CyberDefenseServicesPage = () => {
                 key={pillar.title}
                 className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                <div className="w-14 h-14 rounded-full bg-muted border border-border flex items-center justify-center mb-6">
+                  <pillar.icon className="w-7 h-7 text-muted-foreground" strokeWidth={1.5} />
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-4">
@@ -196,7 +123,7 @@ const CyberDefenseServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
