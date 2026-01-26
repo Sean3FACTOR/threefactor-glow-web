@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Search, Shield, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, Cloud, Code, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const pillars = [
   {
-    icon: Search,
-    title: "Cyber Maturity Assessment",
-    description: "We identify cyber risks and provide prioritized recommendations for remediation. Our methodology cuts through the noise to show you exactly where you're exposed.",
+    icon: Cloud,
+    title: "Cloud Architecture Review",
+    description: "Whether you are new to the cloud, migrating, or developing a new architecture, our certified cloud security experts help you implement, maintain, and optimize the security of your cloud environments.",
   },
   {
-    icon: Shield,
-    title: "Vendor Risk Management",
-    description: "We design pragmatic frameworks to help our clients reduce vendor risk. Know exactly who has access to your data and whether they deserve it.",
+    icon: Code,
+    title: "Application Security",
+    description: "Applications have become the security Achilles heel in most organizations. Our Secure Software Development (SSDLC) experts will help you build and maintain secure applications from the ground up.",
   },
   {
-    icon: TrendingUp,
-    title: "Return-on-Investment Analysis",
-    description: "We assess processes, tools and vendors to help maximize ROI. Stop spending on security theater and start investing in what actually moves the needle.",
+    icon: ShieldCheck,
+    title: "Continuous Monitoring",
+    description: "Security doesn't stop at deployment. We help you implement the tools, processes, and alerting needed to detect and respond to threats in real-time across your cloud infrastructure.",
   },
 ];
 
@@ -27,7 +27,7 @@ const StrategyRiskServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section - Pain Point: Blindness */}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <Link 
@@ -41,18 +41,18 @@ const StrategyRiskServicesPage = () => {
           <div className="max-w-4xl">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 mb-6">
-              <span className="text-sm font-medium text-primary">Assessment</span>
+              <span className="text-sm font-medium text-primary">Services</span>
               <span className="text-muted-foreground">/</span>
-              <span className="text-sm text-muted-foreground">Strategy & Risk</span>
+              <span className="text-sm text-muted-foreground">Cloud Security</span>
             </div>
             
-            {/* Pain Point Headline */}
+            {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              You Can't Protect What You Can't See.
+              Secure Your Cloud<br />From the Ground Up.
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Most organizations are flying blind. We provide the unvarnished truth about your security posture—no sugarcoating, no generic findings.
+              The cloud changes everything—including your attack surface. Our certified experts help you build, migrate, and operate secure cloud environments with confidence.
             </p>
             
             <Button 
@@ -61,14 +61,14 @@ const StrategyRiskServicesPage = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link to="/contact">
-                Get Your Assessment
+                Secure Your Cloud
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
           </div>
         </div>
         
-        {/* Visual: Focus imagery - abstract geometric pattern */}
+        {/* Visual: Cloud/abstract geometric pattern */}
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
           <div className="w-full h-full bg-gradient-to-l from-primary/20 to-transparent" />
         </div>
@@ -79,10 +79,10 @@ const StrategyRiskServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Technical Capabilities
+              Cloud Security Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Three ways we cut through the fog and give you complete visibility.
+              Three ways we help you secure your cloud transformation.
             </p>
           </div>
           
@@ -114,10 +114,10 @@ const StrategyRiskServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ready to See the Full Picture?
+              Ready to Secure Your Cloud?
             </h3>
             <p className="text-muted-foreground mb-8">
-              Start with a free discovery call to discuss your assessment needs.
+              Start with a free discovery call to discuss your cloud security needs.
             </p>
             <Button 
               asChild 
