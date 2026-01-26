@@ -22,7 +22,7 @@ const Hero = () => {
         <img 
           src={greyLogo} 
           alt="3Factor" 
-          className="w-64 lg:w-80 xl:w-96 opacity-20"
+          className="w-64 lg:w-80 xl:w-96 opacity-100"
         />
       </div>
 
