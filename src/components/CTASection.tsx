@@ -61,11 +61,12 @@ const CTASection = () => {
             </div>
           </div>
 
-          {/* CTA Button - Large and Centered */}
+          {/* CTA Button - Grey to Orange on hover */}
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xl px-16 py-8 shadow-xl hover:shadow-2xl transition-all group"
+              variant="contact"
+              className="font-semibold text-xl px-16 py-8 shadow-xl hover:shadow-2xl transition-all group"
             >
               Get Your Roadmap
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
