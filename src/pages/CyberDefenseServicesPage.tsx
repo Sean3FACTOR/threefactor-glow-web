@@ -1,56 +1,145 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Cloud, Code, Siren } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Logo from "@/assets/3F_Grey.png";
 
-const cyberDefenseServices = [
-  { title: "Secure Cloud Transformation", description: "Whether you are new to the cloud, migrating or developing a new architecture, our certified cloud security experts can help you to implement, maintain and optimize the security of your cloud environments." },
-  { title: "Secure Architecture Optimization", description: "Achieving security in the cloud requires a well-designed security architecture that understands and uses the shared responsibility model correctly." },
-  { title: "Application Security", description: "Applications have become the security Achilles heel in most organizations. Our Secure Software Development (SSDLC) experts will help you build and maintain secure applications." },
-  { title: "Penetration Testing", description: "Security assurance requires looking at applications from an attacker's perspective. Our experienced testers can help you identify critical security flaws." },
-  { title: "Cyber Incident Response", description: "Our consultants have helped manage some of the biggest breaches of the past decade. We leverage this unparalleled experience to help our clients recover quickly." },
+const pillars = [
+  {
+    icon: Cloud,
+    title: "Secure Cloud Transformation",
+    description: "Whether you are new to the cloud, migrating or developing a new architecture, our certified cloud security experts help you implement, maintain and optimize the security of your cloud environments.",
+  },
+  {
+    icon: Code,
+    title: "Application Security",
+    description: "Applications have become the security Achilles heel in most organizations. Our Secure Software Development (SSDLC) experts will help you build and maintain secure applications from the ground up.",
+  },
+  {
+    icon: Siren,
+    title: "Cyber Incident Response",
+    description: "Our consultants have helped manage some of the biggest breaches of the past decade. We leverage this unparalleled experience to help our clients recover quickly and emerge stronger.",
+  },
 ];
 
 const CyberDefenseServicesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 pb-20">
+      
+      {/* Hero Section - Pain Point: Chaos */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />Back to Home
+          <Link 
+            to="/" 
+            className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
           </Link>
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6"><img src={Logo} alt="3FACTOR" className="h-10" /><span className="text-muted-foreground font-medium">Cyber Defense Services</span></div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">Cyber Defense Services</h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground font-semibold mb-8">Identify. Protect. Detect. Respond. Recover.</p>
-            <div className="bg-card rounded-2xl p-8 mb-12 border border-border card-hover">
-              <p className="text-lg text-muted-foreground leading-relaxed">To be effective, any strategy needs the right execution. It begins with a robust security architecture that includes strong technical controls and effective operational processes.</p>
+          
+          <div className="max-w-4xl">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 mb-6">
+              <span className="text-sm font-medium text-primary">Advisory</span>
+              <span className="text-muted-foreground">/</span>
+              <span className="text-sm text-muted-foreground">Cyber Defense</span>
             </div>
-            <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Cyber Defense Offerings</h2>
-              <div className="space-y-4">
-                {cyberDefenseServices.map((service, index) => (
-                  <div key={index} className="bg-card rounded-xl p-6 border border-border card-hover">
-                    <div className="flex items-start gap-4">
-                      <CheckCircle className="w-6 h-6 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <div><h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3><p className="text-muted-foreground">{service.description}</p></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="text-center bg-card rounded-2xl p-8 border border-border card-hover">
-              <img src={Logo} alt="3FACTOR" className="h-12 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Strengthen Your Defenses?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">Start with a free discovery call to discuss your security needs.</p>
-              <Button asChild className="glow-button bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"><Link to="/contact">Schedule a Discovery Call <ArrowRight className="w-4 h-4 ml-2" /></Link></Button>
-            </div>
+            
+            {/* Pain Point Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Stop Fighting Fires.<br />Start Building Firebreaks.
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+              Reactive security is expensive security. We help you build the architecture, processes, and defenses that prevent incidents before they happen.
+            </p>
+            
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            >
+              <Link to="/contact">
+                Build Your Defenses
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
-      </main>
+        
+        {/* Visual: Architecture imagery - grid pattern */}
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+          <div 
+            className="w-full h-full"
+            style={{
+              backgroundImage: `linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
+                               linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)`,
+              backgroundSize: '40px 40px'
+            }}
+          />
+        </div>
+      </section>
+
+      {/* The Pillars */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Technical Capabilities
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Three ways we help you build proactive, resilient defenses.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {pillars.map((pillar) => (
+              <div 
+                key={pillar.title}
+                className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                
+                <h3 className="text-xl font-bold text-foreground mb-4">
+                  {pillar.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Ready to Move from Reactive to Proactive?
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              Start with a free discovery call to discuss your defense architecture.
+            </p>
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            >
+              <Link to="/contact">
+                Schedule a Discovery Call
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

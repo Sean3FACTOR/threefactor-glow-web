@@ -1,54 +1,138 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, FileCheck, Globe, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Logo from "@/assets/3F_Grey.png";
 
-const complianceServices = [
-  { title: "ISO 27001/2", description: "This internationally recognized security certification can help you gain customer trust worldwide." },
-  { title: "Privacy (GDPR, CPRA, LGPD)", description: "No matter where you are, privacy regulations are constantly expanding worldwide." },
-  { title: "Emerging Compliance", description: "New security and privacy regulations, frameworks and standards are being created all the time." },
-  { title: "PCI DSS", description: "Our Qualified Security Assessors (QSA) are some of the most experienced in the industry." },
-  { title: "SOC 2", description: "This widely recognized certification is a must-have for any service organization in North America." },
+const pillars = [
+  {
+    icon: FileCheck,
+    title: "SOC 2",
+    description: "This widely recognized certification is a must-have for any service organization in North America. We get you audit-ready faster than you thought possible.",
+  },
+  {
+    icon: Globe,
+    title: "ISO 27001",
+    description: "This internationally recognized security certification helps you gain customer trust worldwide. We guide you through implementation and certification.",
+  },
+  {
+    icon: CreditCard,
+    title: "PCI DSS & FedRAMP",
+    description: "Our Qualified Security Assessors (QSA) are some of the most experienced in the industry. From payment card compliance to federal authorization, we've done it all.",
+  },
 ];
 
 const ComplianceServicesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 pb-20">
+      
+      {/* Hero Section - Pain Point: Blocked Sales */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-8"><ArrowLeft className="w-4 h-4 mr-2" />Back to Home</Link>
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6"><img src={Logo} alt="3FACTOR" className="h-10" /><span className="text-muted-foreground font-medium">Compliance Services</span></div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">Compliance Services</h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground font-semibold mb-8">Achieve Certifications Quickly and Efficiently</p>
-            <div className="bg-card rounded-2xl p-8 mb-12 border border-border card-hover">
-              <p className="text-lg text-muted-foreground leading-relaxed">Compliance builds trust. Having the right certifications can be a key business enabler.</p>
+          <Link 
+            to="/" 
+            className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Link>
+          
+          <div className="max-w-4xl">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 mb-6">
+              <span className="text-sm font-medium text-primary">Assurance</span>
+              <span className="text-muted-foreground">/</span>
+              <span className="text-sm text-muted-foreground">Compliance</span>
             </div>
-            <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Compliance Offerings</h2>
-              <div className="space-y-4">
-                {complianceServices.map((service, index) => (
-                  <div key={index} className="bg-card rounded-xl p-6 border border-border card-hover">
-                    <div className="flex items-start gap-4">
-                      <CheckCircle className="w-6 h-6 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <div><h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3><p className="text-muted-foreground">{service.description}</p></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="text-center bg-card rounded-2xl p-8 border border-border card-hover">
-              <img src={Logo} alt="3FACTOR" className="h-12 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Start Your Compliance Journey?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">Start with a free discovery call to discuss your compliance needs.</p>
-              <Button asChild className="glow-button bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"><Link to="/contact">Discuss Your Compliance Needs <ArrowRight className="w-4 h-4 ml-2" /></Link></Button>
-            </div>
+            
+            {/* Pain Point Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Turn "No" into<br />"When Can We Start?"
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+              Losing deals because you don't have the right certifications? We help you achieve compliance quickly, so you can close bigger deals and unlock new markets.
+            </p>
+            
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            >
+              <Link to="/contact">
+                Start Your Certification
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
-      </main>
+        
+        {/* Visual: Stability imagery - solid block pattern */}
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-l from-foreground/20 to-transparent" />
+        </div>
+      </section>
+
+      {/* The Pillars */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Certification Expertise
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Three frameworks we specialize in to unlock your next level of growth.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {pillars.map((pillar) => (
+              <div 
+                key={pillar.title}
+                className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                
+                <h3 className="text-xl font-bold text-foreground mb-4">
+                  {pillar.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Ready to Stop Losing Deals?
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              Start with a free discovery call to map out your compliance roadmap.
+            </p>
+            <Button 
+              asChild 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            >
+              <Link to="/contact">
+                Schedule a Discovery Call
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
