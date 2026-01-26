@@ -47,13 +47,12 @@ const Hero = () => {
             <span className="text-sm font-medium text-foreground">Unbiased Expertise. No Product Agendas.</span>
           </div>
           
-          {/* CTA Button - Grey to Orange on hover */}
+          {/* CTA Button - Solid Orange with White Arrow */}
           <div className="mt-12">
             <Link to="/contact">
               <Button 
                 size="lg" 
-                variant="contact"
-                className="font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
               >
                 Book Your Strategy Session
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />

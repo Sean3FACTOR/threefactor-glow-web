@@ -164,8 +164,7 @@ const CyberDefenseServicesPage = () => {
             <Button 
               asChild 
               size="lg"
-              variant="contact"
-              className="font-semibold"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link to="/contact">
                 Schedule a Discovery Call
