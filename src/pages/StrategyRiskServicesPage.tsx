@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
+import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlueprintHero from "@/components/BlueprintHero";
 
 const authorityStats = [
   {
@@ -48,52 +49,15 @@ const StrategyRiskServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-          
-          <div className="max-w-4xl">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-sm font-medium text-primary">Services</span>
-              <span className="text-muted-foreground">/</span>
-              <span className="text-sm text-muted-foreground">Cloud Security</span>
-            </div>
-            
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Secure Your Cloud<br />From the Ground Up.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              The cloud changes everything—including your attack surface. Our certified experts help you build, migrate, and operate secure cloud environments with confidence.
-            </p>
-            
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-            >
-              <Link to="/contact">
-                Secure Your Cloud
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-        
-        {/* Visual: Cloud/abstract geometric pattern */}
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-l from-primary/20 to-transparent" />
-        </div>
-      </section>
+      {/* Blueprint Hero Section */}
+      <BlueprintHero
+        breadcrumb="Cloud Security"
+        headline="Secure the Providers Who Build the Cloud."
+        subhead="We don't just scan for bugs. We architect the environment. From FedRAMP strategy to final code, we build security into the foundation of your infrastructure."
+        ctaText="See Cloud Solutions"
+        ctaLink="/contact"
+        OverlayIcon={Server}
+      />
 
       {/* Proven Cloud Security - Authority Section */}
       <section className="py-24 bg-muted/30">

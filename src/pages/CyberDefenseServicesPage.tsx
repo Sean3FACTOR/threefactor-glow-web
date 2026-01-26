@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
+import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlueprintHero from "@/components/BlueprintHero";
 
 const threeAs = [
   {
@@ -51,59 +52,15 @@ const CyberDefenseServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-          
-          <div className="max-w-4xl">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-sm font-medium text-primary">Services</span>
-              <span className="text-muted-foreground">/</span>
-              <span className="text-sm text-muted-foreground">Cyber Risk Advisory</span>
-            </div>
-            
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Translate Technical Threats<br />Into Board-Level Strategy.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the customized leadership and clarity required to build resilience and secure executive confidence.
-            </p>
-            
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-            >
-              <Link to="/contact">
-                Get Strategic Guidance
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-        
-        {/* Visual: Architecture imagery - grid pattern */}
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `linear-gradient(to right, hsl(var(--primary)) 1px, transparent 1px),
-                               linear-gradient(to bottom, hsl(var(--primary)) 1px, transparent 1px)`,
-              backgroundSize: '40px 40px'
-            }}
-          />
-        </div>
-      </section>
+      {/* Blueprint Hero Section */}
+      <BlueprintHero
+        breadcrumb="Cyber Risk Advisory"
+        headline="Translate Technical Threats Into Board-Level Strategy."
+        subhead="Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the clarity required to build resilience and secure executive confidence."
+        ctaText="View Advisory Services"
+        ctaLink="/contact"
+        OverlayIcon={GitBranch}
+      />
 
       {/* The 3 A's - How We Work */}
       <section className="py-24 bg-muted/30">
