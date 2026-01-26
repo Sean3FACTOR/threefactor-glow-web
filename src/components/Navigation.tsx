@@ -24,7 +24,6 @@ const Navigation = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: "vCISO", href: "/#vciso", hash: "vciso" },
     { name: "Company", href: "/#company", hash: "company" },
     { name: "Contact", href: "/contact", hash: null },
   ];
