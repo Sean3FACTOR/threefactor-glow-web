@@ -1,27 +1,27 @@
-import { Search, Compass, ShieldCheck, ArrowRight } from "lucide-react";
+import { FileCheck, Shield, Cloud, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Search,
-    title: "Assessment",
-    description: "Get an unvarnished view of your current risk posture.",
-    linkText: "Explore Assessments",
-    href: "/services/strategy-risk",
+    icon: FileCheck,
+    title: "Compliance",
+    description: "Turn compliance into revenue. Achieve the certifications that unlock new markets and close bigger deals.",
+    linkText: "Explore Compliance",
+    href: "/services/compliance",
   },
   {
-    icon: Compass,
-    title: "Advisory",
-    description: "Implement the specific improvements needed to close gaps.",
+    icon: Shield,
+    title: "Cyber Risk Advisory",
+    description: "Translate technical threats into board-level strategy with expert leadership and clarity.",
     linkText: "View Advisory Services",
     href: "/services/cyber-defense",
   },
   {
-    icon: ShieldCheck,
-    title: "Assurance",
-    description: "Provide the Board with definitive proof that risk is being managed according to policy.",
-    linkText: "See Compliance Solutions",
-    href: "/services/compliance",
+    icon: Cloud,
+    title: "Cloud Security",
+    description: "Secure your cloud transformation with architecture reviews, DevSecOps, and continuous monitoring.",
+    linkText: "See Cloud Solutions",
+    href: "/services/strategy-risk",
   },
 ];
 
@@ -32,7 +32,7 @@ const TheHow = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            The Service Breakdown.
+            Our Services.
           </h2>
         </div>
 
