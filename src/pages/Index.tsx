@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ValueProp from "@/components/ValueProp";
-import Authority from "@/components/Authority";
 import TheHow from "@/components/TheHow";
+import Authority from "@/components/Authority";
+import AboutSection from "@/components/AboutSection";
 import TheWho from "@/components/TheWho";
 import CTASection from "@/components/CTASection";
 import Certifications from "@/components/Certifications";
@@ -14,8 +15,9 @@ const Index = () => {
       <Navigation />
       <Hero />
       <ValueProp />
-      <Authority />
       <TheHow />
+      <Authority />
+      <AboutSection />
       <TheWho />
       <CTASection />
       <Certifications />

@@ -39,6 +39,12 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl leading-relaxed">
             We move beyond standard checklists. We tailor proactive defenses to your specific needs, ensuring your most valuable assets are protected by systems you can believe in.
           </p>
+
+          {/* Vendor Agnostic Badge */}
+          <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-full">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm font-medium text-foreground">Unbiased Expertise. No Product Agendas.</span>
+          </div>
           
           {/* CTA Button - Solid Orange with White Arrow */}
           <div className="mt-12">

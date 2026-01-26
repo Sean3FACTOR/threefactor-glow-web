@@ -34,7 +34,7 @@ const ValueProp = () => {
               <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">The Challenge</span>
               <h3 className="text-3xl md:text-4xl font-bold text-muted-foreground mt-4 mb-6">Compliance</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We don't believe in generic checklists. We build risk-based compliance programs that satisfy strict regulatory requirements while positioning your security posture as a competitive advantage.
+                For over a decade, we have helped service providers navigate the maze of regulated data. We don't believe in generic checklists. We build risk-based compliance programs that satisfy strict regulatory requirements while positioning your security posture as a competitive advantage.
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const ValueProp = () => {
               <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">The Outcome</span>
               <h3 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">Revenue</h3>
               <p className="text-foreground leading-relaxed">
-                Cyber risk is business risk. We provide the leadership and clarity needed to translate technical threats into board-level strategy.
+                Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises across every major industry. We don't guess; we know the specific risks facing your sector. We provide the customized leadership, staffing, and technical skills required to build resilience and secure executive confidence.
               </p>
             </div>
           </div>
