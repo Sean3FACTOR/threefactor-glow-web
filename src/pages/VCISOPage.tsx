@@ -1,4 +1,4 @@
-import { Check, ArrowRight, Navigation2 } from "lucide-react";
+import { Check, ArrowRight, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -151,7 +151,7 @@ const VCISOPage = () => {
         subhead="Get an immediate extension of your leadership team. We provide the governance, budget management, and board reporting you need—at a fixed monthly cost."
         ctaText="Explore vCISO Plans"
         ctaLink="/contact"
-        OverlayIcon={Navigation2}
+        OverlayIcon={Compass}
       />
 
       <main className="pb-24">

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck, GitBranch } from "lucide-react";
+import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -59,7 +59,7 @@ const CyberDefenseServicesPage = () => {
         subhead="Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the clarity required to build resilience and secure executive confidence."
         ctaText="View Advisory Services"
         ctaLink="/contact"
-        OverlayIcon={GitBranch}
+        OverlayIcon={Crown}
       />
 
       {/* The 3 A's - How We Work */}

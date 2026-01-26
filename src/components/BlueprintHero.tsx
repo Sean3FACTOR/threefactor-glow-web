@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import greyLogo from "@/assets/3F_Grey.png";
+import hexagonNetwork from "@/assets/hexagon-network.png";
 
 interface BlueprintHeroProps {
   breadcrumb: string;
@@ -65,17 +66,31 @@ const BlueprintHero = ({
             </Button>
           </div>
 
-          {/* Right Side - Blueprint Overlay Visual */}
+          {/* Right Side - Layered Brand Visual */}
           <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
-            {/* Layer 1: 3F Grey Logo - Background Watermark */}
-            <img
-              src={greyLogo}
-              alt=""
-              className="absolute w-80 lg:w-96 opacity-15 grayscale select-none pointer-events-none"
+            {/* Layer 1: Hexagon Network Texture - Background Pattern */}
+            <div 
+              className="absolute inset-0 opacity-25"
+              style={{
+                backgroundImage: `url(${hexagonNetwork})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                maskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
+              }}
               aria-hidden="true"
             />
 
-            {/* Layer 2: Orange Vector Icon Overlay */}
+            {/* Layer 2: 3F Grey Logo - Brand Anchor Watermark */}
+            <img
+              src={greyLogo}
+              alt=""
+              className="absolute w-80 lg:w-96 opacity-10 grayscale select-none pointer-events-none"
+              aria-hidden="true"
+            />
+
+            {/* Layer 3: Orange Vector Icon Overlay - Service Identifier */}
             <div className="relative z-10">
               <OverlayIcon
                 className="w-32 h-32 lg:w-40 lg:h-40 text-primary"
