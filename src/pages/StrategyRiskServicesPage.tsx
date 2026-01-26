@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
+import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -52,10 +52,11 @@ const StrategyRiskServicesPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Cloud Security"
-        headline="Secure the Providers Who Build the Cloud."
-        subhead="We don't just scan for bugs. We architect the environment. From FedRAMP strategy to final code, we build security into the foundation of your infrastructure."
+        headline="Secure Your Cloud Foundation."
+        subhead="We don't just scan for bugs; we architect the environment. Build security into your infrastructure from day one."
         ctaText="See Cloud Solutions"
         ctaLink="/contact"
+        OverlayIcon={Lock}
       />
 
       {/* Proven Cloud Security - Authority Section */}

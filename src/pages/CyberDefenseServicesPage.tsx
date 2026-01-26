@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
+import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -55,10 +55,11 @@ const CyberDefenseServicesPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Cyber Risk Advisory"
-        headline="Translate Technical Threats Into Board-Level Strategy."
-        subhead="Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the clarity required to build resilience and secure executive confidence."
+        headline="Translate Risk Into Strategy."
+        subhead="Stop getting lost in translation. We turn technical complexity into executive confidence and Board-level clarity."
         ctaText="View Advisory Services"
         ctaLink="/contact"
+        OverlayIcon={Crown}
       />
 
       {/* The 3 A's - How We Work */}

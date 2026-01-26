@@ -1,4 +1,4 @@
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -147,10 +147,11 @@ const VCISOPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Virtual CISO"
-        headline="Executive Leadership Without the Headcount."
-        subhead="Get an immediate extension of your leadership team. We provide the governance, budget management, and board reporting you need—at a fixed monthly cost."
+        headline="Executive Leadership On Demand."
+        subhead="Get the governance, budget management, and Board reporting you need—at a fixed monthly cost."
         ctaText="Explore vCISO Plans"
         ctaLink="/contact"
+        OverlayIcon={Compass}
       />
 
       <main className="pb-24">
