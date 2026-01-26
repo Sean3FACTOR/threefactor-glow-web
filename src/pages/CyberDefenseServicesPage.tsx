@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Cloud, Code, Siren } from "lucide-react";
+import { ArrowLeft, ArrowRight, UserCheck, Target, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const pillars = [
   {
-    icon: Cloud,
-    title: "Secure Cloud Transformation",
-    description: "Whether you are new to the cloud, migrating or developing a new architecture, our certified cloud security experts help you implement, maintain and optimize the security of your cloud environments.",
+    icon: UserCheck,
+    title: "Virtual CISO",
+    description: "Get executive-level security leadership without the executive-level price tag. Our vCISOs integrate with your team to provide strategic direction and board-level communication.",
   },
   {
-    icon: Code,
-    title: "Application Security",
-    description: "Applications have become the security Achilles heel in most organizations. Our Secure Software Development (SSDLC) experts will help you build and maintain secure applications from the ground up.",
+    icon: Target,
+    title: "Security Strategy",
+    description: "We translate technical threats into business risk. Our frameworks help you prioritize investments and communicate clearly with stakeholders.",
   },
   {
-    icon: Siren,
-    title: "Cyber Incident Response",
-    description: "Our consultants have helped manage some of the biggest breaches of the past decade. We leverage this unparalleled experience to help our clients recover quickly and emerge stronger.",
+    icon: Users,
+    title: "Board Advisory",
+    description: "Cyber risk is business risk. We help you build the metrics, dashboards, and narratives that give your board confidence in your security posture.",
   },
 ];
 
@@ -27,7 +27,7 @@ const CyberDefenseServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section - Pain Point: Chaos */}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <Link 
@@ -41,18 +41,18 @@ const CyberDefenseServicesPage = () => {
           <div className="max-w-4xl">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 mb-6">
-              <span className="text-sm font-medium text-primary">Advisory</span>
+              <span className="text-sm font-medium text-primary">Services</span>
               <span className="text-muted-foreground">/</span>
-              <span className="text-sm text-muted-foreground">Cyber Defense</span>
+              <span className="text-sm text-muted-foreground">Cyber Risk Advisory</span>
             </div>
             
-            {/* Pain Point Headline */}
+            {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Stop Fighting Fires.<br />Start Building Firebreaks.
+              Translate Technical Threats<br />Into Board-Level Strategy.
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Reactive security is expensive security. We help you build the architecture, processes, and defenses that prevent incidents before they happen.
+              Since 2008, 3Factor has served as the trusted advisor to thousands of enterprises. We provide the customized leadership and clarity required to build resilience and secure executive confidence.
             </p>
             
             <Button 
@@ -61,7 +61,7 @@ const CyberDefenseServicesPage = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               <Link to="/contact">
-                Build Your Defenses
+                Get Strategic Guidance
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -81,15 +81,44 @@ const CyberDefenseServicesPage = () => {
         </div>
       </section>
 
+      {/* The 3 A's Framework */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Framework
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A structured approach to managing cyber risk at the enterprise level.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="p-6 bg-background border border-border rounded-lg text-center">
+              <h3 className="text-lg font-bold text-foreground mb-2">Assessment</h3>
+              <p className="text-sm text-muted-foreground">Get an unvarnished view of your current risk posture.</p>
+            </div>
+            <div className="p-6 bg-background border border-border rounded-lg text-center">
+              <h3 className="text-lg font-bold text-foreground mb-2">Advisory</h3>
+              <p className="text-sm text-muted-foreground">Implement the specific improvements needed to close gaps.</p>
+            </div>
+            <div className="p-6 bg-background border border-border rounded-lg text-center">
+              <h3 className="text-lg font-bold text-foreground mb-2">Assurance</h3>
+              <p className="text-sm text-muted-foreground">Provide the Board with definitive proof that risk is being managed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The Pillars */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Technical Capabilities
+              Advisory Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Three ways we help you build proactive, resilient defenses.
+              Three ways we help you build executive-level security leadership.
             </p>
           </div>
           
@@ -117,14 +146,14 @@ const CyberDefenseServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ready to Move from Reactive to Proactive?
+              Ready for Executive-Level Security Leadership?
             </h3>
             <p className="text-muted-foreground mb-8">
-              Start with a free discovery call to discuss your defense architecture.
+              Start with a free discovery call to discuss your advisory needs.
             </p>
             <Button 
               asChild 
