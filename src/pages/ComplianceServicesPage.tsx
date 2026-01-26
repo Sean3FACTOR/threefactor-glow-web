@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, FileCheck, Globe, CreditCard, Grid3X3, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, Grid3X3, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -18,21 +18,26 @@ const pathPoints = [
   "Faster sales cycles, bigger deals",
 ];
 
-const pillars = [
+const certifications = [
   {
-    icon: FileCheck,
-    title: "SOC 2",
-    description: "This widely recognized certification is a must-have for any service organization in North America. We get you audit-ready faster than you thought possible.",
-  },
-  {
-    icon: Globe,
     title: "ISO 27001",
     description: "This internationally recognized security certification helps you gain customer trust worldwide. We guide you through implementation and certification.",
   },
   {
-    icon: CreditCard,
-    title: "PCI DSS & FedRAMP",
-    description: "Our Qualified Security Assessors (QSA) are some of the most experienced in the industry. From payment card compliance to federal authorization, we've done it all.",
+    title: "SOC 2",
+    description: "This widely recognized certification is a must-have for any service organization in North America. We get you audit-ready faster than you thought possible.",
+  },
+  {
+    title: "PCI DSS",
+    description: "Our Qualified Security Assessors (QSA) are some of the most experienced in the industry. From payment card compliance to complex merchant environments, we've done it all.",
+  },
+  {
+    title: "NIS 2",
+    description: "The EU's updated Network and Information Security Directive requires critical infrastructure operators to meet stringent security standards. We help you achieve compliance.",
+  },
+  {
+    title: "DORA",
+    description: "The Digital Operational Resilience Act demands financial entities demonstrate robust ICT risk management. Our experts guide you through every requirement.",
   },
 ];
 
@@ -119,7 +124,7 @@ const ComplianceServicesPage = () => {
         </div>
       </section>
 
-      {/* The Pillars */}
+      {/* Certifications List */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -127,27 +132,29 @@ const ComplianceServicesPage = () => {
               Certification Expertise
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Three frameworks we specialize in to unlock your next level of growth.
+              Frameworks we specialize in to unlock your next level of growth.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {pillars.map((pillar) => (
+          <div className="max-w-3xl mx-auto">
+            {certifications.map((cert, index) => (
               <div 
-                key={pillar.title}
-                className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
+                key={cert.title}
+                className="border-b border-border last:border-b-0 py-8 first:pt-0 last:pb-0"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                <div className="flex items-start gap-6">
+                  <span className="text-4xl font-bold text-primary/20 leading-none">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {cert.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {cert.description}
+                    </p>
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {pillar.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {pillar.description}
-                </p>
               </div>
             ))}
           </div>
