@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import glassGeometric from "@/assets/services/glass-geometric.jpg";
-import skyscraperVision from "@/assets/services/skyscraper-vision.jpg";
-import whiteServer from "@/assets/services/white-server.jpg";
-import bridgeSupport from "@/assets/services/bridge-support.jpg";
+import keyUnlock from "@/assets/services/key-unlock.jpg";
+import chessStrategy from "@/assets/services/chess-strategy.jpg";
+import networkMesh from "@/assets/services/network-mesh.jpg";
+import compassDirection from "@/assets/services/compass-direction.jpg";
 
 const services = [
   {
@@ -16,8 +16,8 @@ const services = [
     ],
     linkText: "Explore Compliance",
     href: "/services/compliance",
-    image: glassGeometric,
-    imageAlt: "Abstract geometric glass facade representing transparency and structure",
+    image: keyUnlock,
+    imageAlt: "Silver key entering lock mechanism representing unlocking new markets",
   },
   {
     headline: "Protect Enterprise Value.",
@@ -28,8 +28,8 @@ const services = [
     ],
     linkText: "View Advisory Services",
     href: "/services/cyber-defense",
-    image: skyscraperVision,
-    imageAlt: "Skyscraper view representing vision and strategy",
+    image: chessStrategy,
+    imageAlt: "Crystal chess piece representing strategic thinking",
   },
   {
     headline: "Proven Cloud Security.",
@@ -40,8 +40,8 @@ const services = [
     ],
     linkText: "See Cloud Solutions",
     href: "/services/strategy-risk",
-    image: whiteServer,
-    imageAlt: "White server room representing precision infrastructure",
+    image: networkMesh,
+    imageAlt: "Abstract white mesh network representing cloud architecture",
   },
   {
     headline: "Executive Leadership on Demand.",
@@ -52,8 +52,8 @@ const services = [
     ],
     linkText: "Explore vCISO Plans",
     href: "/services/vciso",
-    image: bridgeSupport,
-    imageAlt: "Bridge support cables representing structural guidance",
+    image: compassDirection,
+    imageAlt: "Silver nautical compass representing guidance and direction",
   },
 ];
 
@@ -80,7 +80,7 @@ const TheHow = () => {
               className="group block"
             >
               <div className="flex h-full bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg">
-                {/* Image - Left Side (30%) */}
+                {/* Image - Left Side (35%) */}
                 <div className="w-[35%] shrink-0 relative overflow-hidden">
                   <img
                     src={service.image}
@@ -91,20 +91,20 @@ const TheHow = () => {
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                {/* Content - Right Side (70%) */}
+                {/* Content - Right Side (65%) */}
                 <div className="flex-1 p-6 lg:p-8 flex flex-col">
                   <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                     {service.headline}
                   </h3>
 
-                  {/* Bullet Points */}
+                  {/* Bullet Points - Dark Charcoal */}
                   <ul className="space-y-2 mb-6 flex-grow">
                     {service.bullets.map((bullet, index) => (
                       <li
                         key={index}
                         className="flex items-start gap-2 text-sm text-muted-foreground"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#333333] mt-1.5 shrink-0" />
                         {bullet}
                       </li>
                     ))}
