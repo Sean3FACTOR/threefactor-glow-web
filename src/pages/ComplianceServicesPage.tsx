@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Grid3X3, TrendingUp, CheckSquare } from "lucide-react";
+import { ArrowRight, Grid3X3, TrendingUp, CheckSquare, KeyRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlueprintHero from "@/components/BlueprintHero";
 
 const mazePoints = [
   "Endless checkbox exercises",
@@ -46,18 +47,15 @@ const ComplianceServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Back Link */}
-      <section className="pt-32 pb-8">
-        <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-        </div>
-      </section>
+      {/* Blueprint Hero Section */}
+      <BlueprintHero
+        breadcrumb="Compliance"
+        headline="Turn Compliance Into Revenue."
+        subhead="Don't just tick boxes. We navigate the maze of regulated data to help you achieve the certifications that unlock new markets and close bigger deals."
+        ctaText="Explore Compliance"
+        ctaLink="/contact"
+        OverlayIcon={KeyRound}
+      />
 
       {/* Value Proposition Section */}
       <section className="py-16">

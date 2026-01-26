@@ -1,8 +1,9 @@
-import { Check, ArrowRight, ArrowLeft } from "lucide-react";
+import { Check, ArrowRight, Navigation2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlueprintHero from "@/components/BlueprintHero";
 
 const managedSecurityPlans = [
   {
@@ -143,33 +144,18 @@ const VCISOPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="pt-24">
+      {/* Blueprint Hero Section */}
+      <BlueprintHero
+        breadcrumb="Virtual CISO"
+        headline="Executive Leadership Without the Headcount."
+        subhead="Get an immediate extension of your leadership team. We provide the governance, budget management, and board reporting you need—at a fixed monthly cost."
+        ctaText="Explore vCISO Plans"
+        ctaLink="/contact"
+        OverlayIcon={Navigation2}
+      />
+
+      <main className="pb-24">
         <div className="container mx-auto px-4">
-          {/* Back Link */}
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
-
-          {/* Hero Header */}
-          <div className="text-center mb-20">
-            <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
-              Comprehensive Security.<br />
-              Empowering Program.<br />
-              <span className="text-muted-foreground">No Hiring. No Surprises.</span>
-            </h1>
-            <p className="text-muted-foreground mt-8 max-w-3xl mx-auto text-lg">
-              3Factor provides everything you need to jumpstart and maintain a cybersecurity program, complete with a dedicated CISO and Privacy Officer, empowering you to manage a robust security program.
-            </p>
-            <p className="text-foreground font-semibold mt-4 text-lg">
-              Low Setup Fee. Fixed Monthly Cost.
-            </p>
-          </div>
-
-          {/* Managed Security Plans */}
           <div className="mb-24">
             <h2 className="text-sm text-muted-foreground uppercase tracking-widest font-semibold text-center mb-12">
               Managed Security Plans
