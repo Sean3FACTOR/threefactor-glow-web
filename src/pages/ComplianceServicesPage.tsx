@@ -60,13 +60,9 @@ const ComplianceServicesPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary uppercase tracking-[0.15em]">
               The Value Proposition
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 leading-tight">
-              Turn Compliance<br />
-              <span className="text-muted-foreground">Into Revenue.</span>
-            </h1>
+            </h2>
           </div>
 
           {/* Split Layout - The Maze vs The Path */}
