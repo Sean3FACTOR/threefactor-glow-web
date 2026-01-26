@@ -12,7 +12,7 @@ const aboutCards = [
       "Decades of practical, hands-on leadership—not just theory.",
     ],
     image: globeExperience,
-    imageAlt: "White wireframe globe representing global experience",
+    imageAlt: "Professional hand spinning a silver globe representing global experience",
   },
   {
     headline: "Battle-Tested in the Biggest Breaches.",
@@ -22,7 +22,7 @@ const aboutCards = [
       "Proven crisis management for attorneys and public officials.",
     ],
     image: shieldProtection,
-    imageAlt: "Layered impact-resistant glass representing protection under pressure",
+    imageAlt: "Hand with magnifying glass investigating documents representing battle-tested analysis",
   },
   {
     headline: "Security That Speaks Your Language.",
@@ -32,7 +32,7 @@ const aboutCards = [
       "Transform your organization into a vertical leader.",
     ],
     image: lensClarity,
-    imageAlt: "Optical lens focusing light representing clarity and translation",
+    imageAlt: "Hand drawing upward trend graph representing clarity and business metrics",
   },
   {
     headline: "A True Trusted Advisor.",
@@ -42,7 +42,7 @@ const aboutCards = [
       "Vendor-agnostic advice with zero product sales agendas.",
     ],
     image: partnershipInterlock,
-    imageAlt: "Interlocking geometric shapes representing partnership",
+    imageAlt: "Professional handshake representing trusted partnership",
   },
 ];
 
@@ -87,7 +87,7 @@ const AboutSection = () => {
                   {card.headline}
                 </h3>
 
-                {/* Bullet Points - Dark Charcoal */}
+                {/* Bullet Points - Dark Charcoal #333333 */}
                 <ul className="space-y-2 flex-grow">
                   {card.bullets.map((bullet, index) => (
                     <li
