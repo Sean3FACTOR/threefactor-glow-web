@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, UserCheck, Target, Users } from "lucide-react";
+import { ArrowLeft, ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
+const threeAs = [
+  {
+    icon: Search,
+    step: "Step 1",
+    title: "Assessment",
+    tagline: "Unvarnished Truth",
+    description: "We deliver a clear-eyed view of your security posture. No sugar-coating. No vendor bias. Just the facts your board needs to make decisions.",
+  },
+  {
+    icon: Compass,
+    step: "Step 2",
+    title: "Advisory",
+    tagline: "Closing the Gaps",
+    description: "We architect practical solutions that align with your business reality. Prioritized roadmaps that balance risk reduction with operational feasibility.",
+  },
+  {
+    icon: ShieldCheck,
+    step: "Step 3",
+    title: "Assurance",
+    tagline: "Proof for the Board",
+    description: "We provide the evidence and certifications that stakeholders, customers, and regulators demand. Defensible security that stands up to scrutiny.",
+  },
+];
 
 const pillars = [
   {
@@ -81,36 +105,62 @@ const CyberDefenseServicesPage = () => {
         </div>
       </section>
 
-      {/* The 3 A's Framework */}
-      <section className="py-16 bg-muted/30">
+      {/* The 3 A's - How We Work */}
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Framework
+          <div className="text-center mb-16">
+            <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
+              The 3 A's
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
+              How We Work.
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A structured approach to managing cyber risk at the enterprise level.
+              A proven methodology that transforms security from a problem into a strategic advantage.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="p-6 bg-background border border-border rounded-lg text-center">
-              <h3 className="text-lg font-bold text-foreground mb-2">Assessment</h3>
-              <p className="text-sm text-muted-foreground">Get an unvarnished view of your current risk posture.</p>
-            </div>
-            <div className="p-6 bg-background border border-border rounded-lg text-center">
-              <h3 className="text-lg font-bold text-foreground mb-2">Advisory</h3>
-              <p className="text-sm text-muted-foreground">Implement the specific improvements needed to close gaps.</p>
-            </div>
-            <div className="p-6 bg-background border border-border rounded-lg text-center">
-              <h3 className="text-lg font-bold text-foreground mb-2">Assurance</h3>
-              <p className="text-sm text-muted-foreground">Provide the Board with definitive proof that risk is being managed.</p>
-            </div>
+          {/* Timeline Grid */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+            {/* Connecting Line - Desktop Only */}
+            <div className="hidden md:block absolute top-[72px] left-1/6 right-1/6 h-px bg-border" style={{ left: '16%', right: '16%' }} />
+            
+            {threeAs.map((item) => (
+              <div key={item.title} className="text-center relative">
+                {/* Icon Circle */}
+                <div className="w-36 h-36 rounded-full bg-background border-2 border-border flex items-center justify-center mx-auto mb-6 relative z-10">
+                  <item.icon 
+                    className="w-12 h-12 text-primary" 
+                    strokeWidth={1} 
+                  />
+                </div>
+                
+                {/* Step Label */}
+                <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
+                  {item.step}
+                </span>
+                
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-foreground mt-2 mb-2">
+                  {item.title}
+                </h3>
+                
+                {/* Tagline */}
+                <span className="text-xs uppercase tracking-[0.15em] text-primary font-medium">
+                  {item.tagline}
+                </span>
+                
+                {/* Description */}
+                <p className="text-muted-foreground leading-relaxed mt-4 max-w-xs mx-auto">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* The Pillars */}
+      {/* Advisory Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
