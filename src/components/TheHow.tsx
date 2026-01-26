@@ -1,20 +1,27 @@
-import { Search, Compass, ShieldCheck } from "lucide-react";
+import { Search, Compass, ShieldCheck, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const steps = [
+const services = [
   {
     icon: Search,
     title: "Assessment",
     description: "Get an unvarnished view of your current risk posture.",
+    linkText: "Explore Assessments",
+    href: "/services/strategy-risk",
   },
   {
     icon: Compass,
     title: "Advisory",
     description: "Implement the specific improvements needed to close gaps.",
+    linkText: "View Advisory Services",
+    href: "/services/cyber-defense",
   },
   {
     icon: ShieldCheck,
     title: "Assurance",
     description: "Provide the Board with definitive proof that risk is being managed according to policy.",
+    linkText: "See Compliance Solutions",
+    href: "/services/compliance",
   },
 ];
 
@@ -29,38 +36,41 @@ const TheHow = () => {
           </h2>
         </div>
 
-        {/* Three Columns with Connecting Orange Line */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Connecting Orange Line - Desktop */}
-          <div className="hidden md:block absolute top-[60px] left-[16.67%] right-[16.67%] h-[3px] bg-primary" />
-
-          <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-            {steps.map((step, index) => (
-              <div key={step.title} className="text-center relative">
-                {/* Icon Circle with Orange Border */}
-                <div className="relative z-10 mb-8 flex justify-center">
-                  <div className="w-[120px] h-[120px] rounded-full border-[3px] border-primary bg-background flex items-center justify-center shadow-lg">
-                    <step.icon className="w-12 h-12 text-primary" strokeWidth={1.5} />
-                  </div>
+        {/* Clickable Card Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              to={service.href}
+              className="group block"
+            >
+              <div className="h-full p-8 bg-background border border-border rounded-lg transition-all duration-300 hover:border-primary hover:shadow-lg">
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-full bg-muted border border-border flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-primary/10 group-hover:border-primary">
+                  <service.icon 
+                    className="w-8 h-8 text-muted-foreground transition-colors duration-300 group-hover:text-primary" 
+                    strokeWidth={1.5} 
+                  />
                 </div>
-
-                {/* Step Number Badge */}
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold mb-4">
-                  {index + 1}
-                </span>
 
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-foreground mb-4">
-                  {step.title}
+                  {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed text-sm max-w-xs mx-auto">
-                  {step.description}
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
                 </p>
+
+                {/* Link */}
+                <span className="inline-flex items-center text-muted-foreground font-medium transition-all duration-300 group-hover:text-primary group-hover:underline">
+                  {service.linkText}
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
               </div>
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
