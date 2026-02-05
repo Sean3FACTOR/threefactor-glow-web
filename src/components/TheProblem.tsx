@@ -19,7 +19,7 @@ const penalties = [
   },
   {
     number: "3",
-    title: "Irreversible Reputation Loss",
+    title: "Reputation Loss",
     description: "It takes a decade to build your reputation and ten minutes of exposure to destroy it. In the enterprise world, you don't get a second chance once the \"Illusion of Safety\" is shattered.",
     image: brandDeath,
     imageAlt: "Shattered mirror - broken reputation concept",
