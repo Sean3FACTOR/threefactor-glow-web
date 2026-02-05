@@ -64,36 +64,35 @@ const PainPoints = () => {
           </h3>
         </div>
 
-        {/* Cascading Cards - Left Aligned */}
-        <div className="max-w-5xl space-y-6">
-          {painPoints.map((point, index) => (
+        {/* 3x2 Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {painPoints.map((point) => (
             <div
               key={point.title}
-              className="group flex flex-col md:flex-row bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
-              style={{ marginLeft: `${(index % 3) * 1.5}rem` }}
+              className="group flex flex-col bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
             >
-              {/* Content - Left Side */}
-              <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm shrink-0">
-                    {point.number}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-foreground">
-                    {point.title}
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {point.description}
-                </p>
-              </div>
-
-              {/* Image - Right Side */}
-              <div className="w-full md:w-[35%] shrink-0 relative overflow-hidden">
+              {/* Image - Top */}
+              <div className="w-full h-48 shrink-0 relative overflow-hidden">
                 <img
                   src={point.image}
                   alt={point.imageAlt}
-                  className="w-full h-48 md:h-full object-cover transition-all duration-500 group-hover:scale-105 img-grayscale-hover"
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 img-grayscale-hover"
                 />
+              </div>
+              
+              {/* Content - Bottom */}
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm shrink-0">
+                    {point.number}
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {point.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {point.description}
+                </p>
               </div>
             </div>
           ))}
