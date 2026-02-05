@@ -5,21 +5,21 @@ import brandDeath from "@/assets/problem/brand-death.jpg";
 const penalties = [
   {
     number: "1",
-    title: "Total Financial Hemorrhage",
+    title: "Financial Liability",
     description: "Between €10M regulatory fines (NIS2/DORA) and the immediate blockage of your payment streams (PCI/SOC2), a \"paper-only\" strategy turns a breach into a bankruptcy event. You aren't just losing profit; you're losing the ability to transact.",
     image: financialHemorrhage,
     imageAlt: "Silver coins falling - financial loss concept",
   },
   {
     number: "2",
-    title: "Operational Paralysis",
+    title: "Total Operational Stoppage",
     description: "This isn't just a slow-down. Under NIS2 and DORA, regulators have the teeth to revoke your license to operate in key markets. If you can't prove compliance, you don't have a business. You have a hobby.",
     image: operationalParalysis,
     imageAlt: "Disconnected gears - operational paralysis concept",
   },
   {
     number: "3",
-    title: "Irreparable Brand Death",
+    title: "Irreversible Reputation Loss",
     description: "It takes a decade to build your reputation and ten minutes of exposure to destroy it. In the enterprise world, you don't get a second chance once the \"Illusion of Safety\" is shattered.",
     image: brandDeath,
     imageAlt: "Shattered mirror - broken reputation concept",
