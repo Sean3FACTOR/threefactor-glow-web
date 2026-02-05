@@ -1,11 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TheProblem from "@/components/TheProblem";
-import AuthorityBar from "@/components/AuthorityBar";
-import TheHow from "@/components/TheHow";
-import AboutSection from "@/components/AboutSection";
-import TheWho from "@/components/TheWho";
-import CTASection from "@/components/CTASection";
+import EmpathyAuthority from "@/components/EmpathyAuthority";
+import ThePlan from "@/components/ThePlan";
+import PainPoints from "@/components/PainPoints";
+import CompetitiveEdge from "@/components/CompetitiveEdge";
 import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 
@@ -15,11 +14,10 @@ const Index = () => {
       <Navigation />
       <Hero />
       <TheProblem />
-      <AuthorityBar />
-      <TheHow />
-      <AboutSection />
-      <TheWho />
-      <CTASection />
+      <EmpathyAuthority />
+      <ThePlan />
+      <PainPoints />
+      <CompetitiveEdge />
       <Certifications />
       <Footer />
     </div>
