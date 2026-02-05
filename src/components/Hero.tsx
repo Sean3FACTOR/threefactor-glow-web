@@ -33,7 +33,6 @@ const Hero = () => {
           {/* Headline - Split into two lines */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
             Don't Let a Security Audit Kill Your $1M Contract.
-            <span className="block mt-2">Secure the Deal with Unshakeable Compliance.</span>
           </h1>
           
           {/* Subhead */}
