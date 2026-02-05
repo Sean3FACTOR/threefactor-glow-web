@@ -1,44 +1,30 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Grid3X3, TrendingUp, CheckSquare } from "lucide-react";
+import { ArrowRight, CheckCircle, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlueprintHero from "@/components/BlueprintHero";
 
-const mazePoints = [
-  "Endless checkbox exercises",
-  "Compliance as a cost center",
-  "Security theater, not substance",
-  "Deals stalled by due diligence",
-];
-
-const pathPoints = [
-  "Certifications that unlock markets",
-  "Security as competitive advantage",
-  "Programs that withstand scrutiny",
-  "Faster sales cycles, bigger deals",
-];
-
-const certifications = [
+const frameworks = [
   {
-    title: "ISO 27001",
-    description: "This internationally recognized security certification helps you gain customer trust worldwide. We guide you through implementation and certification.",
+    name: "SOC2",
+    win: "The SaaS Gold Standard: Instant credibility.",
+    risk: "The Security Review Dead-End: Sales teams drown in 300-row questionnaires and lose to competitors.",
   },
   {
-    title: "SOC 2",
-    description: "This widely recognized certification is a must-have for any service organization in North America. We get you audit-ready faster than you thought possible.",
+    name: "ISO 27001",
+    win: "Global Market Access.",
+    risk: "The Border Closure: Effectively blacklisted from European and Asian enterprise markets.",
   },
   {
-    title: "PCI DSS",
-    description: "Our Qualified Security Assessors (QSA) are some of the most experienced in the industry. From payment card compliance to complex merchant environments, we've done it all.",
+    name: "NIS2 & DORA",
+    win: "Regulatory Immunity.",
+    risk: "The €10M 'Negligence' Fine: Fines up to 2% of global turnover; directors held personally liable.",
   },
   {
-    title: "NIS 2",
-    description: "The EU's updated Network and Information Security Directive requires critical infrastructure operators to meet stringent security standards. We help you achieve compliance.",
-  },
-  {
-    title: "DORA",
-    description: "The Digital Operational Resilience Act demands financial entities demonstrate robust ICT risk management. Our experts guide you through every requirement.",
+    name: "PCI DSS",
+    win: "The Transaction Engine.",
+    risk: "The Revenue Blackout: Merchant account suspension freezes cash flow instantly.",
   },
 ];
 
@@ -50,102 +36,48 @@ const ComplianceServicesPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Compliance"
-        headline="Turn Compliance Into Revenue."
-        subhead="Don't just tick boxes. We navigate the maze of regulated data to help you achieve the certifications that unlock new markets and close bigger deals."
-        ctaText="Explore Compliance"
+        headline="The Keys to the Market."
+        subhead="Stop treating compliance like a chore. Start treating it like a competitive advantage. We help you navigate the world's most rigorous frameworks to unlock new revenue."
+        ctaText="Book Your Strategy Session"
         ctaLink="/contact"
       />
 
-      {/* Value Proposition Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              The Value Proposition.
-            </h2>
-          </div>
-
-          {/* Split Layout - The Maze vs The Path */}
-          <div className="grid md:grid-cols-2 gap-0 max-w-5xl mx-auto border border-border rounded-lg overflow-hidden">
-            {/* Left Side - The Maze */}
-            <div className="p-10 md:p-12 bg-muted/30">
-              <div className="mb-6">
-                <Grid3X3 className="w-10 h-10 text-muted-foreground/50" strokeWidth={1} />
-              </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                Without Strategy
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-muted-foreground mt-3 mb-8">
-                The Maze
-              </h2>
-              <ul className="space-y-4">
-                {mazePoints.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-2 h-2 rounded-full bg-muted-foreground/40 mt-2 shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right Side - The Path */}
-            <div className="p-10 md:p-12 bg-primary/5 border-l border-primary/20">
-              <div className="mb-6">
-                <TrendingUp className="w-10 h-10 text-primary" strokeWidth={1} />
-              </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
-                With 3FACTOR
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-8">
-                The Path
-              </h2>
-              <ul className="space-y-4">
-                {pathPoints.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-foreground">
-                    <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Tagline */}
-          <p className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto text-lg">
-            Don't just tick boxes. Get certifications that open doors to new markets and accelerate your revenue.
-          </p>
-        </div>
-      </section>
-
-      {/* Certifications List */}
-      <section className="py-20 bg-muted/30">
+      {/* Framework Table Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Certification Expertise
+              The Framework Table
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Frameworks we specialize in to unlock your next level of growth.
+              Every framework is a door to new markets. Here's what's at stake.
             </p>
           </div>
           
-          <div className="max-w-3xl mx-auto">
-            {certifications.map((cert) => (
+          {/* Table */}
+          <div className="max-w-5xl mx-auto overflow-hidden rounded-lg border border-border">
+            {/* Table Header */}
+            <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
+              <div className="p-4 font-bold text-foreground text-sm">Framework</div>
+              <div className="p-4 font-bold text-foreground text-sm flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                The Win
+              </div>
+              <div className="p-4 font-bold text-foreground text-sm flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-destructive" />
+                The Risk
+              </div>
+            </div>
+            
+            {/* Table Rows */}
+            {frameworks.map((framework) => (
               <div 
-                key={cert.title}
-                className="border-b border-border last:border-b-0 py-8 first:pt-0 last:pb-0"
+                key={framework.name}
+                className="grid grid-cols-3 border-b border-border last:border-b-0 hover:bg-muted/20 transition-colors"
               >
-                <div className="flex items-start gap-4">
-                  <CheckSquare className="w-6 h-6 text-muted-foreground/50 mt-0.5 shrink-0" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      {cert.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {cert.description}
-                    </p>
-                  </div>
-                </div>
+                <div className="p-6 font-bold text-foreground">{framework.name}</div>
+                <div className="p-6 text-muted-foreground text-sm">{framework.win}</div>
+                <div className="p-6 text-muted-foreground text-sm">{framework.risk}</div>
               </div>
             ))}
           </div>
@@ -153,11 +85,11 @@ const ComplianceServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ready to Transform Your Compliance Strategy?
+              Ready to Unlock New Markets?
             </h3>
             <p className="text-muted-foreground mb-8">
               Start with a free discovery call to map out your compliance roadmap.
@@ -168,7 +100,7 @@ const ComplianceServicesPage = () => {
               className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
             >
               <Link to="/contact">
-                Schedule a Discovery Call
+                Book Your Strategy Session
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>

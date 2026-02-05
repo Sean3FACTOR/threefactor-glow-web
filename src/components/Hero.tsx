@@ -32,13 +32,13 @@ const Hero = () => {
         <div className="max-w-3xl">
           {/* Headline - Split into two lines */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
-            Expert Security Strategies,
-            <span className="block mt-2">Built to Last.</span>
+            Don't Let a Security Audit Kill Your $1M Contract.
+            <span className="block mt-2">Secure the Deal with Unshakeable Compliance.</span>
           </h1>
           
           {/* Subhead */}
           <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl leading-relaxed">
-            We move beyond standard checklists. We tailor proactive defenses to your specific needs, ensuring your most valuable assets are protected by systems you can believe in.
+            Stop letting 'revenue-blocking gaps' stall your growth. We help service providers navigate regulated data to unlock new markets and secure executive confidence.
           </p>
 
           

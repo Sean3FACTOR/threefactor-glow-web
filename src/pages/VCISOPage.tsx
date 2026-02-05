@@ -1,141 +1,54 @@
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlueprintHero from "@/components/BlueprintHero";
 
-const managedSecurityPlans = [
-  {
-    title: "Define",
-    description: "We help you define a risk profile and use it to build a security improvement roadmap",
-  },
-  {
-    title: "Implement",
-    description: "We guide your team through the implementation of your new security program roadmap",
-  },
-  {
-    title: "Manage",
-    description: "We provide ongoing security program monitoring and guidance",
-  },
-  {
-    title: "Improve",
-    description: "We provide ongoing leadership and strategy for continuous evolution of your program",
-  },
-];
-
 const pricingTiers = [
   {
     name: "Bronze",
-    subtitle: "Ideal for small startups",
+    subtitle: "The Foundation",
     employees: "(Up to 25 employees)",
-    sections: [
-      {
-        title: "Security Management Framework:",
-        features: [
-          "Baseline Risk Assessment",
-          "Customized Information Security Management Framework*",
-          "Security Architecture Blueprint",
-          "1-year Security Program Roadmap",
-          "Security Management Dashboard",
-        ],
-      },
-      {
-        title: "Program Management:",
-        features: [
-          "Ongoing progress monitoring",
-          "Weekly program update meetings",
-          "Monthly executive reports",
-          "Knowledge Transfer",
-        ],
-      },
-      {
-        title: "Additional Subject Matter Expert Advisory:",
-        features: ["Discounted rate ($160/hr)"],
-      },
+    description: "Build your Architecture Blueprint and 1-year Roadmap to prove you aren't a liability.",
+    features: [
+      "Baseline Risk Assessment",
+      "Security Architecture Blueprint",
+      "1-year Security Program Roadmap",
+      "Security Management Dashboard",
+      "Weekly program update meetings",
+      "Monthly executive reports",
     ],
+    smeRate: "$160/hr",
     highlighted: false,
   },
   {
     name: "Silver",
-    subtitle: "Ideal for growing startups",
+    subtitle: "Enterprise Readiness",
     employees: "(Up to 100 employees)",
-    sections: [
-      {
-        title: "Security Management Framework:",
-        features: [
-          "Everything in Bronze plus:",
-          "Customized SOC-2 Control Framework",
-          "Detailed Security Procedures",
-        ],
-      },
-      {
-        title: "Program Management:",
-        features: [
-          "Everything in Bronze plus:",
-          "Weekly implementation working session",
-        ],
-      },
-      {
-        title: "Additional Subject Matter Expert Advisory:",
-        features: ["Discounted rate ($155/hr)"],
-      },
+    description: "Everything in Bronze plus a Custom SOC-2 Framework to move you from 'Baseline' to 'Battle-Ready.'",
+    features: [
+      "Everything in Bronze plus:",
+      "Customized SOC-2 Control Framework",
+      "Detailed Security Procedures",
+      "Weekly implementation working session",
     ],
+    smeRate: "$155/hr",
     highlighted: true,
   },
   {
     name: "Gold",
-    subtitle: "Ideal for established startups",
+    subtitle: "Total Resilience & Scale",
     employees: "(100+ employees)",
-    sections: [
-      {
-        title: "Security Management Framework:",
-        features: [
-          "Everything in Silver plus:",
-          "Privacy Management Framework",
-          "Secure Development Program",
-        ],
-      },
-      {
-        title: "Program Management:",
-        features: [
-          "Everything in Silver plus:",
-          "Monthly security assurance review (security health check)",
-        ],
-      },
-      {
-        title: "Additional Subject Matter Expert Advisory:",
-        features: ["Discounted rate ($150/hr)"],
-      },
+    description: "Everything in Silver plus a Secure Development Program. Your insurance against the 'Triple Penalty.'",
+    features: [
+      "Everything in Silver plus:",
+      "Privacy Management Framework",
+      "Secure Development Program",
+      "Monthly security assurance review",
     ],
+    smeRate: "$150/hr",
     highlighted: false,
-  },
-];
-
-const approachSteps = [
-  {
-    title: "Baseline",
-    description: "Find out where you are now and what your capabilities are. We perform a baseline risk assessment of your current security posture.",
-  },
-  {
-    title: "Plan",
-    description: "Define where you need to be and how to get there based on your unique business needs. We build a security roadmap tailored to your unique needs and capabilities.",
-  },
-  {
-    title: "Execute",
-    description: "Implement a Security Architecture. We combine decades of experience, best of breed technologies and agile implementation methods to get you there faster.",
-  },
-  {
-    title: "Fine Tune",
-    description: "Even the best architecture needs to be constantly refined and maintained. We provide Security and Privacy Advisory service to help you keep up with constant changes in the business, regulatory and technology threat landscape.",
-  },
-  {
-    title: "Monitor",
-    description: "Good security and compliance require constant vigilance. We provide Partner Solutions to help you sleep well knowing your systems and data are being constantly monitored against ongoing threats.",
-  },
-  {
-    title: "Respond",
-    description: "Breaches are inevitable. The key is to be ready to respond quickly and appropriately to minimize the financial, reputational and other negative impacts of a breach. We provide Incident Remediation support.",
   },
 ];
 
@@ -147,33 +60,16 @@ const VCISOPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Virtual CISO"
-        headline="Executive Leadership On Demand."
-        subhead="Get the governance, budget management, and Board reporting you need—at a fixed monthly cost."
-        ctaText="Explore vCISO Plans"
+        headline="Elite Security Leadership."
+        subhead="Stop carrying the weight of the pen alone. Get strategic leadership for a fraction of the cost of a full-time hire."
+        ctaText="Book Your Strategy Session"
         ctaLink="/contact"
       />
 
       <main className="pb-24">
         <div className="container mx-auto px-4">
-          <div className="mb-24">
-            <h2 className="text-sm text-muted-foreground uppercase tracking-widest font-semibold text-center mb-12">
-              Managed Security Plans
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {managedSecurityPlans.map((plan) => (
-                <div
-                  key={plan.title}
-                  className="bg-card border border-border p-6 rounded-xl card-hover"
-                >
-                  <h3 className="text-xl font-bold text-foreground mb-3">{plan.title}</h3>
-                  <p className="text-muted-foreground text-sm">{plan.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Pricing Tiers */}
-          <div className="mb-24">
+          <div className="mb-24 pt-16">
             <h2 className="text-sm text-muted-foreground uppercase tracking-widest font-semibold text-center mb-12">
               Choose Your Right-Sized Plan
             </h2>
@@ -189,26 +85,31 @@ const VCISOPage = () => {
                 >
                   {/* Tier Header */}
                   <div className="text-center mb-6 pb-6 border-b border-border">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{tier.name}</h3>
-                    <p className="text-muted-foreground text-sm">{tier.subtitle}</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-1">{tier.name}</h3>
+                    <p className="text-primary font-semibold text-sm mb-1">{tier.subtitle}</p>
                     <p className="text-muted-foreground text-sm">{tier.employees}</p>
                   </div>
 
-                  {/* Feature Sections */}
-                  <div className="space-y-6 mb-8">
-                    {tier.sections.map((section) => (
-                      <div key={section.title}>
-                        <h4 className="text-sm font-semibold text-foreground mb-3">{section.title}</h4>
-                        <ul className="space-y-2">
-                          {section.features.map((feature) => (
-                            <li key={feature} className="flex items-start gap-2">
-                              <Check className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
-                              <span className="text-xs text-muted-foreground">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                    {tier.description}
+                  </p>
+
+                  {/* Feature List */}
+                  <ul className="space-y-2 mb-6">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
+                        <span className="text-xs text-muted-foreground">{feature}</span>
+                      </li>
                     ))}
+                  </ul>
+
+                  {/* SME Rate */}
+                  <div className="mb-6 p-3 bg-muted/50 rounded-lg">
+                    <p className="text-xs text-muted-foreground">
+                      Additional SME Advisory: <span className="text-foreground font-semibold">{tier.smeRate}</span>
+                    </p>
                   </div>
 
                   {/* CTA Button */}
@@ -218,7 +119,7 @@ const VCISOPage = () => {
                     className="w-full group"
                   >
                     <Link to="/contact" className="flex items-center justify-center gap-2">
-                      Find out more
+                      Book Your Strategy Session
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -227,26 +128,18 @@ const VCISOPage = () => {
             </div>
           </div>
 
-          {/* Our Approach */}
+          {/* SME Callout */}
           <div className="mb-24">
-            <h2 className="text-sm text-muted-foreground uppercase tracking-widest font-semibold text-center mb-12">
-              Our Approach
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {approachSteps.map((step, index) => (
-                <div
-                  key={step.title}
-                  className="bg-card border border-border p-6 rounded-xl card-hover group"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="w-8 h-8 rounded-full bg-muted text-muted-foreground font-bold text-sm flex items-center justify-center">
-                      {index + 1}
-                    </span>
-                    <h3 className="text-lg font-bold text-foreground">{step.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
-                </div>
-              ))}
+            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+                <Phone className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Access the 'Red Phone'
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Get direct access to the elite architects who secured 90% of the global cloud. Preferential rates of <span className="text-foreground font-semibold">$150–$160/hr</span> for subject matter expert advisory.
+              </p>
             </div>
           </div>
 
@@ -260,7 +153,7 @@ const VCISOPage = () => {
                 Schedule a discovery call to discuss your security needs and find the right plan for your organization.
               </p>
               <Button asChild className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors">
-                <Link to="/contact">Schedule a Discovery Call</Link>
+                <Link to="/contact">Book Your Strategy Session</Link>
               </Button>
             </div>
           </div>
