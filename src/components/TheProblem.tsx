@@ -1,5 +1,3 @@
-import { AlertTriangle } from "lucide-react";
-
 import financialHemorrhage from "@/assets/problem/financial-hemorrhage.jpg";
 import operationalParalysis from "@/assets/problem/operational-paralysis.jpg";
 import brandDeath from "@/assets/problem/brand-death.jpg";
@@ -32,41 +30,38 @@ const TheProblem = () => {
   return (
     <section className="py-20 relative bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+        {/* Section Header - Left Aligned */}
+        <div className="max-w-4xl mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             The Revenue-Killing Reality of 'Paper-Thin' Compliance.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
             A checklist won't stop a breach. Generic "box-ticking" gives you a paper-thin shield that satisfies an auditor but leaves your actual data exposed. This "Illusion of Safety" is a silent budget-killer that does nothing to actually reduce your risk.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-destructive/10 border border-destructive/20 rounded-full">
-            <AlertTriangle className="w-4 h-4 text-destructive" />
-            <span className="text-sm font-semibold text-destructive">
-              If your compliance is only "paper-thin," you are one audit, or one breach away from the Triple Penalty:
-            </span>
-          </div>
+          <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
+            If your compliance is only "paper-thin," you are one audit, or one breach away from the Triple Penalty:
+          </h3>
         </div>
 
-        {/* Cascading Cards */}
-        <div className="max-w-4xl mx-auto space-y-6">
+        {/* Cascading Cards - Left Aligned */}
+        <div className="max-w-5xl space-y-6">
           {penalties.map((penalty, index) => (
             <div
               key={penalty.title}
-              className="group flex flex-col md:flex-row bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-destructive/50 hover:shadow-lg"
-              style={{ marginLeft: `${index * 2}rem` }}
+              className="group flex flex-col md:flex-row bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
+              style={{ marginLeft: `${index * 1.5}rem` }}
             >
               {/* Content - Left Side */}
               <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold text-lg shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm shrink-0">
                     {penalty.number}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground">
                     {penalty.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {penalty.description}
                 </p>
               </div>
