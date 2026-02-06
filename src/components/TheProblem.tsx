@@ -24,7 +24,7 @@ const TheProblem = () => {
   return <section className="py-20 relative bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4">
         {/* Section Header - Left Aligned */}
-        <div className="max-w-4xl mb-16">
+        <div className="max-w-4xl mb-16 mx-0 text-left bg-transparent font-normal">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             The Revenue-Killing Reality of 'Paper-Thin' Compliance.
           </h2>
