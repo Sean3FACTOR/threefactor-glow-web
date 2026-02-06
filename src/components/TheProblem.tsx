@@ -30,17 +30,23 @@ const TheProblem = () => {
   return (
     <section className="py-20 relative bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4">
-        {/* Section Header - Left Aligned */}
-        <div className="max-w-4xl mb-16 mx-0 text-left bg-transparent font-normal">
+        {/* Section Header - Centered */}
+        <div className="max-w-4xl mb-12 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             The High Cost of "Paper-Thin" Compliance
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
             A checklist won't stop a breach and it certainly won't satisfy a sophisticated enterprise auditor. Generic box-ticking creates an illusion of safety: compliance that looks fine on paper but collapses under scrutiny.
           </p>
-          <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
+          <p className="text-lg md:text-xl font-semibold text-foreground mb-6">
             If your compliance only exists in documentation, you're one audit away from losing momentum, or worse.
-          </h3>
+          </p>
+          {/* Grey Arrow */}
+          <div className="flex justify-center">
+            <svg className="w-8 h-8 text-muted-foreground/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
 
         {/* Cascading Cards - Left Aligned */}

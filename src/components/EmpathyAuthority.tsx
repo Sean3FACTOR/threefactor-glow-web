@@ -30,20 +30,23 @@ const EmpathyAuthority = () => {
   return (
     <section className="py-20 relative bg-background border-t border-border">
       <div className="container mx-auto px-4">
-        {/* Section Header - Left Aligned */}
-        <div className="max-w-4xl mb-16">
+        {/* Section Header - Centered */}
+        <div className="max-w-4xl mb-12 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Expert Leadership for Your Toughest Transitions
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
             We know the pressure of standing in front of a board while growth depends on meeting complex global standards. We understand that "good enough" security is a career risk you can't afford.
           </p>
-          <p className="text-lg text-foreground/80 font-medium mb-10">
+          <p className="text-lg text-foreground/80 font-medium mb-6">
             If compliance feels like a second full-time job, you're not failing, the system is broken.
           </p>
-          <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
-            Elite Authority to Back You Up
-          </h3>
+          {/* Grey Arrow */}
+          <div className="flex justify-center">
+            <svg className="w-8 h-8 text-muted-foreground/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
 
         {/* Cascading Cards - Left Aligned */}
