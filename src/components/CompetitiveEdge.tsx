@@ -28,11 +28,17 @@ const CompetitiveEdge = () => {
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-          {benefits.map(benefit => <div key={benefit.title} className="flex gap-4 p-6 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+        {/* Benefits List */}
+        <div className="max-w-4xl mx-auto mb-16 space-y-4">
+          {benefits.map((benefit, index) => (
+            <div 
+              key={benefit.title} 
+              className="flex gap-4 p-6 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
+            >
               <div className="shrink-0">
-                <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm">
+                  {index + 1}
+                </div>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">
@@ -42,7 +48,8 @@ const CompetitiveEdge = () => {
                   {benefit.description}
                 </p>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         {/* Closing Statement */}
