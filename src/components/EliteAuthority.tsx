@@ -1,6 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Cloud, Shield, Scale } from "lucide-react";
 
+import conferenceMeeting from "@/assets/homepage/conference-meeting.jpg";
+import businessHandshake from "@/assets/homepage/business-handshake.jpg";
+import executiveDiscussion from "@/assets/homepage/executive-discussion.jpg";
+
 const authorityPoints = [
   {
     id: "AUTH-A",
@@ -9,6 +13,7 @@ const authorityPoints = [
     description: "Our team includes lead architects who secured 9 of the top 10 global Cloud Service Providers.",
     colSpan: "md:col-span-4",
     offset: "",
+    image: conferenceMeeting,
   },
   {
     id: "AUTH-B",
@@ -17,6 +22,7 @@ const authorityPoints = [
     description: "We've led recovery efforts on the frontlines of 6 of the 10 largest security breaches in North American history.",
     colSpan: "md:col-span-5",
     offset: "md:mt-16",
+    image: executiveDiscussion,
   },
   {
     id: "AUTH-C",
@@ -25,6 +31,7 @@ const authorityPoints = [
     description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools.",
     colSpan: "md:col-span-3",
     offset: "md:mt-8",
+    image: businessHandshake,
   },
 ];
 
@@ -59,12 +66,20 @@ const EliteAuthority = () => {
           {authorityPoints.map((point) => (
             <Card 
               key={point.title} 
-              className={`${point.colSpan} ${point.offset} shadow-none border border-border/10 bg-card hover:border-primary transition-colors`}
+              className={`${point.colSpan} ${point.offset} shadow-none border border-border/10 bg-card hover:border-primary transition-colors group overflow-hidden`}
             >
+              {/* Image with grayscale-to-color hover effect */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={point.image} 
+                  alt={point.title}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                {/* Technical ID overlay */}
+                <span className="absolute top-4 left-4 tech-id bg-card/90 px-2 py-1">[{point.id}]</span>
+              </div>
+              
               <CardContent className="p-8">
-                {/* Technical ID */}
-                <span className="tech-id block mb-4">[{point.id}]</span>
-                
                 <div className="w-10 h-10 bg-muted flex items-center justify-center mb-6">
                   <point.icon className="w-5 h-5 text-muted-foreground" />
                 </div>
