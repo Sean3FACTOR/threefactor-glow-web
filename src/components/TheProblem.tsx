@@ -13,7 +13,7 @@ const penalties = [
   {
     number: "2",
     title: "Operational Stoppage",
-    description: "Under mandates like NIS2 and DORA, regulators can revoke your license to operate. Without proven resilience, you don't have a growth strategy—you have a liability.",
+    description: "Under mandates like NIS2 and DORA, regulators can revoke your license to operate. Without proven resilience, you don't have a growth strategy, you have a liability.",
     image: operationalParalysis,
     imageAlt: "Disconnected gears - operational paralysis concept"
   },
