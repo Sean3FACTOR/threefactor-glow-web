@@ -12,7 +12,7 @@ const Philosophy = () => {
           <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed mb-8">
             "Our focus is driving{" "}
             <span className="text-muted-foreground font-medium">business value with security enablement</span>{" "}
-            — positioning cybersecurity as a competitive differentiator, not just a cost center."
+            , positioning cybersecurity as a competitive differentiator, not just a cost center."
           </blockquote>
 
         </div>

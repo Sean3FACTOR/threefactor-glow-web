@@ -36,7 +36,7 @@ const CompetitiveEdge = () => {
             From Vendor to Trusted Market Authority
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-            Compliance isn't overhead—it's leverage.
+            Compliance isn't overhead, it's leverage.
           </p>
           <p className="text-lg text-foreground/80 font-medium">
             Walk into your next board meeting with proof, not promises, that risk is controlled and growth is protected.
@@ -109,7 +109,7 @@ const CompetitiveEdge = () => {
               </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-4 max-w-md mx-auto">
-              Learn how elite companies reframe security from a cost center into a growth engine—and why auditors trust them faster.
+              Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
             </p>
           </div>
         </div>

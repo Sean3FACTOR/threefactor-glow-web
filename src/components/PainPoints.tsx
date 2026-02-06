@@ -36,7 +36,7 @@ const PainPoints = () => {
             Don't Let a "Checkbox" Kill Your Biggest Deal
           </h2>
           <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
-            In enterprise sales, compliance isn't optional—it's the gatekeeper.
+            In enterprise sales, compliance isn't optional, it's the gatekeeper.
           </h3>
         </div>
 

@@ -27,7 +27,7 @@ const steps = [
   {
     number: "3",
     title: "Market Defense & Scale",
-    description: "We defend your posture during audits, vendor reviews, and due diligence—so security becomes a competitive advantage, not a recurring fire drill.",
+    description: "We defend your posture during audits, vendor reviews, and due diligence, so security becomes a competitive advantage, not a recurring fire drill.",
     image: criticalResilience,
     imageAlt: "Market expansion and growth",
     icon: TrendingUp,

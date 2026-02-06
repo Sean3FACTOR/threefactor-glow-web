@@ -67,7 +67,7 @@ const TheWho = () => {
                 </div>
                 <div>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We translate technical intelligence from the lab into clear, actionable strategy for your leadership—<span className="text-foreground font-semibold">without the 'Ivory Tower' ego</span>.
+                    We translate technical intelligence from the lab into clear, actionable strategy for your leadership, <span className="text-foreground font-semibold">without the 'Ivory Tower' ego</span>.
                   </p>
                 </div>
               </div>

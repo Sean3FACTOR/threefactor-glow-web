@@ -39,7 +39,7 @@ const TheProblem = () => {
             A checklist won't stop a breach and it certainly won't satisfy a sophisticated enterprise auditor. Generic box-ticking creates an illusion of safety: compliance that looks fine on paper but collapses under scrutiny.
           </p>
           <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
-            If your compliance only exists in documentation, you're one audit away from losing momentum—or worse.
+            If your compliance only exists in documentation, you're one audit away from losing momentum, or worse.
           </h3>
         </div>
 

@@ -39,7 +39,7 @@ const EmpathyAuthority = () => {
             We know the pressure of standing in front of a board while growth depends on meeting complex global standards. We understand that "good enough" security is a career risk you can't afford.
           </p>
           <p className="text-lg text-foreground/80 font-medium mb-10">
-            If compliance feels like a second full-time job, you're not failing—the system is broken.
+            If compliance feels like a second full-time job, you're not failing, the system is broken.
           </p>
           <h3 className="text-2xl md:text-3xl font-semibold text-foreground border-l-4 border-primary pl-6">
             Elite Authority to Back You Up
