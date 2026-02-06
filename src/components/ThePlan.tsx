@@ -17,18 +17,18 @@ const blueprints = [
   },
   {
     number: "2",
-    title: "Critical Resilience (NIS2 & DORA)",
-    description: "We navigate the complex new requirements for infrastructure and finance, protecting you from aggressive EU-wide penalties.",
-    image: criticalResilience,
-    imageAlt: "Silver fortress model - critical resilience",
-    href: "/services/compliance",
-  },
-  {
-    number: "3",
     title: "Transactional Security (PCI DSS)",
     description: "We harden your payment environments to ensure your revenue stream is never interrupted by a compliance failure.",
     image: transactionalSecurity,
     imageAlt: "Silver payment device - transactional security",
+    href: "/services/compliance",
+  },
+  {
+    number: "3",
+    title: "Critical Resilience (NIS2 & DORA)",
+    description: "We navigate the complex new requirements for infrastructure and finance, protecting you from aggressive EU-wide penalties.",
+    image: criticalResilience,
+    imageAlt: "Silver fortress model - critical resilience",
     href: "/services/compliance",
   },
   {
