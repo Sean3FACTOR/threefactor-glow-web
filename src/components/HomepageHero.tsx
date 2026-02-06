@@ -26,11 +26,13 @@ const HomepageHero = () => {
             </p>
 
             {/* Value props */}
-            <div className="space-y-3 mb-10 text-foreground border-l border-border/30 pl-6">
-              <p className="text-lg">
+            <div className="space-y-4 mb-10 text-foreground">
+              <p className="text-lg flex items-start gap-3">
+                <span className="w-2 h-2 bg-muted-foreground rotate-45 flex-shrink-0 mt-2" />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
-              <p className="text-lg">
+              <p className="text-lg flex items-start gap-3">
+                <span className="w-2 h-2 bg-muted-foreground rotate-45 flex-shrink-0 mt-2" />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
