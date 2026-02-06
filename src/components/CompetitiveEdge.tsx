@@ -31,12 +31,6 @@ const benefits = [
     description: "With ISO, SOC2, and NIS2 handled, no territory or tender is off-limits.",
     image: globalSkyline,
     imageAlt: "Global skyline - worldwide market access"
-  },
-  {
-    title: "Automated Resilience",
-    description: "Scale with the certainty that your DORA and PCI requirements are automated and resilient, not a manual burden on your dev team.",
-    image: networkMesh,
-    imageAlt: "Network mesh - automated systems"
   }
 ];
 
