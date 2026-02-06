@@ -4,55 +4,57 @@
 
 @layer base {
   :root {
-    /* Base: Pure White Background & Dark Grey Text */
-    --background: 0 0% 100%;
-    --foreground: 60 2% 23%;
+    /* Background: Off-white/Light Grey for a 'Blueprint' feel */
+    --background: 210 20% 98%;
+    --foreground: 60 2% 23%; /* Dark Grey (#3B3B39) */
 
-    /* Cards: Clean white with the same Dark Grey text */
+    /* Cards: Pure white to stand out against the background */
     --card: 0 0% 100%;
     --card-foreground: 60 2% 23%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 60 2% 23%;
 
-    /* Primary: Dark Grey for buttons/headers by default */
-    --primary: 60 2% 23%;
+    /* The Orange: Your high-impact signal color */
+    --primary: 22 89% 54%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Very light grey tint */
-    --secondary: 0 0% 96%;
+    /* Secondary: Light grey tint */
+    --secondary: 210 10% 94%;
     --secondary-foreground: 60 2% 23%;
 
-    /* Muted: Mid-Grey for subheadings and hints */
-    --muted: 0 0% 96%;
+    /* Muted: Updated for blueprint aesthetic */
+    --muted: 210 10% 90%;
     --muted-foreground: 0 0% 39%;
 
-    /* The Orange: Only for focus rings and small accents */
+    /* Accent matches primary orange */
     --accent: 22 89% 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    /* Sharp Industrial Borders */
+    --border: 60 2% 20%;
+    --input: 210 10% 90%;
     --ring: 22 89% 54%;
 
-    --radius: 0.75rem;
+    /* Crucial: Sharp edges like Binary Defense */
+    --radius: 0px;
 
     /* Custom tokens */
     --brand-orange: 22 89% 54%;
     --glow-orange: 22 89% 54%;
-    --glass-bg: 0 0% 98%;
-    --glass-border: 0 0% 90%;
+    --glass-bg: 210 20% 98%;
+    --glass-border: 60 2% 20%;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 60 2% 23%;
-    --sidebar-primary: 60 2% 23%;
+    --sidebar-primary: 22 89% 54%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent: 210 10% 94%;
     --sidebar-accent-foreground: 60 2% 23%;
-    --sidebar-border: 0 0% 90%;
+    --sidebar-border: 60 2% 20%;
     --sidebar-ring: 22 89% 54%;
   }
 
