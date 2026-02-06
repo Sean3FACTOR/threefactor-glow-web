@@ -22,8 +22,7 @@ const CompetitiveEdge = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold"></span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 text-muted-foreground"></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">From "High Risk" to the Industry Standard.</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Compliance shouldn't be an anchor—it should be your engine. When security is built into the fabric of your business, you stop playing defense and start winning on trust.
           </p>
