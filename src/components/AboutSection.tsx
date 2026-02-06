@@ -9,7 +9,7 @@ const aboutCards = [
     bullets: [
       "Consultants with deep technical roots dating back to 2001.",
       "Lineage from the world's most respected global security firms.",
-      "Decades of practical, hands-on leadership—not just theory.",
+      "Decades of practical, hands-on leadership, not just theory.",
     ],
     image: globeExperience,
     imageAlt: "Professional hand spinning a silver globe representing global experience",

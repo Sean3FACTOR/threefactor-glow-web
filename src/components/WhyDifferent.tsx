@@ -36,7 +36,7 @@ const WhyDifferent = () => {
               looks like in <span className="text-muted-foreground">cybersecurity</span>
             </h2>
             <p className="text-muted-foreground mt-6 text-lg max-w-md leading-relaxed">
-              Real people, real action, no excuses. We're not your typical security vendor — we're partners who understand that every organization's security journey is unique.
+              Real people, real action, no excuses. We're not your typical security vendor, we're partners who understand that every organization's security journey is unique.
             </p>
             
             {/* Security Analyst Image */}
