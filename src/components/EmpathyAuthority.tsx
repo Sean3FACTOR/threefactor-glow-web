@@ -20,7 +20,7 @@ const authorityPoints = [
   {
     number: "3",
     title: "Unbiased Strategy",
-    description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance—not selling tools.",
+    description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools.",
     image: unbiasedAdvice,
     imageAlt: "Balanced silver scales - unbiased fairness"
   }
