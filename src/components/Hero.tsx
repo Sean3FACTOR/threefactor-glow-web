@@ -12,12 +12,16 @@ const Hero = () => {
           {/* Left - Text Content */}
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
-              Don't Let a Security Audit Kill Your $1M Contract.
+              Win the RFP. Own the Market.
             </h1>
             
             {/* Subhead */}
             <p className="text-xl md:text-2xl text-muted-foreground mt-8 max-w-2xl leading-relaxed">
-              Stop letting "revenue-blocking gaps" stall your growth. We help service providers navigate regulated data to unlock new markets and secure executive confidence.
+              You're a founder or executive scaling into regulated markets—security shouldn't be the thing slowing you down. We build unshakeable compliance frameworks that shorten sales cycles, clear RFP hurdles, and secure executive confidence.
+            </p>
+
+            <p className="text-lg text-foreground/80 mt-6 font-medium">
+              Security should accelerate growth. Not quietly sabotage it.
             </p>
 
             {/* CTA Button */}
@@ -27,7 +31,7 @@ const Hero = () => {
                   size="lg" 
                   className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all group"
                 >
-                  Book Your Strategy Session
+                  Book Your Compliance Strategy Session
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
