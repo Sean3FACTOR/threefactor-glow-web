@@ -82,17 +82,15 @@ const EliteAuthority = () => {
           </div>
 
           {/* Right side - Image */}
-          <div className="col-span-12 lg:col-span-5 lg:mt-24">
-            <div className="sticky top-24">
-              <div className="relative group">
-                <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-AUTH]</span>
-                <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
-                  <img 
-                    src={sectionHandshake} 
-                    alt="Business partnership"
-                    className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
+          <div className="col-span-12 lg:col-span-5 flex items-start">
+            <div className="relative group w-full">
+              <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-AUTH]</span>
+              <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
+                <img 
+                  src={sectionHandshake} 
+                  alt="Business partnership"
+                  className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
               </div>
             </div>
           </div>
