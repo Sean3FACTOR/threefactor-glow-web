@@ -43,10 +43,18 @@ const BentoGrid = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">--primary</span>
-                    <span className="font-mono text-xs text-muted-foreground">hsl(24 95% 50%)</span>
+                    <span className="font-mono text-xs text-muted-foreground">hsl(60 2% 23%)</span>
                   </div>
-                  <div className="h-2 bg-border rounded-full overflow-hidden">
-                    <div className="h-full w-3/4 bg-foreground/20 rounded-full" />
+                  <div className="relative h-2 bg-border rounded-full overflow-hidden">
+                    <div className="absolute h-full w-3/4 bg-muted-foreground/30 rounded-full" />
+                    <div 
+                      className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 shadow-sm"
+                      style={{ 
+                        left: "calc(75% - 8px)", 
+                        backgroundColor: "hsl(var(--background))",
+                        borderColor: "hsl(var(--primary))"
+                      }}
+                    />
                   </div>
                 </div>
                 
@@ -56,8 +64,16 @@ const BentoGrid = () => {
                     <span className="text-muted-foreground">--background</span>
                     <span className="font-mono text-xs text-muted-foreground">hsl(0 0% 100%)</span>
                   </div>
-                  <div className="h-2 bg-border rounded-full overflow-hidden">
-                    <div className="h-full w-full bg-foreground/10 rounded-full" />
+                  <div className="relative h-2 bg-border rounded-full overflow-hidden">
+                    <div className="absolute h-full w-full bg-muted-foreground/20 rounded-full" />
+                    <div 
+                      className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 shadow-sm"
+                      style={{ 
+                        left: "calc(100% - 16px)", 
+                        backgroundColor: "hsl(var(--background))",
+                        borderColor: "hsl(var(--primary))"
+                      }}
+                    />
                   </div>
                 </div>
                 
@@ -68,10 +84,10 @@ const BentoGrid = () => {
                     <span className="text-sm text-muted-foreground">Tokens</span>
                   </div>
                   <div className="flex gap-2 ml-auto">
-                    <div className="w-6 h-6 rounded border border-border bg-foreground" />
-                    <div className="w-6 h-6 rounded border border-border bg-muted" />
-                    <div className="w-6 h-6 rounded border border-border bg-background" />
-                    <div className="w-6 h-6 rounded border border-border bg-[hsl(var(--ring))]" />
+                    <div className="w-6 h-6 rounded border border-border" style={{ backgroundColor: "hsl(var(--foreground))" }} />
+                    <div className="w-6 h-6 rounded border border-border" style={{ backgroundColor: "hsl(var(--muted))" }} />
+                    <div className="w-6 h-6 rounded border border-border" style={{ backgroundColor: "hsl(var(--background))" }} />
+                    <div className="w-6 h-6 rounded border border-border" style={{ backgroundColor: "hsl(var(--ring))" }} />
                   </div>
                 </div>
               </div>
