@@ -13,7 +13,6 @@ const authorityPoints = [
     description: "Our team includes lead architects who secured 9 of the top 10 global Cloud Service Providers.",
     colSpan: "md:col-span-4",
     offset: "",
-    image: conferenceMeeting,
   },
   {
     id: "AUTH-B",
@@ -22,7 +21,6 @@ const authorityPoints = [
     description: "We've led recovery efforts on the frontlines of 6 of the 10 largest security breaches in North American history.",
     colSpan: "md:col-span-5",
     offset: "md:mt-16",
-    image: executiveDiscussion,
   },
   {
     id: "AUTH-C",
@@ -31,7 +29,33 @@ const authorityPoints = [
     description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools.",
     colSpan: "md:col-span-3",
     offset: "md:mt-8",
-    image: businessHandshake,
+  },
+];
+
+const images = [
+  {
+    id: "IMG-01",
+    src: conferenceMeeting,
+    alt: "Executive conference meeting",
+    colSpan: "md:col-span-3",
+    offset: "md:mt-4",
+    height: "h-48",
+  },
+  {
+    id: "IMG-02",
+    src: executiveDiscussion,
+    alt: "Executive discussion",
+    colSpan: "md:col-span-4",
+    offset: "md:mt-20",
+    height: "h-64",
+  },
+  {
+    id: "IMG-03",
+    src: businessHandshake,
+    alt: "Business partnership",
+    colSpan: "md:col-span-3",
+    offset: "",
+    height: "h-40",
   },
 ];
 
@@ -61,25 +85,17 @@ const EliteAuthority = () => {
           Elite Authority to Back You Up
         </h3>
 
-        {/* Scattered Grid Layout */}
+        {/* Scattered Grid Layout - Cards */}
         <div className="grid grid-cols-12 gap-6">
           {authorityPoints.map((point) => (
             <Card 
               key={point.title} 
-              className={`${point.colSpan} ${point.offset} shadow-none border border-border/10 bg-card hover:border-primary transition-colors group overflow-hidden`}
+              className={`${point.colSpan} ${point.offset} shadow-none border border-border/10 bg-card hover:border-primary transition-colors`}
             >
-              {/* Image with grayscale-to-color hover effect */}
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={point.image} 
-                  alt={point.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-                {/* Technical ID overlay */}
-                <span className="absolute top-4 left-4 tech-id bg-card/90 px-2 py-1">[{point.id}]</span>
-              </div>
-              
               <CardContent className="p-8">
+                {/* Technical ID */}
+                <span className="tech-id block mb-4">[{point.id}]</span>
+                
                 <div className="w-10 h-10 bg-muted flex items-center justify-center mb-6">
                   <point.icon className="w-5 h-5 text-muted-foreground" />
                 </div>
@@ -91,6 +107,23 @@ const EliteAuthority = () => {
                 </p>
               </CardContent>
             </Card>
+          ))}
+        </div>
+
+        {/* Scattered Image Blocks */}
+        <div className="grid grid-cols-12 gap-6 mt-8">
+          {images.map((image) => (
+            <div 
+              key={image.id}
+              className={`${image.colSpan} ${image.offset} relative group overflow-hidden border border-border/10 hover:border-primary transition-colors`}
+            >
+              <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[{image.id}]</span>
+              <img 
+                src={image.src} 
+                alt={image.alt}
+                className={`w-full ${image.height} object-cover grayscale group-hover:grayscale-0 transition-all duration-500`}
+              />
+            </div>
           ))}
         </div>
 
