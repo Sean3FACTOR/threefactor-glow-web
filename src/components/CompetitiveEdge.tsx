@@ -1,42 +1,29 @@
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
-const benefits = [
-  {
-    title: "Close Deals Faster",
-    description: "Turn security reviews from a 6-month hurdle into a 24-hour formality that impresses your biggest prospects.",
-  },
-  {
-    title: "Boardroom Confidence",
-    description: "Stand before your directors with definitive, real-time proof that every risk is identified, managed, and mitigated.",
-  },
-  {
-    title: "Operational Velocity",
-    description: "Scale your organization with the confidence that your growth won't be derailed by a sudden audit or a preventable breach.",
-  },
-  {
-    title: "Total Market Access",
-    description: "With ISO, SOC2, and NIS2 handled, no territory or tender is off-limits.",
-  },
-  {
-    title: "Automated Resilience",
-    description: "Scale with the certainty that your DORA and PCI requirements are automated and resilient, not a manual burden on your dev team.",
-  },
-];
-
+const benefits = [{
+  title: "Close Deals Faster",
+  description: "Turn security reviews from a 6-month hurdle into a 24-hour formality that impresses your biggest prospects."
+}, {
+  title: "Boardroom Confidence",
+  description: "Stand before your directors with definitive, real-time proof that every risk is identified, managed, and mitigated."
+}, {
+  title: "Operational Velocity",
+  description: "Scale your organization with the confidence that your growth won't be derailed by a sudden audit or a preventable breach."
+}, {
+  title: "Total Market Access",
+  description: "With ISO, SOC2, and NIS2 handled, no territory or tender is off-limits."
+}, {
+  title: "Automated Resilience",
+  description: "Scale with the certainty that your DORA and PCI requirements are automated and resilient, not a manual burden on your dev team."
+}];
 const CompetitiveEdge = () => {
-  return (
-    <section className="py-20 relative bg-primary/5 border-t border-border">
+  return <section className="py-20 relative border-t border-border bg-transparent">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
-            From "High Risk" to the Industry Standard
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-            Security as Your Competitive Edge
-          </h2>
+          <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold"></span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 text-muted-foreground"></h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Compliance shouldn't be an anchor—it should be your engine. When security is built into the fabric of your business, you stop playing defense and start winning on trust.
           </p>
@@ -44,11 +31,7 @@ const CompetitiveEdge = () => {
 
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.title}
-              className="flex gap-4 p-6 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
-            >
+          {benefits.map(benefit => <div key={benefit.title} className="flex gap-4 p-6 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
               <div className="shrink-0">
                 <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
               </div>
@@ -60,8 +43,7 @@ const CompetitiveEdge = () => {
                   {benefit.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Closing Statement */}
@@ -75,11 +57,7 @@ const CompetitiveEdge = () => {
           <p className="text-muted-foreground mb-8 leading-relaxed">
             Walk into your next Board meeting with definitive proof that your risk is managed. By turning compliance into a competitive edge, you stop just 'staying safe' and start <span className="text-foreground font-semibold">scaling with unshakeable confidence</span>.
           </p>
-          <Button 
-            asChild 
-            size="lg"
-            className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
-          >
+          <Button asChild size="lg" className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors">
             <Link to="/contact">
               Book Your Strategy Session
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -87,8 +65,6 @@ const CompetitiveEdge = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CompetitiveEdge;
