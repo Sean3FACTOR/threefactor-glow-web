@@ -1,52 +1,89 @@
-import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-const benefits = [{
-  title: "Close Deals Faster",
-  description: "Turn security reviews from a 6-month hurdle into a 24-hour formality that impresses your biggest prospects."
-}, {
-  title: "Boardroom Confidence",
-  description: "Stand before your directors with definitive, real-time proof that every risk is identified, managed, and mitigated."
-}, {
-  title: "Operational Velocity",
-  description: "Scale your organization with the confidence that your growth won't be derailed by a sudden audit or a preventable breach."
-}, {
-  title: "Total Market Access",
-  description: "With ISO, SOC2, and NIS2 handled, no territory or tender is off-limits."
-}, {
-  title: "Automated Resilience",
-  description: "Scale with the certainty that your DORA and PCI requirements are automated and resilient, not a manual burden on your dev team."
-}];
+import trustedPartnership from "@/assets/about/trusted-partnership.jpg";
+import boardroomStrategy from "@/assets/services/boardroom-strategy.jpg";
+import skyscraperVision from "@/assets/services/skyscraper-vision.jpg";
+import globalSkyline from "@/assets/about/global-skyline.jpg";
+import networkMesh from "@/assets/services/network-mesh.jpg";
+
+const benefits = [
+  {
+    title: "Close Deals Faster",
+    description: "Turn security reviews from a 6-month hurdle into a 24-hour formality that impresses your biggest prospects.",
+    image: trustedPartnership,
+    imageAlt: "Professional handshake - trusted partnership"
+  },
+  {
+    title: "Boardroom Confidence",
+    description: "Stand before your directors with definitive, real-time proof that every risk is identified, managed, and mitigated.",
+    image: boardroomStrategy,
+    imageAlt: "Executive boardroom - confident leadership"
+  },
+  {
+    title: "Operational Velocity",
+    description: "Scale your organization with the confidence that your growth won't be derailed by a sudden audit or a preventable breach.",
+    image: skyscraperVision,
+    imageAlt: "Skyscraper perspective - upward growth"
+  },
+  {
+    title: "Total Market Access",
+    description: "With ISO, SOC2, and NIS2 handled, no territory or tender is off-limits.",
+    image: globalSkyline,
+    imageAlt: "Global skyline - worldwide market access"
+  },
+  {
+    title: "Automated Resilience",
+    description: "Scale with the certainty that your DORA and PCI requirements are automated and resilient, not a manual burden on your dev team.",
+    image: networkMesh,
+    imageAlt: "Network mesh - automated systems"
+  }
+];
+
 const CompetitiveEdge = () => {
-  return <section className="py-20 relative border-t border-border bg-transparent">
+  return (
+    <section className="py-20 relative border-t border-border bg-transparent">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">From "High Risk" to the Industry Standard.</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        {/* Section Header - Left Aligned */}
+        <div className="max-w-4xl mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            From "High Risk" to the Industry Standard.
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Compliance shouldn't be an anchor—it should be your engine. When security is built into the fabric of your business, you stop playing defense and start winning on trust.
           </p>
         </div>
 
-        {/* Benefits List */}
-        <div className="max-w-4xl mx-auto mb-16 space-y-4">
+        {/* Benefits Cascading Cards */}
+        <div className="max-w-5xl space-y-6 mb-16">
           {benefits.map((benefit, index) => (
-            <div 
-              key={benefit.title} 
-              className="flex gap-4 p-6 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
+            <div
+              key={benefit.title}
+              className="group flex flex-col md:flex-row bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg"
+              style={{ marginLeft: `${index * 1.5}rem` }}
             >
-              <div className="shrink-0">
-                <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm">
-                  {index + 1}
+              {/* Content - Left Side */}
+              <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground font-semibold text-sm shrink-0">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground">
+                    {benefit.title}
+                  </h3>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {benefit.description}
                 </p>
+              </div>
+
+              {/* Image - Right Side */}
+              <div className="w-full md:w-[35%] shrink-0 relative overflow-hidden">
+                <img
+                  src={benefit.image}
+                  alt={benefit.imageAlt}
+                  className="w-full h-48 md:h-full object-cover transition-all duration-500 group-hover:scale-105 img-grayscale-hover"
+                />
               </div>
             </div>
           ))}
@@ -71,6 +108,8 @@ const CompetitiveEdge = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CompetitiveEdge;
