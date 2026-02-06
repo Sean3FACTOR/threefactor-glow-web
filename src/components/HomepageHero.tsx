@@ -2,14 +2,16 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+import executiveDiscussion from "@/assets/homepage/executive-discussion.jpg";
+
 const HomepageHero = () => {
   return (
     <section className="py-24 md:py-32 bg-transparent">
       <div className="container mx-auto px-4">
         {/* Scattered layout with 12-col grid */}
         <div className="grid grid-cols-12 gap-6">
-          {/* Main content block - offset for asymmetry */}
-          <div className="col-span-12 md:col-span-8 md:col-start-1">
+          {/* Main content block - left side */}
+          <div className="col-span-12 md:col-span-7">
             {/* Technical ID */}
             <span className="tech-id block mb-6">[SYS-HERO-001]</span>
             
@@ -19,13 +21,11 @@ const HomepageHero = () => {
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">
               You're a founder or executive scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
-          </div>
 
-          {/* Value props block - staggered */}
-          <div className="col-span-12 md:col-span-7 md:col-start-2 md:mt-4">
+            {/* Value props */}
             <div className="space-y-3 mb-10 text-foreground border-l border-border/30 pl-6">
               <p className="text-lg">
                 Scale into regulated sectors without the friction of security roadblocks.
@@ -34,11 +34,9 @@ const HomepageHero = () => {
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
-          </div>
 
-          {/* Supporting copy block - further offset */}
-          <div className="col-span-12 md:col-span-6 md:col-start-3 md:mt-2">
-            <p className="text-lg text-muted-foreground mb-4 max-w-2xl leading-relaxed">
+            {/* Supporting copy */}
+            <p className="text-lg text-muted-foreground mb-4 max-w-xl leading-relaxed">
               We build unshakeable compliance frameworks that shorten sales cycles, clear RFP hurdles, and secure executive confidence.
             </p>
 
@@ -56,6 +54,18 @@ const HomepageHero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
+          </div>
+
+          {/* Image block - right side */}
+          <div className="col-span-12 md:col-span-5 md:mt-12 relative group">
+            <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-HERO]</span>
+            <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden h-full">
+              <img 
+                src={executiveDiscussion} 
+                alt="Executive strategy discussion"
+                className="w-full h-full min-h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
           </div>
         </div>
 
