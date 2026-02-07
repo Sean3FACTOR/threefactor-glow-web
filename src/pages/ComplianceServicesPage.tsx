@@ -8,7 +8,6 @@ import BlueprintHero from "@/components/BlueprintHero";
 
 const frameworks = [
   {
-    id: "FRM-01",
     name: "PCI DSS",
     icon: CreditCard,
     winTitle: "The Transaction Engine",
@@ -17,7 +16,6 @@ const frameworks = [
     riskDesc: "One lapse can trigger merchant account suspension, freezing cash flow overnight.",
   },
   {
-    id: "FRM-02",
     name: "ISO 27001",
     icon: Globe,
     winTitle: "Global Market Access",
@@ -26,7 +24,6 @@ const frameworks = [
     riskDesc: "Without ISO alignment, European and Asian enterprise buyers quietly remove you from consideration.",
   },
   {
-    id: "FRM-03",
     name: "SOC 2 (Type I & II)",
     icon: Shield,
     winTitle: "The SaaS Gold Standard",
@@ -35,7 +32,6 @@ const frameworks = [
     riskDesc: "Without SOC 2, your sales team drowns in 300-row questionnaires, then loses to the competitor who has one.",
   },
   {
-    id: "FRM-04",
     name: "NIS2 & DORA",
     icon: Scale,
     winTitle: "Regulatory Immunity",
@@ -47,7 +43,6 @@ const frameworks = [
 
 const planSteps = [
   {
-    id: "STEP-01",
     number: "1",
     title: "Framework Alignment",
     description: "We identify which certifications actually move the revenue needle, based on your market, buyers, and growth strategy.",
@@ -55,7 +50,6 @@ const planSteps = [
     icon: Target,
   },
   {
-    id: "STEP-02",
     number: "2",
     title: "Gap Eradication",
     description: "We don't just identify gaps, we close them. Our architects have secured top global cloud providers, and they apply the same rigor to your environment.",
@@ -63,7 +57,6 @@ const planSteps = [
     icon: Search,
   },
   {
-    id: "STEP-03",
     number: "3",
     title: "Audit Dominance",
     description: "We guide you through audits, vendor reviews, and executive scrutiny so you present a calm, confident posture that earns trust instead of raising flags.",
@@ -102,8 +95,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-VALUE]</span>
-            
             <div className="space-y-6">
               <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed">
                 Stop treating compliance like a chore.<br />
@@ -127,8 +118,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 bg-muted/20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-PROBLEM]</span>
-            
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               The Real Enemy Isn't Regulation, It's Confusion
             </h2>
@@ -162,7 +151,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
-            <span className="tech-id block mb-4">[SYS-FRAMEWORKS]</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
               The Frameworks That Decide Your Market Access
             </h2>
@@ -174,7 +162,7 @@ const ComplianceServicesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {frameworks.map((framework, index) => (
               <Card 
-                key={framework.id}
+                key={framework.name}
                 className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
               >
                 <CardContent className="p-8">
@@ -183,7 +171,6 @@ const ComplianceServicesPage = () => {
                       <framework.icon className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <div>
-                      <span className="tech-id block mb-1">[{framework.id}]</span>
                       <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">
                         {framework.name}
                       </h3>
@@ -212,7 +199,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 bg-muted/20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
-            <span className="tech-id block mb-4">[SYS-PLAN]</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
               The Plan: 3 Steps to Framework Mastery
             </h2>
@@ -225,7 +211,7 @@ const ComplianceServicesPage = () => {
             <div className="col-span-12 lg:col-span-8 space-y-6">
               {planSteps.map((step, index) => (
                 <Card 
-                  key={step.id}
+                  key={step.number}
                   className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
                   style={{ marginLeft: `${index * 2}rem` }}
                 >
@@ -235,7 +221,6 @@ const ComplianceServicesPage = () => {
                         <span className="text-xl font-bold text-muted-foreground">{step.number}</span>
                       </div>
                       <div>
-                        <span className="tech-id block mb-2">[{step.id}]</span>
                         <h4 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">
                           {step.title}
                         </h4>
@@ -261,7 +246,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-SUCCESS]</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               What Success Looks Like
             </h2>
@@ -289,8 +273,6 @@ const ComplianceServicesPage = () => {
       <section className="py-20 bg-muted/30 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="tech-id block mb-6">[SYS-CTA]</span>
-            
             <Button 
               asChild 
               size="lg"
