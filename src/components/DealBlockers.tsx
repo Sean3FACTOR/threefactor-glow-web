@@ -35,7 +35,7 @@ const DealBlockers = () => {
             Don't Let a "Checkbox" Kill Your Biggest Deal
           </h2>
           <p className="text-lg font-medium text-foreground">
-            In enterprise sales, compliance isn't optional—it's the gatekeeper.
+            In enterprise sales, compliance isn't optional, it's the gatekeeper.
           </p>
         </div>
 
