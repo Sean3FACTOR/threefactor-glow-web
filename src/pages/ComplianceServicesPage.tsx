@@ -1,31 +1,87 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, XCircle } from "lucide-react";
+import { ArrowRight, CreditCard, Globe, Shield, Scale, Target, Search, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlueprintHero from "@/components/BlueprintHero";
 
 const frameworks = [
   {
-    name: "SOC2",
-    win: "The SaaS Gold Standard: Instant credibility.",
-    risk: "The Security Review Dead-End: Sales teams drown in 300-row questionnaires and lose to competitors.",
-  },
-  {
-    name: "ISO 27001",
-    win: "Global Market Access.",
-    risk: "The Border Closure: Effectively blacklisted from European and Asian enterprise markets.",
-  },
-  {
-    name: "NIS2 & DORA",
-    win: "Regulatory Immunity.",
-    risk: "The €10M 'Negligence' Fine: Fines up to 2% of global turnover; directors held personally liable.",
-  },
-  {
+    id: "FRM-01",
     name: "PCI DSS",
-    win: "The Transaction Engine.",
-    risk: "The Revenue Blackout: Merchant account suspension freezes cash flow instantly.",
+    icon: CreditCard,
+    winTitle: "The Transaction Engine",
+    winDesc: "Secure your ability to process payments and handle cardholder data without interruption.",
+    riskTitle: "The Revenue Blackout",
+    riskDesc: "One lapse can trigger merchant account suspension, freezing cash flow overnight.",
   },
+  {
+    id: "FRM-02",
+    name: "ISO 27001",
+    icon: Globe,
+    winTitle: "Global Market Access",
+    winDesc: "The universal language of security. Essential for international expansion and high-value government tenders.",
+    riskTitle: "The Border Closure",
+    riskDesc: "Without ISO alignment, European and Asian enterprise buyers quietly remove you from consideration.",
+  },
+  {
+    id: "FRM-03",
+    name: "SOC 2 (Type I & II)",
+    icon: Shield,
+    winTitle: "The SaaS Gold Standard",
+    winDesc: "Instant credibility with enterprise procurement. Moves you from \"untrusted vendor\" to \"strategic partner.\"",
+    riskTitle: "The Security Review Dead-End",
+    riskDesc: "Without SOC 2, your sales team drowns in 300-row questionnaires, then loses to the competitor who has one.",
+  },
+  {
+    id: "FRM-04",
+    name: "NIS2 & DORA",
+    icon: Scale,
+    winTitle: "Regulatory Immunity",
+    winDesc: "Future-proof your business against the EU's most aggressive enforcement regimes. Prove resilience, not just intent.",
+    riskTitle: "The €10M Negligence Penalty",
+    riskDesc: "This isn't a warning shot. Regulators can impose fines up to 2% of global turnover, and hold directors personally liable.",
+  },
+];
+
+const planSteps = [
+  {
+    id: "STEP-01",
+    number: "1",
+    title: "Framework Alignment",
+    description: "We identify which certifications actually move the revenue needle, based on your market, buyers, and growth strategy.",
+    detail: "No wasted effort. No irrelevant audits.",
+    icon: Target,
+  },
+  {
+    id: "STEP-02",
+    number: "2",
+    title: "Gap Eradication",
+    description: "We don't just identify gaps, we close them. Our architects have secured top global cloud providers, and they apply the same rigor to your environment.",
+    detail: "This is where \"almost compliant\" becomes audit-proof.",
+    icon: Search,
+  },
+  {
+    id: "STEP-03",
+    number: "3",
+    title: "Audit Dominance",
+    description: "We guide you through audits, vendor reviews, and executive scrutiny so you present a calm, confident posture that earns trust instead of raising flags.",
+    detail: "",
+    icon: Award,
+  },
+];
+
+const successOutcomes = [
+  "Instead of guessing which framework matters, your team knows exactly what to build, and why.",
+  "Instead of stalled RFPs, security reviews become a formality.",
+  "Instead of scrambling before audits, your posture is already defensible.",
+];
+
+const roadmapBenefits = [
+  "Which frameworks unlock your next market",
+  "Which ones you can safely ignore",
+  "How to turn compliance into a sales accelerator, not a bottleneck",
 ];
 
 const ComplianceServicesPage = () => {
@@ -36,74 +92,228 @@ const ComplianceServicesPage = () => {
       {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Compliance"
-        headline="The Keys to the Market."
-        subhead="Stop treating compliance like a chore. Start treating it like a competitive advantage. We help you navigate the world's most rigorous frameworks to unlock new revenue."
-        ctaText="Book Your Strategy Session"
+        headline="The Keys to the Market"
+        subhead="You're not trying to be compliant. You're trying to win deals, enter new markets, and protect enterprise value."
+        ctaText="Get Your Framework Roadmap"
         ctaLink="/contact"
       />
 
-      {/* Framework Table Section */}
-      <section className="py-20">
+      {/* Value Proposition Section */}
+      <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              The Framework Table
+          <div className="max-w-4xl">
+            <span className="tech-id block mb-6">[SYS-VALUE]</span>
+            
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed">
+                Stop treating compliance like a chore.<br />
+                Start treating it like a competitive advantage.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot;
+                We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
+              </p>
+              
+              <p className="text-xl font-semibold text-foreground border-l-2 border-primary pl-6">
+                Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Framework Fog Section */}
+      <section className="py-20 bg-muted/20 border-t border-border/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <span className="tech-id block mb-6">[SYS-PROBLEM]</span>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
+              The Real Enemy Isn't Regulation, It's Confusion
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Every framework is a door to new markets. Here's what's at stake.
+            
+            <div className="space-y-6">
+              <div className="bg-card border border-border/10 p-8">
+                <h3 className="text-xl font-bold text-foreground mb-4">We call it Framework Fog:</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="border-l-2 border-muted-foreground/30 pl-6">
+                  <p className="text-muted-foreground">Most firms sell you a certificate.</p>
+                </div>
+                <div className="border-l-2 border-primary pl-6">
+                  <p className="text-foreground font-semibold">We sell you market access.</p>
+                </div>
+              </div>
+              
+              <p className="text-lg text-muted-foreground mt-6">
+                If a framework doesn't help you close deals, enter new markets, or survive regulatory scrutiny, it's noise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Frameworks Section */}
+      <section className="py-20 border-t border-border/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mb-12">
+            <span className="tech-id block mb-4">[SYS-FRAMEWORKS]</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
+              The Frameworks That Decide Your Market Access
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Each framework isn't just a requirement, it's a gate. What you choose (or ignore) determines what markets you can enter and which ones close permanently.
             </p>
           </div>
           
-          {/* Table */}
-          <div className="max-w-5xl mx-auto overflow-hidden rounded-lg border border-border">
-            {/* Table Header */}
-            <div className="grid grid-cols-3 bg-muted/50 border-b border-border">
-              <div className="p-4 font-bold text-foreground text-sm">Framework</div>
-              <div className="p-4 font-bold text-foreground text-sm flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                The Win
-              </div>
-              <div className="p-4 font-bold text-foreground text-sm flex items-center gap-2">
-                <XCircle className="w-4 h-4 text-destructive" />
-                The Risk
-              </div>
-            </div>
-            
-            {/* Table Rows */}
-            {frameworks.map((framework) => (
-              <div 
-                key={framework.name}
-                className="grid grid-cols-3 border-b border-border last:border-b-0 hover:bg-muted/20 transition-colors"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {frameworks.map((framework, index) => (
+              <Card 
+                key={framework.id}
+                className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
               >
-                <div className="p-6 font-bold text-foreground">{framework.name}</div>
-                <div className="p-6 text-muted-foreground text-sm">{framework.win}</div>
-                <div className="p-6 text-muted-foreground text-sm">{framework.risk}</div>
-              </div>
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-12 h-12 bg-muted flex items-center justify-center flex-shrink-0">
+                      <framework.icon className="w-6 h-6 text-muted-foreground" />
+                    </div>
+                    <div>
+                      <span className="tech-id block mb-1">[{framework.id}]</span>
+                      <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">
+                        {framework.name}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  {/* The Win */}
+                  <div className="mb-6 border-l-2 border-primary pl-4">
+                    <h4 className="text-lg font-bold text-foreground mb-2">{framework.winTitle}</h4>
+                    <p className="text-muted-foreground text-sm">{framework.winDesc}</p>
+                  </div>
+                  
+                  {/* The Risk */}
+                  <div className="border-l-2 border-destructive/60 pl-4">
+                    <h4 className="text-lg font-bold text-foreground mb-2">{framework.riskTitle}</h4>
+                    <p className="text-muted-foreground text-sm">{framework.riskDesc}</p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      {/* The Plan Section */}
+      <section className="py-20 bg-muted/20 border-t border-border/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mb-12">
+            <span className="tech-id block mb-4">[SYS-PLAN]</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
+              The Plan: 3 Steps to Framework Mastery
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              You don't need every framework. You need the right ones, executed correctly.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 lg:col-span-8 space-y-6">
+              {planSteps.map((step, index) => (
+                <Card 
+                  key={step.id}
+                  className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
+                  style={{ marginLeft: `${index * 2}rem` }}
+                >
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="w-12 h-12 bg-muted flex items-center justify-center flex-shrink-0">
+                        <span className="text-xl font-bold text-muted-foreground">{step.number}</span>
+                      </div>
+                      <div>
+                        <span className="tech-id block mb-2">[{step.id}]</span>
+                        <h4 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">
+                          {step.title}
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed mb-2">
+                          {step.description}
+                        </p>
+                        {step.detail && (
+                          <p className="text-foreground font-medium italic">
+                            {step.detail}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Outcomes Section */}
+      <section className="py-20 border-t border-border/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <span className="tech-id block mb-6">[SYS-SUCCESS]</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
+              What Success Looks Like
+            </h2>
+            
+            <div className="space-y-4 mb-8">
+              {successOutcomes.map((outcome, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <span className="w-2 h-2 bg-primary rotate-45 flex-shrink-0 mt-2" />
+                  <p className="text-lg text-foreground">{outcome}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="border-l-2 border-primary pl-6 mt-8">
+              <p className="text-xl font-semibold text-foreground">
+                Compliance stops being a risk.<br />
+                It becomes leverage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-muted/30 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ready to Unlock New Markets?
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Start with a free discovery call to map out your compliance roadmap.
-            </p>
+            <span className="tech-id block mb-6">[SYS-CTA]</span>
+            
             <Button 
               asChild 
               size="lg"
-              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
+              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors mb-8"
             >
               <Link to="/contact">
-                Book Your Strategy Session
+                Get Your Framework Roadmap
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
+            
+            <p className="text-lg text-muted-foreground mb-6">
+              Not sure where to start? Your roadmap shows:
+            </p>
+            
+            <div className="space-y-3 text-left max-w-md mx-auto">
+              {roadmapBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-muted-foreground rotate-45 flex-shrink-0 mt-2" />
+                  <p className="text-foreground">{benefit}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
