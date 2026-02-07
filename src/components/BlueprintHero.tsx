@@ -36,7 +36,7 @@ const BlueprintHero = ({
             </div>
 
             {/* Headline - Max 4rem, scales down on mobile */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-foreground mb-6 leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-foreground mb-6 leading-[1.1] whitespace-nowrap">
               {headline}
             </h1>
 
