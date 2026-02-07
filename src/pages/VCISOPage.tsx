@@ -167,7 +167,6 @@ const VCISOPage = () => {
                   <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                     {/* Tier Header */}
                     <div className="lg:w-64 flex-shrink-0">
-                      <span className="tech-id block mb-2">[{tier.id}]</span>
                       <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">{tier.name}</h3>
                       <p className="text-primary font-semibold">{tier.subtitle}</p>
                       <p className="text-sm text-muted-foreground mt-2">{tier.employees}</p>

@@ -54,7 +54,6 @@ const DealBlockers = () => {
                       <blocker.icon className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <span className="tech-id block mb-2">[{blocker.id}]</span>
                       <h4 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">
                         {blocker.title}
                       </h4>
@@ -71,7 +70,6 @@ const DealBlockers = () => {
           {/* Image - aligned with first card */}
           <div className="col-span-12 lg:col-span-5 flex items-start">
             <div className="relative group w-full">
-              <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-BLOCK]</span>
               <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
                 <img 
                   src={sectionExecutives} 

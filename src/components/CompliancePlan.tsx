@@ -156,7 +156,6 @@ const CompliancePlan = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="tech-id block mb-4">[MOD-BLUEPRINT]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
             Your Blueprint for Audit-Proof Growth
           </h2>
@@ -178,9 +177,6 @@ const CompliancePlan = () => {
               className={`${step.colSpan} ${step.offset} shadow-none border border-border/10 bg-card relative overflow-hidden hover:border-primary transition-colors`}
             >
               <CardContent className="p-8">
-                {/* Technical ID */}
-                <span className="tech-id block mb-4">[{step.id}]</span>
-                
                 {/* Step Number */}
                 <div className="absolute top-6 right-6 w-8 h-8 bg-muted flex items-center justify-center">
                   <span className="text-sm font-semibold text-muted-foreground">{step.number}</span>
