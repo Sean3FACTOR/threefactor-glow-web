@@ -77,11 +77,11 @@ const VCISOPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-VALUE]</span>
-            
             <div className="space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground uppercase tracking-tight">
+                Stop Carrying the Weight of the Pen Alone.
+              </h2>
               <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed">
-                Stop carrying the weight of the pen alone.<br />
                 Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.
               </p>
               
