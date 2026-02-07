@@ -101,7 +101,6 @@ const VCISOPage = () => {
       <section className="py-20 bg-muted/20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-RISK]</span>
             
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               The Real Risk: Leadership Without a Shield
@@ -149,7 +148,6 @@ const VCISOPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
-            <span className="tech-id block mb-4">[SYS-TIERS]</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
               vCISO Tiers: Security That Scales With You
             </h2>
@@ -215,7 +213,6 @@ const VCISOPage = () => {
       <section className="py-20 bg-muted/20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-SME]</span>
             
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               The Secret Weapon: On-Demand SME Advisory
@@ -259,7 +256,6 @@ const VCISOPage = () => {
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <span className="tech-id block mb-6">[SYS-SUCCESS]</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               What Success Feels Like
             </h2>
