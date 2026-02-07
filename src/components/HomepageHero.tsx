@@ -12,9 +12,6 @@ const HomepageHero = () => {
         <div className="grid grid-cols-12 gap-6">
           {/* Main content block - left side */}
           <div className="col-span-12 md:col-span-7">
-            {/* Technical ID */}
-            <span className="tech-id block mb-6">[SYS-HERO-001]</span>
-            
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight uppercase">
               Win the RFP. Own the Market.

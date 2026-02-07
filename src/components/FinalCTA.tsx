@@ -10,8 +10,6 @@ const FinalCTA = () => {
         <div className="grid grid-cols-12 gap-6">
           {/* Primary CTA block */}
           <div className="col-span-12 md:col-span-7 md:col-start-2">
-            <span className="tech-id block mb-6">[SYS-CTA-FINAL]</span>
-            
             <Link to="/contact">
               <Button 
                 size="lg" 

@@ -30,7 +30,6 @@ const DealBlockers = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="tech-id block mb-4">[SYS-BLOCKERS]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
             Don't Let a "Checkbox" Kill Your Biggest Deal
           </h2>
