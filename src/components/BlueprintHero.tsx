@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import greyLogo from "@/assets/3F_Grey.png";
 import hexagonNetwork from "@/assets/hexagon-network.png";
-
 interface BlueprintHeroProps {
   breadcrumb: string;
   headline: string;
@@ -11,21 +10,16 @@ interface BlueprintHeroProps {
   ctaText: string;
   ctaLink: string;
 }
-
 const BlueprintHero = ({
   breadcrumb,
   headline,
   subhead,
   ctaText,
-  ctaLink,
+  ctaLink
 }: BlueprintHeroProps) => {
-  return (
-    <section className="pt-32 pb-20 relative overflow-hidden">
+  return <section className="pt-32 pb-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <Link
-          to="/"
-          className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12"
-        >
+        <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-12">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Home
         </Link>
@@ -33,7 +27,7 @@ const BlueprintHero = ({
         {/* Architectural Split Layout */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Side - Text Content with breathing room */}
-          <div className="max-w-xl lg:pr-8">
+          <div className="max-w-xl lg:pr-8 mx-0 px-0">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium text-primary">Services</span>
@@ -52,11 +46,7 @@ const BlueprintHero = ({
             </p>
 
             {/* CTA Button - Grey default → Orange hover */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
-            >
+            <Button asChild size="lg" className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors">
               <Link to={ctaLink}>
                 {ctaText}
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -67,31 +57,20 @@ const BlueprintHero = ({
           {/* Right Side - Layered Brand Visual */}
           <div className="relative flex items-center justify-center min-h-[350px] lg:min-h-[450px]">
             {/* Layer 1: Hexagon Network Texture - Background Pattern */}
-            <div 
-              className="absolute inset-0 opacity-50"
-              style={{
-                backgroundImage: `url(${hexagonNetwork})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                maskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
-              }}
-              aria-hidden="true"
-            />
+            <div className="absolute inset-0 opacity-50" style={{
+            backgroundImage: `url(${hexagonNetwork})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            maskImage: 'linear-gradient(to left, black 60%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to left, black 60%, transparent 100%)'
+          }} aria-hidden="true" />
 
             {/* Layer 2: 3F Logo - Brand Anchor (more visible) */}
-            <img
-              src={greyLogo}
-              alt=""
-              className="relative z-10 w-56 lg:w-72 opacity-60 select-none pointer-events-none"
-              aria-hidden="true"
-            />
+            <img src={greyLogo} alt="" className="relative z-10 w-56 lg:w-72 opacity-60 select-none pointer-events-none" aria-hidden="true" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BlueprintHero;
