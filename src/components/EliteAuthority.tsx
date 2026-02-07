@@ -30,7 +30,6 @@ const EliteAuthority = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="tech-id block mb-4">[MOD-AUTHORITY]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
             Expert Leadership for Your Toughest Transitions
           </h2>
@@ -66,7 +65,6 @@ const EliteAuthority = () => {
                       <point.icon className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <span className="tech-id block mb-2">[{point.id}]</span>
                       <h4 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">
                         {point.title}
                       </h4>
@@ -83,7 +81,6 @@ const EliteAuthority = () => {
           {/* Image - aligned with first card */}
           <div className="col-span-12 lg:col-span-5 flex items-start">
             <div className="relative group w-full">
-              <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-AUTH]</span>
               <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
                 <img 
                   src={sectionHandshake} 

@@ -57,7 +57,6 @@ const HomepageHero = () => {
 
           {/* Image block - right side */}
           <div className="col-span-12 md:col-span-5 md:mt-12 relative group">
-            <span className="absolute top-4 left-4 z-10 tech-id bg-card/90 px-2 py-1">[IMG-HERO]</span>
             <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden h-full">
               <img 
                 src={executiveDiscussion} 

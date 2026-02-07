@@ -34,7 +34,6 @@ const SuccessOutcomes = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="tech-id block mb-4">[MOD-OUTCOMES]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
             From Vendor to Trusted Market Authority
           </h2>
@@ -59,9 +58,6 @@ const SuccessOutcomes = () => {
               className={`${outcome.colSpan} ${outcome.offset} shadow-none border border-border/10 bg-card hover:border-primary transition-colors`}
             >
               <CardContent className="p-8">
-                {/* Technical ID */}
-                <span className="tech-id block mb-4">[{outcome.id}]</span>
-                
                 <div className="w-10 h-10 bg-muted flex items-center justify-center mb-6">
                   <outcome.icon className="w-5 h-5 text-muted-foreground" />
                 </div>
