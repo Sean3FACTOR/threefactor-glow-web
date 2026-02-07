@@ -13,7 +13,6 @@ import Logo from "@/assets/3F_Grey.png";
 const serviceItems = [
   { name: "Compliance", href: "/services/compliance" },
   { name: "vCISO", href: "/services/vciso" },
-  { name: "Our Team", href: "/#company" },
 ];
 
 const Navigation = () => {
