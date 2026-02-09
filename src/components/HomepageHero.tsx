@@ -2,52 +2,89 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-import executiveDiscussion from "@/assets/homepage/executive-discussion.jpg";
+const ArchitectureSVG = () => (
+  <svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+    {/* Outer frame */}
+    <rect x="40" y="30" width="400" height="340" stroke="white" strokeWidth="1" opacity="0.15" />
+    <rect x="60" y="50" width="360" height="300" stroke="white" strokeWidth="0.5" opacity="0.1" />
+    
+    {/* Grid lines */}
+    {[100, 150, 200, 250, 300].map((y) => (
+      <line key={`h-${y}`} x1="80" y1={y} x2="400" y2={y} stroke="white" strokeWidth="0.5" opacity="0.08" />
+    ))}
+    {[140, 200, 260, 320, 380].map((x) => (
+      <line key={`v-${x}`} x1={x} y1="70" x2={x} y2="330" stroke="white" strokeWidth="0.5" opacity="0.08" />
+    ))}
+
+    {/* Central shield/architecture shape */}
+    <path d="M240 80 L360 130 L360 250 L240 320 L120 250 L120 130 Z" stroke="white" strokeWidth="1.5" opacity="0.2" fill="none" />
+    <path d="M240 100 L340 140 L340 240 L240 300 L140 240 L140 140 Z" stroke="white" strokeWidth="1" opacity="0.12" fill="white" fillOpacity="0.02" />
+
+    {/* Inner modules - glassmorphism blocks */}
+    <rect x="180" y="140" width="120" height="40" rx="0" stroke="white" strokeWidth="1" opacity="0.2" fill="white" fillOpacity="0.05" />
+    <rect x="160" y="195" width="80" height="35" rx="0" stroke="white" strokeWidth="1" opacity="0.15" fill="white" fillOpacity="0.04" />
+    <rect x="260" y="195" width="60" height="35" rx="0" stroke="white" strokeWidth="1" opacity="0.15" fill="white" fillOpacity="0.04" />
+    <rect x="190" y="245" width="100" height="30" rx="0" stroke="#F36F21" strokeWidth="1.5" opacity="0.6" fill="#F36F21" fillOpacity="0.08" />
+
+    {/* Connection lines between modules */}
+    <line x1="220" y1="180" x2="200" y2="195" stroke="white" strokeWidth="0.8" opacity="0.2" strokeDasharray="4 3" />
+    <line x1="260" y1="180" x2="280" y2="195" stroke="white" strokeWidth="0.8" opacity="0.2" strokeDasharray="4 3" />
+    <line x1="200" y1="230" x2="220" y2="245" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 3" />
+    <line x1="290" y1="230" x2="270" y2="245" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 3" />
+
+    {/* Data flow dots */}
+    <circle cx="240" cy="120" r="3" fill="white" opacity="0.3" />
+    <circle cx="200" cy="160" r="2" fill="white" opacity="0.2" />
+    <circle cx="280" cy="160" r="2" fill="white" opacity="0.2" />
+    <circle cx="240" cy="260" r="2.5" fill="#F36F21" opacity="0.5" />
+
+    {/* Corner accents */}
+    <path d="M50 40 L50 60 M40 50 L60 50" stroke="white" strokeWidth="1" opacity="0.2" />
+    <path d="M430 40 L430 60 M420 50 L440 50" stroke="white" strokeWidth="1" opacity="0.2" />
+    <path d="M50 360 L50 340 M40 350 L60 350" stroke="white" strokeWidth="1" opacity="0.2" />
+    <path d="M430 360 L430 340 M420 350 L440 350" stroke="white" strokeWidth="1" opacity="0.2" />
+  </svg>
+);
 
 const HomepageHero = () => {
   return (
-    <section className="py-24 md:py-32 bg-transparent">
+    <section className="py-24 md:py-32" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
-        {/* Scattered layout with 12-col grid */}
-        <div className="grid grid-cols-12 gap-6">
-          {/* Main content block - left side */}
-          <div className="col-span-12 md:col-span-7">
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight uppercase">
+        <div className="grid grid-cols-12 gap-8 items-center">
+          {/* Left - Text Content */}
+          <div className="col-span-12 lg:col-span-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase">
               Win the RFP. Own the Market.
             </h1>
 
-            {/* Sub-headline */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-xl leading-relaxed">
               You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
 
-            {/* Value props */}
-            <div className="space-y-4 mb-10 text-foreground">
-              <p className="text-lg flex items-start gap-3">
-                <span className="w-2 h-2 bg-muted-foreground rotate-45 flex-shrink-0 mt-2" />
+            <div className="space-y-4 mb-10">
+              <p className="text-lg text-white/90 flex items-start gap-3">
+                <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
-              <p className="text-lg flex items-start gap-3">
-                <span className="w-2 h-2 bg-muted-foreground rotate-45 flex-shrink-0 mt-2" />
+              <p className="text-lg text-white/90 flex items-start gap-3">
+                <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
 
-            {/* Supporting copy */}
-            <p className="text-lg text-muted-foreground mb-4 max-w-xl leading-relaxed">
+            <p className="text-lg text-white/70 mb-4 max-w-xl leading-relaxed">
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
 
-            <p className="text-lg font-medium text-foreground mb-10">
+            <p className="text-lg font-medium text-white mb-10">
               Security should accelerate growth. Not quietly sabotage it.
             </p>
 
-            {/* CTA */}
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground transition-colors"
+                className="group text-white font-semibold transition-colors"
+                style={{ backgroundColor: "#F36F21" }}
               >
                 Book Your Compliance Strategy Session
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -55,21 +92,12 @@ const HomepageHero = () => {
             </Link>
           </div>
 
-          {/* Image block - right side */}
-          <div className="col-span-12 md:col-span-5 md:mt-12 relative group">
-            <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden h-full">
-              <img 
-                src={executiveDiscussion} 
-                alt="Executive strategy discussion"
-                className="w-full h-full min-h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-              />
+          {/* Right - SVG Architecture Graphic */}
+          <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
+            <div className="w-full max-w-md aspect-square">
+              <ArchitectureSVG />
             </div>
           </div>
-        </div>
-
-        {/* Connecting line visual */}
-        <div className="hidden md:block relative h-px w-full mt-16">
-          <div className="absolute left-0 right-[50%] top-0 h-px bg-border/30" />
         </div>
       </div>
     </section>

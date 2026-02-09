@@ -32,59 +32,52 @@ const scenarios = [
 
 const ComplianceCrossroads = () => {
   return (
-    <section className="py-20 bg-transparent border-t border-border/10">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             The Compliance Crossroads
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg leading-relaxed" style={{ color: "#646464" }}>
             Does this sound familiar? Most of our clients come to us when they hit a "compliance wall" that threatens a major deal or their operational license. Which gate are you trying to unlock?
           </p>
         </div>
 
-        {/* Scenario cards - staggered */}
-        <div className="grid grid-cols-12 gap-6">
-          {scenarios.map((scenario, index) => (
-            <Card
+        {/* Scenario cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {scenarios.map((scenario) => (
+            <div
               key={scenario.label}
-              className={`col-span-12 md:col-span-6 lg:col-span-4 shadow-none border border-border/10 bg-card hover:border-primary transition-colors`}
-              style={{ marginTop: index % 2 !== 0 ? '1.5rem' : '0' }}
+              className="bg-white p-8 transition-all hover:shadow-lg"
+              style={{ border: "1px solid #646464" }}
             >
-              <CardContent className="p-8">
-                <div className="w-10 h-10 bg-muted flex items-center justify-center mb-6 flex-shrink-0">
-                  <scenario.icon className="w-5 h-5 text-muted-foreground" />
-                </div>
-                <h4 className="text-sm font-bold text-muted-foreground mb-3 uppercase tracking-wider">
-                  {scenario.label}
-                </h4>
-                <p className="text-foreground leading-relaxed italic">
-                  "{scenario.question}"
-                </p>
-              </CardContent>
-            </Card>
+              <div className="w-10 h-10 flex items-center justify-center mb-6" style={{ backgroundColor: "#F8F9FA" }}>
+                <scenario.icon className="w-5 h-5" style={{ color: "#646464" }} />
+              </div>
+              <h4 className="text-sm font-bold mb-3 uppercase tracking-wider" style={{ color: "#646464" }}>
+                {scenario.label}
+              </h4>
+              <p className="leading-relaxed italic" style={{ color: "#3B3B39" }}>
+                "{scenario.question}"
+              </p>
+            </div>
           ))}
 
           {/* CTA card */}
-          <Card className="col-span-12 md:col-span-6 lg:col-span-4 shadow-none border border-primary/30 bg-card hover:border-primary transition-colors"
-            style={{ marginTop: scenarios.length % 2 !== 0 ? '1.5rem' : '0' }}
+          <div
+            className="p-8 flex flex-col justify-center transition-all hover:shadow-lg"
+            style={{ border: "1px solid #F36F21", backgroundColor: "white" }}
           >
-            <CardContent className="p-8 flex flex-col justify-center h-full">
-              <Link 
-                to="/services/compliance" 
-                className="group inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors font-semibold text-lg uppercase tracking-tight"
-              >
-                See How We Clear the "Framework Fog"
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Connecting line visual */}
-        <div className="hidden md:block relative h-px w-full mt-12">
-          <div className="absolute left-[10%] right-[40%] top-0 h-px bg-border/30" />
+            <Link 
+              to="/services/compliance" 
+              className="group inline-flex items-center gap-2 font-semibold text-lg uppercase tracking-tight transition-colors"
+              style={{ color: "#3B3B39" }}
+            >
+              See How We Clear the "Framework Fog"
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
