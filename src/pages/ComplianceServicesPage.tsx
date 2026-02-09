@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CreditCard, Globe, Shield, Scale, Target, Search, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, CreditCard, Globe, Shield, Scale, Target, Search, Award, Lock, Building, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -8,36 +8,52 @@ import BlueprintHero from "@/components/BlueprintHero";
 
 const frameworks = [
   {
-    name: "PCI DSS",
-    icon: CreditCard,
-    winTitle: "The Transaction Engine",
-    winDesc: "Secure your ability to process payments and handle cardholder data without interruption.",
-    riskTitle: "The Revenue Blackout",
-    riskDesc: "One lapse can trigger merchant account suspension, freezing cash flow overnight.",
-  },
-  {
     name: "ISO 27001",
     icon: Globe,
-    winTitle: "Global Market Access",
-    winDesc: "The universal language of security. Essential for international expansion and high-value government tenders.",
+    winTitle: "The Global Pass-Key",
+    winDesc: "The universal language of security. Essential for international expansion and winning high-value government and enterprise tenders outside North America.",
     riskTitle: "The Border Closure",
-    riskDesc: "Without ISO alignment, European and Asian enterprise buyers quietly remove you from consideration.",
+    riskDesc: "Without ISO alignment, European and Asian enterprise buyers quietly remove you from consideration before the first meeting.",
   },
   {
     name: "SOC 2 (Type I & II)",
     icon: Shield,
     winTitle: "The SaaS Gold Standard",
-    winDesc: "Instant credibility with enterprise procurement. Moves you from \"untrusted vendor\" to \"strategic partner.\"",
+    winDesc: "Instant credibility with North American enterprise procurement. Moves you from the \"untrusted vendor\" pile to the \"strategic partner\" list.",
     riskTitle: "The Security Review Dead-End",
-    riskDesc: "Without SOC 2, your sales team drowns in 300-row questionnaires, then loses to the competitor who has one.",
+    riskDesc: "Without SOC 2, your sales team drowns in 300-row security questionnaires, only to lose to the competitor who already has a clean report.",
+  },
+  {
+    name: "PCI DSS",
+    icon: CreditCard,
+    winTitle: "The Transaction Engine",
+    winDesc: "Secure your ability to process payments and handle cardholder data without interruption or increased processing fees.",
+    riskTitle: "The Revenue Blackout",
+    riskDesc: "A single compliance lapse can trigger merchant account suspension, freezing your company's cash flow overnight.",
+  },
+  {
+    name: "FedRAMP",
+    icon: Building,
+    winTitle: "The Federal Fast-Track",
+    winDesc: "Secure your Authorization to Operate (ATO) and open the door to the world's largest buyer: the U.S. Federal Government.",
+    riskTitle: "The Agency Blockade",
+    riskDesc: "Without a FedRAMP-authorized environment, your cloud service is legally invisible to federal agencies, cutting off billions in potential contract value.",
+  },
+  {
+    name: "CMMC",
+    icon: Lock,
+    winTitle: "The Defense Supply Chain Key",
+    winDesc: "Prove your cybersecurity maturity matches the mission and secure your place in the Department of Defense (DoD) supply chain.",
+    riskTitle: "The Procurement Exclusion",
+    riskDesc: "Failure to meet CMMC levels doesn't just mean losing new bids; it means being disqualified from existing contracts you've held for years.",
   },
   {
     name: "NIS2 & DORA",
     icon: Scale,
-    winTitle: "Regulatory Immunity",
-    winDesc: "Future-proof your business against the EU's most aggressive enforcement regimes. Prove resilience, not just intent.",
+    winTitle: "European Regulatory Resilience",
+    winDesc: "Future-proof your business against the EU's most aggressive enforcement regimes for infrastructure and finance. Prove resilience, not just intent.",
     riskTitle: "The €10M Negligence Penalty",
-    riskDesc: "This isn't a warning shot. Regulators can impose fines up to 2% of global turnover, and hold directors personally liable.",
+    riskDesc: "This isn't a warning shot. Regulators can impose fines up to 2% of global turnover and hold directors personally liable for compliance failures.",
   },
 ];
 
@@ -110,6 +126,20 @@ const ComplianceServicesPage = () => {
                 Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
               </p>
             </div>
+
+            {/* CTA */}
+            <div className="mt-10">
+              <Button 
+                asChild 
+                size="lg"
+                className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
+              >
+                <Link to="/contact">
+                  Get Your Framework Roadmap
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -159,8 +189,8 @@ const ComplianceServicesPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {frameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {frameworks.map((framework) => (
               <Card 
                 key={framework.name}
                 className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
@@ -180,13 +210,13 @@ const ComplianceServicesPage = () => {
                   {/* The Win */}
                   <div className="mb-6 border-l-2 border-primary pl-4">
                     <h4 className="text-lg font-bold text-foreground mb-2">{framework.winTitle}</h4>
-                    <p className="text-muted-foreground text-sm">{framework.winDesc}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{framework.winDesc}</p>
                   </div>
                   
                   {/* The Risk */}
                   <div className="border-l-2 border-destructive/60 pl-4">
                     <h4 className="text-lg font-bold text-foreground mb-2">{framework.riskTitle}</h4>
-                    <p className="text-muted-foreground text-sm">{framework.riskDesc}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{framework.riskDesc}</p>
                   </div>
                 </CardContent>
               </Card>
