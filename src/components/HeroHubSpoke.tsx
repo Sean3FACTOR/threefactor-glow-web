@@ -19,59 +19,60 @@ const frameworks = [
 ];
 
 const HeroHubSpoke = () => {
-  const size = 600;
-  const cx = size / 2;
-  const cy = size / 2;
-  const orbitRadius = 220;
-  const logoBox = 90;
-
-  const positions = frameworks.map((_, i) => {
-    const angle = (i * 2 * Math.PI) / frameworks.length - Math.PI / 2;
-    return {
-      x: cx + orbitRadius * Math.cos(angle),
-      y: cy + orbitRadius * Math.sin(angle),
-    };
-  });
-
   return (
-    <div className="w-full flex items-center justify-center">
-      <svg viewBox={`0 0 ${size} ${size}`} className="w-full max-w-[560px] h-auto">
-        {/* Central contract document */}
-        <g transform={`translate(${cx}, ${cy})`}>
-          {/* Document shape */}
-          <rect x="-48" y="-62" width="96" height="124" rx="4" fill="#2A2A28" stroke="#F36F21" strokeWidth="2.5" />
-          {/* Inner border */}
-          <rect x="-40" y="-54" width="80" height="108" rx="2" fill="none" stroke="#F36F2130" strokeWidth="0.75" />
-          {/* Padlock shackle */}
-          <path d="M-14,-16 L-14,-28 A14,14 0 0,1 14,-28 L14,-16" fill="none" stroke="#F36F21" strokeWidth="3.5" strokeLinecap="round" />
-          {/* Padlock body */}
-          <rect x="-20" y="-18" width="40" height="30" rx="3" fill="#F36F21" />
-          {/* Keyhole */}
-          <circle cx="0" cy="-6" r="5" fill="#2A2A28" />
-          <rect x="-2.5" y="-3" width="5" height="10" rx="1" fill="#2A2A28" />
-          {/* Document lines below lock */}
-          <line x1="-24" y1="26" x2="24" y2="26" stroke="#F36F2140" strokeWidth="1.5" />
-          <line x1="-18" y1="34" x2="18" y2="34" stroke="#F36F2130" strokeWidth="1" />
-          <line x1="-20" y1="42" x2="20" y2="42" stroke="#F36F2120" strokeWidth="1" />
-        </g>
-
-        {/* Framework logos in orbit — no lines */}
-        {frameworks.map((fw, i) => {
-          const pos = positions[i];
-          const half = logoBox / 2;
-          return (
-            <image
-              key={fw.name}
-              href={fw.logo}
-              x={pos.x - half}
-              y={pos.y - half}
-              width={logoBox}
-              height={logoBox}
-              preserveAspectRatio="xMidYMid meet"
+    <div className="relative w-full aspect-square max-w-[580px] mx-auto">
+      {/* Central contract icon */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div
+          className="w-[100px] h-[130px] md:w-[120px] md:h-[155px] flex items-center justify-center"
+          style={{
+            backgroundColor: "#2A2A28",
+            border: "3px solid #F36F21",
+            borderRadius: "4px",
+            boxShadow: "0 0 30px rgba(243,111,33,0.2)",
+          }}
+        >
+          <svg viewBox="0 0 40 52" className="w-10 h-12 md:w-12 md:h-14">
+            {/* Shackle */}
+            <path
+              d="M12,22 L12,12 A8,8 0 0,1 28,12 L28,22"
+              fill="none"
+              stroke="#F36F21"
+              strokeWidth="3.5"
+              strokeLinecap="round"
             />
-          );
-        })}
-      </svg>
+            {/* Body */}
+            <rect x="8" y="21" width="24" height="18" rx="2" fill="#F36F21" />
+            {/* Keyhole */}
+            <circle cx="20" cy="28" r="3.5" fill="#2A2A28" />
+            <rect x="18.5" y="30" width="3" height="5" rx="0.5" fill="#2A2A28" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Logo orbit using absolute positioning in a circle */}
+      {frameworks.map((fw, i) => {
+        const angle = (i * 360) / frameworks.length - 90;
+        const rad = (angle * Math.PI) / 180;
+        // Position as percentage from center (50%) outward
+        const orbitPercent = 42; // how far from center as % of container
+        const left = 50 + orbitPercent * Math.cos(rad);
+        const top = 50 + orbitPercent * Math.sin(rad);
+
+        return (
+          <div
+            key={fw.name}
+            className="absolute w-[72px] h-[72px] sm:w-[90px] sm:h-[90px] md:w-[110px] md:h-[110px] lg:w-[120px] lg:h-[120px] -translate-x-1/2 -translate-y-1/2"
+            style={{ left: `${left}%`, top: `${top}%` }}
+          >
+            <img
+              src={fw.logo}
+              alt={fw.name}
+              className="w-full h-full object-contain p-2 md:p-3"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
