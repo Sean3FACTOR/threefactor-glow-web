@@ -47,9 +47,6 @@ const SuccessOutcomes = () => {
               className="p-8"
               style={{ backgroundColor: "#646464" }}
             >
-              <div className="w-10 h-10 flex items-center justify-center mb-6">
-                <outcome.icon className="w-5 h-5 text-white/80" />
-              </div>
               <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">
                 {outcome.title}
               </h4>
