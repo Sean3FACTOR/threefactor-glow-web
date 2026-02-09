@@ -82,7 +82,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl space-y-8">
+          <div className="space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Stop treating compliance like a chore.
             </p>
@@ -114,7 +114,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl space-y-8">
+          <div className="space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               The real enemy isn't regulation, it's confusion.
             </p>
