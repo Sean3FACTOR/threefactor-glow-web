@@ -83,7 +83,7 @@ const Navigation = () => {
     backgroundColor: "#F8F9FA",
     borderBottom: "1px solid rgba(59,59,57,0.08)"
   }}>
-      <div className="container mx-auto py-0 px-[12px]">
+      <div className="container mx-auto py-0">
         <div className="flex items-center justify-between h-[3.5rem] md:h-[4rem]">
           <Link to="/" className="flex items-center h-full py-1">
             <img alt="3FACTOR" className="h-[92%] w-auto object-contain" src="/lovable-uploads/b9dae896-d800-446d-8f26-98d2f7dbb6c3.png" />

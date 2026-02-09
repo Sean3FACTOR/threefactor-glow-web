@@ -27,7 +27,7 @@ const ComplianceCrossroads = () => {
     borderTop: "1px solid rgba(255,255,255,0.08)"
   }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mb-12">
+        <div className="max-w-5xl mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             The Compliance Crossroads
           </h2>

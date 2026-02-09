@@ -26,7 +26,7 @@ const CompliancePlan = () => {
       <div className="container mx-auto px-4">
         <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(255,255,255,0.12)" }} />
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 mx-auto text-center">
+        <div className="max-w-5xl mb-12 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             Your Blueprint for Audit-Proof Growth
           </h2>

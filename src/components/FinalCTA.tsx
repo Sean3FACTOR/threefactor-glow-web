@@ -6,7 +6,7 @@ const FinalCTA = () => {
   return (
     <section className="py-24" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">
             Ready to Turn Compliance Into Your Competitive Edge?
           </h2>

@@ -82,7 +82,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl space-y-8">
+          <div className="max-w-6xl space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Stop treating compliance like a chore.
             </p>
@@ -114,7 +114,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl space-y-8">
+          <div className="max-w-6xl space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               The real enemy isn't regulation, it's confusion.
             </p>
@@ -145,7 +145,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-5xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">The Frameworks That Decide Your Market Access</h2>
             <p className="text-lg text-white">Each framework isn't just a requirement, it's a gate. What you choose (or ignore) determines what markets you can enter and which ones close permanently.</p>
           </div>
@@ -178,7 +178,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-5xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">The Plan: 3 Steps to Framework Mastery</h2>
             <p className="text-lg text-white">You don't need every framework. You need the right ones, executed correctly.</p>
           </div>
@@ -205,7 +205,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
+          <div className="max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Looks Like</h2>
             <div className="space-y-4 mb-8">
               {successOutcomes.map((o, i) => <div key={i} className="flex items-start gap-4">
