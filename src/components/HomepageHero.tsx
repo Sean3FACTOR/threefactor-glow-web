@@ -19,7 +19,7 @@ const HomepageHero = () => {
 
             {/* Sub-headline */}
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">
-              You're a founder or executive scaling into regulated markets; security shouldn't be the thing slowing you down.
+              You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
 
             {/* Value props */}
@@ -36,7 +36,7 @@ const HomepageHero = () => {
 
             {/* Supporting copy */}
             <p className="text-lg text-muted-foreground mb-4 max-w-xl leading-relaxed">
-              We build unshakeable compliance frameworks that shorten sales cycles, clear RFP hurdles, and secure executive confidence.
+              We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
 
             <p className="text-lg font-medium text-foreground mb-10">

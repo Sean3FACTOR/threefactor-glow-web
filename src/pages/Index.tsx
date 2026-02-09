@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HomepageHero from "@/components/HomepageHero";
+import ComplianceCrossroads from "@/components/ComplianceCrossroads";
 import TriplePenalty from "@/components/TriplePenalty";
 import EliteAuthority from "@/components/EliteAuthority";
 import CompliancePlan from "@/components/CompliancePlan";
@@ -14,6 +15,7 @@ const Index = () => {
       <Navigation />
       <div className="pt-20">
         <HomepageHero />
+        <ComplianceCrossroads />
         <TriplePenalty />
         <EliteAuthority />
         <CompliancePlan />
