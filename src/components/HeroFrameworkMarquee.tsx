@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import cmmcLogo from "@/assets/frameworks/cmmc.png";
 import fedrampLogo from "@/assets/frameworks/fedramp.svg";
 import iso27001Logo from "@/assets/frameworks/iso27001.png";
@@ -21,69 +22,79 @@ const frameworks: FrameworkItem[] = [
   { name: "GDPR" },
 ];
 
-const FrameworkCard = ({ item }: { item: FrameworkItem }) => (
-  <div className="flex items-center justify-center h-20 w-[150px] flex-shrink-0 grayscale opacity-60 transition-all duration-500 hover:grayscale-0 hover:opacity-100 hover:[filter:brightness(1)_saturate(1)]">
-    {item.logo ? (
-      <img
-        src={item.logo}
-        alt={item.name}
-        className="max-h-16 max-w-[140px] object-contain brightness-0 invert transition-all duration-500 hover:brightness-100 hover:invert-0"
-        style={{ filter: "brightness(0) invert(1)" }}
-        onMouseEnter={(e) => {
-          (e.target as HTMLImageElement).style.filter =
-            "brightness(1) invert(0) sepia(1) saturate(5) hue-rotate(350deg)";
-        }}
-        onMouseLeave={(e) => {
-          (e.target as HTMLImageElement).style.filter = "brightness(0) invert(1)";
-        }}
-      />
-    ) : (
-      <span
-        className="font-['Inter'] font-bold text-xl uppercase tracking-tighter text-white/50 transition-colors duration-500 hover:text-[#F36F21]"
-      >
-        {item.name}
-      </span>
-    )}
-  </div>
-);
-
 const HeroFrameworkMarquee = () => {
-  const doubledFrameworks = [...frameworks, ...frameworks];
+  const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % frameworks.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(next, 3500);
+    return () => clearInterval(timer);
+  }, [isPaused, next]);
 
   return (
     <div
-      className="relative w-full overflow-hidden"
-      style={{ height: "520px" }}
+      className="relative flex items-center justify-center w-full"
+      style={{ height: "400px" }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Top fade mask */}
+      {/* Radial fade mask */}
       <div
-        className="pointer-events-none absolute top-0 left-0 right-0 z-10 h-24"
+        className="absolute inset-0 pointer-events-none z-10"
         style={{
-          background: "linear-gradient(to bottom, #3B3B39, transparent)",
-        }}
-      />
-      {/* Bottom fade mask */}
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-24"
-        style={{
-          background: "linear-gradient(to top, #3B3B39, transparent)",
+          background:
+            "radial-gradient(ellipse 70% 70% at center, transparent 50%, #3B3B39 100%)",
         }}
       />
 
-      {/* Scrolling columns */}
-      <div className="flex items-start justify-center gap-6 h-full">
-        {/* Column 1 - scrolls up */}
-        <div className="vertical-marquee-up flex flex-col items-center gap-10 hover:[animation-play-state:paused]">
-          {doubledFrameworks.map((fw, i) => (
-            <FrameworkCard key={`col1-${i}`} item={fw} />
-          ))}
-        </div>
-        {/* Column 2 - scrolls down */}
-        <div className="vertical-marquee-down flex flex-col items-center gap-10 hover:[animation-play-state:paused]">
-          {[...doubledFrameworks].reverse().map((fw, i) => (
-            <FrameworkCard key={`col2-${i}`} item={fw} />
-          ))}
-        </div>
+      {/* Logo slides */}
+      {frameworks.map((fw, i) => {
+        const isActive = i === current;
+        return (
+          <div
+            key={fw.name}
+            className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out"
+            style={{ opacity: isActive ? 1 : 0 }}
+          >
+            {fw.logo ? (
+              <img
+                src={fw.logo}
+                alt={fw.name}
+                className="max-w-[350px] max-h-[200px] object-contain grayscale transition-all duration-500 hover:grayscale-0"
+                style={{ filter: isActive && !isPaused ? "grayscale(1)" : undefined }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLImageElement).style.filter = "grayscale(0)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLImageElement).style.filter = "grayscale(1)";
+                }}
+              />
+            ) : (
+              <span className="font-['Open_Sans'] font-bold text-5xl uppercase tracking-tight text-white/40 transition-colors duration-500 hover:text-white">
+                {fw.name}
+              </span>
+            )}
+          </div>
+        );
+      })}
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {frameworks.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className="w-1.5 h-1.5 transition-all duration-300"
+            style={{
+              backgroundColor: i === current ? "#F36F21" : "rgba(255,255,255,0.25)",
+            }}
+          />
+        ))}
       </div>
     </div>
   );
