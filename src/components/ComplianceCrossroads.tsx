@@ -54,8 +54,8 @@ Most of our clients come to us when they hit a "compliance wall" that threatens 
           border: "1px solid #F36F21",
           backgroundColor: "#646464"
         }}>
-            <Link to="/services/compliance" className="group inline-flex items-center gap-2 text-white font-semibold text-lg uppercase tracking-tight transition-colors">
-              ​​  
+            <Link to="/services/compliance" className="group inline-flex items-center gap-2 text-white text-lg uppercase tracking-tight transition-colors font-bold">
+              ​​Learn More   
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
