@@ -1,28 +1,26 @@
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
-import Logo from "@/assets/3F_Grey.png";
+import Logo from "@/assets/3F_White_Orange_with_words.png";
 import linkedinIcon from "@/assets/linkedin-icon.avif";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card/50">
+    <footer style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo & Copyright */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center">
               <img src={Logo} alt="3FACTOR" className="h-10 w-auto" />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/40">
               © 2026 Three Factor, LLC. All Rights Reserved.
             </p>
           </div>
 
-          {/* Links */}
           <div className="flex items-center gap-8">
             <Link
               to="/privacy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-white/40 hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
@@ -38,10 +36,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom tagline / Whitepaper CTA */}
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-            <Shield className="w-4 h-4 text-foreground" />
+        <div className="mt-8 pt-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <div className="inline-flex items-center gap-2 text-sm text-white/40">
+            <Shield className="w-4 h-4 text-white/60" />
             <span>Download Our 3FACTOR Whitepaper: Learn how to frame security as a growth engine.</span>
           </div>
         </div>

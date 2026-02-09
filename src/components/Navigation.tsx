@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Logo from "@/assets/3F_Grey.png";
+import Logo from "@/assets/3F_White_Orange_with_words.png";
 
 const serviceItems = [
   { name: "Compliance", href: "/services/compliance" },
@@ -36,20 +35,15 @@ const Navigation = () => {
   const handleNavClick = (e: React.MouseEvent, link: { href: string; hash: string | null }) => {
     if (link.hash) {
       e.preventDefault();
-      
       if (location.pathname !== "/") {
         navigate("/");
         setTimeout(() => {
           const element = document.getElementById(link.hash!);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
+          if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       } else {
         const element = document.getElementById(link.hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
     setIsOpen(false);
@@ -62,15 +56,11 @@ const Navigation = () => {
         navigate("/");
         setTimeout(() => {
           const element = document.getElementById(hash);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
+          if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       } else {
         const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
       navigate(href);
@@ -79,28 +69,25 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm shadow-sm" style={{ backgroundColor: "rgba(59,59,57,0.95)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img src={Logo} alt="3FACTOR" className="h-8 md:h-10 w-auto" />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Services Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-foreground text-muted-foreground outline-none">
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white text-white/60 outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="bg-card border border-border z-50 shadow-lg">
+              <DropdownMenuContent align="start" className="z-50 shadow-lg" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.1)" }}>
                 {serviceItems.map((item) => (
                   <DropdownMenuItem
                     key={item.name}
                     onClick={() => handleServiceClick(item.href)}
-                    className="cursor-pointer hover:bg-muted"
+                    className="cursor-pointer text-white/80 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white"
                   >
                     {item.name}
                   </DropdownMenuItem>
@@ -113,8 +100,8 @@ const Navigation = () => {
                 key={link.name}
                 to={link.href}
                 onClick={(e) => handleNavClick(e, link)}
-                className={`text-sm font-medium transition-colors hover:text-foreground ${
-                  isActive(link.href) ? "text-foreground" : "text-muted-foreground"
+                className={`text-sm font-medium transition-colors hover:text-white ${
+                  isActive(link.href) ? "text-white" : "text-white/60"
                 }`}
               >
                 {link.name}
@@ -122,9 +109,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -132,15 +118,13 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-card/50 backdrop-blur-sm">
+          <div className="md:hidden py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
             <div className="flex flex-col space-y-4">
-              {/* Mobile Services Accordion */}
               <div>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center justify-between w-full text-sm font-medium text-white/60 hover:text-white transition-colors"
                 >
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
@@ -151,7 +135,7 @@ const Navigation = () => {
                       <button
                         key={item.name}
                         onClick={() => handleServiceClick(item.href)}
-                        className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        className="block text-sm text-white/50 hover:text-white transition-colors"
                       >
                         {item.name}
                       </button>
@@ -165,8 +149,8 @@ const Navigation = () => {
                   key={link.name}
                   to={link.href}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`text-sm font-medium transition-colors hover:text-foreground ${
-                    isActive(link.href) ? "text-foreground" : "text-muted-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-white ${
+                    isActive(link.href) ? "text-white" : "text-white/60"
                   }`}
                 >
                   {link.name}

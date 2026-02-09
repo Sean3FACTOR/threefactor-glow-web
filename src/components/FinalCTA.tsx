@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             Ready to Turn Compliance Into Your Competitive Edge?
           </h2>
 
@@ -22,19 +22,20 @@ const FinalCTA = () => {
             </Button>
           </Link>
 
-          <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-            <p className="text-white/50 mb-4">
+          <div className="pt-8" style={{ borderTop: "1px solid #646464" }}>
+            <p className="mb-4" style={{ color: "#646464" }}>
               Not ready to book yet?
             </p>
             <Link 
               to="/whitepaper" 
-              className="group inline-flex items-center gap-2 text-white font-medium transition-colors hover:opacity-80"
+              className="group inline-flex items-center gap-2 font-medium transition-colors hover:opacity-80"
+              style={{ color: "#3B3B39" }}
             >
               <FileText className="w-5 h-5" />
               Download the 3FACTOR Whitepaper
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <p className="text-sm text-white/40 mt-3 max-w-md mx-auto">
+            <p className="text-sm mt-3 max-w-md mx-auto" style={{ color: "#646464" }}>
               Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
             </p>
           </div>

@@ -43,21 +43,17 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
     toast({
       title: "Message sent!",
       description: "We'll get back to you within 24 hours.",
     });
-    
     form.reset();
     setIsSubmitting(false);
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
 
       <main className="pt-32 pb-24">
@@ -65,19 +61,19 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <span className="text-sm font-mono text-primary uppercase tracking-widest">Contact Us</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-4">
+              <span className="text-sm font-mono uppercase tracking-widest" style={{ color: "#F36F21" }}>Contact Us</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
                 Let's Start a Conversation
               </h1>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              <p className="text-white/50 mt-4 max-w-2xl mx-auto">
                 Ready to elevate your security posture? Get in touch with our team to discuss your unique challenges.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="glass-card p-8 rounded-xl">
-                <h2 className="text-2xl font-semibold text-foreground mb-6 font-mono">
+              <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <h2 className="text-2xl font-semibold text-white mb-6">
                   Send us a message
                 </h2>
 
@@ -88,11 +84,11 @@ const Contact = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Name *</FormLabel>
+                          <FormLabel className="text-white/80">Name *</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your full name"
-                              className="bg-secondary/50 border-glass-border focus:border-primary"
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
                               {...field}
                             />
                           </FormControl>
@@ -106,12 +102,12 @@ const Contact = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Email *</FormLabel>
+                          <FormLabel className="text-white/80">Email *</FormLabel>
                           <FormControl>
                             <Input
                               type="email"
                               placeholder="you@company.com"
-                              className="bg-secondary/50 border-glass-border focus:border-primary"
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
                               {...field}
                             />
                           </FormControl>
@@ -125,11 +121,11 @@ const Contact = () => {
                       name="company"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Company</FormLabel>
+                          <FormLabel className="text-white/80">Company</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your company name"
-                              className="bg-secondary/50 border-glass-border focus:border-primary"
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
                               {...field}
                             />
                           </FormControl>
@@ -143,11 +139,11 @@ const Contact = () => {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Message *</FormLabel>
+                          <FormLabel className="text-white/80">Message *</FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="Tell us about your security challenges..."
-                              className="bg-secondary/50 border-glass-border focus:border-primary min-h-32 resize-none"
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40 min-h-32 resize-none"
                               {...field}
                             />
                           </FormControl>
@@ -158,7 +154,8 @@ const Contact = () => {
 
                     <Button
                       type="submit"
-                      className="w-full glow-button bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                      className="w-full text-white font-semibold"
+                      style={{ backgroundColor: "#F36F21" }}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -176,38 +173,38 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-8">
-                <div className="glass-card p-8 rounded-xl">
-                  <h2 className="text-2xl font-semibold text-foreground mb-6 font-mono">
+                <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <h2 className="text-2xl font-semibold text-white mb-6">
                     Get in touch
                   </h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
+                        <Mail className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-foreground">Email</h3>
-                        <p className="text-muted-foreground">contact@3factor.io</p>
+                        <h3 className="font-medium text-white">Email</h3>
+                        <p className="text-white/50">contact@3factor.io</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                        <Phone className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
+                        <Phone className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-foreground">Phone</h3>
-                        <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                        <h3 className="font-medium text-white">Phone</h3>
+                        <p className="text-white/50">+1 (555) 123-4567</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
+                        <MapPin className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-foreground">Location</h3>
-                        <p className="text-muted-foreground">
+                        <h3 className="font-medium text-white">Location</h3>
+                        <p className="text-white/50">
                           Serving clients globally<br />
                           Remote-first consultancy
                         </p>
@@ -216,10 +213,9 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Response Time */}
-                <div className="glass-card p-8 rounded-xl">
-                  <h3 className="font-semibold text-foreground mb-2 font-mono">Response Time</h3>
-                  <p className="text-muted-foreground text-sm">
+                <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <h3 className="font-semibold text-white mb-2">Response Time</h3>
+                  <p className="text-white/50 text-sm">
                     We typically respond within 24 hours during business days. For urgent security matters, please indicate the urgency in your message.
                   </p>
                 </div>
