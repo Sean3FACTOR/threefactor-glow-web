@@ -54,7 +54,7 @@ const EliteAuthority = () => {
     borderTop: "1px solid rgba(255,255,255,0.08)"
   }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             Expert Leadership for Your Toughest Transitions
           </h2>
@@ -67,7 +67,7 @@ const EliteAuthority = () => {
           Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
         </h3>
 
-        <div className="grid grid-cols-12 gap-x-6 gap-y-8 items-center">
+        <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-center">
           <div className="col-span-12 lg:col-span-5 space-y-6">
             {authorityPoints.map(point => <div key={point.title} className="p-6 transition-all hover:shadow-lg" style={{
             backgroundColor: "#646464",
