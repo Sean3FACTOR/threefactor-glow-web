@@ -89,7 +89,7 @@ const Navigation = () => {
             <img src={Logo} alt="3FACTOR" className="h-8 md:h-10 w-auto" />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8 text-secondary">
+          <div className="hidden md:flex items-center space-x-8">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white/80 text-white outline-none">
                 Services
