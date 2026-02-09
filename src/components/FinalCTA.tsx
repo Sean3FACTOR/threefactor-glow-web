@@ -26,14 +26,15 @@ const FinalCTA = () => {
             <p className="text-white mb-4">
               Not ready to book yet?
             </p>
-            <Link 
-              to="/whitepaper" 
+            <a 
+              href="/3F_Whitepaper.pdf" 
+              download
               className="group inline-flex items-center gap-2 text-white font-medium transition-colors hover:opacity-80"
             >
               <FileText className="w-5 h-5" />
               Download the 3FACTOR Whitepaper
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
             <p className="text-sm text-white mt-3 max-w-md mx-auto">
               Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
             </p>
