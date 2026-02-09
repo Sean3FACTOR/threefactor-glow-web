@@ -27,7 +27,7 @@ const ArchitectureSVG = () => <svg viewBox="0 0 480 400" fill="none" xmlns="http
     <path d="M430 360 L430 340 M420 350 L440 350" stroke="white" strokeWidth="1" opacity="0.2" />
   </svg>;
 const HomepageHero = () => {
-  return <section className="pt-2 pb-16" style={{
+  return <section className="pt-14 pb-16" style={{
     backgroundColor: "#3B3B39"
   }}>
       <div className="container mx-auto px-4">
