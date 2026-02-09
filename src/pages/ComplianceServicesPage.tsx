@@ -84,23 +84,20 @@ const ComplianceServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
-              <div className="space-y-4">
-                <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
-                  Stop treating compliance like a chore.
+              <div className="space-y-8">
+                <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
+                  Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
                 </p>
-                <p className="text-2xl md:text-3xl font-bold text-white leading-snug whitespace-nowrap">
-                  Start treating it like a competitive advantage.
-                </p>
-                <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                <p className="text-lg md:text-xl text-white leading-relaxed">
                   Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
                 </p>
-                <p className="text-lg md:text-xl font-semibold text-white text-left inline-block pl-6 mt-2" style={{
+                <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{
                 borderLeft: "2px solid #F36F21"
               }}>
                   Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
                 </p>
               </div>
-              <div className="mt-10">
+              <div className="mt-10 text-primary-foreground">
                 <Button asChild size="lg" className="text-white font-semibold" style={{
                 backgroundColor: "#F36F21"
               }}>
@@ -109,7 +106,7 @@ const ComplianceServicesPage = () => {
               </div>
             </div>
             <div className="hidden lg:flex items-center justify-center">
-              <img alt="Abstract wave graphic" className="w-full max-w-4xl opacity-60 scale-150" src="/lovable-uploads/55f567d0-00d6-46cf-8b10-bc8c52ff865e.png" />
+              <img alt="Abstract wave graphic" className="w-full max-w-4xl opacity-60 invert scale-150" src="/lovable-uploads/55f567d0-00d6-46cf-8b10-bc8c52ff865e.png" />
             </div>
           </div>
         </div>
