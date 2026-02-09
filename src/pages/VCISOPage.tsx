@@ -33,13 +33,13 @@ const VCISOPage = () => {
       <BlueprintHero breadcrumb="Virtual CISO" headline="Elite Security Leadership" subhead="You shouldn't be the only one carrying the security risk." ctaText="Upgrade Your Executive Shield" ctaLink="/contact" />
 
       {/* Value Prop */}
-      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">Stop Carrying the Weight of the Pen Alone.</h2>
-            <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.</p>
-            <p className="text-lg text-white/60 leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
-            <p className="text-xl font-semibold text-white pl-6" style={{ borderLeft: "2px solid #F36F21" }}>Instead of guessing, you lead. Instead of reacting, you&apos;re prepared.</p>
+      <section className="py-24" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-left space-y-8">
+            <p className="text-3xl md:text-4xl font-bold text-white leading-snug">Stop Carrying the Weight of the Pen Alone.</p>
+            <p className="text-lg md:text-xl text-white leading-relaxed">Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.</p>
+            <p className="text-base text-white/60 leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
+            <p className="text-xl md:text-2xl font-semibold text-white pl-6" style={{ borderLeft: "2px solid #F36F21" }}>Instead of guessing, you lead. Instead of reacting, you&apos;re prepared.</p>
           </div>
         </div>
       </section>
