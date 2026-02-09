@@ -81,7 +81,7 @@ const ComplianceServicesPage = () => {
       backgroundColor: "#3B3B39",
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
-        <div className="max-w-6xl px-4">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-left space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Stop treating compliance like a chore.
