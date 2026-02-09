@@ -23,31 +23,21 @@ const HeroHubSpoke = () => {
     <div className="relative w-full aspect-square max-w-[580px] mx-auto">
       {/* Central contract icon */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div
-          className="w-[100px] h-[130px] md:w-[120px] md:h-[155px] flex items-center justify-center"
-          style={{
-            backgroundColor: "#2A2A28",
-            border: "3px solid #F36F21",
-            borderRadius: "4px",
-            boxShadow: "0 0 30px rgba(243,111,33,0.2)",
-          }}
-        >
-          <svg viewBox="0 0 40 52" className="w-10 h-12 md:w-12 md:h-14">
-            {/* Page fold corner */}
-            <path d="M28,0 L40,12 L28,12 Z" fill="#3B3B39" />
-            <path d="M0,0 L28,0 L28,12 L40,12 L40,52 L0,52 Z" fill="none" stroke="#F36F21" strokeWidth="1.5" />
-            {/* Contract lines */}
-            <line x1="6" y1="10" x2="22" y2="10" stroke="#F36F21" strokeWidth="1.5" />
-            <line x1="6" y1="16" x2="34" y2="16" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-            <line x1="6" y1="21" x2="34" y2="21" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-            <line x1="6" y1="26" x2="34" y2="26" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-            <line x1="6" y1="31" x2="28" y2="31" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
-            <line x1="6" y1="36" x2="30" y2="36" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
-            {/* Signature line */}
-            <line x1="18" y1="45" x2="34" y2="45" stroke="#F36F21" strokeWidth="1.5" />
-            <circle cx="12" cy="45" r="3" fill="none" stroke="#F36F21" strokeWidth="1" />
-          </svg>
-        </div>
+        <svg viewBox="0 0 40 52" className="w-[100px] h-[130px] md:w-[120px] md:h-[155px]">
+          {/* Page fold corner */}
+          <path d="M28,0 L40,12 L28,12 Z" fill="#3B3B39" />
+          <path d="M0,0 L28,0 L28,12 L40,12 L40,52 L0,52 Z" fill="#2A2A28" stroke="#F36F21" strokeWidth="1.5" />
+          {/* Contract lines */}
+          <line x1="6" y1="10" x2="22" y2="10" stroke="#F36F21" strokeWidth="1.5" />
+          <line x1="6" y1="16" x2="34" y2="16" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="21" x2="34" y2="21" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="26" x2="34" y2="26" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="31" x2="28" y2="31" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+          <line x1="6" y1="36" x2="30" y2="36" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+          {/* Signature line */}
+          <line x1="18" y1="45" x2="34" y2="45" stroke="#F36F21" strokeWidth="1.5" />
+          <circle cx="12" cy="45" r="3" fill="none" stroke="#F36F21" strokeWidth="1" />
+        </svg>
       </div>
 
       {/* Logo orbit using absolute positioning in a circle */}
