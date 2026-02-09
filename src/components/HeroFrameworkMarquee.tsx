@@ -45,7 +45,7 @@ const HeroFrameworkMarquee = () => {
         {items.map((fw, i) => (
           <div
             key={`${fw.name}-${i}`}
-            className="h-[120px] md:h-[180px] w-full flex-shrink-0 flex items-center justify-center px-16 md:px-24 my-4 md:my-6"
+            className="h-[100px] md:h-[140px] w-full flex-shrink-0 flex items-center justify-center px-16 md:px-24"
           >
             <img
               src={fw.logo}
