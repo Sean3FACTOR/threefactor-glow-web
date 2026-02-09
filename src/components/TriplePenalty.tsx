@@ -48,12 +48,6 @@ const TriplePenalty = () => {
               onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)")}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 flex items-center justify-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
-                  <penalty.icon className="w-5 h-5 text-white/70" />
-                </div>
-                <span className="text-xs font-mono text-white/40">[PEN-0{index + 1}]</span>
-              </div>
               <h4 className="text-lg font-bold text-white uppercase tracking-tight mb-4">{penalty.title}</h4>
               <p className="text-sm text-white/60 leading-relaxed">{penalty.description}</p>
             </div>
