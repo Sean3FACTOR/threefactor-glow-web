@@ -30,7 +30,7 @@ const BlueprintHero = ({
               <span className="text-sm text-white">{breadcrumb}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-white mb-8 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-white mb-8 leading-[1.1] uppercase">
               {headline}
             </h1>
 
