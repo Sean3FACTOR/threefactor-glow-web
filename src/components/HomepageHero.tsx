@@ -33,8 +33,9 @@ const HomepageHero = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-12 gap-8 items-center">
           <div className="col-span-12 lg:col-span-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase">
-              Win the RFP. Own the Market.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase whitespace-nowrap">
+              <span className="block">Win the RFP.</span>
+              <span className="block">Own the Market.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-xl leading-relaxed text-primary-foreground">
               You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
