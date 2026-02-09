@@ -122,22 +122,15 @@ const VCISOPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Secret Weapon: On-Demand SME Advisory</h2>
             <p className="text-lg text-white mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
             <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
-                  <Phone className="w-6 h-6" style={{ color: "#F36F21" }} />
+              <p className="text-lg text-white mb-4">As a vCISO client, you move beyond standard consulting. You get a dedicated strategist focused on turning your complex regulatory requirements into a massive competitive advantage.</p>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
+                  <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
+                  <p className="text-white">Specialized answers in minutes, not weeks.</p>
                 </div>
-                <div>
-                  <p className="text-lg text-white mb-4">As a vCISO client, you move beyond standard consulting. You get a dedicated strategist focused on turning your complex regulatory requirements into a massive competitive advantage.</p>
-                  <div className="grid md:grid-cols-2 gap-6 mt-6">
-                    <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
-                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
-                      <p className="text-white">Specialized answers in minutes, not weeks.</p>
-                    </div>
-                    <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
-                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Strategic Advantage</h4>
-                      <p className="text-white">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
-                    </div>
-                  </div>
+                <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
+                  <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Strategic Advantage</h4>
+                  <p className="text-white">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
                 </div>
               </div>
             </div>
