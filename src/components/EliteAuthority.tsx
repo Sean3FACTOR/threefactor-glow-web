@@ -24,7 +24,7 @@ const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1060" fill="none" xml
 
     {/* Top: mask + text for PROGRAM WRAPPER — centered on border y=50 */}
     <rect x="300" y="14" width="600" height="72" fill="#3B3B39" />
-    <text x="600" y="62" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif" dominantBaseline="central">PROGRAM WRAPPER</text>
+    <text x="600" y="50" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif" dominantBaseline="central">PROGRAM WRAPPER</text>
 
     {/* Bottom: mask + text for CERTIFIED CONFIDENCE — centered on border y=1010 */}
     <rect x="300" y="974" width="600" height="72" fill="#3B3B39" />
@@ -67,8 +67,8 @@ const EliteAuthority = () => {
           Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
         </h3>
 
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-12 lg:col-span-6 space-y-6">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-8 items-center">
+          <div className="col-span-12 lg:col-span-5 space-y-6">
             {authorityPoints.map(point => <div key={point.title} className="p-6 transition-all hover:shadow-lg" style={{
             backgroundColor: "#646464",
             border: "1px solid rgba(255,255,255,0.08)"
@@ -81,7 +81,7 @@ const EliteAuthority = () => {
                 </p>
               </div>)}
           </div>
-          <div className="col-span-12 lg:col-span-6 flex items-stretch">
+          <div className="col-span-12 lg:col-span-7 flex items-center">
             <div className="w-full">
               <ProgramWrapperDiagram />
             </div>
