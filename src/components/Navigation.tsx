@@ -80,7 +80,7 @@ const Navigation = () => {
     setIsOpen(false);
   };
   return <nav className="fixed top-0 left-0 right-0 z-50 shadow-sm" style={{
-    backgroundColor: "#F8F9FA",
+    backgroundColor: "#EDEDED",
     borderBottom: "1px solid rgba(59,59,57,0.08)"
   }}>
       <div className="container mx-auto py-0">
