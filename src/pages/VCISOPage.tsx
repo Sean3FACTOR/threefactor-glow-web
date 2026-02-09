@@ -74,7 +74,7 @@ const VCISOPage = () => {
             }}>
                 <h3 className="text-lg font-bold text-white mb-6">As your company grows, you&apos;re expected to:</h3>
                 <div className="space-y-4">
-                  {leadershipPressures.map((item, i) => <div key={i} className="flex items-start gap-3 bg-primary"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white">{item}</p></div>)}
+                  {leadershipPressures.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-white">{item}</p></div>)}
                 </div>
                 <p className="text-white font-medium mt-6 pt-6" style={{
                 borderTop: "1px solid rgba(255,255,255,0.1)"
@@ -87,7 +87,7 @@ const VCISOPage = () => {
             }}>
                 <h3 className="text-lg font-bold text-white mb-6">Without executive-level security leadership, you become:</h3>
                 <div className="space-y-4">
-                  {leadershipRisks.map((item, i) => <div key={i} className="flex items-start gap-3 bg-primary"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white">{item}</p></div>)}
+                  {leadershipRisks.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-white">{item}</p></div>)}
                 </div>
               </div>
             </div>
