@@ -94,7 +94,7 @@ const ComplianceServicesPage = () => {
                 <p className="text-lg md:text-xl text-white leading-relaxed mx-0">
                   Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
                 </p>
-                <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{
+                <p className="text-xl md:text-2xl font-semibold text-white text-left block pl-8" style={{
                 borderLeft: "2px solid #F36F21"
               }}>
                   Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
