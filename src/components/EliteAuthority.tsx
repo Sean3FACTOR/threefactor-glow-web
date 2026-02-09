@@ -82,7 +82,7 @@ const EliteAuthority = () => {
               </div>)}
           </div>
           <div className="col-span-12 lg:col-span-7 flex items-center">
-            <div className="w-full">
+            <div className="w-[85%] mx-auto">
               <ProgramWrapperDiagram />
             </div>
           </div>
