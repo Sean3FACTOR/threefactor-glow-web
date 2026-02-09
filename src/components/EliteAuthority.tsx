@@ -26,7 +26,7 @@ const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xml
     <rect x="630" y="180" width="450" height="150" stroke="white" strokeWidth="1.5" opacity="0.2" fill="white" fillOpacity="0.05" />
     <text x="855" y="264" textAnchor="middle" fill="white" opacity="0.7" fontSize="24" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
     <rect x="150" y="420" width="930" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
-    <text x="615" y="504" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT (ISO · PCI · SOC 2 · FEDRAMP)</text>
+    <text x="615" y="504" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT (ISO · PCI · SOC 2 · FEDRAMP · NIS2/DORA · CMMC)</text>
     <rect x="150" y="660" width="435" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
     <text x="366" y="744" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
     <rect x="645" y="660" width="435" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
