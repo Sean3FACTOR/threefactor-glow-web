@@ -125,7 +125,7 @@ const Navigation = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {servicesOpen && <div className="mt-2 ml-4 space-y-2">
-                    {serviceItems.map(item => <button key={item.name} onClick={() => handleServiceClick(item.href)} className="block text-sm text-white/50 hover:text-white transition-colors">
+                    {serviceItems.map(item => <button key={item.name} onClick={() => handleServiceClick(item.href)} className="block text-sm text-white hover:text-white/80 transition-colors">
                         {item.name}
                       </button>)}
                   </div>}

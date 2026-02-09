@@ -39,11 +39,11 @@ const HomepageHero = () => {
               You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
             <div className="space-y-4 mb-10">
-              <p className="text-lg text-white/90 flex items-start gap-3">
+              <p className="text-lg text-white flex items-start gap-3">
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2 bg-primary text-primary" />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
-              <p className="text-lg text-white/90 flex items-start gap-3">
+              <p className="text-lg text-white flex items-start gap-3">
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2 text-primary bg-primary" />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>

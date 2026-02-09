@@ -135,7 +135,7 @@ const ComplianceServicesPage = () => {
                   <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{
                 backgroundColor: "rgba(255,255,255,0.08)"
               }}>
-                    <f.icon className="w-6 h-6 text-white/70" />
+                    <f.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{f.name}</h3>
                 </div>
@@ -172,7 +172,7 @@ const ComplianceServicesPage = () => {
                 <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
               backgroundColor: "#646464"
             }}>
-                  <span className="text-sm font-semibold text-white/70">{step.number}</span>
+                  <span className="text-sm font-semibold text-white">{step.number}</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">{step.title}</h4>
                 <p className="text-white leading-relaxed text-sm mb-2">{step.description}</p>

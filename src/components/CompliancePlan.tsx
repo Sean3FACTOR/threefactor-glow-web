@@ -58,7 +58,7 @@ const CompliancePlan = () => {
               <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
             backgroundColor: "#646464"
           }}>
-                <span className="text-sm font-semibold text-white/70">{step.number}</span>
+                <span className="text-sm font-semibold text-white">{step.number}</span>
               </div>
 
               <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight flex items-center">

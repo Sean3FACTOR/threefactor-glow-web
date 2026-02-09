@@ -68,7 +68,7 @@ const EliteAuthority = () => {
                   <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{
                 backgroundColor: "rgba(255,255,255,0.08)"
               }}>
-                    <point.icon className="w-5 h-5 text-white/70" />
+                    <point.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-white mb-2 uppercase tracking-tight">

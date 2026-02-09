@@ -28,7 +28,7 @@ const SuccessOutcomes = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             From Vendor to Trusted Market Authority
           </h2>
-          <p className="text-lg text-white/70 mb-4 leading-relaxed">
+          <p className="text-lg text-white mb-4 leading-relaxed">
             Compliance isn't overhead, it's leverage.
           </p>
           <p className="text-lg text-white">

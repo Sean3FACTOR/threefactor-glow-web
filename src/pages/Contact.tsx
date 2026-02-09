@@ -65,7 +65,7 @@ const Contact = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
                 Let's Start a Conversation
               </h1>
-              <p className="text-white/50 mt-4 max-w-2xl mx-auto">
+              <p className="text-white mt-4 max-w-2xl mx-auto">
                 Ready to elevate your security posture? Get in touch with our team to discuss your unique challenges.
               </p>
             </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/80">Name *</FormLabel>
+                          <FormLabel className="text-white">Name *</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your full name"
@@ -102,7 +102,7 @@ const Contact = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/80">Email *</FormLabel>
+                          <FormLabel className="text-white">Email *</FormLabel>
                           <FormControl>
                             <Input
                               type="email"
@@ -121,7 +121,7 @@ const Contact = () => {
                       name="company"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/80">Company</FormLabel>
+                          <FormLabel className="text-white">Company</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your company name"
@@ -139,7 +139,7 @@ const Contact = () => {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white/80">Message *</FormLabel>
+                          <FormLabel className="text-white">Message *</FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="Tell us about your security challenges..."
@@ -184,7 +184,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-white">Email</h3>
-                        <p className="text-white/50">contact@3factor.io</p>
+                        <p className="text-white">contact@3factor.io</p>
                       </div>
                     </div>
 
@@ -194,7 +194,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-white">Phone</h3>
-                        <p className="text-white/50">+1 (555) 123-4567</p>
+                        <p className="text-white">+1 (555) 123-4567</p>
                       </div>
                     </div>
 
@@ -204,7 +204,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-white">Location</h3>
-                        <p className="text-white/50">
+                        <p className="text-white">
                           Serving clients globally<br />
                           Remote-first consultancy
                         </p>
@@ -215,7 +215,7 @@ const Contact = () => {
 
                 <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <h3 className="font-semibold text-white mb-2">Response Time</h3>
-                  <p className="text-white/50 text-sm">
+                  <p className="text-white text-sm">
                     We typically respond within 24 hours during business days. For urgent security matters, please indicate the urgency in your message.
                   </p>
                 </div>
