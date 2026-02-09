@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlueprintHero from "@/components/BlueprintHero";
+import complianceWaveGraphic from "@/assets/compliance-wave-graphic.png";
 
 const frameworks = [
   {
@@ -77,22 +78,27 @@ const ComplianceServicesPage = () => {
       {/* Value Prop */}
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl text-left">
-            <div className="space-y-8">
-              <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
-                Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
-              </p>
-              <p className="text-lg md:text-xl text-white leading-relaxed">
-                Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
-              </p>
-              <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
-                Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <div className="space-y-8">
+                <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
+                  Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
+                </p>
+                <p className="text-lg md:text-xl text-white leading-relaxed">
+                  Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
+                </p>
+                <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
+                  Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
+                </p>
+              </div>
+              <div className="mt-10">
+                <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+                  <Link to="/contact">Get Your Framework Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                </Button>
+              </div>
             </div>
-            <div className="mt-10">
-              <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
-                <Link to="/contact">Get Your Framework Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link>
-              </Button>
+            <div className="hidden lg:flex items-center justify-center">
+              <img src={complianceWaveGraphic} alt="Abstract wave graphic" className="w-full max-w-md opacity-60 invert" />
             </div>
           </div>
         </div>
