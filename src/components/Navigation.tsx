@@ -89,7 +89,7 @@ const Navigation = () => {
             <img src={Logo} alt="3FACTOR" className="h-8 md:h-10 w-auto" />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden sm:flex items-center space-x-8">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white/80 text-white outline-none">
                 Services
@@ -110,12 +110,12 @@ const Navigation = () => {
               </Link>)}
           </div>
 
-          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button className="sm:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {isOpen && <div className="md:hidden py-4" style={{
+        {isOpen && <div className="sm:hidden py-4" style={{
         borderTop: "1px solid rgba(255,255,255,0.08)"
       }}>
             <div className="flex flex-col space-y-4">
