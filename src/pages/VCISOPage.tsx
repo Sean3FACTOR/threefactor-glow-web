@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, Shield, Users, FileCheck, AlertTriangle, CheckCircle } from "lucide-react";
+import { ArrowRight, Phone, AlertTriangle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -10,45 +10,16 @@ const leadershipPressures = [
   "Defend decisions to investors and the Board",
   "Sign off on risk you didn't personally design",
 ];
-
 const leadershipRisks = [
   "The weakest link in enterprise sales",
   "The default risk owner during audits",
   "Personally exposed when something goes wrong",
 ];
-
 const pricingTiers = [
-  {
-    name: "Bronze",
-    subtitle: "The Foundation",
-    employees: "Up to 25 employees",
-    ideal: "Ideal for early-stage startups preparing for their first serious audit, investor review, or enterprise prospect.",
-    businessValue: "We eliminate guesswork. We build your Security Architecture Blueprint and a 12-month Roadmap so you can prove, to investors and prospects, that your company is not a liability.",
-    riskOfNothing: "Without leadership, you're flying blind. A single \"No\" on a basic security questionnaire can freeze your sales cycle for months.",
-    keyAsset: "Security Management Dashboard",
-    keyAssetDesc: "Real-time visibility and proof for your Board, investors, and buyers.",
-  },
-  {
-    name: "Silver",
-    subtitle: "Enterprise Readiness",
-    employees: "Up to 100 employees",
-    ideal: "Ideal for scaling teams actively pursuing enterprise and regulated-market deals.",
-    businessValue: "Everything in Bronze, plus a custom SOC 2 framework designed for how your company actually operates. Weekly implementation sessions ensure security isn't just documented, it's embedded.",
-    businessValueExtra: "We move you from \"baseline\" to battle-ready.",
-    riskOfNothing: "Once you pass 25 employees, you become a visible target. Without detailed procedures, a single incident can trigger operational paralysis, and cyber insurance may deny coverage due to negligence.",
-    highlighted: true,
-  },
-  {
-    name: "Gold",
-    subtitle: "Total Resilience & Scale",
-    employees: "100+ employees",
-    ideal: "Ideal for established companies where a breach is not survivable.",
-    businessValue: "Everything in Silver, plus a Secure Development Program that hard-codes security into your product, your processes, and your culture. Monthly Health Checks act as early-warning systems against the Triple Penalty: financial, operational, and reputational collapse.",
-    businessValueExtra: "Security stops being a department. It becomes muscle memory.",
-    riskOfNothing: "At this scale, you have a reputation, and directors, to protect. A single leak of regulated data without a Privacy Management Framework can trigger €10M DORA/NIS2 fines and irreversible brand damage.",
-  },
+  { name: "Bronze", subtitle: "The Foundation", employees: "Up to 25 employees", ideal: "Ideal for early-stage startups preparing for their first serious audit, investor review, or enterprise prospect.", businessValue: "We eliminate guesswork. We build your Security Architecture Blueprint and a 12-month Roadmap so you can prove, to investors and prospects, that your company is not a liability.", riskOfNothing: "Without leadership, you're flying blind. A single \"No\" on a basic security questionnaire can freeze your sales cycle for months.", keyAsset: "Security Management Dashboard", keyAssetDesc: "Real-time visibility and proof for your Board, investors, and buyers." },
+  { name: "Silver", subtitle: "Enterprise Readiness", employees: "Up to 100 employees", ideal: "Ideal for scaling teams actively pursuing enterprise and regulated-market deals.", businessValue: "Everything in Bronze, plus a custom SOC 2 framework designed for how your company actually operates. Weekly implementation sessions ensure security isn't just documented, it's embedded.", businessValueExtra: "We move you from \"baseline\" to battle-ready.", riskOfNothing: "Once you pass 25 employees, you become a visible target. Without detailed procedures, a single incident can trigger operational paralysis, and cyber insurance may deny coverage due to negligence.", highlighted: true },
+  { name: "Gold", subtitle: "Total Resilience & Scale", employees: "100+ employees", ideal: "Ideal for established companies where a breach is not survivable.", businessValue: "Everything in Silver, plus a Secure Development Program that hard-codes security into your product, your processes, and your culture. Monthly Health Checks act as early-warning systems against the Triple Penalty: financial, operational, and reputational collapse.", businessValueExtra: "Security stops being a department. It becomes muscle memory.", riskOfNothing: "At this scale, you have a reputation, and directors, to protect. A single leak of regulated data without a Privacy Management Framework can trigger €10M DORA/NIS2 fines and irreversible brand damage." },
 ];
-
 const successOutcomes = [
   "Security questions stop feeling like traps.",
   "Board conversations become calm and confident.",
@@ -59,72 +30,41 @@ const VCISOPage = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
-      
-      <BlueprintHero
-        breadcrumb="Virtual CISO"
-        headline="Elite Security Leadership"
-        subhead="You shouldn't be the only one carrying the security risk."
-        ctaText="Upgrade Your Executive Shield"
-        ctaLink="/contact"
-      />
+      <BlueprintHero breadcrumb="Virtual CISO" headline="Elite Security Leadership" subhead="You shouldn't be the only one carrying the security risk." ctaText="Upgrade Your Executive Shield" ctaLink="/contact" />
 
-      {/* Value Prop - WHITE */}
-      <section className="py-20 bg-white">
+      {/* Value Prop */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-                Stop Carrying the Weight of the Pen Alone.
-              </h2>
-              <p className="text-xl md:text-2xl font-medium leading-relaxed" style={{ color: "#3B3B39" }}>
-                Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.
-              </p>
-              <p className="text-lg leading-relaxed" style={{ color: "#646464" }}>
-                Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.
-              </p>
-              <p className="text-xl font-semibold pl-6" style={{ color: "#3B3B39", borderLeft: "2px solid #F36F21" }}>
-                Instead of guessing, you lead. Instead of reacting, you&apos;re prepared.
-              </p>
-            </div>
+          <div className="max-w-4xl space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">Stop Carrying the Weight of the Pen Alone.</h2>
+            <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.</p>
+            <p className="text-lg text-white/60 leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
+            <p className="text-xl font-semibold text-white pl-6" style={{ borderLeft: "2px solid #F36F21" }}>Instead of guessing, you lead. Instead of reacting, you&apos;re prepared.</p>
           </div>
         </div>
       </section>
 
-      {/* Real Risk - DARK */}
+      {/* Real Risk */}
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">
-              The Real Risk: Leadership Without a Shield
-            </h2>
-            <p className="text-lg text-white/60 mb-8">
-              The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.
-            </p>
-            
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Real Risk: Leadership Without a Shield</h2>
+            <p className="text-lg text-white/60 mb-8">The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.</p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="text-lg font-bold text-white mb-6">As your company grows, you&apos;re expected to:</h3>
                 <div className="space-y-4">
-                  {leadershipPressures.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
-                      <p className="text-white/70">{item}</p>
-                    </div>
+                  {leadershipPressures.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white/70">{item}</p></div>
                   ))}
                 </div>
-                <p className="text-white font-medium mt-6 pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-                  That pressure shouldn&apos;t sit on your shoulders alone.
-                </p>
+                <p className="text-white font-medium mt-6 pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>That pressure shouldn&apos;t sit on your shoulders alone.</p>
               </div>
-              
               <div className="p-8" style={{ backgroundColor: "#646464", borderTop: "2px solid #F36F21", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="text-lg font-bold text-white mb-6">Without executive-level security leadership, founders and executives become:</h3>
                 <div className="space-y-4">
-                  {leadershipRisks.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <AlertTriangle className="w-4 h-4 text-white/50 flex-shrink-0 mt-1" />
-                      <p className="text-white/70">{item}</p>
-                    </div>
+                  {leadershipRisks.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/50 flex-shrink-0 mt-1" /><p className="text-white/70">{item}</p></div>
                   ))}
                 </div>
               </div>
@@ -133,53 +73,38 @@ const VCISOPage = () => {
         </div>
       </section>
 
-      {/* vCISO Tiers - WHITE */}
-      <section className="py-20 bg-white">
+      {/* Tiers */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-              vCISO Tiers: Security That Scales With You
-            </h2>
-            <p className="text-lg" style={{ color: "#646464" }}>
-              You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">vCISO Tiers: Security That Scales With You</h2>
+            <p className="text-lg text-white/60">You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.</p>
           </div>
-          
           <div className="space-y-8">
             {pricingTiers.map((tier) => (
-              <div 
-                key={tier.name}
-                className="bg-white p-8 md:p-10 transition-all hover:shadow-lg"
-                style={{ border: tier.highlighted ? "2px solid #F36F21" : "1px solid #646464" }}
-              >
+              <div key={tier.name} className="p-8 md:p-10 transition-all hover:shadow-lg" style={{ backgroundColor: "#646464", border: tier.highlighted ? "2px solid #F36F21" : "1px solid rgba(255,255,255,0.08)" }}>
                 <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                   <div className="lg:w-64 flex-shrink-0">
-                    <h3 className="text-2xl font-bold uppercase tracking-tight" style={{ color: "#3B3B39" }}>{tier.name}</h3>
+                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{tier.name}</h3>
                     <p className="font-semibold" style={{ color: "#F36F21" }}>{tier.subtitle}</p>
-                    <p className="text-sm mt-2" style={{ color: "#646464" }}>{tier.employees}</p>
+                    <p className="text-sm text-white/50 mt-2">{tier.employees}</p>
                   </div>
-                  
                   <div className="flex-1 space-y-6">
-                    <p className="italic" style={{ color: "#646464" }}>{tier.ideal}</p>
-                    
+                    <p className="text-white/50 italic">{tier.ideal}</p>
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
-                      <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#3B3B39" }}>The Business Value</h4>
-                      <p style={{ color: "#646464" }}>{tier.businessValue}</p>
-                      {tier.businessValueExtra && (
-                        <p className="font-medium mt-2" style={{ color: "#3B3B39" }}>{tier.businessValueExtra}</p>
-                      )}
+                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Business Value</h4>
+                      <p className="text-white/60">{tier.businessValue}</p>
+                      {tier.businessValueExtra && <p className="text-white font-medium mt-2">{tier.businessValueExtra}</p>}
                     </div>
-                    
-                    <div className="pl-4" style={{ borderLeft: "2px solid #646464" }}>
-                      <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#3B3B39" }}>The Risk of Doing Nothing</h4>
-                      <p style={{ color: "#646464" }}>{tier.riskOfNothing}</p>
+                    <div className="pl-4" style={{ borderLeft: "2px solid rgba(255,255,255,0.2)" }}>
+                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Risk of Doing Nothing</h4>
+                      <p className="text-white/60">{tier.riskOfNothing}</p>
                     </div>
-                    
                     {tier.keyAsset && (
-                      <div className="p-4" style={{ backgroundColor: "#F8F9FA", border: "1px solid #646464" }}>
-                        <h4 className="text-sm font-bold uppercase tracking-wide mb-1" style={{ color: "#3B3B39" }}>Key Asset</h4>
-                        <p className="font-semibold" style={{ color: "#3B3B39" }}>{tier.keyAsset}</p>
-                        <p className="text-sm" style={{ color: "#646464" }}>{tier.keyAssetDesc}</p>
+                      <div className="p-4" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                        <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-1">Key Asset</h4>
+                        <p className="text-white font-semibold">{tier.keyAsset}</p>
+                        <p className="text-sm text-white/50">{tier.keyAssetDesc}</p>
                       </div>
                     )}
                   </div>
@@ -190,27 +115,19 @@ const VCISOPage = () => {
         </div>
       </section>
 
-      {/* SME Advisory - DARK */}
+      {/* SME Advisory */}
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">
-              The Secret Weapon: On-Demand SME Advisory
-            </h2>
-            <p className="text-lg text-white/60 mb-8">
-              When the stakes are high, waiting weeks for answers isn&apos;t an option.
-            </p>
-            
-            <div className="p-8 mb-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Secret Weapon: On-Demand SME Advisory</h2>
+            <p className="text-lg text-white/60 mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
+            <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
                   <Phone className="w-6 h-6" style={{ color: "#F36F21" }} />
                 </div>
                 <div>
-                  <p className="text-lg text-white mb-4">
-                    As a vCISO client, you don&apos;t just get a consultant, you get a direct line to the architects who secured 90% of the global cloud.
-                  </p>
-                  
+                  <p className="text-lg text-white mb-4">As a vCISO client, you don&apos;t just get a consultant, you get a direct line to the architects who secured 90% of the global cloud.</p>
                   <div className="grid md:grid-cols-2 gap-6 mt-6">
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
@@ -218,9 +135,7 @@ const VCISOPage = () => {
                     </div>
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Strategic Advantage</h4>
-                      <p className="text-white/60">
-                        Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.
-                      </p>
+                      <p className="text-white/60">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
                     </div>
                   </div>
                 </div>
@@ -230,42 +145,29 @@ const VCISOPage = () => {
         </div>
       </section>
 
-      {/* Success - WHITE */}
-      <section className="py-20 bg-white">
+      {/* Success */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-              What Success Feels Like
-            </h2>
-            
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Feels Like</h2>
             <div className="space-y-4 mb-8">
-              {successOutcomes.map((outcome, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
-                  <p className="text-lg" style={{ color: "#3B3B39" }}>{outcome}</p>
-                </div>
+              {successOutcomes.map((o, i) => (
+                <div key={i} className="flex items-start gap-4"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-lg text-white">{o}</p></div>
               ))}
             </div>
-            
             <div className="mt-8 pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
-              <p className="text-xl font-semibold" style={{ color: "#3B3B39" }}>
-                You stop reacting.<br />
-                You lead with certainty.
-              </p>
+              <p className="text-xl font-semibold text-white">You stop reacting.<br />You lead with certainty.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA - WHITE */}
-      <section className="py-20 bg-white" style={{ borderTop: "1px solid #646464" }}>
+      {/* Final CTA */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Button asChild size="lg" className="text-white font-semibold transition-colors" style={{ backgroundColor: "#F36F21" }}>
-              <Link to="/contact">
-                Upgrade Your Executive Shield
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+            <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+              <Link to="/contact">Upgrade Your Executive Shield <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
           </div>
         </div>
