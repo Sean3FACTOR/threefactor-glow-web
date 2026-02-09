@@ -21,10 +21,6 @@ const BlueprintHero = ({
   return (
     <section className="pt-32 pb-20 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
-        <Link to="/" className="inline-flex items-center text-white hover:text-white/80 transition-colors mb-12">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
-        </Link>
 
         <div className="grid grid-cols-12 gap-8 items-center">
           <div className="col-span-12 lg:col-span-6">
