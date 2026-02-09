@@ -38,7 +38,7 @@ const BlueprintHero = ({
               {headline}
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/60 mb-10 leading-relaxed max-w-[50ch]">
+            <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed max-w-[50ch]">
               {subhead}
             </p>
 
