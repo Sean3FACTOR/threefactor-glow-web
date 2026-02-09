@@ -55,7 +55,7 @@ const EliteAuthority = () => {
         </div>
 
         <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
-          Why IT & Ops Leaders Choose 3FACTOR
+          Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
         </h3>
 
         <div className="grid grid-cols-12 gap-8">
