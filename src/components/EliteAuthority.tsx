@@ -35,7 +35,7 @@ const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xml
     <line x1="855" y1="330" x2="855" y2="420" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="366" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="861" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
-    <line x1="615" y1="870" x2="615" y2="1000" stroke="white" strokeWidth="2" opacity="1" />
+    
     <rect x="300" y="988" width="600" height="72" fill="#3B3B39" />
     <text x="600" y="1036" textAnchor="middle" fill="white" opacity="1" fontSize="36" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
   </svg>;
