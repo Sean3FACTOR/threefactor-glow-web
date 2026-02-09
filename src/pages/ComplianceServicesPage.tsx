@@ -117,33 +117,7 @@ const ComplianceServicesPage = () => {
       backgroundColor: "#3B3B39",
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Real Enemy Isn't Regulation, It's Confusion</h2>
-            <div className="space-y-8">
-              <div className="p-8 text-left" style={{
-              backgroundColor: "#646464",
-              border: "1px solid rgba(255,255,255,0.08)"
-            }}>
-                <h3 className="text-xl font-bold text-white mb-4">We call it Framework Fog:</h3>
-                <p className="text-lg text-white leading-relaxed">The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="pl-6 text-left" style={{
-                borderLeft: "2px solid rgba(255,255,255,0.2)"
-              }}>
-                  <p className="text-lg text-white">Most firms sell you a certificate.</p>
-                </div>
-                <div className="pl-6 text-left" style={{
-                borderLeft: "2px solid #F36F21"
-              }}>
-                  <p className="text-lg text-white font-semibold">We sell you market access.</p>
-                </div>
-              </div>
-              <p className="text-xl text-white">If a framework doesn't help you close deals, enter new markets, or survive regulatory scrutiny, it's noise.</p>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Frameworks */}
