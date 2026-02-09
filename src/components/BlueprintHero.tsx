@@ -23,18 +23,18 @@ const BlueprintHero = ({
         </Link>
 
         {/* Architectural Split Layout */}
-        <div className="max-w-xl">
-            <div className="flex items-center gap-2 mb-6">
+        <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <span className="text-sm font-medium text-primary">Services</span>
               <span className="text-muted-foreground">/</span>
               <span className="text-sm text-muted-foreground">{breadcrumb}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-foreground mb-6 leading-[1.1] whitespace-nowrap">
+            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-foreground mb-8 leading-[1.1]">
               {headline}
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-[60ch]">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-[50ch] mx-auto">
               {subhead}
             </p>
 
