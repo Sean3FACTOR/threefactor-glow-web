@@ -3,7 +3,6 @@ import { Zap, Globe, Rocket } from "lucide-react";
 
 const outcomes = [
   {
-    id: "OUT-A",
     icon: Zap,
     title: "CLOSE DEALS FASTER",
     description: "Security questionnaires completed in days, not quarters. Auditors nod instead of probing.",
@@ -11,7 +10,6 @@ const outcomes = [
     offset: "md:mt-8",
   },
   {
-    id: "OUT-B",
     icon: Globe,
     title: "UNRESTRICTED EXPANSION",
     description: "No geography, tender, or enterprise buyer is off-limits when compliance is built right.",
@@ -19,7 +17,6 @@ const outcomes = [
     offset: "",
   },
   {
-    id: "OUT-C",
     icon: Rocket,
     title: "TOTAL OPERATIONAL VELOCITY",
     description: "Scale confidently knowing your security posture supports growth instead of dragging it down.",

@@ -5,21 +5,18 @@ import sectionConference from "@/assets/homepage/section-conference.jpg";
 
 const penalties = [
   {
-    id: "PEN-01",
     icon: DollarSign,
     title: "FINANCIAL LIABILITY",
-    description: "Between €10M regulatory fines, frozen payment rails, and contract clawbacks, weak compliance turns a single incident into a business-ending event.",
+    description: "Between €10M regulatory fines, frozen payment rails, and contract clawbacks, weak compliance turns a single incident into a catastrophe.",
   },
   {
-    id: "PEN-02",
     icon: Pause,
     title: "OPERATIONAL STOPPAGE",
     description: "Under mandates like NIS2 and DORA, regulators can revoke your license to operate. Without proven resilience, you don't have a growth strategy, you have a liability.",
   },
   {
-    id: "PEN-03",
     icon: AlertTriangle,
-    title: "REPUTATION DEAD-END",
+    title: "THE REPUTATION DEAD-END",
     description: "In enterprise sales, you don't get a second chance. Once your security posture is flagged as \"high risk,\" future deals quietly disappear.",
   },
 ];
@@ -75,7 +72,7 @@ const TriplePenalty = () => {
             ))}
           </div>
 
-          {/* Image - aligned with first card */}
+          {/* Image */}
           <div className="col-span-12 lg:col-span-5 flex items-start">
             <div className="relative group w-full">
               <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
