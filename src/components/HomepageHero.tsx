@@ -64,7 +64,7 @@ const HomepageHero = () => {
             </Link>
           </div>
           <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
-            <div className="w-full max-w-md aspect-square">
+            <div className="w-full max-w-3xl aspect-square">
               <ArchitectureSVG />
             </div>
           </div>
