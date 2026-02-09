@@ -239,7 +239,7 @@ const ComplianceServicesPage = () => {
             <p className="text-lg text-white mb-6">Not sure where to start? Your roadmap shows:</p>
             <div className="space-y-3 text-left max-w-md mx-auto">
               {roadmapBenefits.map((b, i) => <div key={i} className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
+                  <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
                   <p className="text-white">{b}</p>
                 </div>)}
             </div>
