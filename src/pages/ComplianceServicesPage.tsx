@@ -207,7 +207,7 @@ const ComplianceServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Looks Like</h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 inline-block text-left">
               {successOutcomes.map((o, i) => <div key={i} className="flex items-start gap-4">
                   <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{
                 backgroundColor: "#F36F21"
@@ -215,7 +215,7 @@ const ComplianceServicesPage = () => {
                   <p className="text-lg text-white">{o}</p>
                 </div>)}
             </div>
-            <div className="mt-8 pl-6" style={{
+            <div className="mt-8 inline-block pl-6" style={{
             borderLeft: "2px solid #F36F21"
           }}>
               <p className="text-xl font-semibold text-white">Stop Managing Risk.  <br />Start Exerting Leverage. </p>
