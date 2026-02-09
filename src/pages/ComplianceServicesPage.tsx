@@ -184,9 +184,9 @@ const ComplianceServicesPage = () => {
             <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-white/20" />
             {planSteps.map((step, index) => <div key={step.number} className="relative px-4 pb-8 md:pb-0">
                 <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
-              backgroundColor: "#646464"
+              backgroundColor: "#FFFFFF"
             }}>
-                  <span className="text-sm font-semibold text-white">{step.number}</span>
+                  <span className="text-sm font-semibold" style={{ color: "#3B3B39" }}>{step.number}</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">{step.title}</h4>
                 <p className="text-white leading-relaxed text-sm mb-2">{step.description}</p>
