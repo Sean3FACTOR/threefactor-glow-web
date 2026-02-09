@@ -31,9 +31,9 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section className="py-12 border-y border-border bg-background">
+    <section className="py-12 border-y border-white/10" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
-        <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">
+        <p className="text-center text-sm text-white/50 mb-8 uppercase tracking-widest">
           Trusted Certifications & Standards
         </p>
         <div className="px-12">
@@ -50,7 +50,7 @@ const Certifications = () => {
                   key={cert.name}
                   className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
                 >
-                  <div className="flex items-center justify-center w-full h-32 md:h-40 p-4 bg-card rounded-lg border border-border card-hover">
+                  <div className="flex items-center justify-center w-full h-32 md:h-40 p-4 rounded-none border border-white/10" style={{ backgroundColor: "#646464" }}>
                     <img
                       src={cert.logo}
                       alt={`${cert.name} certification`}
@@ -66,24 +66,24 @@ const Certifications = () => {
         </div>
 
         {/* Trusted by section - moved from Hero */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground uppercase tracking-widest mb-6">
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="text-center text-sm text-white/50 uppercase tracking-widest mb-6">
             Trusted by Fortune 500 companies
           </p>
           <div className="flex items-center justify-center gap-8 md:gap-12">
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-foreground">15+</span>
-              <span className="text-xs md:text-sm text-muted-foreground">Years Experience</span>
+              <span className="block text-3xl md:text-4xl font-bold text-white">15+</span>
+              <span className="text-xs md:text-sm text-white/50">Years Experience</span>
             </div>
-            <div className="w-px h-12 bg-border" />
+            <div className="w-px h-12 bg-white/10" />
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-foreground">100+</span>
-              <span className="text-xs md:text-sm text-muted-foreground">Clients Served</span>
+              <span className="block text-3xl md:text-4xl font-bold text-white">100+</span>
+              <span className="text-xs md:text-sm text-white/50">Clients Served</span>
             </div>
-            <div className="w-px h-12 bg-border" />
+            <div className="w-px h-12 bg-white/10" />
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-foreground">Global</span>
-              <span className="text-xs md:text-sm text-muted-foreground">Coverage</span>
+              <span className="block text-3xl md:text-4xl font-bold text-white">Global</span>
+              <span className="text-xs md:text-sm text-white/50">Coverage</span>
             </div>
           </div>
         </div>
