@@ -98,7 +98,7 @@ const ComplianceServicesPage = () => {
               </div>
             </div>
             <div className="hidden lg:flex items-center justify-center">
-              <img src={complianceWaveGraphic} alt="Abstract wave graphic" className="w-full max-w-md opacity-60 invert" />
+              <img src={complianceWaveGraphic} alt="Abstract wave graphic" className="w-full max-w-4xl opacity-60 invert scale-150" />
             </div>
           </div>
         </div>
