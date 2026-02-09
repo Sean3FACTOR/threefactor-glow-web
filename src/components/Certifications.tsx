@@ -50,7 +50,7 @@ const Certifications = () => {
         <p className="text-center text-sm mb-8 uppercase tracking-widest text-white">
           Our Teams' Certifications & Standards
         </p>
-        <div className="px-12">
+        <div className="px-4 sm:px-12">
           <Carousel opts={{
           align: "start",
           loop: true
@@ -65,8 +65,8 @@ const Certifications = () => {
                   </div>
                 </CarouselItem>)}
             </CarouselContent>
-            <CarouselPrevious className="-left-6 md:-left-10 border-white bg-white/20 text-white opacity-100" />
-            <CarouselNext className="-right-6 md:-right-10 border-white bg-white/20 text-white opacity-100" />
+            <CarouselPrevious className="-left-3 sm:-left-6 md:-left-10 border-white bg-white/20 text-white opacity-100" />
+            <CarouselNext className="-right-3 sm:-right-6 md:-right-10 border-white bg-white/20 text-white opacity-100" />
           </Carousel>
         </div>
 

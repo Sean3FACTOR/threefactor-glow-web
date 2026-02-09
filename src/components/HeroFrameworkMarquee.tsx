@@ -38,7 +38,7 @@ const HeroFrameworkMarquee = () => {
 
   return (
     <div
-      className="relative flex items-center justify-center w-full h-[500px]"
+      className="relative flex items-center justify-center w-full h-[300px] md:h-[500px]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -49,7 +49,7 @@ const HeroFrameworkMarquee = () => {
           className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <div className="w-[400px] h-[400px] p-12 flex items-center justify-center">
+          <div className="w-[250px] h-[250px] md:w-[400px] md:h-[400px] p-8 md:p-12 flex items-center justify-center">
             <img
               src={fw.logo}
               alt={fw.name}
