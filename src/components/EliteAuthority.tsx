@@ -17,7 +17,7 @@ const authorityPoints = [{
   description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools."
 }];
 const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
-    <rect x="60" y="60" width="1080" height="960" stroke="#F36F21" strokeWidth="2" opacity="1" fill="none" />
+    <rect x="60" y="30" width="1080" height="990" stroke="#F36F21" strokeWidth="2" opacity="1" fill="none" />
     <rect x="90" y="90" width="1020" height="900" stroke="#F36F21" strokeWidth="1" opacity="0.6" fill="none" strokeDasharray="12 6" />
     <rect x="330" y="30" width="540" height="72" fill="#3B3B39" />
     <text x="600" y="78" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
