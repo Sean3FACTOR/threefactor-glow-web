@@ -19,10 +19,10 @@ const Index = () => {
         <ComplianceCrossroads />
         <TriplePenalty />
         <EliteAuthority />
-        <Certifications />
         <CompliancePlan />
         <DealBlockers />
         <SuccessOutcomes />
+        <Certifications />
         <FinalCTA />
       </div>
       <Footer />
