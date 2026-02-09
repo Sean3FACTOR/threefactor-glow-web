@@ -62,7 +62,7 @@ const HeroHubSpoke = () => {
         return (
           <div
             key={fw.name}
-            className="absolute w-[72px] h-[72px] sm:w-[90px] sm:h-[90px] md:w-[110px] md:h-[110px] lg:w-[120px] lg:h-[120px] -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-[108px] h-[108px] sm:w-[135px] sm:h-[135px] md:w-[165px] md:h-[165px] lg:w-[180px] lg:h-[180px] -translate-x-1/2 -translate-y-1/2"
             style={{ left: `${left}%`, top: `${top}%` }}
           >
             <img
