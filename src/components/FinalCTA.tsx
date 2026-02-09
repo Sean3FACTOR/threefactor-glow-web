@@ -23,7 +23,7 @@ const FinalCTA = () => {
           </Link>
 
           <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-            <p className="text-white/50 mb-4">
+            <p className="text-white mb-4">
               Not ready to book yet?
             </p>
             <Link 
@@ -34,7 +34,7 @@ const FinalCTA = () => {
               Download the 3FACTOR Whitepaper
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <p className="text-sm text-white/40 mt-3 max-w-md mx-auto">
+            <p className="text-sm text-white mt-3 max-w-md mx-auto">
               Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
             </p>
           </div>
