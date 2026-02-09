@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import hexagonNetwork from "@/assets/hexagon-network-hero.png";
 const ArchitectureSVG = () => <svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
     <rect x="40" y="30" width="400" height="340" stroke="white" strokeWidth="1" opacity="0.15" />
     <rect x="60" y="50" width="360" height="300" stroke="white" strokeWidth="0.5" opacity="0.1" />
@@ -64,8 +65,8 @@ const HomepageHero = () => {
             </Link>
           </div>
           <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
-            <div className="w-full max-w-3xl aspect-square">
-              <ArchitectureSVG />
+            <div className="w-full max-w-3xl">
+              <img src={hexagonNetwork} alt="Hexagonal network architecture" className="w-full h-auto" />
             </div>
           </div>
         </div>
