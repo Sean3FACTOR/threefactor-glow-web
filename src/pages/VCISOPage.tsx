@@ -64,7 +64,7 @@ const VCISOPage = () => {
                 <h3 className="text-lg font-bold text-white mb-6">Without executive-level security leadership, founders and executives become:</h3>
                 <div className="space-y-4">
                   {leadershipRisks.map((item, i) => (
-                    <div key={i} className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/50 flex-shrink-0 mt-1" /><p className="text-white">{item}</p></div>
+                    <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white">{item}</p></div>
                   ))}
                 </div>
               </div>
