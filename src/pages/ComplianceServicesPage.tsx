@@ -152,14 +152,7 @@ const ComplianceServicesPage = () => {
             backgroundColor: "#646464",
             border: "1px solid rgba(255,255,255,0.08)"
           }}>
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{
-                backgroundColor: "rgba(255,255,255,0.08)"
-              }}>
-                    <f.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{f.name}</h3>
-                </div>
+                <h3 className="text-2xl font-bold text-white uppercase tracking-tight mb-6">{f.name}</h3>
                 <div className="mb-6 pl-4" style={{
               borderLeft: "2px solid #F36F21"
             }}>
