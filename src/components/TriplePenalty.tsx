@@ -30,6 +30,8 @@ const TriplePenalty = () => {
           </p>
         </div>
 
+        <div className="h-px w-full my-12" style={{ backgroundColor: "rgba(255,255,255,0.12)" }} />
+
         {/* Sub-header */}
         <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
           The Triple Penalty of Weak Compliance
