@@ -77,7 +77,7 @@ const VCISOPage = () => {
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">vCISO Tiers: Security That Scales With You</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">vCISO TIERS: SECURITY THAT SCALES WITH YOU</h2>
             <p className="text-lg text-white/60">You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.</p>
           </div>
           <div className="space-y-8">
