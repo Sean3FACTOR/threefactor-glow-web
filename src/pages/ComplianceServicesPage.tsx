@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlueprintHero from "@/components/BlueprintHero";
+import FrameworkMarquee from "@/components/FrameworkMarquee";
 import complianceWaveGraphic from "@/assets/compliance-wave-graphic.png";
 const frameworks = [{
   name: "ISO 27001",
@@ -75,7 +76,7 @@ const ComplianceServicesPage = () => {
   }}>
       <Navigation />
       <BlueprintHero breadcrumb="Compliance" headline="The Keys to the Market" subhead="You're not trying to be compliant. You're trying to win deals, enter new markets, and protect enterprise value." ctaText="Get Your Framework Roadmap" ctaLink="/contact" />
-
+      <FrameworkMarquee />
       {/* Value Prop */}
       <section className="py-24" style={{
       backgroundColor: "#3B3B39",
