@@ -1,54 +1,60 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import Logo from "@/assets/3F_White_Orange_with_words.png";
-
-const serviceItems = [
-  { name: "Compliance", href: "/services/compliance" },
-  { name: "Virtual CISO", href: "/services/vciso" },
-];
-
+const serviceItems = [{
+  name: "Compliance",
+  href: "/services/compliance"
+}, {
+  name: "Virtual CISO",
+  href: "/services/vciso"
+}];
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  const navLinks = [
-    { name: "Company", href: "/#company", hash: "company" },
-    { name: "Contact", href: "/contact", hash: null },
-  ];
-
+  const navLinks = [{
+    name: "Company",
+    href: "/#company",
+    hash: "company"
+  }, {
+    name: "Contact",
+    href: "/contact",
+    hash: null
+  }];
   const isActive = (href: string) => {
     if (href.startsWith("/#")) {
       return location.pathname === "/" && location.hash === href.slice(1);
     }
     return location.pathname === href;
   };
-
-  const handleNavClick = (e: React.MouseEvent, link: { href: string; hash: string | null }) => {
+  const handleNavClick = (e: React.MouseEvent, link: {
+    href: string;
+    hash: string | null;
+  }) => {
     if (link.hash) {
       e.preventDefault();
       if (location.pathname !== "/") {
         navigate("/");
         setTimeout(() => {
           const element = document.getElementById(link.hash!);
-          if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (element) element.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
         }, 100);
       } else {
         const element = document.getElementById(link.hash);
-        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (element) element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       }
     }
     setIsOpen(false);
   };
-
   const handleServiceClick = (href: string) => {
     if (href.startsWith("/#")) {
       const hash = href.slice(2);
@@ -56,112 +62,81 @@ const Navigation = () => {
         navigate("/");
         setTimeout(() => {
           const element = document.getElementById(hash);
-          if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (element) element.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
         }, 100);
       } else {
         const element = document.getElementById(hash);
-        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (element) element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       }
     } else {
       navigate(href);
     }
     setIsOpen(false);
   };
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm shadow-sm" style={{ backgroundColor: "rgba(59,59,57,0.95)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+  return <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm shadow-sm" style={{
+    backgroundColor: "rgba(59,59,57,0.95)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)"
+  }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center">
             <img src={Logo} alt="3FACTOR" className="h-8 md:h-10 w-auto" />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-secondary">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white text-white/60 outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="z-50 shadow-lg" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.1)" }}>
-                {serviceItems.map((item) => (
-                  <DropdownMenuItem
-                    key={item.name}
-                    onClick={() => handleServiceClick(item.href)}
-                    className="cursor-pointer text-white/80 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white"
-                  >
+              <DropdownMenuContent align="start" className="z-50 shadow-lg" style={{
+              backgroundColor: "#646464",
+              border: "1px solid rgba(255,255,255,0.1)"
+            }}>
+                {serviceItems.map(item => <DropdownMenuItem key={item.name} onClick={() => handleServiceClick(item.href)} className="cursor-pointer text-white/80 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white">
                     {item.name}
-                  </DropdownMenuItem>
-                ))}
+                  </DropdownMenuItem>)}
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={(e) => handleNavClick(e, link)}
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  isActive(link.href) ? "text-white" : "text-white/60"
-                }`}
-              >
+            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white ${isActive(link.href) ? "text-white" : "text-white/60"}`}>
                 {link.name}
-              </Link>
-            ))}
+              </Link>)}
           </div>
 
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        {isOpen && <div className="md:hidden py-4" style={{
+        borderTop: "1px solid rgba(255,255,255,0.08)"
+      }}>
             <div className="flex flex-col space-y-4">
               <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-sm font-medium text-white/60 hover:text-white transition-colors"
-                >
+                <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full text-sm font-medium text-white/60 hover:text-white transition-colors">
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceItems.map((item) => (
-                      <button
-                        key={item.name}
-                        onClick={() => handleServiceClick(item.href)}
-                        className="block text-sm text-white/50 hover:text-white transition-colors"
-                      >
+                {servicesOpen && <div className="mt-2 ml-4 space-y-2">
+                    {serviceItems.map(item => <button key={item.name} onClick={() => handleServiceClick(item.href)} className="block text-sm text-white/50 hover:text-white transition-colors">
                         {item.name}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                      </button>)}
+                  </div>}
               </div>
 
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={(e) => handleNavClick(e, link)}
-                  className={`text-sm font-medium transition-colors hover:text-white ${
-                    isActive(link.href) ? "text-white" : "text-white/60"
-                  }`}
-                >
+              {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white ${isActive(link.href) ? "text-white" : "text-white/60"}`}>
                   {link.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
-          </div>
-        )}
+          </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;
