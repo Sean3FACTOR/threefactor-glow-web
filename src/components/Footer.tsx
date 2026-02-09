@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center">
               <img src={Logo} alt="3FACTOR" className="h-10 w-auto" />
             </div>
-            <p className="text-sm text-white/40">
+            <p className="text-sm text-white">
               © 2026 Three Factor, LLC. All Rights Reserved.
             </p>
           </div>
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex items-center gap-8">
             <Link
               to="/privacy"
-              className="text-sm text-white/40 hover:text-white transition-colors"
+              className="text-sm text-white hover:text-white/80 transition-colors"
             >
               Privacy Policy
             </Link>
@@ -37,8 +37,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-          <div className="inline-flex items-center gap-2 text-sm text-white/40">
-            <Shield className="w-4 h-4 text-white/60" />
+          <div className="inline-flex items-center gap-2 text-sm text-white">
+            <Shield className="w-4 h-4 text-white" />
             <span>Download Our 3FACTOR Whitepaper: Learn how to frame security as a growth engine.</span>
           </div>
         </div>

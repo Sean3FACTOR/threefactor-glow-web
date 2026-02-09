@@ -36,7 +36,7 @@ const DealBlockers = () => {
               <h4 className="text-xl font-bold text-white mb-3 uppercase tracking-tight">
                 {blocker.title}
               </h4>
-              <p className="text-white/60 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 {blocker.description}
               </p>
             </div>)}

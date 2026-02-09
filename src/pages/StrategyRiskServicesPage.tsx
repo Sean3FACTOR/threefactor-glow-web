@@ -28,17 +28,17 @@ const StrategyRiskServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white">Proven Cloud Security.</h2>
-            <p className="text-xl text-white/60 mt-6 max-w-3xl mx-auto">We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need.</p>
+            <p className="text-xl text-white mt-6 max-w-3xl mx-auto">We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {authorityStats.map((item) => (
               <div key={item.label} className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 mb-8" style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <item.icon className="w-10 h-10 text-white/60" strokeWidth={1} />
+                  <item.icon className="w-10 h-10 text-white" strokeWidth={1} />
                 </div>
                 <div className="mb-2"><span className="text-5xl md:text-6xl font-bold text-white tracking-tight">{item.stat}</span></div>
                 <span className="text-lg font-semibold text-white">{item.label}</span>
-                <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-xs mx-auto">{item.context}</p>
+                <p className="text-sm text-white mt-4 leading-relaxed max-w-xs mx-auto">{item.context}</p>
               </div>
             ))}
           </div>
@@ -50,7 +50,7 @@ const StrategyRiskServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Cloud Security Services</h2>
-            <p className="text-white/50 max-w-2xl mx-auto">Three ways we help you secure your cloud transformation.</p>
+            <p className="text-white max-w-2xl mx-auto">Three ways we help you secure your cloud transformation.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {pillars.map((p) => (
@@ -59,7 +59,7 @@ const StrategyRiskServicesPage = () => {
                   <p.icon className="w-7 h-7" style={{ color: "#F36F21" }} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
-                <p className="text-white/60 leading-relaxed">{p.description}</p>
+                <p className="text-white leading-relaxed">{p.description}</p>
               </div>
             ))}
           </div>
@@ -71,7 +71,7 @@ const StrategyRiskServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Secure Your Cloud?</h3>
-            <p className="text-white/50 mb-8">Start with a free discovery call to discuss your cloud security needs.</p>
+            <p className="text-white mb-8">Start with a free discovery call to discuss your cloud security needs.</p>
             <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
               <Link to="/contact">Schedule a Discovery Call <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>

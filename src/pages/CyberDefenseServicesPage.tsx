@@ -29,7 +29,7 @@ const CyberDefenseServicesPage = () => {
           <div className="text-center mb-16">
             <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: "#F36F21" }}>The 3 A's</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-4">How We Work.</h2>
-            <p className="text-white/50 max-w-2xl mx-auto">A proven methodology that transforms security from a problem into a strategic advantage.</p>
+            <p className="text-white max-w-2xl mx-auto">A proven methodology that transforms security from a problem into a strategic advantage.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
             <div className="hidden md:block absolute top-[72px] h-px bg-white/15" style={{ left: '16%', right: '16%' }} />
@@ -38,10 +38,10 @@ const CyberDefenseServicesPage = () => {
                 <div className="w-36 h-36 flex items-center justify-center mx-auto mb-6 relative z-10" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "2px solid rgba(255,255,255,0.15)" }}>
                   <item.icon className="w-12 h-12" style={{ color: "#F36F21" }} strokeWidth={1} />
                 </div>
-                <span className="text-xs uppercase tracking-[0.15em] text-white/50 font-medium">{item.step}</span>
+                <span className="text-xs uppercase tracking-[0.15em] text-white font-medium">{item.step}</span>
                 <h3 className="text-2xl font-bold text-white mt-2 mb-2">{item.title}</h3>
                 <span className="text-xs uppercase tracking-[0.15em] font-medium" style={{ color: "#F36F21" }}>{item.tagline}</span>
-                <p className="text-white/50 leading-relaxed mt-4 max-w-xs mx-auto">{item.description}</p>
+                <p className="text-white leading-relaxed mt-4 max-w-xs mx-auto">{item.description}</p>
               </div>
             ))}
           </div>
@@ -53,7 +53,7 @@ const CyberDefenseServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advisory Services</h2>
-            <p className="text-white/50 max-w-2xl mx-auto">Three ways we help you build executive-level security leadership.</p>
+            <p className="text-white max-w-2xl mx-auto">Three ways we help you build executive-level security leadership.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {pillars.map((p) => (
@@ -62,7 +62,7 @@ const CyberDefenseServicesPage = () => {
                   <p.icon className="w-7 h-7" style={{ color: "#F36F21" }} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
-                <p className="text-white/60 leading-relaxed">{p.description}</p>
+                <p className="text-white leading-relaxed">{p.description}</p>
               </div>
             ))}
           </div>
@@ -74,7 +74,7 @@ const CyberDefenseServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready for Executive-Level Security Leadership?</h3>
-            <p className="text-white/50 mb-8">Start with a free discovery call to discuss your advisory needs.</p>
+            <p className="text-white mb-8">Start with a free discovery call to discuss your advisory needs.</p>
             <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
               <Link to="/contact">Schedule a Discovery Call <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>

@@ -21,7 +21,7 @@ const BlueprintHero = ({
   return (
     <section className="pt-32 pb-20 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
-        <Link to="/" className="inline-flex items-center text-white/50 hover:text-white transition-colors mb-12">
+        <Link to="/" className="inline-flex items-center text-white hover:text-white/80 transition-colors mb-12">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Home
         </Link>
@@ -30,8 +30,8 @@ const BlueprintHero = ({
           <div className="col-span-12 lg:col-span-6">
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium" style={{ color: "#F36F21" }}>Services</span>
-              <span className="text-white/30">/</span>
-              <span className="text-sm text-white/50">{breadcrumb}</span>
+              <span className="text-white/60">/</span>
+              <span className="text-sm text-white">{breadcrumb}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-white mb-8 leading-[1.1]">

@@ -44,7 +44,7 @@ const ComplianceCrossroads = () => {
               <div className="w-10 h-10 flex items-center justify-center mb-6" style={{
             backgroundColor: "rgba(255,255,255,0.08)"
           }}>
-                <scenario.icon className="w-5 h-5 text-white/70" />
+                <scenario.icon className="w-5 h-5 text-white" />
               </div>
               <h4 className="text-sm font-bold mb-3 uppercase tracking-wider text-muted">
                 {scenario.label}

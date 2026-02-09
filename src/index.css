@@ -25,7 +25,7 @@
 
     /* Muted: Updated for blueprint aesthetic */
     --muted: 210 10% 90%;
-    --muted-foreground: 0 0% 39%;
+    --muted-foreground: 0 0% 100%;
 
     /* Accent matches primary orange */
     --accent: 22 89% 54%;
