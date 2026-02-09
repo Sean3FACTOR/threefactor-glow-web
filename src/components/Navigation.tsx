@@ -91,7 +91,7 @@ const Navigation = () => {
 
           <div className="hidden sm:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39] outline-none">
+              <DropdownMenuTrigger className="flex items-center text-base font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39] outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
@@ -105,7 +105,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
+            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-base font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
                 {link.name}
               </Link>)}
           </div>
