@@ -3,6 +3,7 @@ import HomepageHero from "@/components/HomepageHero";
 import ComplianceCrossroads from "@/components/ComplianceCrossroads";
 import TriplePenalty from "@/components/TriplePenalty";
 import EliteAuthority from "@/components/EliteAuthority";
+import Certifications from "@/components/Certifications";
 import CompliancePlan from "@/components/CompliancePlan";
 import DealBlockers from "@/components/DealBlockers";
 import SuccessOutcomes from "@/components/SuccessOutcomes";
@@ -18,6 +19,7 @@ const Index = () => {
         <ComplianceCrossroads />
         <TriplePenalty />
         <EliteAuthority />
+        <Certifications />
         <CompliancePlan />
         <DealBlockers />
         <SuccessOutcomes />
