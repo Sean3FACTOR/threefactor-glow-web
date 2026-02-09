@@ -86,7 +86,7 @@ const Navigation = () => {
       <div className="container mx-auto py-0 px-[12px]">
         <div className="flex items-center justify-between h-[5.625rem] md:h-[6.875rem]">
           <Link to="/" className="flex items-center h-full py-2">
-            <img alt="3FACTOR" className="h-[75%] w-auto object-contain" src="/lovable-uploads/f70ba1e2-c747-4dba-859e-6edb742a0ae7.png" />
+            <img alt="3FACTOR" className="h-full w-auto object-contain" src="/lovable-uploads/b9dae896-d800-446d-8f26-98d2f7dbb6c3.png" />
           </Link>
 
           <div className="hidden sm:flex items-center space-x-8">
