@@ -8,14 +8,14 @@ import cmmcLogo from "@/assets/frameworks/cmmc-blk.png";
 import nistLogo from "@/assets/frameworks/nist.png";
 
 const frameworks = [
-  { name: "ISO 27001", logo: isoLogo },
-  { name: "SOC 2", logo: soc2Logo },
-  { name: "PCI DSS", logo: pciLogo },
-  { name: "FedRAMP", logo: fedrampLogo },
-  { name: "NIS2", logo: nis2Logo },
-  { name: "DORA", logo: doraLogo },
-  { name: "CMMC", logo: cmmcLogo },
-  { name: "NIST", logo: nistLogo },
+  { name: "ISO 27001", logo: isoLogo, scale: 1 },
+  { name: "SOC 2", logo: soc2Logo, scale: 1 },
+  { name: "PCI DSS", logo: pciLogo, scale: 2 },
+  { name: "FedRAMP", logo: fedrampLogo, scale: 1 },
+  { name: "NIS2", logo: nis2Logo, scale: 1 },
+  { name: "DORA", logo: doraLogo, scale: 1 },
+  { name: "CMMC", logo: cmmcLogo, scale: 1 },
+  { name: "NIST", logo: nistLogo, scale: 1 },
 ];
 
 const HeroHubSpoke = () => {
@@ -62,8 +62,8 @@ const HeroHubSpoke = () => {
         return (
           <div
             key={fw.name}
-            className="absolute w-[60px] h-[60px] sm:w-[82px] sm:h-[82px] md:w-[105px] md:h-[105px] lg:w-[120px] lg:h-[120px] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
-            style={{ left: `${left}%`, top: `${top}%` }}
+            className="absolute w-[60px] h-[60px] sm:w-[82px] sm:h-[82px] md:w-[105px] md:h-[105px] lg:w-[120px] lg:h-[120px] flex items-center justify-center"
+            style={{ left: `${left}%`, top: `${top}%`, transform: `translate(-50%, -50%) scale(${fw.scale})` }}
           >
             <img
               src={fw.logo}
