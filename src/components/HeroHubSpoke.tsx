@@ -62,13 +62,13 @@ const HeroHubSpoke = () => {
         return (
           <div
             key={fw.name}
-            className="absolute w-[108px] h-[108px] sm:w-[135px] sm:h-[135px] md:w-[165px] md:h-[165px] lg:w-[180px] lg:h-[180px] -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-[108px] h-[108px] sm:w-[135px] sm:h-[135px] md:w-[165px] md:h-[165px] lg:w-[180px] lg:h-[180px] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
             style={{ left: `${left}%`, top: `${top}%` }}
           >
             <img
               src={fw.logo}
               alt={fw.name}
-              className="w-full h-full object-contain p-2 md:p-3"
+              className="max-w-[70%] max-h-[70%] object-contain"
             />
           </div>
         );
