@@ -11,7 +11,7 @@ const frameworks = [
   { name: "ISO 27001", logo: isoLogo, scale: 1 },
   { name: "SOC 2", logo: soc2Logo, scale: 1 },
   { name: "PCI DSS", logo: pciLogo, scale: 2 },
-  { name: "FedRAMP", logo: fedrampLogo, scale: 3 },
+  { name: "FedRAMP", logo: fedrampLogo, scale: 2.7 },
   { name: "NIS2", logo: nis2Logo, scale: 1 },
   { name: "DORA", logo: doraLogo, scale: 1 },
   { name: "CMMC", logo: cmmcLogo, scale: 1.15 },
