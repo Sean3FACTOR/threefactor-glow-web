@@ -38,7 +38,7 @@ const VCISOPage = () => {
           <div className="text-left space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">Stop Carrying the Weight of the Pen Alone.</p>
             <p className="text-lg md:text-xl text-white leading-relaxed">Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.</p>
-            <p className="text-base text-white/60 leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
+            <p className="text-base text-white leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
             <p className="text-xl md:text-2xl font-semibold text-white pl-6" style={{ borderLeft: "2px solid #F36F21" }}>Instead of guessing, you lead. Instead of reacting, you&apos;re prepared.</p>
           </div>
         </div>
@@ -49,13 +49,13 @@ const VCISOPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Real Risk: Leadership Without a Shield</h2>
-            <p className="text-lg text-white/60 mb-8">The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.</p>
+            <p className="text-lg text-white mb-8">The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.</p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="text-lg font-bold text-white mb-6">As your company grows, you&apos;re expected to:</h3>
                 <div className="space-y-4">
                   {leadershipPressures.map((item, i) => (
-                    <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white/70">{item}</p></div>
+                    <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" /><p className="text-white">{item}</p></div>
                   ))}
                 </div>
                 <p className="text-white font-medium mt-6 pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>That pressure shouldn&apos;t sit on your shoulders alone.</p>
@@ -64,7 +64,7 @@ const VCISOPage = () => {
                 <h3 className="text-lg font-bold text-white mb-6">Without executive-level security leadership, founders and executives become:</h3>
                 <div className="space-y-4">
                   {leadershipRisks.map((item, i) => (
-                    <div key={i} className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/50 flex-shrink-0 mt-1" /><p className="text-white/70">{item}</p></div>
+                    <div key={i} className="flex items-start gap-3"><AlertTriangle className="w-4 h-4 text-white/50 flex-shrink-0 mt-1" /><p className="text-white">{item}</p></div>
                   ))}
                 </div>
               </div>
@@ -78,7 +78,7 @@ const VCISOPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">vCISO TIERS: SECURITY THAT SCALES WITH YOU</h2>
-            <p className="text-lg text-white/60">You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.</p>
+            <p className="text-lg text-white">You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.</p>
           </div>
           <div className="space-y-8">
             {pricingTiers.map((tier) => (
@@ -87,24 +87,24 @@ const VCISOPage = () => {
                   <div className="lg:w-64 flex-shrink-0">
                     <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{tier.name}</h3>
                     <p className="font-semibold" style={{ color: "#F36F21" }}>{tier.subtitle}</p>
-                    <p className="text-sm text-white/50 mt-2">{tier.employees}</p>
+                    <p className="text-sm text-white mt-2">{tier.employees}</p>
                   </div>
                   <div className="flex-1 space-y-6">
-                    <p className="text-white/50 italic">{tier.ideal}</p>
+                    <p className="text-white italic">{tier.ideal}</p>
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Business Value</h4>
-                      <p className="text-white/60">{tier.businessValue}</p>
+                      <p className="text-white">{tier.businessValue}</p>
                       {tier.businessValueExtra && <p className="text-white font-medium mt-2">{tier.businessValueExtra}</p>}
                     </div>
                     <div className="pl-4" style={{ borderLeft: "2px solid rgba(255,255,255,0.2)" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Risk of Doing Nothing</h4>
-                      <p className="text-white/60">{tier.riskOfNothing}</p>
+                      <p className="text-white">{tier.riskOfNothing}</p>
                     </div>
                     {tier.keyAsset && (
                       <div className="p-4" style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
                         <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-1">Key Asset</h4>
                         <p className="text-white font-semibold">{tier.keyAsset}</p>
-                        <p className="text-sm text-white/50">{tier.keyAssetDesc}</p>
+                        <p className="text-sm text-white">{tier.keyAssetDesc}</p>
                       </div>
                     )}
                   </div>
@@ -120,7 +120,7 @@ const VCISOPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Secret Weapon: On-Demand SME Advisory</h2>
-            <p className="text-lg text-white/60 mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
+            <p className="text-lg text-white mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
             <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
@@ -131,11 +131,11 @@ const VCISOPage = () => {
                   <div className="grid md:grid-cols-2 gap-6 mt-6">
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
-                      <p className="text-white/60">Specialized answers in minutes, not weeks.</p>
+                      <p className="text-white">Specialized answers in minutes, not weeks.</p>
                     </div>
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Strategic Advantage</h4>
-                      <p className="text-white/60">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
+                      <p className="text-white">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
                     </div>
                   </div>
                 </div>
