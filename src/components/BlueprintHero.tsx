@@ -51,7 +51,7 @@ const BlueprintHero = ({
           </div>
 
           <div className="col-span-12 lg:col-span-6 hidden lg:flex items-center justify-center">
-            <img src={hexagonGraphic} alt="" className="w-full max-w-lg opacity-60" />
+            <img src={hexagonGraphic} alt="" className="w-full max-w-[64rem] opacity-60 scale-[2.5]" />
           </div>
         </div>
       </div>
