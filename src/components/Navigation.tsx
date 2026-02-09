@@ -84,7 +84,7 @@ const Navigation = () => {
     borderBottom: "1px solid rgba(59,59,57,0.08)"
   }}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-[4.5rem] md:h-[5.5rem]">
+        <div className="flex items-center justify-between h-[5.625rem] md:h-[6.875rem]">
           <Link to="/" className="flex items-center h-full py-2">
             <img alt="3FACTOR" className="h-full w-auto object-contain" src="/lovable-uploads/80e27f80-adc3-4ce1-bb89-2175eb8b20c7.png" />
           </Link>
