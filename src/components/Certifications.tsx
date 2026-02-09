@@ -65,8 +65,8 @@ const Certifications = () => {
                   </div>
                 </CarouselItem>)}
             </CarouselContent>
-            <CarouselPrevious className="-left-6 md:-left-10 border-white/20 text-white hover:bg-white/10 hover:text-white" />
-            <CarouselNext className="-right-6 md:-right-10 border-white/20 text-white hover:bg-white/10 hover:text-white" />
+            <CarouselPrevious className="-left-6 md:-left-10 border-white bg-white/20 text-white opacity-100" />
+            <CarouselNext className="-right-6 md:-right-10 border-white bg-white/20 text-white opacity-100" />
           </Carousel>
         </div>
 
