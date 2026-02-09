@@ -85,8 +85,8 @@ const ComplianceServicesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
               <div className="space-y-4">
-                <p className="text-2xl md:text-3xl font-bold text-white leading-snug whitespace-nowrap">
-                  Stop treating compliance like a chore. Start treating it like a competitive advantage.
+                <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
+                  Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
                 </p>
                 <p className="text-base md:text-lg text-white/80 leading-relaxed">
                   Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
