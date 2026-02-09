@@ -24,12 +24,12 @@ const HeroFrameworkMarquee = () => {
       {frameworks.map((fw) => (
         <div
           key={fw.name}
-          className="h-[100px] md:h-[125px] flex items-center justify-center p-3 md:p-4"
+          className="h-[125px] md:h-[155px] flex items-center justify-center p-3 md:p-4"
         >
           <img
             src={fw.logo}
             alt={fw.name}
-            className="max-h-full max-w-full object-contain"
+            className="max-h-full max-w-full object-contain grayscale brightness-200"
           />
         </div>
       ))}
