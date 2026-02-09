@@ -77,7 +77,7 @@ const ComplianceServicesPage = () => {
       {/* Value Prop */}
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl text-left">
             <div className="space-y-8">
               <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
                 Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
