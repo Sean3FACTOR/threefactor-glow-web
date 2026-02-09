@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import HeroFrameworkMarquee from "@/components/HeroFrameworkMarquee";
+import HeroHubSpoke from "@/components/HeroHubSpoke";
 const HomepageHero = () => {
   return <section className="pt-14 pb-16" style={{
     backgroundColor: "#3B3B39"
@@ -41,7 +41,7 @@ GET CERTIFIED.</span>
             </Link>
           </div>
           <div className="lg:col-span-5 flex items-center justify-center">
-            <HeroFrameworkMarquee />
+            <HeroHubSpoke />
           </div>
         </div>
       </div>
