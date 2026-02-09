@@ -79,9 +79,9 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
-  return <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm shadow-sm" style={{
-    backgroundColor: "rgba(59,59,57,0.95)",
-    borderBottom: "1px solid rgba(255,255,255,0.08)"
+  return <nav className="fixed top-0 left-0 right-0 z-50 shadow-sm" style={{
+    backgroundColor: "#F8F9FA",
+    borderBottom: "1px solid rgba(59,59,57,0.08)"
   }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-[4.5rem] md:h-[5.5rem]">
@@ -89,9 +89,9 @@ const Navigation = () => {
             <img alt="3FACTOR" className="h-full w-auto object-contain" src="/lovable-uploads/80e27f80-adc3-4ce1-bb89-2175eb8b20c7.png" />
           </Link>
 
-          <div className="hidden sm:flex items-center space-x-8 text-secondary-foreground">
+          <div className="hidden sm:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white/80 text-white outline-none">
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39] outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
@@ -105,33 +105,33 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white/80 text-white`}>
+            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
                 {link.name}
               </Link>)}
           </div>
 
-          <button className="sm:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button className="sm:hidden text-[#3B3B39]" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {isOpen && <div className="sm:hidden py-4" style={{
-        borderTop: "1px solid rgba(255,255,255,0.08)"
+        borderTop: "1px solid rgba(59,59,57,0.08)"
       }}>
             <div className="flex flex-col space-y-4">
               <div>
-                <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full text-sm font-medium text-white hover:text-white/80 transition-colors">
+                <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full text-sm font-medium text-[#3B3B39] hover:text-[#3B3B39]/70 transition-colors">
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {servicesOpen && <div className="mt-2 ml-4 space-y-2">
-                    {serviceItems.map(item => <button key={item.name} onClick={() => handleServiceClick(item.href)} className="block text-sm text-white hover:text-white/80 transition-colors">
+                    {serviceItems.map(item => <button key={item.name} onClick={() => handleServiceClick(item.href)} className="block text-sm text-[#3B3B39] hover:text-[#3B3B39]/70 transition-colors">
                         {item.name}
                       </button>)}
                   </div>}
               </div>
 
-              {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white/80 text-white`}>
+              {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
                   {link.name}
                 </Link>)}
             </div>
