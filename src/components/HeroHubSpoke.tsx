@@ -14,7 +14,7 @@ const frameworks = [
   { name: "FedRAMP", logo: fedrampLogo, scale: 3 },
   { name: "NIS2", logo: nis2Logo, scale: 1 },
   { name: "DORA", logo: doraLogo, scale: 1 },
-  { name: "CMMC", logo: cmmcLogo, scale: 1 },
+  { name: "CMMC", logo: cmmcLogo, scale: 1.15 },
   { name: "NIST", logo: nistLogo, scale: 1 },
 ];
 
