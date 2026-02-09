@@ -42,7 +42,7 @@ const CompliancePlan = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             Your Blueprint for Audit-Proof Growth
           </h2>
-          <p className="text-lg text-white/70 mb-8 leading-relaxed">
+          <p className="text-lg text-white mb-8 leading-relaxed">
             Navigating global mandates shouldn't be your second job. We simplify compliance into a clear, defensible path to revenue.
           </p>
         </div>
@@ -50,7 +50,7 @@ const CompliancePlan = () => {
         <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
           4 Steps to Audit Dominance
         </h3>
-        <p className="text-lg text-white/70 mb-10 max-w-2xl leading-relaxed">
+        <p className="text-lg text-white mb-10 max-w-2xl leading-relaxed">
           Working with a certification firm shouldn't be a second job. We've simplified the path to turning your RFI into a revenue engine:
         </p>
 
