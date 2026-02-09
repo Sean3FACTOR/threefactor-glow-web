@@ -19,11 +19,11 @@ const BlueprintHero = ({
   ctaLink
 }: BlueprintHeroProps) => {
   return (
-    <section className="pt-20 pb-16 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
+    <section className="pt-4 pb-16 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
 
-        <div className="grid grid-cols-12 gap-8 items-center">
-          <div className="col-span-12 lg:col-span-6">
+        <div className="grid grid-cols-12 gap-x-4 items-center">
+          <div className="col-span-12 lg:col-span-7">
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium" style={{ color: "#F36F21" }}>Services</span>
               <span className="text-white/60">/</span>
@@ -34,7 +34,7 @@ const BlueprintHero = ({
               {headline}
             </h1>
 
-            <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed max-w-[50ch]">
+            <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed">
               {subhead}
             </p>
 
@@ -46,8 +46,10 @@ const BlueprintHero = ({
             </Button>
           </div>
 
-          <div className="col-span-12 lg:col-span-6 hidden lg:flex items-center justify-center">
-            <img src={hexagonGraphic} alt="" className="w-full max-w-[64rem] opacity-60 scale-[2.5]" />
+          <div className="col-span-12 lg:col-span-5 hidden lg:flex items-center justify-start">
+            <div className="w-full">
+              <img src={hexagonGraphic} alt="" className="w-full h-auto" />
+            </div>
           </div>
         </div>
       </div>
