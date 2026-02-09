@@ -140,16 +140,16 @@ const VCISOPage = () => {
 
       {/* Success */}
       <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
+      <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Feels Like</h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 inline-block text-left">
               {successOutcomes.map((o, i) => (
                 <div key={i} className="flex items-start gap-4"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-lg text-white">{o}</p></div>
               ))}
             </div>
-            <div className="mt-8 pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
-              <p className="text-xl font-semibold text-white">You stop reacting.<br />You lead with certainty.</p>
+            <div className="mt-8 mx-auto max-w-md pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
+              <p className="text-xl font-semibold text-white text-left">You stop reacting.<br />You lead with certainty.</p>
             </div>
           </div>
         </div>
