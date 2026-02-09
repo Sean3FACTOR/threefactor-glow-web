@@ -1,9 +1,3 @@
-const LiveBadge = () => <span className="inline-flex items-center ml-2 px-2 py-0.5 text-xs font-medium" style={{
-  backgroundColor: "rgba(243,111,33,0.15)",
-  color: "#F36F21"
-}}>
-    LIVE
-  </span>;
 const steps = [{
   number: "01",
   title: "GAP DISCOVERY",
@@ -61,9 +55,8 @@ const CompliancePlan = () => {
                 <span className="text-sm font-semibold text-white">{step.number}</span>
               </div>
 
-              <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight flex items-center">
+              <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">
                 {step.title}
-                {step.showLiveBadge && <LiveBadge />}
               </h4>
               <p className="text-white leading-relaxed text-sm">
                 {step.description}
