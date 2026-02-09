@@ -81,7 +81,7 @@ const ComplianceServicesPage = () => {
       backgroundColor: "#3B3B39",
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
-        <div className="container mx-auto px-4">
+        <div className="max-w-6xl px-4">
           <div className="text-left space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Stop treating compliance like a chore.
@@ -93,14 +93,14 @@ const ComplianceServicesPage = () => {
               Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
             </p>
             <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{
-              borderLeft: "2px solid #F36F21"
-            }}>
+            borderLeft: "2px solid #F36F21"
+          }}>
               Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
             </p>
             <div className="mt-10">
               <Button asChild size="lg" className="text-white font-semibold" style={{
-                backgroundColor: "#F36F21"
-              }}>
+              backgroundColor: "#F36F21"
+            }}>
                 <Link to="/contact">Get Your Framework Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
             </div>
@@ -118,7 +118,9 @@ const ComplianceServicesPage = () => {
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               The real enemy isn't regulation, it's confusion.
             </p>
-            <div className="pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
+            <div className="pl-6" style={{
+            borderLeft: "2px solid #F36F21"
+          }}>
               <p className="text-lg text-white leading-relaxed">
                 We call it <span className="font-semibold">Framework Fog:</span><br />
                 The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.
@@ -184,9 +186,9 @@ const ComplianceServicesPage = () => {
             <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-white/20" />
             {planSteps.map((step, index) => <div key={step.number} className="relative px-4 pb-8 md:pb-0">
                 <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
-              backgroundColor: "#FFFFFF"
+              backgroundColor: "#646464"
             }}>
-                  <span className="text-sm font-semibold" style={{ color: "#3B3B39" }}>{step.number}</span>
+                  <span className="text-sm font-semibold text-white">{step.number}</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">{step.title}</h4>
                 <p className="text-white leading-relaxed text-sm mb-2">{step.description}</p>
@@ -203,7 +205,7 @@ const ComplianceServicesPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Looks Like</h2>
             <div className="space-y-4 mb-8">
               {successOutcomes.map((o, i) => <div key={i} className="flex items-start gap-4">
@@ -216,7 +218,7 @@ const ComplianceServicesPage = () => {
             <div className="mt-8 pl-6" style={{
             borderLeft: "2px solid #F36F21"
           }}>
-              <p className="text-xl font-semibold text-white">Compliance stops being a risk.<br />It becomes leverage.</p>
+              <p className="text-xl font-semibold text-white">Stop Managing Risk.  <br />Start Exerting Leverage. </p>
             </div>
           </div>
         </div>
