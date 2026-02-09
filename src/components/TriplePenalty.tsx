@@ -24,7 +24,7 @@ const TriplePenalty = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             The High Cost of "Paper-Thin" Compliance
           </h2>
-          <p className="text-lg text-white/70 mb-4 leading-relaxed">
+          <p className="text-lg text-white mb-4 leading-relaxed">
             A checklist won't stop a breach and it certainly won't satisfy a sophisticated enterprise auditor. Generic box-ticking creates an illusion of safety: compliance that looks fine on paper but collapses under scrutiny.
           </p>
           <p className="text-lg font-medium text-white">
