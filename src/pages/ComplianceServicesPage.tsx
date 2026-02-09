@@ -88,7 +88,7 @@ const ComplianceServicesPage = () => {
                 <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
                   Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
                 </p>
-                <p className="text-lg md:text-xl text-white leading-relaxed">
+                <p className="text-lg md:text-xl text-white leading-relaxed mx-0">
                   Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
                 </p>
                 <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{
@@ -104,6 +104,9 @@ const ComplianceServicesPage = () => {
                   <Link to="/contact">Get Your Framework Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link>
                 </Button>
               </div>
+            </div>
+            <div className="hidden lg:flex items-center justify-center">
+              <img alt="Abstract wave graphic" className="w-full max-w-4xl opacity-60 invert scale-150" src="/lovable-uploads/55f567d0-00d6-46cf-8b10-bc8c52ff865e.png" />
             </div>
           </div>
         </div>
