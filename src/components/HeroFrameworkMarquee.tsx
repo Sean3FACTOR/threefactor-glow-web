@@ -5,6 +5,7 @@ import soc2Logo from "@/assets/frameworks/soc2-2.webp";
 import pciLogo from "@/assets/frameworks/pci2.png";
 import isoLogo from "@/assets/frameworks/iso27001-2.png";
 import nis2Logo from "@/assets/frameworks/nis2.png";
+import nistLogo from "@/assets/frameworks/nist.png";
 
 const frameworks = [
   { name: "ISO 27001", logo: isoLogo },
@@ -14,6 +15,7 @@ const frameworks = [
   { name: "NIS2", logo: nis2Logo },
   { name: "DORA", logo: doraLogo },
   { name: "CMMC", logo: cmmcLogo },
+  { name: "NIST", logo: nistLogo },
 ];
 
 const HeroFrameworkMarquee = () => {
@@ -22,7 +24,7 @@ const HeroFrameworkMarquee = () => {
       {frameworks.map((fw) => (
         <div
           key={fw.name}
-          className="h-[80px] md:h-[100px] flex items-center justify-center p-3 md:p-4"
+          className="h-[100px] md:h-[125px] flex items-center justify-center p-3 md:p-4"
         >
           <img
             src={fw.logo}
