@@ -86,12 +86,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-[5.625rem] md:h-[6.875rem]">
           <Link to="/" className="flex items-center h-full py-2">
-            <img alt="3FACTOR" className="h-[75%] w-auto object-contain" src="/lovable-uploads/3f2d2bf8-a5a0-49ce-b96b-f1a2b91f73ba.png" />
+            <img alt="3FACTOR" className="h-full w-auto object-contain" src="/lovable-uploads/f70ba1e2-c747-4dba-859e-6edb742a0ae7.png" />
           </Link>
 
           <div className="hidden sm:flex items-center space-x-8">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-base font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39] outline-none">
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39] outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
@@ -105,7 +105,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-base font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
+            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-[#3B3B39]/70 text-[#3B3B39]`}>
                 {link.name}
               </Link>)}
           </div>
