@@ -19,25 +19,26 @@ const authorityPoints = [{
 const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
     <rect x="60" y="60" width="1080" height="960" stroke="#F36F21" strokeWidth="2" opacity="1" fill="none" />
     <rect x="90" y="90" width="1020" height="900" stroke="#F36F21" strokeWidth="1" opacity="0.6" fill="none" strokeDasharray="12 6" />
-    <rect x="390" y="30" width="420" height="72" fill="#3B3B39" />
-    <text x="600" y="78" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
+    <rect x="330" y="30" width="540" height="72" fill="#3B3B39" />
+    <text x="600" y="78" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
     <rect x="150" y="180" width="420" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="white" fillOpacity="0.05" />
-    <text x="360" y="264" textAnchor="middle" fill="white" opacity="1" fontSize="30" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
+    <text x="360" y="268" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
     <rect x="630" y="180" width="450" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="white" fillOpacity="0.05" />
-    <text x="855" y="264" textAnchor="middle" fill="white" opacity="1" fontSize="30" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
+    <text x="855" y="268" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
     <rect x="150" y="420" width="930" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="white" fillOpacity="0.03" />
-    <text x="615" y="504" textAnchor="middle" fill="white" opacity="1" fontSize="30" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT</text>
+    <text x="615" y="508" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT</text>
     <rect x="150" y="660" width="435" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="white" fillOpacity="0.03" />
-    <text x="366" y="744" textAnchor="middle" fill="white" opacity="1" fontSize="30" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
+    <text x="366" y="748" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
     <rect x="645" y="660" width="435" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="white" fillOpacity="0.03" />
-    <text x="861" y="744" textAnchor="middle" fill="white" opacity="1" fontSize="30" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
+    <text x="861" y="748" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
     <line x1="360" y1="330" x2="360" y2="420" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="855" y1="330" x2="855" y2="420" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="366" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="861" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="870" x2="615" y2="960" stroke="white" strokeWidth="2" opacity="1" />
     <polygon points="600,960 630,960 615,990" fill="white" opacity="1" />
-    <text x="615" y="1050" textAnchor="middle" fill="white" opacity="1" fontSize="32" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
+    <rect x="300" y="988" width="600" height="72" fill="#3B3B39" stroke="#F36F21" strokeWidth="2" />
+    <text x="600" y="1036" textAnchor="middle" fill="white" opacity="1" fontSize="36" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
   </svg>;
 const EliteAuthority = () => {
   return <section className="py-20" style={{
