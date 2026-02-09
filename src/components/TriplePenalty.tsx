@@ -49,7 +49,7 @@ const TriplePenalty = () => {
               onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)")}
             >
               <h4 className="text-lg font-bold text-white uppercase tracking-tight mb-4">{penalty.title}</h4>
-              <p className="text-sm text-white/60 leading-relaxed">{penalty.description}</p>
+              <p className="text-base text-white leading-relaxed">{penalty.description}</p>
             </div>
           ))}
         </div>
