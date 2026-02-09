@@ -1,28 +1,25 @@
 import { Zap, Globe, Rocket } from "lucide-react";
-
-const outcomes = [
-  {
-    icon: Zap,
-    title: "CLOSE DEALS FASTER",
-    description: "Security questionnaires completed in days, not quarters. Auditors nod instead of probing.",
-  },
-  {
-    icon: Globe,
-    title: "UNRESTRICTED EXPANSION",
-    description: "No geography, tender, or enterprise buyer is off-limits when compliance is built right.",
-  },
-  {
-    icon: Rocket,
-    title: "TOTAL OPERATIONAL VELOCITY",
-    description: "Scale confidently knowing your security posture supports growth instead of dragging it down.",
-  },
-];
-
+const outcomes = [{
+  icon: Zap,
+  title: "CLOSE DEALS FASTER",
+  description: "Security questionnaires completed in days, not quarters. Auditors nod instead of probing."
+}, {
+  icon: Globe,
+  title: "UNRESTRICTED EXPANSION",
+  description: "No geography, tender, or enterprise buyer is off-limits when compliance is built right."
+}, {
+  icon: Rocket,
+  title: "TOTAL OPERATIONAL VELOCITY",
+  description: "Scale confidently knowing your security posture supports growth instead of dragging it down."
+}];
 const SuccessOutcomes = () => {
-  return (
-    <section className="py-20" style={{ backgroundColor: "#3B3B39" }}>
+  return <section className="py-20" style={{
+    backgroundColor: "#3B3B39"
+  }}>
       <div className="container mx-auto px-4">
-        <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(255,255,255,0.12)" }} />
+        <div className="h-px w-full mb-12" style={{
+        backgroundColor: "rgba(255,255,255,0.12)"
+      }} />
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
@@ -32,7 +29,7 @@ const SuccessOutcomes = () => {
             Compliance isn't overhead, it's leverage.
           </p>
           <p className="text-lg text-white">
-            Walk into your next board meeting with proof, not promises, that risk is controlled and growth is protected.
+            Walk into your next board meeting with proof, not promises.
           </p>
         </div>
 
@@ -42,24 +39,18 @@ const SuccessOutcomes = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {outcomes.map((outcome) => (
-            <div
-              key={outcome.title}
-              className="p-8"
-              style={{ backgroundColor: "#646464" }}
-            >
+          {outcomes.map(outcome => <div key={outcome.title} className="p-8" style={{
+          backgroundColor: "#646464"
+        }}>
               <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">
                 {outcome.title}
               </h4>
               <p className="text-white leading-relaxed">
                 {outcome.description}
               </p>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SuccessOutcomes;
