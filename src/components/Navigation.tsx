@@ -91,7 +91,7 @@ const Navigation = () => {
 
           <div className="hidden md:flex items-center space-x-8 text-secondary">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white text-white/60 outline-none">
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white/80 text-white outline-none">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </DropdownMenuTrigger>
@@ -105,7 +105,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white ${isActive(link.href) ? "text-white" : "text-white/60"}`}>
+            {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white/80 text-white`}>
                 {link.name}
               </Link>)}
           </div>
@@ -120,7 +120,7 @@ const Navigation = () => {
       }}>
             <div className="flex flex-col space-y-4">
               <div>
-                <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full text-sm font-medium text-white/60 hover:text-white transition-colors">
+                <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full text-sm font-medium text-white hover:text-white/80 transition-colors">
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -131,7 +131,7 @@ const Navigation = () => {
                   </div>}
               </div>
 
-              {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white ${isActive(link.href) ? "text-white" : "text-white/60"}`}>
+              {navLinks.map(link => <Link key={link.name} to={link.href} onClick={e => handleNavClick(e, link)} className={`text-sm font-medium transition-colors hover:text-white/80 text-white`}>
                   {link.name}
                 </Link>)}
             </div>
