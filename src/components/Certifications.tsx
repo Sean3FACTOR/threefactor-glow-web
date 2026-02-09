@@ -41,10 +41,14 @@ const certifications = [{
   logo: AWSLogo
 }];
 const Certifications = () => {
-  return <section className="py-12" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+  return <section className="py-12" style={{
+    backgroundColor: "#3B3B39",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)"
+  }}>
       <div className="container mx-auto px-4">
         <p className="text-center text-sm mb-8 uppercase tracking-widest text-white">
-          Trusted Certifications & Standards
+          Our Teams' Certifications & Standards
         </p>
         <div className="px-12">
           <Carousel opts={{
@@ -53,7 +57,10 @@ const Certifications = () => {
         }} className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
               {certifications.map(cert => <CarouselItem key={cert.name} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                  <div className="flex items-center justify-center w-full h-32 md:h-40 p-4" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="flex items-center justify-center w-full h-32 md:h-40 p-4" style={{
+                backgroundColor: "#646464",
+                border: "1px solid rgba(255,255,255,0.08)"
+              }}>
                     <img src={cert.logo} alt={`${cert.name} certification`} className="max-w-full max-h-full object-contain" />
                   </div>
                 </CarouselItem>)}
@@ -64,7 +71,9 @@ const Certifications = () => {
         </div>
 
         {/* Trusted by section */}
-        <div className="mt-12 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        <div className="mt-12 pt-8" style={{
+        borderTop: "1px solid rgba(255,255,255,0.08)"
+      }}>
           <p className="text-center text-sm uppercase tracking-widest mb-6 text-white">
             Trusted by Fortune 500 companies
           </p>
