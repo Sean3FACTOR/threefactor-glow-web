@@ -127,7 +127,7 @@ const VCISOPage = () => {
                   <Phone className="w-6 h-6" style={{ color: "#F36F21" }} />
                 </div>
                 <div>
-                  <p className="text-lg text-white mb-4">As a vCISO client, you don&apos;t just get a consultant, you get a direct line to the architects who secured 90% of the global cloud.</p>
+                  <p className="text-lg text-white mb-4">As a vCISO client, you move beyond standard consulting. You get a dedicated strategist focused on turning your complex regulatory requirements into a massive competitive advantage.</p>
                   <div className="grid md:grid-cols-2 gap-6 mt-6">
                     <div className="pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
