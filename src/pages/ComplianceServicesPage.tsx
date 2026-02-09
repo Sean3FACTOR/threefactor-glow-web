@@ -82,7 +82,7 @@ const ComplianceServicesPage = () => {
               <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
                 Stop treating compliance like a chore.<br />Start treating it like a competitive advantage.
               </p>
-              <p className="text-lg md:text-xl text-white/60 leading-relaxed">
+              <p className="text-lg md:text-xl text-white leading-relaxed">
                 Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot; We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
               </p>
               <p className="text-xl md:text-2xl font-semibold text-white text-left inline-block pl-6" style={{ borderLeft: "2px solid #F36F21" }}>
@@ -106,17 +106,17 @@ const ComplianceServicesPage = () => {
             <div className="space-y-8">
               <div className="p-8 text-left" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="text-xl font-bold text-white mb-4">We call it Framework Fog:</h3>
-                <p className="text-lg text-white/60 leading-relaxed">The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.</p>
+                <p className="text-lg text-white leading-relaxed">The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.</p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="pl-6 text-left" style={{ borderLeft: "2px solid rgba(255,255,255,0.2)" }}>
-                  <p className="text-lg text-white/60">Most firms sell you a certificate.</p>
+                  <p className="text-lg text-white">Most firms sell you a certificate.</p>
                 </div>
                 <div className="pl-6 text-left" style={{ borderLeft: "2px solid #F36F21" }}>
                   <p className="text-lg text-white font-semibold">We sell you market access.</p>
                 </div>
               </div>
-              <p className="text-xl text-white/50">If a framework doesn't help you close deals, enter new markets, or survive regulatory scrutiny, it's noise.</p>
+              <p className="text-xl text-white">If a framework doesn't help you close deals, enter new markets, or survive regulatory scrutiny, it's noise.</p>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ const ComplianceServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">The Frameworks That Decide Your Market Access</h2>
-            <p className="text-lg text-white/60">Each framework isn't just a requirement, it's a gate. What you choose (or ignore) determines what markets you can enter and which ones close permanently.</p>
+            <p className="text-lg text-white">Each framework isn't just a requirement, it's a gate. What you choose (or ignore) determines what markets you can enter and which ones close permanently.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {frameworks.map((f) => (
@@ -140,11 +140,11 @@ const ComplianceServicesPage = () => {
                 </div>
                 <div className="mb-6 pl-4" style={{ borderLeft: "2px solid #F36F21" }}>
                   <h4 className="text-lg font-bold text-white mb-2">{f.winTitle}</h4>
-                  <p className="text-sm text-white/60 leading-relaxed">{f.winDesc}</p>
+                  <p className="text-sm text-white leading-relaxed">{f.winDesc}</p>
                 </div>
                 <div className="pl-4" style={{ borderLeft: "2px solid rgba(255,255,255,0.2)" }}>
                   <h4 className="text-lg font-bold text-white mb-2">{f.riskTitle}</h4>
-                  <p className="text-sm text-white/60 leading-relaxed">{f.riskDesc}</p>
+                  <p className="text-sm text-white leading-relaxed">{f.riskDesc}</p>
                 </div>
               </div>
             ))}
@@ -157,7 +157,7 @@ const ComplianceServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">The Plan: 3 Steps to Framework Mastery</h2>
-            <p className="text-lg text-white/60">You don't need every framework. You need the right ones, executed correctly.</p>
+            <p className="text-lg text-white">You don't need every framework. You need the right ones, executed correctly.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 relative">
             <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-white/20" />
@@ -167,7 +167,7 @@ const ComplianceServicesPage = () => {
                   <span className="text-sm font-semibold text-white/70">{step.number}</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">{step.title}</h4>
-                <p className="text-white/60 leading-relaxed text-sm mb-2">{step.description}</p>
+                <p className="text-white leading-relaxed text-sm mb-2">{step.description}</p>
                 {step.detail && <p className="text-white font-medium italic text-sm">{step.detail}</p>}
                 {index < planSteps.length - 1 && <div className="md:hidden w-px h-8 bg-white/20 ml-5 mt-4" />}
               </div>
@@ -203,12 +203,12 @@ const ComplianceServicesPage = () => {
             <Button asChild size="lg" className="text-white font-semibold mb-8" style={{ backgroundColor: "#F36F21" }}>
               <Link to="/contact">Get Your Framework Roadmap <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
-            <p className="text-lg text-white/50 mb-6">Not sure where to start? Your roadmap shows:</p>
+            <p className="text-lg text-white mb-6">Not sure where to start? Your roadmap shows:</p>
             <div className="space-y-3 text-left max-w-md mx-auto">
               {roadmapBenefits.map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
-                  <p className="text-white/70">{b}</p>
+                  <p className="text-white">{b}</p>
                 </div>
               ))}
             </div>
