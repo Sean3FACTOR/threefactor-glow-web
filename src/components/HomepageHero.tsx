@@ -20,7 +20,7 @@ const ArchitectureSVG = () => <svg viewBox="0 0 480 400" fill="none" xmlns="http
     <circle cx="200" cy="160" r="2" fill="white" opacity="0.2" />
     <circle cx="280" cy="160" r="2" fill="white" opacity="0.2" />
     <circle cx="240" cy="260" r="2.5" fill="#F36F21" opacity="0.5" />
-    
+    <path d="M50 40 L50 60 M40 50 L60 50" stroke="white" strokeWidth="1" opacity="0.2" />
     <path d="M430 40 L430 60 M420 50 L440 50" stroke="white" strokeWidth="1" opacity="0.2" />
     <path d="M50 360 L50 340 M40 350 L60 350" stroke="white" strokeWidth="1" opacity="0.2" />
     <path d="M430 360 L430 340 M420 350 L440 350" stroke="white" strokeWidth="1" opacity="0.2" />
@@ -35,20 +35,20 @@ const HomepageHero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase">
               Win the RFP. Own the Market.
             </h1>
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 max-w-xl leading-relaxed text-primary-foreground">
               You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
             <div className="space-y-4 mb-10">
               <p className="text-lg text-white/90 flex items-start gap-3">
-                <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
+                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2 bg-primary text-primary" />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
               <p className="text-lg text-white/90 flex items-start gap-3">
-                <span className="w-2 h-2 bg-white/40 rotate-45 flex-shrink-0 mt-2" />
+                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2 text-primary bg-primary" />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
-            <p className="text-lg text-white/70 mb-4 max-w-xl leading-relaxed">
+            <p className="text-lg mb-4 max-w-xl leading-relaxed text-primary-foreground">
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
             <p className="text-lg font-medium text-white mb-10">
@@ -64,7 +64,7 @@ const HomepageHero = () => {
             </Link>
           </div>
           <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
-            <div className="w-full max-w-md aspect-square">
+            <div className="w-full max-w-3xl aspect-square">
               <ArchitectureSVG />
             </div>
           </div>
