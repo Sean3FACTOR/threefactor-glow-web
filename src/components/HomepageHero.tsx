@@ -31,8 +31,8 @@ const HomepageHero = () => {
     backgroundColor: "#3B3B39"
   }}>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-12 gap-8 items-center">
-          <div className="col-span-12 lg:col-span-6">
+        <div className="grid grid-cols-12 gap-x-4 items-center">
+          <div className="col-span-12 lg:col-span-7">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase whitespace-nowrap">
               <span className="block">Win the RFP.</span>
               <span className="block">Own the Market.</span>
@@ -65,7 +65,7 @@ const HomepageHero = () => {
               </Button>
             </Link>
           </div>
-          <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
+          <div className="col-span-12 lg:col-span-5 flex items-center justify-start">
             <div className="w-full max-w-3xl">
               <img src={hexagonNetwork} alt="Hexagonal network architecture" className="w-full h-auto" />
             </div>
