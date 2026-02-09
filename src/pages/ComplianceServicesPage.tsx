@@ -110,19 +110,19 @@ const ComplianceServicesPage = () => {
       {/* Value Proposition Section */}
       <section className="py-20 border-t border-border/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="space-y-8">
+              <p className="text-2xl md:text-3xl font-medium text-foreground leading-relaxed">
                 Stop treating compliance like a chore.<br />
                 Start treating it like a competitive advantage.
               </p>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Don&apos;t let a missing certification be the quiet reason your biggest prospect says &quot;no.&quot;
                 We help leaders navigate the world&apos;s most demanding frameworks so compliance unlocks revenue instead of slowing it down.
               </p>
               
-              <p className="text-xl font-semibold text-foreground border-l-2 border-primary pl-6">
+              <p className="text-xl md:text-2xl font-semibold text-foreground border-l-2 border-primary pl-6 text-left inline-block">
                 Compliance isn&apos;t paperwork. It&apos;s permission to play in the markets that matter.
               </p>
             </div>
