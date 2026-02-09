@@ -66,7 +66,7 @@ const HomepageHero = () => {
             </Link>
           </div>
           <div className="col-span-12 lg:col-span-5 flex items-center justify-start">
-            <div className="w-full max-w-3xl scale-[2] origin-center">
+            <div className="w-full max-w-3xl scale-100 origin-center">
               <img src={hexagonNetwork} alt="Hexagonal network architecture" className="w-full h-auto" />
             </div>
           </div>
