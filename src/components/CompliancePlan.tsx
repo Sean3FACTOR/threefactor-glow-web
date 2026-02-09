@@ -70,7 +70,7 @@ const CompliancePlan = () => {
                 {step.title}
                 {step.showLiveBadge && <LiveBadge />}
               </h4>
-              <p className="text-white/60 leading-relaxed text-sm">
+              <p className="text-white leading-relaxed text-sm">
                 {step.description}
               </p>
 
