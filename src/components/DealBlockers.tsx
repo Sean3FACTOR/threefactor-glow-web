@@ -20,13 +20,13 @@ const blockers = [
 
 const DealBlockers = () => {
   return (
-    <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             Don't Let a "Checkbox" Kill Your Biggest Deal
           </h2>
-          <p className="text-lg font-medium text-white">
+          <p className="text-lg font-medium" style={{ color: "#3B3B39" }}>
             In enterprise sales, compliance isn't optional, it's the gatekeeper.
           </p>
         </div>
@@ -35,16 +35,16 @@ const DealBlockers = () => {
           {blockers.map((blocker) => (
             <div
               key={blocker.title}
-              className="p-8 transition-all hover:shadow-lg"
-              style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}
+              className="bg-white p-8 transition-all hover:shadow-lg"
+              style={{ border: "1px solid #646464" }}
             >
-              <div className="w-10 h-10 flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
-                <blocker.icon className="w-5 h-5 text-white/70" />
+              <div className="w-10 h-10 flex items-center justify-center mb-6" style={{ backgroundColor: "#F8F9FA" }}>
+                <blocker.icon className="w-5 h-5" style={{ color: "#646464" }} />
               </div>
-              <h4 className="text-xl font-bold text-white mb-3 uppercase tracking-tight">
+              <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
                 {blocker.title}
               </h4>
-              <p className="text-white/60 leading-relaxed">
+              <p className="leading-relaxed" style={{ color: "#646464" }}>
                 {blocker.description}
               </p>
             </div>

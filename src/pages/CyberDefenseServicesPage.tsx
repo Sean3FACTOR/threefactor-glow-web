@@ -49,10 +49,9 @@ const pillars = [
 
 const CyberDefenseServicesPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
       
-      {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Cyber Risk Advisory"
         headline="Translate Risk Into Strategy."
@@ -61,53 +60,39 @@ const CyberDefenseServicesPage = () => {
         ctaLink="/contact"
       />
 
-      {/* The 3 A's - How We Work */}
-      <section className="py-24 bg-muted/30">
+      {/* The 3 A's - WHITE */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
+            <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: "#F36F21" }}>
               The 3 A's
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4" style={{ color: "#3B3B39" }}>
               How We Work.
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto" style={{ color: "#646464" }}>
               A proven methodology that transforms security from a problem into a strategic advantage.
             </p>
           </div>
           
-          {/* Timeline Grid */}
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-            {/* Connecting Line - Desktop Only */}
-            <div className="hidden md:block absolute top-[72px] left-1/6 right-1/6 h-px bg-border" style={{ left: '16%', right: '16%' }} />
+            <div className="hidden md:block absolute top-[72px] h-px" style={{ left: '16%', right: '16%', backgroundColor: "#646464" }} />
             
             {threeAs.map((item) => (
               <div key={item.title} className="text-center relative">
-                {/* Icon Circle */}
-                <div className="w-36 h-36 rounded-full bg-background border-2 border-border flex items-center justify-center mx-auto mb-6 relative z-10">
-                  <item.icon 
-                    className="w-12 h-12 text-primary" 
-                    strokeWidth={1} 
-                  />
+                <div className="w-36 h-36 flex items-center justify-center mx-auto mb-6 relative z-10" style={{ backgroundColor: "#F8F9FA", border: "2px solid #646464" }}>
+                  <item.icon className="w-12 h-12" style={{ color: "#F36F21" }} strokeWidth={1} />
                 </div>
-                
-                {/* Step Label */}
-                <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
+                <span className="text-xs uppercase tracking-[0.15em] font-medium" style={{ color: "#646464" }}>
                   {item.step}
                 </span>
-                
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mt-2 mb-2">
+                <h3 className="text-2xl font-bold mt-2 mb-2" style={{ color: "#3B3B39" }}>
                   {item.title}
                 </h3>
-                
-                {/* Tagline */}
-                <span className="text-xs uppercase tracking-[0.15em] text-primary font-medium">
+                <span className="text-xs uppercase tracking-[0.15em] font-medium" style={{ color: "#F36F21" }}>
                   {item.tagline}
                 </span>
-                
-                {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mt-4 max-w-xs mx-auto">
+                <p className="leading-relaxed mt-4 max-w-xs mx-auto" style={{ color: "#646464" }}>
                   {item.description}
                 </p>
               </div>
@@ -116,14 +101,14 @@ const CyberDefenseServicesPage = () => {
         </div>
       </section>
 
-      {/* Advisory Services */}
-      <section className="py-20">
+      {/* Advisory Services - DARK */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advisory Services
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-white/50 max-w-2xl mx-auto">
               Three ways we help you build executive-level security leadership.
             </p>
           </div>
@@ -132,17 +117,16 @@ const CyberDefenseServicesPage = () => {
             {pillars.map((pillar) => (
               <div 
                 key={pillar.title}
-                className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
+                className="p-8 transition-all hover:shadow-lg"
+                style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                <div className="w-14 h-14 flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
+                  <pillar.icon className="w-7 h-7" style={{ color: "#F36F21" }} strokeWidth={1.5} />
                 </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {pillar.title}
                 </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white/60 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -151,21 +135,17 @@ const CyberDefenseServicesPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      {/* CTA - WHITE */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#3B3B39" }}>
               Ready for Executive-Level Security Leadership?
             </h3>
-            <p className="text-muted-foreground mb-8">
+            <p className="mb-8" style={{ color: "#646464" }}>
               Start with a free discovery call to discuss your advisory needs.
             </p>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
-            >
+            <Button asChild size="lg" className="text-white font-semibold transition-colors" style={{ backgroundColor: "#F36F21" }}>
               <Link to="/contact">
                 Schedule a Discovery Call
                 <ArrowRight className="w-4 h-4 ml-2" />

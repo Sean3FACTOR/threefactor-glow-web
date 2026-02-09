@@ -46,10 +46,9 @@ const pillars = [
 
 const StrategyRiskServicesPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
       
-      {/* Blueprint Hero Section */}
       <BlueprintHero
         breadcrumb="Cloud Security"
         headline="Secure Your Cloud Foundation."
@@ -58,41 +57,33 @@ const StrategyRiskServicesPage = () => {
         ctaLink="/contact"
       />
 
-      {/* Proven Cloud Security - Authority Section */}
-      <section className="py-24 bg-muted/30">
+      {/* Authority - WHITE */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: "#3B3B39" }}>
               Proven Cloud Security.
             </h2>
-            <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+            <p className="text-xl mt-6 max-w-3xl mx-auto" style={{ color: "#646464" }}>
               We don't just secure the cloud; we secure the providers who build it. From strategy to FedRAMP authorization, we provide the architecture and confidence you need. Securing the cloud requires more than just tools; it requires architectural expertise. As the largest provider of advisory and engineering services to the cloud market, we help you build security into every layer of your environment.
             </p>
           </div>
 
-          {/* Trust Grid - Three Columns */}
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {authorityStats.map((item) => (
               <div key={item.label} className="text-center">
-                {/* Icon in Light Grey Circle */}
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-background border border-border mb-8">
-                  <item.icon className="w-10 h-10 text-muted-foreground" strokeWidth={1} />
+                <div className="inline-flex items-center justify-center w-20 h-20 mb-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #646464" }}>
+                  <item.icon className="w-10 h-10" style={{ color: "#646464" }} strokeWidth={1} />
                 </div>
-                
-                {/* Massive Bold Stat */}
                 <div className="mb-2">
-                  <span className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
+                  <span className="text-5xl md:text-6xl font-bold tracking-tight" style={{ color: "#3B3B39" }}>
                     {item.stat}
                   </span>
                 </div>
-                
-                {/* Label */}
-                <span className="text-lg font-semibold text-foreground">
+                <span className="text-lg font-semibold" style={{ color: "#3B3B39" }}>
                   {item.label}
                 </span>
-                
-                {/* Context - Small and Crisp */}
-                <p className="text-sm text-muted-foreground mt-4 leading-relaxed max-w-xs mx-auto">
+                <p className="text-sm mt-4 leading-relaxed max-w-xs mx-auto" style={{ color: "#646464" }}>
                   {item.context}
                 </p>
               </div>
@@ -101,14 +92,14 @@ const StrategyRiskServicesPage = () => {
         </div>
       </section>
 
-      {/* The Pillars */}
-      <section className="py-20">
+      {/* Services - DARK */}
+      <section className="py-20" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Cloud Security Services
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-white/50 max-w-2xl mx-auto">
               Three ways we help you secure your cloud transformation.
             </p>
           </div>
@@ -117,17 +108,16 @@ const StrategyRiskServicesPage = () => {
             {pillars.map((pillar) => (
               <div 
                 key={pillar.title}
-                className="bg-background border border-border rounded-lg p-8 transition-all duration-300 hover:border-primary hover:shadow-lg"
+                className="p-8 transition-all hover:shadow-lg"
+                style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <pillar.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                <div className="w-14 h-14 flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
+                  <pillar.icon className="w-7 h-7" style={{ color: "#F36F21" }} strokeWidth={1.5} />
                 </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {pillar.title}
                 </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-white/60 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -136,21 +126,17 @@ const StrategyRiskServicesPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      {/* CTA - WHITE */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#3B3B39" }}>
               Ready to Secure Your Cloud?
             </h3>
-            <p className="text-muted-foreground mb-8">
+            <p className="mb-8" style={{ color: "#646464" }}>
               Start with a free discovery call to discuss your cloud security needs.
             </p>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-[#646464] hover:bg-[#f36f21] text-white font-semibold transition-colors"
-            >
+            <Button asChild size="lg" className="text-white font-semibold transition-colors" style={{ backgroundColor: "#F36F21" }}>
               <Link to="/contact">
                 Schedule a Discovery Call
                 <ArrowRight className="w-4 h-4 ml-2" />
