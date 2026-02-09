@@ -105,9 +105,6 @@ const ComplianceServicesPage = () => {
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:flex items-center justify-center">
-              <img alt="Abstract wave graphic" className="w-full max-w-4xl opacity-60 invert scale-150" src="/lovable-uploads/55f567d0-00d6-46cf-8b10-bc8c52ff865e.png" />
-            </div>
           </div>
         </div>
       </section>
