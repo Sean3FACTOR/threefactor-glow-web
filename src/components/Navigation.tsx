@@ -11,7 +11,7 @@ import Logo from "@/assets/3F_White_Orange_with_words.png";
 
 const serviceItems = [
   { name: "Compliance", href: "/services/compliance" },
-  { name: "vCISO", href: "/services/vciso" },
+  { name: "Virtual CISO", href: "/services/vciso" },
 ];
 
 const Navigation = () => {
