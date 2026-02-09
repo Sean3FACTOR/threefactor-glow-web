@@ -3,7 +3,7 @@ import cmmcLogo from "@/assets/frameworks/cmmc2.png";
 import doraLogo from "@/assets/frameworks/dora2.png";
 import fedrampLogo from "@/assets/frameworks/fedramp2.svg";
 import soc2Logo from "@/assets/frameworks/soc2-2.webp";
-import pciLogo from "@/assets/frameworks/pci2.svg";
+import pciLogo from "@/assets/frameworks/pci2.png";
 import isoLogo from "@/assets/frameworks/iso27001-2.png";
 import nis2Logo from "@/assets/frameworks/nis2.png";
 
