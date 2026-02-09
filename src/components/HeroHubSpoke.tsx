@@ -33,19 +33,19 @@ const HeroHubSpoke = () => {
           }}
         >
           <svg viewBox="0 0 40 52" className="w-10 h-12 md:w-12 md:h-14">
-            {/* Shackle */}
-            <path
-              d="M12,22 L12,12 A8,8 0 0,1 28,12 L28,22"
-              fill="none"
-              stroke="#F36F21"
-              strokeWidth="3.5"
-              strokeLinecap="round"
-            />
-            {/* Body */}
-            <rect x="8" y="21" width="24" height="18" rx="2" fill="#F36F21" />
-            {/* Keyhole */}
-            <circle cx="20" cy="28" r="3.5" fill="#2A2A28" />
-            <rect x="18.5" y="30" width="3" height="5" rx="0.5" fill="#2A2A28" />
+            {/* Page fold corner */}
+            <path d="M28,0 L40,12 L28,12 Z" fill="#3B3B39" />
+            <path d="M0,0 L28,0 L28,12 L40,12 L40,52 L0,52 Z" fill="none" stroke="#F36F21" strokeWidth="1.5" />
+            {/* Contract lines */}
+            <line x1="6" y1="10" x2="22" y2="10" stroke="#F36F21" strokeWidth="1.5" />
+            <line x1="6" y1="16" x2="34" y2="16" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+            <line x1="6" y1="21" x2="34" y2="21" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+            <line x1="6" y1="26" x2="34" y2="26" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+            <line x1="6" y1="31" x2="28" y2="31" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+            <line x1="6" y1="36" x2="30" y2="36" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+            {/* Signature line */}
+            <line x1="18" y1="45" x2="34" y2="45" stroke="#F36F21" strokeWidth="1.5" />
+            <circle cx="12" cy="45" r="3" fill="none" stroke="#F36F21" strokeWidth="1" />
           </svg>
         </div>
       </div>
