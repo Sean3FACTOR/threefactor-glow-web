@@ -54,8 +54,8 @@ const EliteAuthority = () => {
     borderTop: "1px solid rgba(255,255,255,0.08)"
   }}>
       <div className="container mx-auto px-4">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tight">
             Expert Leadership for Your Toughest Transitions
           </h2>
           <p className="text-lg mb-4 leading-relaxed text-primary-foreground">
@@ -63,7 +63,7 @@ const EliteAuthority = () => {
           </p>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3 uppercase tracking-tight">
           Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
         </h3>
 
