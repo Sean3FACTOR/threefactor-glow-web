@@ -35,11 +35,10 @@ const HomepageHero = () => {
           <div className="col-span-12 lg:col-span-7">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase whitespace-nowrap">
               <span className="block">Win the RFP.</span>
-              <span className="block">Own the Market.</span>
+              <span className="block">OWN THE MARKET.
+GET CERTIFIED.</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 leading-relaxed text-primary-foreground">
-              You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
-            </p>
+            <p className="text-lg md:text-xl mb-8 leading-relaxed text-primary-foreground">Don't let security compliance certification(s) slow you down.</p>
             <div className="space-y-4 mb-10">
               <p className="text-lg text-white flex items-start gap-3">
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2 bg-primary text-primary" />
