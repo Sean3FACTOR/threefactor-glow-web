@@ -35,12 +35,14 @@ const CompliancePlan = () => {
           </p>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
-          4 Steps to Audit Dominance
-        </h3>
-        <p className="text-lg text-white mb-10 max-w-2xl leading-relaxed">
-          Working with a certification firm shouldn't be a second job. We've simplified the path to turning your RFI into a revenue engine:
-        </p>
+        <div className="text-center mb-10">
+          <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 uppercase tracking-tight">
+            4 Steps to Audit Dominance
+          </h3>
+          <p className="text-lg text-white max-w-2xl mx-auto leading-relaxed">
+            Working with a certification firm shouldn't be a second job. We've simplified the path to turning your RFI into a revenue engine:
+          </p>
+        </div>
 
         {/* Horizontal 4-step workflow */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
