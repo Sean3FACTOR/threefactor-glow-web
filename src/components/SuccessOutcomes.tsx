@@ -21,7 +21,7 @@ const SuccessOutcomes = () => {
         backgroundColor: "rgba(255,255,255,0.12)"
       }} />
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
+        <div className="max-w-5xl mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             From Vendor to Trusted Market Authority
           </h2>

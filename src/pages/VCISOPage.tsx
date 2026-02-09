@@ -47,7 +47,7 @@ const VCISOPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="max-w-6xl px-4">
-          <div className="text-left space-y-8">
+          <div className="max-w-6xl text-left space-y-8">
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">Stop Carrying the Weight of the Pen Alone.</p>
             <p className="text-lg md:text-xl text-white leading-relaxed">Most founders and executives are one security question away from losing a deal, or one overlooked control away from personal liability.</p>
             <p className="text-base text-white leading-relaxed">Our vCISO services give you board-level security leadership, without the cost, delay, or risk of a full-time hire.</p>
@@ -64,7 +64,8 @@ const VCISOPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
+
+          <div className="max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Real Risk: Leadership Without a Shield</h2>
             <p className="text-lg text-white mb-8">The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.</p>
             <div className="grid md:grid-cols-2 gap-8">
@@ -101,7 +102,7 @@ const VCISOPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-5xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">vCISO TIERS: SECURITY THAT SCALES WITH YOU</h2>
             <p className="text-lg text-white">You don&apos;t need &quot;more security.&quot; You need the right level of leadership for your stage of growth.</p>
           </div>
@@ -154,7 +155,7 @@ const VCISOPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Secret Weapon: On-Demand SME Advisory</h2>
             <p className="text-lg text-white mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
             <div className="p-8" style={{
@@ -187,7 +188,7 @@ const VCISOPage = () => {
       borderTop: "1px solid rgba(255,255,255,0.08)"
     }}>
       <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">What Success Feels Like</h2>
             <div className="space-y-4 mb-8 inline-block text-left">
               {successOutcomes.map((o, i) => <div key={i} className="flex items-start gap-4"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{
