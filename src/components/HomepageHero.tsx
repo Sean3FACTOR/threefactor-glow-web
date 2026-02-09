@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroFrameworkMarquee from "@/components/HeroFrameworkMarquee";
 const HomepageHero = () => {
-  return <section className="pt-2 pb-16" style={{
+  return <section className="pt-14 pb-16" style={{
     backgroundColor: "#3B3B39"
   }}>
       <div className="container mx-auto px-4">
