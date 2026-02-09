@@ -19,85 +19,54 @@ const frameworks = [
 ];
 
 const HeroHubSpoke = () => {
-  const cx = 250;
-  const cy = 250;
-  const radius = 175;
-  const logoSize = 52;
-  const centerSize = 80;
+  const size = 600;
+  const cx = size / 2;
+  const cy = size / 2;
+  const orbitRadius = 220;
+  const logoBox = 90;
 
   const positions = frameworks.map((_, i) => {
     const angle = (i * 2 * Math.PI) / frameworks.length - Math.PI / 2;
     return {
-      x: cx + radius * Math.cos(angle),
-      y: cy + radius * Math.sin(angle),
+      x: cx + orbitRadius * Math.cos(angle),
+      y: cy + orbitRadius * Math.sin(angle),
     };
   });
 
   return (
     <div className="w-full flex items-center justify-center">
-      <svg viewBox="0 0 500 500" className="w-full max-w-[500px] h-auto">
-        {/* Subtle outer ring */}
-        <circle cx={cx} cy={cy} r={radius + 10} fill="none" stroke="#F36F2120" strokeWidth="1" />
-        <circle cx={cx} cy={cy} r={radius - 10} fill="none" stroke="#F36F2110" strokeWidth="0.5" strokeDasharray="4 4" />
-
-        {/* Connecting lines from each logo to center */}
-        {positions.map((pos, i) => (
-          <line
-            key={`line-${i}`}
-            x1={cx}
-            y1={cy}
-            x2={pos.x}
-            y2={pos.y}
-            stroke="#F36F21"
-            strokeWidth="1"
-            strokeOpacity="0.4"
-          />
-        ))}
-
-        {/* Small glowing dots at connection points */}
-        {positions.map((pos, i) => (
-          <circle
-            key={`dot-${i}`}
-            cx={pos.x}
-            cy={pos.y}
-            r="3"
-            fill="#F36F21"
-            opacity="0.6"
-          />
-        ))}
-
-        {/* Central hub */}
-        <circle cx={cx} cy={cy} r={centerSize} fill="#2A2A28" stroke="#F36F21" strokeWidth="2" />
-        <circle cx={cx} cy={cy} r={centerSize - 6} fill="none" stroke="#F36F2140" strokeWidth="0.5" />
-
-        {/* Padlock icon in center */}
-        <g transform={`translate(${cx}, ${cy - 12})`}>
-          {/* Lock body */}
-          <rect x="-16" y="0" width="32" height="24" rx="2" fill="#F36F21" />
-          {/* Lock shackle */}
-          <path d="M-10,-2 L-10,-12 A10,10 0 0,1 10,-12 L10,-2" fill="none" stroke="#F36F21" strokeWidth="3" strokeLinecap="round" />
+      <svg viewBox={`0 0 ${size} ${size}`} className="w-full max-w-[560px] h-auto">
+        {/* Central contract document */}
+        <g transform={`translate(${cx}, ${cy})`}>
+          {/* Document shape */}
+          <rect x="-48" y="-62" width="96" height="124" rx="4" fill="#2A2A28" stroke="#F36F21" strokeWidth="2.5" />
+          {/* Inner border */}
+          <rect x="-40" y="-54" width="80" height="108" rx="2" fill="none" stroke="#F36F2130" strokeWidth="0.75" />
+          {/* Padlock shackle */}
+          <path d="M-14,-16 L-14,-28 A14,14 0 0,1 14,-28 L14,-16" fill="none" stroke="#F36F21" strokeWidth="3.5" strokeLinecap="round" />
+          {/* Padlock body */}
+          <rect x="-20" y="-18" width="40" height="30" rx="3" fill="#F36F21" />
           {/* Keyhole */}
-          <circle cx="0" cy="10" r="4" fill="#2A2A28" />
-          <rect x="-2" y="12" width="4" height="6" fill="#2A2A28" />
+          <circle cx="0" cy="-6" r="5" fill="#2A2A28" />
+          <rect x="-2.5" y="-3" width="5" height="10" rx="1" fill="#2A2A28" />
+          {/* Document lines below lock */}
+          <line x1="-24" y1="26" x2="24" y2="26" stroke="#F36F2140" strokeWidth="1.5" />
+          <line x1="-18" y1="34" x2="18" y2="34" stroke="#F36F2130" strokeWidth="1" />
+          <line x1="-20" y1="42" x2="20" y2="42" stroke="#F36F2120" strokeWidth="1" />
         </g>
 
-        {/* RFP SECURED text */}
-        <text x={cx} y={cy + 30} textAnchor="middle" fill="white" fontSize="9" fontWeight="700" fontFamily="'Open Sans', sans-serif" letterSpacing="2">
-          RFP SECURED
-        </text>
-
-        {/* Framework logos in orbit */}
+        {/* Framework logos in orbit — no lines */}
         {frameworks.map((fw, i) => {
           const pos = positions[i];
-          const half = logoSize / 2;
+          const half = logoBox / 2;
           return (
             <image
               key={fw.name}
               href={fw.logo}
               x={pos.x - half}
               y={pos.y - half}
-              width={logoSize}
-              height={logoSize}
+              width={logoBox}
+              height={logoBox}
               preserveAspectRatio="xMidYMid meet"
             />
           );
