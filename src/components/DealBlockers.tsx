@@ -22,7 +22,7 @@ const DealBlockers = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             Don't Let a "Checkbox" Kill Your Biggest Deal
           </h2>
-          <p className="text-lg font-medium text-white">
+          <p className="font-medium text-white text-2xl">
             In enterprise sales, compliance isn't optional, it's the gatekeeper.
           </p>
         </div>
