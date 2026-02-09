@@ -50,9 +50,9 @@ const CompliancePlan = () => {
           {steps.map((step, index) => <div key={step.title} className="relative px-4 pb-8 md:pb-0">
               {/* Step number */}
               <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
-            backgroundColor: "#646464"
+            backgroundColor: "#F8F9FA"
           }}>
-                <span className="text-sm font-semibold text-white">{step.number}</span>
+                <span className="text-sm font-semibold" style={{ color: "#3B3B39" }}>{step.number}</span>
               </div>
 
               <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">
