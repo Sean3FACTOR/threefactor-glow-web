@@ -49,7 +49,7 @@ const ComplianceCrossroads = () => {
               <h4 className="text-sm font-bold mb-3 uppercase tracking-wider text-muted">
                 {scenario.label}
               </h4>
-              <p className="text-white leading-relaxed italic text-lg">
+              <p className="text-white leading-relaxed italic text-lg font-bold">
                 "{scenario.question}"
               </p>
             </div>)}
