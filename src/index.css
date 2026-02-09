@@ -48,6 +48,12 @@
     --glass-bg: 210 20% 98%;
     --glass-border: 60 2% 20%;
 
+    /* B2B Section tokens */
+    --surface-dark: 60 2% 23%;
+    --surface-dark-foreground: 0 0% 100%;
+    --surface-medium: 0 0% 39%;
+    --surface-medium-foreground: 0 0% 100%;
+
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 60 2% 23%;
     --sidebar-primary: 22 89% 54%;

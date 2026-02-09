@@ -1,7 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Cloud, Shield, Scale, Layers } from "lucide-react";
-
-import sectionHandshake from "@/assets/homepage/section-handshake.jpg";
 
 const authorityPoints = [
   {
@@ -26,71 +23,97 @@ const authorityPoints = [
   },
 ];
 
+// Program Wrapper Diagram SVG
+const ProgramWrapperDiagram = () => (
+  <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+    {/* Outer wrapper frame */}
+    <rect x="20" y="20" width="360" height="320" stroke="#3B3B39" strokeWidth="2" fill="none" />
+    <rect x="30" y="30" width="340" height="300" stroke="#646464" strokeWidth="1" fill="none" strokeDasharray="6 3" />
+    
+    {/* Title area */}
+    <rect x="130" y="10" width="140" height="24" fill="white" />
+    <text x="200" y="26" textAnchor="middle" fill="#3B3B39" fontSize="11" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
+    
+    {/* Inner modules */}
+    <rect x="50" y="60" width="140" height="50" stroke="#3B3B39" strokeWidth="1.5" fill="#F8F9FA" />
+    <text x="120" y="88" textAnchor="middle" fill="#3B3B39" fontSize="10" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
+
+    <rect x="210" y="60" width="150" height="50" stroke="#3B3B39" strokeWidth="1.5" fill="#F8F9FA" />
+    <text x="285" y="88" textAnchor="middle" fill="#3B3B39" fontSize="10" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
+
+    <rect x="50" y="140" width="310" height="50" stroke="#646464" strokeWidth="1" fill="#F8F9FA" />
+    <text x="205" y="168" textAnchor="middle" fill="#646464" fontSize="10" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT (ISO · PCI · SOC 2 · FEDRAMP)</text>
+
+    <rect x="50" y="220" width="145" height="50" stroke="#646464" strokeWidth="1" fill="#F8F9FA" />
+    <text x="122" y="248" textAnchor="middle" fill="#646464" fontSize="10" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
+
+    <rect x="215" y="220" width="145" height="50" stroke="#646464" strokeWidth="1" fill="#F8F9FA" />
+    <text x="287" y="248" textAnchor="middle" fill="#646464" fontSize="10" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
+
+    {/* Connections */}
+    <line x1="120" y1="110" x2="120" y2="140" stroke="#646464" strokeWidth="1" strokeDasharray="4 2" />
+    <line x1="285" y1="110" x2="285" y2="140" stroke="#646464" strokeWidth="1" strokeDasharray="4 2" />
+    <line x1="205" y1="190" x2="122" y2="220" stroke="#646464" strokeWidth="1" strokeDasharray="4 2" />
+    <line x1="205" y1="190" x2="287" y2="220" stroke="#646464" strokeWidth="1" strokeDasharray="4 2" />
+
+    {/* Bottom output arrow */}
+    <line x1="205" y1="290" x2="205" y2="320" stroke="#3B3B39" strokeWidth="1.5" />
+    <polygon points="200,320 210,320 205,330" fill="#3B3B39" />
+    <text x="205" y="350" textAnchor="middle" fill="#3B3B39" fontSize="10" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
+  </svg>
+);
+
 const EliteAuthority = () => {
   return (
-    <section className="py-20 bg-transparent border-t border-border/10">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             Expert Leadership for Your Toughest Transitions
           </h2>
-          <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-lg mb-4 leading-relaxed" style={{ color: "#646464" }}>
             We've Been in Your Chair. We know the pressure of an "overnight" requirement from a high-value lead. We understand that "almost compliant" is a career risk you can't afford. You deserve a partner who provides a program wrapper that works today and stays flexible for tomorrow.
           </p>
         </div>
 
-        {/* Section Sub-header */}
-        <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-10 uppercase tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-10 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
           Why IT & Ops Leaders Choose 3FACTOR
         </h3>
 
-        {/* Cascading layout - cards and image side by side */}
+        {/* Split layout: content left, diagram right */}
         <div className="grid grid-cols-12 gap-8">
-          {/* Cards - cascading */}
-          <div className="col-span-12 lg:col-span-7 space-y-6">
-            {authorityPoints.map((point, index) => (
-              <Card 
-                key={point.title} 
-                className="shadow-none border border-border/10 bg-card hover:border-primary transition-colors"
-                style={{ marginLeft: `${index * 1.5}rem` }}
+          {/* Cards */}
+          <div className="col-span-12 lg:col-span-6 space-y-6">
+            {authorityPoints.map((point) => (
+              <div
+                key={point.title}
+                className="p-6 transition-all hover:shadow-md"
+                style={{ border: "1px solid #646464", backgroundColor: "white" }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="w-10 h-10 bg-muted flex items-center justify-center flex-shrink-0">
-                      <point.icon className="w-5 h-5 text-muted-foreground" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-foreground mb-3 uppercase tracking-tight">
-                        {point.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {point.description}
-                      </p>
-                    </div>
+                <div className="flex items-start gap-5">
+                  <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#F8F9FA" }}>
+                    <point.icon className="w-5 h-5" style={{ color: "#646464" }} />
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h4 className="text-lg font-bold mb-2 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+                      {point.title}
+                    </h4>
+                    <p className="leading-relaxed" style={{ color: "#646464" }}>
+                      {point.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
-          {/* Image */}
-          <div className="col-span-12 lg:col-span-5 flex items-start">
-            <div className="relative group w-full">
-              <div className="border border-border/10 hover:border-primary transition-colors overflow-hidden">
-                <img 
-                  src={sectionHandshake} 
-                  alt="Business partnership"
-                  className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-              </div>
+          {/* Diagram */}
+          <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
+            <div className="w-full max-w-sm">
+              <ProgramWrapperDiagram />
             </div>
           </div>
-        </div>
-
-        {/* Connecting line visual */}
-        <div className="hidden md:block relative h-px w-full mt-12">
-          <div className="absolute left-[10%] right-[40%] top-0 h-px bg-border/30" />
         </div>
       </div>
     </section>
