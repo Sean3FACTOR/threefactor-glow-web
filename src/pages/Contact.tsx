@@ -56,7 +56,7 @@ const Contact = () => {
     <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
 
-      <main className="pt-32 pb-24">
+      <main className="pt-20 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}

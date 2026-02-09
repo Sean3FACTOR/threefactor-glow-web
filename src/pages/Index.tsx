@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
       <Navigation />
-      <div className="pt-20">
+      <div className="pt-14">
         <HomepageHero />
         <ComplianceCrossroads />
         <TriplePenalty />

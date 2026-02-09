@@ -19,7 +19,7 @@ const BlueprintHero = ({
   ctaLink
 }: BlueprintHeroProps) => {
   return (
-    <section className="pt-32 pb-20 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
+    <section className="pt-20 pb-16 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
 
         <div className="grid grid-cols-12 gap-8 items-center">
