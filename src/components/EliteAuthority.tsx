@@ -17,10 +17,20 @@ const authorityPoints = [{
   description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools."
 }];
 const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
+    {/* Outer solid orange border */}
     <rect x="60" y="30" width="1080" height="990" stroke="#F36F21" strokeWidth="2" opacity="1" fill="none" />
+    {/* Inner dashed orange border */}
     <rect x="90" y="90" width="1020" height="900" stroke="#F36F21" strokeWidth="1" opacity="0.6" fill="none" strokeDasharray="12 6" />
-    <rect x="330" y="30" width="540" height="72" fill="#3B3B39" />
+
+    {/* Top: mask + text for PROGRAM WRAPPER */}
+    <rect x="300" y="16" width="600" height="72" fill="#3B3B39" />
     <text x="600" y="78" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
+
+    {/* Bottom: mask + text for CERTIFIED CONFIDENCE (mirroring top) */}
+    <rect x="270" y="984" width="660" height="72" fill="#3B3B39" />
+    <text x="600" y="1032" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
+
+    {/* Inner content boxes */}
     <rect x="150" y="180" width="420" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="white" fillOpacity="0.05" />
     <text x="360" y="268" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
     <rect x="630" y="180" width="450" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="white" fillOpacity="0.05" />
@@ -31,13 +41,12 @@ const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xml
     <text x="366" y="748" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
     <rect x="645" y="660" width="435" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="white" fillOpacity="0.03" />
     <text x="861" y="748" textAnchor="middle" fill="white" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
+
+    {/* Connector lines */}
     <line x1="360" y1="330" x2="360" y2="420" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="855" y1="330" x2="855" y2="420" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="366" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
     <line x1="615" y1="570" x2="861" y2="660" stroke="white" strokeWidth="1.2" opacity="0.6" strokeDasharray="8 4" />
-    
-    <rect x="300" y="988" width="600" height="72" fill="#3B3B39" />
-    <text x="600" y="1036" textAnchor="middle" fill="white" opacity="1" fontSize="36" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
   </svg>;
 const EliteAuthority = () => {
   return <section className="py-20" style={{
