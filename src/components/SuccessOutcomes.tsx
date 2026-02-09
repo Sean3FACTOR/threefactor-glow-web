@@ -53,7 +53,7 @@ const SuccessOutcomes = () => {
               <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">
                 {outcome.title}
               </h4>
-              <p className="text-white/70 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 {outcome.description}
               </p>
             </div>
