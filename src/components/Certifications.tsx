@@ -43,7 +43,7 @@ const certifications = [{
 const Certifications = () => {
   return <section className="py-12" style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
       <div className="container mx-auto px-4">
-        <p className="text-center text-sm mb-8 uppercase tracking-widest text-white/60">
+        <p className="text-center text-sm mb-8 uppercase tracking-widest text-white">
           Trusted Certifications & Standards
         </p>
         <div className="px-12">
@@ -65,23 +65,23 @@ const Certifications = () => {
 
         {/* Trusted by section */}
         <div className="mt-12 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-          <p className="text-center text-sm uppercase tracking-widest mb-6 text-white/60">
+          <p className="text-center text-sm uppercase tracking-widest mb-6 text-white">
             Trusted by Fortune 500 companies
           </p>
           <div className="flex items-center justify-center gap-8 md:gap-12">
             <div className="text-center">
               <span className="block text-3xl md:text-4xl font-bold text-white">15+</span>
-              <span className="text-xs md:text-sm text-white/60">Years Experience</span>
+              <span className="text-xs md:text-sm text-white">Years Experience</span>
             </div>
             <div className="w-px h-12 bg-white/20" />
             <div className="text-center">
               <span className="block text-3xl md:text-4xl font-bold text-white">100+</span>
-              <span className="text-xs md:text-sm text-white/60">Clients Served</span>
+              <span className="text-xs md:text-sm text-white">Clients Served</span>
             </div>
             <div className="w-px h-12 bg-white/20" />
             <div className="text-center">
               <span className="block text-3xl md:text-4xl font-bold text-white">Global</span>
-              <span className="text-xs md:text-sm text-white/60">Coverage</span>
+              <span className="text-xs md:text-sm text-white">Coverage</span>
             </div>
           </div>
         </div>
