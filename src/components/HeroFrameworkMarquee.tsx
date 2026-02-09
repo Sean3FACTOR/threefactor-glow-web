@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import cmmcLogo from "@/assets/frameworks/cmmc2.png";
 import doraLogo from "@/assets/frameworks/dora2.png";
 import fedrampLogo from "@/assets/frameworks/fedramp2.svg";
@@ -7,12 +7,7 @@ import pciLogo from "@/assets/frameworks/pci2.png";
 import isoLogo from "@/assets/frameworks/iso27001-2.png";
 import nis2Logo from "@/assets/frameworks/nis2.png";
 
-interface FrameworkItem {
-  name: string;
-  logo: string;
-}
-
-const frameworks: FrameworkItem[] = [
+const frameworks = [
   { name: "ISO 27001", logo: isoLogo },
   { name: "SOC 2", logo: soc2Logo },
   { name: "PCI DSS", logo: pciLogo },
@@ -23,53 +18,41 @@ const frameworks: FrameworkItem[] = [
 ];
 
 const HeroFrameworkMarquee = () => {
-  const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % frameworks.length);
-  }, []);
-
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(next, 3500);
-    return () => clearInterval(timer);
-  }, [isPaused, next]);
+  // Duplicate the list to create seamless loop
+  const items = [...frameworks, ...frameworks];
 
   return (
     <div
-      className="relative flex items-center justify-center w-full h-[300px] md:h-[500px]"
+      className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)",
+      }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Logo slides */}
-      {frameworks.map((fw, i) => (
-        <div
-          key={fw.name}
-          className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out"
-          style={{ opacity: i === current ? 1 : 0 }}
-        >
-          <div className="w-[250px] h-[250px] md:w-[400px] md:h-[400px] p-8 md:p-12 flex items-center justify-center">
+      <div
+        className="flex flex-col"
+        style={{
+          animation: "marquee-vertical 28s linear infinite",
+          animationPlayState: isPaused ? "paused" : "running",
+        }}
+      >
+        {items.map((fw, i) => (
+          <div
+            key={`${fw.name}-${i}`}
+            className="h-[120px] md:h-[180px] w-full flex-shrink-0 flex items-center justify-center px-6 md:px-12"
+          >
             <img
               src={fw.logo}
               alt={fw.name}
-              className="w-full h-full object-contain"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
-        </div>
-      ))}
-
-      {/* Dot indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-        {frameworks.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className="w-1.5 h-1.5 transition-all duration-300"
-            style={{
-              backgroundColor: i === current ? "#F36F21" : "rgba(255,255,255,0.25)",
-            }}
-          />
         ))}
       </div>
     </div>
