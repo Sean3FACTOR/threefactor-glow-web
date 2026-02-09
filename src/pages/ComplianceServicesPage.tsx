@@ -147,29 +147,29 @@ const ComplianceServicesPage = () => {
       {/* Framework Fog Section */}
       <section className="py-20 bg-muted/20 border-t border-border/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 uppercase tracking-tight">
               The Real Enemy Isn't Regulation, It's Confusion
             </h2>
             
-            <div className="space-y-6">
-              <div className="bg-card border border-border/10 p-8">
+            <div className="space-y-8">
+              <div className="bg-card border border-border/10 p-8 text-left">
                 <h3 className="text-xl font-bold text-foreground mb-4">We call it Framework Fog:</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   The uncertainty around which certification you actually need, when you need it, and why it matters, leading to months of wasted effort and thousands in compliance debt.
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="border-l-2 border-muted-foreground/30 pl-6">
-                  <p className="text-muted-foreground">Most firms sell you a certificate.</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border-l-2 border-muted-foreground/30 pl-6 text-left">
+                  <p className="text-lg text-muted-foreground">Most firms sell you a certificate.</p>
                 </div>
-                <div className="border-l-2 border-primary pl-6">
-                  <p className="text-foreground font-semibold">We sell you market access.</p>
+                <div className="border-l-2 border-primary pl-6 text-left">
+                  <p className="text-lg text-foreground font-semibold">We sell you market access.</p>
                 </div>
               </div>
               
-              <p className="text-lg text-muted-foreground mt-6">
+              <p className="text-xl text-muted-foreground">
                 If a framework doesn't help you close deals, enter new markets, or survive regulatory scrutiny, it's noise.
               </p>
             </div>
