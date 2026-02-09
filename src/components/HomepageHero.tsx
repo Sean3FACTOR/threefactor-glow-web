@@ -27,7 +27,7 @@ const ArchitectureSVG = () => <svg viewBox="0 0 480 400" fill="none" xmlns="http
     <path d="M430 360 L430 340 M420 350 L440 350" stroke="white" strokeWidth="1" opacity="0.2" />
   </svg>;
 const HomepageHero = () => {
-  return <section className="pt-4 pb-16" style={{
+  return <section className="pt-2 pb-16" style={{
     backgroundColor: "#3B3B39"
   }}>
       <div className="container mx-auto px-4">
@@ -37,7 +37,7 @@ const HomepageHero = () => {
               <span className="block">Win the RFP.</span>
               <span className="block">Own the Market.</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-xl leading-relaxed text-primary-foreground">
+            <p className="text-lg md:text-xl mb-8 leading-relaxed text-primary-foreground">
               You're an IT or Operations Leader scaling into regulated markets; security shouldn't be the thing slowing you down.
             </p>
             <div className="space-y-4 mb-10">
@@ -50,7 +50,7 @@ const HomepageHero = () => {
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
-            <p className="text-lg mb-4 max-w-xl leading-relaxed text-primary-foreground">
+            <p className="text-lg mb-4 leading-relaxed text-primary-foreground">
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
             <p className="text-lg font-medium text-white mb-10">
