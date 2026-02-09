@@ -83,13 +83,13 @@ const Navigation = () => {
     backgroundColor: "rgba(59,59,57,0.95)",
     borderBottom: "1px solid rgba(255,255,255,0.08)"
   }}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto px-4 bg-primary-foreground">
+        <div className="flex items-center justify-between h-16 md:h-20 bg-primary-foreground">
           <Link to="/" className="flex items-center">
-            <img src={Logo} alt="3FACTOR" className="h-[50px] md:h-[62px] w-auto" />
+            <img alt="3FACTOR" className="h-8 md:h-10 w-auto" src="/lovable-uploads/80e27f80-adc3-4ce1-bb89-2175eb8b20c7.png" />
           </Link>
 
-          <div className="hidden sm:flex items-center space-x-8">
+          <div className="hidden sm:flex items-center space-x-8 text-secondary-foreground">
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-sm font-medium transition-colors hover:text-white/80 text-white outline-none">
                 Services
