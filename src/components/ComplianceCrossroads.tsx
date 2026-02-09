@@ -31,13 +31,28 @@ const ComplianceCrossroads = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             The Compliance Crossroads
           </h2>
-          <p className="text-lg text-white/60 leading-relaxed">
+          <p className="text-lg leading-relaxed text-primary-foreground">
             Does this sound familiar? Most of our clients come to us when they hit a "compliance wall" that threatens a major deal or their operational license. Which gate are you trying to unlock?
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {scenarios.map(scenario => {})}
+          {scenarios.map(scenario => <div key={scenario.label} className="p-8 transition-all hover:shadow-lg" style={{
+          backgroundColor: "#646464",
+          border: "1px solid rgba(255,255,255,0.08)"
+        }}>
+              <div className="w-10 h-10 flex items-center justify-center mb-6" style={{
+            backgroundColor: "rgba(255,255,255,0.08)"
+          }}>
+                <scenario.icon className="w-5 h-5 text-white/70" />
+              </div>
+              <h4 className="text-sm font-bold mb-3 uppercase tracking-wider text-muted">
+                {scenario.label}
+              </h4>
+              <p className="text-white leading-relaxed italic">
+                "{scenario.question}"
+              </p>
+            </div>)}
 
           <div className="p-8 flex flex-col justify-center transition-all hover:shadow-lg" style={{
           border: "1px solid #F36F21",
