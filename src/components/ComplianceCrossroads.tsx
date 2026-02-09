@@ -32,7 +32,8 @@ const ComplianceCrossroads = () => {
             The Compliance Crossroads
           </h2>
           <p className="text-lg leading-relaxed text-primary-foreground">
-            Does this sound familiar? Most of our clients come to us when they hit a "compliance wall" that threatens a major deal or their operational license. Which gate are you trying to unlock?
+            Does this sound familiar?
+Most of our clients come to us when they hit a "compliance wall" that threatens a major deal or their operational license. Which gate are you trying to unlock?
           </p>
         </div>
 
@@ -41,7 +42,7 @@ const ComplianceCrossroads = () => {
           backgroundColor: "#646464",
           border: "1px solid rgba(255,255,255,0.08)"
         }}>
-              <h4 className="text-sm font-bold mb-3 uppercase tracking-wider text-muted">
+              <h4 className="font-bold mb-3 uppercase tracking-wider text-muted text-lg">
                 {scenario.label}
               </h4>
               <p className="text-white leading-relaxed italic text-lg font-bold">
@@ -54,7 +55,7 @@ const ComplianceCrossroads = () => {
           backgroundColor: "#646464"
         }}>
             <Link to="/services/compliance" className="group inline-flex items-center gap-2 text-white font-semibold text-lg uppercase tracking-tight transition-colors">
-              See How We Clear the "Framework Fog"
+              ​​  
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
