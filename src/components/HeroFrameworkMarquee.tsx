@@ -1,25 +1,25 @@
 import { useState, useEffect, useCallback } from "react";
-import cmmcLogo from "@/assets/frameworks/cmmc.png";
-import fedrampLogo from "@/assets/frameworks/fedramp.svg";
-import iso27001Logo from "@/assets/frameworks/iso27001.png";
-import soc2Logo from "@/assets/frameworks/soc2.webp";
-import doraLogo from "@/assets/frameworks/dora.png";
+import cmmcLogo from "@/assets/frameworks/cmmc2.png";
+import doraLogo from "@/assets/frameworks/dora2.png";
+import fedrampLogo from "@/assets/frameworks/fedramp2.svg";
+import soc2Logo from "@/assets/frameworks/soc2-2.webp";
+import pciLogo from "@/assets/frameworks/pci2.svg";
+import isoLogo from "@/assets/frameworks/iso27001-2.png";
+import nis2Logo from "@/assets/frameworks/nis2.png";
 
 interface FrameworkItem {
   name: string;
-  logo?: string;
+  logo: string;
 }
 
 const frameworks: FrameworkItem[] = [
-  { name: "ISO 27001", logo: iso27001Logo },
+  { name: "ISO 27001", logo: isoLogo },
   { name: "SOC 2", logo: soc2Logo },
-  { name: "PCI DSS" },
+  { name: "PCI DSS", logo: pciLogo },
   { name: "FedRAMP", logo: fedrampLogo },
-  { name: "NIS2" },
+  { name: "NIS2", logo: nis2Logo },
   { name: "DORA", logo: doraLogo },
   { name: "CMMC", logo: cmmcLogo },
-  { name: "HIPAA" },
-  { name: "GDPR" },
 ];
 
 const HeroFrameworkMarquee = () => {
@@ -61,24 +61,17 @@ const HeroFrameworkMarquee = () => {
             className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out"
             style={{ opacity: isActive ? 1 : 0 }}
           >
-            {fw.logo ? (
-              <img
-                src={fw.logo}
-                alt={fw.name}
-                className="max-w-[350px] max-h-[200px] object-contain grayscale transition-all duration-500 hover:grayscale-0"
-                style={{ filter: isActive && !isPaused ? "grayscale(1)" : undefined }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLImageElement).style.filter = "grayscale(0)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLImageElement).style.filter = "grayscale(1)";
-                }}
-              />
-            ) : (
-              <span className="font-['Open_Sans'] font-bold text-5xl uppercase tracking-tight text-white/40 transition-colors duration-500 hover:text-white">
-                {fw.name}
-              </span>
-            )}
+            <img
+              src={fw.logo}
+              alt={fw.name}
+              className="w-[280px] h-[280px] object-contain grayscale transition-all duration-500 hover:grayscale-0"
+              onMouseEnter={(e) => {
+                (e.target as HTMLImageElement).style.filter = "grayscale(0)";
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLImageElement).style.filter = "grayscale(1)";
+              }}
+            />
           </div>
         );
       })}
