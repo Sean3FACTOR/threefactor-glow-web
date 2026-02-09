@@ -49,7 +49,7 @@ const HeroFrameworkMarquee = () => {
           className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <div className="w-[400px] h-[400px] p-10 flex items-center justify-center">
+          <div className="w-[400px] h-[400px] p-12 flex items-center justify-center">
             <img
               src={fw.logo}
               alt={fw.name}
