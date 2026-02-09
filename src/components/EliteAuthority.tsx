@@ -16,28 +16,28 @@ const authorityPoints = [{
   title: "UNBIASED STRATEGY",
   description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools."
 }];
-const ProgramWrapperDiagram = () => <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
-    <rect x="20" y="20" width="360" height="320" stroke="white" strokeWidth="1.5" opacity="0.2" fill="none" />
-    <rect x="30" y="30" width="340" height="300" stroke="white" strokeWidth="0.5" opacity="0.1" fill="none" strokeDasharray="6 3" />
-    <rect x="130" y="10" width="140" height="24" fill="#3B3B39" />
-    <text x="200" y="26" textAnchor="middle" fill="white" opacity="0.8" fontSize="11" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
-    <rect x="50" y="60" width="140" height="50" stroke="white" strokeWidth="1" opacity="0.2" fill="white" fillOpacity="0.05" />
-    <text x="120" y="88" textAnchor="middle" fill="white" opacity="0.7" fontSize="10" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
-    <rect x="210" y="60" width="150" height="50" stroke="white" strokeWidth="1" opacity="0.2" fill="white" fillOpacity="0.05" />
-    <text x="285" y="88" textAnchor="middle" fill="white" opacity="0.7" fontSize="10" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
-    <rect x="50" y="140" width="310" height="50" stroke="white" strokeWidth="0.8" opacity="0.15" fill="white" fillOpacity="0.03" />
-    <text x="205" y="168" textAnchor="middle" fill="white" opacity="0.6" fontSize="10" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT (ISO · PCI · SOC 2 · FEDRAMP)</text>
-    <rect x="50" y="220" width="145" height="50" stroke="white" strokeWidth="0.8" opacity="0.15" fill="white" fillOpacity="0.03" />
-    <text x="122" y="248" textAnchor="middle" fill="white" opacity="0.6" fontSize="10" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
-    <rect x="215" y="220" width="145" height="50" stroke="white" strokeWidth="0.8" opacity="0.15" fill="white" fillOpacity="0.03" />
-    <text x="287" y="248" textAnchor="middle" fill="white" opacity="0.6" fontSize="10" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
-    <line x1="120" y1="110" x2="120" y2="140" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 2" />
-    <line x1="285" y1="110" x2="285" y2="140" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 2" />
-    <line x1="205" y1="190" x2="122" y2="220" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 2" />
-    <line x1="205" y1="190" x2="287" y2="220" stroke="white" strokeWidth="0.8" opacity="0.15" strokeDasharray="4 2" />
-    <line x1="205" y1="290" x2="205" y2="320" stroke="white" strokeWidth="1" opacity="0.25" />
-    <polygon points="200,320 210,320 205,330" fill="white" opacity="0.25" />
-    <text x="205" y="350" textAnchor="middle" fill="white" opacity="0.7" fontSize="10" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
+const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
+    <rect x="60" y="60" width="1080" height="960" stroke="white" strokeWidth="2" opacity="0.2" fill="none" />
+    <rect x="90" y="90" width="1020" height="900" stroke="white" strokeWidth="1" opacity="0.1" fill="none" strokeDasharray="12 6" />
+    <rect x="390" y="30" width="420" height="72" fill="#3B3B39" />
+    <text x="600" y="78" textAnchor="middle" fill="white" opacity="0.8" fontSize="28" fontWeight="bold" fontFamily="sans-serif">PROGRAM WRAPPER</text>
+    <rect x="150" y="180" width="420" height="150" stroke="white" strokeWidth="1.5" opacity="0.2" fill="white" fillOpacity="0.05" />
+    <text x="360" y="264" textAnchor="middle" fill="white" opacity="0.7" fontSize="24" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
+    <rect x="630" y="180" width="450" height="150" stroke="white" strokeWidth="1.5" opacity="0.2" fill="white" fillOpacity="0.05" />
+    <text x="855" y="264" textAnchor="middle" fill="white" opacity="0.7" fontSize="24" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
+    <rect x="150" y="420" width="930" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
+    <text x="615" y="504" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT (ISO · PCI · SOC 2 · FEDRAMP)</text>
+    <rect x="150" y="660" width="435" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
+    <text x="366" y="744" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
+    <rect x="645" y="660" width="435" height="150" stroke="white" strokeWidth="1.2" opacity="0.15" fill="white" fillOpacity="0.03" />
+    <text x="861" y="744" textAnchor="middle" fill="white" opacity="0.6" fontSize="24" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
+    <line x1="360" y1="330" x2="360" y2="420" stroke="white" strokeWidth="1.2" opacity="0.15" strokeDasharray="8 4" />
+    <line x1="855" y1="330" x2="855" y2="420" stroke="white" strokeWidth="1.2" opacity="0.15" strokeDasharray="8 4" />
+    <line x1="615" y1="570" x2="366" y2="660" stroke="white" strokeWidth="1.2" opacity="0.15" strokeDasharray="8 4" />
+    <line x1="615" y1="570" x2="861" y2="660" stroke="white" strokeWidth="1.2" opacity="0.15" strokeDasharray="8 4" />
+    <line x1="615" y1="870" x2="615" y2="960" stroke="white" strokeWidth="2" opacity="0.25" />
+    <polygon points="600,960 630,960 615,990" fill="white" opacity="0.25" />
+    <text x="615" y="1050" textAnchor="middle" fill="white" opacity="0.7" fontSize="26" fontWeight="bold" fontFamily="sans-serif">CERTIFIED CONFIDENCE</text>
   </svg>;
 const EliteAuthority = () => {
   return <section className="py-20" style={{
