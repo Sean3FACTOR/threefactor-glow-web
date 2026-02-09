@@ -2,12 +2,6 @@ const LiveBadge = () => <span className="inline-flex items-center ml-2 px-2 py-0
   backgroundColor: "rgba(243,111,33,0.15)",
   color: "#F36F21"
 }}>
-    <span className="relative flex h-2 w-2 mr-1">
-      
-      <span className="relative inline-flex h-2 w-2" style={{
-      backgroundColor: "#F36F21"
-    }} />
-    </span>
     LIVE
   </span>;
 const steps = [{
