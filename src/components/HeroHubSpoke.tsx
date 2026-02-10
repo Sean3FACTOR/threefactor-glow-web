@@ -28,7 +28,7 @@ const HeroHubSpoke = () => {
           <path d="M28,0 L40,12 L28,12 Z" fill="#3B3B39" />
           <path d="M0,0 L28,0 L28,12 L40,12 L40,52 L0,52 Z" fill="#2A2A28" stroke="#F36F21" strokeWidth="1.5" />
           {/* SOW label */}
-          <text x="20" y="9" textAnchor="middle" fill="#F36F21" fontSize="5" fontWeight="bold" fontFamily="monospace">SOW</text>
+          <text x="6" y="9" textAnchor="start" fill="#F36F21" fontSize="5" fontWeight="bold" fontFamily="monospace">SOW</text>
           {/* Contract lines */}
           <line x1="6" y1="14" x2="34" y2="14" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
           <line x1="6" y1="19" x2="34" y2="19" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
