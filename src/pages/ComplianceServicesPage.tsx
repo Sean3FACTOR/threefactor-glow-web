@@ -46,11 +46,12 @@ const ComplianceServicesPage = () => {
                 href={`#${s.id}`}
                 className="px-4 py-2 text-sm font-mono transition-all"
                 style={{
-                  border: "1px solid rgba(255,255,255,0.15)",
-                  color: "#FFFFFF",
+                  backgroundColor: "#F8F9FA",
+                  border: "1px solid #E5E7EB",
+                  color: "#1a1a1a",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E7EB")}
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" });
