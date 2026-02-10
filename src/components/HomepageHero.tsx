@@ -33,14 +33,27 @@ const HomepageHero = () => {
           {/* Left Column: Value Proposition */}
           <div className="lg:col-span-7 pt-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase leading-[1.1]">
-              Don't Let a Security Audit Kill Your $1M Contract.{" "}
-              <span style={{ color: "#F36F21" }}>
-                Secure the Deal with Unshakeable Compliance.
-              </span>
+              <span className="block">Win the RFP.</span>
+              <span className="block">OWN THE MARKET. GET CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-10 leading-relaxed text-primary-foreground">
-              Security should accelerate growth. Not quietly sabotage it. Stop
-              letting "revenue-blocking gaps" stall your growth.
+            <p className="text-base md:text-xl mb-8 leading-relaxed text-primary-foreground">
+              Don't let security compliance certification(s) slow you down.
+            </p>
+            <div className="space-y-4 mb-10">
+              <p className="text-base md:text-lg text-white flex items-start gap-3">
+                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
+                Scale into regulated sectors without the friction of security roadblocks.
+              </p>
+              <p className="text-base md:text-lg text-white flex items-start gap-3">
+                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
+                Stop letting revenue-blocking gaps stall your growth.
+              </p>
+            </div>
+            <p className="text-base md:text-lg mb-4 leading-relaxed text-primary-foreground">
+              We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
+            </p>
+            <p className="text-base md:text-lg font-medium text-white mb-10">
+              Security should close the deal, not kill the momentum.
             </p>
             <Link to="/contact">
               <Button
