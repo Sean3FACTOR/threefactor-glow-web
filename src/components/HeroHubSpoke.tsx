@@ -27,16 +27,19 @@ const HeroHubSpoke = () => {
           {/* Page fold corner */}
           <path d="M28,0 L40,12 L28,12 Z" fill="#3B3B39" />
           <path d="M0,0 L28,0 L28,12 L40,12 L40,52 L0,52 Z" fill="#2A2A28" stroke="#F36F21" strokeWidth="1.5" />
+          {/* SOW label */}
+          <text x="20" y="9" textAnchor="middle" fill="#F36F21" fontSize="5" fontWeight="bold" fontFamily="monospace">SOW</text>
           {/* Contract lines */}
-          <line x1="6" y1="10" x2="22" y2="10" stroke="#F36F21" strokeWidth="1.5" />
-          <line x1="6" y1="16" x2="34" y2="16" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-          <line x1="6" y1="21" x2="34" y2="21" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-          <line x1="6" y1="26" x2="34" y2="26" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
-          <line x1="6" y1="31" x2="28" y2="31" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
-          <line x1="6" y1="36" x2="30" y2="36" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+          <line x1="6" y1="14" x2="34" y2="14" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="19" x2="34" y2="19" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="24" x2="34" y2="24" stroke="#F36F21" strokeOpacity="0.6" strokeWidth="1" />
+          <line x1="6" y1="29" x2="28" y2="29" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+          <line x1="6" y1="34" x2="30" y2="34" stroke="#F36F21" strokeOpacity="0.4" strokeWidth="1" />
+          {/* Dollar icon */}
+          <circle cx="12" cy="43" r="5" fill="none" stroke="#F36F21" strokeWidth="1" />
+          <text x="12" y="45.5" textAnchor="middle" fill="#F36F21" fontSize="7" fontWeight="bold" fontFamily="monospace">$</text>
           {/* Signature line */}
-          <line x1="18" y1="45" x2="34" y2="45" stroke="#F36F21" strokeWidth="1.5" />
-          <circle cx="12" cy="45" r="3" fill="none" stroke="#F36F21" strokeWidth="1" />
+          <line x1="20" y1="45" x2="34" y2="45" stroke="#F36F21" strokeWidth="1.5" />
         </svg>
       </div>
 
