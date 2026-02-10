@@ -1,11 +1,11 @@
-import isoLogo from "@/assets/frameworks/iso-blk.png";
+import isoLogo from "@/assets/frameworks/iso-blk2.png";
 import soc2Logo from "@/assets/frameworks/soc2-blk.png";
 import pciLogo from "@/assets/frameworks/pci-blk.png";
 import fedrampLogo from "@/assets/frameworks/fedramp-blk.png";
 import nis2Logo from "@/assets/frameworks/nis2-blk.png";
 import doraLogo from "@/assets/frameworks/dora-blk.png";
 import cmmcLogo from "@/assets/frameworks/cmmc-blk.png";
-import nistLogo from "@/assets/frameworks/nist.png";
+import nistLogo from "@/assets/frameworks/nist-blk.png";
 
 const frameworks = [
   { name: "ISO 27001", logo: isoLogo, scale: 1 },
