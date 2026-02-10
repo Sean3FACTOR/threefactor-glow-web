@@ -79,9 +79,10 @@ const HomepageHero = () => {
               We can help with some of your common compliance concerns.
             </h3>
             {problems.map((problem) => (
-              <div
+              <a
                 key={problem.label}
-                className="p-5 transition-all"
+                href="#certification-suite"
+                className="block p-5 transition-all cursor-pointer"
                 style={{
                   backgroundColor: "#646464",
                   border: "1px solid rgba(255,255,255,0.08)",
@@ -100,7 +101,7 @@ const HomepageHero = () => {
                 <p className="text-white leading-relaxed italic font-semibold text-sm md:text-base">
                   "{problem.question}"
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
