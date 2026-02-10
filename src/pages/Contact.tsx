@@ -72,8 +72,8 @@ const Contact = () => {
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <h2 className="text-2xl font-semibold text-white mb-6">
+              <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                <h2 className="text-2xl font-semibold mb-6" style={{ color: "#646464" }}>
                   Send us a message
                 </h2>
 
@@ -84,11 +84,11 @@ const Contact = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Name *</FormLabel>
+                          <FormLabel style={{ color: "#1a1a1a" }}>Name *</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your full name"
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
+                             className="border-gray-300 focus:border-gray-500" style={{ color: "#1a1a1a" }}
                               {...field}
                             />
                           </FormControl>
@@ -102,12 +102,12 @@ const Contact = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Email *</FormLabel>
+                          <FormLabel style={{ color: "#1a1a1a" }}>Email *</FormLabel>
                           <FormControl>
                             <Input
                               type="email"
                               placeholder="you@company.com"
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
+                               className="border-gray-300 focus:border-gray-500" style={{ color: "#1a1a1a" }}
                               {...field}
                             />
                           </FormControl>
@@ -121,11 +121,11 @@ const Contact = () => {
                       name="company"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Company</FormLabel>
+                          <FormLabel style={{ color: "#1a1a1a" }}>Company</FormLabel>
                           <FormControl>
                             <Input
                               placeholder="Your company name"
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40"
+                              className="border-gray-300 focus:border-gray-500" style={{ color: "#1a1a1a" }}
                               {...field}
                             />
                           </FormControl>
@@ -139,11 +139,11 @@ const Contact = () => {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Message *</FormLabel>
+                          <FormLabel style={{ color: "#1a1a1a" }}>Message *</FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="Tell us about your security challenges..."
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/30 focus:border-white/40 min-h-32 resize-none"
+                              className="border-gray-300 focus:border-gray-500 min-h-32 resize-none" style={{ color: "#1a1a1a" }}
                               {...field}
                             />
                           </FormControl>
@@ -173,8 +173,8 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-8">
-                <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <h2 className="text-2xl font-semibold text-white mb-6">
+                <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                  <h2 className="text-2xl font-semibold mb-6" style={{ color: "#646464" }}>
                     Get in touch
                   </h2>
                   <div className="space-y-6">
@@ -183,8 +183,8 @@ const Contact = () => {
                         <Mail className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-white">Email</h3>
-                        <p className="text-white">contact@3factor.io</p>
+                        <h3 className="font-medium" style={{ color: "#646464" }}>Email</h3>
+                        <p style={{ color: "#1a1a1a" }}>contact@3factor.io</p>
                       </div>
                     </div>
 
@@ -193,8 +193,8 @@ const Contact = () => {
                         <Phone className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-white">Phone</h3>
-                        <p className="text-white">+1 (555) 123-4567</p>
+                        <h3 className="font-medium" style={{ color: "#646464" }}>Phone</h3>
+                        <p style={{ color: "#1a1a1a" }}>+1 (555) 123-4567</p>
                       </div>
                     </div>
 
@@ -203,8 +203,8 @@ const Contact = () => {
                         <MapPin className="w-6 h-6" style={{ color: "#F36F21" }} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-white">Location</h3>
-                        <p className="text-white">
+                        <h3 className="font-medium" style={{ color: "#646464" }}>Location</h3>
+                        <p style={{ color: "#1a1a1a" }}>
                           Serving clients globally<br />
                           Remote-first consultancy
                         </p>
@@ -213,9 +213,9 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="p-8" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <h3 className="font-semibold text-white mb-2">Response Time</h3>
-                  <p className="text-white text-sm">
+                <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                  <h3 className="font-semibold mb-2" style={{ color: "#646464" }}>Response Time</h3>
+                  <p className="text-sm" style={{ color: "#1a1a1a" }}>
                     We typically respond within 24 hours during business days. For urgent security matters, please indicate the urgency in your message.
                   </p>
                 </div>
