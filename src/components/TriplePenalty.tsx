@@ -2,17 +2,17 @@ const penalties = [
   {
     title: "CRITICAL FINANCIAL LIABILITY",
     description:
-      "€10M fines and payment stream blockage. Between regulatory penalties, frozen payment rails, and contract clawbacks, weak compliance turns a single incident into a catastrophe.",
+      "Between €10M regulatory fines, frozen payment rails, and contract clawbacks, weak compliance turns a single incident into a catastrophe.",
   },
   {
     title: "TOTAL OPERATIONAL STOPPAGE",
     description:
-      "Regulators revoking your license to operate. Under mandates like NIS2 and DORA, without proven resilience you don't have a growth strategy, you have a liability.",
+      "Under mandates like NIS2 and DORA, regulators can revoke your license to operate. Without proven resilience, you have a liability.",
   },
   {
     title: "IRREVERSIBLE REPUTATION LOSS",
     description:
-      'Losing customer trust in the enterprise world. Once your security posture is flagged as "high risk," future deals quietly disappear. You don\'t get a second chance.',
+      "In enterprise sales, you don't get a second chance. Once your security posture is flagged as 'high risk,' future deals quietly disappear.",
   },
 ];
 
@@ -54,7 +54,7 @@ const TriplePenalty = () => {
           {penalties.map((penalty, index) => (
             <div
               key={index}
-              className="p-8 transition-all group"
+              className="p-8 transition-all"
               style={{
                 backgroundColor: "#646464",
                 border: "1px solid rgba(255,255,255,0.08)",
