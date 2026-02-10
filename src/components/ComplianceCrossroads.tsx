@@ -8,7 +8,6 @@ const serviceCards = [
     icon: Shield,
     links: [
       { label: "SOC 2 (Type I & II)", href: "/services/compliance#soc2" },
-      { label: "SOC 3 Examination", href: "/services/compliance#soc3" },
     ],
   },
   {
@@ -17,7 +16,6 @@ const serviceCards = [
     icon: Globe,
     links: [
       { label: "ISO 27001", href: "/services/compliance#iso27001" },
-      { label: "ISO 42001 (AI Security)", href: "/services/compliance#iso42001" },
     ],
   },
   {
@@ -26,7 +24,6 @@ const serviceCards = [
     icon: CreditCard,
     links: [
       { label: "PCI DSS Validation", href: "/services/compliance#pci" },
-      { label: "PCI SSF", href: "/services/compliance#pci-ssf" },
     ],
   },
   {
@@ -34,8 +31,7 @@ const serviceCards = [
     subtitle: "Government & Defense",
     icon: Landmark,
     links: [
-      { label: "FedRAMP®", href: "/services/compliance#fedramp" },
-      { label: "CMMC / NIST SP 800-171", href: "/services/compliance#cmmc" },
+      { label: "FedRAMP & CMMC", href: "/services/compliance#fedramp" },
     ],
   },
   {
@@ -43,8 +39,7 @@ const serviceCards = [
     subtitle: "European Compliance",
     icon: Building2,
     links: [
-      { label: "NIS2 Compliance", href: "/services/compliance#nis2" },
-      { label: "DORA Assessment", href: "/services/compliance#dora" },
+      { label: "NIS2 & DORA", href: "/services/compliance#nis2" },
     ],
   },
 ];
