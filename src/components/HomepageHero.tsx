@@ -28,9 +28,7 @@ GET CERTIFIED.</span>
             <p className="text-base md:text-lg mb-4 leading-relaxed text-primary-foreground">
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
-            <p className="text-base md:text-lg font-medium text-white mb-10">
-              Security should accelerate growth. Not quietly sabotage it.
-            </p>
+            <p className="text-base md:text-lg font-medium text-white mb-10">Security should close the deal, not kill the momentum.</p>
             <Link to="/contact">
               <Button size="lg" className="group text-white font-semibold transition-colors w-full sm:w-auto" style={{
               backgroundColor: "#F36F21"
