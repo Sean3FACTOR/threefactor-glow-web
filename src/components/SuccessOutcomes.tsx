@@ -1,14 +1,10 @@
-import { Zap, Globe, Rocket } from "lucide-react";
 const outcomes = [{
-  icon: Zap,
   title: "CLOSE DEALS FASTER",
   description: "Security questionnaires completed in days, not quarters. Auditors nod instead of probing."
 }, {
-  icon: Globe,
   title: "UNRESTRICTED EXPANSION",
   description: "No geography, tender, or enterprise buyer is off-limits when compliance is built right."
 }, {
-  icon: Rocket,
   title: "TOTAL OPERATIONAL VELOCITY",
   description: "Scale confidently knowing your security posture supports growth instead of dragging it down."
 }];
@@ -20,7 +16,6 @@ const SuccessOutcomes = () => {
         <div className="h-px w-full mb-12" style={{
         backgroundColor: "rgba(255,255,255,0.12)"
       }} />
-        {/* Section Header */}
         <div className="max-w-5xl mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             From Vendor to Trusted Market Authority
@@ -37,15 +32,15 @@ const SuccessOutcomes = () => {
           What Success Looks Like
         </h3>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {outcomes.map(outcome => <div key={outcome.title} className="p-8" style={{
-          backgroundColor: "#646464"
+          backgroundColor: "#F8F9FA",
+          border: "1px solid #E5E7EB"
         }}>
-              <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">
+              <h4 className="text-xl font-bold mb-4 uppercase tracking-tight" style={{ color: "#646464" }}>
                 {outcome.title}
               </h4>
-              <p className="text-white leading-relaxed">
+              <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>
                 {outcome.description}
               </p>
             </div>)}

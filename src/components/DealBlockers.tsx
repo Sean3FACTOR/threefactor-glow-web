@@ -1,14 +1,10 @@
-import { FileX, Clock, Umbrella } from "lucide-react";
 const blockers = [{
-  icon: FileX,
   title: "THE RFP BLOCKADE",
   description: "Stop watching seven-figure contracts stall because security reviews drag on for months."
 }, {
-  icon: Clock,
   title: "THE DORA DEADLINE",
   description: "Don't let EU regulatory deadlines freeze your ability to transact."
 }, {
-  icon: Umbrella,
   title: "THE UNINSURABLE GAP",
   description: "If you can't prove proactive defense, cyber insurers may walk away right when you need coverage most."
 }];
@@ -29,14 +25,16 @@ const DealBlockers = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {blockers.map(blocker => <div key={blocker.title} className="p-8 transition-all hover:shadow-lg" style={{
-          backgroundColor: "#646464",
-          border: "1px solid rgba(255,255,255,0.08)"
-        }}>
-              
-              <h4 className="text-xl font-bold text-white mb-3 uppercase tracking-tight">
+          backgroundColor: "#F8F9FA",
+          border: "1px solid #E5E7EB"
+        }}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E7EB")}
+        >
+              <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#646464" }}>
                 {blocker.title}
               </h4>
-              <p className="text-white leading-relaxed">
+              <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>
                 {blocker.description}
               </p>
             </div>)}

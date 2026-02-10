@@ -58,8 +58,8 @@ const Certifications = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {certifications.map(cert => <CarouselItem key={cert.name} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                   <div className="flex items-center justify-center w-full h-32 md:h-40 p-4" style={{
-                backgroundColor: "#646464",
-                border: "1px solid rgba(255,255,255,0.08)"
+                backgroundColor: "#F8F9FA",
+                border: "1px solid #E5E7EB"
               }}>
                     <img src={cert.logo} alt={`${cert.name} certification`} className="max-w-full max-h-full object-contain" />
                   </div>
