@@ -31,7 +31,7 @@ const ComplianceCrossroads = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
             The Compliance Crossroads
           </h2>
-          <p className="text-lg leading-relaxed text-primary-foreground font-normal">Does this sound familiar?
+          <p className="text-lg leading-relaxed text-primary-foreground font-normal"><span className="font-bold">Does this sound familiar?</span>
 Most of our clients come to us when they hit a "compliance wall" that threatens a major deal or their operational license. Which gate are you trying to unlock?</p>
         </div>
 
