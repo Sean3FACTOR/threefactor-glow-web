@@ -87,7 +87,7 @@ const ComplianceServicesPage = () => {
             <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Stop treating compliance like a chore.
             </p>
-            <p className="text-3xl md:text-4xl font-bold text-white leading-snug whitespace-nowrap">
+            <p className="text-3xl md:text-4xl font-bold text-white leading-snug">
               Start treating it like a competitive advantage.
             </p>
             <p className="text-lg md:text-xl text-white leading-relaxed">
@@ -152,21 +152,24 @@ const ComplianceServicesPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {frameworks.map(f => <div key={f.name} className="p-8 transition-all hover:shadow-lg" style={{
-            backgroundColor: "#646464",
-            border: "1px solid rgba(255,255,255,0.08)"
-          }}>
-                <h3 className="text-2xl font-bold text-white uppercase tracking-tight mb-6">{f.name}</h3>
+            backgroundColor: "#F8F9FA",
+            border: "1px solid #E5E7EB"
+          }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E7EB")}
+          >
+                <h3 className="text-2xl font-bold uppercase tracking-tight mb-6" style={{ color: "#3B3B39" }}>{f.name}</h3>
                 <div className="mb-6 pl-4" style={{
               borderLeft: "2px solid #F36F21"
             }}>
-                  <h4 className="text-lg font-bold text-white mb-2">{f.winTitle}</h4>
-                  <p className="text-sm text-white leading-relaxed">{f.winDesc}</p>
+                  <h4 className="text-lg font-bold mb-2" style={{ color: "#646464" }}>{f.winTitle}</h4>
+                  <p className="text-sm leading-relaxed" style={{ color: "#1a1a1a" }}>{f.winDesc}</p>
                 </div>
                 <div className="pl-4" style={{
-              borderLeft: "2px solid rgba(255,255,255,0.2)"
+              borderLeft: "2px solid #E5E7EB"
             }}>
-                  <h4 className="text-lg font-bold text-white mb-2">{f.riskTitle}</h4>
-                  <p className="text-sm text-white leading-relaxed">{f.riskDesc}</p>
+                  <h4 className="text-lg font-bold mb-2" style={{ color: "#646464" }}>{f.riskTitle}</h4>
+                  <p className="text-sm leading-relaxed" style={{ color: "#1a1a1a" }}>{f.riskDesc}</p>
                 </div>
               </div>)}
           </div>
@@ -187,9 +190,9 @@ const ComplianceServicesPage = () => {
             <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-white/20" />
             {planSteps.map((step, index) => <div key={step.number} className="relative px-4 pb-8 md:pb-0">
                 <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
-              backgroundColor: "#646464"
+              backgroundColor: "#F8F9FA"
             }}>
-                  <span className="text-sm font-semibold text-white">{step.number}</span>
+                  <span className="text-sm font-semibold" style={{ color: "#3B3B39" }}>{step.number}</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">{step.title}</h4>
                 <p className="text-white leading-relaxed text-sm mb-2">{step.description}</p>

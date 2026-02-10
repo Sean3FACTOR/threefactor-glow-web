@@ -56,20 +56,20 @@ const TriplePenalty = () => {
               key={index}
               className="p-8 transition-all"
               style={{
-                backgroundColor: "#646464",
-                border: "1px solid rgba(255,255,255,0.08)",
+                backgroundColor: "#F8F9FA",
+                border: "1px solid #E5E7EB",
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.borderColor = "#F36F21")
               }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)")
+                (e.currentTarget.style.borderColor = "#E5E7EB")
               }
             >
-              <h4 className="text-lg font-bold text-white uppercase tracking-tight mb-4">
+              <h4 className="text-lg font-bold uppercase tracking-tight mb-4" style={{ color: "#646464" }}>
                 {penalty.title}
               </h4>
-              <p className="text-base text-white leading-relaxed">
+              <p className="text-base leading-relaxed" style={{ color: "#1a1a1a" }}>
                 {penalty.description}
               </p>
             </div>

@@ -70,25 +70,26 @@ const VCISOPage = () => {
             <p className="text-lg text-white mb-8">The danger isn&apos;t a lack of tools, it&apos;s a lack of senior security leadership.</p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-8" style={{
-              backgroundColor: "#646464",
-              border: "1px solid rgba(255,255,255,0.08)"
+              backgroundColor: "#F8F9FA",
+              border: "1px solid #E5E7EB"
             }}>
-                <h3 className="text-lg font-bold text-white mb-6">As your company grows, you&apos;re expected to:</h3>
+                <h3 className="text-lg font-bold mb-6" style={{ color: "#646464" }}>As your company grows, you&apos;re expected to:</h3>
                 <div className="space-y-4">
-                  {leadershipPressures.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-white">{item}</p></div>)}
+                  {leadershipPressures.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p style={{ color: "#1a1a1a" }}>{item}</p></div>)}
                 </div>
-                <p className="text-white font-medium mt-6 pt-6" style={{
-                borderTop: "1px solid rgba(255,255,255,0.1)"
+                <p className="font-medium mt-6 pt-6" style={{
+                borderTop: "1px solid #E5E7EB",
+                color: "#1a1a1a"
               }}>That pressure shouldn&apos;t sit on your shoulders alone.</p>
               </div>
               <div className="p-8" style={{
-              backgroundColor: "#646464",
+              backgroundColor: "#F8F9FA",
               borderTop: "2px solid #F36F21",
-              border: "1px solid rgba(255,255,255,0.08)"
+              border: "1px solid #E5E7EB"
             }}>
-                <h3 className="text-lg font-bold text-white mb-6">Without executive-level security leadership, you become:</h3>
+                <h3 className="text-lg font-bold mb-6" style={{ color: "#646464" }}>Without executive-level security leadership, you become:</h3>
                 <div className="space-y-4">
-                  {leadershipRisks.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p className="text-white">{item}</p></div>)}
+                  {leadershipRisks.map((item, i) => <div key={i} className="flex items-start gap-3"><span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} /><p style={{ color: "#1a1a1a" }}>{item}</p></div>)}
                 </div>
               </div>
             </div>
@@ -108,39 +109,39 @@ const VCISOPage = () => {
           </div>
           <div className="space-y-8">
             {pricingTiers.map(tier => <div key={tier.name} className="p-8 md:p-10 transition-all hover:shadow-lg" style={{
-            backgroundColor: "#646464",
-            border: tier.highlighted ? "2px solid #F36F21" : "1px solid rgba(255,255,255,0.08)"
+            backgroundColor: "#F8F9FA",
+            border: tier.highlighted ? "2px solid #F36F21" : "1px solid #E5E7EB"
           }}>
                 <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                   <div className="lg:w-64 flex-shrink-0">
-                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{tier.name}</h3>
+                    <h3 className="text-2xl font-bold uppercase tracking-tight" style={{ color: "#3B3B39" }}>{tier.name}</h3>
                     <p className="font-semibold" style={{
                   color: "#F36F21"
                 }}>{tier.subtitle}</p>
-                    <p className="text-sm text-white mt-2">{tier.employees}</p>
+                    <p className="text-sm mt-2" style={{ color: "#646464" }}>{tier.employees}</p>
                   </div>
                   <div className="flex-1 space-y-6">
-                    <p className="text-white italic">{tier.ideal}</p>
+                    <p className="italic" style={{ color: "#1a1a1a" }}>{tier.ideal}</p>
                     <div className="pl-4" style={{
                   borderLeft: "2px solid #F36F21"
                 }}>
-                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Business Value</h4>
-                      <p className="text-white">{tier.businessValue}</p>
-                      {tier.businessValueExtra && <p className="text-white font-medium mt-2">{tier.businessValueExtra}</p>}
+                      <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#646464" }}>The Business Value</h4>
+                      <p style={{ color: "#1a1a1a" }}>{tier.businessValue}</p>
+                      {tier.businessValueExtra && <p className="font-medium mt-2" style={{ color: "#1a1a1a" }}>{tier.businessValueExtra}</p>}
                     </div>
                     <div className="pl-4" style={{
-                  borderLeft: "2px solid rgba(255,255,255,0.2)"
+                  borderLeft: "2px solid #E5E7EB"
                 }}>
-                      <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Risk of Doing Nothing</h4>
-                      <p className="text-white">{tier.riskOfNothing}</p>
+                      <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#646464" }}>The Risk of Doing Nothing</h4>
+                      <p style={{ color: "#1a1a1a" }}>{tier.riskOfNothing}</p>
                     </div>
                     {tier.keyAsset && <div className="p-4" style={{
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)"
+                  backgroundColor: "rgba(0,0,0,0.03)",
+                  border: "1px solid #E5E7EB"
                 }}>
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-1">Key Asset</h4>
-                        <p className="text-white font-semibold">{tier.keyAsset}</p>
-                        <p className="text-sm text-white">{tier.keyAssetDesc}</p>
+                        <h4 className="text-sm font-bold uppercase tracking-wide mb-1" style={{ color: "#646464" }}>Key Asset</h4>
+                        <p className="font-semibold" style={{ color: "#1a1a1a" }}>{tier.keyAsset}</p>
+                        <p className="text-sm" style={{ color: "#646464" }}>{tier.keyAssetDesc}</p>
                       </div>}
                   </div>
                 </div>
@@ -159,22 +160,22 @@ const VCISOPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-tight">The Secret Weapon: On-Demand SME Advisory</h2>
             <p className="text-lg text-white mb-8">When the stakes are high, waiting weeks for answers isn&apos;t an option.</p>
             <div className="p-8" style={{
-            backgroundColor: "#646464",
-            border: "1px solid rgba(255,255,255,0.08)"
+            backgroundColor: "#F8F9FA",
+            border: "1px solid #E5E7EB"
           }}>
-              <p className="text-lg text-white mb-4">As a vCISO client, you move beyond standard consulting. You get a dedicated strategist focused on turning your complex regulatory requirements into a massive competitive advantage.</p>
+              <p className="text-lg mb-4" style={{ color: "#1a1a1a" }}>As a vCISO client, you move beyond standard consulting. You get a dedicated strategist focused on turning your complex regulatory requirements into a massive competitive advantage.</p>
               <div className="grid md:grid-cols-2 gap-6 mt-6">
                 <div className="pl-4" style={{
                 borderLeft: "2px solid #F36F21"
               }}>
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Win</h4>
-                  <p className="text-white">Specialized answers in minutes, not weeks.</p>
+                  <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#646464" }}>The Win</h4>
+                  <p style={{ color: "#1a1a1a" }}>Specialized answers in minutes, not weeks.</p>
                 </div>
                 <div className="pl-4" style={{
                 borderLeft: "2px solid #F36F21"
               }}>
-                  <h4 className="text-sm font-bold text-white uppercase tracking-wide mb-2">The Strategic Advantage</h4>
-                  <p className="text-white">Preferential advisory access at <span className="text-white font-semibold">$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
+                  <h4 className="text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#646464" }}>The Strategic Advantage</h4>
+                  <p style={{ color: "#1a1a1a" }}>Preferential advisory access at <span className="font-semibold" style={{ color: "#1a1a1a" }}>$150–$160/hr</span> for deep technical reviews, escalations, and high-risk decisions, without long-term contracts or vendor bias.</p>
                 </div>
               </div>
             </div>

@@ -57,12 +57,15 @@ const CyberDefenseServicesPage = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {pillars.map((p) => (
-              <div key={p.title} className="p-8 transition-all hover:shadow-lg" style={{ backgroundColor: "#646464", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div key={p.title} className="p-8 transition-all hover:shadow-lg" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E7EB")}
+              >
                 <div className="w-14 h-14 flex items-center justify-center mb-6" style={{ backgroundColor: "rgba(243,111,33,0.15)" }}>
                   <p.icon className="w-7 h-7" style={{ color: "#F36F21" }} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
-                <p className="text-white leading-relaxed">{p.description}</p>
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#646464" }}>{p.title}</h3>
+                <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>{p.description}</p>
               </div>
             ))}
           </div>

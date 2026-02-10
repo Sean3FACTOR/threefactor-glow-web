@@ -85,21 +85,20 @@ const HomepageHero = () => {
                 href="#certification-suite"
                 className="block p-5 transition-all cursor-pointer"
                 style={{
-                  backgroundColor: "#646464",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  backgroundColor: "#F8F9FA",
+                  border: "1px solid #E5E7EB",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.borderColor = "#F36F21")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.borderColor =
-                    "rgba(255,255,255,0.08)")
+                  (e.currentTarget.style.borderColor = "#E5E7EB")
                 }
               >
                 <h4 className="font-bold mb-1 uppercase tracking-wider text-xs" style={{ color: "#F36F21" }}>
                   {problem.label}
                 </h4>
-                <p className="text-white leading-relaxed italic font-semibold text-sm md:text-base">
+                <p className="leading-relaxed italic font-semibold text-sm md:text-base" style={{ color: "#1a1a1a" }}>
                   "{problem.question}"
                 </p>
               </a>
