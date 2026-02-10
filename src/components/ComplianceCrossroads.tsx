@@ -1,49 +1,51 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Landmark, CreditCard, Building2, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const problems = [
+const serviceCards = [
   {
-    label: "THE RFP PRESSURE",
-    question:
-      "An important contract requires us to be ISO 27001 certified to close. How do we do this without stalling the deal?",
+    title: "Enterprise Trust",
+    subtitle: "SOC & Attestations",
+    icon: Shield,
+    links: [
+      { label: "SOC 2 (Type I & II)", href: "/services/compliance#soc2" },
+      { label: "SOC 3 Examination", href: "/services/compliance#soc3" },
+    ],
   },
   {
-    label: "THE PROCUREMENT ROADBLOCK",
-    question:
-      "A prospect is asking for a SOC 2 Type 2 report. We've never done an audit, where do we even start?",
+    title: "ISO Certifications",
+    subtitle: "International Standards",
+    icon: Globe,
+    links: [
+      { label: "ISO 27001", href: "/services/compliance#iso27001" },
+      { label: "ISO 42001 (AI Security)", href: "/services/compliance#iso42001" },
+    ],
   },
   {
-    label: "THE NEW REGULATION",
-    question:
-      'The EU enacted NIS2 and DORA. Does this apply to us, and how do we avoid the €10M "Negligence" fine?',
+    title: "Payment Card Assessments",
+    subtitle: "Revenue Protection",
+    icon: CreditCard,
+    links: [
+      { label: "PCI DSS Validation", href: "/services/compliance#pci" },
+      { label: "PCI SSF", href: "/services/compliance#pci-ssf" },
+    ],
   },
   {
-    label: "THE AUDIT EXHAUSTION",
-    question:
-      "We're being asked for three different certifications. How do we stop doing the same work three times?",
-  },
-];
-
-const solutions = [
-  {
-    title: "ENTERPRISE TRUST",
-    frameworks: "SOC 2 (Type I & II) & ISO 27001",
-    win: "End 'Security Questionnaire Hell' and close enterprise deals faster.",
+    title: "Federal Assessments",
+    subtitle: "Government & Defense",
+    icon: Landmark,
+    links: [
+      { label: "FedRAMP®", href: "/services/compliance#fedramp" },
+      { label: "CMMC / NIST SP 800-171", href: "/services/compliance#cmmc" },
+    ],
   },
   {
-    title: "PAYMENTS & REVENUE",
-    frameworks: "PCI DSS",
-    win: "Harden payment environments and prevent immediate revenue blackouts.",
-  },
-  {
-    title: "FEDERAL & DEFENSE",
-    frameworks: "FedRAMP & CMMC",
-    win: "Unlock high-value government contracts with a defensible ATO.",
-  },
-  {
-    title: "EU REGULATORY",
-    frameworks: "NIS2 & DORA",
-    win: "Future-proof your operations against regulatory paralysis.",
+    title: "EU Regulatory Resilience",
+    subtitle: "European Compliance",
+    icon: Building2,
+    links: [
+      { label: "NIS2 Compliance", href: "/services/compliance#nis2" },
+      { label: "DORA Assessment", href: "/services/compliance#dora" },
+    ],
   },
 ];
 
@@ -58,98 +60,76 @@ const ComplianceCrossroads = () => {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
-            The Compliance Crossroads
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tight">
+            The Keys to the Market
           </h2>
-          <p className="text-lg leading-relaxed text-primary-foreground font-normal">
-            <span className="font-bold">Does this sound familiar?</span>
-            <br />
-            Most of our clients come to us when they hit a "compliance wall" that
-            threatens a major deal or their operational license.
+          <p className="text-lg leading-relaxed text-primary-foreground">
+            Frameworks That Decide Your Market Access
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column: Problem Statements */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 uppercase tracking-tight">
-              The Problem
-            </h3>
-            <div className="grid grid-cols-1 gap-4">
-              {problems.map((problem) => (
-                <div
-                  key={problem.label}
-                  className="p-6 transition-all"
-                  style={{
-                    backgroundColor: "#646464",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.borderColor = "#F36F21")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.borderColor =
-                      "rgba(255,255,255,0.08)")
-                  }
-                >
-                  <h4 className="font-bold mb-2 uppercase tracking-wider text-muted text-sm">
-                    {problem.label}
-                  </h4>
-                  <p className="text-white leading-relaxed italic font-bold">
-                    "{problem.question}"
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Certification Suite */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 uppercase tracking-tight">
-              The Engine
-            </h3>
-            <div className="grid grid-cols-1 gap-4">
-              {solutions.map((solution) => (
-                <div
-                  key={solution.title}
-                  className="p-6 transition-all"
-                  style={{
-                    backgroundColor: "#646464",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.borderColor = "#F36F21")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.borderColor =
-                      "rgba(255,255,255,0.08)")
-                  }
-                >
-                  <h4 className="font-bold mb-1 uppercase tracking-wider text-white text-lg">
-                    {solution.title}
-                  </h4>
-                  <p
-                    className="text-sm font-mono mb-2"
-                    style={{ color: "#F36F21" }}
-                  >
-                    {solution.frameworks}
-                  </p>
-                  <p className="text-white leading-relaxed">
-                    <span className="font-bold">The Win:</span> {solution.win}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4">
-              <Link
-                to="/services/compliance"
-                className="group inline-flex items-center gap-2 text-white uppercase tracking-tight transition-colors font-bold text-lg"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {serviceCards.map((card) => {
+            const Icon = card.icon;
+            return (
+              <div
+                key={card.title}
+                className="p-6 transition-all"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid #E5E7EB",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.borderColor = "#F36F21")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.borderColor = "#E5E7EB")
+                }
               >
-                Learn More
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="w-6 h-6 flex-shrink-0" style={{ color: "#F36F21" }} />
+                  <div>
+                    <h3 className="font-bold text-lg uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+                      {card.title}
+                    </h3>
+                    <p className="text-sm font-mono" style={{ color: "#646464" }}>
+                      {card.subtitle}
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="h-px w-full mb-4"
+                  style={{ backgroundColor: "#E5E7EB" }}
+                />
+                <div className="flex flex-col gap-3">
+                  {card.links.map((link) => (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="group inline-flex items-center justify-between text-sm font-medium transition-colors"
+                      style={{ color: "#3B3B39" }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.color = "#F36F21")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.color = "#3B3B39")
+                      }
+                    >
+                      {link.label}
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-12">
+          <p className="text-lg text-white leading-relaxed italic">
+            "Compliance isn't overhead, it's leverage. Walk into your next board
+            meeting with proof, not promises, that risk is controlled."
+          </p>
         </div>
       </div>
     </section>
