@@ -4,24 +4,24 @@ import { Button } from "@/components/ui/button";
 
 const problems = [
   {
-    label: "THE RFP PRESSURE",
+    label: "THE RFP BOTTLENECK",
     question:
-      "An important contract requires us to be ISO 27001 certified to close, how do we do this?",
+      "A high-value contract is contingent on ISO 27001. How do we achieve this without stalling the sales cycle?",
   },
   {
-    label: "THE PROCUREMENT ROADBLOCK",
+    label: "THE PROCUREMENT STANDARD",
     question:
-      "A prospect is asking for a SOC 2 Type 2 report, where do we even get one?",
+      "A major prospect just requested a SOC 2 Type 2 report. We need a clear path to audit-readiness that doesn't exhaust our team.",
   },
   {
-    label: "THE NEW REGULATION",
+    label: "THE REGULATORY SHIFT",
     question:
-      "The EU enacted NIS2 or DORA, does it apply to us and how do we comply?",
+      "With NIS2 and DORA now in effect, we're unsure if we are in scope. How do we ensure compliance without the guesswork?",
   },
   {
-    label: "THE AUDIT EXHAUSTION",
+    label: "THE EFFICIENCY GAP",
     question:
-      "We're being asked for three different certifications, do we have to do the work three times?",
+      "We're being asked for multiple certifications at once. How can we streamline this so we aren't auditing the same work three times?",
   },
 ];
 
