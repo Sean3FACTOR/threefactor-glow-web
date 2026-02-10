@@ -34,7 +34,8 @@ const HomepageHero = () => {
           <div className="lg:col-span-7 pt-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase leading-[1.1]">
               <span className="block">Win the RFP.</span>
-              <span className="block">OWN THE MARKET. GET CERTIFIED.</span>
+              <span className="block">OWN THE MARKET.</span>
+              <span className="block">GET CERTIFIED.</span>
             </h1>
             <p className="text-base md:text-xl mb-8 leading-relaxed text-primary-foreground">
               Don't let security compliance certification(s) slow you down.
