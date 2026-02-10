@@ -56,7 +56,7 @@ const ComplianceServicesPage = () => {
                   document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                {s.title}
+                {s.title.split(":")[0]}
               </a>
             ))}
           </div>
