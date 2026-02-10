@@ -52,6 +52,7 @@ const serviceCards = [
 const ComplianceCrossroads = () => {
   return (
     <section
+      id="certification-suite"
       className="py-20"
       style={{
         backgroundColor: "#3B3B39",
