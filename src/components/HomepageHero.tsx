@@ -75,6 +75,9 @@ const HomepageHero = () => {
 
           {/* Right Column: Problem Statements */}
           <div className="lg:col-span-5 flex flex-col gap-4">
+            <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-tight mb-2">
+              We can help with some of your common compliance concerns.
+            </h3>
             {problems.map((problem) => (
               <div
                 key={problem.label}
