@@ -197,17 +197,17 @@ const ClientChallenges = () => {
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
         <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-          We meet you where you are and guide you to the finish line        
+          We meet you where you are and guide you to the finish line.
+
+
+                    
+
+
+        
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto">
-        {challenges.map((row, i) =>
-        <ChallengeRowComponent key={row.id} row={row} index={i} />
-        )}
+        {challenges.map((row, i) => <ChallengeRowComponent key={row.id} row={row} index={i} />)}
       </div>
-    </section>);
-
-};
-
-export default ClientChallenges;
+    </section>);};export default ClientChallenges;
