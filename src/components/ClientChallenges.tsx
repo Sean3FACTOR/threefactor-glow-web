@@ -204,7 +204,7 @@ const SolutionCardComponent = ({ sol, index }: { sol: SolutionCard; index: numbe
     }}
   >
     <span className="font-mono text-[10px] tracking-widest mb-1 block" style={{ color: "#F36F21" }}>
-      {String(index + 1).padStart(2, "0")}
+      STEP {index + 1}
     </span>
     <h4 className="font-bold text-xs uppercase tracking-tight mb-1" style={{ color: "#3B3B39" }}>
       {sol.title}
