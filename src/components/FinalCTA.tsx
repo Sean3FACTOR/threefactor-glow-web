@@ -32,7 +32,7 @@ const FinalCTA = () => {
               className="group inline-flex items-center gap-2 text-white font-medium transition-colors hover:opacity-80"
             >
               <FileText className="w-5 h-5" />
-              Download the 3FACTOR Whitepaper
+              Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <p className="text-sm text-white mt-3 max-w-md mx-auto">

@@ -54,7 +54,7 @@ const CyberMaturityAWS = () => {
 
             <div className="p-8 mb-12" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#646464" }}>Who Is This For?</h2>
-              <p className="leading-relaxed mb-4" style={{ color: "#1a1a1a" }}>The Cyber Maturity Assessment is a common starting point for a client to engage with 3FACTOR's services. It is primarily used by organizations with a limited understanding of their current cyber risks and controls.</p>
+              <p className="leading-relaxed mb-4" style={{ color: "#1a1a1a" }}>The Cyber Maturity Assessment is a common starting point for a client to engage with 3<span style={{ color: "#F36F21" }}>FACTOR</span>'s services. It is primarily used by organizations with a limited understanding of their current cyber risks and controls.</p>
               <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>Due to its adaptable nature, the Cyber Maturity Assessment is suitable for clients of any size or industry.</p>
             </div>
 
