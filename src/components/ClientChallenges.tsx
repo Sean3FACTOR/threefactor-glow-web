@@ -196,10 +196,12 @@ const ClientChallenges = () => {
         <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4" style={{ color: "#FFFFFF" }}>
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
-        <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-          We meet you where you are and guide you to the finish line. We assist you through every step, including the final audit as your representative.
-        
+        <p className="text-lg leading-relaxed mb-4" style={{ color: "rgba(255,255,255,0.7)" }}>
+          We meet you where you are and guide you to the finish line.
         </p>
+        <ul className="list-disc list-inside text-lg leading-relaxed space-y-1" style={{ color: "rgba(255,255,255,0.7)" }}>
+          <li>We assist you through every step, including the final audit as your representative.</li>
+        </ul>
       </div>
 
       <div className="max-w-7xl mx-auto">
