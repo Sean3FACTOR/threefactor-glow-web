@@ -305,12 +305,6 @@ const ClientChallenges = () => {
       style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}
     >
       <div className="container mx-auto px-4 mb-12">
-        <span
-          className="font-mono text-xs tracking-widest uppercase mb-4 block"
-          style={{ color: "#F36F21" }}
-        >
-          [SEC-02] — REAL CHALLENGES
-        </span>
         <h2
           className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4"
           style={{ color: "#FFFFFF" }}
