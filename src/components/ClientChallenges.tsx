@@ -117,12 +117,6 @@ const DesktopChallenges = () => {
                 borderLeft: isActive ? "3px solid #F36F21" : "3px solid transparent",
               }}
             >
-              <span
-                className="font-mono text-[10px] tracking-widest uppercase block mb-2"
-                style={{ color: isActive ? "#F36F21" : "rgba(255,255,255,0.4)" }}
-              >
-                [{ch.id}]
-              </span>
               <h4
                 className="text-sm font-bold uppercase tracking-tight leading-snug mb-2"
                 style={{ color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.6)" }}
@@ -241,12 +235,6 @@ const MobileChallenges = () => {
               }}
             >
               <div className="flex-1">
-                <span
-                  className="font-mono text-[10px] tracking-widest uppercase block mb-1"
-                  style={{ color: isOpen ? "#F36F21" : "rgba(255,255,255,0.4)" }}
-                >
-                  [{ch.id}]
-                </span>
                 <h4
                   className="text-sm font-bold uppercase tracking-tight leading-snug"
                   style={{ color: isOpen ? "#FFFFFF" : "rgba(255,255,255,0.6)" }}
