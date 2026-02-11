@@ -128,7 +128,7 @@ const ChallengeRowComponent = ({ row, index }: {row: ChallengeRow;index: number;
 
       {/* Right Column — Solution Grid */}
       <div className="lg:col-span-6 p-8 md:p-12" style={{ backgroundColor: "#3B3B39" }}>
-        <span className="font-mono text-xs tracking-widest uppercase mb-6 block" style={{ color: "rgba(255,255,255,0.4)" }}>
+        <span className="font-mono text-xs tracking-widest uppercase mb-6 block" style={{ color: "#FFFFFF" }}>
           THE SOLUTION
         </span>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
