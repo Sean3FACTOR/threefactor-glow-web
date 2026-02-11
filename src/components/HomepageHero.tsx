@@ -91,6 +91,9 @@ const HomepageHero = () => {
 
           {/* Right – Compliance Options (vertical) */}
           <div className="lg:col-span-5 flex flex-col gap-3">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-white mb-1 font-mono">
+              Frameworks That Decide Your Market Access
+            </h2>
             {serviceCards.map((card) => (
               <div
                 key={card.title}
