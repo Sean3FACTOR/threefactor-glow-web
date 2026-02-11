@@ -7,7 +7,7 @@ const serviceCards = [
     links: [
       { label: "SOC 2 (Type I & II)", href: "/services/compliance#soc2" },
       { label: "ISO 27001", href: "/services/compliance#iso27001" },
-      { label: "SOX (Financial Integrity)", href: "/services/compliance#sox" },
+      { label: "SOX", href: "/services/compliance#sox" },
     ],
   },
   {
