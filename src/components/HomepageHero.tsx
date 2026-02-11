@@ -2,36 +2,12 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const problems = [
-  {
-    label: "THE RFP BOTTLENECK",
-    question:
-      "A high-value contract is contingent on ISO 27001. How do we achieve this without stalling the sales cycle?",
-  },
-  {
-    label: "THE PROCUREMENT STANDARD",
-    question:
-      "A major prospect just requested a SOC 2 Type 2 report. We need a clear path to audit-readiness that doesn't exhaust our team.",
-  },
-  {
-    label: "THE REGULATORY SHIFT",
-    question:
-      "With NIS2 and DORA now in effect, we're unsure if we are in scope. How do we ensure compliance without the guesswork?",
-  },
-  {
-    label: "THE EFFICIENCY GAP",
-    question:
-      "We're being asked for multiple certifications at once. How can we streamline this so we aren't auditing the same work three times?",
-  },
-];
 
 const HomepageHero = () => {
   return (
     <section className="pt-14 pb-16" style={{ backgroundColor: "#3B3B39" }}>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-10 items-start">
-          {/* Left Column: Value Proposition */}
-          <div className="lg:col-span-7 pt-4">
+        <div className="max-w-3xl pt-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase leading-[1.1]">
               <span className="block">Win the RFP.</span>
               <span className="block">OWN THE MARKET.</span>
@@ -72,38 +48,6 @@ const HomepageHero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-          </div>
-
-          {/* Right Column: Problem Statements */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
-            <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-tight mb-2">
-              We can help with some of your common compliance concerns.
-            </h3>
-            {problems.map((problem) => (
-              <a
-                key={problem.label}
-                href="#certification-suite"
-                className="block p-5 transition-all cursor-pointer"
-                style={{
-                  backgroundColor: "#F8F9FA",
-                  border: "1px solid #E5E7EB",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.borderColor = "#F36F21")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.borderColor = "#E5E7EB")
-                }
-              >
-                <h4 className="font-bold mb-1 uppercase tracking-wider text-xs" style={{ color: "#F36F21" }}>
-                  {problem.label}
-                </h4>
-                <p className="leading-relaxed italic font-semibold text-sm md:text-base" style={{ color: "#1a1a1a" }}>
-                  "{problem.question}"
-                </p>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </section>
