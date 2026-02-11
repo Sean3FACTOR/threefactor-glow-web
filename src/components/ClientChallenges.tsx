@@ -124,7 +124,7 @@ const DesktopChallenges = () => {
                 {ch.headline}
               </h4>
               <p
-                className="text-xs leading-relaxed italic line-clamp-2"
+                className="text-xs leading-relaxed italic"
                 style={{
                   color: isActive ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.3)",
                   fontFamily: "Georgia, 'Times New Roman', serif",
