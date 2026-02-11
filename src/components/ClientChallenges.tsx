@@ -198,11 +198,11 @@ const ClientChallenges = () => {
         </h2>
         <ul className="text-lg leading-relaxed space-y-2" style={{ color: "rgba(255,255,255,0.7)" }}>
           <li className="flex items-start gap-3">
-            <span style={{ color: "#F36F21" }} className="mt-1 shrink-0">◆</span>
+            <span style={{ color: "#F36F21" }} className="shrink-0 leading-[1.75rem]">◆</span>
             <span>We meet you where you are and guide you to the finish line.</span>
           </li>
           <li className="flex items-start gap-3">
-            <span style={{ color: "#F36F21" }} className="mt-1 shrink-0">◆</span>
+            <span style={{ color: "#F36F21" }} className="shrink-0 leading-[1.75rem]">◆</span>
             <span>We assist you through every step, including the final audit as your representative.</span>
           </li>
         </ul>
