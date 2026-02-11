@@ -126,7 +126,7 @@ const DesktopChallenges = () => {
               <p
                 className="text-xs leading-relaxed italic"
                 style={{
-                  color: isActive ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.3)",
+                  color: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.45)",
                   fontFamily: "Georgia, 'Times New Roman', serif",
                 }}
               >
@@ -261,7 +261,7 @@ const MobileChallenges = () => {
               <div className="p-6" style={{ backgroundColor: "#3B3B39" }}>
                 <p
                   className="text-sm leading-relaxed italic mb-5"
-                  style={{ color: "rgba(255,255,255,0.6)", fontFamily: "Georgia, 'Times New Roman', serif" }}
+                  style={{ color: "rgba(255,255,255,0.85)", fontFamily: "Georgia, 'Times New Roman', serif" }}
                 >
                   "{ch.concern}"
                 </p>
