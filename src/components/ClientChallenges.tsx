@@ -126,7 +126,7 @@ const DesktopChallenges = () => {
               <p
                 className="text-xs leading-relaxed italic"
                 style={{
-                  color: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.45)",
+                  color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.45)",
                   fontFamily: "Georgia, 'Times New Roman', serif",
                 }}
               >
