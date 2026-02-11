@@ -194,7 +194,7 @@ const ClientChallenges = () => {
           [SEC-02] — REAL CHALLENGES
         </span>
         <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4" style={{ color: "#FFFFFF" }}>
-          3Factor Client Challenges
+          3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
         <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
           We meet you where you are and guide you to the finish line        
