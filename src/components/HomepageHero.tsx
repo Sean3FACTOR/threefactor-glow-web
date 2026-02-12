@@ -32,22 +32,22 @@ const HomepageHero = () => {
               Don't let security compliance certification(s) slow you down.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <div className="space-y-3">
-                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
-                    Scale into regulated sectors without the friction of security roadblocks.
-                  </p>
-                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
-                    Stop letting revenue-blocking gaps stall your growth.
-                  </p>
-                </div>
-              </div>
               <div className="bg-white p-6 flex items-center text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
                   We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
                 </p>
+              </div>
+              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+                <div className="space-y-3">
+                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#9CA3AF" }} />
+                    Scale into regulated sectors without the friction of security roadblocks.
+                  </p>
+                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#9CA3AF" }} />
+                    Stop letting revenue-blocking gaps stall your growth.
+                  </p>
+                </div>
               </div>
             </div>
             <Link to="/contact" className="inline-block">
