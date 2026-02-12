@@ -20,7 +20,7 @@ const SuccessOutcomes = () => {
     <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
         <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
-        <div className="max-w-5xl mb-12">
+        <div className="max-w-5xl mb-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             From Vendor to Trusted Market Authority
           </h2>
@@ -32,13 +32,13 @@ const SuccessOutcomes = () => {
           </p>
         </div>
 
-        <h3 className="text-3xl md:text-4xl font-extrabold mb-10 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+        <h3 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
           What Success Looks Like
         </h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left – Feature cards */}
-          <div className="lg:col-span-7 flex flex-col gap-5">
+          <div className="lg:col-span-7 flex flex-col gap-3">
             {outcomes.map((outcome) => (
                 <div
                   key={outcome.title}
