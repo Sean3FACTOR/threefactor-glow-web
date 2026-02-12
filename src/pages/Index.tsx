@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HomepageHero from "@/components/HomepageHero";
 import ClientChallenges from "@/components/ClientChallenges";
+import FrameworkCards from "@/components/FrameworkCards";
 import TriplePenalty from "@/components/TriplePenalty";
 import EliteAuthority from "@/components/EliteAuthority";
 import Certifications from "@/components/Certifications";
@@ -17,6 +18,7 @@ const Index = () => {
       <div className="pt-14">
         <HomepageHero />
         <ClientChallenges />
+        <FrameworkCards />
         <TriplePenalty />
         <EliteAuthority />
         <CompliancePlan />
