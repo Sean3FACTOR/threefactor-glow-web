@@ -1,4 +1,6 @@
 import { Cloud, Shield, Scale, Layers } from "lucide-react";
+import spyroWorking from "@/assets/homepage/spyro-working.jpg";
+
 const authorityPoints = [{
   icon: Layers,
   title: "BEYOND THE AUDIT",
@@ -16,28 +18,7 @@ const authorityPoints = [{
   title: "UNBIASED STRATEGY",
   description: "As a vendor-agnostic firm, our only agenda is your long-term, defensible compliance, not selling tools."
 }];
-const ProgramWrapperDiagram = () => <svg viewBox="0 0 1200 1060" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-secondary-foreground">
-    <rect x="60" y="50" width="1080" height="960" stroke="#F36F21" strokeWidth="2" opacity="1" fill="none" />
-    <rect x="90" y="100" width="1020" height="860" stroke="#F36F21" strokeWidth="1" opacity="0.6" fill="none" strokeDasharray="12 6" />
-    <rect x="300" y="14" width="600" height="72" fill="#3B3B39" />
-    <text x="600" y="50" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif" dominantBaseline="central">PROGRAM WRAPPER</text>
-    <rect x="300" y="974" width="600" height="72" fill="#3B3B39" />
-    <text x="600" y="1010" textAnchor="middle" fill="white" opacity="1" fontSize="38" fontWeight="bold" fontFamily="sans-serif" dominantBaseline="central">CERTIFIED CONFIDENCE</text>
-    <rect x="150" y="200" width="420" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="#F8F9FA" fillOpacity="0.5" />
-    <text x="360" y="288" textAnchor="middle" fill="#3B3B39" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">RISK ARCHITECTURE</text>
-    <rect x="630" y="200" width="450" height="150" stroke="#F36F21" strokeWidth="1.5" opacity="1" fill="#F8F9FA" fillOpacity="0.5" />
-    <text x="855" y="288" textAnchor="middle" fill="#3B3B39" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">MATURITY MAPPING</text>
-    <rect x="150" y="440" width="930" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="#F8F9FA" fillOpacity="0.3" />
-    <text x="615" y="528" textAnchor="middle" fill="#3B3B39" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">FRAMEWORK ALIGNMENT</text>
-    <rect x="150" y="710" width="435" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="#F8F9FA" fillOpacity="0.3" />
-    <text x="366" y="798" textAnchor="middle" fill="#3B3B39" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">GAP DISCOVERY</text>
-    <rect x="645" y="710" width="435" height="150" stroke="#F36F21" strokeWidth="1.2" opacity="1" fill="#F8F9FA" fillOpacity="0.3" />
-    <text x="861" y="798" textAnchor="middle" fill="#3B3B39" opacity="1" fontSize="34" fontWeight="600" fontFamily="sans-serif">AUDIT DEFENSE</text>
-    <line x1="360" y1="350" x2="360" y2="440" stroke="#3B3B39" strokeWidth="1.2" opacity="0.3" strokeDasharray="8 4" />
-    <line x1="855" y1="350" x2="855" y2="440" stroke="#3B3B39" strokeWidth="1.2" opacity="0.3" strokeDasharray="8 4" />
-    <line x1="615" y1="590" x2="366" y2="710" stroke="#3B3B39" strokeWidth="1.2" opacity="0.3" strokeDasharray="8 4" />
-    <line x1="615" y1="590" x2="861" y2="710" stroke="#3B3B39" strokeWidth="1.2" opacity="0.3" strokeDasharray="8 4" />
-  </svg>;
+
 const EliteAuthority = () => {
   return <section className="py-20" style={{
     backgroundColor: "#F8F9FA",
@@ -57,7 +38,7 @@ const EliteAuthority = () => {
           Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
         </h3>
 
-        <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-center">
+        <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-start">
           <div className="col-span-12 lg:col-span-5 space-y-6">
             {authorityPoints.map(point => <div key={point.title} className="p-6 transition-all hover:shadow-lg" style={{
             backgroundColor: "#FFFFFF",
@@ -71,10 +52,18 @@ const EliteAuthority = () => {
                 </p>
               </div>)}
           </div>
-          <div className="col-span-12 lg:col-span-7 flex items-center">
-            <div className="w-full md:w-[85%] mx-auto overflow-hidden">
-              <ProgramWrapperDiagram />
+          <div className="col-span-12 lg:col-span-7 flex flex-col gap-6">
+            {/* Team member image */}
+            <div className="w-full overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
+              <img
+                src={spyroWorking}
+                alt="3FACTOR team member at work"
+                className="w-full h-64 md:h-80 object-cover object-top"
+              />
             </div>
+            <p className="text-sm font-mono uppercase tracking-widest" style={{ color: "#646464" }}>
+              [IMG-01] — Dedicated expertise, focused execution.
+            </p>
           </div>
         </div>
       </div>
