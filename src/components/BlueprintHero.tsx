@@ -19,22 +19,22 @@ const BlueprintHero = ({
   ctaLink
 }: BlueprintHeroProps) => {
   return (
-    <section className="pt-14 pb-16 relative overflow-hidden" style={{ backgroundColor: "#3B3B39" }}>
+    <section className="pt-14 pb-16 relative overflow-hidden" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
 
         <div className="grid grid-cols-12 gap-x-4 items-center">
           <div className="col-span-12 lg:col-span-7">
             <div className="flex items-center gap-2 mb-6">
               <span className="text-sm font-medium" style={{ color: "#F36F21" }}>Services</span>
-              <span className="text-white/60">/</span>
-              <span className="text-sm text-white">{breadcrumb}</span>
+              <span style={{ color: "rgba(59,59,57,0.4)" }}>/</span>
+              <span className="text-sm" style={{ color: "#3B3B39" }}>{breadcrumb}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-white mb-8 leading-[1.1] uppercase">
+            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold mb-8 leading-[1.1] uppercase" style={{ color: "#3B3B39" }}>
               {headline}
             </h1>
 
-            <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed">
+            <p className="text-xl md:text-2xl mb-10 leading-relaxed" style={{ color: "#646464" }}>
               {subhead}
             </p>
 

@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
       <Navigation />
 
       <main className="pt-20 pb-24">
@@ -62,17 +62,17 @@ const Contact = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <span className="text-sm font-mono uppercase tracking-widest" style={{ color: "#F36F21" }}>Contact Us</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
+              <h1 className="text-4xl md:text-5xl font-bold mt-4" style={{ color: "#3B3B39" }}>
                 Let's Start a Conversation
               </h1>
-              <p className="text-white mt-4 max-w-2xl mx-auto">
+              <p className="mt-4 max-w-2xl mx-auto" style={{ color: "#646464" }}>
                 Ready to elevate your security posture? Get in touch with our team to discuss your unique challenges.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+              <div className="p-8" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
                 <h2 className="text-2xl font-semibold mb-6" style={{ color: "#646464" }}>
                   Send us a message
                 </h2>
@@ -173,7 +173,7 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-8">
-                <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                <div className="p-8" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
                   <h2 className="text-2xl font-semibold mb-6" style={{ color: "#646464" }}>
                     Get in touch
                   </h2>
@@ -213,7 +213,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                <div className="p-8" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
                   <h3 className="font-semibold mb-2" style={{ color: "#646464" }}>Response Time</h3>
                   <p className="text-sm" style={{ color: "#1a1a1a" }}>
                     We typically respond within 24 hours during business days. For urgent security matters, please indicate the urgency in your message.
