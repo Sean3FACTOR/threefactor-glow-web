@@ -1,28 +1,10 @@
 import { ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import muralImage from "@/assets/homepage/compliance-edge-cta.jpg";
 
 const FinalCTA = () => {
   return (
     <>
-      {/* Full-bleed mural image — AMC-style atmospheric divider */}
-      <div className="relative w-full h-64 md:h-80 overflow-hidden">
-        <img
-          src={muralImage}
-          alt="3FACTOR brand mural"
-          className="w-full h-full object-cover object-center"
-        />
-        <div
-          className="absolute inset-0 flex items-center justify-center"
-          style={{ background: "rgba(59,59,57,0.6)" }}
-        >
-          <p className="text-white text-2xl md:text-4xl font-bold uppercase tracking-tight text-center px-4">
-            Your Compliance Partner
-          </p>
-        </div>
-      </div>
-
       <section className="py-24" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
