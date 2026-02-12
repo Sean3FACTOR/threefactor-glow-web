@@ -94,7 +94,7 @@ const SuccessOutcomes = () => {
               className="absolute -bottom-4 -left-4 w-32 h-32 rounded-full opacity-10"
               style={{ backgroundColor: "#F36F21" }}
             />
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative w-4/5 overflow-hidden rounded-2xl shadow-xl">
               <img
                 src={spyroWorking}
                 alt="3FACTOR team member at work"
