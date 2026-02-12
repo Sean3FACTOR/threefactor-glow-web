@@ -98,13 +98,8 @@ const EliteAuthority = () => {
           </h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Left: Program Wrapper Diagram */}
-            <div className="lg:col-span-5 flex items-center">
-              <ProgramWrapperDiagram />
-            </div>
-
-            {/* Right: Authority boxes */}
-            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Left: Authority boxes */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4 lg:order-1">
               {authorityPoints.map(point => (
                 <div
                   key={point.title}
@@ -124,6 +119,11 @@ const EliteAuthority = () => {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Right: Program Wrapper Diagram */}
+            <div className="lg:col-span-5 flex items-center lg:order-2">
+              <ProgramWrapperDiagram />
             </div>
           </div>
         </div>
