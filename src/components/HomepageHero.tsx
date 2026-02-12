@@ -39,12 +39,12 @@ const HomepageHero = () => {
               </div>
               <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <div className="space-y-3">
-                  <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#9CA3AF" }} />
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
                     Scale into regulated sectors without the friction of security roadblocks.
                   </p>
-                  <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#9CA3AF" }} />
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
                     Stop letting revenue-blocking gaps stall your growth.
                   </p>
                 </div>
