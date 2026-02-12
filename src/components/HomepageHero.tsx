@@ -28,11 +28,13 @@ const HomepageHero = () => {
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
+            <div className="bg-white p-6 mb-4" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+              <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39", opacity: 0.7 }}>
+                Don't let security compliance certification(s) slow you down.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
               <div className="bg-white p-6" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <p className="text-base md:text-lg mb-4 leading-relaxed" style={{ color: "#3B3B39", opacity: 0.7 }}>
-                  Don't let security compliance certification(s) slow you down.
-                </p>
                 <div className="space-y-3">
                   <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
                     <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
