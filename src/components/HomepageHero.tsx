@@ -28,7 +28,7 @@ const HomepageHero = () => {
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-8 leading-relaxed text-white/70 font-bold">
+            <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
               Don't let security compliance certification(s) slow you down.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
