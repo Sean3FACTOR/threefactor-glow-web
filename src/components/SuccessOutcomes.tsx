@@ -1,21 +1,17 @@
-import { Zap, Globe, Rocket } from "lucide-react";
 import spyroWorking from "@/assets/homepage/spyro-working.jpg";
 
 const outcomes = [
   {
     title: "CLOSE DEALS FASTER",
     description: "Security questionnaires completed in days, not quarters. Auditors nod instead of probing.",
-    icon: Zap,
   },
   {
     title: "UNRESTRICTED EXPANSION",
     description: "No geography, tender, or enterprise buyer is off-limits when compliance is built right.",
-    icon: Globe,
   },
   {
     title: "TOTAL OPERATIONAL VELOCITY",
     description: "Scale confidently knowing your security posture supports growth instead of dragging it down.",
-    icon: Rocket,
   },
 ];
 
@@ -43,9 +39,7 @@ const SuccessOutcomes = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left – Feature cards */}
           <div className="lg:col-span-7 flex flex-col gap-5">
-            {outcomes.map((outcome) => {
-              const Icon = outcome.icon;
-              return (
+            {outcomes.map((outcome) => (
                 <div
                   key={outcome.title}
                   className="p-8 transition-all duration-300 cursor-default group hover:scale-[1.02] hover:shadow-lg"
@@ -62,26 +56,17 @@ const SuccessOutcomes = () => {
                     e.currentTarget.style.backgroundColor = "#F1F2F4";
                   }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className="shrink-0 w-10 h-10 flex items-center justify-center mt-1"
-                      style={{ backgroundColor: "rgba(243,111,33,0.1)" }}
-                    >
-                      <Icon size={20} style={{ color: "#F36F21" }} />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-                        {outcome.title}
-                      </h4>
-                      <p className="leading-relaxed" style={{ color: "#646464" }}>
-                        {outcome.description}
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+                      {outcome.title}
+                    </h4>
+                    <p className="leading-relaxed" style={{ color: "#646464" }}>
+                      {outcome.description}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
 
           {/* Right – Stylish image */}
           <div className="lg:col-span-5 flex items-center justify-center relative">
