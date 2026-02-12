@@ -28,22 +28,28 @@ const HomepageHero = () => {
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-8 leading-relaxed text-white/70">
-              Don't let security compliance certification(s) slow you down.
-            </p>
-            <div className="space-y-4 mb-10">
-              <p className="text-base md:text-lg flex items-start gap-3 text-white/90">
-                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
-                Scale into regulated sectors without the friction of security roadblocks.
-              </p>
-              <p className="text-base md:text-lg flex items-start gap-3 text-white/90">
-                <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
-                Stop letting revenue-blocking gaps stall your growth.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              <div className="bg-white p-6" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+                <p className="text-base md:text-lg mb-4 leading-relaxed" style={{ color: "#3B3B39", opacity: 0.7 }}>
+                  Don't let security compliance certification(s) slow you down.
+                </p>
+                <div className="space-y-3">
+                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
+                    Scale into regulated sectors without the friction of security roadblocks.
+                  </p>
+                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
+                    Stop letting revenue-blocking gaps stall your growth.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white p-6" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+                <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
+                  We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
+                </p>
+              </div>
             </div>
-            <p className="text-base md:text-lg mb-10 leading-relaxed text-white/70">
-              We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
-            </p>
             <Link to="/contact">
               <Button
                 size="lg"
