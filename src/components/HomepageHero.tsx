@@ -21,41 +21,39 @@ const HomepageHero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 py-20">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-4 relative z-10 py-20 text-center">
+        <div className="max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1] text-white">
               <span className="block">Win the RFP.</span>
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
-            <div className="bg-white p-6 mb-4" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-              <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39", opacity: 0.7 }}>
-                Don't let security compliance certification(s) slow you down.
-              </p>
-            </div>
+            <p className="text-base md:text-xl mb-8 leading-relaxed text-white/70">
+              Don't let security compliance certification(s) slow you down.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
               <div className="bg-white p-6" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <div className="space-y-3">
-                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
+                  <p className="text-sm md:text-base flex items-center justify-center gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0" style={{ backgroundColor: "#F36F21" }} />
                     Scale into regulated sectors without the friction of security roadblocks.
                   </p>
-                  <p className="text-sm md:text-base flex items-start gap-3" style={{ color: "#3B3B39" }}>
-                    <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5" style={{ backgroundColor: "#F36F21" }} />
+                  <p className="text-sm md:text-base flex items-center justify-center gap-3" style={{ color: "#3B3B39" }}>
+                    <span className="w-2 h-2 rotate-45 flex-shrink-0" style={{ backgroundColor: "#F36F21" }} />
                     Stop letting revenue-blocking gaps stall your growth.
                   </p>
                 </div>
               </div>
-              <div className="bg-white p-6" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+              <div className="bg-white p-6 flex items-center" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
                   We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
                 </p>
               </div>
             </div>
-            <Link to="/contact">
+            <Link to="/contact" className="inline-block">
               <Button
                 size="lg"
-                className="group font-semibold transition-all w-full sm:w-auto text-white"
+                className="group font-semibold transition-all text-white"
                 style={{ backgroundColor: "#F36F21", border: "1px solid #F36F21" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "transparent";
