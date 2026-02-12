@@ -38,21 +38,21 @@ const ProgramWrapperDiagram = () => (
 
       {/* Connector line down */}
       <div className="flex justify-center mb-4">
-        <div className="w-px h-6" style={{ backgroundColor: "rgba(59,59,57,0.2)" }} />
+        <div className="w-px h-6" style={{ backgroundColor: "#3B3B39" }} />
       </div>
 
       {/* Row 2: Framework Alignment */}
       <div className="p-4 flex items-center justify-center text-center mb-4" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
         <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "#3B3B39" }}>
-          Framework Alignment (ISO · PCI · SOC 2 · FedRAMP · NIS2/DORA · CMMC)
+          Framework Alignment
         </span>
       </div>
 
       {/* V-shape connector */}
       <div className="flex justify-center mb-4">
         <svg width="200" height="30" viewBox="0 0 200 30" fill="none" className="overflow-visible">
-          <line x1="100" y1="0" x2="40" y2="28" stroke="rgba(59,59,57,0.2)" strokeWidth="1" strokeDasharray="4 3" />
-          <line x1="100" y1="0" x2="160" y2="28" stroke="rgba(59,59,57,0.2)" strokeWidth="1" strokeDasharray="4 3" />
+          <line x1="100" y1="0" x2="40" y2="28" stroke="#3B3B39" strokeWidth="1" strokeDasharray="4 3" />
+          <line x1="100" y1="0" x2="160" y2="28" stroke="#3B3B39" strokeWidth="1" strokeDasharray="4 3" />
         </svg>
       </div>
 
@@ -69,8 +69,8 @@ const ProgramWrapperDiagram = () => (
 
     {/* Arrow down to Certified Confidence */}
     <div className="flex flex-col items-center py-3">
-      <div className="w-px h-6" style={{ backgroundColor: "rgba(59,59,57,0.3)" }} />
-      <ChevronDown size={20} style={{ color: "rgba(59,59,57,0.35)" }} className="-mt-1" />
+      <div className="w-px h-6" style={{ backgroundColor: "#3B3B39" }} />
+      <ChevronDown size={20} style={{ color: "#3B3B39" }} className="-mt-1" />
     </div>
 
     <h4 className="text-sm font-bold uppercase tracking-widest font-mono text-center" style={{ color: "#3B3B39" }}>
