@@ -20,21 +20,6 @@ const TriplePenalty = () => {
   return (
     <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-            The High Cost of "Paper-Thin" Compliance
-          </h2>
-          <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3B3B39" }}>
-            A checklist won't stop a breach and it certainly won't satisfy a
-            sophisticated enterprise auditor. Generic box-ticking creates an
-            illusion of safety: compliance that looks fine on paper but collapses
-            under scrutiny.
-          </p>
-          <p className="text-lg font-medium" style={{ color: "#3B3B39" }}>
-            If your compliance only exists in documentation, you're one audit
-            away from losing momentum, or worse.
-          </p>
-        </div>
 
         <div
           className="h-px w-full my-12"
