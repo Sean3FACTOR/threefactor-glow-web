@@ -35,13 +35,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
-        <div className="mt-8 pt-8 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-          <div className="inline-flex items-center gap-2 text-sm text-white">
-            <Shield className="w-4 h-4 text-white" />
-            <span>Download Our 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper: Learn how to frame security as a growth engine.</span>
-          </div>
-        </div>
       </div>
     </footer>
   );
