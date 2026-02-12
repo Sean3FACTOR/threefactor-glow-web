@@ -56,9 +56,9 @@ const SuccessOutcomes = () => {
           </div>
 
           {/* Right – Spyro image box */}
-          <div className="lg:col-span-5 flex">
+          <div className="lg:col-span-5 flex items-center justify-center">
             <div
-              className="w-full overflow-hidden"
+              className="w-1/2 overflow-hidden"
               style={{ border: "1px solid #E5E7EB" }}
             >
               <img
