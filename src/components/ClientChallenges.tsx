@@ -67,22 +67,6 @@ const challenges: ChallengeRow[] = [
     ctaLabel: "Book a NIS2/DORA Scope Call",
     ctaHref: "/contact",
   },
-  {
-    id: "CH-04",
-    headline: "End the 'Groundhog Day' of repetitive security audits",
-    solutionHeader: "The Integrated Compliance Blueprint",
-    concern:
-      "It feels like we're answering the same security questions over and over for different frameworks. There has to be a more efficient way to manage our NIST, HIPAA, or PCI requirements without repeating the same work three times.",
-    solutions: [
-      { title: "Integrated GRC Strategy", description: "Harmonize standards into one unified control set." },
-      { title: "Common Controls & Reuse", description: "Standardize controls, testing, and evidence sources." },
-      { title: "Audit Programme Mgmt", description: "One audit calendar and one operating cadence." },
-      { title: "Continuous Compliance", description: "Workflows and tooling to reduce manual duplication." },
-      { title: "Multi-Framework Support", description: "Coordinate requests and keep audits moving smoothly." },
-    ],
-    ctaLabel: "Request an Integrated Compliance Blueprint",
-    ctaHref: "/contact",
-  },
 ];
 
 /* ── Desktop: Tabbed two-column layout ── */
