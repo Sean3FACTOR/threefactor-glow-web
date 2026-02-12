@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import enterpriseSkyline from "@/assets/homepage/enterprise-skyline.jpg";
 
 const serviceCards = [
   {
@@ -42,46 +43,61 @@ const serviceCards = [
 
 const HomepageHero = () => {
   return (
-    <section className="pt-14 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-4">
+    <section className="relative min-h-[85vh] flex items-center" style={{ overflow: "hidden" }}>
+      {/* Full-bleed background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={enterpriseSkyline}
+          alt=""
+          className="w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        {/* Dark overlay for text legibility */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left – Value Proposition */}
           <div className="lg:col-span-7">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1]" style={{ color: "#3B3B39" }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1] text-white">
               <span className="block">Win the RFP.</span>
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-8 leading-relaxed" style={{ color: "#646464" }}>
+            <p className="text-base md:text-xl mb-8 leading-relaxed text-white/70">
               Don't let security compliance certification(s) slow you down.
             </p>
             <div className="space-y-4 mb-10">
-              <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
+              <p className="text-base md:text-lg flex items-start gap-3 text-white/90">
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
-              <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
+              <p className="text-base md:text-lg flex items-start gap-3 text-white/90">
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
-            <p className="text-base md:text-lg mb-4 leading-relaxed" style={{ color: "#646464" }}>
+            <p className="text-base md:text-lg mb-4 leading-relaxed text-white/70">
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
-            <p className="text-base md:text-lg font-medium mb-10" style={{ color: "#3B3B39" }}>
+            <p className="text-base md:text-lg font-medium mb-10 text-white">
               Security should close the deal, not kill the momentum.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
-                className="group text-white font-semibold transition-colors w-full sm:w-auto hover:opacity-90"
-                style={{ backgroundColor: "#646464" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#F36F21")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#646464")
-                }
+                className="group font-semibold transition-all w-full sm:w-auto text-white"
+                style={{ backgroundColor: "#F36F21", border: "1px solid #F36F21" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#F36F21";
+                }}
               >
                 Book Your Compliance Strategy Session
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -89,49 +105,36 @@ const HomepageHero = () => {
             </Link>
           </div>
 
-          {/* Right – Compliance Options (vertical) */}
+          {/* Right – Compliance Options */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-1 font-mono" style={{ color: "#3B3B39" }}>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-1 font-mono text-white/80">
               Frameworks That Decide Your Market Access
             </h2>
             {serviceCards.map((card) => (
               <div
                 key={card.title}
-                className="p-5 transition-all"
+                className="p-5 transition-all backdrop-blur-sm"
                 style={{
-                  backgroundColor: "#FFFFFF",
-                  border: "1px solid #E5E7EB",
+                  backgroundColor: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.15)",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.borderColor = "#F36F21")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.borderColor = "#E5E7EB")
+                  (e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)")
                 }
               >
-                <h3
-                  className="font-bold text-sm uppercase tracking-tight mb-2"
-                  style={{ color: "#3B3B39" }}
-                >
+                <h3 className="font-bold text-sm uppercase tracking-tight mb-2 text-white">
                   {card.title}
                 </h3>
-                <div
-                  className="h-px w-full mb-2"
-                  style={{ backgroundColor: "#E5E7EB" }}
-                />
+                <div className="h-px w-full mb-2" style={{ backgroundColor: "rgba(255,255,255,0.12)" }} />
                 <div className="flex flex-col gap-1.5">
                   {card.links.map((link) => (
                     <Link
                       key={link.label}
                       to={link.href}
-                      className="group inline-flex items-center justify-between text-xs font-medium transition-colors"
-                      style={{ color: "#3B3B39" }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.color = "#F36F21")
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = "#3B3B39")
-                      }
+                      className="group inline-flex items-center justify-between text-xs font-medium transition-colors text-white/70 hover:text-[#F36F21]"
                     >
                       {link.label}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />

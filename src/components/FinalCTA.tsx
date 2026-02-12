@@ -5,19 +5,27 @@ import muralImage from "@/assets/homepage/3f-mural.jpg";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24" style={{ backgroundColor: "#F8F9FA", borderTop: "1px solid rgba(59,59,57,0.08)" }}>
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          {/* Brand mural image */}
-          <div className="w-full h-48 md:h-72 mb-12 overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
-            <img
-              src={muralImage}
-              alt="3FACTOR brand mural"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+    <>
+      {/* Full-bleed mural image — AMC-style atmospheric divider */}
+      <div className="relative w-full h-64 md:h-80 overflow-hidden">
+        <img
+          src={muralImage}
+          alt="3FACTOR brand mural"
+          className="w-full h-full object-cover object-center"
+        />
+        <div
+          className="absolute inset-0 flex items-center justify-center"
+          style={{ background: "rgba(59,59,57,0.6)" }}
+        >
+          <p className="text-white text-2xl md:text-4xl font-bold uppercase tracking-tight text-center px-4">
+            Your Compliance Partner
+          </p>
+        </div>
+      </div>
 
-          <div className="text-center">
+      <section className="py-24" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
               Ready to Turn Compliance Into Your Competitive Edge?
             </h2>
@@ -53,8 +61,8 @@ const FinalCTA = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
