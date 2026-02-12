@@ -31,7 +31,7 @@ const HomepageHero = () => {
             <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
               Don't let security compliance certification(s) slow you down.
             </p>
-            <div className="grid grid-cols-1 gap-4 mb-10 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
               <div className="bg-white p-6 flex items-center text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
                   We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
