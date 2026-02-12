@@ -6,8 +6,8 @@ import muralBg from "@/assets/homepage/3f-mural-2.jpg";
 const FinalCTA = () => {
   return (
     <>
-      <section className="relative py-24 bg-cover bg-center" style={{ backgroundImage: `url(${muralBg})` }}>
-        <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.75)" }} />
+      <section className="relative py-16 bg-cover bg-center" style={{ backgroundImage: `url(${muralBg})` }}>
+        <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.55)" }} />
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
