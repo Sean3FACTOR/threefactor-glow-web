@@ -104,7 +104,7 @@ const DesktopChallenges = () => {
   return (
     <div className="grid grid-cols-10 gap-0" style={{ minHeight: 560 }}>
       {/* Left – Problem Navigation (40%) */}
-      <div className="col-span-4 flex flex-col" style={{ backgroundColor: "#2A2A28" }}>
+      <div className="col-span-4 flex flex-col" style={{ backgroundColor: "#EDEDED" }}>
         {challenges.map((ch, i) => {
           const isActive = i === activeIndex;
           return (
@@ -113,20 +113,20 @@ const DesktopChallenges = () => {
               onClick={() => handleSelect(i)}
               className="text-left w-full px-8 py-6 transition-all duration-300 relative"
               style={{
-                backgroundColor: isActive ? "#323230" : "transparent",
+                backgroundColor: isActive ? "#E5E7EB" : "transparent",
                 borderLeft: isActive ? "3px solid #F36F21" : "3px solid transparent",
               }}
             >
               <h4
                 className="text-sm font-bold uppercase tracking-tight leading-snug mb-2"
-                style={{ color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.6)" }}
+                style={{ color: isActive ? "#3B3B39" : "rgba(59,59,57,0.6)" }}
               >
                 {ch.headline}
               </h4>
               <p
                 className="text-xs leading-relaxed italic"
                 style={{
-                  color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.45)",
+                  color: isActive ? "#3B3B39" : "rgba(59,59,57,0.45)",
                   fontFamily: "Georgia, 'Times New Roman', serif",
                 }}
               >
@@ -140,7 +140,7 @@ const DesktopChallenges = () => {
       {/* Right – Solution Pane (60%) */}
       <div
         className="col-span-6 p-10 flex flex-col justify-center"
-        style={{ backgroundColor: "#3B3B39" }}
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         <div
           className="transition-all duration-300"
@@ -154,7 +154,7 @@ const DesktopChallenges = () => {
           </span>
           <h3
             className="text-2xl font-bold uppercase tracking-tight mb-6"
-            style={{ color: "#FFFFFF" }}
+            style={{ color: "#3B3B39" }}
           >
             {active.solutionHeader}
           </h3>
@@ -193,7 +193,7 @@ const DesktopChallenges = () => {
 const SolutionCardComponent = ({ sol, index }: { sol: SolutionCard; index: number }) => (
   <div
     className="p-4 transition-all duration-300"
-    style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}
+    style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}
     onMouseEnter={(e) => {
       e.currentTarget.style.borderColor = "#F36F21";
       e.currentTarget.style.boxShadow = "0 4px 20px rgba(243,111,33,0.1)";
@@ -225,19 +225,19 @@ const MobileChallenges = () => {
       {challenges.map((ch, i) => {
         const isOpen = i === openIndex;
         return (
-          <div key={ch.id} style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.08)" : undefined }}>
+          <div key={ch.id} style={{ borderTop: i > 0 ? "1px solid rgba(59,59,57,0.08)" : undefined }}>
             <button
               onClick={() => setOpenIndex(isOpen ? -1 : i)}
               className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 transition-all duration-300"
               style={{
-                backgroundColor: isOpen ? "#323230" : "#2A2A28",
+                backgroundColor: isOpen ? "#E5E7EB" : "#EDEDED",
                 borderLeft: isOpen ? "3px solid #F36F21" : "3px solid transparent",
               }}
             >
               <div className="flex-1">
                 <h4
                   className="text-sm font-bold uppercase tracking-tight leading-snug"
-                  style={{ color: isOpen ? "#FFFFFF" : "rgba(255,255,255,0.6)" }}
+                  style={{ color: isOpen ? "#3B3B39" : "rgba(59,59,57,0.6)" }}
                 >
                   {ch.headline}
                 </h4>
@@ -245,7 +245,7 @@ const MobileChallenges = () => {
               <ChevronDown
                 className="w-5 h-5 shrink-0 mt-1 transition-transform duration-300"
                 style={{
-                  color: "rgba(255,255,255,0.4)",
+                  color: "rgba(59,59,57,0.4)",
                   transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                 }}
               />
@@ -258,10 +258,10 @@ const MobileChallenges = () => {
                 opacity: isOpen ? 1 : 0,
               }}
             >
-              <div className="p-6" style={{ backgroundColor: "#3B3B39" }}>
+              <div className="p-6" style={{ backgroundColor: "#FFFFFF" }}>
                 <p
                   className="text-sm leading-relaxed italic mb-5"
-                  style={{ color: "rgba(255,255,255,0.85)", fontFamily: "Georgia, 'Times New Roman', serif" }}
+                  style={{ color: "rgba(59,59,57,0.85)", fontFamily: "Georgia, 'Times New Roman', serif" }}
                 >
                   "{ch.concern}"
                 </p>
@@ -302,23 +302,23 @@ const ClientChallenges = () => {
     <section
       id="client-challenges"
       className="py-20"
-      style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}
+      style={{ backgroundColor: "#F8F9FA", borderTop: "1px solid rgba(59,59,57,0.08)" }}
     >
       <div className="container mx-auto px-4 mb-12">
         <h2
           className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4"
-          style={{ color: "#FFFFFF" }}
+          style={{ color: "#3B3B39" }}
         >
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
-        <ul className="text-lg leading-relaxed space-y-2" style={{ color: "rgba(255,255,255,0.7)" }}>
+        <ul className="text-lg leading-relaxed space-y-2" style={{ color: "rgba(59,59,57,0.7)" }}>
           <li className="flex items-start gap-3">
             <span style={{ color: "#F36F21" }} className="shrink-0 leading-[1.75rem]">◆</span>
-            <span>We meet you where you are and guide you to the finish line.</span>
+            <span style={{ color: "#3B3B39" }}>We meet you where you are and guide you to the finish line.</span>
           </li>
           <li className="flex items-start gap-3">
             <span style={{ color: "#F36F21" }} className="shrink-0 leading-[1.75rem]">◆</span>
-            <span>We assist you through every step, including the final audit as your representative.</span>
+            <span style={{ color: "#3B3B39" }}>We assist you through every step, including the final audit as your representative.</span>
           </li>
         </ul>
       </div>

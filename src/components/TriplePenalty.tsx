@@ -18,24 +18,24 @@ const penalties = [
 
 const TriplePenalty = () => {
   return (
-    <section className="py-20" style={{ backgroundColor: "#3B3B39" }}>
+    <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
         <div
           className="h-px w-full mb-12"
-          style={{ backgroundColor: "rgba(255,255,255,0.12)" }}
+          style={{ backgroundColor: "rgba(59,59,57,0.12)" }}
         />
 
         <div className="max-w-5xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             The High Cost of "Paper-Thin" Compliance
           </h2>
-          <p className="text-lg text-white mb-4 leading-relaxed">
+          <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3B3B39" }}>
             A checklist won't stop a breach and it certainly won't satisfy a
             sophisticated enterprise auditor. Generic box-ticking creates an
             illusion of safety: compliance that looks fine on paper but collapses
             under scrutiny.
           </p>
-          <p className="text-lg font-medium text-white">
+          <p className="text-lg font-medium" style={{ color: "#3B3B39" }}>
             If your compliance only exists in documentation, you're one audit
             away from losing momentum, or worse.
           </p>
@@ -43,10 +43,10 @@ const TriplePenalty = () => {
 
         <div
           className="h-px w-full my-12"
-          style={{ backgroundColor: "rgba(255,255,255,0.12)" }}
+          style={{ backgroundColor: "rgba(59,59,57,0.12)" }}
         />
 
-        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-10 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
           The Triple Penalty of Weak Compliance
         </h3>
 
@@ -56,7 +56,7 @@ const TriplePenalty = () => {
               key={index}
               className="p-8 transition-all"
               style={{
-                backgroundColor: "#F8F9FA",
+                backgroundColor: "#FFFFFF",
                 border: "1px solid #E5E7EB",
               }}
               onMouseEnter={(e) =>
@@ -69,7 +69,7 @@ const TriplePenalty = () => {
               <h4 className="text-lg font-bold uppercase tracking-tight mb-4" style={{ color: "#646464" }}>
                 {penalty.title}
               </h4>
-              <p className="text-base leading-relaxed" style={{ color: "#1a1a1a" }}>
+              <p className="text-base leading-relaxed" style={{ color: "#3B3B39" }}>
                 {penalty.description}
               </p>
             </div>

@@ -9,7 +9,6 @@ import { certificationSections } from "@/components/compliance/complianceData";
 const ComplianceServicesPage = () => {
   const location = useLocation();
 
-  // Smooth scroll to anchor on load
   useEffect(() => {
     if (location.hash) {
       const el = document.getElementById(location.hash.slice(1));
@@ -20,7 +19,7 @@ const ComplianceServicesPage = () => {
   }, [location.hash]);
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
       <Navigation />
       <BlueprintHero
         breadcrumb="Compliance"
@@ -34,8 +33,8 @@ const ComplianceServicesPage = () => {
       <section
         className="py-6"
         style={{
-          backgroundColor: "#3B3B39",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
+          backgroundColor: "#F8F9FA",
+          borderTop: "1px solid rgba(59,59,57,0.08)",
         }}
       >
         <div className="container mx-auto px-4">
@@ -46,7 +45,7 @@ const ComplianceServicesPage = () => {
                 href={`#${s.id}`}
                 className="px-4 py-2 text-sm font-mono transition-all"
                 style={{
-                  backgroundColor: "#F8F9FA",
+                  backgroundColor: "#FFFFFF",
                   border: "1px solid #E5E7EB",
                   color: "#1a1a1a",
                 }}

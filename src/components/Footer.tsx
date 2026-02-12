@@ -5,7 +5,7 @@ import linkedinIcon from "@/assets/linkedin-icon.avif";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+    <footer style={{ backgroundColor: "#3B3B39", borderTop: "1px solid rgba(59,59,57,0.08)" }}>
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-4">

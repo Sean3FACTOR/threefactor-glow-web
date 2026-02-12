@@ -42,33 +42,33 @@ const serviceCards = [
 
 const HomepageHero = () => {
   return (
-    <section className="pt-14 pb-16" style={{ backgroundColor: "#3B3B39" }}>
+    <section className="pt-14 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-4">
           {/* Left – Value Proposition */}
           <div className="lg:col-span-7">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight uppercase leading-[1.1]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1]" style={{ color: "#3B3B39" }}>
               <span className="block">Win the RFP.</span>
               <span className="block">OWN THE MARKET.</span>
               <span className="block">GET CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-8 leading-relaxed text-primary-foreground">
+            <p className="text-base md:text-xl mb-8 leading-relaxed" style={{ color: "#646464" }}>
               Don't let security compliance certification(s) slow you down.
             </p>
             <div className="space-y-4 mb-10">
-              <p className="text-base md:text-lg text-white flex items-start gap-3">
+              <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
                 Scale into regulated sectors without the friction of security roadblocks.
               </p>
-              <p className="text-base md:text-lg text-white flex items-start gap-3">
+              <p className="text-base md:text-lg flex items-start gap-3" style={{ color: "#3B3B39" }}>
                 <span className="w-2 h-2 rotate-45 flex-shrink-0 mt-2" style={{ backgroundColor: "#F36F21" }} />
                 Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
-            <p className="text-base md:text-lg mb-4 leading-relaxed text-primary-foreground">
+            <p className="text-base md:text-lg mb-4 leading-relaxed" style={{ color: "#646464" }}>
               We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
             </p>
-            <p className="text-base md:text-lg font-medium text-white mb-10">
+            <p className="text-base md:text-lg font-medium mb-10" style={{ color: "#3B3B39" }}>
               Security should close the deal, not kill the momentum.
             </p>
             <Link to="/contact">
@@ -91,7 +91,7 @@ const HomepageHero = () => {
 
           {/* Right – Compliance Options (vertical) */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-white mb-1 font-mono">
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-1 font-mono" style={{ color: "#3B3B39" }}>
               Frameworks That Decide Your Market Access
             </h2>
             {serviceCards.map((card) => (

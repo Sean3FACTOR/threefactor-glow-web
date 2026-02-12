@@ -17,12 +17,15 @@ const methodologyPoints = [
 
 const CyberMaturityAWS = () => {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#3B3B39" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
       <Navigation />
       
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4">
-          <Link to="/" className="inline-flex items-center text-white/50 hover:text-white transition-colors mb-8">
+          <Link to="/" className="inline-flex items-center transition-colors mb-8" style={{ color: "rgba(59,59,57,0.5)" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#3B3B39")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(59,59,57,0.5)")}
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
@@ -30,40 +33,40 @@ const CyberMaturityAWS = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <img src={Logo} alt="3FACTOR" className="h-10" />
-              <span className="text-white/50 font-medium">AWS Security Service</span>
+              <span className="font-medium" style={{ color: "rgba(59,59,57,0.5)" }}>AWS Security Service</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Cyber Maturity Assessment on AWS</h1>
-            <p className="text-2xl md:text-3xl text-white/60 font-semibold mb-8">Secure your Cloud Workloads</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: "#3B3B39" }}>Cyber Maturity Assessment on AWS</h1>
+            <p className="text-2xl md:text-3xl font-semibold mb-8" style={{ color: "rgba(59,59,57,0.6)" }}>Secure your Cloud Workloads</p>
 
-            <div className="p-8 mb-12" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
-              <p className="text-lg leading-relaxed" style={{ color: "#1a1a1a" }}>Our Cyber Maturity Assessment uses an adaptable methodology based on globally-recognized standards. Avoiding an inflexible one-size-fits-all approach, we customize the assessment to each client's specific needs.</p>
+            <div className="p-8 mb-12" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
+              <p className="text-lg leading-relaxed" style={{ color: "#3B3B39" }}>Our Cyber Maturity Assessment uses an adaptable methodology based on globally-recognized standards. Avoiding an inflexible one-size-fits-all approach, we customize the assessment to each client's specific needs.</p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Our Phased Methodology</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#3B3B39" }}>Our Phased Methodology</h2>
               <div className="space-y-4">
                 {methodologyPoints.map((point, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+                  <div key={index} className="flex items-start gap-4 p-4" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
                     <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: "#646464" }} />
-                    <p style={{ color: "#1a1a1a" }}>{point}</p>
+                    <p style={{ color: "#3B3B39" }}>{point}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="p-8 mb-12" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+            <div className="p-8 mb-12" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#646464" }}>Who Is This For?</h2>
-              <p className="leading-relaxed mb-4" style={{ color: "#1a1a1a" }}>The Cyber Maturity Assessment is a common starting point for a client to engage with 3<span style={{ color: "#F36F21" }}>FACTOR</span>'s services. It is primarily used by organizations with a limited understanding of their current cyber risks and controls.</p>
-              <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>Due to its adaptable nature, the Cyber Maturity Assessment is suitable for clients of any size or industry.</p>
+              <p className="leading-relaxed mb-4" style={{ color: "#3B3B39" }}>The Cyber Maturity Assessment is a common starting point for a client to engage with 3<span style={{ color: "#F36F21" }}>FACTOR</span>'s services. It is primarily used by organizations with a limited understanding of their current cyber risks and controls.</p>
+              <p className="leading-relaxed" style={{ color: "#3B3B39" }}>Due to its adaptable nature, the Cyber Maturity Assessment is suitable for clients of any size or industry.</p>
             </div>
 
-            <div className="p-8 mb-12" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+            <div className="p-8 mb-12" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#646464" }}>How We Deliver</h2>
-              <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>The exact method of Cyber Maturity Assessment delivery is tailored to suit the needs of each customer, but will generally consist of a series of face-to-face or remote meetings, as well as document review and technical control testing.</p>
+              <p className="leading-relaxed" style={{ color: "#3B3B39" }}>The exact method of Cyber Maturity Assessment delivery is tailored to suit the needs of each customer, but will generally consist of a series of face-to-face or remote meetings, as well as document review and technical control testing.</p>
             </div>
 
-            <div className="text-center p-8" style={{ backgroundColor: "#F8F9FA", border: "1px solid #E5E7EB" }}>
+            <div className="text-center p-8" style={{ backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB" }}>
               <img src={Logo} alt="3FACTOR" className="h-12 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4" style={{ color: "#3B3B39" }}>Ready to Assess Your AWS Security?</h3>
               <p className="mb-6" style={{ color: "#646464" }}>Start with a free discovery call to discuss your needs and receive a tailored proposal.</p>

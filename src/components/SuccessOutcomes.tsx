@@ -10,37 +10,37 @@ const outcomes = [{
 }];
 const SuccessOutcomes = () => {
   return <section className="py-20" style={{
-    backgroundColor: "#3B3B39"
+    backgroundColor: "#F8F9FA"
   }}>
       <div className="container mx-auto px-4">
         <div className="h-px w-full mb-12" style={{
-        backgroundColor: "rgba(255,255,255,0.12)"
+        backgroundColor: "rgba(59,59,57,0.12)"
       }} />
         <div className="max-w-5xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             From Vendor to Trusted Market Authority
           </h2>
-          <p className="text-lg text-white mb-4 leading-relaxed">
+          <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3B3B39" }}>
             Compliance isn't overhead, it's leverage.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lg" style={{ color: "#3B3B39" }}>
             Walk into your next board meeting with proof, not promises.
           </p>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-10 uppercase tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-10 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
           What Success Looks Like
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {outcomes.map(outcome => <div key={outcome.title} className="p-8" style={{
-          backgroundColor: "#F8F9FA",
+          backgroundColor: "#FFFFFF",
           border: "1px solid #E5E7EB"
         }}>
               <h4 className="text-xl font-bold mb-4 uppercase tracking-tight" style={{ color: "#646464" }}>
                 {outcome.title}
               </h4>
-              <p className="leading-relaxed" style={{ color: "#1a1a1a" }}>
+              <p className="leading-relaxed" style={{ color: "#3B3B39" }}>
                 {outcome.description}
               </p>
             </div>)}

@@ -21,25 +21,25 @@ const steps = [{
 }];
 const CompliancePlan = () => {
   return <section className="py-20" style={{
-    backgroundColor: "#3B3B39"
+    backgroundColor: "#F8F9FA"
   }}>
       <div className="container mx-auto px-4">
-        <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(255,255,255,0.12)" }} />
+        <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
         {/* Section Header */}
         <div className="max-w-5xl mb-12 mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             Your Blueprint for Audit-Proof Growth
           </h2>
-          <p className="text-lg text-white mb-8 leading-relaxed">
+          <p className="text-lg mb-8 leading-relaxed" style={{ color: "#3B3B39" }}>
             Navigating global mandates shouldn't be your second job. We simplify compliance into a clear, defensible path to revenue.
           </p>
         </div>
 
         <div className="text-center mb-10">
-          <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 uppercase tracking-tight">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             4 Steps to Audit Dominance
           </h3>
-          <p className="text-lg text-white max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: "#3B3B39" }}>
             Working with a certification firm shouldn't be a second job. We've simplified the path to turning your RFI into a revenue engine:
           </p>
         </div>
@@ -47,25 +47,26 @@ const CompliancePlan = () => {
         {/* Horizontal 4-step workflow */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-white/30" />
+          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px" style={{ backgroundColor: "rgba(59,59,57,0.2)" }} />
           
           {steps.map((step, index) => <div key={step.title} className="relative px-4 pb-8 md:pb-0">
               {/* Step number */}
               <div className="w-10 h-10 flex items-center justify-center mb-6 relative z-10" style={{
-            backgroundColor: "#F8F9FA"
+            backgroundColor: "#FFFFFF",
+            border: "1px solid #E5E7EB"
           }}>
                 <span className="text-sm font-semibold" style={{ color: "#3B3B39" }}>{step.number}</span>
               </div>
 
-              <h4 className="text-lg font-bold text-white mb-3 uppercase tracking-tight">
+              <h4 className="text-lg font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
                 {step.title}
               </h4>
-              <p className="text-white leading-relaxed text-sm">
+              <p className="leading-relaxed text-sm" style={{ color: "#3B3B39" }}>
                 {step.description}
               </p>
 
               {/* Mobile connector */}
-              {index < steps.length - 1 && <div className="md:hidden w-px h-8 bg-white/20 ml-5 mt-4" />}
+              {index < steps.length - 1 && <div className="md:hidden w-px h-8 ml-5 mt-4" style={{ backgroundColor: "rgba(59,59,57,0.2)" }} />}
             </div>)}
         </div>
       </div>

@@ -42,12 +42,12 @@ const certifications = [{
 }];
 const Certifications = () => {
   return <section className="py-12" style={{
-    backgroundColor: "#3B3B39",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
-    borderBottom: "1px solid rgba(255,255,255,0.08)"
+    backgroundColor: "#F8F9FA",
+    borderTop: "1px solid rgba(59,59,57,0.08)",
+    borderBottom: "1px solid rgba(59,59,57,0.08)"
   }}>
       <div className="container mx-auto px-4">
-        <p className="text-center text-sm mb-8 uppercase tracking-widest text-white">
+        <p className="text-center text-sm mb-8 uppercase tracking-widest" style={{ color: "#3B3B39" }}>
           Our Teams' Certifications & Standards
         </p>
         <div className="px-4 sm:px-12">
@@ -58,39 +58,39 @@ const Certifications = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {certifications.map(cert => <CarouselItem key={cert.name} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                   <div className="flex items-center justify-center w-full h-32 md:h-40 p-4" style={{
-                backgroundColor: "#F8F9FA",
+                backgroundColor: "#FFFFFF",
                 border: "1px solid #E5E7EB"
               }}>
                     <img src={cert.logo} alt={`${cert.name} certification`} className="max-w-full max-h-full object-contain" />
                   </div>
                 </CarouselItem>)}
             </CarouselContent>
-            <CarouselPrevious className="-left-3 sm:-left-6 md:-left-10 border-white bg-white/20 text-white opacity-100" />
-            <CarouselNext className="-right-3 sm:-right-6 md:-right-10 border-white bg-white/20 text-white opacity-100" />
+            <CarouselPrevious className="-left-3 sm:-left-6 md:-left-10 opacity-100" style={{ borderColor: "#3B3B39", backgroundColor: "rgba(59,59,57,0.1)", color: "#3B3B39" }} />
+            <CarouselNext className="-right-3 sm:-right-6 md:-right-10 opacity-100" style={{ borderColor: "#3B3B39", backgroundColor: "rgba(59,59,57,0.1)", color: "#3B3B39" }} />
           </Carousel>
         </div>
 
         {/* Trusted by section */}
         <div className="mt-12 pt-8" style={{
-        borderTop: "1px solid rgba(255,255,255,0.08)"
+        borderTop: "1px solid rgba(59,59,57,0.08)"
       }}>
-          <p className="text-center text-sm uppercase tracking-widest mb-6 text-white">
+          <p className="text-center text-sm uppercase tracking-widest mb-6" style={{ color: "#3B3B39" }}>
             Trusted by Fortune 500 companies
           </p>
           <div className="flex items-center justify-center gap-8 md:gap-12">
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-white">15+</span>
-              <span className="text-xs md:text-sm text-white">Years Experience</span>
+              <span className="block text-3xl md:text-4xl font-bold" style={{ color: "#3B3B39" }}>15+</span>
+              <span className="text-xs md:text-sm" style={{ color: "#646464" }}>Years Experience</span>
             </div>
-            <div className="w-px h-12 bg-white/20" />
+            <div className="w-px h-12" style={{ backgroundColor: "rgba(59,59,57,0.2)" }} />
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-white">100+</span>
-              <span className="text-xs md:text-sm text-white">Clients Served</span>
+              <span className="block text-3xl md:text-4xl font-bold" style={{ color: "#3B3B39" }}>100+</span>
+              <span className="text-xs md:text-sm" style={{ color: "#646464" }}>Clients Served</span>
             </div>
-            <div className="w-px h-12 bg-white/20" />
+            <div className="w-px h-12" style={{ backgroundColor: "rgba(59,59,57,0.2)" }} />
             <div className="text-center">
-              <span className="block text-3xl md:text-4xl font-bold text-white">Global</span>
-              <span className="text-xs md:text-sm text-white">Coverage</span>
+              <span className="block text-3xl md:text-4xl font-bold" style={{ color: "#3B3B39" }}>Global</span>
+              <span className="text-xs md:text-sm" style={{ color: "#646464" }}>Coverage</span>
             </div>
           </div>
         </div>

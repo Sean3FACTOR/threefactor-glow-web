@@ -43,8 +43,8 @@ const CertificationSection = ({
       id={id}
       className="py-20 scroll-mt-20"
       style={{
-        backgroundColor: "#3B3B39",
-        borderTop: "1px solid rgba(255,255,255,0.08)",
+        backgroundColor: "#F8F9FA",
+        borderTop: "1px solid rgba(59,59,57,0.08)",
       }}
     >
       <div className="container mx-auto px-4">
@@ -52,13 +52,13 @@ const CertificationSection = ({
           {/* Title */}
           <h2
             className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight"
-            style={{ color: "#FFFFFF" }}
+            style={{ color: "#3B3B39" }}
           >
             {title}
           </h2>
 
           {/* Intro */}
-          <p className="text-lg leading-relaxed mb-10 text-white/90">{intro}</p>
+          <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(59,59,57,0.85)" }}>{intro}</p>
 
           {/* Strategic Value + Key Info side by side */}
           {strategicValues && strategicValues.length > 0 && (
@@ -69,7 +69,7 @@ const CertificationSection = ({
               <div
                 className="p-8"
                 style={{
-                  backgroundColor: "#F8F9FA",
+                  backgroundColor: "#FFFFFF",
                   border: "1px solid #E5E7EB",
                 }}
               >
@@ -92,7 +92,7 @@ const CertificationSection = ({
                         className="w-2 h-2 rotate-45 flex-shrink-0 mt-1.5"
                         style={{ backgroundColor: "#F36F21" }}
                       />
-                      <p className="text-sm leading-relaxed" style={{ color: "#1a1a1a" }}>
+                      <p className="text-sm leading-relaxed" style={{ color: "#3B3B39" }}>
                         <strong>{sv.bold}</strong> {sv.text}
                       </p>
                     </div>
@@ -105,7 +105,7 @@ const CertificationSection = ({
                 <div
                   className="p-8"
                   style={{
-                    backgroundColor: "#F8F9FA",
+                    backgroundColor: "#FFFFFF",
                     border: "1px solid #E5E7EB",
                   }}
                 >
@@ -121,7 +121,7 @@ const CertificationSection = ({
                   >
                     {keyInfo.label}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#1a1a1a" }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "#3B3B39" }}>
                     {keyInfo.text}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ const CertificationSection = ({
               {pathLabel && (
                 <h3
                   className="text-lg font-bold uppercase tracking-tight mb-4"
-                  style={{ color: "#FFFFFF" }}
+                  style={{ color: "#3B3B39" }}
                 >
                   {pathLabel}
                 </h3>
@@ -146,7 +146,7 @@ const CertificationSection = ({
                     key={i}
                     className="px-4 py-2 text-sm font-medium"
                     style={{
-                      backgroundColor: "#F8F9FA",
+                      backgroundColor: "#FFFFFF",
                       border: "1px solid #E5E7EB",
                       color: "#3B3B39",
                     }}
