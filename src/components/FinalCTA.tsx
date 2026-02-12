@@ -1,7 +1,7 @@
 import { ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import muralBg from "@/assets/homepage/3f-mural-2.jpg";
+import muralBg from "@/assets/homepage/3f-mural-3.jpg";
 
 const FinalCTA = () => {
   return (
