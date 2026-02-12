@@ -6,10 +6,10 @@ import muralBg from "@/assets/homepage/3f-mural-2.jpg";
 const FinalCTA = () => {
   return (
     <>
-      <section className="relative pt-0 pb-72 md:pb-96 bg-cover bg-center" style={{ backgroundImage: `url(${muralBg})` }}>
+      <section className="relative py-16 bg-cover bg-center" style={{ backgroundImage: `url(${muralBg})` }}>
         <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.55)" }} />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl mx-auto text-center relative z-10 p-10" style={{ backgroundColor: "rgba(59,59,57,0.85)", border: "1px solid rgba(255,255,255,0.15)" }}>
+        <div className="container mx-auto px-4 relative z-10 flex items-center justify-center">
+          <div className="max-w-2xl mx-auto text-center p-10" style={{ backgroundColor: "rgba(59,59,57,0.85)", border: "1px solid rgba(255,255,255,0.15)" }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
               Ready to Turn Compliance Into Your Competitive Edge?
             </h2>
