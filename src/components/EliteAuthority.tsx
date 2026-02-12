@@ -22,18 +22,6 @@ const authorityPoints = [{
 const EliteAuthority = () => {
   return (
     <>
-      {/* Full-bleed image divider — AMC-style */}
-      <div className="relative w-full h-64 md:h-96 overflow-hidden">
-        <img
-          src={spyroWorking}
-          alt="3FACTOR team member at work"
-          className="w-full h-full object-cover object-top"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to bottom, rgba(248,249,250,0) 0%, rgba(248,249,250,1) 100%)" }}
-        />
-      </div>
 
       <section className="pb-20" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4">
