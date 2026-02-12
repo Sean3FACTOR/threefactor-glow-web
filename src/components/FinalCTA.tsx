@@ -1,14 +1,16 @@
 import { ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import muralBg from "@/assets/homepage/3f-mural-2.jpg";
 
 const FinalCTA = () => {
   return (
     <>
-      <section className="py-24" style={{ backgroundColor: "#F8F9FA" }}>
+      <section className="relative py-24 bg-cover bg-center" style={{ backgroundImage: `url(${muralBg})` }}>
+        <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.75)" }} />
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+          <div className="max-w-5xl mx-auto text-center relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
               Ready to Turn Compliance Into Your Competitive Edge?
             </h2>
 
@@ -23,21 +25,20 @@ const FinalCTA = () => {
               </Button>
             </Link>
 
-            <div className="pt-8" style={{ borderTop: "1px solid rgba(59,59,57,0.1)" }}>
-              <p className="mb-4" style={{ color: "#3B3B39" }}>
+            <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}>
+              <p className="mb-4 text-white/80">
                 Not ready to book yet?
               </p>
               <a 
                 href="/3F_Whitepaper.pdf" 
                 download
-                className="group inline-flex items-center gap-2 font-medium transition-colors hover:opacity-80"
-                style={{ color: "#3B3B39" }}
+                className="group inline-flex items-center gap-2 font-medium transition-colors hover:opacity-80 text-white"
               >
                 <FileText className="w-5 h-5" />
                 Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <p className="text-sm mt-3 max-w-md mx-auto" style={{ color: "#646464" }}>
+              <p className="text-sm mt-3 max-w-md mx-auto text-white/60">
                 Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
               </p>
             </div>
