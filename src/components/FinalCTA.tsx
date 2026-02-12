@@ -24,24 +24,29 @@ const FinalCTA = () => {
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
 
-            <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}>
-              <p className="mb-4 text-white/80">
-                Not ready to book yet?
-              </p>
-              <a 
-                href="/3F_Whitepaper.pdf" 
-                download
-                className="group inline-flex items-center gap-2 font-medium transition-colors hover:opacity-80 text-white"
-              >
-                <FileText className="w-5 h-5" />
-                Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <p className="text-sm mt-3 max-w-md mx-auto text-white/60">
-                Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
-              </p>
-            </div>
+      <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="mb-4" style={{ color: "#3B3B39" }}>
+              Not ready to book yet?
+            </p>
+            <a 
+              href="/3F_Whitepaper.pdf" 
+              download
+              className="group inline-flex items-center gap-2 font-medium transition-colors hover:opacity-80"
+              style={{ color: "#3B3B39" }}
+            >
+              <FileText className="w-5 h-5" />
+              Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <p className="text-sm mt-3 max-w-md mx-auto" style={{ color: "#646464" }}>
+              Learn how elite companies reframe security from a cost center into a growth engine, and why auditors trust them faster.
+            </p>
           </div>
         </div>
       </section>
