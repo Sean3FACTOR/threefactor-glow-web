@@ -20,53 +20,61 @@ const authorityPoints = [{
 }];
 
 const EliteAuthority = () => {
-  return <section className="py-20" style={{
-    backgroundColor: "#F8F9FA",
-    borderTop: "1px solid rgba(59,59,57,0.08)"
-  }}>
-      <div className="container mx-auto px-4">
-        <div className="mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-            Expert Leadership for Your Toughest Transitions
-          </h2>
-          <p className="text-lg mb-4 leading-relaxed" style={{ color: "#646464" }}>
-            We've Been in Your Chair. We know the pressure of an "overnight" requirement from a high-value lead. We understand that "almost compliant" is a career risk you can't afford. You deserve a partner who provides a program wrapper that works today and stays flexible for tomorrow.
-          </p>
-        </div>
+  return (
+    <>
+      {/* Full-bleed image divider — AMC-style */}
+      <div className="relative w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src={spyroWorking}
+          alt="3FACTOR team member at work"
+          className="w-full h-full object-cover object-top"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to bottom, rgba(248,249,250,0) 0%, rgba(248,249,250,1) 100%)" }}
+        />
+      </div>
 
-        <h3 className="text-2xl md:text-3xl font-semibold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-          Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
-        </h3>
+      <section className="pb-20" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+              Expert Leadership for Your Toughest Transitions
+            </h2>
+            <p className="text-lg mb-4 leading-relaxed" style={{ color: "#646464" }}>
+              We've Been in Your Chair. We know the pressure of an "overnight" requirement from a high-value lead. We understand that "almost compliant" is a career risk you can't afford. You deserve a partner who provides a program wrapper that works today and stays flexible for tomorrow.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-start">
-          <div className="col-span-12 lg:col-span-5 space-y-6">
-            {authorityPoints.map(point => <div key={point.title} className="p-6 transition-all hover:shadow-lg" style={{
-            backgroundColor: "#FFFFFF",
-            border: "1px solid #E5E7EB"
-          }}>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+            Why IT & Ops Leaders Choose 3<span style={{ color: "#F36F21" }}>FACTOR</span>
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {authorityPoints.map(point => (
+              <div
+                key={point.title}
+                className="p-6 transition-all"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid #E5E7EB"
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#F36F21")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#E5E7EB")}
+              >
                 <h4 className="text-lg font-bold mb-2 uppercase tracking-tight" style={{ color: "#646464" }}>
                   {point.title}
                 </h4>
                 <p className="leading-relaxed" style={{ color: "#3B3B39" }}>
                   {point.description}
                 </p>
-              </div>)}
-          </div>
-          <div className="col-span-12 lg:col-span-7 flex flex-col gap-6">
-            {/* Team member image */}
-            <div className="w-full overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
-              <img
-                src={spyroWorking}
-                alt="3FACTOR team member at work"
-                className="w-full h-64 md:h-80 object-cover object-top"
-              />
-            </div>
-            <p className="text-sm font-mono uppercase tracking-widest" style={{ color: "#646464" }}>
-              [IMG-01] — Dedicated expertise, focused execution.
-            </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>;
+      </section>
+    </>
+  );
 };
+
 export default EliteAuthority;

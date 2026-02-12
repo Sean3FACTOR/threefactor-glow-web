@@ -1,5 +1,3 @@
-import enterpriseSkyline from "@/assets/homepage/enterprise-skyline.jpg";
-
 const penalties = [
   {
     title: "CRITICAL FINANCIAL LIABILITY",
@@ -22,15 +20,6 @@ const TriplePenalty = () => {
   return (
     <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
-        {/* Skyline image banner */}
-        <div className="w-full h-48 md:h-64 mb-12 overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
-          <img
-            src={enterpriseSkyline}
-            alt="Enterprise skyline"
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
-
         <div className="max-w-5xl mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             The High Cost of "Paper-Thin" Compliance
