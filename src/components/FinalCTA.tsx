@@ -8,8 +8,8 @@ const FinalCTA = () => {
     <>
       <section className="relative bg-cover bg-bottom" style={{ backgroundImage: `url(${muralBg})`, minHeight: "550px" }}>
         <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.55)" }} />
-        <div className="container mx-auto px-4 relative z-10 flex flex-col justify-start pt-12">
-          <div className="max-w-2xl mx-auto text-center px-10 py-6" style={{ backgroundColor: "rgba(59,59,57,0.85)", border: "1px solid rgba(255,255,255,0.15)" }}>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col justify-start pt-8">
+          <div className="max-w-2xl mx-auto text-center px-10 py-6" style={{ backgroundColor: "rgba(59,59,57,0.65)", border: "1px solid rgba(255,255,255,0.15)" }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
               Ready to Turn Compliance Into Your Competitive Edge?
             </h2>
