@@ -323,7 +323,7 @@ const GuideSection = () =>
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
-          How 3FACTOR Guides You
+          How <span>3<span style={{ color: "#F36F21" }}>FACTOR</span></span> Guides You
         </h2>
       </div>
 
