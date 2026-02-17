@@ -18,14 +18,14 @@ import {
   Activity,
   ArrowRight,
   CheckCircle2,
-  XCircle,
-} from "lucide-react";
+  XCircle } from
+"lucide-react";
 
 /* ═══════════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════════ */
-const Hero = () => (
-  <section className="relative py-16 md:py-24 overflow-hidden bg-white">
+const Hero = () =>
+<section className="relative py-16 md:py-24 overflow-hidden bg-white">
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
@@ -75,60 +75,62 @@ const Hero = () => (
           </div>
         </div>
         <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wider border border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.35)] transition-all duration-300"
-        >
+        to="/contact"
+        className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wider border border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.35)] transition-all duration-300">
+
           Get Certified with 3FACTOR
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ═══════════════════════════════════════════════
    5 PILLARS
    ═══════════════════════════════════════════════ */
 const pillars = [
-  {
-    id: "PIL-01",
-    icon: Globe,
-    title: "Firewalls",
-    text: 'Creating a secure "moat" between your internal network and the internet to block unauthorized access.',
-  },
-  {
-    id: "PIL-02",
-    icon: Lock,
-    title: "Secure Configuration",
-    text: "Stripping away unnecessary software and hardening systems against brute-force attacks.",
-  },
-  {
-    id: "PIL-03",
-    icon: Users,
-    title: "User Access Control",
-    text: "Ensuring only the right people have access to the right data, backed by mandatory Multi-Factor Authentication (MFA).",
-  },
-  {
-    id: "PIL-04",
-    icon: Bug,
-    title: "Malware Protection",
-    text: "Implementing active scanning and application allow-listing to stop malicious code in its tracks.",
-  },
-  {
-    id: "PIL-05",
-    icon: RefreshCw,
-    title: "Security Update Management",
-    text: "Maintaining a strict 14-day patching cycle for all critical vulnerabilities.",
-  },
-];
+{
+  id: "PIL-01",
+  icon: Globe,
+  title: "Firewalls",
+  text: 'Creating a secure "moat" between your internal network and the internet to block unauthorized access.'
+},
+{
+  id: "PIL-02",
+  icon: Lock,
+  title: "Secure Configuration",
+  text: "Stripping away unnecessary software and hardening systems against brute-force attacks."
+},
+{
+  id: "PIL-03",
+  icon: Users,
+  title: "User Access Control",
+  text: "Ensuring only the right people have access to the right data, backed by mandatory Multi-Factor Authentication (MFA)."
+},
+{
+  id: "PIL-04",
+  icon: Bug,
+  title: "Malware Protection",
+  text: "Implementing active scanning and application allow-listing to stop malicious code in its tracks."
+},
+{
+  id: "PIL-05",
+  icon: RefreshCw,
+  title: "Security Update Management",
+  text: "Maintaining a strict 14-day patching cycle for all critical vulnerabilities."
+}];
 
-const FivePillars = () => (
-  <section className="py-14 md:py-20 bg-white">
+
+const FivePillars = () =>
+<section className="py-14 md:py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
-          The 5 Pillars of Compliance
-        </h2>
+          5 Key Focus Areas 
+critical for cyber essentials compliance        
+        
+      </h2>
         <p className="font-mono text-sm text-foreground/50 mt-2">
           Version 16 (2026) Standards
         </p>
@@ -138,9 +140,7 @@ const FivePillars = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left column — 2 cards */}
         <div className="md:col-span-4 flex flex-col gap-6">
-          {pillars.slice(0, 2).map((p) => (
-            <PillarCard key={p.id} {...p} />
-          ))}
+          {pillars.slice(0, 2).map((p) => <PillarCard key={p.id} {...p} />)}
         </div>
 
         {/* Center — shield hub */}
@@ -155,9 +155,9 @@ const FivePillars = () => (
 
         {/* Right column — 2 cards */}
         <div className="md:col-span-4 flex flex-col gap-6">
-          {pillars.slice(2, 4).map((p) => (
-            <PillarCard key={p.id} {...p} />
-          ))}
+          {pillars.slice(2, 4).map((p) =>
+        <PillarCard key={p.id} {...p} />
+        )}
         </div>
       </div>
 
@@ -166,21 +166,21 @@ const FivePillars = () => (
         <PillarCard {...pillars[4]} />
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 const PillarCard = ({
   id,
   icon: Icon,
   title,
-  text,
-}: {
-  id: string;
-  icon: React.ElementType;
-  title: string;
-  text: string;
-}) => (
-  <div className="group bg-card border border-border p-6 transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]">
+  text
+
+
+
+
+
+}: {id: string;icon: React.ElementType;title: string;text: string;}) =>
+<div className="group bg-card border border-border p-6 transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]">
     <div className="flex items-start gap-4">
       <div className="w-10 h-10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover:border-primary transition-colors">
         <Icon className="w-5 h-5 text-primary" />
@@ -192,50 +192,50 @@ const PillarCard = ({
         <p className="text-sm text-foreground/60 leading-relaxed">{text}</p>
       </div>
     </div>
-  </div>
-);
+  </div>;
+
 
 /* ═══════════════════════════════════════════════
    ROADMAP
    ═══════════════════════════════════════════════ */
 const roadmapSteps = [
-  {
-    id: "STEP-01",
-    icon: Search,
-    title: "Scoping & Mapping",
-    text: "We define your network boundaries and identify all in-scope devices and cloud services.",
-  },
-  {
-    id: "STEP-02",
-    icon: Wrench,
-    title: "Technical Hardening",
-    text: "Our team remediates vulnerabilities, enforces MFA, and secures your firewalls.",
-  },
-  {
-    id: "STEP-03",
-    icon: FileCheck,
-    title: "Self-Assessment Mastery",
-    text: "We prepare your technical answers and documentation for official submission.",
-  },
-  {
-    id: "STEP-04",
-    icon: ScanLine,
-    title: "Independent Testing (Plus)",
-    text: "We support you through the official authenticated scans and malware verification tests.",
-  },
-  {
-    id: "STEP-05",
-    icon: Award,
-    title: "Certification Awarded",
-    text: "You receive your official NCSC-recognized certificate and digital badge.",
-  },
-];
+{
+  id: "STEP-01",
+  icon: Search,
+  title: "Scoping & Mapping",
+  text: "We define your network boundaries and identify all in-scope devices and cloud services."
+},
+{
+  id: "STEP-02",
+  icon: Wrench,
+  title: "Technical Hardening",
+  text: "Our team remediates vulnerabilities, enforces MFA, and secures your firewalls."
+},
+{
+  id: "STEP-03",
+  icon: FileCheck,
+  title: "Self-Assessment Mastery",
+  text: "We prepare your technical answers and documentation for official submission."
+},
+{
+  id: "STEP-04",
+  icon: ScanLine,
+  title: "Independent Testing (Plus)",
+  text: "We support you through the official authenticated scans and malware verification tests."
+},
+{
+  id: "STEP-05",
+  icon: Award,
+  title: "Certification Awarded",
+  text: "You receive your official NCSC-recognized certificate and digital badge."
+}];
 
-const Roadmap = () => (
-  <section
-    className="py-20 md:py-28"
-    style={{ backgroundColor: "#3B3B39" }}
-  >
+
+const Roadmap = () =>
+<section
+  className="py-20 md:py-28"
+  style={{ backgroundColor: "#3B3B39" }}>
+
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white">
@@ -250,29 +250,29 @@ const Roadmap = () => (
 
         <div className="space-y-12">
           {roadmapSteps.map((step, i) => {
-            const Icon = step.icon;
-            const isLeft = i % 2 === 0;
-            return (
-              <div
-                key={step.id}
-                className={`relative flex items-start gap-6 md:gap-0 ${
-                  isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
+          const Icon = step.icon;
+          const isLeft = i % 2 === 0;
+          return (
+            <div
+              key={step.id}
+              className={`relative flex items-start gap-6 md:gap-0 ${
+              isLeft ? "md:flex-row" : "md:flex-row-reverse"}`
+              }>
+
                 {/* Connector dot */}
                 <div className="absolute left-6 md:left-1/2 w-3 h-3 bg-primary border-2 border-primary -translate-x-1/2 top-4 z-10" />
 
                 {/* Content */}
                 <div
-                  className={`ml-12 md:ml-0 md:w-[45%] ${
-                    isLeft ? "md:pr-12 md:text-right" : "md:pl-12"
-                  }`}
-                >
+                className={`ml-12 md:ml-0 md:w-[45%] ${
+                isLeft ? "md:pr-12 md:text-right" : "md:pl-12"}`
+                }>
+
                   <div
-                    className={`flex items-center gap-3 mb-2 ${
-                      isLeft ? "md:justify-end" : ""
-                    }`}
-                  >
+                  className={`flex items-center gap-3 mb-2 ${
+                  isLeft ? "md:justify-end" : ""}`
+                  }>
+
                     <Icon className="w-5 h-5 text-primary" />
                     <h3 className="text-sm font-bold uppercase tracking-wide text-white">
                       {step.title}
@@ -285,41 +285,41 @@ const Roadmap = () => (
 
                 {/* Spacer for alternating side */}
                 <div className="hidden md:block md:w-[45%]" />
-              </div>
-            );
-          })}
+              </div>);
+
+        })}
         </div>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ═══════════════════════════════════════════════
    HOW 3FACTOR GUIDES YOU
    ═══════════════════════════════════════════════ */
 const guideItems = [
-  {
-    id: "GD-01",
-    icon: Compass,
-    title: "We Manage the Complexity",
-    text: 'From mapping your "scope" to configuring advanced MFA, we ensure every technical requirement is met.',
-  },
-  {
-    id: "GD-02",
-    icon: FlaskConical,
-    title: 'Pre-Audit "Dry Runs"',
-    text: 'Before the official assessment, we perform simulated vulnerability scans and malware tests to guarantee a "Pass" result.',
-  },
-  {
-    id: "GD-03",
-    icon: Activity,
-    title: "Continuous Compliance",
-    text: "We don't just get you certified; we keep you certified with ongoing monitoring and automated patching.",
-  },
-];
+{
+  id: "GD-01",
+  icon: Compass,
+  title: "We Manage the Complexity",
+  text: 'From mapping your "scope" to configuring advanced MFA, we ensure every technical requirement is met.'
+},
+{
+  id: "GD-02",
+  icon: FlaskConical,
+  title: 'Pre-Audit "Dry Runs"',
+  text: 'Before the official assessment, we perform simulated vulnerability scans and malware tests to guarantee a "Pass" result.'
+},
+{
+  id: "GD-03",
+  icon: Activity,
+  title: "Continuous Compliance",
+  text: "We don't just get you certified; we keep you certified with ongoing monitoring and automated patching."
+}];
 
-const GuideSection = () => (
-  <section className="py-20 md:py-28">
+
+const GuideSection = () =>
+<section className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
@@ -329,12 +329,12 @@ const GuideSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {guideItems.map((item) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={item.id}
-              className="group bg-card border border-border p-8 text-center transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]"
-            >
+        const Icon = item.icon;
+        return (
+          <div
+            key={item.id}
+            className="group bg-card border border-border p-8 text-center transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]">
+
               <div className="w-14 h-14 border border-primary/30 flex items-center justify-center mx-auto mb-5 group-hover:border-primary transition-colors">
                 <Icon className="w-7 h-7 text-primary" />
               </div>
@@ -344,30 +344,30 @@ const GuideSection = () => (
               <p className="text-sm text-foreground/60 leading-relaxed">
                 {item.text}
               </p>
-            </div>
-          );
-        })}
+            </div>);
+
+      })}
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ═══════════════════════════════════════════════
    COMPARISON TABLE
    ═══════════════════════════════════════════════ */
 const comparisonRows = [
-  { feature: "Assessment Type", basic: "Verified Self-Assessment", plus: "Independent Technical Testing" },
-  { feature: "Vulnerability Scanning", basic: false, plus: true },
-  { feature: "Malware Verification", basic: false, plus: true },
-  { feature: "Authenticated Scans", basic: false, plus: true },
-  { feature: "NCSC Certificate", basic: true, plus: true },
-  { feature: "Digital Badge", basic: true, plus: true },
-  { feature: "Supply Chain Assurance", basic: "Basic", plus: "Enhanced" },
-  { feature: "Government Contract Eligible", basic: "Limited", plus: "Full" },
-];
+{ feature: "Assessment Type", basic: "Verified Self-Assessment", plus: "Independent Technical Testing" },
+{ feature: "Vulnerability Scanning", basic: false, plus: true },
+{ feature: "Malware Verification", basic: false, plus: true },
+{ feature: "Authenticated Scans", basic: false, plus: true },
+{ feature: "NCSC Certificate", basic: true, plus: true },
+{ feature: "Digital Badge", basic: true, plus: true },
+{ feature: "Supply Chain Assurance", basic: "Basic", plus: "Enhanced" },
+{ feature: "Government Contract Eligible", basic: "Limited", plus: "Full" }];
 
-const ComparisonTable = () => (
-  <section className="py-20 md:py-28" style={{ backgroundColor: "#F8F9FA" }}>
+
+const ComparisonTable = () =>
+<section className="py-20 md:py-28" style={{ backgroundColor: "#F8F9FA" }}>
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
@@ -390,13 +390,13 @@ const ComparisonTable = () => (
         </div>
 
         {/* Rows */}
-        {comparisonRows.map((row, i) => (
-          <div
-            key={i}
-            className={`grid grid-cols-3 ${
-              i % 2 === 0 ? "bg-card" : "bg-background"
-            } ${i < comparisonRows.length - 1 ? "border-b border-border" : ""}`}
-          >
+        {comparisonRows.map((row, i) =>
+      <div
+        key={i}
+        className={`grid grid-cols-3 ${
+        i % 2 === 0 ? "bg-card" : "bg-background"} ${
+        i < comparisonRows.length - 1 ? "border-b border-border" : ""}`}>
+
             <div className="p-4 text-sm text-foreground font-medium">
               {row.feature}
             </div>
@@ -407,42 +407,42 @@ const ComparisonTable = () => (
               <CellValue value={row.plus} highlight />
             </div>
           </div>
-        ))}
+      )}
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 const CellValue = ({
   value,
-  highlight,
-}: {
-  value: boolean | string;
-  highlight?: boolean;
-}) => {
+  highlight
+
+
+
+}: {value: boolean | string;highlight?: boolean;}) => {
   if (typeof value === "boolean") {
-    return value ? (
-      <CheckCircle2
-        className={`w-5 h-5 mx-auto ${highlight ? "text-primary" : "text-foreground/40"}`}
-      />
-    ) : (
-      <XCircle className="w-5 h-5 mx-auto text-foreground/20" />
-    );
+    return value ?
+    <CheckCircle2
+      className={`w-5 h-5 mx-auto ${highlight ? "text-primary" : "text-foreground/40"}`} /> :
+
+
+    <XCircle className="w-5 h-5 mx-auto text-foreground/20" />;
+
   }
   return (
     <span
-      className={`text-sm ${highlight ? "text-primary font-semibold" : "text-foreground/60"}`}
-    >
+      className={`text-sm ${highlight ? "text-primary font-semibold" : "text-foreground/60"}`}>
+
       {value}
-    </span>
-  );
+    </span>);
+
 };
 
 /* ═══════════════════════════════════════════════
    FOOTER CTA
    ═══════════════════════════════════════════════ */
-const FooterCTA = () => (
-  <section className="py-20 md:py-28" style={{ backgroundColor: "#3B3B39" }}>
+const FooterCTA = () =>
+<section className="py-20 md:py-28" style={{ backgroundColor: "#3B3B39" }}>
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white mb-4">
         Ready to Secure Your Business?
@@ -452,21 +452,21 @@ const FooterCTA = () => (
         scoping call and take the first step toward certification.
       </p>
       <Link
-        to="/contact"
-        className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wider border border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.35)] transition-all duration-300"
-      >
+      to="/contact"
+      className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wider border border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.35)] transition-all duration-300">
+
         Book Your Free Scoping Call
         <ArrowRight className="w-4 h-4" />
       </Link>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ═══════════════════════════════════════════════
    PAGE
    ═══════════════════════════════════════════════ */
-const CyberEssentialsPage = () => (
-  <div style={{ backgroundImage: "none" }} className="bg-white">
+const CyberEssentialsPage = () =>
+<div style={{ backgroundImage: "none" }} className="bg-white">
     <Navigation />
     <main className="pt-14 bg-white">
       <Hero />
@@ -481,7 +481,7 @@ const CyberEssentialsPage = () => (
       <FooterCTA />
     </main>
     <Footer />
-  </div>
-);
+  </div>;
+
 
 export default CyberEssentialsPage;
