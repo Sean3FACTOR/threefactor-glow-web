@@ -46,12 +46,43 @@ const Hero = () => (
             3<span>FACTOR</span>
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto mb-10 leading-relaxed">
-          In a world where cyber threats are constant, Cyber Essentials is your
-          organization's first line of defense. It's more than just a
-          certificate; it's a standard of excellence that proves you take your
-          data—and your customers' trust—seriously.
-        </p>
+        <div className="text-left max-w-3xl mx-auto mb-10 space-y-6">
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-foreground mb-2">Cyber Essentials</h3>
+            <p className="text-base text-foreground/70 leading-relaxed">
+              A UK government-backed scheme (developed by the NCSC) designed to protect organizations from the most common, low-skill cyber attacks—the kind that look for "unlocked doors" like weak passwords or out-of-date software.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-foreground mb-3">Why Do You Need It?</h3>
+            <p className="text-base text-foreground/70 leading-relaxed mb-4">
+              In 2026, the digital landscape is more connected than ever. Here is why businesses are prioritizing this certification:
+            </p>
+            <ul className="space-y-3 text-base text-foreground/70 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">◆</span>
+                <span><strong className="text-foreground">Win More Contracts:</strong> It is mandatory for most UK Government tenders. Increasingly, private sector giants (like major banks) won't even look at your proposal if you aren't certified.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">◆</span>
+                <span><strong className="text-foreground">Customer Trust:</strong> Showing the Cyber Essentials badge on your website tells clients, "We take your data seriously." It is a powerful trust-builder in a world of frequent data breaches.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">◆</span>
+                <span><strong className="text-foreground">Free Cyber Insurance:</strong> For UK organizations with a turnover under £20m, achieving certification often includes free cyber liability insurance (arranged via IASME).</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">◆</span>
+                <span><strong className="text-foreground">Massive Risk Reduction:</strong> Certified organizations make 92% fewer insurance claims than those without it. It keeps your business running by preventing the "easy" attacks.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">◆</span>
+                <span><strong className="text-foreground">Compliance Alignment:</strong> While it's not the same as GDPR, it provides a solid technical foundation that helps you meet your legal obligations for data protection.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
         <Link
           to="/contact"
           className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wider border border-primary hover:shadow-[0_0_30px_hsl(var(--primary)/0.35)] transition-all duration-300"
