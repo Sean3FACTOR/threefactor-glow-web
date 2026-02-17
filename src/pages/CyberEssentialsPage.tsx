@@ -41,7 +41,7 @@ const Hero = () => (
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wide text-foreground mb-2">Cyber Essentials</h3>
             <p className="text-base text-foreground/70 leading-relaxed">
-              A UK government-backed scheme (developed by the NCSC) designed to protect organizations from the most common, low-skill cyber attacks—the kind that look for "unlocked doors" like weak passwords or out-of-date software.
+              A UK government-backed scheme (developed by the NCSC) designed to protect organizations from the most common, low-skill cyber attacks, the kind that look for "unlocked doors" like weak passwords or out-of-date software.
             </p>
           </div>
 
