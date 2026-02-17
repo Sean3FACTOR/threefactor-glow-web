@@ -12,6 +12,7 @@ import ComplianceServicesPage from "./pages/ComplianceServicesPage";
 import StrategyRiskServicesPage from "./pages/StrategyRiskServicesPage";
 import CyberDefenseServicesPage from "./pages/CyberDefenseServicesPage";
 import VCISOPage from "./pages/VCISOPage";
+import CyberEssentialsPage from "./pages/CyberEssentialsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/services/cyber-defense" element={<CyberDefenseServicesPage />} />
           <Route path="/services/cyber-maturity-aws" element={<CyberMaturityAWS />} />
           <Route path="/services/vciso" element={<VCISOPage />} />
+          <Route path="/services/cyber-essentials" element={<CyberEssentialsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

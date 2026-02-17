@@ -9,6 +9,9 @@ const serviceItems = [{
 }, {
   name: "Virtual CISO",
   href: "/services/vciso"
+}, {
+  name: "Cyber Essentials",
+  href: "/services/cyber-essentials"
 }];
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
