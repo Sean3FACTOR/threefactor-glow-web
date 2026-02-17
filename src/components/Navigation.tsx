@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import Logo from "@/assets/3F_White_Orange_with_words.png";
+import Logo from "@/assets/3factor-grey-logo.png";
 const serviceItems = [{
   name: "Compliance",
   href: "/services/compliance"
@@ -89,7 +89,7 @@ const Navigation = () => {
       <div className="container mx-auto py-0">
         <div className="flex items-center justify-between h-[3.5rem] md:h-[4rem]">
           <Link to="/" className="flex items-center h-full py-1">
-            <img alt="3FACTOR" className="h-[90%] w-auto object-contain" src="/lovable-uploads/b9dae896-d800-446d-8f26-98d2f7dbb6c3.png" />
+            <img alt="3FACTOR" className="h-[90%] w-auto object-contain" src={Logo} />
           </Link>
 
           <div className="hidden sm:flex items-center space-x-8">
