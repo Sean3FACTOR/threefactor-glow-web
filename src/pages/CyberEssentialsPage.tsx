@@ -39,8 +39,8 @@ const Hero = () => (
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-foreground leading-[1.1] mb-6">
           Secure Your Future with{" "}
           <span className="text-primary">Cyber Essentials</span> &amp;{" "}
-          <span style={{ color: "#F36F21" }}>
-            3<span>FACTOR</span>
+          <span>
+            <span style={{ color: "#F36F21" }}>3</span>FACTOR
           </span>
         </h1>
         <div className="text-left max-w-3xl mx-auto mb-10 space-y-6">
