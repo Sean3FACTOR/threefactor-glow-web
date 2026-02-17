@@ -36,9 +36,6 @@ const Hero = () => (
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
-        <span className="font-mono text-xs tracking-widest text-foreground/50 uppercase mb-4 block">
-          [CE-HERO]
-        </span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-foreground leading-[1.1] mb-6">
           Secure Your Future with{" "}
           <span className="text-primary">Cyber Essentials</span> &amp;{" "}
@@ -135,9 +132,6 @@ const FivePillars = () => (
   <section className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="font-mono text-xs tracking-widest text-foreground/50 uppercase block mb-3">
-          [MOD-PILLARS]
-        </span>
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
           The 5 Pillars of Compliance
         </h2>
@@ -193,9 +187,6 @@ const PillarCard = ({
   text: string;
 }) => (
   <div className="group bg-card border border-border p-6 transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]">
-    <span className="font-mono text-[10px] tracking-widest text-foreground/40 uppercase block mb-4">
-      [{id}]
-    </span>
     <div className="flex items-start gap-4">
       <div className="w-10 h-10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover:border-primary transition-colors">
         <Icon className="w-5 h-5 text-primary" />
@@ -253,9 +244,6 @@ const Roadmap = () => (
   >
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="font-mono text-xs tracking-widest text-white/40 uppercase block mb-3">
-          [MOD-ROADMAP]
-        </span>
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white">
           Your Roadmap to Certification
         </h2>
@@ -286,9 +274,6 @@ const Roadmap = () => (
                     isLeft ? "md:pr-12 md:text-right" : "md:pl-12"
                   }`}
                 >
-                  <span className="font-mono text-[10px] tracking-widest text-primary/60 uppercase block mb-2">
-                    [{step.id}]
-                  </span>
                   <div
                     className={`flex items-center gap-3 mb-2 ${
                       isLeft ? "md:justify-end" : ""
@@ -343,9 +328,6 @@ const GuideSection = () => (
   <section className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="font-mono text-xs tracking-widest text-foreground/50 uppercase block mb-3">
-          [MOD-GUIDE]
-        </span>
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
           How 3FACTOR Guides You
         </h2>
@@ -359,9 +341,6 @@ const GuideSection = () => (
               key={item.id}
               className="group bg-card border border-border p-8 text-center transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)]"
             >
-              <span className="font-mono text-[10px] tracking-widest text-foreground/40 uppercase block mb-6">
-                [{item.id}]
-              </span>
               <div className="w-14 h-14 border border-primary/30 flex items-center justify-center mx-auto mb-5 group-hover:border-primary transition-colors">
                 <Icon className="w-7 h-7 text-primary" />
               </div>
@@ -397,9 +376,6 @@ const ComparisonTable = () => (
   <section className="py-20 md:py-28" style={{ backgroundColor: "#F8F9FA" }}>
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="font-mono text-xs tracking-widest text-foreground/50 uppercase block mb-3">
-          [MOD-COMPARE]
-        </span>
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
           Essentials vs. Essentials Plus
         </h2>
@@ -474,9 +450,6 @@ const CellValue = ({
 const FooterCTA = () => (
   <section className="py-20 md:py-28" style={{ backgroundColor: "#3B3B39" }}>
     <div className="container mx-auto px-4 text-center">
-      <span className="font-mono text-xs tracking-widest text-white/40 uppercase block mb-4">
-        [CTA-FINAL]
-      </span>
       <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white mb-4">
         Ready to Secure Your Business?
       </h2>
