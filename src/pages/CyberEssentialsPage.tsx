@@ -25,14 +25,7 @@ import {
    HERO
    ═══════════════════════════════════════════════ */
 const Hero = () => (
-  <section className="relative py-24 md:py-32 overflow-hidden">
-    {/* subtle circuit lines */}
-    <div className="absolute inset-0 opacity-[0.03]">
-      <div className="absolute top-1/4 left-0 w-full h-px bg-foreground" />
-      <div className="absolute top-3/4 left-0 w-full h-px bg-foreground" />
-      <div className="absolute left-1/4 top-0 h-full w-px bg-foreground" />
-      <div className="absolute left-3/4 top-0 h-full w-px bg-foreground" />
-    </div>
+  <section className="relative py-16 md:py-24 overflow-hidden bg-white">
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
@@ -130,7 +123,7 @@ const pillars = [
 ];
 
 const FivePillars = () => (
-  <section className="py-20 md:py-28">
+  <section className="py-14 md:py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
@@ -473,10 +466,14 @@ const FooterCTA = () => (
    PAGE
    ═══════════════════════════════════════════════ */
 const CyberEssentialsPage = () => (
-  <div style={{ backgroundImage: "none" }}>
+  <div style={{ backgroundImage: "none" }} className="bg-white">
     <Navigation />
-    <main className="pt-14">
+    <main className="pt-14 bg-white">
       <Hero />
+      {/* Section divider */}
+      <div className="container mx-auto px-4">
+        <div className="h-px bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
+      </div>
       <FivePillars />
       <Roadmap />
       <GuideSection />
