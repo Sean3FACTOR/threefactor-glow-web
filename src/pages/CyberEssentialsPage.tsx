@@ -36,14 +36,15 @@ const Hero = () => (
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-foreground leading-[1.1] mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-foreground leading-[1.1] mb-5">
           Secure Your Future with{" "}
           <span className="text-primary">Cyber Essentials</span> &amp;{" "}
           <span>
             <span style={{ color: "#F36F21" }}>3</span>FACTOR
           </span>
         </h1>
-        <div className="text-left max-w-3xl mx-auto mb-10 space-y-6">
+        <div className="w-16 h-px bg-foreground/20 mx-auto mb-5" />
+        <div className="text-left max-w-3xl mx-auto mb-8 space-y-5">
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wide text-foreground mb-2">Cyber Essentials</h3>
             <p className="text-base text-foreground/70 leading-relaxed">
