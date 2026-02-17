@@ -94,7 +94,7 @@ const pillars = [
   id: "PIL-01",
   icon: Globe,
   title: "Firewalls",
-  text: 'Creating a secure "moat" between your internal network and the internet to block unauthorized access.'
+  text: "Creating a secure barrier between your internal network and the internet to block unauthorized access."
 },
 {
   id: "PIL-02",
