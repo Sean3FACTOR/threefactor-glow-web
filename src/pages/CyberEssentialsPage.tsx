@@ -448,7 +448,7 @@ const FooterCTA = () =>
         Ready to Secure Your Business?
       </h2>
       <p className="text-white/60 text-lg max-w-2xl mx-auto mb-10">
-        Let 3FACTOR take the complexity out of Cyber Essentials. Book a free
+        Let 3<span style={{ color: "#F36F21" }}>FACTOR</span> take the complexity out of Cyber Essentials. Book a free
         scoping call and take the first step toward certification.
       </p>
       <Link
