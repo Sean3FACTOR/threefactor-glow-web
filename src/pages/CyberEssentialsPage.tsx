@@ -472,7 +472,7 @@ const FooterCTA = () => (
    PAGE
    ═══════════════════════════════════════════════ */
 const CyberEssentialsPage = () => (
-  <>
+  <div style={{ backgroundImage: "none" }}>
     <Navigation />
     <main className="pt-14">
       <Hero />
@@ -483,7 +483,7 @@ const CyberEssentialsPage = () => (
       <FooterCTA />
     </main>
     <Footer />
-  </>
+  </div>
 );
 
 export default CyberEssentialsPage;
