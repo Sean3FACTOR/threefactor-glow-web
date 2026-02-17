@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center">
-              <img src={Logo} alt="3FACTOR" className="h-12 w-auto" />
+              <img src={Logo} alt="3FACTOR" className="h-14 w-auto" />
             </div>
             <p className="text-sm text-white">
               © 2026 Three Factor, LLC. All Rights Reserved.
