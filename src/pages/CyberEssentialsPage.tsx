@@ -126,10 +126,8 @@ const FivePillars = () =>
 <section className="py-14 md:py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">
-          5 Key Focus Areas 
-critical for cyber essentials compliance        
-        
+        <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-foreground">CYBER ESSENTIALS COMPLIANCE: THE 5 KEY AREAS
+
       </h2>
         <p className="font-mono text-sm text-foreground/50 mt-2">
           Version 16 (2026) Standards
@@ -140,7 +138,9 @@ critical for cyber essentials compliance
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left column — 2 cards */}
         <div className="md:col-span-4 flex flex-col gap-6">
-          {pillars.slice(0, 2).map((p) => <PillarCard key={p.id} {...p} />)}
+          {pillars.slice(0, 2).map((p) =>
+        <PillarCard key={p.id} {...p} />
+        )}
         </div>
 
         {/* Center — shield hub */}
