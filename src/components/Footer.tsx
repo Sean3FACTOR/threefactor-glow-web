@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
-import Logo from "@/assets/3factor-orange-logo.png";
+import Logo from "@/assets/3factor-white-orange-logo.png";
 import linkedinIcon from "@/assets/linkedin-icon.avif";
 
 const Footer = () => {
