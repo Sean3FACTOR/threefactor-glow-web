@@ -699,7 +699,8 @@ const ISO27001Page = () => {
               variant="outline"
               size="lg"
               onClick={() => scrollTo("checklist")}
-              className="font-semibold border-white/30 text-white hover:bg-white/10"
+              className="font-semibold text-white hover:bg-white/10"
+              style={{ borderColor: "#9CA3AF", color: "#FFFFFF", backgroundColor: "transparent" }}
             >
               Download Checklist
             </Button>
