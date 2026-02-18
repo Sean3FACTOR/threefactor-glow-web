@@ -189,69 +189,111 @@ const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?:
 };
 
 const SpokesDiagram = () => {
-  const frameworks = ["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "Customer\nassurance"];
-  // Hex grid positions around center (pointy-top hex layout)
-  const hexSize = 140;
-  const gap = 6;
-  const colW = hexSize * 1.1547 + gap;
-  const rowH = hexSize * 0.75 + gap;
-
-  // 6 surrounding positions in hex pattern
-  const positions = [
-    { x: 0, y: -rowH * 1.35 },           // top
-    { x: colW * 0.87, y: -rowH * 0.67 }, // top-right
-    { x: colW * 0.87, y: rowH * 0.67 },  // bottom-right
-    { x: 0, y: rowH * 1.35 },            // bottom
-    { x: -colW * 0.87, y: rowH * 0.67 }, // bottom-left
-    { x: -colW * 0.87, y: -rowH * 0.67 },// top-left
+  const outerFrameworks = [
+    { label: "SOC 2", desc: "Shares 60%+ controls" },
+    { label: "NIS2", desc: "Risk & governance overlap" },
+    { label: "DORA", desc: "Resilience mapping" },
+    { label: "CIS", desc: "Control alignment" },
+    { label: "CMMC", desc: "Practice inheritance" },
+    { label: "Customer\nassurance", desc: "Trust foundation" },
   ];
 
   return (
-    <div className="relative w-full max-w-[884px] mx-auto aspect-square flex items-center justify-center">
-      {/* Connection lines from center to each hex */}
-      <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-        <defs>
-          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgba(243,111,33,0.35)" />
-            <stop offset="100%" stopColor="rgba(59,59,57,0.08)" />
-          </linearGradient>
-        </defs>
-        {positions.map((pos, i) => {
-          const cx = 50;
-          const cy = 50;
-          const ex = cx + (pos.x / 884) * 100;
-          const ey = cy + (pos.y / 884) * 100;
-          const mx = (cx + ex) / 2;
-          const my = (cy + ey) / 2;
+    <div className="relative w-full max-w-[780px] mx-auto" style={{ aspectRatio: "1/1" }}>
+      {/* Concentric rings */}
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 780 780">
+        {/* Outermost ring — dashed */}
+        <circle cx="390" cy="390" r="370" fill="none" stroke="rgba(59,59,57,0.06)" strokeWidth="1" strokeDasharray="6 4" />
+        {/* Middle ring */}
+        <circle cx="390" cy="390" r="260" fill="none" stroke="rgba(243,111,33,0.1)" strokeWidth="1" />
+        {/* Inner ring */}
+        <circle cx="390" cy="390" r="145" fill="none" stroke="rgba(243,111,33,0.2)" strokeWidth="1.5" />
+
+        {/* Radial lines from center to each framework */}
+        {outerFrameworks.map((_, i) => {
+          const angle = (i * 360) / outerFrameworks.length - 90;
+          const rad = (angle * Math.PI) / 180;
+          const innerR = 145;
+          const outerR = 260;
           return (
             <g key={i}>
               <line
-                x1={`${cx}%`} y1={`${cy}%`}
-                x2={`${ex}%`} y2={`${ey}%`}
-                stroke="url(#lineGrad)"
-                strokeWidth="1.5"
+                x1={390 + innerR * Math.cos(rad)}
+                y1={390 + innerR * Math.sin(rad)}
+                x2={390 + outerR * Math.cos(rad)}
+                y2={390 + outerR * Math.sin(rad)}
+                stroke="rgba(243,111,33,0.15)"
+                strokeWidth="1"
               />
-              <circle cx={`${mx}%`} cy={`${my}%`} r="2.5" fill="rgba(243,111,33,0.3)" />
-              <circle cx={`${ex}%`} cy={`${ey}%`} r="3" fill="rgba(243,111,33,0.2)" stroke="rgba(243,111,33,0.35)" strokeWidth="1" />
+              {/* Node at middle ring intersection */}
+              <circle
+                cx={390 + outerR * Math.cos(rad)}
+                cy={390 + outerR * Math.sin(rad)}
+                r="4"
+                fill="rgba(243,111,33,0.25)"
+                stroke="rgba(243,111,33,0.4)"
+                strokeWidth="1"
+              />
             </g>
           );
         })}
       </svg>
-      {/* Center hex */}
-      <HexTile label="ISO 27001" isCenter style={{ transform: "translate(-50%, -50%)", left: "50%", top: "50%", zIndex: 2 }} />
-      {/* Surrounding hexes */}
-      {frameworks.map((label, i) => (
-        <HexTile
-          key={label}
-          label={label}
-          style={{
-            transform: `translate(calc(-50% + ${positions[i].x}px), calc(-50% + ${positions[i].y}px))`,
-            left: "50%",
-            top: "50%",
-            zIndex: 1,
-          }}
-        />
-      ))}
+
+      {/* Center — ISO 27001 core */}
+      <div
+        className="absolute flex flex-col items-center justify-center text-center"
+        style={{
+          width: 280, height: 280,
+          left: "50%", top: "50%",
+          transform: "translate(-50%, -50%)",
+          backgroundColor: "#F36F21",
+          zIndex: 3,
+        }}
+      >
+        <span className="font-mono text-white uppercase text-lg tracking-widest opacity-70">Foundation</span>
+        <span className="font-mono text-white uppercase text-3xl md:text-4xl font-bold tracking-wider mt-1">ISO 27001</span>
+        <span className="text-white/70 text-sm mt-2 max-w-[200px] leading-snug">
+          The control framework that powers every other standard
+        </span>
+      </div>
+
+      {/* Outer framework nodes */}
+      {outerFrameworks.map((fw, i) => {
+        const angle = (i * 360) / outerFrameworks.length - 90;
+        const rad = (angle * Math.PI) / 180;
+        const orbitR = 340;
+        const left = 390 + orbitR * Math.cos(rad);
+        const top = 390 + orbitR * Math.sin(rad);
+
+        return (
+          <div
+            key={fw.label}
+            className="absolute flex flex-col items-center text-center"
+            style={{
+              left: `${(left / 780) * 100}%`,
+              top: `${(top / 780) * 100}%`,
+              transform: "translate(-50%, -50%)",
+              zIndex: 2,
+              width: 140,
+            }}
+          >
+            <div
+              className="w-[72px] h-[72px] md:w-[88px] md:h-[88px] flex items-center justify-center border"
+              style={{
+                backgroundColor: "#FFFFFF",
+                borderColor: "rgba(59,59,57,0.15)",
+              }}
+            >
+              <span className="font-mono text-base md:text-lg font-bold uppercase" style={{ color: "#3B3B39", whiteSpace: "pre-line" }}>
+                {fw.label}
+              </span>
+            </div>
+            <span className="font-mono text-xs mt-2 leading-tight" style={{ color: "rgba(59,59,57,0.5)" }}>
+              {fw.desc}
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 };
