@@ -207,7 +207,7 @@ const SpokesDiagram = () => {
   ];
 
   return (
-    <div className="relative w-full max-w-[340px] mx-auto aspect-square flex items-center justify-center">
+    <div className="relative w-full max-w-[442px] mx-auto aspect-square flex items-center justify-center">
       {/* Connection lines from center to each hex */}
       <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
         {positions.map((pos, i) => (
