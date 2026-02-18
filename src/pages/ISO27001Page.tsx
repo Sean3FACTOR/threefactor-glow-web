@@ -163,49 +163,81 @@ const ProposalModal = ({
 
 };
 
-/* ─── Spoke Diagram ─── */
+/* ─── Hexagonal Grid Diagram ─── */
+const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?: boolean; style?: React.CSSProperties }) => {
+  const size = isCenter ? 90 : 70;
+  const h = size;
+  const w = size * 1.1547; // hex width ratio
+  return (
+    <div className="absolute flex items-center justify-center" style={{ width: w, height: h, ...style }}>
+      <svg viewBox="0 0 100 86.6" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+        <polygon
+          points="25,0 75,0 100,43.3 75,86.6 25,86.6 0,43.3"
+          fill={isCenter ? "#F36F21" : "#FFFFFF"}
+          stroke={isCenter ? "#F36F21" : "rgba(59,59,57,0.2)"}
+          strokeWidth="1.5"
+        />
+      </svg>
+      <span
+        className={`relative z-10 font-mono text-center leading-tight ${isCenter ? "text-xs font-bold uppercase tracking-wider" : "text-[10px] font-medium"}`}
+        style={{ color: isCenter ? "#FFFFFF" : "#3B3B39", maxWidth: w - 16 }}
+      >
+        {label}
+      </span>
+    </div>
+  );
+};
+
 const SpokesDiagram = () => {
-  const spokes = ["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "Customer assurance"];
+  const frameworks = ["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "Customer\nassurance"];
+  // Hex grid positions around center (pointy-top hex layout)
+  const hexSize = 70;
+  const gap = 6;
+  const colW = hexSize * 1.1547 + gap;
+  const rowH = hexSize * 0.75 + gap;
+
+  // 6 surrounding positions in hex pattern
+  const positions = [
+    { x: 0, y: -rowH * 1.35 },           // top
+    { x: colW * 0.87, y: -rowH * 0.67 }, // top-right
+    { x: colW * 0.87, y: rowH * 0.67 },  // bottom-right
+    { x: 0, y: rowH * 1.35 },            // bottom
+    { x: -colW * 0.87, y: rowH * 0.67 }, // bottom-left
+    { x: -colW * 0.87, y: -rowH * 0.67 },// top-left
+  ];
+
   return (
     <div className="relative w-full max-w-[340px] mx-auto aspect-square flex items-center justify-center">
-      {/* center */}
-      <div
-        className="absolute z-10 w-28 h-28 flex items-center justify-center border-2 font-bold text-sm uppercase tracking-wider"
-        style={{ borderColor: "#F36F21", color: "#3B3B39", backgroundColor: "#FFFFFF" }}>
-
-        ISO 27001
-      </div>
-      {/* spokes */}
-      {spokes.map((label, i) => {
-        const angle = 360 / spokes.length * i - 90;
-        const rad = angle * Math.PI / 180;
-        const r = 130;
-        const x = Math.cos(rad) * r;
-        const y = Math.sin(rad) * r;
-        return (
-          <div key={label} className="absolute" style={{ transform: `translate(${x}px, ${y}px)` }}>
-            {/* line */}
-            <div
-              className="absolute top-1/2 left-1/2 origin-center"
-              style={{
-                width: `${r - 30}px`,
-                height: "1px",
-                backgroundColor: "rgba(59,59,57,0.15)",
-                transform: `rotate(${angle + 180}deg) translateY(-0.5px)`,
-                transformOrigin: "0 0"
-              }} />
-
-            <span
-              className="relative z-10 block px-3 py-1.5 text-xs font-mono border bg-card"
-              style={{ borderColor: "rgba(59,59,57,0.15)", color: "#3B3B39", whiteSpace: "nowrap" }}>
-
-              {label}
-            </span>
-          </div>);
-
-      })}
-    </div>);
-
+      {/* Connection lines from center to each hex */}
+      <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
+        {positions.map((pos, i) => (
+          <line
+            key={i}
+            x1="50%" y1="50%"
+            x2={`calc(50% + ${pos.x}px)`} y2={`calc(50% + ${pos.y}px)`}
+            stroke="rgba(59,59,57,0.12)"
+            strokeWidth="1"
+            strokeDasharray="4 3"
+          />
+        ))}
+      </svg>
+      {/* Center hex */}
+      <HexTile label="ISO 27001" isCenter style={{ transform: "translate(-50%, -50%)", left: "50%", top: "50%", zIndex: 2 }} />
+      {/* Surrounding hexes */}
+      {frameworks.map((label, i) => (
+        <HexTile
+          key={label}
+          label={label}
+          style={{
+            transform: `translate(calc(-50% + ${positions[i].x}px), calc(-50% + ${positions[i].y}px))`,
+            left: "50%",
+            top: "50%",
+            zIndex: 1,
+          }}
+        />
+      ))}
+    </div>
+  );
 };
 
 /* ─── Page ─── */
