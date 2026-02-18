@@ -259,7 +259,7 @@ const ISO27001Page = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA", fontSize: "125%" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA", fontSize: "137.5%" }}>
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
