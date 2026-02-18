@@ -210,16 +210,32 @@ const SpokesDiagram = () => {
     <div className="relative w-full max-w-[884px] mx-auto aspect-square flex items-center justify-center">
       {/* Connection lines from center to each hex */}
       <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-        {positions.map((pos, i) => (
-          <line
-            key={i}
-            x1="50%" y1="50%"
-            x2={`calc(50% + ${pos.x}px)`} y2={`calc(50% + ${pos.y}px)`}
-            stroke="rgba(59,59,57,0.12)"
-            strokeWidth="1"
-            strokeDasharray="4 3"
-          />
-        ))}
+        <defs>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="rgba(243,111,33,0.35)" />
+            <stop offset="100%" stopColor="rgba(59,59,57,0.08)" />
+          </linearGradient>
+        </defs>
+        {positions.map((pos, i) => {
+          const cx = 50;
+          const cy = 50;
+          const ex = cx + (pos.x / 884) * 100;
+          const ey = cy + (pos.y / 884) * 100;
+          const mx = (cx + ex) / 2;
+          const my = (cy + ey) / 2;
+          return (
+            <g key={i}>
+              <line
+                x1={`${cx}%`} y1={`${cy}%`}
+                x2={`${ex}%`} y2={`${ey}%`}
+                stroke="url(#lineGrad)"
+                strokeWidth="1.5"
+              />
+              <circle cx={`${mx}%`} cy={`${my}%`} r="2.5" fill="rgba(243,111,33,0.3)" />
+              <circle cx={`${ex}%`} cy={`${ey}%`} r="3" fill="rgba(243,111,33,0.2)" stroke="rgba(243,111,33,0.35)" strokeWidth="1" />
+            </g>
+          );
+        })}
       </svg>
       {/* Center hex */}
       <HexTile label="ISO 27001" isCenter style={{ transform: "translate(-50%, -50%)", left: "50%", top: "50%", zIndex: 2 }} />
