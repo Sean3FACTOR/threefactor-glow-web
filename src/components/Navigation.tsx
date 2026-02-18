@@ -7,6 +7,9 @@ const serviceItems = [{
   name: "Compliance",
   href: "/services/compliance"
 }, {
+  name: "ISO 27001",
+  href: "/services/iso-27001"
+}, {
   name: "Virtual CISO",
   href: "/services/vciso"
 }, {
