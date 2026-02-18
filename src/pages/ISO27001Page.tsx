@@ -402,11 +402,34 @@ const ISO27001Page = () => {
               </p>
             </div>
             <div className="col-span-12 lg:col-span-5 flex items-center">
-              <div className="bg-card border border-border p-6 w-full">
-                <span className="tech-id block mb-2">[NOTE]</span>
-                <p className="text-sm leading-relaxed" style={{ color: "#3B3B39" }}>
-                  We focus on operationalising controls and evidence — not producing shelfware.
-                </p>
+              <div className="bg-card border border-border w-full">
+                <div className="px-5 py-3 border-b border-border flex items-center gap-2">
+                  <span className="tech-id">[FIX]</span>
+                  <span className="font-mono text-xs uppercase tracking-wider" style={{ color: "#3B3B39" }}>How we solve it</span>
+                </div>
+                <div className="p-5 space-y-4">
+                  {[
+                    { problem: "Scope balloons", fix: "Defensible scope boundaries set upfront" },
+                    { problem: "Evidence isn't audit-ready", fix: "Evidence-by-design workflows from day one" },
+                    { problem: "Duplicated work across audits", fix: "Integrated control framework — build once, reuse everywhere" },
+                    { problem: "ISMS becomes shelfware", fix: "Operational ISMS embedded into BAU" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
+                        <CheckCircle2 className="w-4 h-4" style={{ color: "#F36F21" }} />
+                      </div>
+                      <div>
+                        <p className="text-xs font-mono line-through mb-0.5" style={{ color: "#9CA3AF" }}>{item.problem}</p>
+                        <p className="text-sm font-medium" style={{ color: "#3B3B39" }}>{item.fix}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="px-5 py-3 border-t border-border">
+                  <p className="text-xs italic" style={{ color: "#646464" }}>
+                    We operationalise controls and evidence — not produce shelfware.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
