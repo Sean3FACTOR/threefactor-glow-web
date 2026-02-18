@@ -453,7 +453,7 @@ const ISO27001Page = () => {
             map((step, i) =>
             <div key={i} className="bg-card border border-border p-5 relative">
                 <span className="tech-id block mb-2">[STEP-0{i + 1}]</span>
-                <step.icon className="w-5 h-5 mb-3" style={{ color: "#F36F21" }} />
+                
                 <h3 className="text-sm font-bold uppercase mb-2" style={{ color: "#3B3B39" }}>{step.title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: "#646464" }}>{step.desc}</p>
                 {i < 4 &&
