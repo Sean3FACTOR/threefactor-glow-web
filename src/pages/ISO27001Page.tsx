@@ -189,111 +189,174 @@ const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?:
 };
 
 const SpokesDiagram = () => {
-  const outerFrameworks = [
-    { label: "SOC 2", desc: "Shares 60%+ controls" },
-    { label: "NIS2", desc: "Risk & governance overlap" },
-    { label: "DORA", desc: "Resilience mapping" },
-    { label: "CIS", desc: "Control alignment" },
-    { label: "CMMC", desc: "Practice inheritance" },
-    { label: "Customer\nassurance", desc: "Trust foundation" },
+  const streams = [
+    { label: "SOC 2", angle: -90 },
+    { label: "NIS2", angle: -30 },
+    { label: "DORA", angle: 30 },
+    { label: "CMMC", angle: 90 },
+    { label: "CIS", angle: 150 },
+    { label: "Customer\nAssurance", angle: 210 },
   ];
 
   return (
-    <div className="relative w-full max-w-[780px] mx-auto" style={{ aspectRatio: "1/1" }}>
-      {/* Concentric rings */}
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 780 780">
-        {/* Outermost ring — dashed */}
-        <circle cx="390" cy="390" r="370" fill="none" stroke="rgba(59,59,57,0.06)" strokeWidth="1" strokeDasharray="6 4" />
-        {/* Middle ring */}
-        <circle cx="390" cy="390" r="260" fill="none" stroke="rgba(243,111,33,0.1)" strokeWidth="1" />
-        {/* Inner ring */}
-        <circle cx="390" cy="390" r="145" fill="none" stroke="rgba(243,111,33,0.2)" strokeWidth="1.5" />
+    <div className="relative w-full max-w-[720px] mx-auto" style={{ aspectRatio: "1/1" }}>
+      <svg viewBox="0 0 720 720" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          {/* Core glow gradient */}
+          <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#F36F21" stopOpacity="0.5" />
+            <stop offset="40%" stopColor="#F36F21" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#F36F21" stopOpacity="0" />
+          </radialGradient>
+          {/* Core fill gradient */}
+          <radialGradient id="coreFill" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stopColor="#FF8A3D" />
+            <stop offset="60%" stopColor="#F36F21" />
+            <stop offset="100%" stopColor="#D4550F" />
+          </radialGradient>
+          {/* Stream line gradient */}
+          <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#F36F21" stopOpacity="0" />
+            <stop offset="50%" stopColor="#F36F21" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#F36F21" stopOpacity="0.6" />
+          </linearGradient>
+          {/* Outer ambient ring gradient */}
+          <radialGradient id="ambientRing" cx="50%" cy="50%" r="50%">
+            <stop offset="70%" stopColor="#F36F21" stopOpacity="0" />
+            <stop offset="85%" stopColor="#F36F21" stopOpacity="0.04" />
+            <stop offset="100%" stopColor="#F36F21" stopOpacity="0" />
+          </radialGradient>
+          {/* Node glow filter */}
+          <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          {/* Core shadow filter */}
+          <filter id="coreShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="18" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
 
-        {/* Radial lines from center to each framework */}
-        {outerFrameworks.map((_, i) => {
-          const angle = (i * 360) / outerFrameworks.length - 90;
-          const rad = (angle * Math.PI) / 180;
-          const innerR = 145;
-          const outerR = 260;
+        {/* Ambient background ring */}
+        <circle cx="360" cy="360" r="340" fill="url(#ambientRing)" />
+
+        {/* Outer orbit ring — dashed */}
+        <circle cx="360" cy="360" r="290" fill="none" stroke="rgba(243,111,33,0.07)" strokeWidth="0.75" strokeDasharray="4 6" />
+        <circle cx="360" cy="360" r="220" fill="none" stroke="rgba(243,111,33,0.05)" strokeWidth="0.5" strokeDasharray="2 8" />
+
+        {/* Data streams converging to center */}
+        {streams.map((s, i) => {
+          const rad = (s.angle * Math.PI) / 180;
+          const outerR = 310;
+          const midR = 180;
+          const innerR = 80;
+
+          const ox = 360 + outerR * Math.cos(rad);
+          const oy = 360 + outerR * Math.sin(rad);
+          const mx = 360 + midR * Math.cos(rad + 0.08);
+          const my = 360 + midR * Math.sin(rad + 0.08);
+          const ix = 360 + innerR * Math.cos(rad);
+          const iy = 360 + innerR * Math.sin(rad);
+
+          // Floating nodes along the stream
+          const n1R = outerR * 0.85;
+          const n2R = outerR * 0.6;
+          const n3R = outerR * 0.38;
+
           return (
             <g key={i}>
-              <line
-                x1={390 + innerR * Math.cos(rad)}
-                y1={390 + innerR * Math.sin(rad)}
-                x2={390 + outerR * Math.cos(rad)}
-                y2={390 + outerR * Math.sin(rad)}
-                stroke="rgba(243,111,33,0.15)"
+              {/* Stream path — curved */}
+              <path
+                d={`M ${ox} ${oy} Q ${mx} ${my} ${ix} ${iy}`}
+                fill="none"
+                stroke="rgba(243,111,33,0.18)"
+                strokeWidth="1.5"
+              />
+              {/* Second parallel stream — offset */}
+              <path
+                d={`M ${360 + outerR * Math.cos(rad - 0.06)} ${360 + outerR * Math.sin(rad - 0.06)} Q ${360 + midR * Math.cos(rad - 0.04)} ${360 + midR * Math.sin(rad - 0.04)} ${ix} ${iy}`}
+                fill="none"
+                stroke="rgba(243,111,33,0.08)"
                 strokeWidth="1"
               />
-              {/* Node at middle ring intersection */}
-              <circle
-                cx={390 + outerR * Math.cos(rad)}
-                cy={390 + outerR * Math.sin(rad)}
-                r="4"
-                fill="rgba(243,111,33,0.25)"
-                stroke="rgba(243,111,33,0.4)"
-                strokeWidth="1"
-              />
+
+              {/* Floating nodes along stream */}
+              <circle cx={360 + n1R * Math.cos(rad)} cy={360 + n1R * Math.sin(rad)} r="3" fill="rgba(243,111,33,0.3)" filter="url(#nodeGlow)" />
+              <circle cx={360 + n2R * Math.cos(rad + 0.05)} cy={360 + n2R * Math.sin(rad + 0.05)} r="2.5" fill="rgba(243,111,33,0.4)" filter="url(#nodeGlow)" />
+              <circle cx={360 + n3R * Math.cos(rad)} cy={360 + n3R * Math.sin(rad)} r="2" fill="rgba(243,111,33,0.5)" filter="url(#nodeGlow)" />
+
+              {/* Endpoint node */}
+              <circle cx={ox} cy={oy} r="5" fill="rgba(243,111,33,0.15)" stroke="rgba(243,111,33,0.3)" strokeWidth="1" />
+            </g>
+          );
+        })}
+
+        {/* Core glow */}
+        <circle cx="360" cy="360" r="120" fill="url(#coreGlow)" filter="url(#coreShadow)" />
+
+        {/* Core geometric shape — interlocking segments */}
+        {/* Main hexagon */}
+        <polygon
+          points="360,300 412,330 412,390 360,420 308,390 308,330"
+          fill="url(#coreFill)"
+          opacity="0.9"
+        />
+        {/* Top facet highlight */}
+        <polygon
+          points="360,300 412,330 360,345 308,330"
+          fill="rgba(255,255,255,0.15)"
+        />
+        {/* Left facet shadow */}
+        <polygon
+          points="308,330 360,345 360,420 308,390"
+          fill="rgba(0,0,0,0.1)"
+        />
+
+        {/* Inner geometric detail lines */}
+        <line x1="360" y1="300" x2="360" y2="420" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" />
+        <line x1="308" y1="330" x2="412" y2="390" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+        <line x1="412" y1="330" x2="308" y2="390" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+
+        {/* Core text */}
+        <text x="360" y="352" textAnchor="middle" fill="white" fontSize="11" fontFamily="monospace" letterSpacing="3" opacity="0.7">FOUNDATION</text>
+        <text x="360" y="374" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" fontFamily="monospace" letterSpacing="2">ISO 27001</text>
+
+        {/* Framework labels at endpoints */}
+        {streams.map((s, i) => {
+          const rad = (s.angle * Math.PI) / 180;
+          const labelR = 330;
+          const lx = 360 + labelR * Math.cos(rad);
+          const ly = 360 + labelR * Math.sin(rad);
+          const lines = s.label.split("\n");
+
+          return (
+            <g key={`label-${i}`}>
+              {lines.map((line, li) => (
+                <text
+                  key={li}
+                  x={lx}
+                  y={ly + li * 14}
+                  textAnchor="middle"
+                  fill="#3B3B39"
+                  fontSize="11"
+                  fontFamily="monospace"
+                  fontWeight="600"
+                  opacity="0.7"
+                >
+                  {line}
+                </text>
+              ))}
             </g>
           );
         })}
       </svg>
-
-      {/* Center — ISO 27001 core */}
-      <div
-        className="absolute flex flex-col items-center justify-center text-center"
-        style={{
-          width: 280, height: 280,
-          left: "50%", top: "50%",
-          transform: "translate(-50%, -50%)",
-          backgroundColor: "#F36F21",
-          zIndex: 3,
-        }}
-      >
-        <span className="font-mono text-white uppercase text-lg tracking-widest opacity-70">Foundation</span>
-        <span className="font-mono text-white uppercase text-3xl md:text-4xl font-bold tracking-wider mt-1">ISO 27001</span>
-        <span className="text-white/70 text-sm mt-2 max-w-[200px] leading-snug">
-          The control framework that powers every other standard
-        </span>
-      </div>
-
-      {/* Outer framework nodes */}
-      {outerFrameworks.map((fw, i) => {
-        const angle = (i * 360) / outerFrameworks.length - 90;
-        const rad = (angle * Math.PI) / 180;
-        const orbitR = 340;
-        const left = 390 + orbitR * Math.cos(rad);
-        const top = 390 + orbitR * Math.sin(rad);
-
-        return (
-          <div
-            key={fw.label}
-            className="absolute flex flex-col items-center text-center"
-            style={{
-              left: `${(left / 780) * 100}%`,
-              top: `${(top / 780) * 100}%`,
-              transform: "translate(-50%, -50%)",
-              zIndex: 2,
-              width: 140,
-            }}
-          >
-            <div
-              className="w-[72px] h-[72px] md:w-[88px] md:h-[88px] flex items-center justify-center border"
-              style={{
-                backgroundColor: "#FFFFFF",
-                borderColor: "rgba(59,59,57,0.15)",
-              }}
-            >
-              <span className="font-mono text-base md:text-lg font-bold uppercase" style={{ color: "#3B3B39", whiteSpace: "pre-line" }}>
-                {fw.label}
-              </span>
-            </div>
-            <span className="font-mono text-xs mt-2 leading-tight" style={{ color: "rgba(59,59,57,0.5)" }}>
-              {fw.desc}
-            </span>
-          </div>
-        );
-      })}
     </div>
   );
 };
