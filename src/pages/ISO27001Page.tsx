@@ -57,7 +57,7 @@ const ProposalModal = ({
       toast({
         title: "Request received",
         description:
-        "Thanks — we'll reach out to schedule a 30-minute call."
+        "Thanks, we'll reach out to schedule a 30-minute call."
       });
     }, 800);
   };
@@ -411,7 +411,7 @@ const ISO27001Page = () => {
                   {[
                     { problem: "Scope balloons", fix: "Defensible scope boundaries set upfront" },
                     { problem: "Evidence isn't audit-ready", fix: "Evidence-by-design workflows from day one" },
-                    { problem: "Duplicated work across audits", fix: "Integrated control framework — build once, reuse everywhere" },
+                    { problem: "Duplicated work across audits", fix: "Integrated control framework, build once, reuse everywhere" },
                     { problem: "ISMS becomes shelfware", fix: "Operational ISMS embedded into BAU" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
@@ -627,7 +627,7 @@ const ISO27001Page = () => {
                 <h3 className="text-sm font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>{p.title}</h3>
                 <ul className="space-y-1.5">
                   {p.bullets.map((b) =>
-                <li key={b} className="text-xs" style={{ color: "#646464" }}>— {b}</li>
+                <li key={b} className="text-xs" style={{ color: "#646464" }}>• {b}</li>
                 )}
                 </ul>
               </div>
