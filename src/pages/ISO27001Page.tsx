@@ -257,11 +257,10 @@ const ISO27001Page = () => {
               <h1
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-[1.15] uppercase"
                 style={{ color: "#3B3B39" }}>
-
-                ISO 27001:
-
-
-              
+                ISO 27001:<br />
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold normal-case" style={{ color: "#646464" }}>
+                  delivered through an integrated compliance program — built to scale across standards and regulations.
+                </span>
               </h1>
 
               <p className="text-lg md:text-xl mb-6 leading-relaxed" style={{ color: "#646464" }}>
