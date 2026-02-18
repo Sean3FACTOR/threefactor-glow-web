@@ -179,7 +179,7 @@ const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?:
         />
       </svg>
       <span
-        className={`relative z-10 font-mono text-center leading-tight ${isCenter ? "text-xs font-bold uppercase tracking-wider" : "text-[10px] font-medium"}`}
+        className={`relative z-10 font-mono text-center leading-tight ${isCenter ? "text-3xl font-bold uppercase tracking-wider" : "text-2xl font-medium"}`}
         style={{ color: isCenter ? "#FFFFFF" : "#3B3B39", maxWidth: w - 16 }}
       >
         {label}
