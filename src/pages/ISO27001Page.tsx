@@ -404,7 +404,7 @@ const ISO27001Page = () => {
             <div className="col-span-12 lg:col-span-5 flex items-center">
               <div className="bg-card border border-border w-full">
                 <div className="px-5 py-3 border-b border-border flex items-center gap-2">
-                  <span className="tech-id">[FIX]</span>
+                  
                   <span className="font-mono text-xs uppercase tracking-wider" style={{ color: "#3B3B39" }}>How we solve it</span>
                 </div>
                 <div className="p-5 space-y-4">
