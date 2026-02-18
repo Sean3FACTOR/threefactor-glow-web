@@ -260,6 +260,7 @@ const ISO27001Page = () => {
 
                 ISO 27001:
 
+
               
               </h1>
 
@@ -279,8 +280,7 @@ const ISO27001Page = () => {
               </div>
 
               <ul className="space-y-2 mb-8">
-                {[
-                "Build once, evidence once, reuse across frameworks",
+                {["Build once, evidence once, reuse across frameworks",
                 "Practical ISMS and Continuous Compliance that fits into your daily Business-As-Usual",
                 "Powered by AI and Automation",
                 "Evidence on Demand without the fire drills"].
