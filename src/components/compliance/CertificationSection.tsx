@@ -73,12 +73,6 @@ const CertificationSection = ({
                   border: "1px solid #E5E7EB",
                 }}
               >
-                <span
-                  className="text-xs font-mono uppercase tracking-widest mb-4 block"
-                  style={{ color: "#646464" }}
-                >
-                  [VALUE]
-                </span>
                 <h3
                   className="text-lg font-bold uppercase tracking-tight mb-4"
                   style={{ color: "#646464" }}
@@ -109,12 +103,6 @@ const CertificationSection = ({
                     border: "1px solid #E5E7EB",
                   }}
                 >
-                  <span
-                    className="text-xs font-mono uppercase tracking-widest mb-4 block"
-                    style={{ color: "#646464" }}
-                  >
-                    [DETAIL]
-                  </span>
                   <h3
                     className="text-lg font-bold uppercase tracking-tight mb-4"
                     style={{ color: "#646464" }}

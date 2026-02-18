@@ -43,9 +43,6 @@ const FrameworkCards = () => {
   return (
     <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
-        <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "#3B3B39", opacity: 0.5 }}>
-          [FRM-01]
-        </span>
         <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mt-2 mb-8" style={{ color: "#3B3B39" }}>
           Frameworks That Decide Your Market Access
         </h2>
