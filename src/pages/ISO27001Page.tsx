@@ -259,7 +259,7 @@ const ISO27001Page = () => {
                 style={{ color: "#3B3B39" }}>
                 ISO 27001:<br />
                 <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold normal-case" style={{ color: "#646464" }}>
-                  Delivered Through an Integrated Compliance Program that's Built to Scale across Standards &amp; Regulations.
+                  One Integrated Program, Scaled For Every Standard.
                 </span>
               </h1>
 
