@@ -165,7 +165,7 @@ const ProposalModal = ({
 
 /* ─── Hexagonal Grid Diagram ─── */
 const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?: boolean; style?: React.CSSProperties }) => {
-  const size = isCenter ? 90 : 70;
+  const size = isCenter ? 180 : 140;
   const h = size;
   const w = size * 1.1547; // hex width ratio
   return (
@@ -191,7 +191,7 @@ const HexTile = ({ label, isCenter = false, style }: { label: string; isCenter?:
 const SpokesDiagram = () => {
   const frameworks = ["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "Customer\nassurance"];
   // Hex grid positions around center (pointy-top hex layout)
-  const hexSize = 70;
+  const hexSize = 140;
   const gap = 6;
   const colW = hexSize * 1.1547 + gap;
   const rowH = hexSize * 0.75 + gap;
@@ -207,7 +207,7 @@ const SpokesDiagram = () => {
   ];
 
   return (
-    <div className="relative w-full max-w-[442px] mx-auto aspect-square flex items-center justify-center">
+    <div className="relative w-full max-w-[884px] mx-auto aspect-square flex items-center justify-center">
       {/* Connection lines from center to each hex */}
       <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
         {positions.map((pos, i) => (
