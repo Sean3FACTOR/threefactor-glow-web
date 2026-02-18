@@ -474,7 +474,7 @@ const ISO27001Page = () => {
       {/* ═══ RIGHT PLACE ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-01]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
             You're in the right place if…
           </h2>
@@ -489,7 +489,7 @@ const ISO27001Page = () => {
               key={i}
               className="bg-card border border-border p-6 transition-all hover:border-primary">
 
-                <span className="tech-id block mb-3">[RP-0{i + 1}]</span>
+                
                 <p className="text-sm leading-relaxed" style={{ color: "#3B3B39" }}>{text}</p>
               </div>
             )}
@@ -502,7 +502,7 @@ const ISO27001Page = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-7">
-              <span className="tech-id block mb-2">[ID-02]</span>
+              
               <h2 className="text-2xl md:text-3xl font-bold uppercase mb-6" style={{ color: "#3B3B39" }}>
                 Why ISO 27001 projects stall
               </h2>
@@ -560,7 +560,7 @@ const ISO27001Page = () => {
       {/* ═══ 5-STEP PLAN ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-03]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
             The 5-step plan to ISO 27001 certification readiness
           </h2>
@@ -573,7 +573,7 @@ const ISO27001Page = () => {
             { icon: ClipboardCheck, title: "Stage 1/Stage 2 preparation", desc: "Audit pack, walkthroughs, close-out support." }].
             map((step, i) =>
             <div key={i} className="bg-card border border-border p-5 relative">
-                <span className="tech-id block mb-2">[STEP-0{i + 1}]</span>
+                
                 
                 <h3 className="text-sm font-bold uppercase mb-2" style={{ color: "#3B3B39" }}>{step.title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: "#646464" }}>{step.desc}</p>
@@ -595,7 +595,7 @@ const ISO27001Page = () => {
       {/* ═══ SERVICES ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-04]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
             What we deliver (fixed-scope project components)
           </h2>
@@ -630,7 +630,7 @@ const ISO27001Page = () => {
             }].
             map((card, i) =>
             <div key={i} className="bg-card border border-border p-6 transition-all hover:border-primary">
-                <span className="tech-id block mb-3">[SVC-0{i + 1}]</span>
+                
                 <h3 className="text-sm font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>{card.title}</h3>
                 <ul className="space-y-2">
                   {card.bullets.map((b) =>
@@ -651,7 +651,7 @@ const ISO27001Page = () => {
       {/* ═══ DIFFERENTIATOR ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-05]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
             Build once. Evidence once. Reuse everywhere.
           </h2>
@@ -682,7 +682,7 @@ const ISO27001Page = () => {
       {/* ═══ PACKAGE ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-06]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
             What's included in the fixed-scope project
           </h2>
@@ -732,7 +732,7 @@ const ISO27001Page = () => {
       {/* ═══ TIMELINE ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-07]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
             Typical 12–16 week delivery
           </h2>
@@ -764,7 +764,7 @@ const ISO27001Page = () => {
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
           <div className="bg-card border border-border p-8 max-w-3xl">
-            <span className="tech-id block mb-2">[OPT]</span>
+            
             <h2 className="text-xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>
               Optional: ISMS Maintenance & Continuous Compliance
             </h2>
@@ -781,7 +781,7 @@ const ISO27001Page = () => {
       {/* ═══ HOW WE WORK ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4">
-          <span className="tech-id block mb-2">[ID-08]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-8" style={{ color: "#3B3B39" }}>
             How we work
           </h2>
@@ -805,7 +805,7 @@ const ISO27001Page = () => {
       {/* ═══ FAQ ═══ */}
       <section className="py-16" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
         <div className="container mx-auto px-4 max-w-3xl">
-          <span className="tech-id block mb-2">[ID-09]</span>
+          
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-8" style={{ color: "#3B3B39" }}>FAQ</h2>
           <Accordion type="single" collapsible className="w-full">
             {[
