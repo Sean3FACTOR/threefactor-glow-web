@@ -427,7 +427,7 @@ const ISO27001Page = () => {
                 </div>
                 <div className="px-5 py-3 border-t border-border">
                   <p className="text-xs italic" style={{ color: "#646464" }}>
-                    We operationalise controls and evidence — not produce shelfware.
+                    We operationalise controls and evidence, not produce shelfware.
                   </p>
                 </div>
               </div>
