@@ -1078,9 +1078,9 @@ const SOC2Page = () => {
                 link.download = "3F_SOC2_Checklist.pdf";
                 link.click();
               }}
-              variant="outline"
+              variant="default"
               size="lg"
-              className="font-semibold px-8 border-foreground/30"
+              className="font-semibold px-8 bg-zinc-500 hover:bg-zinc-600 text-white border-0"
             >
               Download Checklist
               <ArrowRight size={16} />
