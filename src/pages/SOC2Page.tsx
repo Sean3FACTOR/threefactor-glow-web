@@ -1012,11 +1012,11 @@ const SOC2Page = () => {
           FAQ
       ══════════════════════════════════════ */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-8" style={{ color: "#3B3B39" }}>
             FAQ
           </h2>
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible className="space-y-2">
               {faqs.map((faq, i) => (
                 <AccordionItem
@@ -1062,31 +1062,29 @@ const SOC2Page = () => {
         className="py-16 border-y"
         style={{ borderColor: "rgba(59,59,57,0.08)", backgroundColor: "rgba(243,111,33,0.04)" }}
       >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-7">
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>FREE RESOURCE</div>
-              <h2 className="text-2xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>
-                Download the SOC 2 Preparation Checklist
-              </h2>
-              <p className="text-sm" style={{ color: "#646464" }}>
-                A one-page checklist to validate scope, evidence readiness, and the Type 1 → Type 2 path.
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-5 flex justify-end">
-              <Button
-                onClick={() => {
-                  try { (window as any).gtag?.("event", "soc2_checklist_download"); } catch {}
-                  // TODO: link to actual asset
-                  alert("Checklist download — wire to: soc2-preparation-checklist-2025.pdf");
-                }}
-                variant="outline"
-                className="font-semibold px-8 border-foreground/30"
-              >
-                Download Checklist
-                <ArrowRight size={16} />
-              </Button>
-            </div>
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>FREE RESOURCE</div>
+            <h2 className="text-2xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>
+              Download the SOC 2 Preparation Checklist
+            </h2>
+            <p className="text-sm mb-6" style={{ color: "#646464" }}>
+              A one-page checklist to validate scope, evidence readiness, and the Type 1 → Type 2 path.
+            </p>
+            <Button
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/3F_Whitepaper.pdf";
+                link.download = "3F_SOC2_Checklist.pdf";
+                link.click();
+              }}
+              variant="outline"
+              size="lg"
+              className="font-semibold px-8 border-foreground/30"
+            >
+              Download Checklist
+              <ArrowRight size={16} />
+            </Button>
           </div>
         </div>
       </section>
