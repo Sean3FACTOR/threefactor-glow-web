@@ -186,7 +186,7 @@ const ProposalModal = ({
    Journey Diagram SVG
 ───────────────────────────────────────────── */
 const JourneyDiagram = () => (
-  <div className="relative w-full" style={{ maxWidth: 2880 }}>
+  <div className="relative w-full" style={{ maxWidth: 480 }}>
     <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
       <defs>
         <linearGradient id="soc2LineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -507,7 +507,7 @@ const SOC2Page = () => {
             </div>
 
             {/* Right column — Journey Diagram */}
-            <div className="col-span-12 flex justify-center">
+            <div className="col-span-12 lg:col-span-5 flex justify-center">
               <JourneyDiagram />
             </div>
           </div>
