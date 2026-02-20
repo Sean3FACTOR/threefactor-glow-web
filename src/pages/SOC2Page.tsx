@@ -186,58 +186,58 @@ const ProposalModal = ({
    Journey Diagram SVG
 ───────────────────────────────────────────── */
 const JourneyDiagram = () => (
-  <div className="relative w-full" style={{ maxWidth: 480 }}>
-    <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+  <div className="relative w-full" style={{ maxWidth: 560 }}>
+    <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
       <defs>
         <linearGradient id="soc2LineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#F36F21" stopOpacity="0.15" />
           <stop offset="100%" stopColor="#F36F21" stopOpacity="0.5" />
         </linearGradient>
         <filter id="soc2NodeGlow">
-          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feGaussianBlur stdDeviation="5" result="blur" />
           <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
       </defs>
 
       {/* Vertical spine */}
-      <line x1="240" y1="50" x2="240" y2="310" stroke="url(#soc2LineGrad)" strokeWidth="1.5" />
+      <line x1="240" y1="68" x2="240" y2="420" stroke="url(#soc2LineGrad)" strokeWidth="1.5" />
 
       {/* ISO Node (optional) */}
       <g>
-        <rect x="160" y="28" width="160" height="44" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.18)" strokeWidth="1" />
-        <text x="240" y="47" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="'Open Sans', sans-serif" opacity="0.6">OPTIONAL FOUNDATION</text>
-        <text x="240" y="63" textAnchor="middle" fill="#3B3B39" fontSize="13" fontWeight="bold" fontFamily="'Open Sans', sans-serif">ISO 27001</text>
+        <rect x="130" y="20" width="220" height="62" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.18)" strokeWidth="1" />
+        <text x="240" y="44" textAnchor="middle" fill="#3B3B39" fontSize="11" fontFamily="'Open Sans', sans-serif" opacity="0.6" letterSpacing="1.5">OPTIONAL FOUNDATION</text>
+        <text x="240" y="66" textAnchor="middle" fill="#3B3B39" fontSize="17" fontWeight="bold" fontFamily="'Open Sans', sans-serif">ISO 27001</text>
       </g>
 
       {/* Connector arrow */}
-      <polygon points="240,82 236,74 244,74" fill="rgba(243,111,33,0.4)" />
+      <polygon points="240,108 235,98 245,98" fill="rgba(243,111,33,0.4)" />
 
       {/* SOC 2 Type 1 Node */}
       <g filter="url(#soc2NodeGlow)">
-        <rect x="140" y="100" width="200" height="60" fill="#F36F21" opacity="0.95" />
+        <rect x="110" y="120" width="260" height="80" fill="#F36F21" opacity="0.95" />
       </g>
-      <rect x="140" y="100" width="200" height="60" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-      <text x="240" y="123" textAnchor="middle" fill="white" fontSize="9" fontFamily="'Open Sans', sans-serif" letterSpacing="2" opacity="0.8">POINT-IN-TIME</text>
-      <text x="240" y="143" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 1</text>
+      <rect x="110" y="120" width="260" height="80" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+      <text x="240" y="148" textAnchor="middle" fill="white" fontSize="10" fontFamily="'Open Sans', sans-serif" letterSpacing="2.5" opacity="0.85">POINT-IN-TIME</text>
+      <text x="240" y="176" textAnchor="middle" fill="white" fontSize="22" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 1</text>
 
       {/* Connector arrow */}
-      <polygon points="240,172 236,164 244,164" fill="rgba(243,111,33,0.6)" />
+      <polygon points="240,234 235,224 245,224" fill="rgba(243,111,33,0.6)" />
 
       {/* SOC 2 Type 2 Node */}
-      <rect x="120" y="188" width="240" height="72" fill="white" stroke="rgba(243,111,33,0.5)" strokeWidth="1.5" />
-      <text x="240" y="210" textAnchor="middle" fill="#F36F21" fontSize="9" fontFamily="'Open Sans', sans-serif" letterSpacing="2">OPERATING PERIOD</text>
-      <text x="240" y="232" textAnchor="middle" fill="#3B3B39" fontSize="16" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 2</text>
-      <text x="240" y="250" textAnchor="middle" fill="#646464" fontSize="9" fontFamily="'Open Sans', sans-serif">3 / 6 / 12 months</text>
+      <rect x="90" y="248" width="300" height="96" fill="white" stroke="rgba(243,111,33,0.5)" strokeWidth="1.5" />
+      <text x="240" y="276" textAnchor="middle" fill="#F36F21" fontSize="10" fontFamily="'Open Sans', sans-serif" letterSpacing="2.5">OPERATING PERIOD</text>
+      <text x="240" y="308" textAnchor="middle" fill="#3B3B39" fontSize="22" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 2</text>
+      <text x="240" y="332" textAnchor="middle" fill="#646464" fontSize="11" fontFamily="'Open Sans', sans-serif">3 / 6 / 12 months</text>
 
       {/* Banner */}
-      <rect x="80" y="278" width="320" height="32" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.1)" strokeWidth="1" />
-      <text x="240" y="298" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="'Open Sans', sans-serif" opacity="0.7">Continuous compliance · evidence on demand</text>
+      <rect x="60" y="368" width="360" height="42" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.1)" strokeWidth="1" />
+      <text x="240" y="394" textAnchor="middle" fill="#3B3B39" fontSize="11" fontFamily="'Open Sans', sans-serif" opacity="0.7">Continuous compliance · evidence on demand</text>
 
       {/* Floating dots */}
-      <circle cx="108" cy="130" r="3" fill="rgba(243,111,33,0.25)" />
-      <circle cx="372" cy="220" r="3" fill="rgba(243,111,33,0.25)" />
-      <circle cx="96" cy="230" r="2" fill="rgba(243,111,33,0.15)" />
-      <circle cx="384" cy="140" r="2" fill="rgba(243,111,33,0.15)" />
+      <circle cx="80" cy="170" r="4" fill="rgba(243,111,33,0.25)" />
+      <circle cx="400" cy="300" r="4" fill="rgba(243,111,33,0.25)" />
+      <circle cx="68" cy="310" r="2.5" fill="rgba(243,111,33,0.15)" />
+      <circle cx="412" cy="180" r="2.5" fill="rgba(243,111,33,0.15)" />
     </svg>
   </div>
 );
@@ -424,9 +424,9 @@ const SOC2Page = () => {
             <span className="text-sm" style={{ color: "#3B3B39" }}>SOC 2</span>
           </div>
 
-          <div className="grid grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* Left column */}
-            <div className="col-span-12 lg:col-span-7">
+            <div className="col-span-12 lg:col-span-6">
               <h1
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-[1.15] uppercase"
                 style={{ color: "#3B3B39" }}
@@ -507,7 +507,7 @@ const SOC2Page = () => {
             </div>
 
             {/* Right column — Journey Diagram */}
-            <div className="col-span-12 lg:col-span-5 flex justify-center">
+            <div className="col-span-12 lg:col-span-6 flex justify-center items-center">
               <JourneyDiagram />
             </div>
           </div>
