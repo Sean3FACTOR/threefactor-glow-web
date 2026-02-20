@@ -1116,9 +1116,9 @@ const SOC2Page = () => {
               <ArrowRight size={16} />
             </Button>
             <Button
-              variant="outline"
+              variant="default"
               onClick={() => scrollTo("checklist")}
-              className="font-medium px-8 text-white border-white/30 hover:bg-white/10"
+              className="font-medium px-8 bg-zinc-500 hover:bg-zinc-600 text-white border-0"
             >
               Download the Checklist
             </Button>
