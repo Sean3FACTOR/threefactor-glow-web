@@ -507,7 +507,7 @@ const SOC2Page = () => {
             </div>
 
             {/* Right column — Journey Diagram */}
-            <div className="col-span-12 lg:col-span-5 flex justify-center">
+            <div className="col-span-12 flex justify-center">
               <JourneyDiagram />
             </div>
           </div>
