@@ -495,7 +495,7 @@ const SOC2Page = () => {
                 <Button
                   variant="default"
                   onClick={() => scrollTo("checklist")}
-                  className="font-medium px-6 bg-zinc-500 hover:bg-zinc-600 text-white border-0"
+                  className="font-medium px-6 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
                 >
                   Download the SOC 2 Checklist
                 </Button>
@@ -1080,7 +1080,7 @@ const SOC2Page = () => {
               }}
               variant="default"
               size="lg"
-              className="font-semibold px-8 bg-zinc-500 hover:bg-zinc-600 text-white border-0"
+              className="font-semibold px-8 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
             >
               Download Checklist
               <ArrowRight size={16} />
@@ -1116,7 +1116,7 @@ const SOC2Page = () => {
             <Button
               variant="default"
               onClick={() => scrollTo("checklist")}
-              className="font-medium px-8 bg-zinc-500 hover:bg-zinc-600 text-white border-0"
+              className="font-medium px-8 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
             >
               Download the Checklist
             </Button>
