@@ -54,7 +54,7 @@ const ProposalModal = ({
       onOpenChange(false);
       toast({
         title: "Request received",
-        description: "Thanks — we'll reach out to schedule a 30-minute call.",
+        description: "Thanks, we'll reach out to schedule a 30-minute call.",
       });
     }, 800);
   };
@@ -331,7 +331,7 @@ const SOC2Page = () => {
     {
       num: "01",
       title: "Scope & TSC Mapping",
-      desc: "Define boundaries and select criteria based on customer expectations — right-fit scope, nothing more.",
+      desc: "Define boundaries and select criteria based on customer expectations: right-fit scope, nothing more.",
     },
     {
       num: "02",
@@ -361,7 +361,7 @@ const SOC2Page = () => {
     { label: "Evidence by design", desc: "Monitoring + cadence established before Type 2 starts" },
     { label: "Low friction", desc: "Clear owners and sources, minimal disruption to delivery teams" },
     { label: "Integrated program", desc: "Reuse controls and evidence alongside ISO 27001 where relevant" },
-    { label: "Senior-led delivery", desc: "Practical decisions, fast progress — no template theatre" },
+    { label: "Senior-led delivery", desc: "Practical decisions, fast progress. No template theatre." },
   ];
 
   const faqs = [
@@ -375,7 +375,7 @@ const SOC2Page = () => {
     },
     {
       q: "Which Trust Services Criteria should we include?",
-      a: "Security is required and Availability is the most common add-on. We translate customer requirements into TSC coverage and recommend a right-fit scope — enough to meet expectations, without inflating the audit.",
+      a: "Security is required and Availability is the most common add-on. We translate customer requirements into TSC coverage and recommend a right-fit scope: enough to meet expectations, without inflating the audit.",
     },
     {
       q: "What's included in the fixed-price proposal?",
@@ -436,7 +436,7 @@ const SOC2Page = () => {
 
               <p className="text-base md:text-lg mb-5 leading-relaxed" style={{ color: "#646464" }}>
                 Achieve SOC 2 Type 1 efficiently and set up Type 2 for success with an expert-led,
-                automation-enabled approach — aligned to the Trust Services Criteria and focused on
+                automation-enabled approach, aligned to the Trust Services Criteria and focused on
                 the criteria your customers care about most (commonly Security + Availability).
               </p>
 
@@ -525,7 +525,7 @@ const SOC2Page = () => {
                 Why SOC 2 matters commercially
               </h2>
               <p className="text-sm" style={{ color: "#646464" }}>
-                SOC 2 is not only a compliance exercise — it is a structured way to demonstrate
+                SOC 2 is not only a compliance exercise. It is a structured way to demonstrate
                 operational trust.
               </p>
             </div>
@@ -592,14 +592,14 @@ const SOC2Page = () => {
                 Why SOC 2 Type 2 stalls
               </h2>
               <p className="text-sm italic leading-relaxed" style={{ color: "#646464", borderLeft: "2px solid #F36F21", paddingLeft: 12 }}>
-                Type 2 success depends on how you operate for months in the middle — not how you prepare at the end.
+                Type 2 success depends on how you operate for months in the middle, not how you prepare at the end.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-7">
               <ul className="space-y-3">
                 {[
                   "Evidence collection is inconsistent across the operating period",
-                  "Control ownership is unclear — no named responsible party",
+                  "Control ownership is unclear, with no named responsible party",
                   "Monitoring checks are not defined before the period begins",
                   "Sampling becomes a last-minute scramble instead of a prepared exercise",
                 ].map((item) => (
@@ -829,13 +829,13 @@ const SOC2Page = () => {
                 reduce manual effort and keep your SOC 2 program consistently audit-ready.
               </p>
               <p className="text-xs italic" style={{ color: "#646464" }}>
-                We do not rely on generic templates alone — controls and evidence are tailored to your environment.
+                We do not rely on generic templates alone. Controls and evidence are tailored to your environment.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-7">
               <ul className="space-y-3">
                 {[
-                  "Guidance on control design that fits your operating model — avoid over-engineering",
+                  "Guidance on control design that fits your operating model, avoiding over-engineering",
                   "Evidence workflows aligned to your existing systems and processes",
                   "Defined monitoring checks and cadences to prevent compliance drift",
                   "Audit-ready evidence register that supports sampling at any time",
@@ -864,13 +864,13 @@ const SOC2Page = () => {
             <div className="col-span-12 lg:col-span-5">
               <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>OPERATIONAL READINESS</div>
               <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                Evidence on demand — enabled by your existing systems
+                Evidence on demand, enabled by your existing systems
               </h2>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "#646464" }}>
                 We set up evidence collection and monitoring to run through the systems you already
-                use — identity and access controls, ticketing and change workflows, cloud logs,
-                endpoint controls, and policy repositories — so evidence is captured as part of daily
-                operations, not a monthly scramble.
+                 use: identity and access controls, ticketing and change workflows, cloud logs,
+                 endpoint controls, and policy repositories. Evidence is captured as part of daily
+                 operations, not a monthly scramble.
               </p>
               <div
                 className="border-l-2 pl-4 text-sm italic"
@@ -977,8 +977,8 @@ const SOC2Page = () => {
           </h2>
           <p className="text-sm max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
             We design controls and evidence with reuse in mind so your SOC 2 work can support
-            adjacent requirements such as ISO 27001 and customer assurance requests — reducing
-            duplicate work over time.
+             adjacent requirements such as ISO 27001 and customer assurance requests,
+             reducing duplicate work over time.
           </p>
         </div>
       </section>
