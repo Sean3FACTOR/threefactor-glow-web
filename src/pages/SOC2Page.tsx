@@ -186,7 +186,7 @@ const ProposalModal = ({
    Journey Diagram SVG
 ───────────────────────────────────────────── */
 const JourneyDiagram = () => (
-  <div className="relative w-full" style={{ maxWidth: 1440 }}>
+  <div className="relative w-full" style={{ maxWidth: 2880 }}>
     <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
       <defs>
         <linearGradient id="soc2LineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
