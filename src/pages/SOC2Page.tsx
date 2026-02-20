@@ -186,7 +186,7 @@ const ProposalModal = ({
    Journey Diagram SVG
 ───────────────────────────────────────────── */
 const JourneyDiagram = () => (
-  <div className="relative w-full" style={{ maxWidth: 480 }}>
+  <div className="relative w-full" style={{ maxWidth: 1440 }}>
     <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
       <defs>
         <linearGradient id="soc2LineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -205,8 +205,8 @@ const JourneyDiagram = () => (
       {/* ISO Node (optional) */}
       <g>
         <rect x="160" y="28" width="160" height="44" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.18)" strokeWidth="1" />
-        <text x="240" y="47" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="monospace" opacity="0.6">OPTIONAL FOUNDATION</text>
-        <text x="240" y="63" textAnchor="middle" fill="#3B3B39" fontSize="13" fontWeight="bold" fontFamily="monospace">ISO 27001</text>
+        <text x="240" y="47" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="'Open Sans', sans-serif" opacity="0.6">OPTIONAL FOUNDATION</text>
+        <text x="240" y="63" textAnchor="middle" fill="#3B3B39" fontSize="13" fontWeight="bold" fontFamily="'Open Sans', sans-serif">ISO 27001</text>
       </g>
 
       {/* Connector arrow */}
@@ -217,21 +217,21 @@ const JourneyDiagram = () => (
         <rect x="140" y="100" width="200" height="60" fill="#F36F21" opacity="0.95" />
       </g>
       <rect x="140" y="100" width="200" height="60" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-      <text x="240" y="123" textAnchor="middle" fill="white" fontSize="9" fontFamily="monospace" letterSpacing="2" opacity="0.8">POINT-IN-TIME</text>
-      <text x="240" y="143" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="monospace">SOC 2 TYPE 1</text>
+      <text x="240" y="123" textAnchor="middle" fill="white" fontSize="9" fontFamily="'Open Sans', sans-serif" letterSpacing="2" opacity="0.8">POINT-IN-TIME</text>
+      <text x="240" y="143" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 1</text>
 
       {/* Connector arrow */}
       <polygon points="240,172 236,164 244,164" fill="rgba(243,111,33,0.6)" />
 
       {/* SOC 2 Type 2 Node */}
       <rect x="120" y="188" width="240" height="72" fill="white" stroke="rgba(243,111,33,0.5)" strokeWidth="1.5" />
-      <text x="240" y="210" textAnchor="middle" fill="#F36F21" fontSize="9" fontFamily="monospace" letterSpacing="2">OPERATING PERIOD</text>
-      <text x="240" y="232" textAnchor="middle" fill="#3B3B39" fontSize="16" fontWeight="bold" fontFamily="monospace">SOC 2 TYPE 2</text>
-      <text x="240" y="250" textAnchor="middle" fill="#646464" fontSize="9" fontFamily="monospace">3 / 6 / 12 months</text>
+      <text x="240" y="210" textAnchor="middle" fill="#F36F21" fontSize="9" fontFamily="'Open Sans', sans-serif" letterSpacing="2">OPERATING PERIOD</text>
+      <text x="240" y="232" textAnchor="middle" fill="#3B3B39" fontSize="16" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 2</text>
+      <text x="240" y="250" textAnchor="middle" fill="#646464" fontSize="9" fontFamily="'Open Sans', sans-serif">3 / 6 / 12 months</text>
 
       {/* Banner */}
       <rect x="80" y="278" width="320" height="32" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.1)" strokeWidth="1" />
-      <text x="240" y="298" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="monospace" opacity="0.7">Continuous compliance · evidence on demand</text>
+      <text x="240" y="298" textAnchor="middle" fill="#3B3B39" fontSize="10" fontFamily="'Open Sans', sans-serif" opacity="0.7">Continuous compliance · evidence on demand</text>
 
       {/* Floating dots */}
       <circle cx="108" cy="130" r="3" fill="rgba(243,111,33,0.25)" />
