@@ -454,10 +454,10 @@ const ISO27001Page = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="default"
                   size="lg"
                   onClick={() => scrollTo("checklist")}
-                  className="font-semibold border-foreground/20 text-foreground">
+                  className="font-semibold !bg-zinc-500 hover:!bg-zinc-500 text-white border-0">
 
                   Download the ISO 27001 Readiness Checklist
                 </Button>
@@ -841,8 +841,8 @@ const ISO27001Page = () => {
             </p>
             <Button
               asChild
-              className="text-white font-semibold"
-              style={{ backgroundColor: "#F36F21" }}>
+              className="text-white font-semibold !bg-zinc-500 hover:!bg-zinc-500 border-0"
+              style={{}}>
 
               <a href="/iso27001-readiness-checklist.pdf" download>
                 Download Checklist <ArrowRight className="w-4 h-4 ml-2" />
@@ -871,10 +871,10 @@ const ISO27001Page = () => {
               Get a Fixed-Price Proposal <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button
-              variant="outline"
+              variant="default"
               size="lg"
               onClick={() => scrollTo("checklist")}
-              className="font-semibold border-white/30 text-white hover:bg-white/10">
+              className="font-semibold !bg-zinc-500 hover:!bg-zinc-500 text-white border-0">
 
               Download Checklist
             </Button>
