@@ -141,7 +141,7 @@ const Navigation = () => {
           {/* ══════════════════════════════════
               DESKTOP NAV (lg+)
           ══════════════════════════════════ */}
-          <div className="hidden lg:flex items-center flex-1 justify-center">
+          <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">
             <NavigationMenu>
               <NavigationMenuList className="gap-0">
 
