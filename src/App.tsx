@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import CyberMaturityAWS from "./pages/CyberMaturityAWS";
-import ComplianceServicesPage from "./pages/ComplianceServicesPage";
+
 import StrategyRiskServicesPage from "./pages/StrategyRiskServicesPage";
 import CyberDefenseServicesPage from "./pages/CyberDefenseServicesPage";
 import VCISOPage from "./pages/VCISOPage";
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/services/compliance" element={<ComplianceServicesPage />} />
+          
           <Route path="/services/strategy-risk" element={<StrategyRiskServicesPage />} />
           <Route path="/services/cyber-defense" element={<CyberDefenseServicesPage />} />
           <Route path="/services/cyber-maturity-aws" element={<CyberMaturityAWS />} />
