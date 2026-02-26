@@ -172,7 +172,7 @@ const Navigation = () => {
                               <div key={group.heading}>
                                 <h3
                                   className="text-sm font-bold mb-3"
-                                  style={{ color: "#F36F21" }}
+                                  style={{ color: "#3B3B39" }}
                                 >
                                   {group.heading}
                                 </h3>
