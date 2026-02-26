@@ -268,7 +268,7 @@ const Navigation = () => {
               <SheetTrigger asChild>
                 <button
                   aria-label="Open navigation menu"
-                  className="p-2 transition-colors duration-200"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center transition-colors duration-200"
                   style={{ color: "#3B3B39" }}
                 >
                   <Menu size={24} />
@@ -286,7 +286,7 @@ const Navigation = () => {
                   <Accordion type="single" collapsible>
                     <AccordionItem value="services" className="border-b" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
                       <AccordionTrigger
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 hover:no-underline hover:text-[#F36F21]"
+                        className="text-xs font-bold uppercase tracking-[0.15em] min-h-[44px] py-3 hover:no-underline hover:text-[#F36F21]"
                         style={{ color: "#3B3B39" }}
                       >
                         Services
@@ -307,7 +307,7 @@ const Navigation = () => {
                                     <SheetClose asChild key={item.name}>
                                       <Link
                                         to={item.href}
-                                        className="text-sm py-2 px-3 transition-colors duration-200 hover:bg-[#F8F9FA] hover:text-[#F36F21]"
+                                        className="text-sm min-h-[44px] flex items-center py-2 px-3 transition-colors duration-200 hover:bg-[#F8F9FA] hover:text-[#F36F21]"
                                         style={{ color: "#3B3B39" }}
                                       >
                                         {item.name}
@@ -329,7 +329,7 @@ const Navigation = () => {
                       <Link
                         to="/#company"
                         onClick={(e) => handleHashNav(e, "company")}
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
+                        className="text-xs font-bold uppercase tracking-[0.15em] min-h-[44px] flex items-center py-3 transition-colors duration-200 hover:text-[#F36F21] border-b"
                         style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
                       >
                         Company
@@ -338,7 +338,7 @@ const Navigation = () => {
                     <SheetClose asChild>
                       <Link
                         to="/contact"
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
+                        className="text-xs font-bold uppercase tracking-[0.15em] min-h-[44px] flex items-center py-3 transition-colors duration-200 hover:text-[#F36F21] border-b"
                         style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
                       >
                         Contact
@@ -350,7 +350,7 @@ const Navigation = () => {
                     <SheetClose asChild>
                       <Link to="/contact">
                         <Button
-                          className="w-full text-white font-bold uppercase tracking-[0.15em] rounded-none"
+                          className="w-full min-h-[48px] text-white font-bold uppercase tracking-[0.15em] rounded-none"
                           style={{ backgroundColor: "#3B3B39" }}
                           aria-label="Get a quote from 3FACTOR"
                         >
