@@ -214,7 +214,7 @@ const VCISOPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Button asChild size="lg" className="text-white font-semibold" style={{
-            backgroundColor: "#F36F21"
+            backgroundColor: "#3B3B39"
           }}>
               <Link to="/contact">Upgrade Your Executive Shield <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>

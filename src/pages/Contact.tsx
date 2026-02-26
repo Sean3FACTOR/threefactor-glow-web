@@ -155,7 +155,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       className="w-full text-white font-semibold"
-                      style={{ backgroundColor: "#F36F21" }}
+                      style={{ backgroundColor: "#3B3B39" }}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (

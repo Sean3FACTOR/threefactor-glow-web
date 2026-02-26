@@ -251,7 +251,7 @@ const Navigation = () => {
             <Link to="/contact">
               <Button
                 className="text-white font-bold text-xs uppercase tracking-[0.15em] px-6 h-10 transition-all duration-200 hover:shadow-lg rounded-none"
-                style={{ backgroundColor: "#F36F21" }}
+                style={{ backgroundColor: "#3B3B39" }}
                 aria-label="Contact 3FACTOR"
               >
                 Get a Quote
@@ -351,7 +351,7 @@ const Navigation = () => {
                       <Link to="/contact">
                         <Button
                           className="w-full text-white font-bold uppercase tracking-[0.15em] rounded-none"
-                          style={{ backgroundColor: "#F36F21" }}
+                          style={{ backgroundColor: "#3B3B39" }}
                           aria-label="Get a quote from 3FACTOR"
                         >
                           Get a Quote

@@ -153,13 +153,13 @@ const DesktopChallenges = () => {
           <Link
             to={active.ctaHref}
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all duration-300"
-            style={{ backgroundColor: "#F36F21", color: "#FFFFFF", border: "1px solid #F36F21" }}
+            style={{ backgroundColor: "#3B3B39", color: "#FFFFFF", border: "1px solid #3B3B39" }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.color = "#F36F21";
+              e.currentTarget.style.color = "#3B3B39";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#F36F21";
+              e.currentTarget.style.backgroundColor = "#3B3B39";
               e.currentTarget.style.color = "#FFFFFF";
             }}
           >
@@ -263,7 +263,7 @@ const MobileChallenges = () => {
                 <Link
                   to={ch.ctaHref}
                   className="inline-flex items-center gap-2 px-5 py-3 text-sm font-bold uppercase tracking-wide"
-                  style={{ backgroundColor: "#F36F21", color: "#FFFFFF" }}
+                  style={{ backgroundColor: "#3B3B39", color: "#FFFFFF" }}
                 >
                   {ch.ctaLabel}
                   <ArrowRight className="w-4 h-4" />

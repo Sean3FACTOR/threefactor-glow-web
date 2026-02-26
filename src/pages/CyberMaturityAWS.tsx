@@ -70,7 +70,7 @@ const CyberMaturityAWS = () => {
               <img src={Logo} alt="3FACTOR" className="h-12 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4" style={{ color: "#3B3B39" }}>Ready to Assess Your AWS Security?</h3>
               <p className="mb-6" style={{ color: "#646464" }}>Start with a free discovery call to discuss your needs and receive a tailored proposal.</p>
-              <Button asChild className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+              <Button asChild className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
                 <Link to="/contact">Schedule a Discovery Call <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
             </div>
