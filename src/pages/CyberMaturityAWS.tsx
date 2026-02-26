@@ -3,7 +3,7 @@ import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Logo from "@/assets/3F_White_Orange_with_words.png";
+import Logo from "@/assets/3F_Grey.png";
 
 const methodologyPoints = [
   "Identification of critical and high-risk data",
