@@ -17,8 +17,8 @@ const FinalCTA = () => {
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="group text-white font-semibold text-base md:text-lg px-6 md:px-10 py-6 md:py-7 transition-colors w-full sm:w-auto"
-                style={{ backgroundColor: "#3B3B39" }}
+                className="group font-semibold text-base md:text-lg px-6 md:px-10 py-6 md:py-7 transition-colors w-full sm:w-auto"
+                style={{ backgroundColor: "#FFFFFF", color: "#3B3B39" }}
               >
                 Book Your Compliance Strategy Session
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
