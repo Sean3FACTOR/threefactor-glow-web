@@ -1,5 +1,3 @@
-import spyroWorking from "@/assets/homepage/spyro-working.jpg";
-
 const outcomes = [
   {
     title: "CLOSE DEALS FASTER",
@@ -36,57 +34,34 @@ const SuccessOutcomes = () => {
           What Success Looks Like
         </h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left – Feature cards */}
-          <div className="lg:col-span-7 flex flex-col gap-3">
-            {outcomes.map((outcome) => (
-                <div
-                  key={outcome.title}
-                  className="p-8 transition-all duration-300 cursor-default group hover:scale-[1.02] hover:shadow-lg"
-                  style={{
-                    backgroundColor: "#F1F2F4",
-                    border: "1px solid #E5E7EB",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = "#F36F21";
-                    e.currentTarget.style.backgroundColor = "#FFFFFF";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "#E5E7EB";
-                    e.currentTarget.style.backgroundColor = "#F1F2F4";
-                  }}
-                >
-                  <div>
-                    <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
-                      {outcome.title}
-                    </h4>
-                    <p className="leading-relaxed" style={{ color: "#646464" }}>
-                      {outcome.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          {/* Right – Stylish image */}
-          <div className="lg:col-span-5 flex items-center justify-center relative">
-            {/* Decorative background element */}
+        <div className="grid grid-cols-1 gap-3">
+          {outcomes.map((outcome) => (
             <div
-              className="absolute -top-6 -right-6 w-48 h-48 rounded-full opacity-20"
-              style={{ backgroundColor: "#F36F21" }}
-            />
-            <div
-              className="absolute -bottom-4 -left-4 w-32 h-32 rounded-full opacity-10"
-              style={{ backgroundColor: "#F36F21" }}
-            />
-            <div className="relative w-4/5 overflow-hidden rounded-2xl shadow-xl">
-              <img
-                src={spyroWorking}
-                alt="3FACTOR team member at work"
-                className="w-full h-full object-cover object-center aspect-[4/5]"
-              />
+              key={outcome.title}
+              className="p-8 transition-all duration-300 cursor-default group hover:scale-[1.02] hover:shadow-lg"
+              style={{
+                backgroundColor: "#F1F2F4",
+                border: "1px solid #E5E7EB",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "#F36F21";
+                e.currentTarget.style.backgroundColor = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "#E5E7EB";
+                e.currentTarget.style.backgroundColor = "#F1F2F4";
+              }}
+            >
+              <div>
+                <h4 className="text-xl font-bold mb-3 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+                  {outcome.title}
+                </h4>
+                <p className="leading-relaxed" style={{ color: "#646464" }}>
+                  {outcome.description}
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
