@@ -38,7 +38,7 @@ const BlueprintHero = ({
               {subhead}
             </p>
 
-            <Button asChild size="lg" className="text-white font-semibold transition-colors" style={{ backgroundColor: "#F36F21" }}>
+            <Button asChild size="lg" className="text-white font-semibold transition-colors" style={{ backgroundColor: "#3B3B39" }}>
               <Link to={ctaLink}>
                 {ctaText}
                 <ArrowRight className="w-4 h-4 ml-2" />

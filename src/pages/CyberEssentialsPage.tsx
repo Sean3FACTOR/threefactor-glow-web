@@ -269,7 +269,7 @@ const CyberEssentialsPage = () => {
                 <Link to="/contact">
                   <Button
                     className="text-white font-semibold px-6"
-                    style={{ backgroundColor: "#F36F21" }}
+                    style={{ backgroundColor: "#3B3B39" }}
                   >
                     Get Certified with 3FACTOR
                     <ArrowRight size={16} />
@@ -520,7 +520,7 @@ const CyberEssentialsPage = () => {
             <Link to="/contact">
               <Button
                 className="text-white font-semibold px-8"
-                style={{ backgroundColor: "#F36F21" }}
+                style={{ backgroundColor: "#3B3B39" }}
               >
                 Book Your Free Scoping Call
                 <ArrowRight size={16} />
@@ -637,7 +637,7 @@ const CyberEssentialsPage = () => {
           <Link to="/contact">
             <Button
               className="text-white font-semibold px-8"
-              style={{ backgroundColor: "#F36F21" }}
+              style={{ backgroundColor: "#3B3B39" }}
             >
               Book Your Free Scoping Call
               <ArrowRight size={16} />

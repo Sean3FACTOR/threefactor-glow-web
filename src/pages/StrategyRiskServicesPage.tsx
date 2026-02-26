@@ -75,7 +75,7 @@ const StrategyRiskServicesPage = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "#3B3B39" }}>Ready to Secure Your Cloud?</h3>
             <p className="mb-8" style={{ color: "#646464" }}>Start with a free discovery call to discuss your cloud security needs.</p>
-            <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+            <Button asChild size="lg" className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
               <Link to="/contact">Schedule a Discovery Call <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
           </div>

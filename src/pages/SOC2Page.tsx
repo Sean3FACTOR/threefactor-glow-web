@@ -169,7 +169,7 @@ const ProposalModal = ({
             type="submit"
             disabled={submitting}
             className="w-full text-white font-semibold"
-            style={{ backgroundColor: "#F36F21" }}
+            style={{ backgroundColor: "#3B3B39" }}
           >
             {submitting ? "Submitting…" : "Request Proposal"}
           </Button>
@@ -406,7 +406,7 @@ const SOC2Page = () => {
           onClick={openModal}
           size="sm"
           className="text-white font-semibold shadow-lg text-xs"
-          style={{ backgroundColor: "#F36F21" }}
+          style={{ backgroundColor: "#3B3B39" }}
         >
           Get Proposal
         </Button>
@@ -487,7 +487,7 @@ const SOC2Page = () => {
                 <Button
                   onClick={openModal}
                   className="text-white font-semibold px-6"
-                  style={{ backgroundColor: "#F36F21" }}
+                  style={{ backgroundColor: "#3B3B39" }}
                 >
                   Get a Fixed-Price SOC 2 Proposal
                   <ArrowRight size={16} />
@@ -764,7 +764,7 @@ const SOC2Page = () => {
             <Button
               onClick={openModal}
               className="text-white font-semibold px-8"
-              style={{ backgroundColor: "#F36F21" }}
+              style={{ backgroundColor: "#3B3B39" }}
             >
               Get a Fixed-Price SOC 2 Proposal
               <ArrowRight size={16} />
@@ -1108,7 +1108,7 @@ const SOC2Page = () => {
             <Button
               onClick={openModal}
               className="text-white font-semibold px-8"
-              style={{ backgroundColor: "#F36F21" }}
+              style={{ backgroundColor: "#3B3B39" }}
             >
               Get a Fixed-Price SOC 2 Proposal
               <ArrowRight size={16} />

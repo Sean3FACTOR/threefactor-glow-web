@@ -150,7 +150,7 @@ const ProposalModal = ({
             type="submit"
             disabled={submitting}
             className="w-full text-white font-semibold"
-            style={{ backgroundColor: "#F36F21" }}>
+            style={{ backgroundColor: "#3B3B39" }}>
 
             {submitting ? "Submitting…" : "Request Proposal"}
           </Button>
@@ -390,7 +390,7 @@ const ISO27001Page = () => {
           onClick={openModal}
           size="sm"
           className="text-white font-semibold shadow-lg text-xs"
-          style={{ backgroundColor: "#F36F21" }}>
+          style={{ backgroundColor: "#3B3B39" }}>
 
           Get Proposal
         </Button>
@@ -448,7 +448,7 @@ const ISO27001Page = () => {
                   onClick={openModal}
                   size="lg"
                   className="text-white font-semibold"
-                  style={{ backgroundColor: "#F36F21" }}>
+                  style={{ backgroundColor: "#3B3B39" }}>
 
                   Get a Fixed-Price ISO 27001 Proposal
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -586,7 +586,7 @@ const ISO27001Page = () => {
           <p className="text-xs font-mono mb-4" style={{ color: "#646464" }}>
             Delivered as a fixed-scope project with no hidden fees, typically 12–16 weeks.
           </p>
-          <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+          <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
             Get a Fixed-Price Proposal <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>
@@ -771,7 +771,7 @@ const ISO27001Page = () => {
             <p className="text-sm mb-4 leading-relaxed" style={{ color: "#646464" }}>
               After certification, we can support ISMS operation: internal audits, management review, KPIs, corrective actions, continual improvement, and surveillance readiness.
             </p>
-            <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#F36F21" }}>
+            <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
               Ask about maintenance support <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -866,7 +866,7 @@ const ISO27001Page = () => {
               onClick={openModal}
               size="lg"
               className="text-white font-semibold"
-              style={{ backgroundColor: "#F36F21" }}>
+              style={{ backgroundColor: "#3B3B39" }}>
 
               Get a Fixed-Price Proposal <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
