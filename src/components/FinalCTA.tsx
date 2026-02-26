@@ -6,18 +6,18 @@ import muralBg from "@/assets/homepage/3f-mural-3.jpg";
 const FinalCTA = () => {
   return (
     <>
-      <section className="relative bg-cover" style={{ backgroundImage: `url(${muralBg})`, minHeight: "550px", backgroundPosition: "65% 100%" }}>
+      <section className="relative bg-cover bg-center py-16 md:py-24" style={{ backgroundImage: `url(${muralBg})` }}>
         <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.55)" }} />
-        <div className="container mx-auto px-4 relative z-10 flex flex-col justify-start pt-8">
-          <div className="max-w-2xl mx-auto text-center px-10 py-6" style={{ backgroundColor: "rgba(59,59,57,0.65)", border: "1px solid rgba(255,255,255,0.15)" }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
+        <div className="container mx-auto px-4 relative z-10 flex items-center justify-center">
+          <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center text-center p-6 md:p-12" style={{ backgroundColor: "rgba(59,59,57,0.65)", border: "1px solid rgba(255,255,255,0.15)" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 uppercase tracking-tight text-white">
               Ready to Turn Compliance Into Your Competitive Edge?
             </h2>
 
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="group font-semibold text-base md:text-lg px-6 md:px-10 py-6 md:py-7 transition-colors w-full sm:w-auto"
+                className="group font-semibold text-base md:text-lg px-6 md:px-10 py-3 md:py-7 min-h-[44px] transition-colors w-full sm:w-auto"
                 style={{ backgroundColor: "#FFFFFF", color: "#3B3B39" }}
               >
                 Book Your Compliance Strategy Session
