@@ -54,12 +54,12 @@ const HomepageHero = () => {
               <Button
                 size="lg"
                 className="group font-semibold transition-all text-white"
-                style={{ backgroundColor: "#F36F21", border: "1px solid #F36F21" }}
+                style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#F36F21";
+                  e.currentTarget.style.backgroundColor = "#3B3B39";
                 }}
               >
                 Book Your Compliance Strategy Session
