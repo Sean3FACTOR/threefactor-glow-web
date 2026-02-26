@@ -4,9 +4,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import Logo from "@/assets/3factor-grey-logo.png";
 const serviceItems = [{
-  name: "Compliance",
-  href: "/services/compliance"
-}, {
   name: "ISO 27001",
   href: "/services/iso-27001"
 }, {
