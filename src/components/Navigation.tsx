@@ -298,7 +298,7 @@ const Navigation = () => {
                               <div key={group.heading}>
                                 <h4
                                   className="text-[10px] font-bold uppercase tracking-[0.15em] mb-2 px-1"
-                                  style={{ color: "#F36F21" }}
+                                  style={{ color: "#3B3B39" }}
                                 >
                                   {group.heading}
                                 </h4>
