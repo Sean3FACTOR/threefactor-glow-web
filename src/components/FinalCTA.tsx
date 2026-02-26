@@ -41,7 +41,7 @@ const FinalCTA = () => {
               style={{ color: "#3B3B39" }}
             >
               <FileText className="w-5 h-5" />
-              Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span>{" "}Whitepaper
+              Download the 3<span style={{ color: "#F36F21" }}>FACTOR</span> Whitepaper
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <p className="text-sm mt-3 max-w-md mx-auto" style={{ color: "#646464" }}>
