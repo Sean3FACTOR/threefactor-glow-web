@@ -420,9 +420,11 @@ const ISO27001Page = () => {
                 3FACTOR implements ISO 27001 through a fixed-scope project: readiness, ISMS build, and audit preparation. Our integrated control framework approach reduces duplication so controls and evidence can be reused across SOC 2, CIS, NIST, NIS2, DORA and more.
               </p>
 
-              <p className="text-sm mb-6 italic" style={{ color: "#646464" }}>
-                We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
-              </p>
+              <div className="p-4 mb-6" style={{ backgroundColor: "rgba(59,59,57,0.05)", border: "1px solid rgba(59,59,57,0.15)" }}>
+                <p className="text-sm font-bold" style={{ color: "#3B3B39" }}>
+                  We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
+                </p>
+              </div>
 
               <div className="flex items-center gap-2 mb-6">
                 <span className="inline-block px-3 py-1 text-xs font-mono border" style={{ borderColor: "rgba(59,59,57,0.15)", color: "#3B3B39" }}>
