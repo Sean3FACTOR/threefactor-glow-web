@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, ArrowRight, Shield, FileCheck, UserCog, Lock, ChevronUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -10,18 +10,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Logo from "@/assets/3factor-grey-logo.png";
 
 /* ── Mega-menu structure (4 columns) ── */
@@ -77,19 +65,8 @@ const megaColumns = [
   },
 ];
 
-const allMobileItems = megaColumns.flatMap((col) =>
-  col.groups.flatMap((g) => g.items.map((item) => ({ ...item, category: g.heading })))
-);
-
-const navLinks = [
-  { name: "Services", hasMega: true, href: "", hash: null },
-  { name: "Company", hasMega: false, href: "/#company", hash: "company" },
-  { name: "Contact", hasMega: false, href: "/contact", hash: null },
-];
-
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -98,10 +75,6 @@ const Navigation = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [location.pathname]);
 
   const handleHashNav = useCallback(
     (e: React.MouseEvent, hash: string | null) => {
@@ -116,7 +89,6 @@ const Navigation = () => {
           document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-      setMobileOpen(false);
     },
     [location.pathname, navigate]
   );
@@ -125,23 +97,21 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 overflow-x-auto ${
         scrolled ? "shadow-sm" : ""
       }`}
       style={{ borderBottom: "1px solid rgba(59,59,57,0.06)" }}
     >
-      <nav className="container mx-auto px-4" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-14 md:h-16">
+      <nav className="min-w-[1200px] mx-auto px-4" aria-label="Main navigation">
+        <div className="flex items-center justify-between h-16">
 
           {/* ── Logo ── */}
           <Link to="/" className="flex items-center h-full py-1 shrink-0">
             <img alt="3FACTOR" className="h-[99%] w-auto object-contain" src={Logo} />
           </Link>
 
-          {/* ══════════════════════════════════
-              DESKTOP NAV (lg+)
-          ══════════════════════════════════ */}
-          <div className="hidden lg:flex items-center flex-1 justify-center">
+          {/* ── Nav links ── */}
+          <div className="flex items-center flex-1 justify-center">
             <NavigationMenu>
               <NavigationMenuList className="gap-0">
 
@@ -164,7 +134,7 @@ const Navigation = () => {
 
                   <NavigationMenuContent className="!w-screen" style={{ backgroundColor: "#F8F9FA" }}>
                     <div style={{ borderTop: "3px solid #F36F21" }}>
-                      <div className="max-w-7xl mx-auto px-6 py-8">
+                      <div className="min-w-[1200px] mx-auto px-6 py-8">
                       <div className="grid grid-cols-4 gap-8">
                         {megaColumns.map((col, colIdx) => (
                           <div key={colIdx} className="flex flex-col gap-6">
@@ -232,7 +202,7 @@ const Navigation = () => {
                   <NavigationMenuLink asChild>
                     <Link
                       to="/contact"
-                      className={`relative inline-flex items-center h-16 px-5 text-xs font-bold uppercase tracking-[0.15em] transition-colors duration-200 hover:text-[#F36F21]`}
+                      className="relative inline-flex items-center h-16 px-5 text-xs font-bold uppercase tracking-[0.15em] transition-colors duration-200 hover:text-[#F36F21]"
                       style={{ color: location.pathname === "/contact" ? "#F36F21" : "#3B3B39" }}
                     >
                       {location.pathname === "/contact" && (
@@ -246,8 +216,8 @@ const Navigation = () => {
             </NavigationMenu>
           </div>
 
-          {/* ── Desktop CTA ── */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          {/* ── CTA ── */}
+          <div className="flex items-center gap-4 shrink-0">
             <Link to="/contact">
               <Button
                 className="text-white font-bold text-xs uppercase tracking-[0.15em] px-6 h-10 transition-all duration-200 hover:shadow-lg rounded-none"
@@ -258,111 +228,6 @@ const Navigation = () => {
                 <ArrowRight size={14} className="ml-1.5" />
               </Button>
             </Link>
-          </div>
-
-          {/* ══════════════════════════════════
-              MOBILE NAV (< lg)
-          ══════════════════════════════════ */}
-          <div className="lg:hidden">
-            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-              <SheetTrigger asChild>
-                <button
-                  aria-label="Open navigation menu"
-                  className="p-2 transition-colors duration-200"
-                  style={{ color: "#3B3B39" }}
-                >
-                  <Menu size={24} />
-                </button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[360px] bg-white p-0 overflow-y-auto">
-                <div className="px-6 pt-6 pb-4 border-b" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-                  <Link to="/" onClick={() => setMobileOpen(false)} className="inline-block">
-                    <img alt="3FACTOR" className="h-10 w-auto object-contain" src={Logo} />
-                  </Link>
-                </div>
-
-                <div className="px-6 py-6">
-                  {/* Services accordion */}
-                  <Accordion type="single" collapsible>
-                    <AccordionItem value="services" className="border-b" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-                      <AccordionTrigger
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 hover:no-underline hover:text-[#F36F21]"
-                        style={{ color: "#3B3B39" }}
-                      >
-                        Services
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex flex-col gap-4 pb-3">
-                          {megaColumns.map((col, colIdx) =>
-                            col.groups.map((group) => (
-                              <div key={group.heading}>
-                                <h4
-                                  className="text-[10px] font-bold uppercase tracking-[0.15em] mb-2 px-1"
-                                  style={{ color: "#F36F21" }}
-                                >
-                                  {group.heading}
-                                </h4>
-                                <div className="flex flex-col gap-0.5">
-                                  {group.items.map((item) => (
-                                    <SheetClose asChild key={item.name}>
-                                      <Link
-                                        to={item.href}
-                                        className="text-sm py-2 px-3 transition-colors duration-200 hover:bg-[#F8F9FA] hover:text-[#F36F21]"
-                                        style={{ color: "#3B3B39" }}
-                                      >
-                                        {item.name}
-                                      </Link>
-                                    </SheetClose>
-                                  ))}
-                                </div>
-                              </div>
-                            ))
-                          )}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-
-                  {/* Other links */}
-                  <div className="flex flex-col gap-0 mt-1">
-                    <SheetClose asChild>
-                      <Link
-                        to="/#company"
-                        onClick={(e) => handleHashNav(e, "company")}
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
-                        style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
-                      >
-                        Company
-                      </Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Link
-                        to="/contact"
-                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
-                        style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
-                      >
-                        Contact
-                      </Link>
-                    </SheetClose>
-                  </div>
-
-                  <div className="mt-8">
-                    <SheetClose asChild>
-                      <Link to="/contact">
-                        <Button
-                          className="w-full text-white font-bold uppercase tracking-[0.15em] rounded-none"
-                          style={{ backgroundColor: "#3B3B39" }}
-                          aria-label="Get a quote from 3FACTOR"
-                        >
-                          Get a Quote
-                          <ArrowRight size={14} className="ml-1.5" />
-                        </Button>
-                      </Link>
-                    </SheetClose>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </nav>
