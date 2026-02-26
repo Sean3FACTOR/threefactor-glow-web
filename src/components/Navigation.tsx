@@ -134,7 +134,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* ── Logo ── */}
-          <Link to="/" className="flex items-center h-full py-1 shrink-0">
+          <Link to="/" className="flex items-center h-full py-1 shrink-0 lg:w-[180px]">
             <img alt="3FACTOR" className="h-[99%] w-auto object-contain" src={Logo} />
           </Link>
 
@@ -247,7 +247,7 @@ const Navigation = () => {
           </div>
 
           {/* ── Desktop CTA ── */}
-          <div className="hidden lg:flex items-center gap-4 shrink-0">
+          <div className="hidden lg:flex items-center justify-end gap-4 shrink-0 w-[180px]">
             <Link to="/contact">
               <Button
                 className="text-white font-bold text-xs uppercase tracking-[0.15em] px-6 h-10 transition-all duration-200 hover:shadow-lg rounded-none"
