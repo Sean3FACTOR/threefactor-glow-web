@@ -446,11 +446,13 @@ const SOC2Page = () => {
                 stay audit-ready across a 3, 6, or 12-month Type 2 period.
               </p>
 
-              <p className="text-sm mb-6 italic border-l-2 pl-3" style={{ color: "#646464", borderColor: "#F36F21" }}>
-                We are not your auditor. We support SOC 2 engagements with multiple Tier 1 and Tier 2
-                CPA firms, and we have a strong track record of successful SOC 2 audits across clients
-                and industries.
-              </p>
+              <div className="p-4 mb-6" style={{ backgroundColor: "rgba(59,59,57,0.05)", border: "1px solid rgba(59,59,57,0.15)" }}>
+                <p className="text-sm font-bold" style={{ color: "#3B3B39" }}>
+                  We are not your auditor. We support SOC 2 engagements with multiple Tier 1 and Tier 2
+                  CPA firms, and we have a strong track record of successful SOC 2 audits across clients
+                  and industries.
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-2 mb-6">
                 <span
