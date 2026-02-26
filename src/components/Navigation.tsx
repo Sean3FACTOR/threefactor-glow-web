@@ -162,11 +162,9 @@ const Navigation = () => {
                     Services
                   </NavigationMenuTrigger>
 
-                  <NavigationMenuContent className="!w-[1000px] lg:!w-[1100px]">
-                    <div
-                      className="relative p-8"
-                      style={{ backgroundColor: "#F8F9FA", borderTop: "3px solid #F36F21" }}
-                    >
+                  <NavigationMenuContent className="!w-screen" style={{ backgroundColor: "#F8F9FA" }}>
+                    <div style={{ borderTop: "3px solid #F36F21" }}>
+                      <div className="max-w-7xl mx-auto px-6 py-8">
                       <div className="grid grid-cols-4 gap-8">
                         {megaColumns.map((col, colIdx) => (
                           <div key={colIdx} className="flex flex-col gap-6">
@@ -209,6 +207,7 @@ const Navigation = () => {
                             <ArrowRight size={12} />
                           </Link>
                         </NavigationMenuLink>
+                      </div>
                       </div>
                     </div>
                   </NavigationMenuContent>
