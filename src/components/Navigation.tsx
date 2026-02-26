@@ -24,48 +24,67 @@ import {
 } from "@/components/ui/accordion";
 import Logo from "@/assets/3factor-grey-logo.png";
 
-/* ── Mega-menu columns ── */
+/* ── Mega-menu structure (4 columns) ── */
 const megaColumns = [
   {
-    heading: "Compliance Certifications",
-    items: [
-      { name: "ISO 27001", href: "/services/iso-27001", icon: Shield, desc: "Build and certify your ISMS" },
-      { name: "SOC 2", href: "/services/soc-2", icon: FileCheck, desc: "Trust signal for enterprise deals" },
+    groups: [
+      {
+        heading: "Compliance Certifications",
+        items: [
+          { name: "ISO 27001", href: "/services/iso-27001" },
+          { name: "SOC 2", href: "/services/soc-2" },
+        ],
+      },
     ],
   },
   {
-    heading: "UK Government",
-    items: [
-      { name: "Cyber Essentials", href: "/services/cyber-essentials", icon: Lock, desc: "NCSC-recognized certification" },
-      { name: "Cyber Essentials Plus", href: "/services/cyber-essentials", icon: Lock, desc: "Independent technical testing" },
+    groups: [
+      {
+        heading: "UK Government",
+        items: [
+          { name: "Cyber Essentials", href: "/services/cyber-essentials" },
+          { name: "Cyber Essentials Plus", href: "/services/cyber-essentials" },
+        ],
+      },
     ],
   },
   {
-    heading: "Advisory",
-    items: [
-      { name: "Virtual CISO", href: "/services/vciso", icon: UserCog, desc: "Senior security leadership" },
+    groups: [
+      {
+        heading: "Cybersecurity",
+        items: [
+          { name: "Cyber Maturity on AWS", href: "/services/cyber-maturity-aws" },
+        ],
+      },
+      {
+        heading: "Advisory",
+        items: [
+          { name: "Virtual CISO", href: "/services/vciso" },
+        ],
+      },
     ],
   },
   {
-    heading: "Additional Services",
-    items: [
-      { name: "Cyber Maturity on AWS", href: "/services/cyber-maturity-aws", icon: Shield, desc: "AWS security posture assessment" },
+    groups: [
+      {
+        heading: "Additional Services",
+        items: [
+          { name: "Strategy & Risk", href: "/services/strategy" },
+          { name: "Cyber Defense", href: "/services/cyber-defense" },
+        ],
+      },
     ],
   },
 ];
 
-const allServiceItems = megaColumns.flatMap((col) => col.items);
+const allMobileItems = megaColumns.flatMap((col) =>
+  col.groups.flatMap((g) => g.items.map((item) => ({ ...item, category: g.heading })))
+);
 
 const navLinks = [
-  { name: "Company", href: "/#company", hash: "company" },
-  { name: "Contact", href: "/contact", hash: null },
-];
-
-/* ── Top-level nav items with mega-menu flag ── */
-const topNavItems = [
-  { name: "Services", hasMega: true },
-  { name: "Company", href: "/#company", hash: "company", hasMega: false },
-  { name: "Contact", href: "/contact", hash: null, hasMega: false },
+  { name: "Services", hasMega: true, href: "", hash: null },
+  { name: "Company", hasMega: false, href: "/#company", hash: "company" },
+  { name: "Contact", hasMega: false, href: "/contact", hash: null },
 ];
 
 const Navigation = () => {
@@ -85,16 +104,16 @@ const Navigation = () => {
   }, [location.pathname]);
 
   const handleHashNav = useCallback(
-    (e: React.MouseEvent, link: { href: string; hash: string | null }) => {
-      if (link.hash) {
+    (e: React.MouseEvent, hash: string | null) => {
+      if (hash) {
         e.preventDefault();
         if (location.pathname !== "/") {
           navigate("/");
           setTimeout(() => {
-            document.getElementById(link.hash!)?.scrollIntoView({ behavior: "smooth", block: "start" });
+            document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
           }, 100);
         } else {
-          document.getElementById(link.hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+          document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
       setMobileOpen(false);
@@ -122,83 +141,68 @@ const Navigation = () => {
           {/* ══════════════════════════════════
               DESKTOP NAV (lg+)
           ══════════════════════════════════ */}
-          <div className="hidden lg:flex items-center gap-0">
+          <div className="hidden lg:flex items-center flex-1 justify-center">
             <NavigationMenu>
               <NavigationMenuList className="gap-0">
 
-                {/* ── Services mega-menu ── */}
+                {/* ── SERVICES with mega-menu ── */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger
                     className={`
-                      relative h-16 px-4 text-xs font-bold uppercase tracking-widest
+                      relative h-16 px-5 text-xs font-bold uppercase tracking-[0.15em]
                       bg-transparent hover:bg-transparent focus:bg-transparent
-                      data-[state=open]:bg-transparent
+                      data-[state=open]:bg-transparent rounded-none
                       transition-colors duration-200
-                      data-[state=open]:text-[#F36F21]
                     `}
                     style={{ color: isServicePage ? "#F36F21" : "#3B3B39" }}
                   >
                     {isServicePage && (
-                      <span className="absolute top-0 left-4 right-4 h-[3px]" style={{ backgroundColor: "#F36F21" }} />
+                      <span className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: "#F36F21" }} />
                     )}
                     Services
                   </NavigationMenuTrigger>
 
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="!w-[1000px] lg:!w-[1100px]">
                     <div
-                      className="w-[900px] lg:w-[1050px] p-8"
+                      className="relative p-8"
                       style={{ backgroundColor: "#F8F9FA", borderTop: "3px solid #F36F21" }}
                     >
                       <div className="grid grid-cols-4 gap-8">
-                        {megaColumns.map((col) => (
-                          <div key={col.heading} className="flex flex-col">
-                            <h3
-                              className="text-xs font-bold uppercase tracking-widest mb-4 pb-2"
-                              style={{ color: "#F36F21", borderBottom: "1px solid rgba(243,111,33,0.2)" }}
-                            >
-                              {col.heading}
-                            </h3>
-                            <div className="flex flex-col gap-1">
-                              {col.items.map((item) => {
-                                const Icon = item.icon;
-                                return (
-                                  <NavigationMenuLink key={item.name} asChild>
-                                    <Link
-                                      to={item.href}
-                                      className="group flex items-start gap-3 py-2.5 px-2 -mx-2 transition-colors duration-200 hover:bg-white"
-                                    >
-                                      <div
-                                        className="mt-0.5 w-7 h-7 flex items-center justify-center border shrink-0 transition-colors duration-200 group-hover:border-[#F36F21]"
-                                        style={{ borderColor: "rgba(59,59,57,0.1)", backgroundColor: "white" }}
+                        {megaColumns.map((col, colIdx) => (
+                          <div key={colIdx} className="flex flex-col gap-6">
+                            {col.groups.map((group) => (
+                              <div key={group.heading}>
+                                <h3
+                                  className="text-sm font-bold mb-3"
+                                  style={{ color: "#F36F21" }}
+                                >
+                                  {group.heading}
+                                </h3>
+                                <div className="flex flex-col gap-1.5">
+                                  {group.items.map((item) => (
+                                    <NavigationMenuLink key={item.name} asChild>
+                                      <Link
+                                        to={item.href}
+                                        className="text-sm transition-colors duration-200 hover:text-[#F36F21] py-1"
+                                        style={{ color: "#3B3B39" }}
                                       >
-                                        <Icon size={14} style={{ color: "#F36F21" }} />
-                                      </div>
-                                      <div>
-                                        <div
-                                          className="text-sm font-semibold transition-colors duration-200 group-hover:text-[#F36F21]"
-                                          style={{ color: "#3B3B39" }}
-                                        >
-                                          {item.name}
-                                        </div>
-                                        <p className="text-xs leading-relaxed mt-0.5" style={{ color: "#646464" }}>
-                                          {item.desc}
-                                        </p>
-                                      </div>
-                                    </Link>
-                                  </NavigationMenuLink>
-                                );
-                              })}
-                            </div>
+                                        {item.name}
+                                      </Link>
+                                    </NavigationMenuLink>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         ))}
                       </div>
 
-                      {/* Bottom-right "All Services" link */}
+                      {/* Bottom-right "All Services" */}
                       <div className="flex justify-end mt-6 pt-4" style={{ borderTop: "1px solid rgba(59,59,57,0.08)" }}>
                         <NavigationMenuLink asChild>
                           <Link
-                            to="/#services"
-                            className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider transition-colors duration-200 hover:text-[#F36F21]"
+                            to="/"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors duration-200 hover:text-[#F36F21]"
                             style={{ color: "#3B3B39" }}
                           >
                             All Services
@@ -210,48 +214,48 @@ const Navigation = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* ── Standard links ── */}
-                {navLinks.map((link) => {
-                  const isActive =
-                    link.hash
-                      ? location.pathname === "/" && location.hash === `#${link.hash}`
-                      : location.pathname === link.href;
+                {/* ── COMPANY ── */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to="/#company"
+                      onClick={(e) => handleHashNav(e, "company")}
+                      className="relative inline-flex items-center h-16 px-5 text-xs font-bold uppercase tracking-[0.15em] transition-colors duration-200 hover:text-[#F36F21]"
+                      style={{ color: "#3B3B39" }}
+                    >
+                      Company
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
 
-                  return (
-                    <NavigationMenuItem key={link.name}>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to={link.href}
-                          onClick={(e) => handleHashNav(e, link)}
-                          className={`
-                            relative inline-flex items-center h-16 px-4
-                            text-xs font-bold uppercase tracking-widest
-                            transition-colors duration-200 hover:text-[#F36F21]
-                          `}
-                          style={{ color: isActive ? "#F36F21" : "#3B3B39" }}
-                        >
-                          {isActive && (
-                            <span className="absolute top-0 left-4 right-4 h-[3px]" style={{ backgroundColor: "#F36F21" }} />
-                          )}
-                          {link.name}
-                        </Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  );
-                })}
+                {/* ── CONTACT ── */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to="/contact"
+                      className={`relative inline-flex items-center h-16 px-5 text-xs font-bold uppercase tracking-[0.15em] transition-colors duration-200 hover:text-[#F36F21]`}
+                      style={{ color: location.pathname === "/contact" ? "#F36F21" : "#3B3B39" }}
+                    >
+                      {location.pathname === "/contact" && (
+                        <span className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: "#F36F21" }} />
+                      )}
+                      Contact
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
-          {/* ── Desktop right actions ── */}
-          <div className="hidden lg:flex items-center gap-5">
+          {/* ── Desktop CTA ── */}
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
             <Link to="/contact">
               <Button
-                className="text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 transition-all duration-200 hover:shadow-lg"
+                className="text-white font-bold text-xs uppercase tracking-[0.15em] px-6 h-10 transition-all duration-200 hover:shadow-lg rounded-none"
                 style={{ backgroundColor: "#F36F21" }}
                 aria-label="Contact 3FACTOR"
               >
-                Contact
+                Get a Quote
                 <ArrowRight size={14} className="ml-1.5" />
               </Button>
             </Link>
@@ -279,74 +283,79 @@ const Navigation = () => {
                 </div>
 
                 <div className="px-6 py-6">
+                  {/* Services accordion */}
                   <Accordion type="single" collapsible>
                     <AccordionItem value="services" className="border-b" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
                       <AccordionTrigger
-                        className="text-xs font-bold uppercase tracking-widest py-4 hover:no-underline hover:text-[#F36F21]"
+                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 hover:no-underline hover:text-[#F36F21]"
                         style={{ color: "#3B3B39" }}
                       >
                         Services
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="flex flex-col gap-0 pb-3">
-                          {megaColumns.map((col) => (
-                            <div key={col.heading} className="mb-3">
-                              <h4
-                                className="text-[10px] font-bold uppercase tracking-widest mb-2 px-3"
-                                style={{ color: "#F36F21" }}
-                              >
-                                {col.heading}
-                              </h4>
-                              {col.items.map((item) => {
-                                const Icon = item.icon;
-                                return (
-                                  <SheetClose asChild key={item.name}>
-                                    <Link
-                                      to={item.href}
-                                      className="group flex items-center gap-3 px-3 py-2.5 transition-colors duration-200 hover:bg-[#F8F9FA]"
-                                    >
-                                      <Icon size={14} className="shrink-0" style={{ color: "#F36F21" }} />
-                                      <div>
-                                        <span className="text-sm font-medium" style={{ color: "#3B3B39" }}>
-                                          {item.name}
-                                        </span>
-                                        <p className="text-xs" style={{ color: "#646464" }}>{item.desc}</p>
-                                      </div>
-                                    </Link>
-                                  </SheetClose>
-                                );
-                              })}
-                            </div>
-                          ))}
+                        <div className="flex flex-col gap-4 pb-3">
+                          {megaColumns.map((col, colIdx) =>
+                            col.groups.map((group) => (
+                              <div key={group.heading}>
+                                <h4
+                                  className="text-[10px] font-bold uppercase tracking-[0.15em] mb-2 px-1"
+                                  style={{ color: "#F36F21" }}
+                                >
+                                  {group.heading}
+                                </h4>
+                                <div className="flex flex-col gap-0.5">
+                                  {group.items.map((item) => (
+                                    <SheetClose asChild key={item.name}>
+                                      <Link
+                                        to={item.href}
+                                        className="text-sm py-2 px-3 transition-colors duration-200 hover:bg-[#F8F9FA] hover:text-[#F36F21]"
+                                        style={{ color: "#3B3B39" }}
+                                      >
+                                        {item.name}
+                                      </Link>
+                                    </SheetClose>
+                                  ))}
+                                </div>
+                              </div>
+                            ))
+                          )}
                         </div>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
 
+                  {/* Other links */}
                   <div className="flex flex-col gap-0 mt-1">
-                    {navLinks.map((link) => (
-                      <SheetClose asChild key={link.name}>
-                        <Link
-                          to={link.href}
-                          onClick={(e) => handleHashNav(e, link)}
-                          className="text-xs font-bold uppercase tracking-widest py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
-                          style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
-                        >
-                          {link.name}
-                        </Link>
-                      </SheetClose>
-                    ))}
+                    <SheetClose asChild>
+                      <Link
+                        to="/#company"
+                        onClick={(e) => handleHashNav(e, "company")}
+                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
+                        style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
+                      >
+                        Company
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link
+                        to="/contact"
+                        className="text-xs font-bold uppercase tracking-[0.15em] py-4 transition-colors duration-200 hover:text-[#F36F21] border-b"
+                        style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
+                      >
+                        Contact
+                      </Link>
+                    </SheetClose>
                   </div>
 
                   <div className="mt-8">
                     <SheetClose asChild>
                       <Link to="/contact">
                         <Button
-                          className="w-full text-white font-bold uppercase tracking-wider"
+                          className="w-full text-white font-bold uppercase tracking-[0.15em] rounded-none"
                           style={{ backgroundColor: "#F36F21" }}
-                          aria-label="Contact 3FACTOR"
+                          aria-label="Get a quote from 3FACTOR"
                         >
-                          Contact
+                          Get a Quote
                           <ArrowRight size={14} className="ml-1.5" />
                         </Button>
                       </Link>
