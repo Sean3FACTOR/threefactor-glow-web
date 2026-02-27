@@ -546,7 +546,7 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ SEGMENT 1: THE APPROACH ═══ */}
+      {/* ═══ SEGMENT 1: THE APPROACH — 3-Column Feature ═══ */}
       <section id="approach" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[APPROACH]</span>
@@ -554,62 +554,115 @@ const ISO27001Page = () => {
             Why ISO projects stall — and how we fix it
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-              {/* Left: Problems */}
-              <div>
-                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6">
-                  Common failure modes
-                </h3>
-                <ul className="space-y-5">
-                  {[
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            {/* Column 1: Problems */}
+            <div>
+              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6 border-b border-slate-200 pb-3">
+                Common failure modes
+              </h3>
+              <ul className="space-y-6">
+                {[
                   { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
                   { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
                   { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
-                  map((item, i) =>
-                  <li key={i} className="group">
-                      <div className="flex items-start gap-3">
-                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900">{item.problem}</p>
-                          <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
-                        </div>
+                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <div className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-500">{item.problem}</p>
+                        <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
                       </div>
-                    </li>
-                  )}
-                </ul>
-              </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              {/* Right: Solutions */}
-              <div>
-                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6">
-                  How we solve it
-                </h3>
-                <ul className="space-y-5">
-                  {[
+            {/* Column 2: Solutions */}
+            <div>
+              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6 border-b border-orange-200 pb-3">
+                How we solve it
+              </h3>
+              <ul className="space-y-6">
+                {[
                   { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
                   { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
                   { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
-                  map((item, i) =>
+                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." },
+                ].map((item, i) => (
                   <li key={i}>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
-                          <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
-                        </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
                       </div>
-                    </li>
-                  )}
-                </ul>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Image */}
+            <div className="hidden lg:block h-full min-h-[400px]">
+              <img
+                src={workingLaptopImg}
+                alt="Professional working on compliance framework"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ BUILD TRUST — Overlapping Image Block ═══ */}
+      <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Text */}
+            <div>
+              <span className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-3 block">Our Approach</span>
+              <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                Build trust that<br />accelerates deals.
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                ISO 27001 isn't a checkbox — it's the signal that tells enterprise buyers you're
+                production-ready. We build your ISMS to operate day-to-day, not just survive an audit.
+              </p>
+              <div className="flex items-start gap-4 p-4 bg-white border border-slate-200">
+                <Shield className="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">Evidence-First Delivery</p>
+                  <p className="text-sm text-slate-500 mt-1">Controls produce audit-ready evidence as a byproduct of normal operations — not as a last-minute scramble.</p>
+                </div>
               </div>
             </div>
 
-            {/* Image */}
-            <div className="hidden lg:block">
-              <img src={workingLaptopImg} alt="Working on laptop" className="w-full h-full object-cover" style={{ border: "1px solid rgba(59,59,57,0.1)" }} />
+            {/* Right: Image with overlapping card */}
+            <div className="relative">
+              <img
+                src={consultationImg}
+                alt="Strategic consultation session"
+                className="w-full rounded-lg shadow-md object-cover aspect-[4/3]"
+              />
+              {/* Overlapping card — desktop */}
+              <div className="hidden lg:block absolute -bottom-10 -left-10 bg-white p-6 shadow-xl w-[350px]"
+                style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
+                <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
+                  "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
+                </blockquote>
+                <p className="text-xs font-mono uppercase tracking-wider text-orange-600">— Enterprise Client, Series B SaaS</p>
+              </div>
+              {/* Overlapping card — mobile */}
+              <div className="lg:hidden relative -mt-10 mx-auto w-11/12 z-10 bg-white p-6 shadow-xl"
+                style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
+                <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
+                  "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
+                </blockquote>
+                <p className="text-xs font-mono uppercase tracking-wider text-orange-600">— Enterprise Client, Series B SaaS</p>
+              </div>
             </div>
           </div>
         </div>
