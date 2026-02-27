@@ -512,6 +512,31 @@ const ISO27001Page = () => {
         </div>
       </nav>
 
+      {/* ═══ YOU'RE IN THE RIGHT PLACE ═══ */}
+      <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
+            You're in the right place if…
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              "ISO 27001 is required for customer assurance or procurement",
+              "You need a clear route to certification without derailing delivery",
+              "You're being asked for multiple frameworks and want reuse",
+              "You want a practical ISMS that operates day-to-day",
+            ].map((text, i) => (
+              <div
+                key={i}
+                className="bg-white p-6 text-sm md:text-base"
+                style={{ border: "1px solid rgba(59,59,57,0.1)", color: "#3B3B39" }}
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ SEGMENT 1: THE APPROACH ═══ */}
       <section id="approach" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
