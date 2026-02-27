@@ -18,23 +18,23 @@ import {
   Clock,
   Award,
   DollarSign,
-  Microscope,
-} from "lucide-react";
+  Microscope } from
+"lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from
+"@/components/ui/accordion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+  DialogDescription } from
+"@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -44,11 +44,11 @@ import isoHeroImg from "@/assets/iso27001-hero.jpg";
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
   open,
-  onOpenChange,
-}: {
-  open: boolean;
-  onOpenChange: (v: boolean) => void;
-}) => {
+  onOpenChange
+
+
+
+}: {open: boolean;onOpenChange: (v: boolean) => void;}) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
 
@@ -60,13 +60,13 @@ const ProposalModal = ({
       onOpenChange(false);
       toast({
         title: "Request received",
-        description: "Thanks, we'll reach out to schedule a 30-minute call.",
+        description: "Thanks, we'll reach out to schedule a 30-minute call."
       });
     }, 800);
   };
 
   const selectClasses =
-    "flex h-10 w-full border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
+  "flex h-10 w-full border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -81,42 +81,42 @@ const ProposalModal = ({
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
           {[
-            { id: "workEmail", label: "Work email *", type: "email" },
-            { id: "fullName", label: "Name *", type: "text" },
-            { id: "company", label: "Company *", type: "text" },
-          ].map((f) => (
-            <div key={f.id}>
+          { id: "workEmail", label: "Work email *", type: "email" },
+          { id: "fullName", label: "Name *", type: "text" },
+          { id: "company", label: "Company *", type: "text" }].
+          map((f) =>
+          <div key={f.id}>
               <Label htmlFor={f.id} className="font-mono text-xs uppercase tracking-wider text-slate-900">
                 {f.label}
               </Label>
               <Input id={f.id} name={f.id} type={f.type} required className="mt-1 border-slate-300 text-slate-900" />
             </div>
-          ))}
+          )}
           <div>
             <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">Role *</Label>
             <select name="role" required className={selectClasses}>
               <option value="">Select…</option>
-              {["Security", "Compliance", "IT", "Executive", "Other"].map((o) => (
-                <option key={o} value={o}>{o}</option>
-              ))}
+              {["Security", "Compliance", "IT", "Executive", "Other"].map((o) =>
+              <option key={o} value={o}>{o}</option>
+              )}
             </select>
           </div>
           <div>
             <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">Target timeframe *</Label>
             <select name="timeframe" required className={selectClasses}>
               <option value="">Select…</option>
-              {["0–3 months", "3–6 months", "6+ months", "Not sure"].map((o) => (
-                <option key={o} value={o}>{o}</option>
-              ))}
+              {["0–3 months", "3–6 months", "6+ months", "Not sure"].map((o) =>
+              <option key={o} value={o}>{o}</option>
+              )}
             </select>
           </div>
           <div>
             <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">ISO 27001 status *</Label>
             <select name="isoStatus" required className={selectClasses}>
               <option value="">Select…</option>
-              {["Starting", "In progress", "Need Stage 1/2 prep", "Maintaining"].map((o) => (
-                <option key={o} value={o}>{o}</option>
-              ))}
+              {["Starting", "In progress", "Need Stage 1/2 prep", "Maintaining"].map((o) =>
+              <option key={o} value={o}>{o}</option>
+              )}
             </select>
           </div>
           <div>
@@ -133,81 +133,81 @@ const ProposalModal = ({
           </p>
         </form>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>);
+
 };
 
 /* ─── Timeline Data ─── */
 const timelineSteps = [
-  {
-    icon: Target,
-    title: "Scope & Boundary Definition",
-    duration: "Weeks 1–2",
-    desc: "Set a defensible, achievable certification scope aligned to business objectives.",
-    details: [
-      "Define ISMS boundaries and applicability",
-      "Identify interested parties and requirements",
-      "Map information assets and processes in scope",
-      "Agree certification body expectations",
-    ],
-    cta: "Start with a scoping call to define your boundaries.",
-  },
-  {
-    icon: Eye,
-    title: "Readiness Assessment + Roadmap",
-    duration: "Weeks 2–4",
-    desc: "Identify gaps against ISO 27001 clauses and Annex A controls, then agree the delivery plan.",
-    details: [
-      "Clause-by-clause gap assessment",
-      "Annex A control maturity review",
-      "Prioritised roadmap with milestones",
-      "Risk and resource planning",
-    ],
-    cta: "Get a clear picture of where you stand today.",
-  },
-  {
-    icon: Layers,
-    title: "ISMS Foundation Build",
-    duration: "Weeks 3–8",
-    desc: "Build the management system: risk methodology, Statement of Applicability, governance, and documentation.",
-    details: [
-      "Risk assessment methodology and initial risk treatment",
-      "Statement of Applicability (SoA) creation",
-      "Core ISMS policies and procedures",
-      "Governance structure and management review cadence",
-    ],
-    cta: "This is the core of your certification — let's build it right.",
-  },
-  {
-    icon: Cog,
-    title: "Controls + Evidence Routines",
-    duration: "Weeks 6–12",
-    desc: "Embed controls into operations so evidence is produced naturally, not manufactured for audits.",
-    details: [
-      "Control implementation support and validation",
-      "Evidence-by-design workflow setup",
-      "Operational cadence and BAU integration",
-      "Internal audit programme execution",
-    ],
-    cta: "Evidence should flow from work — not be created for auditors.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Stage 1 / Stage 2 Preparation",
-    duration: "Weeks 12–16",
-    desc: "Audit pack assembly, mock walkthroughs, interview coaching, and close-out support.",
-    details: [
-      "Audit evidence pack compilation and review",
-      "Mock audit walkthroughs and rehearsals",
-      "Interview preparation for key personnel",
-      "Auditor liaison and request management",
-    ],
-    cta: "Walk into your audit confident and prepared.",
-  },
-];
+{
+  icon: Target,
+  title: "Scope & Boundary Definition",
+  duration: "Weeks 1–2",
+  desc: "Set a defensible, achievable certification scope aligned to business objectives.",
+  details: [
+  "Define ISMS boundaries and applicability",
+  "Identify interested parties and requirements",
+  "Map information assets and processes in scope",
+  "Agree certification body expectations"],
+
+  cta: "Start with a scoping call to define your boundaries."
+},
+{
+  icon: Eye,
+  title: "Readiness Assessment + Roadmap",
+  duration: "Weeks 2–4",
+  desc: "Identify gaps against ISO 27001 clauses and Annex A controls, then agree the delivery plan.",
+  details: [
+  "Clause-by-clause gap assessment",
+  "Annex A control maturity review",
+  "Prioritised roadmap with milestones",
+  "Risk and resource planning"],
+
+  cta: "Get a clear picture of where you stand today."
+},
+{
+  icon: Layers,
+  title: "ISMS Foundation Build",
+  duration: "Weeks 3–8",
+  desc: "Build the management system: risk methodology, Statement of Applicability, governance, and documentation.",
+  details: [
+  "Risk assessment methodology and initial risk treatment",
+  "Statement of Applicability (SoA) creation",
+  "Core ISMS policies and procedures",
+  "Governance structure and management review cadence"],
+
+  cta: "This is the core of your certification — let's build it right."
+},
+{
+  icon: Cog,
+  title: "Controls + Evidence Routines",
+  duration: "Weeks 6–12",
+  desc: "Embed controls into operations so evidence is produced naturally, not manufactured for audits.",
+  details: [
+  "Control implementation support and validation",
+  "Evidence-by-design workflow setup",
+  "Operational cadence and BAU integration",
+  "Internal audit programme execution"],
+
+  cta: "Evidence should flow from work — not be created for auditors."
+},
+{
+  icon: ClipboardCheck,
+  title: "Stage 1 / Stage 2 Preparation",
+  duration: "Weeks 12–16",
+  desc: "Audit pack assembly, mock walkthroughs, interview coaching, and close-out support.",
+  details: [
+  "Audit evidence pack compilation and review",
+  "Mock audit walkthroughs and rehearsals",
+  "Interview preparation for key personnel",
+  "Auditor liaison and request management"],
+
+  cta: "Walk into your audit confident and prepared."
+}];
+
 
 /* ─── Interactive Timeline ─── */
-const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
+const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
   const [active, setActive] = useState(0);
   const step = timelineSteps[active];
   const Icon = step.icon;
@@ -219,8 +219,8 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
         <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200" />
         <div
           className="absolute top-6 left-0 h-0.5 bg-orange-600 transition-all duration-500"
-          style={{ width: `${(active / (timelineSteps.length - 1)) * 100}%` }}
-        />
+          style={{ width: `${active / (timelineSteps.length - 1) * 100}%` }} />
+
         <div className="relative flex justify-between">
           {timelineSteps.map((s, i) => {
             const StepIcon = s.icon;
@@ -230,44 +230,44 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
               <button
                 key={i}
                 onClick={() => setActive(i)}
-                className="flex flex-col items-center gap-2 group relative z-10"
-              >
+                className="flex flex-col items-center gap-2 group relative z-10">
+
                 <div
                   className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
-                    isActive
-                      ? "border-orange-600 bg-orange-50"
-                      : isPast
-                      ? "border-orange-600 bg-white"
-                      : "border-slate-300 bg-white"
-                  }`}
-                >
+                  isActive ?
+                  "border-orange-600 bg-orange-50" :
+                  isPast ?
+                  "border-orange-600 bg-white" :
+                  "border-slate-300 bg-white"}`
+                  }>
+
                   <StepIcon
                     className={`w-5 h-5 transition-colors duration-300 ${
-                      isActive || isPast ? "text-orange-600" : "text-slate-400"
-                    }`}
-                  />
+                    isActive || isPast ? "text-orange-600" : "text-slate-400"}`
+                    } />
+
                 </div>
                 <span
                   className={`text-[10px] font-mono uppercase tracking-wider max-w-[80px] text-center leading-tight hidden md:block ${
-                    isActive ? "text-orange-600 font-bold" : "text-slate-500"
-                  }`}
-                >
+                  isActive ? "text-orange-600 font-bold" : "text-slate-500"}`
+                  }>
+
                   {s.title}
                 </span>
-              </button>
-            );
+              </button>);
+
           })}
         </div>
       </div>
 
       {/* Duration bar */}
       <div className="flex gap-1 mb-6">
-        {timelineSteps.map((s, i) => (
-          <div key={i} className="flex-1">
+        {timelineSteps.map((s, i) =>
+        <div key={i} className="flex-1">
             <div className={`h-1.5 transition-colors duration-300 ${i <= active ? "bg-orange-600" : "bg-slate-100"}`} />
             <span className="text-[10px] font-mono text-slate-500 mt-1 block">{s.duration}</span>
           </div>
-        ))}
+        )}
       </div>
 
       {/* Detail pane */}
@@ -283,12 +283,12 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
         </div>
         <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
         <ul className="space-y-2 mb-6">
-          {step.details.map((d) => (
-            <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+          {step.details.map((d) =>
+          <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
               <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
               {d}
             </li>
-          ))}
+          )}
         </ul>
         <div className="bg-orange-50 border border-orange-200 p-5">
           <p className="text-sm text-slate-700 mb-3 italic">{step.cta}</p>
@@ -298,96 +298,96 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 /* ─── Vertical Tabs Data ─── */
 const deliverableTabs = [
-  {
-    value: "readiness",
-    label: "Readiness Assessment",
-    icon: Eye,
-    content: {
-      title: "ISO 27001 Readiness Assessment (Gap Analysis)",
-      desc: "Understand exactly where you stand. We assess your current controls, documentation, and evidence maturity against ISO 27001 requirements and deliver a prioritised roadmap.",
-      items: [
-        "Confirm scope and audit expectations",
-        "Clause-by-clause gap assessment",
-        "Annex A control maturity review",
-        "Identify evidence gaps and quick wins",
-        "Deliver a prioritised, actionable roadmap",
-      ],
-    },
-  },
-  {
-    value: "isms",
-    label: "ISMS Build",
-    icon: Layers,
-    content: {
-      title: "ISMS Foundation Build & Implementation",
-      desc: "We build the management system that will underpin your certification — risk methodology, Statement of Applicability, governance, policies, and evidence workflows.",
-      items: [
-        "Risk assessment methodology and initial risk treatment",
-        "Statement of Applicability (SoA) creation and tailoring",
-        "Tailored ISMS documentation set (policies & procedures)",
-        "Governance structure and management review cadence",
-        "Evidence-by-design workflows embedded into operations",
-        "Control implementation support and validation",
-      ],
-    },
-  },
-  {
-    value: "prep",
-    label: "Pre-Certification Prep",
-    icon: ClipboardCheck,
-    content: {
-      title: "Stage 1 / Stage 2 Audit Preparation",
-      desc: "We ensure you walk into your certification audit confident and prepared, with a complete evidence pack and rehearsed interview responses.",
-      items: [
-        "Audit evidence pack compilation and review",
-        "Mock audit walkthroughs and rehearsals",
-        "Interview preparation for key personnel",
-        "Auditor liaison and request management",
-        "Close-out support for non-conformities",
-      ],
-    },
-  },
-  {
-    value: "scope",
-    label: "Included vs. Not Included",
-    icon: FileText,
-    content: {
-      title: "Fixed-Scope Boundaries",
-      desc: "Clear scope boundaries protect your timeline and pricing. Here's exactly what's in and out of scope.",
-      included: [
-        "Clauses and Controls Gap Assessment",
-        "Scope recommendation + ISMS boundary definition",
-        "Risk approach + risk treatment plan baseline",
-        "SoA creation and tailoring",
-        "Tailored ISMS documentation set",
-        "Control implementation support",
-        "Evidence-by-design workflows",
-        "Audit readiness pack + mock walkthrough",
-        "Stage 1/Stage 2 preparation + auditor liaison",
-      ],
-      excluded: [
-        "Certification body services / issuing the certificate",
-        "Tool licensing costs",
-        "Technical remediation execution and control operation",
-        "Pen testing / scanning services (partnered if required)",
-      ],
-    },
-  },
-];
+{
+  value: "readiness",
+  label: "Readiness Assessment",
+  icon: Eye,
+  content: {
+    title: "ISO 27001 Readiness Assessment (Gap Analysis)",
+    desc: "Understand exactly where you stand. We assess your current controls, documentation, and evidence maturity against ISO 27001 requirements and deliver a prioritised roadmap.",
+    items: [
+    "Confirm scope and audit expectations",
+    "Clause-by-clause gap assessment",
+    "Annex A control maturity review",
+    "Identify evidence gaps and quick wins",
+    "Deliver a prioritised, actionable roadmap"]
+
+  }
+},
+{
+  value: "isms",
+  label: "ISMS Build",
+  icon: Layers,
+  content: {
+    title: "ISMS Foundation Build & Implementation",
+    desc: "We build the management system that will underpin your certification — risk methodology, Statement of Applicability, governance, policies, and evidence workflows.",
+    items: [
+    "Risk assessment methodology and initial risk treatment",
+    "Statement of Applicability (SoA) creation and tailoring",
+    "Tailored ISMS documentation set (policies & procedures)",
+    "Governance structure and management review cadence",
+    "Evidence-by-design workflows embedded into operations",
+    "Control implementation support and validation"]
+
+  }
+},
+{
+  value: "prep",
+  label: "Pre-Certification Prep",
+  icon: ClipboardCheck,
+  content: {
+    title: "Stage 1 / Stage 2 Audit Preparation",
+    desc: "We ensure you walk into your certification audit confident and prepared, with a complete evidence pack and rehearsed interview responses.",
+    items: [
+    "Audit evidence pack compilation and review",
+    "Mock audit walkthroughs and rehearsals",
+    "Interview preparation for key personnel",
+    "Auditor liaison and request management",
+    "Close-out support for non-conformities"]
+
+  }
+},
+{
+  value: "scope",
+  label: "Included vs. Not Included",
+  icon: FileText,
+  content: {
+    title: "Fixed-Scope Boundaries",
+    desc: "Clear scope boundaries protect your timeline and pricing. Here's exactly what's in and out of scope.",
+    included: [
+    "Clauses and Controls Gap Assessment",
+    "Scope recommendation + ISMS boundary definition",
+    "Risk approach + risk treatment plan baseline",
+    "SoA creation and tailoring",
+    "Tailored ISMS documentation set",
+    "Control implementation support",
+    "Evidence-by-design workflows",
+    "Audit readiness pack + mock walkthrough",
+    "Stage 1/Stage 2 preparation + auditor liaison"],
+
+    excluded: [
+    "Certification body services / issuing the certificate",
+    "Tool licensing costs",
+    "Technical remediation execution and control operation",
+    "Pen testing / scanning services (partnered if required)"]
+
+  }
+}];
+
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
-  { label: "The Approach", target: "approach" },
-  { label: "The Roadmap", target: "roadmap" },
-  { label: "Deliverables", target: "deliverables" },
-  { label: "Why 3FACTOR", target: "why-3factor" },
-];
+{ label: "The Approach", target: "approach" },
+{ label: "The Roadmap", target: "roadmap" },
+{ label: "Deliverables", target: "deliverables" },
+{ label: "Why 3FACTOR", target: "why-3factor" }];
+
 
 /* ─── Page ─── */
 const ISO27001Page = () => {
@@ -445,12 +445,12 @@ const ISO27001Page = () => {
             src={isoHeroImg}
             alt=""
             className="w-full h-full object-cover"
-            aria-hidden="true"
-          />
+            aria-hidden="true" />
+
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }}
-          />
+            style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }} />
+
         </div>
 
         <div className="container mx-auto px-4 relative z-10 py-20 text-center">
@@ -460,7 +460,7 @@ const ISO27001Page = () => {
               <span className="block">GET ISO 27001 CERTIFIED.</span>
             </h1>
             <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
-              We operationalise controls and evidence, not produce shelfware.
+              One Integrated Program, Scaled For Every Standard.
             </p>
             <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
               <div className="bg-white p-6 flex items-center text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
@@ -486,9 +486,9 @@ const ISO27001Page = () => {
               size="lg"
               className="group font-semibold transition-all text-white"
               style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
-              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "transparent"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#3B3B39"; }}
-            >
+              onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "transparent";}}
+              onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = "#3B3B39";}}>
+
               Get a Fixed-Price Proposal
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -500,19 +500,19 @@ const ISO27001Page = () => {
       <nav className="sticky top-16 z-40 bg-white border-b border-slate-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-8 overflow-x-auto py-3">
-            {subNavLinks.map((link) => (
-              <button
-                key={link.target}
-                onClick={() => scrollTo(link.target)}
-                className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
-                  activeNav === link.target
-                    ? "text-orange-600 border-orange-600"
-                    : "text-slate-500 border-transparent hover:text-slate-900"
-                }`}
-              >
+            {subNavLinks.map((link) =>
+            <button
+              key={link.target}
+              onClick={() => scrollTo(link.target)}
+              className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
+              activeNav === link.target ?
+              "text-orange-600 border-orange-600" :
+              "text-slate-500 border-transparent hover:text-slate-900"}`
+              }>
+
                 {link.label}
               </button>
-            ))}
+            )}
           </div>
         </div>
       </nav>
@@ -533,12 +533,12 @@ const ISO27001Page = () => {
               </h3>
               <ul className="space-y-5">
                 {[
-                  { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
-                  { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
-                  { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." },
-                ].map((item, i) => (
-                  <li key={i} className="group">
+                { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
+                { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
+                { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
+                map((item, i) =>
+                <li key={i} className="group">
                     <div className="flex items-start gap-3">
                       <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
                       <div>
@@ -547,7 +547,7 @@ const ISO27001Page = () => {
                       </div>
                     </div>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
 
@@ -558,12 +558,12 @@ const ISO27001Page = () => {
               </h3>
               <ul className="space-y-5">
                 {[
-                  { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                  { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                  { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." },
-                ].map((item, i) => (
-                  <li key={i}>
+                { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
+                map((item, i) =>
+                <li key={i}>
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
                       <div>
@@ -572,7 +572,7 @@ const ISO27001Page = () => {
                       </div>
                     </div>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
           </div>
@@ -617,63 +617,63 @@ const ISO27001Page = () => {
                       className="justify-start gap-3 px-4 py-3.5 text-left text-sm font-semibold rounded-none border border-transparent
                         data-[state=active]:bg-white data-[state=active]:border-slate-200 data-[state=active]:shadow-sm
                         data-[state=active]:text-orange-600 data-[state=inactive]:text-slate-600 data-[state=inactive]:hover:bg-slate-50
-                        w-full transition-all"
-                    >
+                        w-full transition-all">
+
                       <TabIcon className="w-4 h-4 shrink-0" />
                       {tab.label}
-                    </TabsTrigger>
-                  );
+                    </TabsTrigger>);
+
                 })}
               </TabsList>
 
-              {deliverableTabs.map((tab) => (
-                <TabsContent key={tab.value} value={tab.value} className="mt-0 flex-1">
+              {deliverableTabs.map((tab) =>
+              <TabsContent key={tab.value} value={tab.value} className="mt-0 flex-1">
                   <div className="bg-white border border-slate-200 shadow-sm p-8">
                     <h3 className="text-lg font-bold uppercase text-slate-900 mb-3">
                       {tab.content.title}
                     </h3>
                     <p className="text-sm text-slate-600 mb-6 leading-relaxed">{tab.content.desc}</p>
 
-                    {tab.content.items && (
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {tab.content.items.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
+                    {tab.content.items &&
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {tab.content.items.map((item) =>
+                    <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
                             <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                             {item}
                           </li>
-                        ))}
-                      </ul>
                     )}
+                      </ul>
+                  }
 
-                    {tab.content.included && (
-                      <div className="space-y-6">
+                    {tab.content.included &&
+                  <div className="space-y-6">
                         <div>
                           <h4 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-3">Included</h4>
                           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            {tab.content.included.map((item) => (
-                              <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
+                            {tab.content.included.map((item) =>
+                        <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
                                 <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                                 {item}
                               </li>
-                            ))}
+                        )}
                           </ul>
                         </div>
                         <div className="border-t border-slate-200 pt-5">
                           <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-3">Not Included</h4>
                           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            {tab.content.excluded.map((item) => (
-                              <li key={item} className="flex items-start gap-2 text-sm text-slate-400">
+                            {tab.content.excluded.map((item) =>
+                        <li key={item} className="flex items-start gap-2 text-sm text-slate-400">
                                 <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 opacity-50" />
                                 {item}
                               </li>
-                            ))}
+                        )}
                           </ul>
                         </div>
                       </div>
-                    )}
+                  }
                   </div>
                 </TabsContent>
-              ))}
+              )}
             </Tabs>
           </div>
 
@@ -693,43 +693,43 @@ const ISO27001Page = () => {
                     <AccordionContent>
                       <div className="pt-2">
                         <p className="text-sm text-slate-600 mb-4 leading-relaxed">{tab.content.desc}</p>
-                        {tab.content.items && (
-                          <ul className="space-y-2">
-                            {tab.content.items.map((item) => (
-                              <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
+                        {tab.content.items &&
+                        <ul className="space-y-2">
+                            {tab.content.items.map((item) =>
+                          <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
                                 <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                                 {item}
                               </li>
-                            ))}
+                          )}
                           </ul>
-                        )}
-                        {tab.content.included && (
-                          <div className="space-y-4">
+                        }
+                        {tab.content.included &&
+                        <div className="space-y-4">
                             <ul className="space-y-2">
-                              {tab.content.included.map((item) => (
-                                <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
+                              {tab.content.included.map((item) =>
+                            <li key={item} className="flex items-start gap-2 text-sm text-slate-900">
                                   <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                                   {item}
                                 </li>
-                              ))}
+                            )}
                             </ul>
                             <div className="border-t border-slate-200 pt-4">
                               <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-2">Not Included</h4>
                               <ul className="space-y-2">
-                                {tab.content.excluded.map((item) => (
-                                  <li key={item} className="flex items-start gap-2 text-sm text-slate-400">
+                                {tab.content.excluded.map((item) =>
+                              <li key={item} className="flex items-start gap-2 text-sm text-slate-400">
                                     <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 opacity-50" />
                                     {item}
                                   </li>
-                                ))}
+                              )}
                               </ul>
                             </div>
                           </div>
-                        )}
+                        }
                       </div>
                     </AccordionContent>
-                  </AccordionItem>
-                );
+                  </AccordionItem>);
+
               })}
             </Accordion>
           </div>
@@ -750,28 +750,28 @@ const ISO27001Page = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Clock, stat: "12–16 Weeks", label: "Typical delivery timeline for certification readiness" },
-              { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
-              { icon: DollarSign, stat: "Fixed-Price", label: "Clear scope boundaries that protect your budget" },
-              { icon: Microscope, stat: "Evidence-First", label: "Controls produce audit evidence as a byproduct of BAU" },
-            ].map((item, i) => {
+            { icon: Clock, stat: "12–16 Weeks", label: "Typical delivery timeline for certification readiness" },
+            { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
+            { icon: DollarSign, stat: "Fixed-Price", label: "Clear scope boundaries that protect your budget" },
+            { icon: Microscope, stat: "Evidence-First", label: "Controls produce audit evidence as a byproduct of BAU" }].
+            map((item, i) => {
               const StatIcon = item.icon;
               return (
                 <div key={i} className="text-center lg:text-left">
                   <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
                   <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
                   <p className="text-sm text-slate-400 leading-relaxed">{item.label}</p>
-                </div>
-              );
+                </div>);
+
             })}
           </div>
 
           <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
-            {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) => (
-              <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-700 text-slate-400">
+            {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
+            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-700 text-slate-400">
                 {fw}
               </span>
-            ))}
+            )}
             <span className="px-3 py-1 text-xs font-mono text-slate-500">
               + reuse controls across frameworks
             </span>
@@ -788,13 +788,13 @@ const ISO27001Page = () => {
           </h2>
           <Accordion type="single" collapsible className="w-full">
             {[
-              { q: "Are you the auditor or certification body?", a: "No. We provide readiness, implementation, and Stage 1/Stage 2 preparation alongside your chosen certification body." },
-              { q: "Is 12–16 weeks realistic?", a: "It can be with a sensible scope and consistent stakeholder availability. More complex environments may take longer." },
-              { q: "What do you need from us to keep pace?", a: "A primary owner, access to key SMEs, and timely reviews of core documents and evidence workflows." },
-              { q: "Can you integrate ISO 27001 with SOC 2, NIS2, or DORA?", a: "Yes. We design controls and evidence for reuse across frameworks where relevant." },
-              { q: "What does fixed scope mean?", a: "A defined set of deliverables and responsibilities that protects timeline and pricing. Out-of-scope items are agreed separately." },
-            ].map((item, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-slate-200">
+            { q: "Are you the auditor or certification body?", a: "No. We provide readiness, implementation, and Stage 1/Stage 2 preparation alongside your chosen certification body." },
+            { q: "Is 12–16 weeks realistic?", a: "It can be with a sensible scope and consistent stakeholder availability. More complex environments may take longer." },
+            { q: "What do you need from us to keep pace?", a: "A primary owner, access to key SMEs, and timely reviews of core documents and evidence workflows." },
+            { q: "Can you integrate ISO 27001 with SOC 2, NIS2, or DORA?", a: "Yes. We design controls and evidence for reuse across frameworks where relevant." },
+            { q: "What does fixed scope mean?", a: "A defined set of deliverables and responsibilities that protects timeline and pricing. Out-of-scope items are agreed separately." }].
+            map((item, i) =>
+            <AccordionItem key={i} value={`faq-${i}`} className="border-slate-200">
                 <AccordionTrigger className="text-sm font-semibold text-left hover:no-underline text-slate-900">
                   {item.q}
                 </AccordionTrigger>
@@ -802,7 +802,7 @@ const ISO27001Page = () => {
                   <p className="text-sm leading-relaxed text-slate-600">{item.a}</p>
                 </AccordionContent>
               </AccordionItem>
-            ))}
+            )}
           </Accordion>
         </div>
       </section>
@@ -819,8 +819,8 @@ const ISO27001Page = () => {
           <Button
             onClick={openModal}
             size="lg"
-            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6"
-          >
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6">
+
             Get a Fixed-Price Proposal
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -828,8 +828,8 @@ const ISO27001Page = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default ISO27001Page;
