@@ -40,6 +40,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import isoHeroImg from "@/assets/iso27001-hero.jpg";
+import consultationImg from "@/assets/iso/consultation.jpg";
+import workingLaptopImg from "@/assets/iso/working-laptop.jpg";
 
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
@@ -515,85 +517,99 @@ const ISO27001Page = () => {
       {/* ═══ YOU'RE IN THE RIGHT PLACE ═══ */}
       <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
-            You're in the right place if…
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "ISO 27001 is required for customer assurance or procurement",
-              "You need a clear route to certification without derailing delivery",
-              "You're being asked for multiple frameworks and want reuse",
-              "You want a practical ISMS that operates day-to-day",
-            ].map((text, i) => (
-              <div
-                key={i}
-                className="bg-white p-6 text-sm md:text-base"
-                style={{ border: "1px solid rgba(59,59,57,0.1)", color: "#3B3B39" }}
-              >
-                {text}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="lg:col-span-2">
+              <h2 className="text-3xl md:text-4xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
+                You're in the right place if…
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  "ISO 27001 is required for customer assurance or procurement",
+                  "You need a clear route to certification without derailing delivery",
+                  "You're being asked for multiple frameworks and want reuse",
+                  "You want a practical ISMS that operates day-to-day",
+                ].map((text, i) => (
+                  <div
+                    key={i}
+                    className="bg-white p-6 text-sm md:text-base"
+                    style={{ border: "1px solid rgba(59,59,57,0.1)", color: "#3B3B39" }}
+                  >
+                    {text}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="hidden lg:block h-full">
+              <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover" style={{ border: "1px solid rgba(59,59,57,0.1)" }} />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ═══ SEGMENT 1: THE APPROACH ═══ */}
       <section id="approach" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[APPROACH]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-16">
             Why ISO projects stall — and how we fix it
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10">
-            {/* Left: Problems */}
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6">
-                Common failure modes
-              </h3>
-              <ul className="space-y-5">
-                {[
-                { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
-                { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
-                { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
-                map((item, i) =>
-                <li key={i} className="group">
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{item.problem}</p>
-                        <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+              {/* Left: Problems */}
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-5">
+                  {[
+                  { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
+                  { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
+                  { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
+                  map((item, i) =>
+                  <li key={i} className="group">
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">{item.problem}</p>
+                          <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                )}
-              </ul>
+                    </li>
+                  )}
+                </ul>
+              </div>
+
+              {/* Right: Solutions */}
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6">
+                  How we solve it
+                </h3>
+                <ul className="space-y-5">
+                  {[
+                  { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                  { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                  { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
+                  map((item, i) =>
+                  <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
+                          <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
 
-            {/* Right: Solutions */}
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6">
-                How we solve it
-              </h3>
-              <ul className="space-y-5">
-                {[
-                { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
-                map((item, i) =>
-                <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
-                        <p className="text-sm text-slate-500 mt-0.5">{item.detail}</p>
-                      </div>
-                    </div>
-                  </li>
-                )}
-              </ul>
+            {/* Image */}
+            <div className="hidden lg:block">
+              <img src={workingLaptopImg} alt="Working on laptop" className="w-full h-full object-cover" style={{ border: "1px solid rgba(59,59,57,0.1)" }} />
             </div>
           </div>
         </div>
