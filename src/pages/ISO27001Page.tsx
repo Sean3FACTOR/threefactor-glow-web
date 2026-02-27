@@ -464,13 +464,13 @@ const ISO27001Page = () => {
             </p>
             <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
               <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <ul className="space-y-2 list-disc list-inside" style={{ color: "#3B3B39" }}>
+                <ul className="space-y-2 list-disc pl-5" style={{ color: "#3B3B39" }}>
                   <li className="text-base md:text-lg">Fixed-scope ISO 27001 readiness, implementation, and Stage 1-2 audit preparation.</li>
                   <li className="text-base md:text-lg">Reuse controls across SOC 2, NIS2, DORA and more.</li>
                 </ul>
               </div>
               <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <ul className="space-y-2 list-disc list-inside" style={{ color: "#3B3B39" }}>
+                <ul className="space-y-2 list-disc pl-5" style={{ color: "#3B3B39" }}>
                   <li className="text-base md:text-lg">Typical implementation: 12–16 weeks.</li>
                   <li className="text-base md:text-lg">Fixed scope. No hidden fees.</li>
                 </ul>
