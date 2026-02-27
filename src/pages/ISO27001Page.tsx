@@ -791,7 +791,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ SEGMENT 4: WHY 3FACTOR TRUST BAR ═══ */}
-      <section id="why-3factor" className="py-16 bg-slate-900">
+      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
         <div className="container mx-auto px-4 max-w-5xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-orange-500 block mb-3">[WHY 3FACTOR]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-12">
