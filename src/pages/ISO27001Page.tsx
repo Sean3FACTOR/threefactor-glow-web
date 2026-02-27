@@ -620,56 +620,6 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ BUILD TRUST — Overlapping Image Block ═══ */}
-      <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text */}
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-3 block">Our Approach</span>
-              <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
-                Build trust that<br />accelerates deals.
-              </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                ISO 27001 isn't a checkbox — it's the signal that tells enterprise buyers you're
-                production-ready. We build your ISMS to operate day-to-day, not just survive an audit.
-              </p>
-              <div className="flex items-start gap-4 p-4 bg-white border border-slate-200">
-                <Shield className="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-slate-900 text-sm">Evidence-First Delivery</p>
-                  <p className="text-sm text-slate-500 mt-1">Controls produce audit-ready evidence as a byproduct of normal operations — not as a last-minute scramble.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Image with overlapping card */}
-            <div className="relative">
-              <img
-                src={consultationImg}
-                alt="Strategic consultation session"
-                className="w-full rounded-lg shadow-md object-cover aspect-[4/3]"
-              />
-              {/* Overlapping card — desktop */}
-              <div className="hidden lg:block absolute -bottom-8 -left-8 bg-white p-6 shadow-xl w-4/5 lg:w-[350px] z-10"
-                style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
-                <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
-                  "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
-                </blockquote>
-                <p className="text-xs font-mono uppercase tracking-wider text-orange-600">— Enterprise Client, Series B SaaS</p>
-              </div>
-              {/* Overlapping card — mobile */}
-              <div className="lg:hidden relative -mt-8 mx-auto w-[90%] z-10 bg-white p-6 shadow-xl"
-                style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
-                <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
-                  "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
-                </blockquote>
-                <p className="text-xs font-mono uppercase tracking-wider text-orange-600">— Enterprise Client, Series B SaaS</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ═══ SEGMENT 2: THE ROADMAP ═══ */}
       <section id="roadmap" className="py-24 bg-slate-50 border-y border-slate-200">
