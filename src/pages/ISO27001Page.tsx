@@ -547,8 +547,14 @@ const ISO27001Page = () => {
                 ))}
               </div>
             </div>
-            <div className="hidden lg:block h-full">
+            <div className="hidden lg:block h-full relative">
               <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover" style={{ border: "1px solid rgba(59,59,57,0.1)" }} />
+              <div className="absolute -bottom-8 -left-8 bg-white p-5 shadow-xl max-w-[280px] z-10"
+                style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
+                <p className="text-xs font-semibold text-slate-900 leading-relaxed">
+                  We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
+                </p>
+              </div>
             </div>
           </div>
         </div>
