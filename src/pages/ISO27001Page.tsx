@@ -220,8 +220,8 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
       <div className="relative mb-10">
         <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200" />
         <div
-          className="absolute top-6 left-0 h-0.5 bg-orange-600 transition-all duration-500"
-          style={{ width: `${active / (timelineSteps.length - 1) * 100}%` }} />
+          className="absolute top-6 left-0 h-0.5 transition-all duration-500"
+          style={{ width: `${active / (timelineSteps.length - 1) * 100}%`, backgroundColor: "#3B3B39" }} />
 
         <div className="relative flex justify-between">
           {timelineSteps.map((s, i) => {
@@ -237,21 +237,21 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                 <div
                   className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
                   isActive ?
-                  "border-orange-600 bg-orange-50" :
+                  "border-[#3B3B39] bg-slate-100" :
                   isPast ?
-                  "border-orange-600 bg-white" :
+                  "border-[#3B3B39] bg-white" :
                   "border-slate-300 bg-white"}`
                   }>
 
                   <StepIcon
                     className={`w-5 h-5 transition-colors duration-300 ${
-                    isActive || isPast ? "text-orange-600" : "text-slate-400"}`
+                    isActive || isPast ? "text-[#3B3B39]" : "text-slate-400"}`
                     } />
 
                 </div>
                 <span
                   className={`text-[10px] font-mono uppercase tracking-wider max-w-[80px] text-center leading-tight hidden md:block ${
-                  isActive ? "text-orange-600 font-bold" : "text-slate-500"}`
+                  isActive ? "text-[#3B3B39] font-bold" : "text-slate-500"}`
                   }>
 
                   {s.title}
@@ -266,7 +266,7 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
       <div className="flex gap-1 mb-6">
         {timelineSteps.map((s, i) =>
         <div key={i} className="flex-1">
-            <div className={`h-1.5 transition-colors duration-300 ${i <= active ? "bg-orange-600" : "bg-slate-100"}`} />
+            <div className={`h-1.5 transition-colors duration-300 ${i <= active ? "bg-[#3B3B39]" : "bg-slate-100"}`} />
             <span className="text-[10px] font-mono text-slate-500 mt-1 block">{s.duration}</span>
           </div>
         )}
@@ -275,11 +275,11 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
       {/* Detail pane */}
       <div className="bg-white border border-slate-200 shadow-sm p-6 md:p-8 transition-all duration-300">
         <div className="flex items-start gap-4 mb-4">
-          <div className="w-10 h-10 flex items-center justify-center bg-orange-50 border border-orange-200 flex-shrink-0">
-            <Icon className="w-5 h-5 text-orange-600" />
+          <div className="w-10 h-10 flex items-center justify-center bg-slate-100 border border-slate-300 flex-shrink-0">
+            <Icon className="w-5 h-5 text-[#3B3B39]" />
           </div>
           <div>
-            <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">{step.duration}</span>
+            <span className="text-[10px] font-mono text-[#3B3B39] uppercase tracking-wider">{step.duration}</span>
             <h3 className="text-lg font-bold uppercase text-slate-900">{step.title}</h3>
           </div>
         </div>
@@ -287,14 +287,14 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
         <ul className="space-y-2 mb-6">
           {step.details.map((d) =>
           <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
-              <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+              <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B3B39]" />
               {d}
             </li>
           )}
         </ul>
-        <div className="bg-orange-50 border border-orange-200 p-5">
+        <div className="bg-slate-50 border border-slate-300 p-5">
           <p className="text-sm text-slate-700 mb-3 italic">{step.cta}</p>
-          <Button onClick={openModal} className="bg-orange-600 hover:bg-orange-700 text-white font-semibold">
+          <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
             Get a Fixed-Price Proposal
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
