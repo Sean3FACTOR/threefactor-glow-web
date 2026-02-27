@@ -303,8 +303,8 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
               </Button>
             </div>
           </div>
-          <div className="hidden lg:flex items-center justify-center">
-            <img src={hexagonGraphic} alt="" className="w-full h-auto max-h-[280px] object-contain opacity-80" />
+          <div className="hidden lg:flex items-center justify-center overflow-hidden">
+            <img src={hexagonGraphic} alt="" className="w-full h-auto max-h-[336px] object-contain opacity-80" />
           </div>
         </div>
       </div>
