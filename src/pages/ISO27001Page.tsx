@@ -554,63 +554,66 @@ const ISO27001Page = () => {
             Why ISO projects stall — and how we fix it
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            {/* Column 1: Problems */}
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6 border-b border-slate-200 pb-3">
-                Common failure modes
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
-                  { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
-                  { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-500">{item.problem}</p>
-                        <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Left: Problem + Solution text (7 cols) */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              {/* Problems */}
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6 border-b border-slate-200 pb-3">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
+                    { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
+                    { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                    { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-500">{item.problem}</p>
+                          <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Solutions */}
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6 border-b border-orange-200 pb-3">
+                  How we solve it
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                    { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                    { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                    { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* Column 2: Solutions */}
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-600 mb-6 border-b border-orange-200 pb-3">
-                How we solve it
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                  { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                  { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900">{item.fix}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 3: Image */}
-            <div className="hidden lg:block h-full min-h-[400px]">
+            {/* Right: Image (5 cols) */}
+            <div className="lg:col-span-5">
               <img
                 src={workingLaptopImg}
                 alt="Professional working on compliance framework"
-                className="w-full h-full object-cover rounded-lg shadow-md"
+                className="w-full h-full object-cover rounded-lg shadow-md min-h-[350px]"
               />
             </div>
           </div>
@@ -648,7 +651,7 @@ const ISO27001Page = () => {
                 className="w-full rounded-lg shadow-md object-cover aspect-[4/3]"
               />
               {/* Overlapping card — desktop */}
-              <div className="hidden lg:block absolute -bottom-10 -left-10 bg-white p-6 shadow-xl w-[350px]"
+              <div className="hidden lg:block absolute -bottom-8 -left-8 bg-white p-6 shadow-xl w-4/5 lg:w-[350px] z-10"
                 style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
                 <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
                   "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
@@ -656,7 +659,7 @@ const ISO27001Page = () => {
                 <p className="text-xs font-mono uppercase tracking-wider text-orange-600">— Enterprise Client, Series B SaaS</p>
               </div>
               {/* Overlapping card — mobile */}
-              <div className="lg:hidden relative -mt-10 mx-auto w-11/12 z-10 bg-white p-6 shadow-xl"
+              <div className="lg:hidden relative -mt-8 mx-auto w-[90%] z-10 bg-white p-6 shadow-xl"
                 style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
                 <blockquote className="text-sm font-semibold text-slate-900 leading-relaxed mb-3">
                   "3FACTOR gave us a clear path from zero to certification-ready in 14 weeks — no scope creep, no surprises."
