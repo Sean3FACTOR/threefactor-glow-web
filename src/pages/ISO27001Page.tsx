@@ -470,11 +470,11 @@ const ISO27001Page = () => {
               </div>
               <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
                 <div className="space-y-3">
-                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>Typical implementation: 12–16 weeks. 
                     <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
                     Typical implementation: 12–16 weeks · Fixed scope · No hidden fees
                   </p>
-                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>Fixed scope. No hidden fees.
                     <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
                     Evidence-first model — controls that run in production, not just on paper.
                   </p>
