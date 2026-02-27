@@ -42,6 +42,7 @@ import { useToast } from "@/hooks/use-toast";
 import isoHeroImg from "@/assets/iso27001-hero.jpg";
 import consultationImg from "@/assets/iso/consultation.jpg";
 import workingLaptopImg from "@/assets/iso/working-laptop.jpg";
+import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
@@ -274,30 +275,37 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
 
       {/* Detail pane */}
       <div className="bg-white border border-slate-200 shadow-sm p-6 md:p-8 transition-all duration-300">
-        <div className="flex items-start gap-4 mb-4">
-          <div className="w-10 h-10 flex items-center justify-center bg-slate-100 border border-slate-300 flex-shrink-0">
-            <Icon className="w-5 h-5 text-[#3B3B39]" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center bg-slate-100 border border-slate-300 flex-shrink-0">
+                <Icon className="w-5 h-5 text-[#3B3B39]" />
+              </div>
+              <div>
+                <span className="text-[10px] font-mono text-[#3B3B39] uppercase tracking-wider">{step.duration}</span>
+                <h3 className="text-lg font-bold uppercase text-slate-900">{step.title}</h3>
+              </div>
+            </div>
+            <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
+            <ul className="space-y-2 mb-6">
+              {step.details.map((d) =>
+              <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B3B39]" />
+                  {d}
+                </li>
+              )}
+            </ul>
+            <div className="bg-slate-50 border border-slate-300 p-5">
+              <p className="text-sm text-slate-700 mb-3 italic">{step.cta}</p>
+              <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
+                Get a Fixed-Price Proposal
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </div>
-          <div>
-            <span className="text-[10px] font-mono text-[#3B3B39] uppercase tracking-wider">{step.duration}</span>
-            <h3 className="text-lg font-bold uppercase text-slate-900">{step.title}</h3>
+          <div className="hidden lg:flex items-center justify-center">
+            <img src={hexagonGraphic} alt="" className="w-full h-auto max-h-[280px] object-contain opacity-80" />
           </div>
-        </div>
-        <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
-        <ul className="space-y-2 mb-6">
-          {step.details.map((d) =>
-          <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
-              <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B3B39]" />
-              {d}
-            </li>
-          )}
-        </ul>
-        <div className="bg-slate-50 border border-slate-300 p-5">
-          <p className="text-sm text-slate-700 mb-3 italic">{step.cta}</p>
-          <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
-            Get a Fixed-Price Proposal
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
         </div>
       </div>
     </div>);
