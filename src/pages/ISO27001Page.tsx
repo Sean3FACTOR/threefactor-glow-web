@@ -140,176 +140,299 @@ const ProposalModal = ({
 
 };
 
-/* ─── Timeline Data ─── */
-const timelineSteps = [
-{
-  icon: Target,
-  title: "Scope & Boundary Definition",
-  duration: "Weeks 1–2",
-  desc: "Set a defensible, achievable certification scope aligned to business objectives.",
-  details: [
-  "Define ISMS boundaries and applicability",
-  "Identify interested parties and requirements",
-  "Map information assets and processes in scope",
-  "Agree certification body expectations"],
+/* ─── CSAT Lifecycle Timeline Data ─── */
+const csatStages = [
+  {
+    icon: Target,
+    stage: 1,
+    title: "Business Justification & Sponsorship",
+    duration: "Ongoing",
+    durationWeeks: 4, // proportional weight for bar
+    desc: "Determine business drivers, secure leadership sponsorship, and utilize a self-service justification framework.",
+    details: [
+      "Identify compliance drivers and strategic business objectives",
+      "Secure executive sponsorship and budget approval",
+      "Complete self-service justification framework",
+      "Align certification goals with revenue and partnership targets",
+    ],
+  },
+  {
+    icon: Users,
+    stage: 2,
+    title: "CSAT Program Engagement",
+    duration: "1–2 Weeks",
+    durationWeeks: 2,
+    desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
+    details: [
+      "Kick-off meeting with CSAT Program team",
+      "Define engagement scope and boundaries",
+      "Establish communication cadence and stakeholders",
+      "Agree on milestones and success criteria",
+    ],
+  },
+  {
+    icon: Microscope,
+    stage: 3,
+    title: "Gap Assessment",
+    duration: "~6 Weeks",
+    durationWeeks: 6,
+    desc: "Service/product teams complete a control questionnaire to identify existing vs. missing controls.",
+    details: [
+      "Distribute and complete control questionnaire",
+      "Identify existing controls and evidence",
+      "Map gaps against ISO 27001 requirements",
+      "Produce prioritised gap report with remediation plan",
+    ],
+  },
+  {
+    icon: Cog,
+    stage: 4,
+    title: "Control Implementation & Documentation",
+    duration: "3–5 Months",
+    durationWeeks: 16,
+    desc: "Execution phase. Timeline scales based on technical complexity and team bandwidth.",
+    details: [
+      "Implement missing controls and evidence workflows",
+      "Develop ISMS policies, procedures, and documentation",
+      "Build evidence-by-design into operational processes",
+      "Conduct iterative reviews with CSAT team",
+    ],
+  },
+  {
+    icon: ClipboardCheck,
+    stage: 5,
+    title: "Control Validation & Audit Readiness",
+    duration: "~4 Weeks",
+    durationWeeks: 4,
+    desc: "The CSAT team conducts internal validation and readiness checks.",
+    details: [
+      "Internal control testing and validation",
+      "Evidence pack compilation and completeness review",
+      "Mock audit walkthroughs and interview coaching",
+      "Remediate any findings before external audit",
+    ],
+  },
+  {
+    icon: Eye,
+    stage: 6,
+    title: "External Audit",
+    duration: "~2 Months",
+    durationWeeks: 8,
+    desc: "Formal review conducted by an external certification body.",
+    details: [
+      "Stage 1 audit: documentation and design review",
+      "Stage 2 audit: operating effectiveness evaluation",
+      "Auditor liaison and request management",
+      "Close-out support for any non-conformities",
+    ],
+  },
+  {
+    icon: Award,
+    stage: 7,
+    title: "Certification Achieved",
+    duration: "Final Stage",
+    durationWeeks: 2,
+    desc: "Attestation report or formal ISO 27001 certification is issued.",
+    details: [
+      "Receive formal ISO 27001 certification",
+      "Establish surveillance audit schedule",
+      "Transition ISMS to continuous improvement mode",
+      "Leverage certification for sales enablement and trust",
+    ],
+  },
+];
 
-  cta: "Start with a scoping call to define your boundaries."
-},
-{
-  icon: Eye,
-  title: "Readiness Assessment + Roadmap",
-  duration: "Weeks 2–4",
-  desc: "Identify gaps against ISO 27001 clauses and Annex A controls, then agree the delivery plan.",
-  details: [
-  "Clause-by-clause gap assessment",
-  "Annex A control maturity review",
-  "Prioritised roadmap with milestones",
-  "Risk and resource planning"],
+const totalWeeks = csatStages.reduce((sum, s) => sum + s.durationWeeks, 0);
 
-  cta: "Get a clear picture of where you stand today."
-},
-{
-  icon: Layers,
-  title: "ISMS Foundation Build",
-  duration: "Weeks 3–8",
-  desc: "Build the management system: risk methodology, Statement of Applicability, governance, and documentation.",
-  details: [
-  "Risk assessment methodology and initial risk treatment",
-  "Statement of Applicability (SoA) creation",
-  "Core ISMS policies and procedures",
-  "Governance structure and management review cadence"],
-
-  cta: "This is the core of your certification — let's build it right."
-},
-{
-  icon: Cog,
-  title: "Controls + Evidence Routines",
-  duration: "Weeks 6–12",
-  desc: "Embed controls into operations so evidence is produced naturally, not manufactured for audits.",
-  details: [
-  "Control implementation support and validation",
-  "Evidence-by-design workflow setup",
-  "Operational cadence and BAU integration",
-  "Internal audit programme execution"],
-
-  cta: "Evidence should flow from work — not be created for auditors."
-},
-{
-  icon: ClipboardCheck,
-  title: "Stage 1 / Stage 2 Preparation",
-  duration: "Weeks 12–16",
-  desc: "Audit pack assembly, mock walkthroughs, interview coaching, and close-out support.",
-  details: [
-  "Audit evidence pack compilation and review",
-  "Mock audit walkthroughs and rehearsals",
-  "Interview preparation for key personnel",
-  "Auditor liaison and request management"],
-
-  cta: "Walk into your audit confident and prepared."
-}];
-
-
-/* ─── Interactive Timeline ─── */
-const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
+/* ─── Interactive CSAT Timeline ─── */
+const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
   const [active, setActive] = useState(0);
-  const step = timelineSteps[active];
+  const step = csatStages[active];
   const Icon = step.icon;
 
   return (
     <div>
-      {/* Timeline bar */}
-      <div className="relative mb-10">
-        <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200" />
-        <div
-          className="absolute top-6 left-0 h-0.5 transition-all duration-500"
-          style={{ width: `${active / (timelineSteps.length - 1) * 100}%`, backgroundColor: "#3B3B39" }} />
+      {/* ── Desktop: Horizontal Stepper ── */}
+      <div className="hidden lg:block">
+        {/* Node row */}
+        <div className="relative mb-4">
+          <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200" />
+          <div
+            className="absolute top-6 left-0 h-0.5 transition-all duration-500"
+            style={{
+              width: `${(active / (csatStages.length - 1)) * 100}%`,
+              backgroundColor: "#3B3B39",
+            }}
+          />
+          <div className="relative flex justify-between">
+            {csatStages.map((s, i) => {
+              const StepIcon = s.icon;
+              const isActive = i === active;
+              const isPast = i < active;
+              return (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className="flex flex-col items-center gap-2 group relative z-10"
+                >
+                  <div
+                    className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
+                      isActive
+                        ? "border-orange-600 bg-orange-50"
+                        : isPast
+                        ? "border-[#3B3B39] bg-white"
+                        : "border-slate-300 bg-white"
+                    }`}
+                  >
+                    <StepIcon
+                      className={`w-5 h-5 transition-colors duration-300 ${
+                        isActive
+                          ? "text-orange-600"
+                          : isPast
+                          ? "text-[#3B3B39]"
+                          : "text-slate-400"
+                      }`}
+                    />
+                  </div>
+                  <span
+                    className={`text-[10px] font-mono uppercase tracking-wider max-w-[90px] text-center leading-tight ${
+                      isActive ? "text-orange-600 font-bold" : "text-slate-500"
+                    }`}
+                  >
+                    {s.title}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-        <div className="relative flex justify-between">
-          {timelineSteps.map((s, i) => {
-            const StepIcon = s.icon;
-            const isActive = i === active;
-            const isPast = i < active;
+        {/* Proportional duration bar */}
+        <div className="flex gap-px mb-8">
+          {csatStages.map((s, i) => {
+            const widthPct = (s.durationWeeks / totalWeeks) * 100;
             return (
-              <button
-                key={i}
-                onClick={() => setActive(i)}
-                className="flex flex-col items-center gap-2 group relative z-10">
-
+              <div key={i} style={{ width: `${widthPct}%` }}>
                 <div
-                  className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
-                  isActive ?
-                  "border-[#3B3B39] bg-slate-100" :
-                  isPast ?
-                  "border-[#3B3B39] bg-white" :
-                  "border-slate-300 bg-white"}`
-                  }>
-
-                  <StepIcon
-                    className={`w-5 h-5 transition-colors duration-300 ${
-                    isActive || isPast ? "text-[#3B3B39]" : "text-slate-400"}`
-                    } />
-
-                </div>
-                <span
-                  className={`text-[10px] font-mono uppercase tracking-wider max-w-[80px] text-center leading-tight hidden md:block ${
-                  isActive ? "text-[#3B3B39] font-bold" : "text-slate-500"}`
-                  }>
-
-                  {s.title}
+                  className={`h-2 transition-colors duration-300 ${
+                    i <= active ? "bg-orange-600" : "bg-slate-100"
+                  }`}
+                />
+                <span className="text-[9px] font-mono text-slate-500 mt-1 block truncate">
+                  {s.duration}
                 </span>
-              </button>);
-
+              </div>
+            );
           })}
         </div>
-      </div>
 
-      {/* Duration bar */}
-      <div className="flex gap-1 mb-6">
-        {timelineSteps.map((s, i) =>
-        <div key={i} className="flex-1">
-            <div className={`h-1.5 transition-colors duration-300 ${i <= active ? "bg-[#3B3B39]" : "bg-slate-100"}`} />
-            <span className="text-[10px] font-mono text-slate-500 mt-1 block">{s.duration}</span>
-          </div>
-        )}
-      </div>
-
-      {/* Detail pane */}
-      <div className="bg-white border border-slate-200 shadow-sm p-6 md:p-8 transition-all duration-300">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-10 h-10 flex items-center justify-center bg-slate-100 border border-slate-300 flex-shrink-0">
-                <Icon className="w-5 h-5 text-[#3B3B39]" />
+        {/* Detail pane */}
+        <div
+          className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
+                  <Icon className="w-5 h-5 text-orange-600" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
+                    Stage {step.stage} · {step.duration}
+                  </span>
+                  <h3 className="text-lg font-bold uppercase text-slate-900">
+                    {step.title}
+                  </h3>
+                </div>
               </div>
-              <div>
-                <span className="text-[10px] font-mono text-[#3B3B39] uppercase tracking-wider">{step.duration}</span>
-                <h3 className="text-lg font-bold uppercase text-slate-900">{step.title}</h3>
-              </div>
-            </div>
-            <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
-            <ul className="space-y-2 mb-6">
-              {step.details.map((d) =>
-              <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
-                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#3B3B39]" />
-                  {d}
-                </li>
-              )}
-            </ul>
-            <div className="bg-slate-50 border border-slate-300 p-5">
-              <p className="text-sm text-slate-700 mb-3 italic">{step.cta}</p>
-              <Button onClick={openModal} className="text-white font-semibold" style={{ backgroundColor: "#3B3B39" }}>
+              <p className="text-sm text-slate-600 mb-5 leading-relaxed">
+                {step.desc}
+              </p>
+              <ul className="space-y-2 mb-6">
+                {step.details.map((d) => (
+                  <li
+                    key={d}
+                    className="flex items-start gap-2 text-sm text-slate-900"
+                  >
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                onClick={openModal}
+                className="text-white font-semibold"
+                style={{ backgroundColor: "#3B3B39" }}
+              >
                 Get a Fixed-Price Proposal
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
-          </div>
-          <div className="hidden lg:flex items-center justify-center overflow-hidden">
-            <img src={hexagonGraphic} alt="" className="w-full h-auto max-h-[336px] object-contain opacity-80" />
+            <div className="hidden lg:flex items-center justify-center overflow-hidden">
+              <img
+                src={hexagonGraphic}
+                alt=""
+                className="w-full h-auto max-h-[336px] object-contain opacity-80"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>);
 
+      {/* ── Mobile: Vertical Accordion ── */}
+      <div className="lg:hidden">
+        <Accordion type="single" collapsible defaultValue="stage-0">
+          {csatStages.map((s, i) => {
+            const StepIcon = s.icon;
+            return (
+              <AccordionItem key={i} value={`stage-${i}`} className="border-b border-slate-200">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <div className="flex items-center gap-3 min-h-[44px]">
+                    <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
+                      <StepIcon className="w-5 h-5 text-orange-600" />
+                    </div>
+                    <div className="text-left">
+                      <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
+                        Stage {s.stage} · {s.duration}
+                      </span>
+                      <span className="text-sm font-bold uppercase text-slate-900">
+                        {s.title}
+                      </span>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pl-[52px]">
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    {s.desc}
+                  </p>
+                  <ul className="space-y-2 mb-4">
+                    {s.details.map((d) => (
+                      <li
+                        key={d}
+                        className="flex items-start gap-2 text-sm text-slate-900"
+                      >
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    onClick={openModal}
+                    size="sm"
+                    className="text-white font-semibold"
+                    style={{ backgroundColor: "#3B3B39" }}
+                  >
+                    Get a Proposal
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </div>
+    </div>
+  );
 };
 
 /* ─── Vertical Tabs Data ─── */
@@ -640,10 +763,10 @@ const ISO27001Page = () => {
         <div className="container mx-auto px-4">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[ROADMAP]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
-            The 5-step plan to certification readiness
+            The 7-Stage CSAT Certification Lifecycle
           </h2>
           <p className="text-sm text-slate-600 mb-12 max-w-2xl">
-            Click each step to explore the details. Delivered as a fixed-scope project — typically 12–16 weeks.
+            Click each stage to explore the details. Typical end-to-end timeline: 8–10+ months.
           </p>
           <InteractiveTimeline openModal={openModal} />
         </div>
