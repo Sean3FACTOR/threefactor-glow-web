@@ -39,6 +39,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import isoHeroImg from "@/assets/iso27001-hero.jpg";
 
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
@@ -437,29 +438,61 @@ const ISO27001Page = () => {
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
-      {/* ═══ HERO ═══ */}
-      <section className="pt-32 pb-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="inline-block font-mono text-xs uppercase tracking-widest text-orange-600 mb-6">
-            ISO 27001 Certification Guide
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6">
-            Secure Your Future with ISO 27001
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            We operationalise controls and evidence, not produce shelfware.
-          </p>
-          <Button
-            onClick={openModal}
-            size="lg"
-            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6"
-          >
-            Get a Fixed-Price Proposal
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
-          <p className="text-xs text-slate-400 mt-4 font-mono">
-            Typical implementation: 12–16 weeks · Fixed scope · No hidden fees
-          </p>
+      {/* ═══ HERO BANNER ═══ */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={isoHeroImg}
+            alt=""
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 py-20 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1] text-white">
+              <span className="block">Secure Your Future.</span>
+              <span className="block">GET ISO 27001 CERTIFIED.</span>
+            </h1>
+            <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
+              We operationalise controls and evidence, not produce shelfware.
+            </p>
+            <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
+              <div className="bg-white p-6 flex items-center text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+                <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
+                  Fixed-scope ISO 27001 readiness, implementation, and Stage 1/2 audit preparation — reuse controls across SOC 2, NIS2, DORA and more.
+                </p>
+              </div>
+              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
+                <div className="space-y-3">
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
+                    Typical implementation: 12–16 weeks · Fixed scope · No hidden fees
+                  </p>
+                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
+                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
+                    Evidence-first model — controls that run in production, not just on paper.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Button
+              onClick={openModal}
+              size="lg"
+              className="group font-semibold transition-all text-white"
+              style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "transparent"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#3B3B39"; }}
+            >
+              Get a Fixed-Price Proposal
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </section>
 
