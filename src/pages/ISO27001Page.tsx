@@ -24,6 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Dialog,
   DialogContent,
@@ -973,86 +974,104 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ PACKAGE ═══ */}
+      {/* ═══ PACKAGE (Tabs) ═══ */}
       <section className="py-16 border-t border-slate-200">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10 text-slate-900">
-            What's included in the fixed-scope project
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-slate-200 p-6 shadow-sm">
-              <h3 className="text-sm font-bold uppercase mb-4 text-slate-900">
-                Included
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  "Clauses and Controls Gap Assessment",
-                  "Scope recommendation + ISMS boundary definition",
-                  "Risk approach + risk treatment plan baseline",
-                  "Statement of Applicability (SoA) creation and tailoring",
-                  "Tailored ISMS documentation set (policies/procedures)",
-                  "Control implementation support",
-                  "Evidence-by-design workflows",
-                  "Audit readiness pack + mock walkthrough",
-                  "Stage 1/Stage 2 preparation + auditor liaison support",
-                ].map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-start gap-2 text-xs text-slate-900"
-                  >
-                    <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-orange-600" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white border border-slate-200 p-6 shadow-sm">
-              <h3 className="text-sm font-bold uppercase mb-4 text-slate-500">
-                Not included but we can help
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  "Certification body services / issuing the certificate",
-                  "Tool licensing costs",
-                  "Technical remediation execution and control operation",
-                  "Pen testing/scanning services (partnered if required)",
-                ].map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-start gap-2 text-xs text-slate-500"
-                  >
-                    <XCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 opacity-40" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <p className="text-xs font-mono mt-4 text-slate-500">
-            Clear boundaries protect timeline and fixed pricing.
-          </p>
-        </div>
-      </section>
-
-      {/* ═══ MAINTENANCE OPTIONAL ═══ */}
-      <section className="py-16 border-t border-slate-200">
-        <div className="container mx-auto px-4">
-          <div className="bg-white border border-slate-200 p-8 max-w-3xl shadow-sm">
-            <h2 className="text-xl font-bold uppercase mb-3 text-slate-900">
-              Optional: ISMS Maintenance & Continuous Compliance
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold uppercase mb-8 text-slate-900">
+              What's included in the fixed-scope project
             </h2>
-            <p className="text-sm mb-4 leading-relaxed text-slate-600">
-              After certification, we can support ISMS operation: internal
-              audits, management review, KPIs, corrective actions, continual
-              improvement, and surveillance readiness.
+
+            <Tabs defaultValue="included" className="w-full">
+              <TabsList className="bg-slate-100 rounded-none p-1 h-auto flex-wrap w-full justify-start">
+                <TabsTrigger
+                  value="included"
+                  className="rounded-none text-xs font-bold uppercase tracking-wide px-5 py-2.5 data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:border-b-2 data-[state=active]:border-orange-600 data-[state=active]:shadow-none"
+                >
+                  Included Deliverables
+                </TabsTrigger>
+                <TabsTrigger
+                  value="not-included"
+                  className="rounded-none text-xs font-bold uppercase tracking-wide px-5 py-2.5 data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:border-b-2 data-[state=active]:border-orange-600 data-[state=active]:shadow-none"
+                >
+                  What You Provide (Not Included)
+                </TabsTrigger>
+                <TabsTrigger
+                  value="maintenance"
+                  className="rounded-none text-xs font-bold uppercase tracking-wide px-5 py-2.5 data-[state=active]:bg-white data-[state=active]:text-orange-600 data-[state=active]:border-b-2 data-[state=active]:border-orange-600 data-[state=active]:shadow-none"
+                >
+                  Optional Maintenance
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="included" className="mt-6">
+                <div className="bg-white border border-slate-200 p-6 shadow-sm">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      "Clauses and Controls Gap Assessment",
+                      "Scope recommendation + ISMS boundary definition",
+                      "Risk approach + risk treatment plan baseline",
+                      "Statement of Applicability (SoA) creation and tailoring",
+                      "Tailored ISMS documentation set (policies/procedures)",
+                      "Control implementation support",
+                      "Evidence-by-design workflows",
+                      "Audit readiness pack + mock walkthrough",
+                      "Stage 1/Stage 2 preparation + auditor liaison support",
+                    ].map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-2 text-sm text-slate-900"
+                      >
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="not-included" className="mt-6">
+                <div className="bg-white border border-slate-200 p-6 shadow-sm">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      "Certification body services / issuing the certificate",
+                      "Tool licensing costs",
+                      "Technical remediation execution and control operation",
+                      "Pen testing/scanning services (partnered if required)",
+                    ].map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-2 text-sm text-slate-500"
+                      >
+                        <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 opacity-40" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="maintenance" className="mt-6">
+                <div className="bg-orange-50 border border-slate-200 p-6 shadow-sm">
+                  <p className="text-sm mb-5 leading-relaxed text-slate-600">
+                    After certification, we can support ISMS operation: internal
+                    audits, management review, KPIs, corrective actions, continual
+                    improvement, and surveillance readiness.
+                  </p>
+                  <Button
+                    onClick={openModal}
+                    className="bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-none"
+                  >
+                    Ask about maintenance support
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </TabsContent>
+            </Tabs>
+
+            <p className="text-xs font-mono mt-4 text-slate-500">
+              Clear boundaries protect timeline and fixed pricing.
             </p>
-            <Button
-              onClick={openModal}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold"
-            >
-              Ask about maintenance support
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
           </div>
         </div>
       </section>
