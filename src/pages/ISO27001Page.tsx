@@ -439,7 +439,7 @@ const ISO27001Page = () => {
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[68vh] flex items-center overflow-hidden">
+      <section className="relative flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={isoHeroImg}
