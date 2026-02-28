@@ -873,6 +873,41 @@ const ISO27001Page = () => {
         </div>
       </section>
 
+      {/* ─── You're in the right place ─── */}
+      <section className="py-16 bg-[#F8F9FA]">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-20 gap-y-8 items-center">
+            <div className="lg:col-span-3">
+              <h3 className="text-2xl md:text-3xl font-bold uppercase mb-10 text-slate-900">
+                You're in the right place if…
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                "ISO 27001 is required for customer assurance or procurement",
+                "You need a clear route to certification without derailing delivery",
+                "You're being asked for multiple frameworks and want reuse",
+                "You want a practical ISMS that operates day-to-day"].
+                map((text, i) =>
+                <div
+                  key={i}
+                  className="p-6 text-sm md:text-base text-slate-700 bg-white border border-slate-200">
+                    {text}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="hidden lg:block lg:col-span-2 h-full relative">
+              <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover opacity-90 border border-slate-200" />
+              <div className="absolute -bottom-8 -left-8 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+                <p className="text-xs font-semibold text-slate-600 leading-relaxed">
+                  We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ SEGMENT 4: WHY 3FACTOR TRUST BAR ═══ */}
       <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
         <div className="container mx-auto px-4 max-w-5xl">
@@ -910,42 +945,6 @@ const ISO27001Page = () => {
             <span className="px-3 py-1 text-xs font-mono text-slate-500">
               + reuse controls across frameworks
             </span>
-          </div>
-
-          {/* ─── You're in the right place ─── */}
-          <div className="mt-16 pt-12 border-t border-slate-600">
-            <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-20 gap-y-8 items-center">
-              <div className="lg:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-bold uppercase mb-10 text-white">
-                  You're in the right place if…
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                  "ISO 27001 is required for customer assurance or procurement",
-                  "You need a clear route to certification without derailing delivery",
-                  "You're being asked for multiple frameworks and want reuse",
-                  "You want a practical ISMS that operates day-to-day"].
-                  map((text, i) =>
-                  <div
-                    key={i}
-                    className="p-6 text-sm md:text-base text-slate-300"
-                    style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
-
-                      {text}
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div className="hidden lg:block lg:col-span-2 h-full relative">
-                <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover opacity-80" style={{ border: "1px solid rgba(255,255,255,0.1)" }} />
-                <div className="absolute -bottom-8 -left-8 p-5 shadow-xl max-w-[280px] z-10"
-                style={{ backgroundColor: "#2a2a28", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <p className="text-xs font-semibold text-slate-300 leading-relaxed">
-                    We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
