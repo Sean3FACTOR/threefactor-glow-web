@@ -612,8 +612,8 @@ const ISO27001Page = () => {
       {/* ═══ YOU'RE IN THE RIGHT PLACE ═══ */}
       <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-20 gap-y-8 items-center">
+            <div className="lg:col-span-3">
               <h2 className="text-3xl md:text-4xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
                 You're in the right place if…
               </h2>
@@ -633,23 +633,8 @@ const ISO27001Page = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-4 mt-6 flex-wrap">
-                {subNavLinks.map((link) =>
-                  <button
-                    key={link.target}
-                    onClick={() => scrollTo(link.target)}
-                    className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
-                      activeNav === link.target
-                        ? "text-orange-600 border-orange-600"
-                        : "text-slate-500 border-transparent hover:text-slate-900"
-                    }`}
-                  >
-                    {link.label}
-                  </button>
-                )}
-              </div>
             </div>
-            <div className="hidden lg:block h-full relative">
+            <div className="hidden lg:block lg:col-span-2 h-full relative">
               <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover" style={{ border: "1px solid rgba(59,59,57,0.1)" }} />
               <div className="absolute -bottom-8 -left-8 bg-white p-5 shadow-xl max-w-[280px] z-10"
                 style={{ border: "1px solid rgba(59,59,57,0.08)" }}>
@@ -658,6 +643,21 @@ const ISO27001Page = () => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center items-center w-full mt-12 gap-8 flex-wrap">
+            {subNavLinks.map((link) =>
+              <button
+                key={link.target}
+                onClick={() => scrollTo(link.target)}
+                className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
+                  activeNav === link.target
+                    ? "text-orange-600 border-orange-600"
+                    : "text-slate-500 border-transparent hover:text-slate-900"
+                }`}
+              >
+                {link.label}
+              </button>
+            )}
           </div>
         </div>
       </section>
