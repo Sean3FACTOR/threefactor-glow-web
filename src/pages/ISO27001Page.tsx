@@ -606,26 +606,8 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ STICKY SUB-NAV ═══ */}
-      <nav className="sticky top-16 z-40 bg-white border-b border-slate-200">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-8 overflow-x-auto py-3">
-            {subNavLinks.map((link) =>
-            <button
-              key={link.target}
-              onClick={() => scrollTo(link.target)}
-              className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
-              activeNav === link.target ?
-              "text-orange-600 border-orange-600" :
-              "text-slate-500 border-transparent hover:text-slate-900"}`
-              }>
 
-                {link.label}
-              </button>
-            )}
-          </div>
-        </div>
-      </nav>
+
 
       {/* ═══ YOU'RE IN THE RIGHT PLACE ═══ */}
       <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
@@ -650,6 +632,21 @@ const ISO27001Page = () => {
                     {text}
                   </div>
                 ))}
+              </div>
+              <div className="flex items-center gap-4 mt-6 flex-wrap">
+                {subNavLinks.map((link) =>
+                  <button
+                    key={link.target}
+                    onClick={() => scrollTo(link.target)}
+                    className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
+                      activeNav === link.target
+                        ? "text-orange-600 border-orange-600"
+                        : "text-slate-500 border-transparent hover:text-slate-900"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                )}
               </div>
             </div>
             <div className="hidden lg:block h-full relative">
