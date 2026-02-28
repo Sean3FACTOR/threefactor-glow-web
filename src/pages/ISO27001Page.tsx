@@ -572,7 +572,7 @@ const ISO27001Page = () => {
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={isoHeroImg}
@@ -586,7 +586,7 @@ const ISO27001Page = () => {
 
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4 py-32">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4 py-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
             GET ISO 27001 CERTIFIED.
           </h1>
