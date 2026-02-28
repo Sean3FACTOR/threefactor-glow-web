@@ -675,7 +675,7 @@ const ISO27001Page = () => {
       {/* ═══ SEGMENT 2: THE ROADMAP ═══ */}
       <section id="roadmap" className="py-24 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[ROADMAP]</span>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
             THE 7-STAGE CERTIFICATION LIFECYCLE
           </h2>
@@ -689,7 +689,7 @@ const ISO27001Page = () => {
       {/* ═══ SEGMENT 3: DELIVERABLES (Vertical Tabs / Accordion) ═══ */}
       <section id="deliverables" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[DELIVERABLES]</span>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
             What we deliver
           </h2>
@@ -836,7 +836,7 @@ const ISO27001Page = () => {
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
       <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-orange-500 block mb-3">[WHY 3FACTOR]</span>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
             Why organisations choose 3FACTOR
           </h2>
@@ -942,7 +942,7 @@ const ISO27001Page = () => {
       {/* ═══ FAQ ═══ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[FAQ]</span>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-10">
             Frequently asked questions
           </h2>
