@@ -641,11 +641,11 @@ const ISO27001Page = () => {
       <section id="approach" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[APPROACH]</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-16">
-            COMMON ISO 27001 PITFALLs
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-16">AVOID THE COMMON ISO 27001 PITFALLS.
 
 
-   
+
+
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
