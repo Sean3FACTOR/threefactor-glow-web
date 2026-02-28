@@ -670,111 +670,6 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
-        <div className="container mx-auto px-4 max-w-6xl">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-orange-500 block mb-3">[WHY 3FACTOR]</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
-            Why organisations choose 3FACTOR
-          </h2>
-
-
-          {/* Stats row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {[
-            { icon: Clock, stat: "12–16 Weeks", label: "Typical delivery timeline for certification readiness" },
-            { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
-            { icon: DollarSign, stat: "Fixed-Price", label: "Clear scope boundaries that protect your budget" },
-            { icon: Microscope, stat: "Evidence-First", label: "Controls produce audit evidence as a byproduct of BAU" }].
-            map((item, i) => {
-              const StatIcon = item.icon;
-              return (
-                <div key={i} className="text-center lg:text-left">
-                  <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
-                  <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.label}</p>
-                </div>);
-            })}
-          </div>
-
-          {/* Problems & Solutions */}
-          <div id="approach" className="pt-12 border-t border-slate-600">
-            <h3 className="text-2xl md:text-3xl font-bold text-white uppercase mb-2">
-              AVOID THE COMMON ISO 27001 PITFALLS
-            </h3>
-            <p className="text-lg text-slate-300 mb-10">
-              Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
-            </p>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                <div>
-                  <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-600 pb-3">
-                    Common failure modes
-                  </h3>
-                  <ul className="space-y-6">
-                    {[{ problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." }, { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." }, { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                    { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
-                    map((item, i) =>
-                    <li key={i}>
-                        <div className="flex items-start gap-3">
-                          <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-500" />
-                          <div>
-                            <p className="text-sm font-semibold text-slate-300">{item.problem}</p>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                          </div>
-                        </div>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
-                    How we solve it
-                  </h3>
-                  <ul className="space-y-6">
-                    {[
-                    { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                    { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                    { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                    { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
-                    map((item, i) =>
-                    <li key={i}>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
-                          <div>
-                            <p className="text-sm font-semibold text-white">{item.fix}</p>
-                            <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
-                          </div>
-                        </div>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="lg:col-span-5">
-                <img
-                  src={workingLaptopImg}
-                  alt="Professional working on compliance framework"
-                  className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
-                  style={{ border: "1px solid rgba(255,255,255,0.1)" }} />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
-            {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
-            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-700 text-slate-400">
-                {fw}
-              </span>
-            )}
-            <span className="px-3 py-1 text-xs font-mono text-slate-500">
-              + reuse controls across frameworks
-            </span>
-          </div>
-        </div>
-      </section>
 
 
       {/* ═══ SEGMENT 2: THE ROADMAP ═══ */}
@@ -938,6 +833,110 @@ const ISO27001Page = () => {
         </div>
       </section>
 
+      {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
+      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-orange-500 block mb-3">[WHY 3FACTOR]</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
+            Why organisations choose 3FACTOR
+          </h2>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+            { icon: Clock, stat: "12–16 Weeks", label: "Typical delivery timeline for certification readiness" },
+            { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
+            { icon: DollarSign, stat: "Fixed-Price", label: "Clear scope boundaries that protect your budget" },
+            { icon: Microscope, stat: "Evidence-First", label: "Controls produce audit evidence as a byproduct of BAU" }].
+            map((item, i) => {
+              const StatIcon = item.icon;
+              return (
+                <div key={i} className="text-center lg:text-left">
+                  <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
+                  <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">{item.label}</p>
+                </div>);
+            })}
+          </div>
+
+          {/* Problems & Solutions */}
+          <div id="approach" className="pt-12 border-t border-slate-600">
+            <h3 className="text-2xl md:text-3xl font-bold text-white uppercase mb-2">
+              AVOID THE COMMON ISO 27001 PITFALLS
+            </h3>
+            <p className="text-lg text-slate-300 mb-10">
+              Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <div>
+                  <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-600 pb-3">
+                    Common failure modes
+                  </h3>
+                  <ul className="space-y-6">
+                    {[{ problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." }, { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." }, { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                    { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
+                    map((item, i) =>
+                    <li key={i}>
+                        <div className="flex items-start gap-3">
+                          <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-500" />
+                          <div>
+                            <p className="text-sm font-semibold text-slate-300">{item.problem}</p>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                          </div>
+                        </div>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                    How we solve it
+                  </h3>
+                  <ul className="space-y-6">
+                    {[
+                    { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                    { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                    { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                    { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
+                    map((item, i) =>
+                    <li key={i}>
+                        <div className="flex items-start gap-3">
+                          <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                          <div>
+                            <p className="text-sm font-semibold text-white">{item.fix}</p>
+                            <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
+                          </div>
+                        </div>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5">
+                <img
+                  src={workingLaptopImg}
+                  alt="Professional working on compliance framework"
+                  className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
+                  style={{ border: "1px solid rgba(255,255,255,0.1)" }} />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
+            {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
+            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-700 text-slate-400">
+                {fw}
+              </span>
+            )}
+            <span className="px-3 py-1 text-xs font-mono text-slate-500">
+              + reuse controls across frameworks
+            </span>
+          </div>
+        </div>
+      </section>
 
 
       {/* ═══ FAQ ═══ */}
