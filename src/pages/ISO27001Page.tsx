@@ -145,110 +145,110 @@ const ProposalModal = ({
 
 /* ─── CSAT Lifecycle Timeline Data ─── */
 const csatStages = [
-  {
-    icon: Target,
-    stage: 1,
-    title: "Business Justification & Sponsorship",
-    duration: "Ongoing",
-    durationWeeks: 4, // proportional weight for bar
-    desc: "Determine business drivers, secure leadership sponsorship, and utilize a self-service justification framework.",
-    details: [
-      "Identify compliance drivers and strategic business objectives",
-      "Secure executive sponsorship and budget approval",
-      "Complete self-service justification framework",
-      "Align certification goals with revenue and partnership targets",
-    ],
-  },
-  {
-    icon: Users,
-    stage: 2,
-    title: "PROGRAM ENGAGEMENT",
-    duration: "1–2 Weeks",
-    durationWeeks: 2,
-    desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
-    details: [
-      "Kick-off meeting with CSAT Program team",
-      "Define engagement scope and boundaries",
-      "Establish communication cadence and stakeholders",
-      "Agree on milestones and success criteria",
-    ],
-  },
-  {
-    icon: Microscope,
-    stage: 3,
-    title: "Gap Assessment",
-    duration: "~6 Weeks",
-    durationWeeks: 6,
-    desc: "Service/product teams complete a control questionnaire to identify existing vs. missing controls.",
-    details: [
-      "Distribute and complete control questionnaire",
-      "Identify existing controls and evidence",
-      "Map gaps against ISO 27001 requirements",
-      "Produce prioritised gap report with remediation plan",
-    ],
-  },
-  {
-    icon: Cog,
-    stage: 4,
-    title: "Control Implementation & Documentation",
-    duration: "3–5 Months",
-    durationWeeks: 16,
-    desc: "Execution phase. Timeline scales based on technical complexity and team bandwidth.",
-    details: [
-      "Implement missing controls and evidence workflows",
-      "Develop ISMS policies, procedures, and documentation",
-      "Build evidence-by-design into operational processes",
-      "Conduct iterative reviews with CSAT team",
-    ],
-  },
-  {
-    icon: ClipboardCheck,
-    stage: 5,
-    title: "Control Validation & Audit Readiness",
-    duration: "~4 Weeks",
-    durationWeeks: 4,
-    desc: "The CSAT team conducts internal validation and readiness checks.",
-    details: [
-      "Internal control testing and validation",
-      "Evidence pack compilation and completeness review",
-      "Mock audit walkthroughs and interview coaching",
-      "Remediate any findings before external audit",
-    ],
-  },
-  {
-    icon: Eye,
-    stage: 6,
-    title: "External Audit",
-    duration: "~2 Months",
-    durationWeeks: 8,
-    desc: "Formal review conducted by an external certification body.",
-    details: [
-      "Stage 1 audit: documentation and design review",
-      "Stage 2 audit: operating effectiveness evaluation",
-      "Auditor liaison and request management",
-      "Close-out support for any non-conformities",
-    ],
-  },
-  {
-    icon: Award,
-    stage: 7,
-    title: "Certification Achieved",
-    duration: "Final Stage",
-    durationWeeks: 2,
-    desc: "Attestation report or formal ISO 27001 certification is issued.",
-    details: [
-      "Receive formal ISO 27001 certification",
-      "Establish surveillance audit schedule",
-      "Transition ISMS to continuous improvement mode",
-      "Leverage certification for sales enablement and trust",
-    ],
-  },
-];
+{
+  icon: Target,
+  stage: 1,
+  title: "Business Justification & Sponsorship",
+  duration: "Ongoing",
+  durationWeeks: 4, // proportional weight for bar
+  desc: "Determine business drivers, secure leadership sponsorship, and utilize a self-service justification framework.",
+  details: [
+  "Identify compliance drivers and strategic business objectives",
+  "Secure executive sponsorship and budget approval",
+  "Complete self-service justification framework",
+  "Align certification goals with revenue and partnership targets"]
+
+},
+{
+  icon: Users,
+  stage: 2,
+  title: "PROGRAM ENGAGEMENT",
+  duration: "1–2 Weeks",
+  durationWeeks: 2,
+  desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
+  details: [
+  "Kick-off meeting with CSAT Program team",
+  "Define engagement scope and boundaries",
+  "Establish communication cadence and stakeholders",
+  "Agree on milestones and success criteria"]
+
+},
+{
+  icon: Microscope,
+  stage: 3,
+  title: "Gap Assessment",
+  duration: "~6 Weeks",
+  durationWeeks: 6,
+  desc: "Service/product teams complete a control questionnaire to identify existing vs. missing controls.",
+  details: [
+  "Distribute and complete control questionnaire",
+  "Identify existing controls and evidence",
+  "Map gaps against ISO 27001 requirements",
+  "Produce prioritised gap report with remediation plan"]
+
+},
+{
+  icon: Cog,
+  stage: 4,
+  title: "Control Implementation & Documentation",
+  duration: "3–5 Months",
+  durationWeeks: 16,
+  desc: "Execution phase. Timeline scales based on technical complexity and team bandwidth.",
+  details: [
+  "Implement missing controls and evidence workflows",
+  "Develop ISMS policies, procedures, and documentation",
+  "Build evidence-by-design into operational processes",
+  "Conduct iterative reviews with CSAT team"]
+
+},
+{
+  icon: ClipboardCheck,
+  stage: 5,
+  title: "Control Validation & Audit Readiness",
+  duration: "~4 Weeks",
+  durationWeeks: 4,
+  desc: "The CSAT team conducts internal validation and readiness checks.",
+  details: [
+  "Internal control testing and validation",
+  "Evidence pack compilation and completeness review",
+  "Mock audit walkthroughs and interview coaching",
+  "Remediate any findings before external audit"]
+
+},
+{
+  icon: Eye,
+  stage: 6,
+  title: "External Audit",
+  duration: "~2 Months",
+  durationWeeks: 8,
+  desc: "Formal review conducted by an external certification body.",
+  details: [
+  "Stage 1 audit: documentation and design review",
+  "Stage 2 audit: operating effectiveness evaluation",
+  "Auditor liaison and request management",
+  "Close-out support for any non-conformities"]
+
+},
+{
+  icon: Award,
+  stage: 7,
+  title: "Certification Achieved",
+  duration: "Final Stage",
+  durationWeeks: 2,
+  desc: "Attestation report or formal ISO 27001 certification is issued.",
+  details: [
+  "Receive formal ISO 27001 certification",
+  "Establish surveillance audit schedule",
+  "Transition ISMS to continuous improvement mode",
+  "Leverage certification for sales enablement and trust"]
+
+}];
+
 
 const totalWeeks = csatStages.reduce((sum, s) => sum + s.durationWeeks, 0);
 
 /* ─── Interactive CSAT Timeline ─── */
-const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
+const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
   const [active, setActive] = useState(0);
   const step = csatStages[active];
   const Icon = step.icon;
@@ -263,10 +263,10 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
           <div
             className="absolute top-6 left-0 h-0.5 transition-all duration-500"
             style={{
-              width: `${(active / (csatStages.length - 1)) * 100}%`,
-              backgroundColor: "#3B3B39",
-            }}
-          />
+              width: `${active / (csatStages.length - 1) * 100}%`,
+              backgroundColor: "#3B3B39"
+            }} />
+
           <div className="relative flex justify-between">
             {csatStages.map((s, i) => {
               const StepIcon = s.icon;
@@ -276,36 +276,36 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className="flex flex-col items-center gap-2 group relative z-10"
-                >
+                  className="flex flex-col items-center gap-2 group relative z-10">
+
                   <div
                     className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
-                      isActive
-                        ? "border-orange-600 bg-orange-50"
-                        : isPast
-                        ? "border-[#3B3B39] bg-white"
-                        : "border-slate-300 bg-white"
-                    }`}
-                  >
+                    isActive ?
+                    "border-orange-600 bg-orange-50" :
+                    isPast ?
+                    "border-[#3B3B39] bg-white" :
+                    "border-slate-300 bg-white"}`
+                    }>
+
                     <StepIcon
                       className={`w-5 h-5 transition-colors duration-300 ${
-                        isActive
-                          ? "text-orange-600"
-                          : isPast
-                          ? "text-[#3B3B39]"
-                          : "text-slate-400"
-                      }`}
-                    />
+                      isActive ?
+                      "text-orange-600" :
+                      isPast ?
+                      "text-[#3B3B39]" :
+                      "text-slate-400"}`
+                      } />
+
                   </div>
                   <span
                     className={`text-[10px] font-mono uppercase tracking-wider max-w-[90px] text-center leading-tight ${
-                      isActive ? "text-orange-600 font-bold" : "text-slate-500"
-                    }`}
-                  >
+                    isActive ? "text-orange-600 font-bold" : "text-slate-500"}`
+                    }>
+
                     {s.title}
                   </span>
-                </button>
-              );
+                </button>);
+
             })}
           </div>
         </div>
@@ -313,26 +313,26 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
         {/* Proportional duration bar */}
         <div className="flex gap-px mb-8">
           {csatStages.map((s, i) => {
-            const widthPct = (s.durationWeeks / totalWeeks) * 100;
+            const widthPct = s.durationWeeks / totalWeeks * 100;
             return (
               <div key={i} style={{ width: `${widthPct}%` }}>
                 <div
                   className={`h-2 transition-colors duration-300 ${
-                    i <= active ? "bg-orange-600" : "bg-slate-100"
-                  }`}
-                />
+                  i <= active ? "bg-orange-600" : "bg-slate-100"}`
+                  } />
+
                 <span className="text-[9px] font-mono text-slate-500 mt-1 block truncate">
                   {s.duration}
                 </span>
-              </div>
-            );
+              </div>);
+
           })}
         </div>
 
         {/* Detail pane */}
         <div
-          className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300"
-        >
+          className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
               <div className="flex items-start gap-4 mb-4">
@@ -352,21 +352,21 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
                 {step.desc}
               </p>
               <ul className="space-y-2 mb-6">
-                {step.details.map((d) => (
-                  <li
-                    key={d}
-                    className="flex items-start gap-2 text-sm text-slate-900"
-                  >
+                {step.details.map((d) =>
+                <li
+                  key={d}
+                  className="flex items-start gap-2 text-sm text-slate-900">
+
                     <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                     {d}
                   </li>
-                ))}
+                )}
               </ul>
               <Button
                 onClick={openModal}
                 className="text-white font-semibold"
-                style={{ backgroundColor: "#3B3B39" }}
-              >
+                style={{ backgroundColor: "#3B3B39" }}>
+
                 Get a Fixed-Price Proposal
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -375,8 +375,8 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
               <img
                 src={hexagonGraphic}
                 alt=""
-                className="w-full h-auto max-h-[336px] object-contain opacity-80"
-              />
+                className="w-full h-auto max-h-[336px] object-contain opacity-80" />
+
             </div>
           </div>
         </div>
@@ -409,33 +409,33 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
                     {s.desc}
                   </p>
                   <ul className="space-y-2 mb-4">
-                    {s.details.map((d) => (
-                      <li
-                        key={d}
-                        className="flex items-start gap-2 text-sm text-slate-900"
-                      >
+                    {s.details.map((d) =>
+                    <li
+                      key={d}
+                      className="flex items-start gap-2 text-sm text-slate-900">
+
                         <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                         {d}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   <Button
                     onClick={openModal}
                     size="sm"
                     className="text-white font-semibold"
-                    style={{ backgroundColor: "#3B3B39" }}
-                  >
+                    style={{ backgroundColor: "#3B3B39" }}>
+
                     Get a Proposal
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </AccordionContent>
-              </AccordionItem>
-            );
+              </AccordionItem>);
+
           })}
         </Accordion>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 /* ─── Vertical Tabs Data ─── */
@@ -622,15 +622,15 @@ const ISO27001Page = () => {
                     key={link.target}
                     onClick={() => scrollTo(link.target)}
                     className={`w-full sm:w-auto bg-white border px-6 py-3 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
-                      activeNav === link.target
-                        ? "text-orange-600 border-orange-400"
-                        : "text-slate-700 border-slate-200 hover:text-orange-600 hover:border-orange-300"
-                    }`}
-                  >
+                    activeNav === link.target ?
+                    "text-orange-600 border-orange-400" :
+                    "text-slate-700 border-slate-200 hover:text-orange-600 hover:border-orange-300"}`
+                    }>
+
                     <Icon className="w-5 h-5" />
                     {link.label}
-                  </button>
-                );
+                  </button>);
+
               })}
             </div>
           </div>
@@ -642,7 +642,10 @@ const ISO27001Page = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[APPROACH]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-16">
-            WHY ISO PROJECTS STALL AND HOW WE FIX IT
+            COMMON ISO 27001 PITFALLs
+
+
+   
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -654,13 +657,10 @@ const ISO27001Page = () => {
                   Common failure modes
                 </h3>
                 <ul className="space-y-6">
-                  {[
-                    { problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." },
-                    { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." },
-                    { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                    { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." },
-                  ].map((item, i) => (
-                    <li key={i}>
+                  {[{ problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." }, { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." }, { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
+                  map((item, i) =>
+                  <li key={i}>
                       <div className="flex items-start gap-3">
                         <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
                         <div>
@@ -669,7 +669,7 @@ const ISO27001Page = () => {
                         </div>
                       </div>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
 
@@ -680,12 +680,12 @@ const ISO27001Page = () => {
                 </h3>
                 <ul className="space-y-6">
                   {[
-                    { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                    { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                    { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                    { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." },
-                  ].map((item, i) => (
-                    <li key={i}>
+                  { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                  { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                  { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
+                  map((item, i) =>
+                  <li key={i}>
                       <div className="flex items-start gap-3">
                         <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
                         <div>
@@ -694,7 +694,7 @@ const ISO27001Page = () => {
                         </div>
                       </div>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
             </div>
@@ -704,8 +704,8 @@ const ISO27001Page = () => {
               <img
                 src={workingLaptopImg}
                 alt="Professional working on compliance framework"
-                className="w-full h-full object-cover rounded-lg shadow-md min-h-[350px]"
-              />
+                className="w-full h-full object-cover rounded-lg shadow-md min-h-[350px]" />
+
             </div>
           </div>
         </div>
@@ -918,25 +918,25 @@ const ISO27001Page = () => {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    "ISO 27001 is required for customer assurance or procurement",
-                    "You need a clear route to certification without derailing delivery",
-                    "You're being asked for multiple frameworks and want reuse",
-                    "You want a practical ISMS that operates day-to-day",
-                  ].map((text, i) => (
-                    <div
-                      key={i}
-                      className="p-6 text-sm md:text-base text-slate-300"
-                      style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}
-                    >
+                  "ISO 27001 is required for customer assurance or procurement",
+                  "You need a clear route to certification without derailing delivery",
+                  "You're being asked for multiple frameworks and want reuse",
+                  "You want a practical ISMS that operates day-to-day"].
+                  map((text, i) =>
+                  <div
+                    key={i}
+                    className="p-6 text-sm md:text-base text-slate-300"
+                    style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
+
                       {text}
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
               <div className="hidden lg:block lg:col-span-2 h-full relative">
                 <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover opacity-80" style={{ border: "1px solid rgba(255,255,255,0.1)" }} />
                 <div className="absolute -bottom-8 -left-8 p-5 shadow-xl max-w-[280px] z-10"
-                  style={{ backgroundColor: "#2a2a28", border: "1px solid rgba(255,255,255,0.1)" }}>
+                style={{ backgroundColor: "#2a2a28", border: "1px solid rgba(255,255,255,0.1)" }}>
                   <p className="text-xs font-semibold text-slate-300 leading-relaxed">
                     We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
                   </p>
