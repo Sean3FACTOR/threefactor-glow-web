@@ -18,7 +18,10 @@ import {
   Clock,
   Award,
   DollarSign,
-  Microscope } from
+  Microscope,
+  Compass,
+  Route,
+  ShieldCheck } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -516,10 +519,10 @@ const deliverableTabs = [
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
-{ label: "The Approach", target: "approach" },
-{ label: "The Roadmap", target: "roadmap" },
-{ label: "Deliverables", target: "deliverables" },
-{ label: "Why 3FACTOR", target: "why-3factor" }];
+{ label: "The Approach", target: "approach", icon: Compass },
+{ label: "The Roadmap", target: "roadmap", icon: Route },
+{ label: "Deliverables", target: "deliverables", icon: FileCheck },
+{ label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck }];
 
 
 /* ─── Page ─── */
@@ -642,20 +645,26 @@ const ISO27001Page = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center w-full mt-12 gap-8 flex-wrap">
-            {subNavLinks.map((link) =>
-              <button
-                key={link.target}
-                onClick={() => scrollTo(link.target)}
-                className={`text-sm font-medium whitespace-nowrap transition-colors pb-1 border-b-2 ${
-                  activeNav === link.target
-                    ? "text-orange-600 border-orange-600"
-                    : "text-slate-500 border-transparent hover:text-slate-900"
-                }`}
-              >
-                {link.label}
-              </button>
-            )}
+          <div className="border-t border-b border-slate-200 py-8 mt-12">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              {subNavLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <button
+                    key={link.target}
+                    onClick={() => scrollTo(link.target)}
+                    className={`w-full sm:w-auto bg-white border px-6 py-3 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
+                      activeNav === link.target
+                        ? "text-orange-600 border-orange-400"
+                        : "text-slate-700 border-slate-200 hover:text-orange-600 hover:border-orange-300"
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    {link.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
