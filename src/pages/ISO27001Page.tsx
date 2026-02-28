@@ -677,9 +677,7 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
             Why organisations choose 3FACTOR
           </h2>
-          <p className="text-lg text-slate-300 mb-12">
-            Avoid the common ISO 27001 pitfalls. Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
-          </p>
+
 
           {/* Stats row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -701,6 +699,12 @@ const ISO27001Page = () => {
 
           {/* Problems & Solutions */}
           <div id="approach" className="pt-12 border-t border-slate-600">
+            <h3 className="text-2xl md:text-3xl font-bold text-white uppercase mb-2">
+              AVOID THE COMMON ISO 27001 PITFALLS
+            </h3>
+            <p className="text-lg text-slate-300 mb-10">
+              Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
+            </p>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                 <div>
