@@ -162,7 +162,7 @@ const csatStages = [
   {
     icon: Users,
     stage: 2,
-    title: "CSAT Program Engagement",
+    title: "PROGRAM ENGAGEMENT",
     duration: "1–2 Weeks",
     durationWeeks: 2,
     desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
@@ -749,7 +749,7 @@ const ISO27001Page = () => {
         <div className="container mx-auto px-4">
           <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 block mb-3">[ROADMAP]</span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
-            The 7-Stage CSAT Certification Lifecycle
+            THE 7-STAGE CERTIFICATION LIFECYCLE
           </h2>
           <p className="text-sm text-slate-600 mb-12 max-w-2xl">
             Click each stage to explore the details. Typical end-to-end timeline: 8–10+ months.
