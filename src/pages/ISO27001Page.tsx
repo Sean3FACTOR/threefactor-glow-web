@@ -586,7 +586,7 @@ const ISO27001Page = () => {
 
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full h-full px-4 py-16">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full min-h-[320px] px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
             GET ISO 27001 CERTIFIED.
           </h1>
