@@ -877,9 +877,12 @@ const ISO27001Page = () => {
       <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
         <div className="container mx-auto px-4 max-w-5xl">
           <span className="font-mono text-[10px] uppercase tracking-widest text-orange-500 block mb-3">[WHY 3FACTOR]</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
             Why organisations choose 3FACTOR
           </h2>
+          <p className="text-lg text-slate-300 mb-12">
+            Avoid the common ISO 27001 pitfalls. Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
