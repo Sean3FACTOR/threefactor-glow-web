@@ -588,27 +588,9 @@ const ISO27001Page = () => {
 
         <div className="container mx-auto px-4 relative z-10 py-20 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight uppercase leading-[1.1] text-white">
-              <span className="block">Secure Your Future.</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight uppercase leading-[1.1] text-white">
               <span className="block">GET ISO 27001 CERTIFIED.</span>
             </h1>
-            <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
-              One Integrated Program, Scaled For Every Standard.
-            </p>
-            <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
-              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <ul className="space-y-2 list-disc pl-5" style={{ color: "#3B3B39" }}>
-                  <li className="text-base md:text-lg">Fixed-scope ISO 27001 readiness, implementation, and Stage 1-2 audit preparation.</li>
-                  <li className="text-base md:text-lg">Reuse controls across SOC 2, NIS2, DORA and more.</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <ul className="space-y-2 list-disc pl-5" style={{ color: "#3B3B39" }}>
-                  <li className="text-base md:text-lg">Typical implementation: 12–16 weeks.</li>
-                  <li className="text-base md:text-lg">Fixed scope. No hidden fees.</li>
-                </ul>
-              </div>
-            </div>
             <Button
               onClick={openModal}
               size="lg"
