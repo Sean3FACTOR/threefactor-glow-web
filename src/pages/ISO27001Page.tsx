@@ -572,7 +572,7 @@ const ISO27001Page = () => {
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative flex items-center overflow-hidden">
+      <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={isoHeroImg}
@@ -586,23 +586,21 @@ const ISO27001Page = () => {
 
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 py-20 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight uppercase leading-[1.1] text-white">
-              <span className="block">GET ISO 27001 CERTIFIED.</span>
-            </h1>
-            <Button
-              onClick={openModal}
-              size="lg"
-              className="group font-semibold transition-all text-white"
-              style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
-              onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "transparent";}}
-              onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = "#3B3B39";}}>
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4 py-32">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
+            GET ISO 27001 CERTIFIED.
+          </h1>
+          <Button
+            onClick={openModal}
+            size="lg"
+            className="group font-semibold transition-all text-white mt-8 mx-auto"
+            style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
+            onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "transparent";}}
+            onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = "#3B3B39";}}>
 
-              Get a Fixed-Price Proposal
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </div>
+            Get a Fixed-Price Proposal
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
       </section>
 
