@@ -543,7 +543,7 @@ const PCIDSSPage = () => {
                   PCI DSS is the global security standard for protecting cardholder data. Compliance is required for any organization storing, processing, or transmitting payment card data.
                 </p>
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
-                  Scope definition and reduction are the primary drivers of cost and complexity—more than any individual PCI DSS requirement. Reducing scope first dramatically simplifies the path to compliance.
+                  Scope definition and reduction are the primary drivers of cost and complexity, more than any individual PCI DSS requirement. Reducing scope first dramatically simplifies the path to compliance.
                 </p>
               </div>
             </div>
