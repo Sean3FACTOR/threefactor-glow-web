@@ -115,7 +115,7 @@ const ProposalModal = ({
             </Label>
             <select name="environmentType" required className={selectClasses}>
               <option value="">Select…</option>
-              {["eCommerce", "Card-present (POS)", "SaaS / Service Provider", "Mixed"].map(
+              {["Card-present", "Card-not-present", "Service Provider", "Mixed"].map(
                 (o) => (
                   <option key={o} value={o}>
                     {o}
