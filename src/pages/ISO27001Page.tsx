@@ -724,7 +724,7 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
             THE 3FACTOR APPROACH
           </h2>
-          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc list-inside">
+          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc pl-5">
             <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
             <li>At 3Factor, we have a tried and tested approach to streamline your journey — providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
             <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
