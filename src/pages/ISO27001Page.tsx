@@ -530,6 +530,8 @@ const subNavLinks = [
 const ISO27001Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("");
+  const [col1Open, setCol1Open] = useState(true);
+  const [col2Open, setCol2Open] = useState(true);
 
   useEffect(() => {
     document.title = "ISO 27001 Implementation & Readiness | 3FACTOR";
