@@ -990,6 +990,8 @@ const ISO27001Page = () => {
         </div>
       </section>
 
+      <SmartServiceSearch />
+
       <Footer />
     </div>);
 };
