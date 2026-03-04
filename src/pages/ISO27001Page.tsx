@@ -724,8 +724,8 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
             THE 7-STAGE CERTIFICATION LIFECYCLE
           </h2>
-          <p className="text-sm text-slate-600 mb-12 max-w-2xl">
-            Click each stage to explore the details. Typical end-to-end timeline: 8–10+ months.
+          <p className="text-lg text-slate-600 mb-12 max-w-3xl leading-relaxed text-center mx-auto">
+            Achieving ISO 27001 doesn't have to derail your delivery. At 3Factor, we have a tried and tested approach to streamline your journey. We provide a predictable, step-by-step pathway that minimizes disruption to your daily operations, introducing our 7-Stage Certification Process. Explore the timeline below to see how we guide you from day one to final certification.
           </p>
           <InteractiveTimeline openModal={openModal} />
         </div>
