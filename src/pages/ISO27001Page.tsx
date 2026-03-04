@@ -723,7 +723,7 @@ const ISO27001Page = () => {
           
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
-              THE 3FACTOR APPROACH
+              THE 3<span className="text-[#F36F21]">FACTOR</span> APPROACH
             </h2>
             <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left">
               <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
