@@ -909,16 +909,16 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+      <section id="why-3factor" className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Problems & Solutions */}
-          <div id="approach" className="pt-12 border-t border-slate-300">
+          <div id="approach">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-2">
-              AVOID THE COMMON ISO 27001 PITFALLS
+              HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
             </h3>
             <p className="text-lg text-slate-600 mb-10">
-              Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
+              Our tried and tested approach ensures your certification journey stays on track while avoiding these frequent industry traps.
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
