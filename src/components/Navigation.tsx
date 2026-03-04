@@ -27,7 +27,7 @@ import Logo from "@/assets/3factor-grey-logo.png";
 /* ── Search data ── */
 const searchServices = [
   { name: "ISO 27001", path: "/services/iso-27001", keywords: ["iso", "27001", "isms", "information security", "management system", "certification"], icon: Shield, description: "Information security management system certification & readiness" },
-  { name: "PCI DSS", path: "/services/strategy-risk", keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data"], icon: CreditCard, description: "Payment card industry data security standard compliance" },
+  { name: "PCI DSS", path: "/services/pci-dss", keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data"], icon: CreditCard, description: "Payment card industry data security standard compliance" },
   { name: "SOC 2", path: "/services/soc-2", keywords: ["soc", "soc2", "service org", "audit", "trust", "aicpa", "type 1", "type 2", "type ii"], icon: FileCheck, description: "Service organisation control reporting & trust assurance" },
   { name: "CCF (Common Control Framework)", path: "/services/strategy-risk", keywords: ["ccf", "common control", "framework", "integrated", "unified", "mapping", "reuse"], icon: Layers, description: "Unified control framework to reduce duplication across standards" },
   { name: "Cyber Essentials", path: "/services/cyber-essentials", keywords: ["cyber essentials", "ce", "ce+", "plus", "ncsc", "baseline", "basic"], icon: ShieldCheck, description: "UK government-backed baseline cyber security certification" },
@@ -42,6 +42,7 @@ const megaColumns = [
         items: [
           { name: "ISO 27001", href: "/services/iso-27001" },
           { name: "SOC 2", href: "/services/soc-2" },
+          { name: "PCI DSS", href: "/services/pci-dss" },
         ],
       },
     ],
