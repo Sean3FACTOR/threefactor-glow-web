@@ -521,7 +521,7 @@ const deliverableTabs = [
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
 { label: "The Approach", target: "approach", icon: Compass },
-{ label: "The Roadmap", target: "roadmap", icon: Route },
+
 { label: "Deliverables", target: "deliverables", icon: FileCheck },
 { label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck }];
 
