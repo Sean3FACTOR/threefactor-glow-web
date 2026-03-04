@@ -14,6 +14,7 @@ import CyberDefenseServicesPage from "./pages/CyberDefenseServicesPage";
 import VCISOPage from "./pages/VCISOPage";
 import CyberEssentialsPage from "./pages/CyberEssentialsPage";
 import ISO27001Page from "./pages/ISO27001Page";
+import PCIDSSPage from "./pages/PCIDSSPage";
 import SOC2Page from "./pages/SOC2Page";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services/vciso" element={<VCISOPage />} />
           <Route path="/services/cyber-essentials" element={<CyberEssentialsPage />} />
           <Route path="/services/iso-27001" element={<ISO27001Page />} />
+          <Route path="/services/pci-dss" element={<PCIDSSPage />} />
           <Route path="/services/soc-2" element={<SOC2Page />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
