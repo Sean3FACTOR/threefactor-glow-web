@@ -612,9 +612,9 @@ const ISO27001Page = () => {
 
 
       {/* ─── You're in the right place ─── */}
-      <section className="py-20 bg-[#F8F9FA]">
+      <section className="py-16 bg-[#F8F9FA]">
         <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is ISO 27001? */}
             <div className="px-6 lg:px-8">
               {/* Mobile: accordion toggle */}
@@ -718,18 +718,17 @@ const ISO27001Page = () => {
 
 
       {/* ═══ SEGMENT 2: THE ROADMAP ═══ */}
-      <section id="roadmap" className="py-20 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-6">
-              THE 3FACTOR APPROACH
-            </h2>
-            <ul className="text-base text-slate-600 leading-relaxed space-y-3 list-disc list-outside pl-5 max-w-3xl mx-auto text-left">
-              <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
-              <li>At 3Factor, we have a tried and tested approach to streamline your journey — providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
-              <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
-            </ul>
-          </div>
+      <section id="roadmap" className="py-24 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4">
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
+            THE 3FACTOR APPROACH
+          </h2>
+          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc list-inside">
+            <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
+            <li>At 3FACTOR, we have a tried and tested approach to streamline your journey, providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
+            <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
+          </ul>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
             The 7-Stage Certification Process
           </h3>
@@ -740,12 +739,13 @@ const ISO27001Page = () => {
       {/* ═══ SEGMENT 3: DELIVERABLES (Vertical Tabs / Accordion) ═══ */}
       <section id="deliverables" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-4">
-              What we deliver
-            </h2>
-            <p className="text-sm text-slate-600 max-w-3xl mx-auto">The 3FACTOR delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.</p>
-          </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
+            What we deliver
+          </h2>
+          <p className="text-sm text-slate-600 mb-12 max-w-2xl">The 3FACTOR delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.
+
+          </p>
 
           {/* Desktop: Vertical Tabs */}
           <div className="hidden lg:block">
@@ -881,9 +881,9 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ STATS BANNER ═══ */}
-      <section className="py-12" style={{ backgroundColor: "#5A5A58" }}>
+      <section className="py-10" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-6">
             Why organisations choose 3FACTOR
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -906,15 +906,15 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
+      <section id="why-3factor" className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Problems & Solutions */}
           <div id="approach">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-4">
+            <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
               HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
-            </h2>
-            <p className="text-sm text-slate-600 mb-12 max-w-3xl">
+            </h3>
+            <p className="text-lg text-slate-600 mb-10">
               Our tried and tested approach ensures your certification journey stays on track while avoiding these frequent industry traps.
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -975,11 +975,7 @@ const ISO27001Page = () => {
             </div>
           </div>
 
-          <p className="mt-12 text-sm text-slate-500 max-w-2xl">
-            Our 'Evidence-First' approach makes your ISO controls plug-and-play. Effortlessly reuse them across these frameworks to stay ahead of changing customer requirements and new regulations like NIS2 and DORA.
-          </p>
-
-          <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
+          <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
             {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
             <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-300 text-slate-500">
                 {fw}
@@ -997,7 +993,7 @@ const ISO27001Page = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-10">
             Frequently asked questions
           </h2>
           <Accordion type="single" collapsible className="w-full">
@@ -1022,9 +1018,9 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ FINAL CTA ═══ */}
-      <section className="py-20 bg-white border-t border-slate-200">
+      <section className="py-24 bg-white border-t border-slate-200">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4 text-slate-900">
             Ready to start?
           </h2>
           <p className="text-sm text-slate-600 mb-8 max-w-xl mx-auto">
