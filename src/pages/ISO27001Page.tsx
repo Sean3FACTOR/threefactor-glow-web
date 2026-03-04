@@ -636,7 +636,7 @@ const ISO27001Page = () => {
 
 
       {/* ═══ SUB-NAV BUTTON BAR ═══ */}
-      <section className="py-6 px-6" style={{ backgroundColor: "#5A5A58" }}>
+      <section className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto max-w-6xl">
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {subNavLinks.map((link) => {const LinkIcon = link.icon;return (
@@ -645,8 +645,8 @@ const ISO27001Page = () => {
                   onClick={() => scrollTo(link.target)}
                   className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
                   activeNav === link.target ?
-                  "text-orange-400 border-orange-400 bg-white/10" :
-                  "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`}>
+                  "text-orange-600 border-orange-500 bg-[#5A5A58] text-white" :
+                  "text-white border-[#5A5A58] bg-[#5A5A58] hover:text-orange-400 hover:border-orange-400/50"}`}>
                     <LinkIcon className="w-5 h-5" />
                     {link.label}
                   </button>);
