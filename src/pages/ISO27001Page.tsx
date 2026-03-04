@@ -712,7 +712,6 @@ const ISO27001Page = () => {
 
               })}
             </div>
-          </div>
         </div>
       </section>
 
