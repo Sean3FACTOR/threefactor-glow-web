@@ -980,15 +980,20 @@ const ISO27001Page = () => {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
-            {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
-            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-300 text-slate-500">
-                {fw}
+          <div className="mt-12">
+            <p className="text-sm text-slate-500 mb-3 text-center lg:text-left">
+              Our 'Evidence-First' approach makes your ISO controls plug-and-play. Effortlessly reuse them across these frameworks to stay ahead of changing customer requirements and new regulations like NIS2 and DORA.
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
+              <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-300 text-slate-500">
+                  {fw}
+                </span>
+              )}
+              <span className="px-3 py-1 text-xs font-mono text-slate-400">
+                + reuse controls across frameworks
               </span>
-            )}
-            <span className="px-3 py-1 text-xs font-mono text-slate-400">
-              + reuse controls across frameworks
-            </span>
+            </div>
           </div>
         </div>
       </section>
