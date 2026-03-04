@@ -617,9 +617,10 @@ const ISO27001Page = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is ISO 27001? */}
             <div className="px-6 lg:px-8">
+              {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol1Open(!col1Open)}
-                className="flex items-center justify-between w-full text-left mb-4 cursor-pointer group"
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
               >
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   WHAT IS ISO 27001?
@@ -628,8 +629,13 @@ const ISO27001Page = () => {
                   className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? 'rotate-180' : ''}`}
                 />
               </button>
+              {/* Desktop: static heading */}
+              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
+                WHAT IS ISO 27001?
+              </h3>
+              {/* Mobile: collapsible / Desktop: always visible */}
               <div
-                className={`overflow-hidden transition-all duration-300 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
@@ -641,9 +647,10 @@ const ISO27001Page = () => {
 
             {/* Column 2: You're in the right place if... */}
             <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
+              {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol2Open(!col2Open)}
-                className="flex items-center justify-between w-full text-left mb-4 cursor-pointer group"
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
               >
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   You're in the right place if…
@@ -652,8 +659,13 @@ const ISO27001Page = () => {
                   className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col2Open ? 'rotate-180' : ''}`}
                 />
               </button>
+              {/* Desktop: static heading */}
+              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
+                You're in the right place if…
+              </h3>
+              {/* Mobile: collapsible / Desktop: always visible */}
               <div
-                className={`overflow-hidden transition-all duration-300 ${col2Open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col2Open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="flex flex-col gap-3">
                   {["ISO 27001 is required for customer assurance or procurement",
