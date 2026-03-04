@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SmartServiceSearch from "@/components/SmartServiceSearch";
 import {
   ArrowRight,
   CheckCircle2,
