@@ -611,10 +611,10 @@ const ISO27001Page = () => {
       {/* ─── You're in the right place ─── */}
       <section className="py-16 bg-[#F8F9FA]">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is ISO 27001? */}
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-4">
+            <div className="px-6 lg:pr-8">
+              <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-800 mb-4">
                 WHAT IS ISO 27001?
               </h3>
               <p className="text-sm md:text-base text-slate-700 leading-relaxed">
@@ -623,8 +623,8 @@ const ISO27001Page = () => {
             </div>
 
             {/* Column 2: You're in the right place if... */}
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-4">
+            <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
+              <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-800 mb-4">
                 You're in the right place if…
               </h3>
               <div className="flex flex-col gap-3">
@@ -642,7 +642,7 @@ const ISO27001Page = () => {
             </div>
 
             {/* Column 3: Image & Disclaimer */}
-            <div className="relative pb-8">
+            <div className="relative pb-8 px-6 lg:pl-8 pt-8 lg:pt-0">
               <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 -left-4 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">"We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."</p>
