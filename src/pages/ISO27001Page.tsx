@@ -561,9 +561,6 @@ const ISO27001Page = () => {
             Get a Fixed-Price Proposal
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <p className="mt-6 text-xs text-white/50 font-medium tracking-wide">
-            Marcus Atkins — Director of Compliance Services
-          </p>
         </div>
       </section>
 
