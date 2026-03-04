@@ -683,9 +683,9 @@ const ISO27001Page = () => {
 
 
       {/* ═══ SUB-NAV BUTTON BAR ═══ */}
-      <section className="py-8" style={{ backgroundColor: "#3B3B39" }}>
+      <section className="py-8" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="border-t border-b border-white/10 py-8">
+          <div className="py-6 px-6" style={{ backgroundColor: "#3B3B39" }}>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {subNavLinks.map((link) => {const Icon = link.icon;return (
                   <button
