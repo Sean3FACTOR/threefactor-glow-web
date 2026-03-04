@@ -666,7 +666,7 @@ const PCIDSSPage = () => {
               WHAT WE DELIVER
             </h2>
             <p className="text-sm text-slate-600 max-w-2xl mx-auto">
-              PCI DSS as an operating model—not a seasonal scramble. We operationalize scope management, evidence collection, and control validation as part of business-as-usual.
+              PCI DSS as an operating model, not a seasonal scramble. We operationalize scope management, evidence collection, and control validation as part of business-as-usual.
             </p>
           </div>
 
