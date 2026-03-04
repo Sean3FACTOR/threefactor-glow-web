@@ -520,8 +520,7 @@ const deliverableTabs = [
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
-{ label: "The Approach", target: "approach", icon: Compass },
-
+{ label: "The Approach", target: "roadmap", icon: Compass },
 { label: "Deliverables", target: "deliverables", icon: FileCheck },
 { label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck }];
 
@@ -884,7 +883,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ STATS BANNER ═══ */}
-      <section className="py-10" style={{ backgroundColor: "#5A5A58" }}>
+      <section id="why-3factor" className="py-10" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-6">
             Why organisations choose 3FACTOR
@@ -909,7 +908,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
+      <section className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Problems & Solutions */}
