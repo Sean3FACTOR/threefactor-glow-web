@@ -569,7 +569,7 @@ const PCIDSSPage = () => {
                     "You're an eCommerce merchant, SaaS platform, or service provider handling payments",
                     "Your PCI scope feels larger than it should be",
                     "You're unsure whether SAQ or ROC is the right path",
-                    "You want a practical, sustainable PCI program—not a one-year project",
+                    "You want a practical, sustainable PCI program, not a one-year project",
                   ].map((text, i) => (
                     <div key={i} className="p-5 text-sm text-slate-700 bg-slate-50 border border-slate-200 shadow-sm">
                       {text}
