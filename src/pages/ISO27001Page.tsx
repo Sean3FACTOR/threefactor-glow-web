@@ -596,10 +596,13 @@ const ISO27001Page = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
             GET ISO 27001 CERTIFIED.
           </h1>
+          <p className="mt-4 text-xl md:text-2xl font-medium text-white/85 max-w-2xl mx-auto">
+            Build a scalable, audit-ready foundation with the only 3FACTOR approach to ISO 27001.
+          </p>
           <Button
             onClick={openModal}
             size="lg"
-            className="group font-semibold transition-all text-white mt-8 mx-auto"
+            className="group font-semibold transition-all text-white mt-10 mx-auto"
             style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
             onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "transparent";}}
             onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = "#3B3B39";}}>
