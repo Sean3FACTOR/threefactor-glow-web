@@ -642,8 +642,6 @@ const ISO27001Page = () => {
               </div>
             </div>
 
-            {/* Vertical divider 1 */}
-            <div className="hidden lg:block absolute left-1/3 top-0 bottom-0 w-px bg-slate-200" />
 
             {/* Column 2: You're in the right place if... */}
             <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
