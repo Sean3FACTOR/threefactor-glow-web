@@ -877,9 +877,6 @@ const ISO27001Page = () => {
             </Accordion>
           </div>
 
-          <p className="text-xs font-mono mt-6 text-slate-400">
-            We are not a certification body. We prepare you for certification and support you through the journey with your chosen auditor.
-          </p>
         </div>
       </section>
 
