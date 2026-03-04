@@ -52,9 +52,6 @@ import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 const ProposalModal = ({
   open,
   onOpenChange
-
-
-
 }: {open: boolean;onOpenChange: (v: boolean) => void;}) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
@@ -141,7 +138,6 @@ const ProposalModal = ({
         </form>
       </DialogContent>
     </Dialog>);
-
 };
 
 /* ─── CSAT Lifecycle Timeline Data ─── */
@@ -151,14 +147,13 @@ const csatStages = [
   stage: 1,
   title: "Business Justification & Sponsorship",
   duration: "Ongoing",
-  durationWeeks: 4, // proportional weight for bar
+  durationWeeks: 4,
   desc: "Determine business drivers, secure leadership sponsorship, and utilize a self-service justification framework.",
   details: [
   "Identify compliance drivers and strategic business objectives",
   "Secure executive sponsorship and budget approval",
   "Complete self-service justification framework",
   "Align certification goals with revenue and partnership targets"]
-
 },
 {
   icon: Users,
@@ -172,7 +167,6 @@ const csatStages = [
   "Define engagement scope and boundaries",
   "Establish communication cadence and stakeholders",
   "Agree on milestones and success criteria"]
-
 },
 {
   icon: Microscope,
@@ -186,7 +180,6 @@ const csatStages = [
   "Identify existing controls and evidence",
   "Map gaps against ISO 27001 requirements",
   "Produce prioritised gap report with remediation plan"]
-
 },
 {
   icon: Cog,
@@ -200,7 +193,6 @@ const csatStages = [
   "Develop ISMS policies, procedures, and documentation",
   "Build evidence-by-design into operational processes",
   "Conduct iterative reviews with 3FACTOR team"]
-
 },
 {
   icon: ClipboardCheck,
@@ -214,7 +206,6 @@ const csatStages = [
   "Evidence pack compilation and completeness review",
   "Mock audit walkthroughs and interview coaching",
   "Remediate any findings before external audit"]
-
 },
 {
   icon: Eye,
@@ -228,7 +219,6 @@ const csatStages = [
   "Stage 2 audit: operating effectiveness evaluation",
   "Auditor liaison and request management",
   "Close-out support for any non-conformities"]
-
 },
 {
   icon: Award,
@@ -242,9 +232,7 @@ const csatStages = [
   "Establish surveillance audit schedule",
   "Transition ISMS to continuous improvement mode",
   "Leverage certification for sales enablement and trust"]
-
 }];
-
 
 const totalWeeks = csatStages.reduce((sum, s) => sum + s.durationWeeks, 0);
 
@@ -267,7 +255,6 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
               width: `${active / (csatStages.length - 1) * 100}%`,
               backgroundColor: "#3B3B39"
             }} />
-
           <div className="relative flex justify-between">
             {csatStages.map((s, i) => {
               const StepIcon = s.icon;
@@ -278,35 +265,27 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                   key={i}
                   onClick={() => setActive(i)}
                   className="flex flex-col items-center gap-2 group relative z-10">
-
                   <div
                     className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
                     isActive ?
                     "border-orange-600 bg-orange-50" :
                     isPast ?
                     "border-[#3B3B39] bg-white" :
-                    "border-slate-300 bg-white"}`
-                    }>
-
+                    "border-slate-300 bg-white"}`}>
                     <StepIcon
                       className={`w-5 h-5 transition-colors duration-300 ${
                       isActive ?
                       "text-orange-600" :
                       isPast ?
                       "text-[#3B3B39]" :
-                      "text-slate-400"}`
-                      } />
-
+                      "text-slate-400"}`} />
                   </div>
                   <span
                     className={`text-[10px] font-mono uppercase tracking-wider max-w-[90px] text-center leading-tight ${
-                    isActive ? "text-orange-600 font-bold" : "text-slate-500"}`
-                    }>
-
+                    isActive ? "text-orange-600 font-bold" : "text-slate-500"}`}>
                     {s.title}
                   </span>
                 </button>);
-
             })}
           </div>
         </div>
@@ -319,21 +298,16 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
               <div key={i} style={{ width: `${widthPct}%` }}>
                 <div
                   className={`h-2 transition-colors duration-300 ${
-                  i <= active ? "bg-orange-600" : "bg-slate-100"}`
-                  } />
-
+                  i <= active ? "bg-orange-600" : "bg-slate-100"}`} />
                 <span className="text-[9px] font-mono text-slate-500 mt-1 block truncate">
                   {s.duration}
                 </span>
               </div>);
-
           })}
         </div>
 
         {/* Detail pane */}
-        <div
-          className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
-
+        <div className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
               <div className="flex items-start gap-4 mb-4">
@@ -354,10 +328,7 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
               </p>
               <ul className="space-y-2 mb-6">
                 {step.details.map((d) =>
-                <li
-                  key={d}
-                  className="flex items-start gap-2 text-sm text-slate-900">
-
+                <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
                     <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                     {d}
                   </li>
@@ -367,7 +338,6 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                 onClick={openModal}
                 className="text-white font-semibold"
                 style={{ backgroundColor: "#3B3B39" }}>
-
                 Get a Fixed-Price Proposal
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -377,7 +347,6 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                 src={hexagonGraphic}
                 alt=""
                 className="w-full h-auto max-h-[336px] object-contain opacity-80" />
-
             </div>
           </div>
         </div>
@@ -411,10 +380,7 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                   </p>
                   <ul className="space-y-2 mb-4">
                     {s.details.map((d) =>
-                    <li
-                      key={d}
-                      className="flex items-start gap-2 text-sm text-slate-900">
-
+                    <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
                         <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
                         {d}
                       </li>
@@ -425,18 +391,15 @@ const InteractiveTimeline = ({ openModal }: {openModal: () => void;}) => {
                     size="sm"
                     className="text-white font-semibold"
                     style={{ backgroundColor: "#3B3B39" }}>
-
                     Get a Proposal
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </AccordionContent>
               </AccordionItem>);
-
           })}
         </Accordion>
       </div>
     </div>);
-
 };
 
 /* ─── Vertical Tabs Data ─── */
@@ -454,7 +417,6 @@ const deliverableTabs = [
     "Annex A control maturity review",
     "Identify evidence gaps and quick wins",
     "Deliver a prioritised, actionable roadmap"]
-
   }
 },
 {
@@ -471,7 +433,6 @@ const deliverableTabs = [
     "Governance structure and management review cadence",
     "Evidence-by-design workflows embedded into operations",
     "Control implementation support and validation"]
-
   }
 },
 {
@@ -487,7 +448,6 @@ const deliverableTabs = [
     "Interview preparation for key personnel",
     "Auditor liaison and request management",
     "Close-out support for non-conformities"]
-
   }
 },
 {
@@ -507,24 +467,19 @@ const deliverableTabs = [
     "Evidence-by-design workflows",
     "Audit readiness pack + mock walkthrough",
     "Stage 1/Stage 2 preparation + auditor liaison"],
-
     excluded: [
     "Certification body services / issuing the certificate",
     "Tool licensing costs",
     "Technical remediation execution and control operation",
     "Pen testing / scanning services (partnered if required)"]
-
   }
 }];
-
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
 { label: "The Approach", target: "approach", icon: Compass },
-
-{ label: "Deliverables", target: "deliverables", icon: FileCheck },
+{ label: "What We Deliver", target: "deliverables", icon: FileCheck },
 { label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck }];
-
 
 /* ─── Page ─── */
 const ISO27001Page = () => {
@@ -544,7 +499,6 @@ const ISO27001Page = () => {
     }
   }, []);
 
-  // Track active section for sub-nav highlight
   useEffect(() => {
     const handleScroll = () => {
       const offset = 120;
@@ -566,7 +520,7 @@ const ISO27001Page = () => {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const navOffset = 112; // main nav + sub-nav height
+      const navOffset = 112;
       const y = el.getBoundingClientRect().top + window.scrollY - navOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -577,22 +531,20 @@ const ISO27001Page = () => {
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
-      {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[320px] flex items-center justify-center overflow-hidden">
+      {/* ═══ HERO BANNER (Dark Gray) ═══ */}
+      <section className="relative min-h-[360px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={isoHeroImg}
             alt=""
             className="w-full h-full object-cover"
             aria-hidden="true" />
-
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }} />
-
+            style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.92) 0%, rgba(59,59,57,0.78) 50%, rgba(59,59,57,0.65) 100%)" }} />
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full min-h-[320px] px-4">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full min-h-[360px] px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
             GET ISO 27001 CERTIFIED.
           </h1>
@@ -603,77 +555,66 @@ const ISO27001Page = () => {
             onClick={openModal}
             size="lg"
             className="group font-semibold transition-all text-white mt-10 mx-auto"
-            style={{ backgroundColor: "#3B3B39", border: "1px solid #3B3B39" }}
+            style={{ backgroundColor: "#3B3B39", border: "1px solid rgba(255,255,255,0.3)" }}
             onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "transparent";}}
             onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = "#3B3B39";}}>
-
             Get a Fixed-Price Proposal
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
+          <p className="mt-6 text-xs text-white/50 font-medium tracking-wide">
+            Mark Sackins — Director of Compliance Services
+          </p>
         </div>
       </section>
 
 
-      {/* ─── You're in the right place ─── */}
-      <section className="py-16 bg-[#F8F9FA]">
+      {/* ═══ INTRODUCTION (White) ═══ */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is ISO 27001? */}
             <div className="px-6 lg:px-8">
-              {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol1Open(!col1Open)}
                 className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer">
-                
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   WHAT IS ISO 27001?
                 </h3>
                 <ChevronDown
                   className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? 'rotate-180' : ''}`} />
-                
               </button>
-              {/* Desktop: static heading */}
               <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
                 WHAT IS ISO 27001?
               </h3>
-              {/* Mobile: collapsible / Desktop: always visible */}
               <div
                 className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
               </div>
             </div>
 
-
             {/* Column 2: You're in the right place if... */}
             <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
-              {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol2Open(!col2Open)}
                 className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer">
-                
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                  You're in the right place if…
+                  YOU'RE IN THE RIGHT PLACE IF…
                 </h3>
                 <ChevronDown
                   className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col2Open ? 'rotate-180' : ''}`} />
-                
               </button>
-              {/* Desktop: static heading */}
               <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
-                You're in the right place if…
+                YOU'RE IN THE RIGHT PLACE IF…
               </h3>
-              {/* Mobile: collapsible / Desktop: always visible */}
               <div
                 className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col2Open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                
                 <div className="flex flex-col gap-3">
                   {["ISO 27001 is required for customer assurance or procurement",
                   "You need a clear route to certification without derailing delivery",
                   "You're being asked for multiple frameworks and want reuse",
                   "You want a practical ISMS that operates day-to-day"].map((text, i) =>
-                  <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
+                  <div key={i} className="p-5 text-sm text-slate-700 bg-slate-50 border border-slate-200 shadow-sm">
                       {text}
                     </div>
                   )}
@@ -686,7 +627,7 @@ const ISO27001Page = () => {
               <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">"We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."</p>
-                <p className="text-xs font-semibold text-slate-500 mt-2">Marcus Atkins - Director of Compliance Services</p>
+                <p className="text-xs font-semibold text-slate-500 mt-2">Mark Sackins — Director of Compliance Services</p>
               </div>
             </div>
           </div>
@@ -694,44 +635,39 @@ const ISO27001Page = () => {
       </section>
 
 
-
       {/* ═══ SUB-NAV BUTTON BAR ═══ */}
       <section className="py-6 px-6" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto max-w-6xl">
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              {subNavLinks.map((link) => {const Icon = link.icon;return (
+              {subNavLinks.map((link) => {const LinkIcon = link.icon;return (
                 <button
                   key={link.target}
                   onClick={() => scrollTo(link.target)}
                   className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
                   activeNav === link.target ?
                   "text-orange-400 border-orange-400 bg-white/10" :
-                  "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`
-                  }>
-
-                    <Icon className="w-5 h-5" />
+                  "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`}>
+                    <LinkIcon className="w-5 h-5" />
                     {link.label}
                   </button>);
-
             })}
             </div>
         </div>
       </section>
 
 
-
-      {/* ═══ SEGMENT 2: THE ROADMAP ═══ */}
-      <section id="roadmap" className="py-24 bg-slate-50 border-y border-slate-200">
+      {/* ═══ THE APPROACH (Off-White #F8F9FA) ═══ */}
+      <section id="approach" className="py-24 border-y border-slate-200" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4">
           
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
               THE 3<span className="text-[#F36F21]">FACTOR</span> APPROACH
             </h2>
-            <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left">
+            <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left inline-block">
               <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
               <li>At 3FACTOR, we have a tried and tested approach to streamline your journey, providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
-              <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
+              <li>Take a look at our 7-stage certification process.</li>
             </ul>
           </div>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
@@ -741,16 +677,18 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ SEGMENT 3: DELIVERABLES (Vertical Tabs / Accordion) ═══ */}
+      {/* ═══ WHAT WE DELIVER (White) ═══ */}
       <section id="deliverables" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
-            What we deliver
-          </h2>
-          <p className="text-sm text-slate-600 mb-12 max-w-2xl">The 3FACTOR delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.
-
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
+              WHAT WE DELIVER
+            </h2>
+            <p className="text-sm text-slate-600 max-w-2xl mx-auto">
+              The 3FACTOR delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments. Take a look at the four key steps of our delivery process.
+            </p>
+          </div>
 
           {/* Desktop: Vertical Tabs */}
           <div className="hidden lg:block">
@@ -766,11 +704,9 @@ const ISO27001Page = () => {
                         data-[state=active]:bg-white data-[state=active]:border-slate-200 data-[state=active]:shadow-sm
                         data-[state=active]:text-orange-600 data-[state=inactive]:text-slate-600 data-[state=inactive]:hover:bg-slate-50
                         w-full transition-all">
-
                       <TabIcon className="w-4 h-4 shrink-0" />
                       {tab.label}
                     </TabsTrigger>);
-
                 })}
               </TabsList>
 
@@ -877,21 +813,34 @@ const ISO27001Page = () => {
                       </div>
                     </AccordionContent>
                   </AccordionItem>);
-
               })}
             </Accordion>
+          </div>
+
+          {/* Terminal CTA */}
+          <div className="mt-12 text-center">
+            <Button
+              onClick={openModal}
+              size="lg"
+              className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-base px-10 py-6 border border-slate-300 shadow-sm">
+              Get a Fixed-Price Proposal
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
 
         </div>
       </section>
 
-      {/* ═══ STATS BANNER ═══ */}
-      <section className="py-10" style={{ backgroundColor: "#5A5A58" }}>
+      {/* ═══ WHY ORGANISATIONS CHOOSE 3FACTOR (Off-White #F8F9FA) ═══ */}
+      <section id="why-3factor" className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-6">
-            Why organisations choose 3FACTOR
+
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-12 text-center">
+            WHY ORGANISATIONS CHOOSE 3<span className="text-[#F36F21]">FACTOR</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          {/* Differentiator boxes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
             { icon: Clock, stat: "8–10 Months", label: "Typical delivery timeline for certification readiness" },
             { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
@@ -900,86 +849,83 @@ const ISO27001Page = () => {
             map((item, i) => {
               const StatIcon = item.icon;
               return (
-                <div key={i} className="text-center lg:text-left">
-                  <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
-                  <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
-                  <p className="text-sm text-slate-300 leading-relaxed">{item.label}</p>
+                <div key={i} className="bg-white p-6 border border-slate-200 rounded-lg shadow-sm text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-slate-50 rounded-lg">
+                    <StatIcon className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <p className="text-2xl font-bold text-slate-900 mb-1">{item.stat}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.label}</p>
                 </div>);
             })}
           </div>
-        </div>
-      </section>
 
-      {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
-        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Pitfalls Subheading */}
+          <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
+            HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
+          </h3>
+          <p className="text-lg text-slate-600 mb-10">
+            Our tried and tested approach ensures your certification journey stays on track while avoiding these frequent industry traps.
+          </p>
 
           {/* Problems & Solutions */}
-          <div id="approach">
-            <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
-              HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
-            </h3>
-            <p className="text-lg text-slate-600 mb-10">
-              Our tried and tested approach ensures your certification journey stays on track while avoiding these frequent industry traps.
-            </p>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                <div>
-                  <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
-                    Common failure modes
-                  </h3>
-                  <ul className="space-y-6">
-                    {[{ problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." }, { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." }, { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
-                    { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
-                    map((item, i) =>
-                    <li key={i}>
-                        <div className="flex items-start gap-3">
-                          <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                          <div>
-                            <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-6">
+                  {[{ problem: "Scope balloons and delivery slows", detail: "Without defensible boundaries, ISO projects expand silently until timelines collapse." }, { problem: "Controls exist, but evidence isn't audit-ready", detail: "Teams do the work but can't prove it when the auditor asks." }, { problem: "Work gets duplicated across audits", detail: "Every new framework feels like starting from scratch." },
+                  { problem: "The ISMS becomes shelfware", detail: "Beautiful documentation that nobody uses after certification day." }].
+                  map((item, i) =>
+                  <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
                         </div>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
-                    How we solve it
-                  </h3>
-                  <ul className="space-y-6">
-                    {[
-                    { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
-                    { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
-                    { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
-                    { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
-                    map((item, i) =>
-                    <li key={i}>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
-                          <div>
-                            <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                          </div>
-                        </div>
-                      </li>
-                    )}
-                  </ul>
-                </div>
+                      </div>
+                    </li>
+                  )}
+                </ul>
               </div>
 
-              <div className="lg:col-span-5">
-                <img
-                  src={workingLaptopImg}
-                  alt="Professional working on compliance framework"
-                  className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
-                  style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                  How we solve it
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                  { fix: "Defensible scope boundaries set upfront", detail: "We define clear ISMS boundaries in week one so delivery stays on track." },
+                  { fix: "Evidence-by-design workflows from day one", detail: "Controls produce evidence as a byproduct of normal operations." },
+                  { fix: "Integrated control framework — build once, reuse everywhere", detail: "Map controls once across ISO, SOC 2, NIS2, DORA and more." },
+                  { fix: "Operational ISMS embedded into BAU", detail: "A living system that runs day-to-day, not just at audit time." }].
+                  map((item, i) =>
+                  <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  )}
+                </ul>
               </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <img
+                src={workingLaptopImg}
+                alt="Professional working on compliance framework"
+                className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
+                style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
             </div>
           </div>
 
+          {/* Framework reuse footer */}
           <div className="mt-12">
             <p className="text-sm text-slate-500 mb-3 text-center lg:text-left">
               Our 'Evidence-First' approach makes your ISO controls plug-and-play. Effortlessly reuse them across these frameworks to stay ahead of changing customer requirements and new regulations like NIS2 and DORA.
@@ -1009,7 +955,7 @@ const ISO27001Page = () => {
           <Accordion type="single" collapsible className="w-full">
             {[
             { q: "Are you the auditor or certification body?", a: "No. We provide readiness, implementation, and Stage 1/Stage 2 preparation alongside your chosen certification body." },
-            { q: "Is 12–16 weeks realistic?", a: "It can be with a sensible scope and consistent stakeholder availability. More complex environments may take longer." },
+            { q: "Is 8–10 months realistic?", a: "Yes, with a sensible scope and consistent stakeholder availability. More complex environments may take longer." },
             { q: "What do you need from us to keep pace?", a: "A primary owner, access to key SMEs, and timely reviews of core documents and evidence workflows." },
             { q: "Can you integrate ISO 27001 with SOC 2, NIS2, or DORA?", a: "Yes. We design controls and evidence for reuse across frameworks where relevant." },
             { q: "What does fixed scope mean?", a: "A defined set of deliverables and responsibilities that protects timeline and pricing. Out-of-scope items are agreed separately." }].
@@ -1040,7 +986,6 @@ const ISO27001Page = () => {
             onClick={openModal}
             size="lg"
             className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6">
-
             Get a Fixed-Price Proposal
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -1049,7 +994,6 @@ const ISO27001Page = () => {
 
       <Footer />
     </div>);
-
 };
 
 export default ISO27001Page;
