@@ -914,7 +914,7 @@ const ISO27001Page = () => {
 
           {/* Problems & Solutions */}
           <div id="approach">
-            <h3 className="text-xl md:text-2xl font-bold text-slate-900 uppercase mb-2">
+            <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
               HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
             </h3>
             <p className="text-lg text-slate-600 mb-10">
