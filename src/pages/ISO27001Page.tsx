@@ -610,28 +610,41 @@ const ISO27001Page = () => {
 
       {/* ─── You're in the right place ─── */}
       <section className="py-16 bg-[#F8F9FA]">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-x-20 gap-y-8 items-center">
-            <div className="lg:col-span-3">
-              <h3 className="text-2xl md:text-3xl font-bold uppercase mb-10 text-slate-900">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            {/* Column 1: What is ISO 27001? */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-4">
+                WHAT IS ISO 27001?
+              </h3>
+              <p className="text-sm md:text-base text-slate-700 leading-relaxed">
+                ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS). By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.
+              </p>
+            </div>
+
+            {/* Column 2: You're in the right place if... */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-4">
                 You're in the right place if…
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-3">
                 {[
-                "ISO 27001 is required for customer assurance or procurement",
-                "You need a clear route to certification without derailing delivery",
-                "You're being asked for multiple frameworks and want reuse",
-                "You want a practical ISMS that operates day-to-day"].
-                map((text, i) =>
-                <div key={i} className="p-6 text-sm md:text-base text-slate-700 bg-white border border-slate-200">
+                  "ISO 27001 is required for customer assurance or procurement",
+                  "You need a clear route to certification without derailing delivery",
+                  "You're being asked for multiple frameworks and want reuse",
+                  "You want a practical ISMS that operates day-to-day",
+                ].map((text, i) => (
+                  <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
                     {text}
                   </div>
-                )}
+                ))}
               </div>
             </div>
-            <div className="hidden lg:block lg:col-span-2 h-full relative">
-              <img src={consultationImg} alt="Professional consultation" className="w-full h-full object-cover opacity-90 border border-slate-200" />
-              <div className="absolute -bottom-8 -left-8 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+
+            {/* Column 3: Image & Disclaimer */}
+            <div className="relative pb-8">
+              <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
+              <div className="absolute -bottom-4 -left-4 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">
                   We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
                 </p>
