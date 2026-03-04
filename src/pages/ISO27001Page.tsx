@@ -532,7 +532,7 @@ const ISO27001Page = () => {
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
       {/* ═══ HERO BANNER (Dark Gray) ═══ */}
-      <section className="relative min-h-[360px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[420px] flex items-center justify-center overflow-hidden pt-24 md:pt-32">
         <div className="absolute inset-0 z-0">
           <img
             src={isoHeroImg}
@@ -544,7 +544,7 @@ const ISO27001Page = () => {
             style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.92) 0%, rgba(59,59,57,0.78) 50%, rgba(59,59,57,0.65) 100%)" }} />
         </div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full min-h-[360px] px-4">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full py-16 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto">
             GET ISO 27001 CERTIFIED.
           </h1>
@@ -561,6 +561,9 @@ const ISO27001Page = () => {
             Get a Fixed-Price Proposal
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
+          <p className="mt-6 text-xs text-white/50 font-medium tracking-wide">
+            Marcus Atkins — Director of Compliance Services
+          </p>
         </div>
       </section>
 
