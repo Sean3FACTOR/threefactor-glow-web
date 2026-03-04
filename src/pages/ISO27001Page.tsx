@@ -884,16 +884,13 @@ const ISO27001Page = () => {
         </div>
       </section>
 
-      {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+      {/* ═══ STATS BANNER ═══ */}
+      <section className="py-10" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-6">
             Why organisations choose 3FACTOR
           </h2>
-
-          {/* Stats row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             { icon: Clock, stat: "8–10 Months", label: "Typical delivery timeline for certification readiness" },
             { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
@@ -904,11 +901,17 @@ const ISO27001Page = () => {
               return (
                 <div key={i} className="text-center lg:text-left">
                   <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
-                  <p className="text-2xl font-bold text-slate-900 mb-1">{item.stat}</p>
-                  <p className="text-sm text-slate-500 leading-relaxed">{item.label}</p>
+                  <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
+                  <p className="text-sm text-slate-300 leading-relaxed">{item.label}</p>
                 </div>);
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
+      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Problems & Solutions */}
           <div id="approach" className="pt-12 border-t border-slate-300">
