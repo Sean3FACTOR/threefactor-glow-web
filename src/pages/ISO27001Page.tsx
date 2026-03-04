@@ -627,7 +627,7 @@ const ISO27001Page = () => {
               <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">"We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."</p>
-                <p className="text-xs font-semibold text-slate-500 mt-2">Mark Sackins — Director of Compliance Services</p>
+                <p className="text-xs font-semibold text-slate-500 mt-2">Marcus Atkins — Director of Compliance Services</p>
               </div>
             </div>
           </div>
