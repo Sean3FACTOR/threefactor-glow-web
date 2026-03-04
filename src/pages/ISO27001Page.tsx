@@ -629,15 +629,15 @@ const ISO27001Page = () => {
               </h3>
               <div className="flex flex-col gap-3">
                 {[
-                  "ISO 27001 is required for customer assurance or procurement",
-                  "You need a clear route to certification without derailing delivery",
-                  "You're being asked for multiple frameworks and want reuse",
-                  "You want a practical ISMS that operates day-to-day",
-                ].map((text, i) => (
-                  <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
+                "ISO 27001 is required for customer assurance or procurement",
+                "You need a clear route to certification without derailing delivery",
+                "You're being asked for multiple frameworks and want reuse",
+                "You want a practical ISMS that operates day-to-day"].
+                map((text, i) =>
+                <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
                     {text}
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -645,8 +645,10 @@ const ISO27001Page = () => {
             <div className="relative pb-8">
               <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 -left-4 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
-                <p className="text-xs font-semibold text-slate-600 leading-relaxed">
-                  We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor.
+                <p className="text-xs font-semibold text-slate-600 leading-relaxed">"We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."
+
+
+Marcus Atkins - Director of Compliance Services
                 </p>
               </div>
             </div>
@@ -661,9 +663,7 @@ const ISO27001Page = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="border-t border-b border-slate-200 py-8">
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              {subNavLinks.map((link) => {
-                const Icon = link.icon;
-                return (
+              {subNavLinks.map((link) => {const Icon = link.icon;return (
                   <button
                     key={link.target}
                     onClick={() => scrollTo(link.target)}
