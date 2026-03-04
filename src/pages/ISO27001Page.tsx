@@ -520,7 +520,8 @@ const deliverableTabs = [
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
-{ label: "The Approach", target: "roadmap", icon: Compass },
+{ label: "The Approach", target: "approach", icon: Compass },
+
 { label: "Deliverables", target: "deliverables", icon: FileCheck },
 { label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck }];
 
@@ -619,14 +620,14 @@ const ISO27001Page = () => {
               {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol1Open(!col1Open)}
-                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
-              >
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer">
+                
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   WHAT IS ISO 27001?
                 </h3>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? 'rotate-180' : ''}`}
-                />
+                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? 'rotate-180' : ''}`} />
+                
               </button>
               {/* Desktop: static heading */}
               <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
@@ -634,8 +635,8 @@ const ISO27001Page = () => {
               </h3>
               {/* Mobile: collapsible / Desktop: always visible */}
               <div
-                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-              >
+                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
                 <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
               </div>
@@ -647,14 +648,14 @@ const ISO27001Page = () => {
               {/* Mobile: accordion toggle */}
               <button
                 onClick={() => setCol2Open(!col2Open)}
-                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
-              >
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer">
+                
                 <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   You're in the right place if…
                 </h3>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col2Open ? 'rotate-180' : ''}`}
-                />
+                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col2Open ? 'rotate-180' : ''}`} />
+                
               </button>
               {/* Desktop: static heading */}
               <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
@@ -662,14 +663,14 @@ const ISO27001Page = () => {
               </h3>
               {/* Mobile: collapsible / Desktop: always visible */}
               <div
-                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col2Open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}
-              >
+                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col2Open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                
                 <div className="flex flex-col gap-3">
                   {["ISO 27001 is required for customer assurance or procurement",
                   "You need a clear route to certification without derailing delivery",
                   "You're being asked for multiple frameworks and want reuse",
                   "You want a practical ISMS that operates day-to-day"].map((text, i) =>
-                    <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
+                  <div key={i} className="p-5 text-sm text-slate-700 bg-white border border-slate-200 shadow-sm">
                       {text}
                     </div>
                   )}
@@ -696,20 +697,20 @@ const ISO27001Page = () => {
         <div className="container mx-auto max-w-6xl">
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {subNavLinks.map((link) => {const Icon = link.icon;return (
-                  <button
-                    key={link.target}
-                    onClick={() => scrollTo(link.target)}
-                    className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
-                    activeNav === link.target ?
-                    "text-orange-400 border-orange-400 bg-white/10" :
-                    "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`
-                    }>
+                <button
+                  key={link.target}
+                  onClick={() => scrollTo(link.target)}
+                  className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
+                  activeNav === link.target ?
+                  "text-orange-400 border-orange-400 bg-white/10" :
+                  "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`
+                  }>
 
                     <Icon className="w-5 h-5" />
                     {link.label}
                   </button>);
 
-              })}
+            })}
             </div>
         </div>
       </section>
@@ -723,9 +724,9 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
             THE 3FACTOR APPROACH
           </h2>
-          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc pl-5">
+          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc list-inside">
             <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
-            <li>At 3Factor, we have a tried and tested approach to streamline your journey, providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
+            <li>At 3Factor, we have a tried and tested approach to streamline your journey — providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
             <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
           </ul>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
@@ -742,12 +743,9 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
             What we deliver
           </h2>
-           <ul className="text-sm text-slate-600 mb-12 max-w-2xl list-disc pl-5 space-y-2 text-left">
-             <li>The 3Factor delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.</li>
-             <li>We ensure our customers get exactly what they need, when they need it, leveraging our deep experience in high-pressure project delivery.</li>
-             
-             <li><span className="italic">How to use this section:</span> Use the interactive menu on the left to click through each phase of our process and see the specific milestones and deliverables we provide.</li>
-           </ul>
+          <p className="text-sm text-slate-600 mb-12 max-w-2xl">The 3FACTOR delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.
+
+          </p>
 
           {/* Desktop: Vertical Tabs */}
           <div className="hidden lg:block">
@@ -886,7 +884,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ STATS BANNER ═══ */}
-      <section id="why-3factor" className="py-10" style={{ backgroundColor: "#5A5A58" }}>
+      <section className="py-10" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white uppercase mb-6">
             Why organisations choose 3FACTOR
@@ -911,7 +909,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
+      <section id="why-3factor" className="pt-10 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Problems & Solutions */}
@@ -980,10 +978,7 @@ const ISO27001Page = () => {
             </div>
           </div>
 
-          <p className="mt-12 text-sm text-slate-500 text-left max-w-2xl">
-            Our 'Evidence-First' approach makes your ISO controls plug-and-play. Effortlessly reuse them across these frameworks to stay ahead of changing customer requirements and new regulations like NIS2 and DORA.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
+          <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
             {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
             <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-300 text-slate-500">
                 {fw}
