@@ -742,9 +742,12 @@ const ISO27001Page = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
             What we deliver
           </h2>
-          <p className="text-sm text-slate-600 mb-12 max-w-2xl">
-            Explore each phase of the fixed-scope project. Clear deliverables, no ambiguity.
-          </p>
+           <ul className="text-sm text-slate-600 mb-12 max-w-2xl list-disc pl-5 space-y-2 text-left">
+             <li>The 3Factor delivery process is engineered to be as smooth as possible, specifically for highly time-constrained and challenging environments.</li>
+             <li>We ensure our customers get exactly what they need, when they need it, leveraging our deep experience in high-pressure project delivery.</li>
+             <li>Our "Evidence-First" model provides a predictable, fixed-scope journey that builds reusable, plug-and-play controls for long-term scalability.</li>
+             <li><span className="italic">How to use this section:</span> Use the interactive menu on the left to click through each phase of our process and see the specific milestones and deliverables we provide.</li>
+           </ul>
 
           {/* Desktop: Vertical Tabs */}
           <div className="hidden lg:block">
