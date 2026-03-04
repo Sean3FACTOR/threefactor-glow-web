@@ -879,7 +879,7 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#3B3B39" }}>
+      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#5A5A58" }}>
         <div className="container mx-auto px-4 max-w-6xl">
           
           <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
