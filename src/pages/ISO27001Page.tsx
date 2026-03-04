@@ -621,7 +621,7 @@ const ISO27001Page = () => {
                 onClick={() => setCol1Open(!col1Open)}
                 className="flex items-center justify-between w-full text-left mb-4 cursor-pointer group"
               >
-                <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-800">
+                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   WHAT IS ISO 27001?
                 </h3>
                 <ChevronDown
@@ -645,7 +645,7 @@ const ISO27001Page = () => {
                 onClick={() => setCol2Open(!col2Open)}
                 className="flex items-center justify-between w-full text-left mb-4 cursor-pointer group"
               >
-                <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide text-slate-800">
+                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
                   You're in the right place if…
                 </h3>
                 <ChevronDown
