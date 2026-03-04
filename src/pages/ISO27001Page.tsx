@@ -597,7 +597,7 @@ const ISO27001Page = () => {
             GET ISO 27001 CERTIFIED.
           </h1>
           <p className="mt-4 text-xl md:text-2xl font-medium text-white/85 max-w-2xl mx-auto">
-            Build a scalable, audit-ready foundation with the only 3<span className="text-[#F36F21]">FACTOR</span> approach to ISO 27001.
+            Build a scalable, audit-ready foundation with 3<span className="text-[#F36F21]">FACTOR</span>'s approach to ISO 27001.
           </p>
           <Button
             onClick={openModal}
