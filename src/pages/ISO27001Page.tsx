@@ -683,18 +683,18 @@ const ISO27001Page = () => {
 
 
       {/* ═══ SUB-NAV BUTTON BAR ═══ */}
-      <section className="py-8" style={{ backgroundColor: "#F8F9FA" }}>
+      <section className="py-8" style={{ backgroundColor: "#3B3B39" }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="border-t border-b border-slate-200 py-8">
+          <div className="border-t border-b border-white/10 py-8">
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {subNavLinks.map((link) => {const Icon = link.icon;return (
                   <button
                     key={link.target}
                     onClick={() => scrollTo(link.target)}
-                    className={`w-full sm:w-auto bg-white border px-6 py-3 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
+                    className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
                     activeNav === link.target ?
-                    "text-orange-600 border-orange-400" :
-                    "text-slate-700 border-slate-200 hover:text-orange-600 hover:border-orange-300"}`
+                    "text-orange-400 border-orange-400 bg-white/10" :
+                    "text-white/80 border-white/20 bg-white/5 hover:text-orange-400 hover:border-orange-400/50"}`
                     }>
 
                     <Icon className="w-5 h-5" />
