@@ -586,6 +586,7 @@ const PCIDSSPage = () => {
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">
                   "PCI effort is primarily driven by scope. Without proper reduction, controls, evidence, and audits become expensive and complex."
                 </p>
+                <p className="text-[10px] text-slate-400 mt-2 font-mono uppercase tracking-wider">Tania Nicholas — Director of PCI Compliance</p>
               </div>
               <div className="mt-8 pt-4 border-t border-slate-200">
                 <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">
