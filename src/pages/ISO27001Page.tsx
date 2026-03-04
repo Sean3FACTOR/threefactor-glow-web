@@ -721,14 +721,16 @@ const ISO27001Page = () => {
       <section id="roadmap" className="py-24 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
-            THE 3FACTOR APPROACH
-          </h2>
-          <ul className="text-lg text-slate-600 mb-16 max-w-4xl leading-relaxed space-y-3 list-disc list-inside">
-            <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
-            <li>At 3FACTOR, we have a tried and tested approach to streamline your journey, providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
-            <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
-          </ul>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
+              THE 3FACTOR APPROACH
+            </h2>
+            <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left">
+              <li>Achieving ISO 27001 doesn't have to derail your delivery.</li>
+              <li>At 3FACTOR, we have a tried and tested approach to streamline your journey, providing a predictable, step-by-step pathway that minimizes disruption to your daily operations.</li>
+              <li>Explore the interactive timeline below to see how we guide you from day one to final certification.</li>
+            </ul>
+          </div>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
             The 7-Stage Certification Process
           </h3>
