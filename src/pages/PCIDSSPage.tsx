@@ -579,25 +579,14 @@ const PCIDSSPage = () => {
               </div>
             </div>
 
-            {/* Column 3: Image & Quote */}
+            {/* Column 3: Image & Disclaimer */}
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationMeetingImg} alt="PCI DSS consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
-                <p className="text-xs font-semibold text-slate-600 leading-relaxed">
-                  "PCI effort is primarily driven by scope. Without proper reduction, controls, evidence, and audits become expensive and complex."
+                <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
+                  "We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."
                 </p>
-                <p className="text-[10px] text-slate-400 mt-2 font-mono uppercase tracking-wider">Tania Nicholas — Director of PCI Compliance</p>
-              </div>
-              <div className="mt-8 pt-4 border-t border-slate-200">
-                <p className="text-xs text-slate-500 font-mono uppercase tracking-wider">
-                  Validation Paths
-                </p>
-                <p className="text-xs text-slate-600 mt-1">
-                  <strong>SAQ</strong> — for eligible merchants with reduced scope
-                </p>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  <strong>ROC</strong> — required for Level 1 merchants & service providers
-                </p>
+                <p className="text-xs text-slate-500 mt-2">Tania Nicholas — Director of PCI Compliance</p>
               </div>
             </div>
           </div>
