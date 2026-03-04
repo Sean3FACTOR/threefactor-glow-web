@@ -168,7 +168,7 @@ const csatStages = [
   durationWeeks: 2,
   desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
   details: [
-  "Kick-off meeting with CSAT Program team",
+  "Kick-off meeting with Program team",
   "Define engagement scope and boundaries",
   "Establish communication cadence and stakeholders",
   "Agree on milestones and success criteria"]
