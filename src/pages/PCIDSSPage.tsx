@@ -582,7 +582,7 @@ const PCIDSSPage = () => {
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <div className="bg-slate-50 border border-slate-200 p-6 h-full flex flex-col justify-between">
                 <div>
-                  <CreditCard className="w-8 h-8 text-orange-500 mb-4" />
+                  
                   <p className="text-sm font-semibold text-slate-700 leading-relaxed">
                     "PCI effort is primarily driven by scope. Without proper reduction, controls, evidence, and audits become expensive and complex."
                   </p>
