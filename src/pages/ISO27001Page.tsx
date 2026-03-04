@@ -889,7 +889,7 @@ const ISO27001Page = () => {
           {/* Stats row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
-            { icon: Clock, stat: "12–16 Weeks", label: "Typical delivery timeline for certification readiness" },
+            { icon: Clock, stat: "8–10 Months", label: "Typical delivery timeline for certification readiness" },
             { icon: Users, stat: "Senior-Led", label: "Delivered by principals, not juniors. No bait-and-switch" },
             { icon: DollarSign, stat: "Fixed-Price", label: "Clear scope boundaries that protect your budget" },
             { icon: Microscope, stat: "Evidence-First", label: "Controls produce audit evidence as a byproduct of BAU" }].
