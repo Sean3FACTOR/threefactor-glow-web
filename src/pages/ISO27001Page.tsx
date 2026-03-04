@@ -617,10 +617,8 @@ const ISO27001Page = () => {
               <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-4">
                 WHAT IS ISO 27001?
               </h3>
-              <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS). 
-
-
-By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
+              <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
+              <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
             </div>
 
             {/* Column 2: You're in the right place if... */}
