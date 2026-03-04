@@ -885,10 +885,10 @@ const ISO27001Page = () => {
       </section>
 
       {/* ═══ WHY 3FACTOR (with Approach merged) ═══ */}
-      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#5A5A58" }}>
+      <section id="why-3factor" className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
           
-          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-3">
             Why organisations choose 3FACTOR
           </h2>
 
@@ -904,24 +904,24 @@ const ISO27001Page = () => {
               return (
                 <div key={i} className="text-center lg:text-left">
                   <StatIcon className="w-6 h-6 text-orange-500 mb-3 mx-auto lg:mx-0" />
-                  <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.label}</p>
+                  <p className="text-2xl font-bold text-slate-900 mb-1">{item.stat}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.label}</p>
                 </div>);
             })}
           </div>
 
           {/* Problems & Solutions */}
-          <div id="approach" className="pt-12 border-t border-slate-600">
-            <h3 className="text-2xl md:text-3xl font-bold text-white uppercase mb-2">
+          <div id="approach" className="pt-12 border-t border-slate-300">
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase mb-2">
               AVOID THE COMMON ISO 27001 PITFALLS
             </h3>
-            <p className="text-lg text-slate-300 mb-10">
+            <p className="text-lg text-slate-600 mb-10">
               Follow Our Tried &amp; Tested Approach to Certification &amp; Maintenance.
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                 <div>
-                  <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-600 pb-3">
+                  <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
                     Common failure modes
                   </h3>
                   <ul className="space-y-6">
@@ -930,9 +930,9 @@ const ISO27001Page = () => {
                     map((item, i) =>
                     <li key={i}>
                         <div className="flex items-start gap-3">
-                          <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-500" />
+                          <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
                           <div>
-                            <p className="text-sm font-semibold text-slate-300">{item.problem}</p>
+                            <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
                             <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
                           </div>
                         </div>
@@ -956,8 +956,8 @@ const ISO27001Page = () => {
                         <div className="flex items-start gap-3">
                           <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
                           <div>
-                            <p className="text-sm font-semibold text-white">{item.fix}</p>
-                            <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.detail}</p>
+                            <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
                           </div>
                         </div>
                       </li>
@@ -971,18 +971,18 @@ const ISO27001Page = () => {
                   src={workingLaptopImg}
                   alt="Professional working on compliance framework"
                   className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
-                  style={{ border: "1px solid rgba(255,255,255,0.1)" }} />
+                  style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
               </div>
             </div>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-2 justify-center lg:justify-start">
             {["SOC 2", "NIS2", "DORA", "CIS", "CMMC", "ISO 27701"].map((fw) =>
-            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-700 text-slate-400">
+            <span key={fw} className="px-3 py-1 text-xs font-mono border border-slate-300 text-slate-500">
                 {fw}
               </span>
             )}
-            <span className="px-3 py-1 text-xs font-mono text-slate-500">
+            <span className="px-3 py-1 text-xs font-mono text-slate-400">
               + reuse controls across frameworks
             </span>
           </div>
