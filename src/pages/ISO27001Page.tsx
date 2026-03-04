@@ -166,7 +166,7 @@ const csatStages = [
   title: "PROGRAM ENGAGEMENT",
   duration: "1–2 Weeks",
   durationWeeks: 2,
-  desc: "Engage with the internal Customer Security, Assurance and Trust (CSAT) Program team to scope and plan the engagement.",
+  desc: "Engage with the internal 3FACTOR Program team to scope and plan the engagement.",
   details: [
   "Kick-off meeting with Program team",
   "Define engagement scope and boundaries",
@@ -199,7 +199,7 @@ const csatStages = [
   "Implement missing controls and evidence workflows",
   "Develop ISMS policies, procedures, and documentation",
   "Build evidence-by-design into operational processes",
-  "Conduct iterative reviews with CSAT team"]
+  "Conduct iterative reviews with 3FACTOR team"]
 
 },
 {
@@ -208,7 +208,7 @@ const csatStages = [
   title: "Control Validation & Audit Readiness",
   duration: "~4 Weeks",
   durationWeeks: 4,
-  desc: "The CSAT team conducts internal validation and readiness checks.",
+  desc: "The 3FACTOR team conducts internal validation and readiness checks.",
   details: [
   "Internal control testing and validation",
   "Evidence pack compilation and completeness review",
