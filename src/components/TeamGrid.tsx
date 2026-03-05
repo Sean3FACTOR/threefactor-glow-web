@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Linkedin, X } from "lucide-react";
+import { useState, useCallback } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import haley from "@/assets/team/haley_1.avif";
 import jonathan from "@/assets/team/jonathan_1.jpg";
@@ -14,11 +14,39 @@ import tania from "@/assets/team/tania_1.jpg";
 
 const teamMembers = [
   {
-    name: "Spyro Karetsos",
-    role: "Managing Director",
+    name: "Spyro Malaspinas",
+    role: "Principal",
     image: spyro,
     linkedin: "",
     bio: "With over 15 years leading global security programmes, Spyro founded 3Factor to bridge the gap between compliance and real-world resilience. He has personally led recovery efforts for six of the ten largest breaches in North America.",
+  },
+  {
+    name: "Marcus Atkins",
+    role: "Director of Compliance Services",
+    image: marcus,
+    linkedin: "",
+    bio: "Marcus leads the compliance practice with deep expertise across SOC 2, ISO 27001, and emerging frameworks. His strategic vision ensures clients build programmes that scale with their growth.",
+  },
+  {
+    name: "Jonathan Kiernan",
+    role: "Director of Cyber Risk & Strategy",
+    image: jonathan,
+    linkedin: "",
+    bio: "Jonathan brings a decade of experience in risk management and regulatory compliance across financial services. He excels at translating complex regulatory requirements into actionable security roadmaps.",
+  },
+  {
+    name: "Tania Nicholas",
+    role: "Director of PCI Compliance Services",
+    image: tania,
+    linkedin: "",
+    bio: "Tania leads the PCI practice, guiding organisations through the complexities of payment card security. Her deep knowledge of PCI DSS ensures clients achieve and maintain compliance with confidence.",
+  },
+  {
+    name: "Ricardo Patino",
+    role: "Senior Consultant",
+    image: ricardo,
+    linkedin: "",
+    bio: "Ricardo is a CISSP-certified security strategist focused on enterprise risk and governance. He has guided dozens of organisations through their first SOC 2 and ISO 27001 certifications.",
   },
   {
     name: "Michel de Leeuw",
@@ -33,27 +61,6 @@ const teamMembers = [
     image: koert,
     linkedin: "",
     bio: "Koert specialises in cloud security architecture and compliance automation. His engineering background allows him to bridge the gap between technical implementation and audit-ready documentation.",
-  },
-  {
-    name: "Jonathan Edwards",
-    role: "Senior Consultant",
-    image: jonathan,
-    linkedin: "",
-    bio: "Jonathan brings a decade of experience in risk management and regulatory compliance across financial services. He excels at translating complex regulatory requirements into actionable security roadmaps.",
-  },
-  {
-    name: "Ricardo Ferreira",
-    role: "Senior Consultant",
-    image: ricardo,
-    linkedin: "",
-    bio: "Ricardo is a CISSP-certified security strategist focused on enterprise risk and governance. He has guided dozens of organisations through their first SOC 2 and ISO 27001 certifications.",
-  },
-  {
-    name: "Marcus Thompson",
-    role: "Consultant",
-    image: marcus,
-    linkedin: "",
-    bio: "Marcus focuses on vulnerability management and penetration testing. His hands-on technical expertise ensures that compliance efforts are backed by real-world security validation.",
   },
   {
     name: "Mason Clarke",
@@ -76,30 +83,35 @@ const teamMembers = [
     linkedin: "",
     bio: "Kelsee is a compliance operations specialist who streamlines audit preparation and evidence collection. Her process-driven approach reduces the burden on internal teams by up to 60%.",
   },
-  {
-    name: "Tania Oliveira",
-    role: "Consultant",
-    image: tania,
-    linkedin: "",
-    bio: "Tania focuses on security awareness and organisational culture change. She designs training programmes that turn employees into an organisation's strongest line of defence.",
-  },
 ];
 
+const ITEMS_PER_PAGE = 5;
 const glassCard =
   "bg-white/60 backdrop-blur-[20px] border border-[rgba(59,59,57,0.08)] rounded-none";
 
 const TeamGrid = () => {
   const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
+  const [page, setPage] = useState(0);
+
+  const totalPages = Math.ceil(teamMembers.length / ITEMS_PER_PAGE);
+  const visibleMembers = teamMembers.slice(
+    page * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+  );
+
+  const prev = useCallback(() => setPage((p) => (p > 0 ? p - 1 : totalPages - 1)), [totalPages]);
+  const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), [totalPages]);
 
   return (
     <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#F9FAFB" }}>
       <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <span
             className="text-[10px] font-bold uppercase tracking-[0.2em]"
             style={{ color: "#F36F21" }}
           >
-            [TEAM-01] — The People Behind Your Mission
+            [TEAM-01] — Our Team
           </span>
         </div>
         <h2
@@ -116,35 +128,76 @@ const TeamGrid = () => {
           battle-tested experts who've been in the trenches.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {teamMembers.map((member) => (
-            <div
-              key={member.name}
-              className={`${glassCard} group overflow-hidden transition-all duration-200 hover:border-[#F36F21] cursor-pointer`}
-              onClick={() => setSelectedMember(member)}
-            >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
+        {/* Carousel container */}
+        <div className="relative">
+          {/* Navigation arrows */}
+          <button
+            onClick={prev}
+            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border border-[rgba(59,59,57,0.12)] bg-white/80 backdrop-blur-sm hover:border-[#F36F21] transition-colors"
+            aria-label="Previous"
+          >
+            <ChevronLeft size={18} style={{ color: "#3B3B39" }} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border border-[rgba(59,59,57,0.12)] bg-white/80 backdrop-blur-sm hover:border-[#F36F21] transition-colors"
+            aria-label="Next"
+          >
+            <ChevronRight size={18} style={{ color: "#3B3B39" }} />
+          </button>
+
+          {/* Grid of visible members */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {visibleMembers.map((member) => (
+              <div
+                key={member.name}
+                className={`${glassCard} group overflow-hidden transition-all duration-200 hover:border-[#F36F21]`}
+              >
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3
+                    className="text-sm font-bold uppercase tracking-wide"
+                    style={{ color: "#3B3B39" }}
+                  >
+                    {member.name}
+                  </h3>
+                  <p
+                    className="text-xs font-mono mt-1"
+                    style={{ color: "#5A5A58" }}
+                  >
+                    {member.role}
+                  </p>
+                  <button
+                    onClick={() => setSelectedMember(member)}
+                    className="mt-3 text-[11px] font-bold uppercase tracking-[0.12em] px-4 py-1.5 border border-[rgba(59,59,57,0.12)] hover:border-[#F36F21] transition-colors bg-transparent"
+                    style={{ color: "#F36F21" }}
+                  >
+                    Read Bio
+                  </button>
+                </div>
               </div>
-              <div className="p-4">
-                <h3
-                  className="text-sm font-bold uppercase tracking-wide"
-                  style={{ color: "#3B3B39" }}
-                >
-                  {member.name}
-                </h3>
-                <p
-                  className="text-xs font-mono mt-1"
-                  style={{ color: "#5A5A58" }}
-                >
-                  {member.role}
-                </p>
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="flex items-center justify-center gap-2 mt-8">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i)}
+              className="w-2 h-2 transition-all duration-200"
+              style={{
+                backgroundColor: i === page ? "#F36F21" : "rgba(59,59,57,0.2)",
+              }}
+              aria-label={`Page ${i + 1}`}
+            />
           ))}
         </div>
       </div>
@@ -202,16 +255,6 @@ const TeamGrid = () => {
               >
                 {selectedMember.bio}
               </p>
-              {selectedMember.linkedin && (
-                <a
-                  href={selectedMember.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 opacity-50 hover:opacity-100 transition-opacity"
-                >
-                  <Linkedin size={16} style={{ color: "#3B3B39" }} />
-                </a>
-              )}
             </div>
           </div>
         </div>
