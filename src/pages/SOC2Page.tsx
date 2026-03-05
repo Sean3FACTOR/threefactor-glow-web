@@ -43,7 +43,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import heroImg from "@/assets/hero-boardroom.jpg";
+import heroImg from "@/assets/soc2-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationImg from "@/assets/homepage/conference-meeting.jpg";
 
