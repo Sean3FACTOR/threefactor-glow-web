@@ -16,6 +16,7 @@ import CyberEssentialsPage from "./pages/CyberEssentialsPage";
 import ISO27001Page from "./pages/ISO27001Page";
 import PCIDSSPage from "./pages/PCIDSSPage";
 import SOC2Page from "./pages/SOC2Page";
+import CompanyPage from "./pages/CompanyPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/company" element={<CompanyPage />} />
           
           <Route path="/services/strategy-risk" element={<StrategyRiskServicesPage />} />
           <Route path="/services/cyber-defense" element={<CyberDefenseServicesPage />} />
