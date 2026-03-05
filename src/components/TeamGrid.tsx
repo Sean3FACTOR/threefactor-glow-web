@@ -121,7 +121,7 @@ const TeamGrid = () => {
   const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), []);
 
   const LinkedInIcon = ({ className }: { className?: string }) => (
-    <Linkedin size={18} className={className} style={{ color: "#F36F21" }} />
+    <Linkedin size={18} className={className} style={{ color: "#0A66C2" }} />
   );
 
   return (
@@ -283,7 +283,7 @@ const TeamGrid = () => {
                     rel="noopener noreferrer"
                     className="shrink-0 mt-1"
                   >
-                    <Linkedin size={20} style={{ color: "#F36F21" }} />
+                    <Linkedin size={20} style={{ color: "#0A66C2" }} />
                   </a>
                 )}
               </div>
