@@ -36,12 +36,6 @@ const WhoWeAre = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-14">
-          <span
-            className="text-[10px] font-bold uppercase tracking-[0.2em] font-mono"
-            style={{ color: "#F36F21" }}
-          >
-            [SEC-01] — Who We Are
-          </span>
           <h2
             className="text-2xl md:text-4xl font-bold mt-4 uppercase"
             style={{ color: "#3B3B39" }}
@@ -57,13 +51,6 @@ const WhoWeAre = () => {
               key={pillar.id}
               className={`${glassCard} p-8 flex flex-col group transition-all duration-200 hover:border-[#F36F21]`}
             >
-              {/* Technical ID */}
-              <span
-                className="text-[10px] font-mono mb-6"
-                style={{ color: "#9CA3AF" }}
-              >
-                {pillar.id}
-              </span>
 
               {/* Icon */}
               <div className="mb-5">
