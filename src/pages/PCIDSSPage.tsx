@@ -229,12 +229,12 @@ const pciSteps = [
     title: "Formal PCI DSS Assessment (When Required)",
     duration: "4–6 Weeks",
     durationWeeks: 5,
-    desc: "We ensure you walk into your assessment confident, with a complete evidence pack and rehearsed responses.",
+    desc: "We ensure you walk into your assessment confident, with a complete evidence pack.",
     details: [
-      "Pre-assessment validation and mock walkthroughs",
+      "Pre-assessment validation",
       "Evidence pack compilation and completeness review",
       "Auditor coordination and request management",
-      "Close-out support for any findings",
+      "Continuous support for any findings",
     ],
   },
   {
