@@ -53,7 +53,6 @@ const megaColumns = [
         heading: "UK Government",
         items: [
           { name: "Cyber Essentials", href: "/services/cyber-essentials" },
-          { name: "Cyber Essentials Plus", href: "/services/cyber-essentials" },
         ],
       },
     ],
