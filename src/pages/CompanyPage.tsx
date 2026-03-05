@@ -62,12 +62,6 @@ const CompanyPage = () => {
 
         <div className="container mx-auto px-4 relative z-10 py-20 text-center">
           <div className="max-w-3xl mx-auto">
-            <span
-              className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
-              style={{ color: "#F36F21" }}
-            >
-              The 3Factor Promise
-            </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 uppercase text-white">
               <span className="block">You build the innovation.</span>
               <span className="block">We provide the integrity to scale it.</span>
