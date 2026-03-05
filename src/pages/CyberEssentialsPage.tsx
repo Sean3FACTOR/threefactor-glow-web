@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BackToNavButton from "@/components/BackToNavButton";
 import { Link } from "react-router-dom";
 import {
   Shield,
@@ -500,7 +501,7 @@ const CyberEssentialsPage = () => {
       </section>
 
       {/* ═══ SUB-NAV BAR ═══ */}
-      <section className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
+      <section id="quick-nav" className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {subNavLinks.map((link) => {
@@ -555,10 +556,9 @@ const CyberEssentialsPage = () => {
             The 5-Step Process
           </h3>
           <InteractiveTimeline />
+          <BackToNavButton />
         </div>
       </section>
-
-      {/* ═══ WHAT WE DELIVER (White) ═══ */}
       <section id="deliverables" className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
@@ -704,10 +704,9 @@ const CyberEssentialsPage = () => {
               </div>
             ))}
           </div>
+          <BackToNavButton />
         </div>
       </section>
-
-      {/* ═══ WHY ORGANISATIONS CHOOSE 3FACTOR (Off-White) ═══ */}
       <section id="why-3factor" className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-12 text-center">
@@ -802,10 +801,9 @@ const CyberEssentialsPage = () => {
                 style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
             </div>
           </div>
+          <BackToNavButton />
         </div>
       </section>
-
-      {/* ═══ FAQ ═══ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-10">
