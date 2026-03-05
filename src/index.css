@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
