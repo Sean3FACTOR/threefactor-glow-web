@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Award } from "lucide-react";
 import glassBuilding from "@/assets/company/glass-building-hero.jpg";
+import whiteboardExpert from "@/assets/company/whiteboard-expert.jpg";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
@@ -81,62 +82,71 @@ const CompanyPage = () => {
           SECTION 2 — Senior-Led Authority
       ═══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#FFFFFF" }}>
-       <div className="max-w-5xl mx-auto">
-           <div className="mb-12">
-             <div className="flex items-center gap-3 mb-6">
-               <ShieldCheck size={20} style={{ color: "#F36F21" }} />
-               <span
-                 className="text-[10px] font-bold uppercase tracking-[0.2em]"
-                 style={{ color: "#F36F21" }}
+       <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-start">
+           <div className="md:col-span-6">
+             <div className="mb-12">
+               <div className="flex items-center gap-3 mb-6">
+                 <ShieldCheck size={20} style={{ color: "#F36F21" }} />
+                 <span
+                   className="text-[10px] font-bold uppercase tracking-[0.2em]"
+                   style={{ color: "#F36F21" }}
+                 >
+                   Senior-Led Authority
+                 </span>
+               </div>
+               <h2
+                 className="text-2xl md:text-4xl font-bold mb-6"
+                 style={{ color: "#3B3B39" }}
                >
-                 Senior-Led Authority
-               </span>
+                 BENEFIT FROM DECADES OF FRONTLINE WISDOM
+               </h2>
+               <p
+                 className="text-base leading-relaxed mb-4"
+                 style={{ color: "#5A5A58" }}
+               >
+                 At 3Factor, we believe you shouldn't be a training ground for junior auditors. Our team
+                 is exclusively senior-led, offering over 10 years of individual experience navigating
+                 the world's most rigorous frameworks.
+               </p>
+               <p
+                 className="text-base leading-relaxed"
+                 style={{ color: "#5A5A58" }}
+               >
+                 We don't just point out problems; we leverage our history to provide your solutions.
+               </p>
              </div>
-             <h2
-               className="text-2xl md:text-4xl font-bold mb-6"
-               style={{ color: "#3B3B39" }}
-             >
-               BENEFIT FROM DECADES OF FRONTLINE WISDOM
-             </h2>
-             <p
-               className="text-base leading-relaxed mb-4"
-               style={{ color: "#5A5A58" }}
-             >
-               At 3Factor, we believe you shouldn't be a training ground for junior auditors. Our team
-               is exclusively senior-led, offering over 10 years of individual experience navigating
-               the world's most rigorous frameworks.
-             </p>
-             <p
-               className="text-base leading-relaxed"
-               style={{ color: "#5A5A58" }}
-             >
-               We don't just point out problems; we leverage our history to provide your solutions.
-             </p>
-           </div>
-           <div className="max-w-2xl">
-             <div
-               className={`${glassCard} p-8`}
-             >
-               <div className="space-y-5">
-                 {[
-                   { metric: "10+", label: "Years average consultant experience" },
-                   { metric: "6/10", label: "Largest N.A. breaches recovered" },
-                   { metric: "100%", label: "Senior-led engagements" },
-                 ].map((stat) => (
-                   <div key={stat.label} className="flex items-baseline gap-4">
-                     <span
-                       className="text-2xl md:text-3xl font-bold shrink-0"
-                       style={{ color: "#F36F21" }}
-                     >
-                       {stat.metric}
-                     </span>
-                     <span className="text-sm" style={{ color: "#5A5A58" }}>
-                       {stat.label}
-                     </span>
-                   </div>
-                 ))}
+             <div className="max-w-2xl">
+               <div
+                 className={`${glassCard} p-8`}
+               >
+                 <div className="space-y-5">
+                   {[
+                     { metric: "10+", label: "Years average consultant experience" },
+                     { metric: "6/10", label: "Largest N.A. breaches recovered" },
+                     { metric: "100%", label: "Senior-led engagements" },
+                   ].map((stat) => (
+                     <div key={stat.label} className="flex items-baseline gap-4">
+                       <span
+                         className="text-2xl md:text-3xl font-bold shrink-0"
+                         style={{ color: "#F36F21" }}
+                       >
+                         {stat.metric}
+                       </span>
+                       <span className="text-sm" style={{ color: "#5A5A58" }}>
+                         {stat.label}
+                       </span>
+                     </div>
+                   ))}
+                 </div>
                </div>
              </div>
+           </div>
+           <div className="md:col-span-6 flex items-start justify-center">
+             <img
+               src={whiteboardExpert}
+               alt="Senior consultant working"
+               className="w-full h-auto rounded-none border border-zinc-800/10 object-cover"
+             />
            </div>
          </div>
       </section>
