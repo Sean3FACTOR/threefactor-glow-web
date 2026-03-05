@@ -189,7 +189,7 @@ const TeamGrid = () => {
 
           <div className="flex flex-wrap justify-center gap-6">
             {visible.map((member) => (
-              <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[189px]">
+              <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[235px]">
                 <div
                   className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
                   onClick={() => setSelectedMember(member)}
