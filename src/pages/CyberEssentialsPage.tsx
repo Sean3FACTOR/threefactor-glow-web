@@ -405,7 +405,7 @@ const CyberEssentialsPage = () => {
         <div className="relative z-10 flex flex-col items-center justify-center text-center w-full py-16 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto max-w-4xl">
             Secure your future with{" "}
-            <span className="text-[#F36F21]">Cyber Essentials</span>
+            <span className="text-white/90">Cyber Essentials</span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl font-medium text-white/85 max-w-2xl mx-auto">
             NCSC-recognized certification with 3<span className="text-white">FACTOR</span>'s expert-led guidance.
