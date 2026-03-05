@@ -71,7 +71,7 @@ const clusters: Cluster[] = [
 
 const ServicesGrid = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const autoplayPlugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
+  const autoplayPlugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   return (
     <section
