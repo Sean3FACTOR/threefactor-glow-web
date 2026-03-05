@@ -314,96 +314,42 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
         </div>
 
         <div className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
-                  <Icon className="w-5 h-5 text-orange-600" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
-                    Step {step.stage} · {step.duration}
-                  </span>
-                  <h3 className="text-lg font-bold uppercase text-slate-900">
-                    {step.title}
-                  </h3>
-                </div>
-              </div>
-              <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
-              <ul className="space-y-2 mb-6">
-                {step.details.map((d) => (
-                  <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
-                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
-                    {d}
-                  </li>
-                ))}
-              </ul>
-              <Button
-                onClick={openModal}
-                className="text-white font-semibold"
-                style={{ backgroundColor: "#3B3B39" }}
-              >
-                Start with a PCI Scope Reduction Plan
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
+              <Icon className="w-5 h-5 text-orange-600" />
             </div>
-            <div className="hidden lg:flex items-center justify-center overflow-hidden">
-              <img
-                src={hexagonGraphic}
-                alt=""
-                className="w-full h-auto max-h-[336px] object-contain opacity-80"
-              />
+            <div>
+              <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
+                Step {step.stage} · {step.duration}
+              </span>
+              <h3 className="text-lg font-bold uppercase text-slate-900">
+                {step.title}
+              </h3>
             </div>
           </div>
         </div>
       </div>
 
       {/* Mobile */}
-      <div className="lg:hidden">
-        <Accordion type="single" collapsible defaultValue="stage-0">
-          {pciSteps.map((s, i) => {
-            const StepIcon = s.icon;
-            return (
-              <AccordionItem key={i} value={`stage-${i}`} className="border-b border-slate-200">
-                <AccordionTrigger className="py-4 hover:no-underline">
-                  <div className="flex items-center gap-3 min-h-[44px]">
-                    <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
-                      <StepIcon className="w-5 h-5 text-orange-600" />
-                    </div>
-                    <div className="text-left">
-                      <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
-                        Step {s.stage} · {s.duration}
-                      </span>
-                      <span className="text-sm font-bold uppercase text-slate-900">
-                        {s.title}
-                      </span>
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-6 pl-[52px]">
-                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">{s.desc}</p>
-                  <ul className="space-y-2 mb-4">
-                    {s.details.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    onClick={openModal}
-                    size="sm"
-                    className="text-white font-semibold"
-                    style={{ backgroundColor: "#3B3B39" }}
-                  >
-                    Get a Scope Reduction Plan
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </AccordionContent>
-              </AccordionItem>
-            );
-          })}
-        </Accordion>
+      <div className="lg:hidden space-y-3">
+        {pciSteps.map((s, i) => {
+          const StepIcon = s.icon;
+          return (
+            <div key={i} className="flex items-center gap-3 p-4 border border-slate-200 bg-white">
+              <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
+                <StepIcon className="w-5 h-5 text-orange-600" />
+              </div>
+              <div className="text-left">
+                <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
+                  Step {s.stage} · {s.duration}
+                </span>
+                <span className="text-sm font-bold uppercase text-slate-900">
+                  {s.title}
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
