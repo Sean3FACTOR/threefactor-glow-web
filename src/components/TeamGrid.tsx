@@ -115,11 +115,10 @@ const TeamGrid = () => {
   const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
   const [page, setPage] = useState(0);
 
-  const totalPages = Math.ceil(rest.length / ITEMS_PER_PAGE);
-  const visible = rest.slice(page * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE + ITEMS_PER_PAGE);
+  const visible = pages[page] || [];
 
-  const prev = useCallback(() => setPage((p) => (p > 0 ? p - 1 : totalPages - 1)), [totalPages]);
-  const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), [totalPages]);
+  const prev = useCallback(() => setPage((p) => (p > 0 ? p - 1 : totalPages - 1)), []);
+  const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), []);
 
   const LinkedInIcon = ({ className }: { className?: string }) => (
     <Linkedin size={18} className={className} style={{ color: "#F36F21" }} />
