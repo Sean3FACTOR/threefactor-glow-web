@@ -90,7 +90,7 @@ const teamMembers = [
     role: "",
     image: sean,
     linkedin: "",
-    bio: "Sean joined the 3Factor fold in 2025 as our Information Security Analyst, bringing a fresh, high-velocity perspective to our compliance projects. While being the youngest face on the team, he comes with a solid array of certifications and experience thus far. A former varsity rugby player for Manchester university, Sean treats every compliance hurdle like a defensive line - something to be analyzed, tackled, and overcome. When he's not deep-diving into security frameworks, he's likely debating sports or playing a round of golf (weather permitting of course!)",
+    bio: "Sean joined the 3Factor fold in 2025 as our Information Security Analyst, bringing a fresh, high-velocity perspective to our compliance projects. A former varsity rugby player for Manchester university, Sean treats every compliance hurdle like a defensive line - something to be analyzed, tackled, and overcome. When he's not deep-diving into security frameworks, he's likely debating sports or playing a round of golf (weather permitting of course!)",
   },
 ];
 
