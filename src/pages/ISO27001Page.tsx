@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BackToNavButton from "@/components/BackToNavButton";
 import {
   ArrowRight,
   CheckCircle2,
@@ -633,7 +634,7 @@ const ISO27001Page = () => {
 
 
       {/* ═══ SUB-NAV BUTTON BAR ═══ */}
-      <section className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
+      <section id="quick-nav" className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto max-w-6xl">
             <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 text-center mb-4">Quick Nav</h3>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
@@ -672,6 +673,7 @@ const ISO27001Page = () => {
             The 7-Stage Certification Process
           </h3>
           <InteractiveTimeline openModal={openModal} />
+          <BackToNavButton />
         </div>
       </section>
 
@@ -826,10 +828,9 @@ const ISO27001Page = () => {
             </Button>
           </div>
 
+          <BackToNavButton />
         </div>
       </section>
-
-      {/* ═══ WHY ORGANISATIONS CHOOSE 3FACTOR (Off-White #F8F9FA) ═══ */}
       <section id="why-3factor" className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto px-4 max-w-6xl">
 
@@ -939,11 +940,9 @@ const ISO27001Page = () => {
               </span>
             </div>
           </div>
+          <BackToNavButton />
         </div>
       </section>
-
-
-      {/* ═══ FAQ ═══ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           
