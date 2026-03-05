@@ -248,7 +248,7 @@ const pciSteps = [
       "SAQ completion support or ROC report finalization",
       "Attestation of Compliance (AOC) preparation",
       "Executive summary and compliance status documentation",
-      "Remediation tracking for any open items",
+      "Remediation tracking for any open items (if applicable)",
     ],
   },
   {
