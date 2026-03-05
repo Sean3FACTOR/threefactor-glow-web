@@ -652,6 +652,9 @@ const PCIDSSPage = () => {
             })}
           </div>
 
+          <p className="text-lg text-slate-600 text-center mb-4">
+            Take a look at our 6-step process from scope reduction to audit readiness.
+          </p>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
             The 6-Step Process
           </h3>
