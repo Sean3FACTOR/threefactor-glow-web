@@ -68,11 +68,9 @@ const CompanyPage = () => {
               <span className="block">We provide the integrity to scale it.</span>
             </h1>
             <div className="mb-10 max-w-3xl mx-auto rounded-lg px-8 py-6" style={{ backgroundColor: "rgba(40,50,65,0.45)", border: "1px solid rgba(200,210,220,0.2)", backdropFilter: "blur(4px)" }}>
-              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left my-0">Compliance shouldn't be a handbrake on your momentum.
+            <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left my-0">Compliance shouldn't be a handbrake on your momentum.
 
-
-We've spent a decade mastering the standards that move the needle, so you can stay focused on your product while we secure your future.<br />
-                We've spent a decade mastering the standards that move the needle, so you can stay focused on your product while we secure your future.
+We've spent a decade mastering the standards that move the needle, so you can stay focused on your product while we secure your future.
               </p>
             </div>
           </div>
