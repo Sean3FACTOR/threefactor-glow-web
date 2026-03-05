@@ -50,6 +50,7 @@ import { useToast } from "@/hooks/use-toast";
 import pciHeroImg from "@/assets/pci-dss-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationMeetingImg from "@/assets/pci/consultation-meeting.jpg";
+import consultationIntroImg from "@/assets/pci/consultation-intro.jpg";
 
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
@@ -507,7 +508,7 @@ const PCIDSSPage = () => {
 
             {/* Column 3: Image & Disclaimer */}
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
-              <img src={consultationMeetingImg} alt="PCI DSS consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
+              <img src={consultationIntroImg} alt="PCI DSS consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
               <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "As QSAs, we don't just prepare you for certification—we guide you through the entire journey. Whether you work with a chosen auditor or need us to perform the validation, we ensure a defensible, audit-proof result."
