@@ -11,6 +11,7 @@ import michel from "@/assets/team/michel_1.jpg";
 import ricardo from "@/assets/team/ricardo_1.jpg";
 import spyro from "@/assets/team/spyro_1.avif";
 import tania from "@/assets/team/tania_1.jpg";
+import sean from "@/assets/team/sean_1.png";
 
 const teamMembers = [
   {
@@ -18,7 +19,7 @@ const teamMembers = [
     role: "Principal",
     image: spyro,
     linkedin: "",
-    bio: "With over 15 years leading global security programmes, Spyro founded 3Factor to bridge the gap between compliance and real-world resilience. He has personally led recovery efforts for six of the ten largest breaches in North America.",
+    bio: "Spyro's passion for providing value to clients with straightforward advice and building long-term relationships led him to beginning 3Factor in 2007. He truly values each of his clients and team members, which is shown by the many inside jokes, fun experiences and genuine concern for each person he interacts with. He will always allow his team and clients to put family first, as he has learned as the father to his daughter, is a very important role. He proves that one can provide amazing client value whether that is onsite, working from home or while traveling to new places, and ensure the team around him feels the same.",
     featured: true,
   },
   {
@@ -26,63 +27,70 @@ const teamMembers = [
     role: "Director of Compliance Services",
     image: marcus,
     linkedin: "",
-    bio: "Marcus leads the compliance practice with deep expertise across SOC 2, ISO 27001, and emerging frameworks. His strategic vision ensures clients build programmes that scale with their growth.",
+    bio: "Marcus brings vast experience and has shown that he bleeds 3Factor orange. He prioritizes family, and to that end, considers the team and clients he works with as an extension of such. He enjoys traveling and being able to go on holiday, though being a hard worker, we sometimes have to push him out of our virtual office to do so! Then he comes back tan, refreshed and ready to continue the exceptional work with our clients.",
   },
   {
     name: "Jonathan Kiernan",
     role: "Director of Cyber Risk & Strategy",
     image: jonathan,
     linkedin: "",
-    bio: "Jonathan brings a decade of experience in risk management and regulatory compliance across financial services. He excels at translating complex regulatory requirements into actionable security roadmaps.",
+    bio: "Jonathan joined 3Factor in 2019 from a background in Big4 consulting. He leads 3Factor's Strategy & Risk service line and likes to deliver complex transformation programmes. Jonathan seems miserable on first impressions, but is much worse once you get to know him. He is a big WWE buff and loves to make fun of all things American, mostly in good fun.",
   },
   {
     name: "Tania Nicholas",
     role: "Director of PCI Compliance Services",
     image: tania,
     linkedin: "",
-    bio: "Tania leads the PCI practice, guiding organisations through the complexities of payment card security. Her deep knowledge of PCI DSS ensures clients achieve and maintain compliance with confidence.",
+    bio: "Since starting at 3Factor in 2017, Tania has become the self-proclaimed GRC Nurturer in Chief given her extensive experience. She is backed up by her team, which she is always happy to share her wisdom with. She is an exceptional project manager, and wears this hat even with her husband and two kids. They enjoy traveling, playing and watching sports and hanging out with friends and family.",
   },
   {
     name: "Ricardo Patino",
-    role: "Senior Consultant",
+    role: "",
     image: ricardo,
     linkedin: "",
-    bio: "Ricardo is a CISSP-certified security strategist focused on enterprise risk and governance. He has guided dozens of organisations through their first SOC 2 and ISO 27001 certifications.",
+    bio: "Ricardo has been putting up with Spyro since 2012, as they tackled cybersecurity work together. They both love to take on and debate through security challenges and conundrums. When he isn't doing that, you can find Ricardo on a beach somewhere- but that doesn't stop his productivity. The sea salt air and adventures power the brain behind that shiny head.",
   },
   {
-    name: "Michel de Leeuw",
-    role: "Principal Consultant",
-    image: michel,
-    linkedin: "",
-    bio: "A seasoned principal consultant with deep expertise in ISO 27001, SOC 2, and PCI DSS. Michel brings a methodical, client-first approach to every engagement.",
-  },
-  {
-    name: "Koert van der Veer",
-    role: "Senior Consultant",
-    image: koert,
-    linkedin: "",
-    bio: "Koert specialises in cloud security architecture and compliance automation. His engineering background bridges technical implementation and audit-ready documentation.",
-  },
-  {
-    name: "Mason Clarke",
-    role: "Consultant",
+    name: "Mason Reagan",
+    role: "",
     image: mason,
     linkedin: "",
-    bio: "Mason specialises in cloud-native security across AWS and Azure environments. He helps organisations build secure-by-design architectures.",
+    bio: "Mason has been friends with our Greek principal since college, and decided to take their friendship to the next level and come to work for him. He is always down for an adventure, and Spyro is always happy to think one up and (strongly) encourage participation. He brings his love of poker, travel and being willing to always learn. He is working on being the best husband he can be — happy wife, happy life.",
   },
   {
-    name: "Haley Whitfield",
-    role: "Consultant",
-    image: haley,
-    linkedin: "",
-    bio: "Haley brings expertise in privacy regulations including GDPR, CCPA, and HIPAA. She helps organisations build privacy programmes that protect both customers and business interests.",
-  },
-  {
-    name: "Kelsee Martin",
-    role: "Consultant",
+    name: "Kelsee Moore",
+    role: "",
     image: kelsee,
     linkedin: "",
-    bio: "Kelsee is a compliance operations specialist who streamlines audit preparation and evidence collection. Her process-driven approach reduces the burden on internal teams by up to 60%.",
+    bio: "Kelsee has mastered the pain of invoicing and all things 3Factor since 2018. She has brought her fun spirit and enthusiasm for making the team feel appreciated. She handles the ad hoc requests that keep the lights on here. Kelsee loves listening to music, dancing and laughing and being around her family. Her guilty pleasures include Bravo tv shows and true crime docuseries. Since 2018, Kelsee wakes up bright and early hearing invoices.",
+  },
+  {
+    name: "Haley Burr",
+    role: "",
+    image: haley,
+    linkedin: "",
+    bio: "Haley graduated from UC Davis with high honors in 2021 with a bachelor's in communication studies and minors in sociology and education sciences. After graduating, she moved to Arizona and soon began working as Spyro's assistant. Her main goals are to keep household operations running smoothly and allow Spyro to focus on what matters most to him. Punctuality and enthusiasm are her two mantras.",
+  },
+  {
+    name: "Michel Helal",
+    role: "",
+    image: michel,
+    linkedin: "",
+    bio: "Michel's love for challenges makes him the \"ironman\" of security analysts. He loves to construct detailed work plans that align with business goals. His project management skills help keep projects on schedule and within scope and budget. His past experience being an entrepreneur makes him excellent in managing teams and achieving milestones.",
+  },
+  {
+    name: "Koert DuBois",
+    role: "",
+    image: koert,
+    linkedin: "",
+    bio: "Koert joined the 3Factor family in 2020 after a long career in IT and Cybersecurity. He's a collaborative contributor and enjoys team environments where he can encourage team members to excel, to learn, and challenge themselves along the way, as well as deliver to expectations. You can always count on Koert to bring humor to the conversation, and is a master of storytelling in a way that only he can!",
+  },
+  {
+    name: "Sean Suter",
+    role: "",
+    image: sean,
+    linkedin: "",
+    bio: "Sean joined the 3Factor fold in 2025 as our Information Security Analyst, bringing a fresh, high-velocity perspective to our compliance projects. While being the youngest face on the team, he comes with a solid array of certifications and experience thus far. A former varsity rugby player for Manchester university, Sean treats every compliance hurdle like a defensive line - something to be analyzed, tackled, and overcome. When he's not deep-diving into security frameworks, he's likely debating sports or playing a round of golf (weather permitting of course!)",
   },
 ];
 
