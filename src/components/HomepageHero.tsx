@@ -31,11 +31,11 @@ const HomepageHero = () => {
             <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
               Don't let security compliance certification(s) slow you down.
             </p>
-            <div className="mb-10 max-w-3xl mx-auto rounded-md px-8 py-6" style={{ backgroundColor: "rgba(30,35,45,0.65)", border: "1px solid rgba(200,210,220,0.15)" }}>
-              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-center">
+            <div className="mb-10 max-w-3xl mx-auto rounded-lg px-8 py-6" style={{ backgroundColor: "rgba(40,50,65,0.45)", border: "1px solid rgba(200,210,220,0.2)", backdropFilter: "blur(4px)" }}>
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-left">
                 We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-center mt-3">
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-left mt-3">
                 Scale into regulated sectors without the friction of security roadblocks. Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
