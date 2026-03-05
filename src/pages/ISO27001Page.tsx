@@ -572,23 +572,19 @@ const ISO27001Page = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is ISO 27001? */}
             <div className="px-6 lg:px-8">
-              <button
-                onClick={() => setCol1Open(!col1Open)}
-                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer">
-                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                  WHAT IS ISO 27001?
-                </h3>
-                <ChevronDown
-                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? 'rotate-180' : ''}`} />
-              </button>
-              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
-                WHAT IS ISO 27001?
-              </h3>
-              <div
-                className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
-              </div>
+              <Accordion type="single" collapsible defaultValue="what-is">
+                <AccordionItem value="what-is" className="border-none">
+                  <AccordionTrigger className="py-0 hover:no-underline">
+                    <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
+                      WHAT IS ISO 27001?
+                    </h3>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-4">ISO/IEC 27001:2022 is the leading international standard for managing information security. It provides a proven framework to help organizations build a robust Information Security Management System (ISMS).</p>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">By implementing this standard, you can systematically reduce risk, optimize operations, and confidently protect sensitive data like financial records and trade secrets.</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Column 2: You're in the right place if... */}
@@ -623,7 +619,7 @@ const ISO27001Page = () => {
             {/* Column 3: Image & Disclaimer */}
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationImg} alt="Professional consultation" className="w-full h-80 object-cover border border-slate-200" />
-              <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+              <div className="absolute bottom-0 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-slate-600 leading-relaxed">"We are not a certification body. We prepare you for certification and support you through the certification journey with your chosen auditor."</p>
                 <p className="text-xs font-semibold text-slate-500 mt-2">Marcus Atkins — Director of Compliance Services</p>
               </div>
@@ -860,10 +856,13 @@ const ISO27001Page = () => {
 
           {/* Pitfalls Subheading */}
           <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
-            HOW WE HELP YOU AVOID COMMON ISO 27001 PITFALLS
+            How we help you avoid common ISO 27001 pitfalls
           </h3>
+          <p className="text-sm text-slate-500 mb-2">
+            Our approach solves the frequent industry traps that sink most compliance projects.
+          </p>
           <p className="text-lg text-slate-600 mb-10">
-            Our tried and tested approach ensures your certification journey stays on track while avoiding these frequent industry traps.
+            Our tried and tested approach ensures your certification journey stays on track.
           </p>
 
           {/* Problems & Solutions */}
