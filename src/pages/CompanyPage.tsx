@@ -202,16 +202,16 @@ const CompanyPage = () => {
                 ))}
               </CarouselContent>
             </Carousel>
-            <p
-              className="text-sm text-center mt-6 leading-relaxed"
-              style={{ color: "#5A5A58" }}
-            >
-              Expertise to earn their trust.
-              <br />
-              Standards to fuel your scale.
-              <br />
-              The oversight to reach the finish line.
-            </p>
+             <p
+               className="text-sm text-center mt-6 leading-relaxed"
+               style={{ color: "#5A5A58" }}
+             >
+               Expertise you can trust.
+               <br />
+               Standards to fuel your scale.
+               <br />
+               The oversight to reach the finish line.
+             </p>
           </div>
         </div>
       </section>
