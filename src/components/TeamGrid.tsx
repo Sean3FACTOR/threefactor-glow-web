@@ -186,7 +186,7 @@ const TeamGrid = () => {
             <ChevronRight size={20} style={{ color: "#3B3B39" }} />
           </button>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className={`grid gap-6 justify-items-center ${visible.length <= 3 ? 'grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto' : 'grid-cols-2 md:grid-cols-5'}`}>
             {visible.map((member) => (
               <div key={member.name} className="flex flex-col items-center">
                 <div
