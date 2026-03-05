@@ -18,7 +18,7 @@ const SuccessOutcomes = () => {
     <section className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
       <div className="container mx-auto px-4">
         <div className="h-px w-full mb-12" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
-        <div className="max-w-5xl mb-6">
+        <div className="mb-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
             From Vendor to Trusted Market Authority
           </h2>
