@@ -16,29 +16,29 @@ const clusters: Cluster[] = [
   {
     title: "Compliance Certifications",
     services: [
-      { label: "ISO 27001", href: "/iso-27001" },
-      { label: "SOC 2", href: "/soc-2" },
-      { label: "PCI DSS", href: "/pci-dss" },
+      { label: "ISO 27001", href: "/services/iso-27001" },
+      { label: "SOC 2", href: "/services/soc-2" },
+      { label: "PCI DSS", href: "/services/pci-dss" },
     ],
   },
   {
     title: "UK Government",
     services: [
-      { label: "Cyber Essentials", href: "/cyber-essentials" },
+      { label: "Cyber Essentials", href: "/services/cyber-essentials" },
     ],
   },
   {
     title: "Advisory",
     services: [
-      { label: "Virtual CISO", href: "/vciso" },
+      { label: "Virtual CISO", href: "/services/vciso" },
     ],
   },
   {
     title: "Strategy and Risk Services",
     services: [
-      { label: "Cyber Maturity", href: "/cyber-maturity-aws" },
-      { label: "Vendor Risk", href: "/strategy-risk-services" },
-      { label: "Cybersecurity Strategy", href: "/strategy-risk-services" },
+      { label: "Cyber Maturity", href: "/services/cyber-maturity-aws" },
+      { label: "Vendor Risk", href: "/services/strategy-risk" },
+      { label: "Cybersecurity Strategy", href: "/services/strategy-risk" },
     ],
   },
 ];
