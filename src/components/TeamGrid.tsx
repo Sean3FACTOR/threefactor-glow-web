@@ -140,7 +140,7 @@ const TeamGrid = () => {
         {featured && page === 0 && (
           <div className="flex flex-col items-center mb-14">
             <div
-              className="w-[200px] md:w-[235px] aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
+              className="w-[200px] md:w-[235px] aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group relative"
               onClick={() => setSelectedMember(featured)}
             >
               <img
@@ -148,6 +148,9 @@ const TeamGrid = () => {
                 alt={featured.name}
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-3 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <span className="text-xs font-mono uppercase tracking-wider text-white">Read Bio →</span>
+              </div>
             </div>
             <h3
               className="text-base font-bold mt-4 text-center"
