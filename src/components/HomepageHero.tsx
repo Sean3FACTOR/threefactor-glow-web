@@ -14,10 +14,10 @@ const HomepageHero = () => {
           className="w-full h-full object-cover"
           aria-hidden="true"
         />
-        {/* Dark overlay for text legibility */}
+        {/* Dark cool-toned overlay for text legibility */}
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(59,59,57,0.88) 0%, rgba(59,59,57,0.72) 50%, rgba(59,59,57,0.55) 100%)" }}
+          style={{ background: "linear-gradient(180deg, rgba(15,23,42,0.92) 0%, rgba(20,30,50,0.85) 40%, rgba(25,35,55,0.80) 100%)" }}
         />
       </div>
 
@@ -31,11 +31,11 @@ const HomepageHero = () => {
             <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
               Don't let security compliance certification(s) slow you down.
             </p>
-            <div className="space-y-3 mb-10 max-w-4xl mx-auto text-left">
-              <p className="text-base md:text-lg leading-relaxed text-white/85 font-bold uppercase">
+            <div className="mb-10 max-w-3xl mx-auto rounded-md px-8 py-6" style={{ backgroundColor: "rgba(30,35,45,0.65)", border: "1px solid rgba(200,210,220,0.15)" }}>
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-center">
                 We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-white/85 font-bold uppercase">
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold uppercase text-center mt-3">
                 Scale into regulated sectors without the friction of security roadblocks. Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
