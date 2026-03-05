@@ -1,17 +1,29 @@
 import { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
-  CheckCircle2,
   ArrowRight,
+  CheckCircle2,
+  XCircle,
   Shield,
-  FileCheck,
-  ClipboardList,
-  BarChart3,
-  Zap,
+  Target,
+  Layers,
+  ClipboardCheck,
   Users,
+  FileText,
+  FileCheck,
+  Cog,
+  Eye,
   RefreshCw,
-  ChevronRight,
+  BarChart3,
+  DollarSign,
+  Microscope,
+  Compass,
+  ShieldCheck,
+  Zap,
+  Download,
+  ClipboardList,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,10 +43,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import heroImg from "@/assets/hero-boardroom.jpg";
+import hexagonGraphic from "@/assets/hexagon-network-hero.png";
+import consultationImg from "@/assets/homepage/conference-meeting.jpg";
 
-/* ─────────────────────────────────────────────
-   Proposal Modal
-───────────────────────────────────────────── */
+/* ─── Proposal Modal ─── */
 const ProposalModal = ({
   open,
   onOpenChange,
@@ -48,7 +61,6 @@ const ProposalModal = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    // TODO: wire to CRM / email endpoint
     setTimeout(() => {
       setSubmitting(false);
       onOpenChange(false);
@@ -59,100 +71,68 @@ const ProposalModal = ({
     }, 800);
   };
 
+  const selectClasses =
+    "flex h-10 w-full border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500";
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg bg-card border-border">
+      <DialogContent className="sm:max-w-lg bg-white border-slate-200">
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold uppercase tracking-wide text-foreground">
+          <DialogTitle className="text-xl font-bold uppercase tracking-wide text-slate-900">
             Get a Fixed-Price SOC 2 Proposal
           </DialogTitle>
-          <DialogDescription className="text-sm" style={{ color: "#646464" }}>
-            Right-fit scope (often Security + Availability) • Type 1 + Type 2 setup
+          <DialogDescription className="text-sm text-slate-500">
+            Right-fit scope (often Security + Availability) · Type 1 + Type 2 setup
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="workEmail" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Work email *
-              </Label>
-              <Input id="workEmail" name="workEmail" type="email" required className="mt-1" />
-            </div>
-            <div>
-              <Label htmlFor="fullName" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Name *
-              </Label>
-              <Input id="fullName" name="fullName" type="text" required className="mt-1" />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="company" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Company *
-              </Label>
-              <Input id="company" name="company" type="text" required className="mt-1" />
-            </div>
-            <div>
-              <Label htmlFor="role" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Role *
-              </Label>
-              <select
-                id="role"
-                name="role"
-                required
-                className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring mt-1"
+          {[
+            { id: "workEmail", label: "Work email *", type: "email" },
+            { id: "company", label: "Company *", type: "text" },
+          ].map((f) => (
+            <div key={f.id}>
+              <Label
+                htmlFor={f.id}
+                className="font-mono text-xs uppercase tracking-wider text-slate-900"
               >
-                <option value="">Select…</option>
-                {["Security", "Compliance", "IT", "Executive", "Other"].map((o) => (
-                  <option key={o} value={o}>{o}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="type2Period" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Target Type 2 period *
+                {f.label}
               </Label>
-              <select
-                id="type2Period"
-                name="type2Period"
+              <Input
+                id={f.id}
+                name={f.id}
+                type={f.type}
                 required
-                className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring mt-1"
-              >
-                <option value="">Select…</option>
-                {["3 months", "6 months", "12 months", "Not sure"].map((o) => (
-                  <option key={o} value={o}>{o}</option>
-                ))}
-              </select>
+                className="mt-1 border-slate-300 text-slate-900"
+              />
             </div>
-            <div>
-              <Label htmlFor="criteria" className="font-mono text-xs uppercase tracking-wider text-foreground">
-                Likely criteria *
-              </Label>
-              <select
-                id="criteria"
-                name="criteria"
-                required
-                className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring mt-1"
-              >
-                <option value="">Select…</option>
-                {["Security + Availability", "Security only", "Other / Not sure"].map((o) => (
-                  <option key={o} value={o}>{o}</option>
-                ))}
-              </select>
-            </div>
+          ))}
+          <div>
+            <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">
+              Target Type 2 period *
+            </Label>
+            <select name="type2Period" required className={selectClasses}>
+              <option value="">Select…</option>
+              {["3 months", "6 months", "12 months", "Not sure"].map((o) => (
+                <option key={o} value={o}>{o}</option>
+              ))}
+            </select>
           </div>
           <div>
-            <Label htmlFor="isoCertified" className="font-mono text-xs uppercase tracking-wider text-foreground">
+            <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">
+              Likely criteria *
+            </Label>
+            <select name="criteria" required className={selectClasses}>
+              <option value="">Select…</option>
+              {["Security + Availability", "Security only", "Other / Not sure"].map((o) => (
+                <option key={o} value={o}>{o}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">
               ISO 27001 status *
             </Label>
-            <select
-              id="isoCertified"
-              name="isoCertified"
-              required
-              className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring mt-1"
-            >
+            <select name="isoCertified" required className={selectClasses}>
               <option value="">Select…</option>
               {["Certified", "In implementation", "Not started"].map((o) => (
                 <option key={o} value={o}>{o}</option>
@@ -160,20 +140,24 @@ const ProposalModal = ({
             </select>
           </div>
           <div>
-            <Label htmlFor="driver" className="font-mono text-xs uppercase tracking-wider text-foreground">
+            <Label className="font-mono text-xs uppercase tracking-wider text-slate-900">
               Primary driver (optional)
             </Label>
-            <Textarea id="driver" name="driver" className="mt-1" rows={3} placeholder="e.g. enterprise deal requirement, investor due diligence…" />
+            <Textarea
+              name="driver"
+              className="mt-1 border-slate-300 text-slate-900"
+              rows={3}
+              placeholder="e.g. enterprise deal requirement, investor due diligence…"
+            />
           </div>
           <Button
             type="submit"
             disabled={submitting}
-            className="w-full text-white font-semibold"
-            style={{ backgroundColor: "#3B3B39" }}
+            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold"
           >
             {submitting ? "Submitting…" : "Request Proposal"}
           </Button>
-          <p className="text-xs text-center" style={{ color: "#646464" }}>
+          <p className="text-xs text-center text-slate-500">
             We'll follow up to schedule a 30-minute call and confirm scope.
           </p>
         </form>
@@ -182,71 +166,285 @@ const ProposalModal = ({
   );
 };
 
-/* ─────────────────────────────────────────────
-   Journey Diagram SVG
-───────────────────────────────────────────── */
-const JourneyDiagram = () => (
-  <div className="relative w-full" style={{ maxWidth: 700 }}>
-    <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-      <defs>
-        <linearGradient id="soc2LineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#F36F21" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#F36F21" stopOpacity="0.5" />
-        </linearGradient>
-        <filter id="soc2NodeGlow">
-          <feGaussianBlur stdDeviation="5" result="blur" />
-          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-        </filter>
-      </defs>
+/* ─── Stepper Data ─── */
+const soc2Steps = [
+  {
+    icon: Target,
+    stage: 1,
+    title: "Scope & TSC Mapping",
+    duration: "~2 Weeks",
+    durationWeeks: 2,
+    desc: "Define boundaries and select criteria based on customer expectations: right-fit scope, nothing more.",
+    details: [
+      "Define system boundaries and in-scope components",
+      "Map customer requirements to Trust Services Criteria",
+      "Recommend right-fit scope (typically Security + Availability)",
+      "Document subservice organizations and dependencies",
+    ],
+  },
+  {
+    icon: ClipboardCheck,
+    stage: 2,
+    title: "Readiness Assessment",
+    duration: "~3 Weeks",
+    durationWeeks: 3,
+    desc: "Confirm control design and evidence gaps with a prioritised remediation plan.",
+    details: [
+      "Evaluate existing controls against selected TSC",
+      "Identify evidence maturity and collection gaps",
+      "Produce prioritised remediation roadmap",
+      "Confirm Type 1 → Type 2 timeline",
+    ],
+  },
+  {
+    icon: Cog,
+    stage: 3,
+    title: "Remediation + Documentation",
+    duration: "4–6 Weeks",
+    durationWeeks: 5,
+    desc: "Implement controls and complete the Section 3 system description.",
+    details: [
+      "Implement or refine control statements aligned to TSC",
+      "Draft and refine Section 3 system description narrative",
+      "Create audit-ready documentation pack",
+      "Align procedures with operational reality",
+    ],
+  },
+  {
+    icon: FileCheck,
+    stage: 4,
+    title: "Type 1 Preparation",
+    duration: "~2 Weeks",
+    durationWeeks: 2,
+    desc: "Prepare the Type 1 evidence pack and coordinate with the CPA firm.",
+    details: [
+      "TSC-aligned control statements finalised",
+      "Evidence register setup for Type 2 readiness",
+      "Auditor coordination and walkthrough support",
+      "Pre-audit validation of control design",
+    ],
+  },
+  {
+    icon: BarChart3,
+    stage: 5,
+    title: "Type 2 Program Setup",
+    duration: "~3 Weeks",
+    durationWeeks: 3,
+    desc: "Establish monitoring, evidence cadence, and sampling readiness before the operating period begins.",
+    details: [
+      "Evidence cadence, owners, sources, and retention defined",
+      "Low-level monitoring checks established",
+      "Sampling readiness model in place",
+      "Evidence-on-demand foundations operational",
+    ],
+  },
+  {
+    icon: RefreshCw,
+    stage: 6,
+    title: "Type 2 Period Support",
+    duration: "3–12 Months",
+    durationWeeks: 6,
+    desc: "Optional ongoing support through the operating period: evidence ops, auditor liaison, and close-out.",
+    details: [
+      "Monthly evidence ops and sampling readiness",
+      "Auditor liaison and walkthrough support",
+      "Exceptions management",
+      "Close-out and next-cycle improvements",
+    ],
+  },
+];
 
-      {/* Vertical spine */}
-      <line x1="240" y1="68" x2="240" y2="420" stroke="url(#soc2LineGrad)" strokeWidth="1.5" />
+const totalWeeks = soc2Steps.reduce((sum, s) => sum + s.durationWeeks, 0);
 
-      {/* ISO Node (optional) */}
-      <g>
-        <rect x="130" y="20" width="220" height="62" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.18)" strokeWidth="1" />
-        <text x="240" y="44" textAnchor="middle" fill="#3B3B39" fontSize="11" fontFamily="'Open Sans', sans-serif" opacity="0.6" letterSpacing="1.5">OPTIONAL FOUNDATION</text>
-        <text x="240" y="66" textAnchor="middle" fill="#3B3B39" fontSize="17" fontWeight="bold" fontFamily="'Open Sans', sans-serif">ISO 27001</text>
-      </g>
+/* ─── Interactive Timeline ─── */
+const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
+  const [active, setActive] = useState(0);
+  const step = soc2Steps[active];
+  const Icon = step.icon;
 
-      {/* Connector arrow */}
-      <polygon points="240,108 235,98 245,98" fill="rgba(243,111,33,0.4)" />
+  return (
+    <div>
+      {/* Desktop */}
+      <div className="hidden lg:block">
+        <div className="relative mb-4">
+          <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200" />
+          <div
+            className="absolute top-6 left-0 h-0.5 transition-all duration-500"
+            style={{
+              width: `${(active / (soc2Steps.length - 1)) * 100}%`,
+              backgroundColor: "#3B3B39",
+            }}
+          />
+          <div className="relative flex justify-between">
+            {soc2Steps.map((s, i) => {
+              const StepIcon = s.icon;
+              const isActive = i === active;
+              const isPast = i < active;
+              return (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className="flex flex-col items-center gap-2 group relative z-10"
+                >
+                  <div
+                    className={`w-12 h-12 flex items-center justify-center border-2 transition-all duration-300 ${
+                      isActive
+                        ? "border-orange-600 bg-orange-50"
+                        : isPast
+                        ? "border-[#3B3B39] bg-white"
+                        : "border-slate-300 bg-white"
+                    }`}
+                  >
+                    <StepIcon
+                      className={`w-5 h-5 transition-colors duration-300 ${
+                        isActive
+                          ? "text-orange-600"
+                          : isPast
+                          ? "text-[#3B3B39]"
+                          : "text-slate-400"
+                      }`}
+                    />
+                  </div>
+                  <span
+                    className={`text-[10px] font-mono uppercase tracking-wider max-w-[90px] text-center leading-tight ${
+                      isActive ? "text-orange-600 font-bold" : "text-slate-500"
+                    }`}
+                  >
+                    {s.title}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-      {/* SOC 2 Type 1 Node */}
-      <g filter="url(#soc2NodeGlow)">
-        <rect x="110" y="120" width="260" height="80" fill="#F36F21" opacity="0.95" />
-      </g>
-      <rect x="110" y="120" width="260" height="80" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-      <text x="240" y="148" textAnchor="middle" fill="white" fontSize="10" fontFamily="'Open Sans', sans-serif" letterSpacing="2.5" opacity="0.85">POINT-IN-TIME</text>
-      <text x="240" y="176" textAnchor="middle" fill="white" fontSize="22" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 1</text>
+        <div className="flex gap-px mb-8">
+          {soc2Steps.map((s, i) => {
+            const widthPct = (s.durationWeeks / totalWeeks) * 100;
+            return (
+              <div key={i} style={{ width: `${widthPct}%` }}>
+                <div
+                  className={`h-2 transition-colors duration-300 ${
+                    i <= active ? "bg-orange-600" : "bg-slate-100"
+                  }`}
+                />
+                <span className="text-[9px] font-mono text-slate-500 mt-1 block truncate">
+                  {s.duration}
+                </span>
+              </div>
+            );
+          })}
+        </div>
 
-      {/* Connector arrow */}
-      <polygon points="240,234 235,224 245,224" fill="rgba(243,111,33,0.6)" />
+        <div className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
+                  <Icon className="w-5 h-5 text-orange-600" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
+                    Step {step.stage} · {step.duration}
+                  </span>
+                  <h3 className="text-lg font-bold uppercase text-slate-900">
+                    {step.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
+              <ul className="space-y-2 mb-6">
+                {step.details.map((d) => (
+                  <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                onClick={openModal}
+                className="text-white font-semibold"
+                style={{ backgroundColor: "#3B3B39" }}
+              >
+                Get a Fixed-Price SOC 2 Proposal
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+            <div className="hidden lg:flex items-center justify-center overflow-hidden">
+              <img
+                src={hexagonGraphic}
+                alt=""
+                className="w-full h-auto max-h-[336px] object-contain opacity-80"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* SOC 2 Type 2 Node */}
-      <rect x="90" y="248" width="300" height="96" fill="white" stroke="rgba(243,111,33,0.5)" strokeWidth="1.5" />
-      <text x="240" y="276" textAnchor="middle" fill="#F36F21" fontSize="10" fontFamily="'Open Sans', sans-serif" letterSpacing="2.5">OPERATING PERIOD</text>
-      <text x="240" y="308" textAnchor="middle" fill="#3B3B39" fontSize="22" fontWeight="bold" fontFamily="'Open Sans', sans-serif">SOC 2 TYPE 2</text>
-      <text x="240" y="332" textAnchor="middle" fill="#646464" fontSize="11" fontFamily="'Open Sans', sans-serif">3 / 6 / 12 months</text>
+      {/* Mobile */}
+      <div className="lg:hidden">
+        <Accordion type="single" collapsible defaultValue="stage-0">
+          {soc2Steps.map((s, i) => {
+            const StepIcon = s.icon;
+            return (
+              <AccordionItem key={i} value={`stage-${i}`} className="border-b border-slate-200">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <div className="flex items-center gap-3 min-h-[44px]">
+                    <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
+                      <StepIcon className="w-5 h-5 text-orange-600" />
+                    </div>
+                    <div className="text-left">
+                      <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
+                        Step {s.stage} · {s.duration}
+                      </span>
+                      <span className="text-sm font-bold uppercase text-slate-900">
+                        {s.title}
+                      </span>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pl-[52px]">
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">{s.desc}</p>
+                  <ul className="space-y-2 mb-4">
+                    {s.details.map((d) => (
+                      <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    onClick={openModal}
+                    size="sm"
+                    className="text-white font-semibold"
+                    style={{ backgroundColor: "#3B3B39" }}
+                  >
+                    Get a Fixed-Price SOC 2 Proposal
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </div>
+    </div>
+  );
+};
 
-      {/* Banner */}
-      <rect x="60" y="368" width="360" height="42" fill="rgba(59,59,57,0.06)" stroke="rgba(59,59,57,0.1)" strokeWidth="1" />
-      <text x="240" y="394" textAnchor="middle" fill="#3B3B39" fontSize="11" fontFamily="'Open Sans', sans-serif" opacity="0.7">Continuous compliance · evidence on demand</text>
+/* ─── Sub-Nav Links ─── */
+const subNavLinks = [
+  { label: "The Approach", target: "approach", icon: Compass },
+  { label: "What We Deliver", target: "deliverables", icon: FileCheck },
+  { label: "Why 3FACTOR", target: "why-3factor", icon: ShieldCheck },
+];
 
-      {/* Floating dots */}
-      <circle cx="80" cy="170" r="4" fill="rgba(243,111,33,0.25)" />
-      <circle cx="400" cy="300" r="4" fill="rgba(243,111,33,0.25)" />
-      <circle cx="68" cy="310" r="2.5" fill="rgba(243,111,33,0.15)" />
-      <circle cx="412" cy="180" r="2.5" fill="rgba(243,111,33,0.15)" />
-    </svg>
-  </div>
-);
-
-/* ─────────────────────────────────────────────
-   Page
-───────────────────────────────────────────── */
+/* ─── Page ─── */
 const SOC2Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeNav, setActiveNav] = useState("");
+  const [col1Open, setCol1Open] = useState(true);
+  const [col2Open, setCol2Open] = useState(true);
 
   useEffect(() => {
     document.title = "SOC 2 Readiness, Type 1 & Type 2 Setup | 3FACTOR";
@@ -259,110 +457,35 @@ const SOC2Page = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = 120;
+      for (const link of [...subNavLinks].reverse()) {
+        const el = document.getElementById(link.target);
+        if (el && el.getBoundingClientRect().top <= offset) {
+          setActiveNav(link.target);
+          return;
+        }
+      }
+      setActiveNav("");
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const openModal = () => {
     setModalOpen(true);
-    // Analytics hook point
     try { (window as any).gtag?.("event", "soc2_primary_cta_click"); } catch {}
   };
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) {
+      const navOffset = 112;
+      const y = el.getBoundingClientRect().top + window.scrollY - navOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
-
-  const serviceCards = [
-    {
-      icon: <ClipboardList size={20} />,
-      title: "SOC 2 Readiness Assessment",
-      subtitle: "Gap Analysis",
-      bullets: [
-        "Scope and boundary definition",
-        "Customer requirements → TSC selection (right-fit scope)",
-        "Control design + evidence maturity review",
-        "Roadmap and Type 1 → Type 2 plan",
-      ],
-    },
-    {
-      icon: <Shield size={20} />,
-      title: "SOC 2 Type 1 Preparation",
-      subtitle: "Design Readiness",
-      bullets: [
-        "TSC-aligned control statements",
-        "Audit-ready documentation pack",
-        "Evidence register setup (for Type 2)",
-        "Auditor coordination support",
-      ],
-    },
-    {
-      icon: <FileCheck size={20} />,
-      title: "SOC 2 System Description",
-      subtitle: "Section 3",
-      bullets: [
-        "Draft and refine Section 3 narrative",
-        "Boundaries, components, subservice orgs",
-        "Align narrative to operational reality",
-        "Reduce auditor churn",
-      ],
-    },
-    {
-      icon: <BarChart3 size={20} />,
-      title: "SOC 2 Type 2 Program Setup",
-      subtitle: "Evidence & Monitoring",
-      bullets: [
-        "Evidence cadence + owners + sources + retention",
-        "Low-level monitoring checks",
-        "Sampling readiness model",
-        "Evidence-on-demand foundations",
-      ],
-    },
-    {
-      icon: <RefreshCw size={20} />,
-      title: "Optional: Type 2 Period Support",
-      subtitle: "Ongoing Operations",
-      bullets: [
-        "Monthly evidence ops + sampling readiness",
-        "Auditor liaison and walkthrough support",
-        "Exceptions management",
-        "Close-out and next-cycle improvements",
-      ],
-    },
-  ];
-
-  const steps = [
-    {
-      num: "01",
-      title: "Scope & TSC Mapping",
-      desc: "Define boundaries and select criteria based on customer expectations: right-fit scope, nothing more.",
-    },
-    {
-      num: "02",
-      title: "Readiness Assessment",
-      desc: "Confirm control design and evidence gaps with a prioritised remediation plan.",
-    },
-    {
-      num: "03",
-      title: "Remediation + Documentation",
-      desc: "Implement controls and complete the Section 3 system description.",
-    },
-    {
-      num: "04",
-      title: "Type 1 + Type 2 Setup",
-      desc: "Prepare the Type 1 pack and establish monitoring + evidence cadence for Type 2.",
-    },
-    {
-      num: "05",
-      title: "Optional: Type 2 Period Support",
-      desc: "Evidence ops + auditor liaison through the operating period and close-out.",
-    },
-  ];
-
-  const whyItems = [
-    { label: "Auditor-effective", desc: "Strong track record supporting Tier 1 and Tier 2 CPA firms" },
-    { label: "Right-fit scope", desc: "Typically Security + Availability, aligned to customer needs" },
-    { label: "Evidence by design", desc: "Monitoring + cadence established before Type 2 starts" },
-    { label: "Low friction", desc: "Clear owners and sources, minimal disruption to delivery teams" },
-    { label: "Integrated program", desc: "Reuse controls and evidence alongside ISO 27001 where relevant" },
-    { label: "Senior-led delivery", desc: "Practical decisions, fast progress. No template theatre." },
-  ];
 
   const faqs = [
     {
@@ -387,656 +510,413 @@ const SOC2Page = () => {
     },
   ];
 
-  const OrangeDot = () => (
-    <span
-      className="inline-block w-1.5 h-1.5 mt-[6px] shrink-0"
-      style={{ backgroundColor: "#F36F21" }}
-      aria-hidden="true"
-    />
-  );
-
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+    <div className="min-h-screen bg-white">
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
-      {/* ── Sticky CTA ── */}
-      <div className="fixed top-14 md:top-16 right-4 z-40">
-        <Button
-          onClick={openModal}
-          size="sm"
-          className="text-white font-semibold shadow-lg text-xs"
-          style={{ backgroundColor: "#3B3B39" }}
-        >
-          Get Proposal
-        </Button>
-      </div>
-
-      {/* ══════════════════════════════════════
-          HERO
-      ══════════════════════════════════════ */}
-      <section className="pt-20 md:pt-24 pb-16" style={{ backgroundColor: "#F8F9FA" }}>
-        <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
-            <span className="text-sm font-medium" style={{ color: "#F36F21" }}>Services</span>
-            <span style={{ color: "rgba(59,59,57,0.4)" }}>/</span>
-            <span className="text-sm" style={{ color: "#3B3B39" }}>SOC 2</span>
-          </div>
-
-          <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Left column */}
-            <div className="col-span-12 lg:col-span-6">
-              <h1
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-[1.15] uppercase"
-                style={{ color: "#3B3B39" }}
-              >
-                Turn SOC 2 into a practical trust signal that reduces sales friction.
-              </h1>
-
-              <p className="text-base md:text-lg mb-5 leading-relaxed" style={{ color: "#646464" }}>
-                Achieve SOC 2 Type 1 efficiently and set up Type 2 for success with an expert-led,
-                automation-enabled approach, aligned to the Trust Services Criteria and focused on
-                the criteria your customers care about most (commonly Security + Availability).
-              </p>
-
-              <p className="text-sm mb-5 leading-relaxed" style={{ color: "#646464" }}>
-                3FACTOR helps you design a right-fit SOC 2 scope, implement controls, complete the
-                Section 3 system description, and establish monitoring and evidence operations so you
-                stay audit-ready across a 3, 6, or 12-month Type 2 period.
-              </p>
-
-              <div className="p-4 mb-6" style={{ backgroundColor: "rgba(59,59,57,0.05)", border: "1px solid rgba(59,59,57,0.15)" }}>
-                <p className="text-sm font-bold" style={{ color: "#3B3B39" }}>
-                  We are not your auditor. We support SOC 2 engagements with multiple Tier 1 and Tier 2
-                  CPA firms, and we have a strong track record of successful SOC 2 audits across clients
-                  and industries.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span
-                  className="inline-block px-3 py-1.5 text-xs font-mono border"
-                  style={{ borderColor: "rgba(59,59,57,0.15)", color: "#3B3B39", backgroundColor: "rgba(255,255,255,0.7)" }}
-                >
-                  Typical timeline: ~4–5 months
-                </span>
-                {["ISO 27001 parallel delivery available"].map((chip) => (
-                  <span
-                    key={chip}
-                    className="inline-block px-3 py-1.5 text-xs font-mono border"
-                    style={{ borderColor: "rgba(243,111,33,0.3)", color: "#F36F21", backgroundColor: "rgba(243,111,33,0.05)" }}
-                  >
-                    {chip}
-                  </span>
-                ))}
-              </div>
-
-              <ul className="space-y-2 mb-8">
-                {[
-                  "Right-fit scope aligned to customer requirements",
-                  "Evidence on demand through monitoring + cadence",
-                  "Clear Type 1 → Type 2 path without operational bloat",
-                ].map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm" style={{ color: "#3B3B39" }}>
-                    <CheckCircle2 size={16} className="mt-0.5 shrink-0" style={{ color: "#F36F21" }} />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button
-                  onClick={openModal}
-                  className="text-white font-semibold px-6"
-                  style={{ backgroundColor: "#3B3B39" }}
-                >
-                  Get a Fixed-Price SOC 2 Proposal
-                  <ArrowRight size={16} />
-                </Button>
-                <Button
-                  variant="default"
-                  onClick={() => scrollTo("checklist")}
-                  className="font-medium px-6 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
-                >
-                  Download the SOC 2 Checklist
-                </Button>
-              </div>
-
-              <p className="text-xs mt-3" style={{ color: "#646464" }}>
-                30-minute call → right-fit scope + tailored plan → fixed-price proposal (Type 1 + Type 2 setup)
-              </p>
-            </div>
-
-            {/* Right column — Journey Diagram */}
-            <div className="col-span-12 lg:col-span-6 flex justify-center items-center">
-              <JourneyDiagram />
-            </div>
-          </div>
+      {/* ═══ HERO BANNER (Dark Gray) ═══ */}
+      <section className="relative min-h-[420px] flex items-center justify-center overflow-hidden pt-24 md:pt-32">
+        <div className="absolute inset-0 z-0">
+          <img src={heroImg} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(59,59,57,0.92) 0%, rgba(59,59,57,0.78) 50%, rgba(59,59,57,0.65) 100%)",
+            }}
+          />
         </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          WHY SOC 2 MATTERS COMMERCIALLY
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-y" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-5">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                Why SOC 2 matters commercially
-              </h2>
-              <p className="text-sm" style={{ color: "#646464" }}>
-                SOC 2 is not only a compliance exercise. It is a structured way to demonstrate
-                operational trust.
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-7">
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "#646464" }}>
-                In most B2B and SaaS markets, customers and procurement teams expect independent
-                assurance of your security and operational controls. A SOC 2 report reduces
-                repetitive questionnaires, improves confidence during vendor risk review, and helps
-                deals progress with fewer delays.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Streamlines customer security reviews and procurement",
-                  "Provides independent assurance aligned to the Trust Services Criteria",
-                  "Supports supply chain scrutiny with a credible control narrative",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#3B3B39" }}>
-                    <OrangeDot />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          RIGHT PLACE CARDS
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10 text-center" style={{ color: "#3B3B39" }}>
-            You're in the right place if…
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: <Zap size={18} />, text: "Security questionnaires are slowing deals" },
-              { icon: <ArrowRight size={18} />, text: "You need a clear Type 1 → Type 2 approach" },
-              { icon: <RefreshCw size={18} />, text: "You want evidence to be routine, not reactive" },
-              { icon: <Shield size={18} />, text: "You want a right-fit scope (often Security + Availability)" },
-            ].map((card, i) => (
-              <div
-                key={i}
-                className="bg-white border p-6 transition-all duration-200 hover:border-[#F36F21]"
-                style={{ borderColor: "rgba(59,59,57,0.1)" }}
-              >
-                <div className="mb-3" style={{ color: "#F36F21" }}>{card.icon}</div>
-                <p className="text-sm font-medium" style={{ color: "#3B3B39" }}>{card.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          WHY SOC 2 TYPE 2 STALLS
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-y" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8 items-start">
-            <div className="col-span-12 lg:col-span-5">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                Why SOC 2 Type 2 stalls
-              </h2>
-              <p className="text-sm italic leading-relaxed" style={{ color: "#646464", borderLeft: "2px solid #F36F21", paddingLeft: 12 }}>
-                Type 2 success depends on how you operate for months in the middle, not how you prepare at the end.
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-7">
-              <ul className="space-y-3">
-                {[
-                  "Evidence collection is inconsistent across the operating period",
-                  "Control ownership is unclear, with no named responsible party",
-                  "Monitoring checks are not defined before the period begins",
-                  "Sampling becomes a last-minute scramble instead of a prepared exercise",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm p-4 border"
-                    style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)", backgroundColor: "rgba(248,249,250,0.8)" }}
-                  >
-                    <span className="shrink-0 text-xs font-mono mt-0.5" style={{ color: "#F36F21" }}>✗</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          SOC 2 IN PLAIN ENGLISH
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-            SOC 2 in plain English
-          </h2>
-          <p className="text-sm mb-10 max-w-2xl" style={{ color: "#646464" }}>
-            SOC 2 evaluates controls against the Trust Services Criteria (TSC). Security is required,
-            and Availability is the most common add-on. We help you select a right-fit scope that meets
-            customer expectations without unnecessary complexity.
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full py-16 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase leading-[1.1] text-white mx-auto max-w-4xl">
+            Get SOC 2 Certified.
+          </h1>
+          <p className="mt-4 text-xl md:text-2xl font-medium text-white/85 max-w-2xl mx-auto">
+            Build a scalable, audit-ready foundation with 3<span className="text-white">FACTOR</span>'s right-fit approach to SOC 2.
           </p>
-
-          <div className="grid grid-cols-12 gap-6">
-            {/* Type 1 card */}
-            <div className="col-span-12 md:col-span-4 bg-white border p-8" style={{ borderColor: "rgba(59,59,57,0.1)" }}>
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>POINT-IN-TIME</div>
-              <h3 className="text-xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>Type 1</h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#646464" }}>
-                Confirms controls are suitably designed at a point in time. The foundation for
-                demonstrating intent and design before moving to operating effectiveness.
-              </p>
-            </div>
-
-            {/* Type 2 card */}
-            <div
-              className="col-span-12 md:col-span-4 border p-8"
-              style={{ backgroundColor: "#F36F21", borderColor: "#F36F21" }}
-            >
-              <div className="text-xs font-mono mb-2" style={{ color: "rgba(255,255,255,0.7)" }}>OPERATING PERIOD</div>
-              <h3 className="text-xl font-bold uppercase mb-3 text-white">Type 2</h3>
-              <p className="text-sm leading-relaxed text-white/90">
-                Confirms controls operate effectively over a defined period (commonly 3, 6, or 12 months).
-                The market standard for B2B and enterprise trust.
-              </p>
-            </div>
-
-            {/* Scope callout */}
-            <div
-              className="col-span-12 md:col-span-4 border p-8"
-              style={{ borderColor: "rgba(243,111,33,0.4)", backgroundColor: "rgba(243,111,33,0.04)" }}
-            >
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>MOST COMMON SCOPE</div>
-              <h3 className="text-base font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>Right-fit criteria</h3>
-              <div className="space-y-2">
-                {[
-                  { label: "Security", note: "Required" },
-                  { label: "Availability", note: "Most common add-on" },
-                  { label: "Others", note: "When contracts require" },
-                ].map((c) => (
-                  <div key={c.label} className="flex items-center justify-between">
-                    <span className="text-sm font-medium" style={{ color: "#3B3B39" }}>{c.label}</span>
-                    <span className="text-xs font-mono px-2 py-0.5" style={{ backgroundColor: "rgba(243,111,33,0.12)", color: "#F36F21" }}>{c.note}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          ISO 27001 BRIDGE
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-y" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-6">
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>FRAMEWORK SYNERGY</div>
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                ISO 27001 → SOC 2: a logical progression
-              </h2>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "#646464" }}>
-                If you're already ISO 27001 certified (or implementing it), SOC 2 Type 1 is often a
-                light lift. ISO 27001 establishes the management system to design risk-based controls
-                and monitor their operation. SOC 2 then provides external attestation aligned to the TSC.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Type 1 leverages existing ISMS control design and governance",
-                  "Type 2 succeeds with monitoring + evidence cadence already established",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#3B3B39" }}>
-                    <OrangeDot />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="col-span-12 lg:col-span-6">
-              <div
-                className="border p-6 space-y-4"
-                style={{ borderColor: "rgba(59,59,57,0.1)", backgroundColor: "rgba(248,249,250,0.8)" }}
-              >
-                {[
-                  { from: "ISO 27001 ISMS", to: "SOC 2 control framework", note: "Reuse control design" },
-                  { from: "Risk treatment plan", to: "TSC control mapping", note: "Aligned evidence" },
-                  { from: "Internal audit cadence", to: "Type 2 monitoring checks", note: "Shared operations" },
-                ].map((row, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm">
-                    <span className="font-mono text-xs px-2 py-1 shrink-0" style={{ backgroundColor: "rgba(59,59,57,0.06)", color: "#3B3B39" }}>{row.from}</span>
-                    <ChevronRight size={14} style={{ color: "#F36F21", flexShrink: 0 }} />
-                    <span className="font-mono text-xs px-2 py-1 shrink-0" style={{ backgroundColor: "rgba(243,111,33,0.08)", color: "#F36F21" }}>{row.to}</span>
-                    <span className="text-xs ml-auto" style={{ color: "#646464" }}>{row.note}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          PLAN / STEPPER
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
-            Your clear path to SOC 2
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-0 relative">
-            {steps.map((step, i) => (
-              <div key={i} className="relative flex md:flex-col items-start gap-4 md:gap-3 p-5 md:p-4 border-b md:border-b-0 md:border-r last:border-r-0 last:border-b-0 bg-white"
-                style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-                <div
-                  className="text-xl font-bold font-mono shrink-0"
-                  style={{ color: "rgba(243,111,33,0.3)" }}
-                >
-                  {step.num}
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold uppercase mb-1" style={{ color: "#3B3B39" }}>
-                    {step.title}
-                  </h3>
-                  <p className="text-xs leading-relaxed" style={{ color: "#646464" }}>
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <Button
               onClick={openModal}
-              className="text-white font-semibold px-8"
-              style={{ backgroundColor: "#3B3B39" }}
+              size="lg"
+              className="group font-semibold transition-all text-white"
+              style={{ backgroundColor: "#3B3B39", border: "1px solid rgba(255,255,255,0.3)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "transparent"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#3B3B39"; }}
             >
               Get a Fixed-Price SOC 2 Proposal
-              <ArrowRight size={16} />
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          WHAT WE DELIVER — SERVICE CARDS
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-y" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>
-            What we deliver
-          </h2>
-          <p className="text-sm mb-10 max-w-xl" style={{ color: "#646464" }}>
-            Fixed-price proposal covers Type 1 + Type 2 program setup. We work collaboratively with
-            Tier 1 and Tier 2 CPA firms and adapt to different sampling and walkthrough expectations.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {serviceCards.map((card, i) => (
-              <div
-                key={i}
-                className="border p-6 transition-all duration-200 hover:border-[#F36F21]"
-                style={{ borderColor: "rgba(59,59,57,0.1)", backgroundColor: "#F8F9FA" }}
+      {/* ═══ INTRODUCTION (White) ═══ */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
+            {/* Column 1: What is SOC 2? */}
+            <div className="px-6 lg:px-8">
+              <button
+                onClick={() => setCol1Open(!col1Open)}
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <span style={{ color: "#F36F21" }}>{card.icon}</span>
-                  <span className="text-xs font-mono" style={{ color: "#646464" }}>{card.subtitle}</span>
-                </div>
-                <h3 className="text-sm font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                  {card.title}
+                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
+                  WHAT IS SOC 2?
                 </h3>
-                <ul className="space-y-2">
-                  {card.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-xs" style={{ color: "#646464" }}>
-                      <OrangeDot />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+                <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? "rotate-180" : ""}`} />
+              </button>
+              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
+                WHAT IS SOC 2?
+              </h3>
+              <div className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <p className="text-sm md:text-base text-slate-700 leading-relaxed">
+                  SOC 2 evaluates controls against the Trust Services Criteria (TSC). It provides independent assurance of your security and operational controls for B2B and SaaS markets.
+                </p>
+                <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
+                  Scope selection and criteria alignment are the primary drivers of audit efficiency. Choosing the right-fit scope (typically Security + Availability) prevents unnecessary complexity.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          AUTOMATION POSITIONING
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-5">
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>DELIVERY APPROACH</div>
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                Expert-led delivery, supported by automation
-              </h2>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#646464" }}>
-                We combine senior compliance expertise with automation-enabled evidence workflows to
-                reduce manual effort and keep your SOC 2 program consistently audit-ready.
-              </p>
-              <p className="text-xs italic" style={{ color: "#646464" }}>
-                We do not rely on generic templates alone. Controls and evidence are tailored to your environment.
-              </p>
             </div>
-            <div className="col-span-12 lg:col-span-7">
-              <ul className="space-y-3">
-                {[
-                  "Guidance on control design that fits your operating model, avoiding over-engineering",
-                  "Evidence workflows aligned to your existing systems and processes",
-                  "Defined monitoring checks and cadences to prevent compliance drift",
-                  "Audit-ready evidence register that supports sampling at any time",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm p-4 bg-white border"
-                    style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
-                  >
-                    <CheckCircle2 size={16} className="shrink-0 mt-0.5" style={{ color: "#F36F21" }} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ══════════════════════════════════════
-          EVIDENCE ENABLEMENT
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-y" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-5">
-              <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>OPERATIONAL READINESS</div>
-              <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-                Evidence on demand, enabled by your existing systems
-              </h2>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#646464" }}>
-                We set up evidence collection and monitoring to run through the systems you already
-                 use: identity and access controls, ticketing and change workflows, cloud logs,
-                 endpoint controls, and policy repositories. Evidence is captured as part of daily
-                 operations, not a monthly scramble.
-              </p>
-              <div
-                className="border-l-2 pl-4 text-sm italic"
-                style={{ borderColor: "#F36F21", color: "#646464" }}
+            {/* Column 2: You're in the right place if... */}
+            <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
+              <button
+                onClick={() => setCol2Open(!col2Open)}
+                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
               >
-                This is what makes Type 2 sustainable across a 3, 6, or 12-month period.
+                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
+                  YOU'RE IN THE RIGHT PLACE IF…
+                </h3>
+                <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col2Open ? "rotate-180" : ""}`} />
+              </button>
+              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
+                YOU'RE IN THE RIGHT PLACE IF…
+              </h3>
+              <div className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col2Open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="flex flex-col gap-3">
+                  {[
+                    "Security questionnaires are slowing your deals",
+                    "You need a clear Type 1 → Type 2 approach",
+                    "You want evidence to be routine, not reactive",
+                    "You want a right-fit scope (often Security + Availability)",
+                  ].map((text, i) => (
+                    <div key={i} className="p-5 text-sm text-slate-700 bg-slate-50 border border-slate-200 shadow-sm">
+                      {text}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-7">
-              <ul className="space-y-3">
-                {[
-                  "Define evidence sources and owners per control (TSC-aligned)",
-                  "Streamline recurring evidence capture where possible",
-                  "Lightweight monitoring checks for ongoing control operation",
-                  "Evidence register ready for sampling at any time",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm p-4 border"
-                    style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)", backgroundColor: "#F8F9FA" }}
-                  >
-                    <CheckCircle2 size={16} className="shrink-0 mt-0.5" style={{ color: "#F36F21" }} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+
+            {/* Column 3: Image & Disclaimer */}
+            <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
+              <img src={consultationImg} alt="SOC 2 consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
+              <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+                <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
+                  "We are not your auditor. We support SOC 2 engagements with multiple Tier 1 and Tier 2 CPA firms, and we have a strong track record of successful SOC 2 audits across clients and industries."
+                </p>
+                <p className="text-xs text-slate-500 mt-2">Marcus Atkins — Director of Compliance Services</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          TIMELINE
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-2" style={{ color: "#3B3B39" }}>
-            Typical delivery: ~4–5 months
-          </h2>
-          <p className="text-sm mb-10 max-w-2xl" style={{ color: "#646464" }}>
-            Timeline depends on organisational complexity, scope, and control environment maturity.
-            When ISO 27001 is being implemented, SOC 2 Type 1 and the Section 3 system description
-            can often be developed in parallel to reduce duplication.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {/* ═══ SUB-NAV BAR ═══ */}
+      <section className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {subNavLinks.map((link) => {
+              const LinkIcon = link.icon;
+              return (
+                <button
+                  key={link.target}
+                  onClick={() => scrollTo(link.target)}
+                  className={`w-full sm:w-auto border px-6 py-3 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 font-medium text-sm ${
+                    activeNav === link.target
+                      ? "text-orange-600 border-orange-500 bg-[#5A5A58] text-white"
+                      : "text-white border-[#5A5A58] bg-[#5A5A58] hover:text-orange-400 hover:border-orange-400/50"
+                  }`}
+                >
+                  <LinkIcon className="w-5 h-5" />
+                  {link.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ THE APPROACH (Off-White) ═══ */}
+      <section id="approach" className="py-24 border-y border-slate-200" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-8">
+              THE 3<span className="text-[#F36F21]">FACTOR</span> APPROACH
+            </h2>
+            <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left inline-block">
+              <li>We design a right-fit SOC 2 scope aligned to your customer requirements, not a maximalist checkbox exercise.</li>
+              <li>The goal is to establish controls, evidence, and monitoring that make Type 2 sustainable from day one.</li>
+              <li>Take a look at our 6-step process from scoping to Type 2 readiness.</li>
+            </ul>
+          </div>
+
+          {/* SOC 2 Approach Highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+            {[
+              { icon: Target, text: "Right-fit TSC scope selection" },
+              { icon: Shield, text: "Control design aligned to operations" },
+              { icon: FileText, text: "Section 3 system description" },
+              { icon: BarChart3, text: "Evidence model and monitoring setup" },
+              { icon: RefreshCw, text: "Type 2 cadence and sampling readiness" },
+            ].map((item, i) => {
+              const ItemIcon = item.icon;
+              return (
+                <div key={i} className="bg-white p-5 border border-slate-200 text-center">
+                  <ItemIcon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
+                  <p className="text-xs font-semibold text-slate-700 leading-relaxed">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
+            The 6-Step Process
+          </h3>
+          <InteractiveTimeline openModal={openModal} />
+        </div>
+      </section>
+
+      {/* ═══ WHAT WE DELIVER (White) ═══ */}
+      <section id="deliverables" className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
+              WHAT WE DELIVER
+            </h2>
+            <p className="text-sm text-slate-600 max-w-2xl mx-auto">
+              SOC 2 as an operating model, not a one-time project. We operationalize scope management, evidence collection, and control validation as part of business-as-usual.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {[
               {
-                phase: "Weeks 1–6",
-                title: "Foundation",
-                bullets: ["Scope + TSC mapping", "Readiness assessment", "Control design", "Section 3 drafting"],
-                style: { borderColor: "rgba(59,59,57,0.1)", backgroundColor: "white" },
+                icon: ClipboardList,
+                title: "Readiness & Gap Analysis",
+                items: [
+                  "Scope and boundary definition",
+                  "Customer requirements → TSC selection (right-fit scope)",
+                  "Control design + evidence maturity review",
+                  "Roadmap and Type 1 → Type 2 plan",
+                ],
               },
               {
-                phase: "Weeks 7–12",
-                title: "Type 1 + Type 2 Setup",
-                bullets: ["Type 1 pack", "Evidence model + cadence", "Monitoring checks", "Sampling readiness"],
-                style: { borderColor: "#F36F21", backgroundColor: "#F36F21" },
-                dark: true,
+                icon: FileText,
+                title: "Type 1 Preparation & Section 3",
+                items: [
+                  "TSC-aligned control statements",
+                  "Draft and refine Section 3 system description",
+                  "Audit-ready documentation pack",
+                  "Auditor coordination support",
+                ],
               },
               {
-                phase: "3 / 6 / 12 months",
-                title: "Type 2 Period",
-                bullets: ["Evidence-on-demand routines", "Walkthrough support (optional)", "Exceptions management + close-out (optional)"],
-                style: { borderColor: "rgba(59,59,57,0.1)", backgroundColor: "white" },
-                note: "Optional support tier",
+                icon: BarChart3,
+                title: "Type 2 Program Setup",
+                items: [
+                  "Evidence cadence, owners, sources, and retention",
+                  "Low-level monitoring checks",
+                  "Sampling readiness model",
+                  "Evidence-on-demand foundations",
+                ],
               },
-            ].map((phase, i) => (
-              <div key={i} className="border p-6" style={phase.style}>
-                <div className={`text-xs font-mono mb-1 ${phase.dark ? "text-white/70" : ""}`} style={!phase.dark ? { color: "#F36F21" } : {}}>
-                  {phase.phase}
-                </div>
-                <h3 className={`text-base font-bold uppercase mb-4 ${phase.dark ? "text-white" : ""}`} style={!phase.dark ? { color: "#3B3B39" } : {}}>
-                  {phase.title}
-                </h3>
-                {phase.note && (
-                  <div className="text-xs font-mono mb-3 px-2 py-1 inline-block" style={{ backgroundColor: "rgba(59,59,57,0.06)", color: "#646464" }}>
-                    {phase.note}
+              {
+                icon: RefreshCw,
+                title: "Ongoing Type 2 Period Support",
+                items: [
+                  "Monthly evidence ops and sampling readiness",
+                  "Auditor liaison and walkthrough support",
+                  "Exceptions management",
+                  "Close-out and next-cycle improvements",
+                ],
+              },
+            ].map((card, i) => {
+              const CardIcon = card.icon;
+              return (
+                <div key={i} className="bg-white border border-slate-200 shadow-sm p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 flex items-center justify-center bg-slate-50 border border-slate-200">
+                      <CardIcon className="w-5 h-5 text-orange-600" />
+                    </div>
+                    <h3 className="text-base font-bold uppercase text-slate-900">{card.title}</h3>
                   </div>
-                )}
-                <ul className="space-y-2">
-                  {phase.bullets.map((b) => (
-                    <li key={b} className={`flex items-start gap-2 text-xs ${phase.dark ? "text-white/90" : ""}`} style={!phase.dark ? { color: "#646464" } : {}}>
-                      <OrangeDot />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          BUILD ONCE BAND
-      ══════════════════════════════════════ */}
-      <section
-        className="py-14 border-y"
-        style={{ backgroundColor: "#3B3B39", borderColor: "#3B3B39" }}
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4 text-white">
-            Build once. Reuse across frameworks.
-          </h2>
-          <p className="text-sm max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
-            We design controls and evidence with reuse in mind so your SOC 2 work can support
-             adjacent requirements such as ISO 27001 and customer assurance requests,
-             reducing duplicate work over time.
-          </p>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          WHY 3FACTOR
-      ══════════════════════════════════════ */}
-      <section className="py-16 bg-white border-b" style={{ borderColor: "rgba(59,59,57,0.08)" }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-10" style={{ color: "#3B3B39" }}>
-            Why teams choose 3FACTOR for SOC 2
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {whyItems.map((item) => (
-              <div
-                key={item.label}
-                className="p-5 border transition-all duration-200 hover:border-[#F36F21]"
-                style={{ borderColor: "rgba(59,59,57,0.1)", backgroundColor: "#F8F9FA" }}
-              >
-                <div className="text-xs font-mono font-bold uppercase mb-1" style={{ color: "#F36F21" }}>
-                  {item.label}
+                  <ul className="space-y-2">
+                    {card.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-slate-700">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-sm" style={{ color: "#646464" }}>{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          {/* Terminal CTA */}
+          <div className="text-center">
+            <Button
+              onClick={openModal}
+              size="lg"
+              className="bg-white hover:bg-slate-100 text-slate-900 font-semibold text-base px-10 py-6 border border-slate-300 shadow-sm"
+            >
+              Get a Fixed-Price SOC 2 Proposal
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          FAQ
-      ══════════════════════════════════════ */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-8" style={{ color: "#3B3B39" }}>
-            FAQ
+      {/* ═══ ISO 27001 BRIDGE (Off-White) ═══ */}
+      <section className="py-16" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-10 text-center">
+            ISO 27001 → SOC 2: A LOGICAL PROGRESSION
           </h2>
-          <div className="max-w-2xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-2">
-              {faqs.map((faq, i) => (
-                <AccordionItem
-                  key={i}
-                  value={`faq-${i}`}
-                  className="border px-5"
-                  style={{ borderColor: "rgba(59,59,57,0.1)", backgroundColor: "white" }}
-                >
-                  <AccordionTrigger className="text-sm font-semibold text-left" style={{ color: "#3B3B39" }}>
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm pb-4" style={{ color: "#646464" }}>
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white border border-slate-200 p-8 shadow-sm">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-slate-50">
+                <Layers className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-bold uppercase text-slate-900 text-center mb-3">
+                Type 1 Leverage
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed text-center">
+                If you're already ISO 27001 certified, SOC 2 Type 1 is often a light lift. ISO 27001 establishes the management system to design risk-based controls. SOC 2 then provides external attestation aligned to the TSC.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 p-8 shadow-sm">
+              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-slate-50">
+                <RefreshCw className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-bold uppercase text-slate-900 text-center mb-3">
+                Type 2 Success
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed text-center">
+                Type 2 succeeds with monitoring and evidence cadence already established through ISO 27001 operations. Reuse controls and evidence alongside ISO 27001 where relevant.
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ WHY ORGANISATIONS CHOOSE 3FACTOR (Off-White) ═══ */}
+      <section id="why-3factor" className="py-20" style={{ backgroundColor: "#F8F9FA" }}>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-12 text-center">
+            WHY ORGANISATIONS CHOOSE 3<span className="text-[#F36F21]">FACTOR</span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {[
+              { icon: Users, stat: "Auditor-Effective", label: "Strong track record supporting Tier 1 and Tier 2 CPA firms" },
+              { icon: Target, stat: "Right-Fit Scope", label: "Typically Security + Availability, aligned to customer needs" },
+              { icon: Microscope, stat: "Evidence by Design", label: "Monitoring + cadence established before Type 2 starts" },
+              { icon: Zap, stat: "Low Friction", label: "Clear owners and sources, minimal disruption to delivery teams" },
+              { icon: Layers, stat: "Integrated Program", label: "Reuse controls and evidence alongside ISO 27001 where relevant" },
+              { icon: Shield, stat: "Senior-Led Delivery", label: "Practical decisions, fast progress. No template theatre." },
+            ].map((item, i) => {
+              const StatIcon = item.icon;
+              return (
+                <div key={i} className="bg-white p-6 border border-slate-200 shadow-sm text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-slate-50">
+                    <StatIcon className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <p className="text-lg font-bold text-slate-900 mb-1">{item.stat}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.label}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Pitfalls */}
+          <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
+            HOW WE HELP YOU AVOID COMMON SOC 2 PITFALLS
+          </h3>
+          <p className="text-lg text-slate-600 mb-10">
+            Our right-fit approach ensures your SOC 2 program stays lean and effective.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
+            <div>
+              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
+                Common failure modes
+              </h3>
+              <ul className="space-y-6">
+                {[
+                  { problem: "Evidence collection is inconsistent across the operating period", detail: "Without a defined cadence, evidence gathering becomes a last-minute scramble." },
+                  { problem: "Control ownership is unclear", detail: "No named responsible party leads to gaps and finger-pointing during walkthroughs." },
+                  { problem: "Monitoring checks not defined before Type 2 starts", detail: "Reactive monitoring leads to sampling failures and audit exceptions." },
+                  { problem: "Over-scoped criteria inflating audit complexity", detail: "Including unnecessary TSC adds cost and effort without customer benefit." },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <div className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                How we solve it
+              </h3>
+              <ul className="space-y-6">
+                {[
+                  { fix: "Defined evidence cadence and ownership from day one", detail: "Every control has a named owner, source, and collection schedule before Type 2 begins." },
+                  { fix: "Monitoring checks established before the operating period", detail: "Lightweight checks ensure controls operate continuously, not just at audit time." },
+                  { fix: "Right-fit scope aligned to customer requirements", detail: "We recommend the criteria your customers actually need, avoiding unnecessary inflation." },
+                  { fix: "Sampling readiness built into the program", detail: "Evidence registers are designed to support sampling at any point during the period." },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ FAQ ═══ */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-10">
+            Frequently asked questions
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="border-slate-200">
+                <AccordionTrigger className="text-sm font-semibold text-left hover:no-underline text-slate-900">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-sm leading-relaxed text-slate-600">{faq.a}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
 
           {/* FAQ Schema */}
           <script
@@ -1056,76 +936,23 @@ const SOC2Page = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          CHECKLIST / LEAD MAGNET
-      ══════════════════════════════════════ */}
-      <section
-        id="checklist"
-        className="py-16 border-y"
-        style={{ borderColor: "rgba(59,59,57,0.08)", backgroundColor: "rgba(243,111,33,0.04)" }}
-      >
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-xs font-mono mb-2" style={{ color: "#F36F21" }}>FREE RESOURCE</div>
-            <h2 className="text-2xl font-bold uppercase mb-3" style={{ color: "#3B3B39" }}>
-              Download the SOC 2 Preparation Checklist
-            </h2>
-            <p className="text-sm mb-6" style={{ color: "#646464" }}>
-              A one-page checklist to validate scope, evidence readiness, and the Type 1 → Type 2 path.
-            </p>
-            <Button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/3F_Whitepaper.pdf";
-                link.download = "3F_SOC2_Checklist.pdf";
-                link.click();
-              }}
-              variant="default"
-              size="lg"
-              className="font-semibold px-8 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
-            >
-              Download Checklist
-              <ArrowRight size={16} />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          FINAL CTA
-      ══════════════════════════════════════ */}
-      <section
-        className="py-20"
-        style={{ backgroundColor: "#3B3B39" }}
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold uppercase mb-4 text-white">
-            Ready to reduce SOC 2 friction in enterprise deals?
+      {/* ═══ FINAL CTA ═══ */}
+      <section className="py-24 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4 text-slate-900">
+            Ready to reduce SOC 2 friction?
           </h2>
-          <p className="text-sm mb-8 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
-            Schedule a 30-minute call to receive a tailored plan and fixed-price proposal for
-            Type 1 + Type 2 program setup.
+          <p className="text-sm text-slate-600 mb-8 max-w-xl mx-auto">
+            Book a 30-minute call to receive a tailored plan and fixed-price proposal for Type 1 + Type 2 program setup.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={openModal}
-              className="text-white font-semibold px-8"
-              style={{ backgroundColor: "#3B3B39" }}
-            >
-              Get a Fixed-Price SOC 2 Proposal
-              <ArrowRight size={16} />
-            </Button>
-            <Button
-              variant="default"
-              onClick={() => scrollTo("checklist")}
-              className="font-medium px-8 !bg-zinc-500 hover:!bg-zinc-500 text-white border-0"
-            >
-              Download the Checklist
-            </Button>
-          </div>
-          <p className="text-xs mt-4" style={{ color: "rgba(255,255,255,0.5)" }}>
-            30-minute call → right-fit scope + tailored plan → fixed-price proposal
-          </p>
+          <Button
+            onClick={openModal}
+            size="lg"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6"
+          >
+            Get a Fixed-Price SOC 2 Proposal
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
         </div>
       </section>
 
