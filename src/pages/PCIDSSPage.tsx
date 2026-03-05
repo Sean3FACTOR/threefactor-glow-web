@@ -169,86 +169,65 @@ const pciSteps = [
   {
     icon: Target,
     stage: 1,
-    title: "Evidence Model Design",
-    duration: "~2 Weeks",
+    title: "Inventory Identification",
+    duration: "1–2 Weeks",
     durationWeeks: 2,
-    desc: "Define required evidence, sources, owners, and review cadence.",
-    details: [
-      "Map evidence requirements to PCI DSS controls",
-      "Identify evidence sources and responsible owners",
-      "Establish collection cadence and review cycles",
-      "Design evidence repository structure",
-    ],
+    desc: "",
+    details: [],
   },
   {
-    icon: FileText,
+    icon: Layers,
     stage: 2,
-    title: "Documentation Alignment",
-    duration: "~4 Weeks",
-    durationWeeks: 4,
-    desc: "Policies, procedures, diagrams, and control narratives aligned to PCI DSS.",
-    details: [
-      "Draft or update information security policies",
-      "Create network diagrams and data flow documentation",
-      "Develop control narratives for each PCI DSS requirement",
-      "Align procedures with operational reality",
-    ],
+    title: "Scope Reduction and CDE Minimization",
+    duration: "2–5 Months",
+    durationWeeks: 14,
+    desc: "",
+    details: [],
+  },
+  {
+    icon: Microscope,
+    stage: 3,
+    title: "Gap Assessment",
+    duration: "4–6 Weeks",
+    durationWeeks: 5,
+    desc: "",
+    details: [],
   },
   {
     icon: Cog,
-    stage: 3,
-    title: "Remediation Execution",
-    duration: "2–4 Months",
-    durationWeeks: 12,
-    desc: "Close technical and operational control gaps collaboratively with your teams.",
-    details: [
-      "Prioritize remediation based on risk and effort",
-      "Collaborate with engineering and operations teams",
-      "Implement missing technical controls",
-      "Validate remediations against PCI DSS requirements",
-    ],
-  },
-  {
-    icon: ClipboardCheck,
     stage: 4,
-    title: "Pre-Assessment Validation",
-    duration: "~3 Weeks",
-    durationWeeks: 3,
-    desc: "Internal validation ensures readiness before formal assessment.",
-    details: [
-      "Comprehensive evidence pack review",
-      "Mock assessment walkthroughs",
-      "Interview preparation for key personnel",
-      "Gap identification and rapid remediation",
-    ],
+    title: "Remediation Execution",
+    duration: "2–5 Months",
+    durationWeeks: 14,
+    desc: "",
+    details: [],
   },
   {
     icon: Eye,
     stage: 5,
-    title: "Formal PCI DSS Assessment",
-    duration: "4–8 Weeks",
-    durationWeeks: 6,
-    desc: "As a QSA firm, 3FACTOR performs ROCs for Level 1 merchants or reviews SAQs where applicable.",
-    details: [
-      "QSA-led formal assessment against PCI DSS requirements",
-      "Report on Compliance (ROC) for Level 1 entities",
-      "SAQ review and attestation support",
-      "Non-conformity remediation support",
-    ],
+    title: "Formal PCI DSS Assessment (When Required)",
+    duration: "4–6 Weeks",
+    durationWeeks: 5,
+    desc: "",
+    details: [],
+  },
+  {
+    icon: FileText,
+    stage: 6,
+    title: "Reporting",
+    duration: "1–2 Weeks",
+    durationWeeks: 2,
+    desc: "",
+    details: [],
   },
   {
     icon: RefreshCw,
-    stage: 6,
+    stage: 7,
     title: "Ongoing Maintenance",
-    duration: "Continuous",
+    duration: "Ongoing",
     durationWeeks: 4,
-    desc: "Continuous scope management, evidence cadence, and annual revalidation support.",
-    details: [
-      "Scope drift detection and management",
-      "Evidence cadence monitoring",
-      "Change management aligned to PCI boundaries",
-      "Annual revalidation preparation",
-    ],
+    desc: "",
+    details: [],
   },
 ];
 
@@ -628,37 +607,58 @@ const PCIDSSPage = () => {
             </h2>
             <ul className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed space-y-3 list-disc list-outside pl-5 text-left inline-block">
               <li>We treat scope reduction as a formal design exercise before implementing controls.</li>
-              <li>The goal is to minimize the Cardholder Data Environment (CDE), isolate systems, and reduce audit scope and operational burden.</li>
-              <li>Take a look at our 6-step process from scope reduction to audit readiness.</li>
+              <li>The goal is to minimize the Cardholder Data Environment (CDE), isolate systems, and reduce audit scope and operational burden through the use of:</li>
             </ul>
           </div>
 
-          {/* Scope Reduction Highlights */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+          {/* Scope Reduction Flip Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
             {[
-              { icon: Network, text: "Card data flow mapping and elimination" },
-              { icon: Shield, text: "Network and CDE segmentation" },
-              { icon: Lock, text: "Tokenization and outsourcing strategies" },
-              { icon: FileCheck, text: "Boundary validation and documentation" },
-              { icon: Compass, text: "SAQ vs ROC determination support" },
-            ].map((item, i) => {
-              const ItemIcon = item.icon;
+              { front: "Card data flow mapping and elimination of stored CHD", back: "Identifying where card data is stored, processed, or transmitted and removing it from systems where it is not strictly required.", icon: Network },
+              { front: "Network and CDE segmentation", back: "Using firewalls and network configurations to isolate the systems that handle card data from the rest of the corporate network.", icon: Shield },
+              { front: "Tokenization", back: "Replacing sensitive cardholder data with non-sensitive 'tokens' that have no extrinsic value, ensuring the actual data is stored in a more secure, centralized location, or with a third-party.", icon: Lock },
+              { front: "Outsourcing Strategies", back: "Transfer payment processing to PCI-compliant third-party service providers (such as using a hosted payment page) to delegate the primary burden of security to the provider.", icon: CreditCard },
+              { front: "Boundary validation and documentation", back: "Formally defining and documenting the physical and logical boundaries of the CDE to ensure no 'scope creep' occurs over time.", icon: FileCheck },
+              { front: "SAQ vs ROC determination support", back: "Analyzing which validation path is required, as a Self-Assessment Questionnaire (SAQ) often allows for a more narrowly defined and reduced scope compared to a full Report on Compliance (ROC).", icon: Compass },
+            ].map((tile, i) => {
+              const TileIcon = tile.icon;
               return (
-                <div key={i} className="bg-white p-5 border border-slate-200 text-center">
-                  <ItemIcon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
-                  <p className="text-xs font-semibold text-slate-700 leading-relaxed">{item.text}</p>
+                <div key={i} className="group perspective h-48">
+                  <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    {/* Front */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-white border border-slate-200 p-6 flex flex-col items-center justify-center text-center">
+                      <TileIcon className="w-6 h-6 text-orange-500 mb-3" />
+                      <p className="text-sm font-semibold text-slate-700 leading-relaxed">{tile.front}</p>
+                    </div>
+                    {/* Back */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#3B3B39] border border-slate-700 p-6 flex items-center justify-center text-center">
+                      <p className="text-sm text-white/90 leading-relaxed">{tile.back}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
           </div>
 
           <p className="text-lg text-slate-600 text-center mb-4">
-            Take a look at our 6-step process from scope reduction to audit readiness.
+            Take a look at our 7-step certification lifecycle from scope reduction to audit readiness.
           </p>
           <h3 className="text-xl font-semibold text-slate-800 text-center mb-12">
-            The 6-Step Process
+            The 7-Step Certification Lifecycle
           </h3>
           <InteractiveTimeline openModal={openModal} />
+
+          <div className="flex justify-center mt-10">
+            <Button
+              onClick={openModal}
+              size="lg"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-base px-10 py-6"
+            >
+              Start with A PCI Scope Reduction Plan
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
+
           <BackToNavButton />
         </div>
       </section>
@@ -891,7 +891,7 @@ const PCIDSSPage = () => {
             {[
               { q: "Do you perform the actual PCI DSS assessment?", a: "Yes. As a QSA firm, 3FACTOR performs formal Reports on Compliance (ROC) for Level 1 merchants and service providers. We also support SAQ completion for eligible organizations." },
               { q: "What's the difference between SAQ and ROC?", a: "A Self-Assessment Questionnaire (SAQ) is a self-validation tool for eligible merchants with reduced scope. A Report on Compliance (ROC) is a formal assessment performed by a QSA, required for Level 1 merchants and service providers." },
-              { q: "How long does scope reduction take?", a: "Typically 4–6 weeks for the initial scope reduction exercise, including card data flow mapping, segmentation review, and boundary documentation." },
+              { q: "How long before we receive scope reduction recommendations?", a: "Typically it takes 2 - 4 weeks to conduct interviews and complete the initial scope reduction exercise, including card data flow mapping, segmentation review, and boundary documentation and report issuance. Scope reduction will depend on the complexity of the environment and the agility of the organization, and can take approximately 2 - 5 months." },
               { q: "Can you integrate PCI DSS with ISO 27001 or SOC 2?", a: "Yes. We design controls and evidence for reuse across frameworks where relevant, reducing duplication and total compliance effort." },
               { q: "What does fixed-price mean?", a: "A defined set of deliverables and responsibilities that protects timeline and pricing. Out-of-scope items are agreed separately before work begins." },
             ].map((item, i) => (
