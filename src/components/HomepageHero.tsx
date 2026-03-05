@@ -31,24 +31,13 @@ const HomepageHero = () => {
             <p className="text-base md:text-xl mb-8 leading-relaxed text-white font-bold uppercase">
               Don't let security compliance certification(s) slow you down.
             </p>
-            <div className="grid grid-cols-1 gap-4 mb-10 max-w-4xl mx-auto">
-              <div className="bg-white p-6 flex items-center text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <p className="text-base md:text-lg leading-relaxed" style={{ color: "#3B3B39" }}>
-                  We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
-                </p>
-              </div>
-              <div className="bg-white p-6 text-left" style={{ border: "1px solid rgba(59,59,57,0.1)" }}>
-                <div className="space-y-3">
-                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
-                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
-                    Scale into regulated sectors without the friction of security roadblocks.
-                  </p>
-                  <p className="text-base md:text-lg flex items-center gap-2" style={{ color: "#3B3B39" }}>
-                    <span className="w-1.5 h-1.5 rotate-45 flex-shrink-0" style={{ backgroundColor: "#9CA3AF" }} />
-                    Stop letting revenue-blocking gaps stall your growth.
-                  </p>
-                </div>
-              </div>
+            <div className="space-y-3 mb-10 max-w-4xl mx-auto text-left">
+              <p className="text-base md:text-lg leading-relaxed text-white/85">
+                We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed text-white/85">
+                Scale into regulated sectors without the friction of security roadblocks. Stop letting revenue-blocking gaps stall your growth.
+              </p>
             </div>
             <Link to="/contact" className="inline-block">
               <Button
