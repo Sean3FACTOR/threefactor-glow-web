@@ -36,7 +36,9 @@ const HomepageHero = () => {
                 We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
               </p>
               <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left mt-3">
-                Scale into regulated sectors without the friction of security roadblocks. Stop letting revenue-blocking gaps stall your growth.
+                Scale into regulated sectors without the friction of security roadblocks.
+                <br />
+                Stop letting revenue-blocking gaps stall your growth.
               </p>
             </div>
             <Link to="/contact" className="inline-block">
