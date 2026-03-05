@@ -223,8 +223,8 @@ const CompanyPage = () => {
               className="text-white font-bold text-sm uppercase tracking-[0.15em] px-10 h-12 rounded-none hover:shadow-lg transition-all duration-200"
               style={{ backgroundColor: "#F36F21" }}>
               
-              Meet Your Guides
-              <ArrowRight size={16} className="ml-2" />
+              Contact Us
+               <ArrowRight size={16} className="ml-2" />
             </Button>
           </Link>
         </div>
