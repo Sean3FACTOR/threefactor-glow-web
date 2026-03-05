@@ -77,10 +77,11 @@ const megaColumns = [
   {
     groups: [
       {
-        heading: "Additional Services",
+        heading: "Strategy and Risk Services",
         items: [
-          { name: "Strategy & Risk", href: "/services/strategy" },
-          { name: "Cyber Defense", href: "/services/cyber-defense" },
+          { name: "Cyber Maturity", href: "/services/strategy" },
+          { name: "Vendor Risk Management", href: "/services/strategy" },
+          { name: "Cybersecurity Strategy", href: "/services/strategy" },
         ],
       },
     ],
