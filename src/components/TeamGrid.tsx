@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Linkedin, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import haley from "@/assets/team/haley_1.avif";
 import jonathan from "@/assets/team/jonathan_1.jpg";
@@ -12,6 +12,7 @@ import ricardo from "@/assets/team/ricardo_1.jpg";
 import spyro from "@/assets/team/spyro_1.avif";
 import tania from "@/assets/team/tania_1.jpg";
 import sean from "@/assets/team/sean_1.png";
+import linkedinLogo from "@/assets/linkedin-logo.avif";
 
 const teamMembers = [
   {
@@ -120,8 +121,8 @@ const TeamGrid = () => {
   const prev = useCallback(() => setPage((p) => (p > 0 ? p - 1 : totalPages - 1)), []);
   const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), []);
 
-  const LinkedInIcon = ({ className }: { className?: string }) => (
-    <Linkedin size={18} className={className} style={{ color: "#0A66C2" }} />
+  const LinkedInLogo = () => (
+    <img src={linkedinLogo} alt="LinkedIn" className="w-5 h-5 object-contain" />
   );
 
   return (
@@ -162,7 +163,7 @@ const TeamGrid = () => {
             </p>
             {featured.linkedin && (
               <a href={featured.linkedin} target="_blank" rel="noopener noreferrer" className="mt-2">
-                <LinkedInIcon />
+                <LinkedInLogo />
               </a>
             )}
           </div>
@@ -186,9 +187,9 @@ const TeamGrid = () => {
             <ChevronRight size={20} style={{ color: "#3B3B39" }} />
           </button>
 
-          <div className={`grid gap-6 justify-items-center items-center ${visible.length <= 3 ? 'grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto' : 'grid-cols-2 md:grid-cols-5'}`}>
+          <div className={`flex flex-wrap justify-center gap-6 ${visible.length <= 3 ? 'max-w-4xl mx-auto' : ''}`}>
             {visible.map((member) => (
-              <div key={member.name} className="flex flex-col items-center">
+              <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[180px]">
                 <div
                   className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
                   onClick={() => setSelectedMember(member)}
@@ -213,7 +214,7 @@ const TeamGrid = () => {
                 </p>
                 {member.linkedin && (
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="mt-2">
-                    <LinkedInIcon />
+                    <LinkedInLogo />
                   </a>
                 )}
               </div>
@@ -283,7 +284,7 @@ const TeamGrid = () => {
                     rel="noopener noreferrer"
                     className="shrink-0 mt-1"
                   >
-                    <Linkedin size={20} style={{ color: "#0A66C2" }} />
+                    <img src={linkedinLogo} alt="LinkedIn" className="w-5 h-5 object-contain" />
                   </a>
                 )}
               </div>
