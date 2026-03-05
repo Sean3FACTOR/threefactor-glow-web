@@ -106,14 +106,6 @@ const TeamGrid = () => {
     <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#F9FAFB" }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <span
-            className="text-[10px] font-bold uppercase tracking-[0.2em]"
-            style={{ color: "#F36F21" }}
-          >
-            [TEAM-01] — Our Team
-          </span>
-        </div>
         <h2
           className="text-2xl md:text-4xl font-bold mb-4 text-center uppercase"
           style={{ color: "#3B3B39" }}
