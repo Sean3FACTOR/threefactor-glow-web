@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Cpu, Award } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
