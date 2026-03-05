@@ -70,6 +70,17 @@ const clusters: Cluster[] = [
 
 const ServicesGrid = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        const nextBtn = carouselRef.current.querySelector('[aria-label="Next slide"]') as HTMLButtonElement;
+        if (nextBtn) nextBtn.click();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
