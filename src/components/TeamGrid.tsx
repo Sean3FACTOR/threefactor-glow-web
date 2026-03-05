@@ -217,7 +217,7 @@ const TeamGrid = () => {
         </div>
       </div>
 
-      {/* Bio Modal */}
+      {/* Bio Modal — reference style: photo left, name + linkedin top-right, bio below */}
       {selectedMember && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -225,39 +225,61 @@ const TeamGrid = () => {
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className="bg-white max-w-lg w-full flex flex-col sm:flex-row overflow-hidden border border-[rgba(59,59,57,0.1)] shadow-xl"
+            className="bg-white max-w-3xl w-full flex flex-col sm:flex-row overflow-hidden border border-[rgba(59,59,57,0.1)] shadow-xl relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sm:w-2/5 aspect-[3/4] sm:aspect-auto shrink-0">
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedMember(null)}
+              className="absolute top-3 right-3 z-10 opacity-40 hover:opacity-100 transition-opacity"
+            >
+              <X size={20} style={{ color: "#3B3B39" }} />
+            </button>
+
+            {/* Photo — left half */}
+            <div className="sm:w-[45%] shrink-0">
               <img
                 src={selectedMember.image}
                 alt={selectedMember.name}
                 className="w-full h-full object-cover object-top"
+                style={{ minHeight: 320 }}
               />
             </div>
-            <div className="p-6 sm:p-8 flex flex-col justify-center relative">
-              <button
-                onClick={() => setSelectedMember(null)}
-                className="absolute top-4 right-4 opacity-40 hover:opacity-100 transition-opacity"
-              >
-                <X size={18} style={{ color: "#3B3B39" }} />
-              </button>
-              <h3
-                className="text-lg font-bold uppercase tracking-wide mb-1"
-                style={{ color: "#3B3B39" }}
-              >
-                {selectedMember.name}
-              </h3>
+
+            {/* Content — right half */}
+            <div className="p-6 sm:p-8 flex flex-col justify-start flex-1">
+              {/* Name + LinkedIn row */}
+              <div className="flex items-start justify-between gap-4 mb-1">
+                <h3
+                  className="text-xl font-bold"
+                  style={{ color: "#F36F21" }}
+                >
+                  {selectedMember.name}
+                </h3>
+                {selectedMember.linkedin && (
+                  <a
+                    href={selectedMember.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 mt-1"
+                  >
+                    <Linkedin size={20} style={{ color: "#F36F21" }} />
+                  </a>
+                )}
+              </div>
+
               <p
-                className="text-xs font-mono mb-4"
+                className="text-sm mb-6"
                 style={{ color: "#F36F21" }}
               >
                 {selectedMember.role}
               </p>
+
               <div
-                className="w-8 h-px mb-4"
-                style={{ backgroundColor: "rgba(59,59,57,0.15)" }}
+                className="w-full h-px mb-6"
+                style={{ backgroundColor: "rgba(59,59,57,0.1)" }}
               />
+
               <p
                 className="text-sm leading-relaxed"
                 style={{ color: "#5A5A58" }}
