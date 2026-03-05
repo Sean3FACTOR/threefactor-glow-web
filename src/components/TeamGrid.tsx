@@ -72,18 +72,18 @@ const teamMembers = [
     bio: "Haley graduated from UC Davis with high honors in 2021 with a bachelor's in communication studies and minors in sociology and education sciences. After graduating, she moved to Arizona and soon began working as Spyro's assistant. Her main goals are to keep household operations running smoothly and allow Spyro to focus on what matters most to him. Punctuality and enthusiasm are her two mantras.",
   },
   {
-    name: "Koert DuBois",
-    role: "",
-    image: koert,
-    linkedin: "",
-    bio: "Koert joined the 3Factor family in 2020 after a long career in IT and Cybersecurity. He's a collaborative contributor and enjoys team environments where he can encourage team members to excel, to learn, and challenge themselves along the way, as well as deliver to expectations. You can always count on Koert to bring humor to the conversation, and is a master of storytelling in a way that only he can!",
-  },
-  {
     name: "Michel Helal",
     role: "",
     image: michel,
     linkedin: "",
     bio: "Michel's love for challenges makes him the \"ironman\" of security analysts. He loves to construct detailed work plans that align with business goals. His project management skills help keep projects on schedule and within scope and budget. His past experience being an entrepreneur makes him excellent in managing teams and achieving milestones.",
+  },
+  {
+    name: "Koert DuBois",
+    role: "",
+    image: koert,
+    linkedin: "",
+    bio: "Koert joined the 3Factor family in 2020 after a long career in IT and Cybersecurity. He's a collaborative contributor and enjoys team environments where he can encourage team members to excel, to learn, and challenge themselves along the way, as well as deliver to expectations. You can always count on Koert to bring humor to the conversation, and is a master of storytelling in a way that only he can!",
   },
   {
     name: "Sean Suter",
@@ -96,7 +96,20 @@ const teamMembers = [
 
 const featured = teamMembers.find((m) => m.featured);
 const rest = teamMembers.filter((m) => !m.featured);
-const ITEMS_PER_PAGE = 4;
+const PAGE_SIZES = [5, 3, 3];
+
+const getPageSlices = () => {
+  const pages: (typeof rest)[] = [];
+  let offset = 0;
+  for (const size of PAGE_SIZES) {
+    pages.push(rest.slice(offset, offset + size));
+    offset += size;
+    if (offset >= rest.length) break;
+  }
+  return pages;
+};
+const pages = getPageSlices();
+const totalPages = pages.length;
 
 const TeamGrid = () => {
   const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
