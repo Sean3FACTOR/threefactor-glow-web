@@ -193,7 +193,7 @@ const ServicesGrid = () => {
             Our Team's Certifications
           </p>
           <div className="px-8 sm:px-12">
-            <Carousel opts={{ align: "start", loop: true, delay: 4000 }} className="w-full">
+            <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4">
                 {certifications.map((cert) => (
                   <CarouselItem
