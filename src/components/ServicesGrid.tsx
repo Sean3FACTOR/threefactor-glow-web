@@ -1,6 +1,6 @@
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import CIPTLogo from "@/assets/certifications/CIPT_logo.avif";
@@ -70,6 +70,17 @@ const clusters: Cluster[] = [
 
 const ServicesGrid = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        const nextBtn = carouselRef.current.querySelector('[aria-label="Next slide"]') as HTMLButtonElement;
+        if (nextBtn) nextBtn.click();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -185,7 +196,7 @@ const ServicesGrid = () => {
         </div>
 
         {/* Certifications Carousel */}
-        <div className="mt-12 max-w-6xl mx-auto">
+        <div className="mt-12 max-w-6xl mx-auto" ref={carouselRef}>
           <p
             className="text-center text-[11px] font-bold uppercase tracking-[0.15em] mb-6"
             style={{ color: "rgba(59,59,57,0.5)" }}
