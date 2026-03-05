@@ -15,6 +15,7 @@ const Index = () => {
       <div className="pt-14">
         <HomepageHero />
         <ClientChallenges />
+        <ServicesGrid />
         <DealBlockers />
         <CompliancePlan />
         <SuccessOutcomes />
