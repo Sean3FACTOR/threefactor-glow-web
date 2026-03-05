@@ -69,9 +69,9 @@ const CompanyPage = () => {
             </h1>
             <div className="mb-10 max-w-3xl mx-auto rounded-lg px-8 py-6" style={{ backgroundColor: "rgba(40,50,65,0.45)", border: "1px solid rgba(200,210,220,0.2)", backdropFilter: "blur(4px)" }}>
               <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left">
-                Compliance shouldn't be a handbrake on your momentum. We've spent a decade mastering
-                the standards that move the needle, so you can stay focused on your product while we
-                secure your future.
+                Compliance shouldn't be a handbrake on your momentum.
+                <br />
+                We've spent a decade mastering the standards that move the needle, so you can stay focused on your product while we secure your future.
               </p>
             </div>
           </div>
