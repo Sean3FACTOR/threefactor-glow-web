@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Award } from "lucide-react";
+import glassBuilding from "@/assets/company/glass-building-hero.jpg";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
@@ -43,31 +44,41 @@ const CompanyPage = () => {
       {/* ═══════════════════════════════════════
           SECTION 1 — Empathy Hero
       ═══════════════════════════════════════ */}
-      <section className="pt-28 pb-20 md:pt-36 md:pb-28 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className={`${glassCard} p-10 md:p-16`}>
+      <section className="relative min-h-[85vh] flex items-center" style={{ overflow: "hidden" }}>
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={glassBuilding}
+            alt=""
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+          {/* Dark cool-toned overlay */}
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(180deg, rgba(15,23,42,0.92) 0%, rgba(20,30,50,0.85) 40%, rgba(25,35,55,0.80) 100%)" }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 py-20 text-center">
+          <div className="max-w-3xl mx-auto">
             <span
               className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
               style={{ color: "#F36F21" }}
             >
               The 3Factor Promise
             </span>
-            <h1
-              className="text-3xl md:text-5xl font-bold leading-tight mb-6"
-              style={{ color: "#3B3B39" }}
-            >
-              You build the innovation.
-              <br />
-              We provide the integrity to scale it.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 uppercase text-white">
+              <span className="block">You build the innovation.</span>
+              <span className="block">We provide the integrity to scale it.</span>
             </h1>
-            <p
-              className="text-base md:text-lg leading-relaxed max-w-2xl"
-              style={{ color: "#5A5A58" }}
-            >
-              Compliance shouldn't be a handbrake on your momentum. We've spent a decade mastering
-              the standards that move the needle, so you can stay focused on your product while we
-              secure your future.
-            </p>
+            <div className="mb-10 max-w-3xl mx-auto rounded-lg px-8 py-6" style={{ backgroundColor: "rgba(40,50,65,0.45)", border: "1px solid rgba(200,210,220,0.2)", backdropFilter: "blur(4px)" }}>
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left">
+                Compliance shouldn't be a handbrake on your momentum. We've spent a decade mastering
+                the standards that move the needle, so you can stay focused on your product while we
+                secure your future.
+              </p>
+            </div>
           </div>
         </div>
       </section>
