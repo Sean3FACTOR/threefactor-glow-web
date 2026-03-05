@@ -136,11 +136,11 @@ const TeamGrid = () => {
           Meet Your Guides
         </h2>
 
-        {/* Featured principal — centered, larger */}
-        {featured && (
+        {/* Featured principal — only on first tab */}
+        {featured && page === 0 && (
           <div className="flex flex-col items-center mb-14">
             <div
-              className="w-48 md:w-56 aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
+              className="w-[200px] md:w-[235px] aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
               onClick={() => setSelectedMember(featured)}
             >
               <img
@@ -169,7 +169,7 @@ const TeamGrid = () => {
           </div>
         )}
 
-        {/* Carousel of remaining members — 4 per row like reference */}
+        {/* Carousel of remaining members */}
         <div className="relative">
           {/* Arrows */}
           <button
@@ -187,9 +187,9 @@ const TeamGrid = () => {
             <ChevronRight size={20} style={{ color: "#3B3B39" }} />
           </button>
 
-          <div className={`flex flex-wrap justify-center gap-6 ${visible.length <= 3 ? 'max-w-4xl mx-auto' : ''}`}>
+          <div className="flex flex-wrap justify-center gap-6">
             {visible.map((member) => (
-              <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[180px]">
+              <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[189px]">
                 <div
                   className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
                   onClick={() => setSelectedMember(member)}
@@ -201,13 +201,13 @@ const TeamGrid = () => {
                   />
                 </div>
                 <h3
-                  className="text-sm font-bold mt-4 text-center"
+                  className="text-sm font-bold mt-4 text-center w-full"
                   style={{ color: "#3B3B39" }}
                 >
                   {member.name}
                 </h3>
                 <p
-                  className="text-xs mt-1 text-center"
+                  className="text-xs mt-1 text-center w-full min-h-[1rem]"
                   style={{ color: "#5A5A58" }}
                 >
                   {member.role}
