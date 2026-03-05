@@ -848,52 +848,62 @@ const SOC2Page = () => {
             Our right-fit approach ensures your SOC 2 program stays lean and effective.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
-                Common failure modes
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { problem: "Evidence collection is inconsistent across the operating period", detail: "Without a defined cadence, evidence gathering becomes a last-minute scramble." },
-                  { problem: "Control ownership is unclear", detail: "No named responsible party leads to gaps and finger-pointing during walkthroughs." },
-                  { problem: "Monitoring checks not defined before Type 2 starts", detail: "Reactive monitoring leads to sampling failures and audit exceptions." },
-                  { problem: "Over-scoped criteria inflating audit complexity", detail: "Including unnecessary TSC adds cost and effort without customer benefit." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { problem: "Evidence collection is inconsistent across the operating period", detail: "Without a defined cadence, evidence gathering becomes a last-minute scramble." },
+                    { problem: "Control ownership is unclear", detail: "No named responsible party leads to gaps and finger-pointing during walkthroughs." },
+                    { problem: "Monitoring checks not defined before Type 2 starts", detail: "Reactive monitoring leads to sampling failures and audit exceptions." },
+                    { problem: "Over-scoped criteria inflating audit complexity", detail: "Including unnecessary TSC adds cost and effort without customer benefit." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                  How we solve it
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { fix: "Defined evidence cadence and ownership from day one", detail: "Every control has a named owner, source, and collection schedule before Type 2 begins." },
+                    { fix: "Monitoring checks established before the operating period", detail: "Lightweight checks ensure controls operate continuously, not just at audit time." },
+                    { fix: "Right-fit scope aligned to customer requirements", detail: "We recommend the criteria your customers actually need, avoiding unnecessary inflation." },
+                    { fix: "Sampling readiness built into the program", detail: "Evidence registers are designed to support sampling at any point during the period." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
-                How we solve it
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { fix: "Defined evidence cadence and ownership from day one", detail: "Every control has a named owner, source, and collection schedule before Type 2 begins." },
-                  { fix: "Monitoring checks established before the operating period", detail: "Lightweight checks ensure controls operate continuously, not just at audit time." },
-                  { fix: "Right-fit scope aligned to customer requirements", detail: "We recommend the criteria your customers actually need, avoiding unnecessary inflation." },
-                  { fix: "Sampling readiness built into the program", detail: "Evidence registers are designed to support sampling at any point during the period." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+
+            <div className="lg:col-span-5">
+              <img
+                src={consultationImg}
+                alt="SOC 2 compliance consultation"
+                className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
+                style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
             </div>
           </div>
         </div>

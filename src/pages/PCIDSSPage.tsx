@@ -819,52 +819,62 @@ const PCIDSSPage = () => {
             Our scope-first approach ensures your PCI program stays lean and effective.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
-                Common failure modes
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { problem: "Entire environments in scope unnecessarily", detail: "Without deliberate scope reduction, everything touching payment flows gets pulled in." },
-                  { problem: "Card data touching more systems than required", detail: "Data flows haven't been mapped or optimized for minimal exposure." },
-                  { problem: "POS and eCommerce networks not segmented", detail: "Flat network architectures dramatically expand PCI scope." },
-                  { problem: "Scope creep year over year", detail: "Without ongoing scope management, boundaries drift and complexity grows." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { problem: "Entire environments in scope unnecessarily", detail: "Without deliberate scope reduction, everything touching payment flows gets pulled in." },
+                    { problem: "Card data touching more systems than required", detail: "Data flows haven't been mapped or optimized for minimal exposure." },
+                    { problem: "POS and eCommerce networks not segmented", detail: "Flat network architectures dramatically expand PCI scope." },
+                    { problem: "Scope creep year over year", detail: "Without ongoing scope management, boundaries drift and complexity grows." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                  How we solve it
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { fix: "Formal scope reduction before control implementation", detail: "We map card data flows and eliminate unnecessary exposure before building controls." },
+                    { fix: "Network segmentation and CDE isolation", detail: "Properly segmented environments dramatically reduce assessment effort." },
+                    { fix: "Tokenization and outsourcing strategies", detail: "Remove card data from your environment entirely where possible." },
+                    { fix: "Continuous scope management", detail: "Ongoing boundary monitoring prevents drift and keeps scope lean." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
-                How we solve it
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { fix: "Formal scope reduction before control implementation", detail: "We map card data flows and eliminate unnecessary exposure before building controls." },
-                  { fix: "Network segmentation and CDE isolation", detail: "Properly segmented environments dramatically reduce assessment effort." },
-                  { fix: "Tokenization and outsourcing strategies", detail: "Remove card data from your environment entirely where possible." },
-                  { fix: "Continuous scope management", detail: "Ongoing boundary monitoring prevents drift and keeps scope lean." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+
+            <div className="lg:col-span-5">
+              <img
+                src={consultationMeetingImg}
+                alt="PCI DSS compliance consultation"
+                className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
+                style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
             </div>
           </div>
         </div>

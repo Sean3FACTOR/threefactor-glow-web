@@ -744,52 +744,62 @@ const CyberEssentialsPage = () => {
             Our expert-led approach ensures your certification stays on track.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
-                Common failure modes
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { problem: "Scope not properly defined", detail: "Without clear boundary mapping, devices and cloud services get missed or unnecessarily included." },
-                  { problem: "MFA not enforced across all accounts", detail: "Partial MFA deployment is a common reason for failed assessments." },
-                  { problem: "Patching cycles inconsistent", detail: "Missing the 14-day critical patching window leads to automatic failures." },
-                  { problem: "No preparation for Plus testing", detail: "Organisations attempt Plus without simulated scans and fail the independent assessment." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-300 pb-3">
+                  Common failure modes
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { problem: "Scope not properly defined", detail: "Without clear boundary mapping, devices and cloud services get missed or unnecessarily included." },
+                    { problem: "MFA not enforced across all accounts", detail: "Partial MFA deployment is a common reason for failed assessments." },
+                    { problem: "Patching cycles inconsistent", detail: "Missing the 14-day critical patching window leads to automatic failures." },
+                    { problem: "No preparation for Plus testing", detail: "Organisations attempt Plus without simulated scans and fail the independent assessment." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <XCircle className="w-4 h-4 mt-1 flex-shrink-0 text-slate-400" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-700">{item.problem}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
+                  How we solve it
+                </h3>
+                <ul className="space-y-6">
+                  {[
+                    { fix: "Comprehensive scope mapping from day one", detail: "We identify all in-scope devices, cloud services, and BYOD before any technical work begins." },
+                    { fix: "MFA enforcement across all user accounts", detail: "We verify MFA is correctly configured for every account, including cloud and remote access." },
+                    { fix: "Automated patching and cadence monitoring", detail: "We establish the 14-day cycle and set up monitoring to prevent drift." },
+                    { fix: "Pre-audit simulated testing before Plus submission", detail: "We run vulnerability scans and malware tests internally to guarantee a clean result." },
+                  ].map((item, i) => (
+                    <li key={i}>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                        <div>
+                          <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-orange-500 mb-6 border-b border-orange-500/30 pb-3">
-                How we solve it
-              </h3>
-              <ul className="space-y-6">
-                {[
-                  { fix: "Comprehensive scope mapping from day one", detail: "We identify all in-scope devices, cloud services, and BYOD before any technical work begins." },
-                  { fix: "MFA enforcement across all user accounts", detail: "We verify MFA is correctly configured for every account, including cloud and remote access." },
-                  { fix: "Automated patching and cadence monitoring", detail: "We establish the 14-day cycle and set up monitoring to prevent drift." },
-                  { fix: "Pre-audit simulated testing before Plus submission", detail: "We run vulnerability scans and malware tests internally to guarantee a clean result." },
-                ].map((item, i) => (
-                  <li key={i}>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
-                      <div>
-                        <p className="text-sm font-semibold text-slate-800">{item.fix}</p>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.detail}</p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+
+            <div className="lg:col-span-5">
+              <img
+                src={consultationImg}
+                alt="Cyber Essentials compliance consultation"
+                className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
+                style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
             </div>
           </div>
         </div>
