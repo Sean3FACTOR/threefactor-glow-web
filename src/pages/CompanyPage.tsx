@@ -157,29 +157,29 @@ const CompanyPage = () => {
           SECTION 4 — Certifications Carousel
       ═══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <Award size={20} style={{ color: "#F36F21" }} />
-            <span
-              className="text-[10px] font-bold uppercase tracking-[0.2em]"
-              style={{ color: "#F36F21" }}
-            >
-              Team Credentials
-            </span>
-          </div>
-          <h2
-            className="text-2xl md:text-4xl font-bold mb-4"
-            style={{ color: "#3B3B39" }}
-          >
-            ACCREDITED TO LEAD YOUR MISSION
-          </h2>
-          <p
-            className="text-base leading-relaxed mb-10 max-w-2xl"
-            style={{ color: "#5A5A58" }}
-          >
-            Our team holds the industry's most respected credentials — CISSP, CISA, CISM — not as
-            badges of honor, but as the tools we use to ensure your strategy is bulletproof.
-          </p>
+         <div className="max-w-5xl mx-auto text-center">
+           <div className="flex items-center justify-center gap-3 mb-6">
+             <Award size={20} style={{ color: "#F36F21" }} />
+             <span
+               className="text-[10px] font-bold uppercase tracking-[0.2em]"
+               style={{ color: "#F36F21" }}
+             >
+               Team Credentials
+             </span>
+           </div>
+           <h2
+             className="text-2xl md:text-4xl font-bold mb-4"
+             style={{ color: "#3B3B39" }}
+           >
+             ACCREDITED TO LEAD YOUR MISSION
+           </h2>
+           <p
+             className="text-base leading-relaxed mb-10 max-w-2xl mx-auto"
+             style={{ color: "#5A5A58" }}
+           >
+             Our team holds the industry's most respected credentials — CISSP, CISA, CISM — not as
+             badges of honor, but as the tools we use to ensure your strategy is bulletproof.
+           </p>
 
           {/* Carousel */}
           <div className={`${glassCard} p-6`}>
