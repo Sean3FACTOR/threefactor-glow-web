@@ -288,14 +288,14 @@ const ClientChallenges = () => {
       className="py-20"
       style={{ backgroundColor: "#F8F9FA", borderTop: "1px solid rgba(59,59,57,0.08)" }}
     >
-      <div className="container mx-auto px-4 mb-12">
+      <div className="container mx-auto px-4 mb-12 text-center">
         <h2
           className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4"
           style={{ color: "#3B3B39" }}
         >
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
-        <ul className="text-lg leading-relaxed space-y-2" style={{ color: "rgba(59,59,57,0.7)" }}>
+        <ul className="text-lg leading-relaxed space-y-2 inline-block" style={{ color: "rgba(59,59,57,0.7)" }}>
           <li className="flex items-start gap-3">
             <span style={{ color: "#6B7280" }} className="shrink-0 leading-[1.75rem]">–</span>
             <span style={{ color: "#3B3B39" }}>We meet you where you are and guide you to the finish line.</span>
