@@ -283,7 +283,7 @@ const TeamGrid = () => {
                     rel="noopener noreferrer"
                     className="shrink-0 mt-1"
                   >
-                    <Linkedin size={20} style={{ color: "#F36F21" }} />
+                    <Linkedin size={20} style={{ color: "#0A66C2" }} />
                   </a>
                 )}
               </div>
