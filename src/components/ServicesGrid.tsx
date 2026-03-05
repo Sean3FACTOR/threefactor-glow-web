@@ -115,8 +115,8 @@ const ServicesGrid = () => {
                             border: "1px solid rgba(59,59,57,0.06)",
                           }}
                           onMouseEnter={(e) => {
-                            e.currentTarget.style.background = "rgba(243,111,33,0.05)";
-                            e.currentTarget.style.borderColor = "rgba(243,111,33,0.25)";
+                            e.currentTarget.style.background = "rgba(59,59,57,0.05)";
+                            e.currentTarget.style.borderColor = "rgba(59,59,57,0.15)";
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.background = "rgba(59,59,57,0.02)";
