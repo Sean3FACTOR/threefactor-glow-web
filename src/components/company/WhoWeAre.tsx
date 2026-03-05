@@ -9,7 +9,7 @@ const pillars = [
     icon: Heart,
     label: "OUR CULTURE",
     subtitle: "Your Support System",
-    body: "We maintain a "Work hard, play hard" energy to ensure our team is always sharp and energized for your mission. By encouraging family-first values and self-care, we provide you with a stable, long-term partnership built on flexibility and peak performance.",
+    body: 'We maintain a "Work hard, play hard" energy to ensure our team is always sharp and energized for your mission. By encouraging family-first values and self-care, we provide you with a stable, long-term partnership built on flexibility and peak performance.',
   },
   {
     id: "[MTH-02]",

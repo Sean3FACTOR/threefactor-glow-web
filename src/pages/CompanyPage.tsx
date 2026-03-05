@@ -81,6 +81,11 @@ const CompanyPage = () => {
       </section>
 
       {/* ═══════════════════════════════════════
+                   SECTION — Who We Are
+                ═══════════════════════════════════════ */}
+      <WhoWeAre />
+
+      {/* ═══════════════════════════════════════
                    SECTION 2 — Senior-Led Authority
                 ═══════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#FFFFFF" }}>
