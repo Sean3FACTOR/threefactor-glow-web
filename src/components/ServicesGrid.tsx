@@ -226,6 +226,16 @@ const ServicesGrid = () => {
               />
             </Carousel>
           </div>
+
+          {/* Expertise Tagline */}
+          <div className="mt-12 text-center max-w-4xl mx-auto px-4">
+            <p
+              className="text-lg md:text-xl leading-relaxed"
+              style={{ color: "#3B3B39" }}
+            >
+              Expertise you can trust. Standards to fuel your scale. The oversight to reach the finish line.
+            </p>
+          </div>
         </div>
       </div>
     </section>
