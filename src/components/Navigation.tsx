@@ -170,7 +170,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* ── Logo ── */}
-          <Link to="/" className="flex items-center h-full py-1 shrink-0 lg:w-[180px]">
+          <Link 
+            to="/" 
+            onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="flex items-center h-full py-1 shrink-0 lg:w-[180px]"
+          >
             <img alt="3FACTOR" className="h-[99%] w-auto object-contain" src={Logo} />
           </Link>
 
