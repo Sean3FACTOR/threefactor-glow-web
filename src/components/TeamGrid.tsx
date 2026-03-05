@@ -156,7 +156,7 @@ const TeamGrid = () => {
             </h3>
             <p
               className="text-sm mt-1 text-center"
-              style={{ color: "#F36F21" }}
+              style={{ color: "#5A5A58" }}
             >
               {featured.role}
             </p>
@@ -207,7 +207,7 @@ const TeamGrid = () => {
                 </h3>
                 <p
                   className="text-xs mt-1 text-center"
-                  style={{ color: "#F36F21" }}
+                  style={{ color: "#5A5A58" }}
                 >
                   {member.role}
                 </p>
