@@ -71,7 +71,6 @@ const CompanyPage = () => {
               <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left">
                 Compliance shouldn't be a handbrake on your momentum.
                 <br />
-                <br />
                 We've spent a decade mastering the standards that move the needle, so you can stay focused on your product while we secure your future.
               </p>
             </div>
