@@ -203,7 +203,7 @@ const pciSteps = [
     durationWeeks: 5,
     desc: "We identify exactly which requirements need attention so remediation is targeted, not scattered.",
     details: [
-      "Requirement-by-requirement gap analysis against PCI DSS v4.0",
+      "Requirement-by-requirement gap analysis against most current version of PCI DSS",
       "Prioritise findings by risk and effort",
       "Evidence maturity assessment for each requirement",
       "Produce actionable remediation roadmap",
