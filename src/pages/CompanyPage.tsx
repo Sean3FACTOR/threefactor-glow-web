@@ -190,11 +190,11 @@ const CompanyPage = () => {
               <CarouselContent>
                 {certifications.map((cert) => (
                   <CarouselItem key={cert.name} className="basis-1/3 md:basis-1/5 lg:basis-1/6">
-                    <div className="flex items-center justify-center h-16 px-2">
+                    <div className="flex items-center justify-center h-20 px-2">
                       <img
                         src={cert.logo}
                         alt={cert.name}
-                        className="max-h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                        className="max-h-15 w-auto object-contain transition-all duration-300"
                       />
                     </div>
                   </CarouselItem>
