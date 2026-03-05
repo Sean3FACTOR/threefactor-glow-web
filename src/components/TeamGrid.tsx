@@ -191,7 +191,7 @@ const TeamGrid = () => {
             {visible.map((member) => (
               <div key={member.name} className="flex flex-col items-center w-[calc(50%-12px)] md:w-[235px]">
                 <div
-                  className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
+                  className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group relative"
                   onClick={() => setSelectedMember(member)}
                 >
                   <img
@@ -199,6 +199,9 @@ const TeamGrid = () => {
                     alt={member.name}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-3 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-xs font-mono uppercase tracking-wider text-white">Read Bio →</span>
+                  </div>
                 </div>
                 <h3
                   className="text-sm font-bold mt-4 text-center w-full"
@@ -273,7 +276,7 @@ const TeamGrid = () => {
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3
                   className="text-xl font-bold"
-                  style={{ color: "#F36F21" }}
+                  style={{ color: "#3B3B39" }}
                 >
                   {selectedMember.name}
                 </h3>
@@ -291,7 +294,7 @@ const TeamGrid = () => {
 
               <p
                 className="text-sm mb-6"
-                style={{ color: "#F36F21" }}
+                style={{ color: "#5A5A58" }}
               >
                 {selectedMember.role}
               </p>
