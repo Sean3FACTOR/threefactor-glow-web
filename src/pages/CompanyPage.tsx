@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Cpu, Award } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
@@ -136,80 +136,6 @@ const CompanyPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════
-          SECTION 3 — Tools for the Journey
-      ═══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#F9FAFB" }}>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-start">
-          <div className="md:col-span-5 order-2 md:order-1">
-            <div className={`${glassCard} p-6`}>
-              {/* Simplified dashboard teaser */}
-              <div className="space-y-3">
-                {["ISO 27001 — Readiness", "SOC 2 Type II — In Progress", "PCI DSS — Scoped"].map(
-                  (node, i) => (
-                    <div
-                      key={node}
-                      className="flex items-center gap-3 px-4 py-3 border"
-                      style={{
-                        borderColor: "rgba(59,59,57,0.08)",
-                        backgroundColor: i === 1 ? "rgba(243,111,33,0.04)" : "transparent",
-                      }}
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full shrink-0"
-                        style={{
-                          backgroundColor:
-                            i === 0 ? "#22c55e" : i === 1 ? "#F36F21" : "#94a3b8",
-                        }}
-                      />
-                      <span className="text-xs font-mono" style={{ color: "#3B3B39" }}>
-                        {node}
-                      </span>
-                    </div>
-                  )
-                )}
-              </div>
-              <p
-                className="text-[10px] uppercase tracking-[0.15em] mt-4 text-center"
-                style={{ color: "#94a3b8" }}
-              >
-                Compliance Dashboard Preview
-              </p>
-            </div>
-          </div>
-          <div className="md:col-span-7 order-1 md:order-2">
-            <div className="flex items-center gap-3 mb-6">
-              <Cpu size={20} style={{ color: "#F36F21" }} />
-              <span
-                className="text-[10px] font-bold uppercase tracking-[0.2em]"
-                style={{ color: "#F36F21" }}
-              >
-                Product-Led Automation
-              </span>
-            </div>
-            <h2
-              className="text-2xl md:text-4xl font-bold mb-6"
-              style={{ color: "#3B3B39" }}
-            >
-              THE GEAR FOR YOUR PROMISED LAND
-            </h2>
-            <p
-              className="text-base leading-relaxed mb-4"
-              style={{ color: "#5A5A58" }}
-            >
-              The path to SOC 2 or ISO 27001 is complex, so we provide the gear to clear the way.
-              We combine our senior strategic oversight with proprietary tools designed to automate
-              the friction of compliance.
-            </p>
-            <p
-              className="text-base leading-relaxed"
-              style={{ color: "#5A5A58" }}
-            >
-              Turning a manual burden into a scalable competitive advantage.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════
           SECTION 4 — Certifications Carousel
