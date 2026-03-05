@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Linkedin, X } from "lucide-react";
 
 import haley from "@/assets/team/haley_1.avif";
 import jonathan from "@/assets/team/jonathan_1.jpg";
@@ -19,6 +19,7 @@ const teamMembers = [
     image: spyro,
     linkedin: "",
     bio: "With over 15 years leading global security programmes, Spyro founded 3Factor to bridge the gap between compliance and real-world resilience. He has personally led recovery efforts for six of the ten largest breaches in North America.",
+    featured: true,
   },
   {
     name: "Marcus Atkins",
@@ -53,21 +54,21 @@ const teamMembers = [
     role: "Principal Consultant",
     image: michel,
     linkedin: "",
-    bio: "A seasoned principal consultant with deep expertise in ISO 27001, SOC 2, and PCI DSS. Michel brings a methodical, client-first approach to every engagement, ensuring frameworks translate into genuine operational improvements.",
+    bio: "A seasoned principal consultant with deep expertise in ISO 27001, SOC 2, and PCI DSS. Michel brings a methodical, client-first approach to every engagement.",
   },
   {
     name: "Koert van der Veer",
     role: "Senior Consultant",
     image: koert,
     linkedin: "",
-    bio: "Koert specialises in cloud security architecture and compliance automation. His engineering background allows him to bridge the gap between technical implementation and audit-ready documentation.",
+    bio: "Koert specialises in cloud security architecture and compliance automation. His engineering background bridges technical implementation and audit-ready documentation.",
   },
   {
     name: "Mason Clarke",
     role: "Consultant",
     image: mason,
     linkedin: "",
-    bio: "Mason specialises in cloud-native security across AWS and Azure environments. He helps organisations build secure-by-design architectures that satisfy even the most rigorous audit requirements.",
+    bio: "Mason specialises in cloud-native security across AWS and Azure environments. He helps organisations build secure-by-design architectures.",
   },
   {
     name: "Haley Whitfield",
@@ -85,102 +86,130 @@ const teamMembers = [
   },
 ];
 
-const ITEMS_PER_PAGE = 5;
-const glassCard =
-  "bg-white/60 backdrop-blur-[20px] border border-[rgba(59,59,57,0.08)] rounded-none";
+const featured = teamMembers.find((m) => m.featured);
+const rest = teamMembers.filter((m) => !m.featured);
+const ITEMS_PER_PAGE = 4;
 
 const TeamGrid = () => {
   const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
   const [page, setPage] = useState(0);
 
-  const totalPages = Math.ceil(teamMembers.length / ITEMS_PER_PAGE);
-  const visibleMembers = teamMembers.slice(
-    page * ITEMS_PER_PAGE,
-    page * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-  );
+  const totalPages = Math.ceil(rest.length / ITEMS_PER_PAGE);
+  const visible = rest.slice(page * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE + ITEMS_PER_PAGE);
 
   const prev = useCallback(() => setPage((p) => (p > 0 ? p - 1 : totalPages - 1)), [totalPages]);
   const next = useCallback(() => setPage((p) => (p < totalPages - 1 ? p + 1 : 0)), [totalPages]);
+
+  const LinkedInIcon = ({ className }: { className?: string }) => (
+    <Linkedin size={18} className={className} style={{ color: "#F36F21" }} />
+  );
 
   return (
     <section className="py-16 md:py-24 px-4" style={{ backgroundColor: "#F9FAFB" }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <h2
-          className="text-2xl md:text-4xl font-bold mb-4 text-center uppercase"
+          className="text-2xl md:text-4xl font-bold mb-14 text-center uppercase"
           style={{ color: "#3B3B39" }}
         >
           Meet Your Guides
         </h2>
-        <div className="mb-12" />
 
-        {/* Carousel container */}
+        {/* Featured principal — centered, larger */}
+        {featured && (
+          <div className="flex flex-col items-center mb-14">
+            <div
+              className="w-48 md:w-56 aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
+              onClick={() => setSelectedMember(featured)}
+            >
+              <img
+                src={featured.image}
+                alt={featured.name}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <h3
+              className="text-base font-bold mt-4 text-center"
+              style={{ color: "#3B3B39" }}
+            >
+              {featured.name}
+            </h3>
+            <p
+              className="text-sm mt-1 text-center"
+              style={{ color: "#F36F21" }}
+            >
+              {featured.role}
+            </p>
+            {featured.linkedin && (
+              <a href={featured.linkedin} target="_blank" rel="noopener noreferrer" className="mt-2">
+                <LinkedInIcon />
+              </a>
+            )}
+          </div>
+        )}
+
+        {/* Carousel of remaining members — 4 per row like reference */}
         <div className="relative">
-          {/* Navigation arrows */}
+          {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border border-[rgba(59,59,57,0.12)] bg-white/80 backdrop-blur-sm hover:border-[#F36F21] transition-colors"
+            className="absolute -left-4 md:-left-14 top-[40%] -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-[rgba(59,59,57,0.12)] bg-white shadow-sm hover:border-[#F36F21] transition-colors"
             aria-label="Previous"
           >
-            <ChevronLeft size={18} style={{ color: "#3B3B39" }} />
+            <ChevronLeft size={20} style={{ color: "#3B3B39" }} />
           </button>
           <button
             onClick={next}
-            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center border border-[rgba(59,59,57,0.12)] bg-white/80 backdrop-blur-sm hover:border-[#F36F21] transition-colors"
+            className="absolute -right-4 md:-right-14 top-[40%] -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-[rgba(59,59,57,0.12)] bg-white shadow-sm hover:border-[#F36F21] transition-colors"
             aria-label="Next"
           >
-            <ChevronRight size={18} style={{ color: "#3B3B39" }} />
+            <ChevronRight size={20} style={{ color: "#3B3B39" }} />
           </button>
 
-          {/* Grid of visible members */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {visibleMembers.map((member) => (
-              <div
-                key={member.name}
-                className={`${glassCard} group overflow-hidden transition-all duration-200 hover:border-[#F36F21]`}
-              >
-                <div className="aspect-[3/4] overflow-hidden">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {visible.map((member) => (
+              <div key={member.name} className="flex flex-col items-center">
+                <div
+                  className="w-full aspect-[3/4] overflow-hidden border border-[rgba(59,59,57,0.1)] rounded-sm cursor-pointer group"
+                  onClick={() => setSelectedMember(member)}
+                >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4">
-                  <h3
-                    className="text-sm font-bold uppercase tracking-wide"
-                    style={{ color: "#3B3B39" }}
-                  >
-                    {member.name}
-                  </h3>
-                  <p
-                    className="text-xs font-mono mt-1"
-                    style={{ color: "#5A5A58" }}
-                  >
-                    {member.role}
-                  </p>
-                  <button
-                    onClick={() => setSelectedMember(member)}
-                    className="mt-3 text-[11px] font-bold uppercase tracking-[0.12em] px-4 py-1.5 border border-[rgba(59,59,57,0.12)] hover:border-[#F36F21] transition-colors bg-transparent"
-                    style={{ color: "#F36F21" }}
-                  >
-                    Read Bio
-                  </button>
-                </div>
+                <h3
+                  className="text-sm font-bold mt-4 text-center"
+                  style={{ color: "#3B3B39" }}
+                >
+                  {member.name}
+                </h3>
+                <p
+                  className="text-xs mt-1 text-center"
+                  style={{ color: "#F36F21" }}
+                >
+                  {member.role}
+                </p>
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="mt-2">
+                    <LinkedInIcon />
+                  </a>
+                )}
               </div>
             ))}
           </div>
         </div>
 
         {/* Dot indicators */}
-        <div className="flex items-center justify-center gap-2 mt-8">
+        <div className="flex items-center justify-center gap-2.5 mt-10">
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
               onClick={() => setPage(i)}
-              className="w-2 h-2 transition-all duration-200"
+              className="w-2.5 h-2.5 rounded-full transition-all duration-200"
               style={{
-                backgroundColor: i === page ? "#F36F21" : "rgba(59,59,57,0.2)",
+                backgroundColor: i === page ? "#F36F21" : "rgba(59,59,57,0.15)",
               }}
               aria-label={`Page ${i + 1}`}
             />
@@ -192,11 +221,11 @@ const TeamGrid = () => {
       {selectedMember && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ backgroundColor: "rgba(15,23,42,0.6)", backdropFilter: "blur(4px)" }}
+          style={{ backgroundColor: "rgba(15,23,42,0.5)", backdropFilter: "blur(6px)" }}
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className={`${glassCard} bg-white max-w-lg w-full flex flex-col sm:flex-row overflow-hidden`}
+            className="bg-white max-w-lg w-full flex flex-col sm:flex-row overflow-hidden border border-[rgba(59,59,57,0.1)] shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sm:w-2/5 aspect-[3/4] sm:aspect-auto shrink-0">
@@ -209,16 +238,10 @@ const TeamGrid = () => {
             <div className="p-6 sm:p-8 flex flex-col justify-center relative">
               <button
                 onClick={() => setSelectedMember(null)}
-                className="absolute top-4 right-4 opacity-50 hover:opacity-100 transition-opacity"
+                className="absolute top-4 right-4 opacity-40 hover:opacity-100 transition-opacity"
               >
                 <X size={18} style={{ color: "#3B3B39" }} />
               </button>
-              <span
-                className="text-[10px] font-mono mb-3"
-                style={{ color: "#F36F21" }}
-              >
-                [BIO]
-              </span>
               <h3
                 className="text-lg font-bold uppercase tracking-wide mb-1"
                 style={{ color: "#3B3B39" }}
