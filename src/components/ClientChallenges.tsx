@@ -296,11 +296,11 @@ const ClientChallenges = () => {
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
         <ul className="text-lg leading-relaxed space-y-2 inline-block" style={{ color: "rgba(59,59,57,0.7)" }}>
-          <li className="flex items-start gap-3">
+          <li className="flex items-center justify-center gap-3">
             <span style={{ color: "#6B7280" }} className="shrink-0 leading-[1.75rem]">–</span>
             <span style={{ color: "#3B3B39" }}>We meet you where you are and guide you to the finish line.</span>
           </li>
-          <li className="flex items-start gap-3">
+          <li className="flex items-center justify-center gap-3">
             <span style={{ color: "#6B7280" }} className="shrink-0 leading-[1.75rem]">–</span>
             <span style={{ color: "#3B3B39" }}>We assist you through every step, including the final audit as your representative.</span>
           </li>
