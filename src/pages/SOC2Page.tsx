@@ -47,6 +47,7 @@ import { useToast } from "@/hooks/use-toast";
 import heroImg from "@/assets/soc2-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationImg from "@/assets/homepage/conference-meeting.jpg";
+import soc2PitfallsImg from "@/assets/soc2-pitfalls.jpg";
 
 /* ─── Proposal Modal ─── */
 const ProposalModal = ({
@@ -899,7 +900,7 @@ const SOC2Page = () => {
 
             <div className="lg:col-span-5">
               <img
-                src={consultationImg}
+                src={soc2PitfallsImg}
                 alt="SOC 2 compliance consultation"
                 className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
                 style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
