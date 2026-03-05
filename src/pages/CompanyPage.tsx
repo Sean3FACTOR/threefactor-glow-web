@@ -215,6 +215,11 @@ const CompanyPage = () => {
       </section>
 
       {/* ═══════════════════════════════════════
+                   SECTION — Team Grid
+                ═══════════════════════════════════════ */}
+      <TeamGrid />
+
+      {/* ═══════════════════════════════════════
                    SECTION 5 — Transitional CTA
                 ═══════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-4" style={{ backgroundColor: "#F9FAFB" }}>
