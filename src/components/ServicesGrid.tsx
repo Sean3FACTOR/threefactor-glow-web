@@ -183,6 +183,50 @@ const ServicesGrid = () => {
             </Link>
           </div>
         </div>
+
+        {/* Certifications Carousel */}
+        <div className="mt-12 max-w-6xl mx-auto">
+          <p
+            className="text-center text-[11px] font-bold uppercase tracking-[0.15em] mb-6"
+            style={{ color: "rgba(59,59,57,0.5)" }}
+          >
+            Our Team's Certifications
+          </p>
+          <div className="px-8 sm:px-12">
+            <Carousel opts={{ align: "start", loop: true }} className="w-full">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {certifications.map((cert) => (
+                  <CarouselItem
+                    key={cert.name}
+                    className="pl-2 md:pl-4 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+                  >
+                    <div
+                      className="flex items-center justify-center w-full h-20 md:h-24 p-3"
+                      style={{
+                        backgroundColor: "#FFFFFF",
+                        border: "1px solid rgba(59,59,57,0.08)",
+                      }}
+                    >
+                      <img
+                        src={cert.logo}
+                        alt={`${cert.name} certification`}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious
+                className="-left-4 sm:-left-8 opacity-100 rounded-none"
+                style={{ borderColor: "rgba(59,59,57,0.2)", backgroundColor: "rgba(59,59,57,0.05)", color: "#3B3B39" }}
+              />
+              <CarouselNext
+                className="-right-4 sm:-right-8 opacity-100 rounded-none"
+                style={{ borderColor: "rgba(59,59,57,0.2)", backgroundColor: "rgba(59,59,57,0.05)", color: "#3B3B39" }}
+              />
+            </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   );
