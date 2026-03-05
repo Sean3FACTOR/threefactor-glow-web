@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HomepageHero from "@/components/HomepageHero";
 import ClientChallenges from "@/components/ClientChallenges";
+import ServicesGrid from "@/components/ServicesGrid";
 import DealBlockers from "@/components/DealBlockers";
 import CompliancePlan from "@/components/CompliancePlan";
 import SuccessOutcomes from "@/components/SuccessOutcomes";
