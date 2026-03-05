@@ -103,23 +103,13 @@ const CompanyPage = () => {
                <h2
                 className="text-2xl md:text-4xl font-bold mb-6"
                 style={{ color: "#3B3B39" }}>
-                
-                 BENEFIT FROM DECADES OF FRONTLINE WISDOM
+                  10 YEARS OF FRONTLINE WISDOM
                </h2>
-               <p
-                className="text-base leading-relaxed mb-4"
-                style={{ color: "#5A5A58" }}>
-                
-                 At 3Factor, we believe you shouldn't be a training ground for junior auditors. Our team
-                 is exclusively senior-led, offering over 10 years of individual experience navigating
-                 the world's most rigorous frameworks.
-               </p>
-               <p
-                className="text-base leading-relaxed"
-                style={{ color: "#5A5A58" }}>
-                
-                 We don't just point out problems; we leverage our history to provide your solutions.
-               </p>
+                <p
+                 className="text-base leading-relaxed"
+                 style={{ color: "#5A5A58" }}>
+                  You shouldn't be a training ground for junior auditors. Our team is exclusively senior-led, offering over a decade of experience navigating the world's most rigorous frameworks. We leverage our history to provide your solutions.
+                </p>
              </div>
              <div className="max-w-2xl">
                <div
@@ -211,11 +201,11 @@ const CompanyPage = () => {
               className="text-base text-center mt-6 leading-relaxed font-bold"
               style={{ color: "#5A5A58" }}>
               
-                Expertise you can trust.
-                <br />
-                Standards to fuel your scale.
-                <br />
-                The oversight to reach the finish line.
+                 Expertise to earn their trust.
+                 <br />
+                 Standards to fuel your scale.
+                 <br />
+                 The oversight to reach the finish line.
               </p>
           </div>
         </div>
