@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import TeamGrid from "@/components/TeamGrid";
 
 import CIPTLogo from "@/assets/certifications/CIPT_logo.avif";
 import CIPPLogo from "@/assets/certifications/CIPP_logo.avif";
@@ -213,6 +214,11 @@ const CompanyPage = () => {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════
+                   SECTION — Team Grid
+                ═══════════════════════════════════════ */}
+      <TeamGrid />
 
       {/* ═══════════════════════════════════════
                    SECTION 5 — Transitional CTA
