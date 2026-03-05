@@ -36,7 +36,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImg from "@/assets/hero-cyber-real.jpg";
+import heroImg from "@/assets/cyber-essentials-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationImg from "@/assets/homepage/section-conference.jpg";
 
