@@ -83,7 +83,7 @@ const megaColumns = [
 
 const navLinks = [
   { name: "Services", hasMega: true, href: "", hash: null },
-  { name: "Company", hasMega: false, href: "/#company", hash: "company" },
+  { name: "Company", hasMega: false, href: "/company", hash: null },
   { name: "Contact", hasMega: false, href: "/contact", hash: null },
 ];
 
@@ -256,11 +256,13 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
-                      to="/#company"
-                      onClick={(e) => handleHashNav(e, "company")}
+                      to="/company"
                       className="relative inline-flex items-center h-16 px-5 text-xs font-bold uppercase tracking-[0.15em] transition-colors duration-200 hover:text-[#F36F21]"
-                      style={{ color: "#3B3B39" }}
+                      style={{ color: location.pathname === "/company" ? "#F36F21" : "#3B3B39" }}
                     >
+                      {location.pathname === "/company" && (
+                        <span className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: "#F36F21" }} />
+                      )}
                       Company
                     </Link>
                   </NavigationMenuLink>
@@ -380,8 +382,7 @@ const Navigation = () => {
                   <div className="flex flex-col gap-0 mt-1">
                     <SheetClose asChild>
                       <Link
-                        to="/#company"
-                        onClick={(e) => handleHashNav(e, "company")}
+                        to="/company"
                         className="text-xs font-bold uppercase tracking-[0.15em] min-h-[44px] flex items-center justify-center py-3 transition-colors duration-200 hover:text-[#F36F21] border-b"
                         style={{ color: "#3B3B39", borderColor: "rgba(59,59,57,0.08)" }}
                       >
