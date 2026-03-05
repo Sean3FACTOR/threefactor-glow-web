@@ -608,9 +608,9 @@ const SOC2Page = () => {
             </div>
 
             {/* Column 3: Image & Disclaimer */}
-            <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
+            <div className="relative px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationImg} alt="SOC 2 consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
-              <div className="absolute bottom-0 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+              <div className="mt-4 p-5 shadow-xl max-w-[280px] bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "We are not your auditor. We support SOC 2 engagements with multiple Tier 1 and Tier 2 CPA firms, and we have a strong track record of successful SOC 2 audits across clients and industries."
                 </p>

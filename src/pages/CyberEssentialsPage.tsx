@@ -484,9 +484,9 @@ const CyberEssentialsPage = () => {
             </div>
 
             {/* Column 3: Image & Disclaimer */}
-            <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
+            <div className="relative px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationImg} alt="Cyber Essentials consultation" className="w-full h-80 object-cover border border-slate-200" />
-              <div className="absolute bottom-0 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+              <div className="mt-4 p-5 shadow-xl max-w-[280px] bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "We don't just get you certified; we keep you certified with ongoing monitoring, automated patching, and a clear upgrade path."
                 </p>
