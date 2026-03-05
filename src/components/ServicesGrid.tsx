@@ -1,7 +1,8 @@
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import CIPTLogo from "@/assets/certifications/CIPT_logo.avif";
 import CIPPLogo from "@/assets/certifications/CIPP_logo.avif";
