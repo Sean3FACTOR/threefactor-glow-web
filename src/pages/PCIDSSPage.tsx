@@ -578,8 +578,8 @@ const PCIDSSPage = () => {
                       <p className="text-sm font-semibold text-slate-700 leading-relaxed">{tile.front}</p>
                     </div>
                     {/* Back */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#3B3B39] border border-slate-700 p-6 flex items-center justify-center text-center">
-                      <p className="text-sm text-white/90 leading-relaxed">{tile.back}</p>
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-slate-200 border border-slate-300 p-6 flex items-center justify-center text-center">
+                      <p className="text-sm text-slate-700 leading-relaxed">{tile.back}</p>
                     </div>
                   </div>
                 </div>
