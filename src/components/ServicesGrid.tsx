@@ -71,7 +71,7 @@ const clusters: Cluster[] = [
 
 const ServicesGrid = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const autoplayPlugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
+  const autoplayPlugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   return (
     <section
@@ -195,7 +195,7 @@ const ServicesGrid = () => {
             Our Team's Certifications
           </p>
           <div className="px-8 sm:px-12">
-            <Carousel opts={{ align: "start", loop: true }} plugins={[autoplayPlugin.current]} className="w-full">
+            <Carousel opts={{ align: "start", loop: true, duration: 40 }} plugins={[autoplayPlugin.current]} className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4">
                 {certifications.map((cert) => (
                   <CarouselItem
