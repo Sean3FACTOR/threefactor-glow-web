@@ -173,8 +173,13 @@ const pciSteps = [
     title: "Inventory Identification",
     duration: "1–2 Weeks",
     durationWeeks: 2,
-    desc: "",
-    details: [],
+    desc: "We map your data flows to ensure no hidden risks are left for the auditor to find.",
+    details: [
+      "Map all cardholder data flows and storage locations",
+      "Identify all systems, people, and processes touching CHD",
+      "Document network diagrams and data flow diagrams",
+      "Establish baseline inventory for scope decisions",
+    ],
   },
   {
     icon: Layers,
@@ -182,8 +187,13 @@ const pciSteps = [
     title: "Scope Reduction and CDE Minimization",
     duration: "2–5 Months",
     durationWeeks: 14,
-    desc: "",
-    details: [],
+    desc: "We shrink your audit footprint before building controls, saving months of effort and cost.",
+    details: [
+      "Network segmentation and CDE isolation design",
+      "Tokenization and outsourcing strategy assessment",
+      "Eliminate unnecessary CHD storage and processing",
+      "Document reduced scope boundaries for auditor review",
+    ],
   },
   {
     icon: Microscope,
@@ -191,8 +201,13 @@ const pciSteps = [
     title: "Gap Assessment",
     duration: "4–6 Weeks",
     durationWeeks: 5,
-    desc: "",
-    details: [],
+    desc: "We identify exactly which requirements need attention so remediation is targeted, not scattered.",
+    details: [
+      "Requirement-by-requirement gap analysis against PCI DSS v4.0",
+      "Prioritise findings by risk and effort",
+      "Evidence maturity assessment for each requirement",
+      "Produce actionable remediation roadmap",
+    ],
   },
   {
     icon: Cog,
@@ -200,8 +215,13 @@ const pciSteps = [
     title: "Remediation Execution",
     duration: "2–5 Months",
     durationWeeks: 14,
-    desc: "",
-    details: [],
+    desc: "We guide implementation so controls are built right the first time, avoiding rework during assessment.",
+    details: [
+      "Technical control implementation support",
+      "Policy and procedure development",
+      "Evidence-by-design workflows for ongoing compliance",
+      "Iterative validation against PCI DSS requirements",
+    ],
   },
   {
     icon: Eye,
@@ -209,8 +229,13 @@ const pciSteps = [
     title: "Formal PCI DSS Assessment (When Required)",
     duration: "4–6 Weeks",
     durationWeeks: 5,
-    desc: "",
-    details: [],
+    desc: "We ensure you walk into your assessment confident, with a complete evidence pack and rehearsed responses.",
+    details: [
+      "Pre-assessment validation and mock walkthroughs",
+      "Evidence pack compilation and completeness review",
+      "Auditor coordination and request management",
+      "Close-out support for any findings",
+    ],
   },
   {
     icon: FileText,
@@ -218,8 +243,13 @@ const pciSteps = [
     title: "Reporting",
     duration: "1–2 Weeks",
     durationWeeks: 2,
-    desc: "",
-    details: [],
+    desc: "We finalize documentation so your compliance posture is defensible and auditor-ready.",
+    details: [
+      "SAQ completion support or ROC report finalization",
+      "Attestation of Compliance (AOC) preparation",
+      "Executive summary and compliance status documentation",
+      "Remediation tracking for any open items",
+    ],
   },
   {
     icon: RefreshCw,
@@ -227,8 +257,13 @@ const pciSteps = [
     title: "Ongoing Maintenance",
     duration: "Ongoing",
     durationWeeks: 4,
-    desc: "",
-    details: [],
+    desc: "We keep your program current so revalidation is a routine exercise, not a scramble.",
+    details: [
+      "Defined evidence cadence and ownership model",
+      "Scope drift detection and boundary monitoring",
+      "Change management aligned to PCI boundaries",
+      "Annual revalidation preparation and support",
+    ],
   },
 ];
 
@@ -315,42 +350,96 @@ const InteractiveTimeline = ({ openModal }: { openModal: () => void }) => {
         </div>
 
         <div className="bg-slate-50 border border-slate-200 shadow-sm p-8 transition-all duration-300">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
-              <Icon className="w-5 h-5 text-orange-600" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-white border border-slate-300 flex-shrink-0">
+                  <Icon className="w-5 h-5 text-orange-600" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
+                    Step {step.stage} · {step.duration}
+                  </span>
+                  <h3 className="text-lg font-bold uppercase text-slate-900">
+                    {step.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 mb-5 leading-relaxed">{step.desc}</p>
+              <ul className="space-y-2 mb-6">
+                {step.details.map((d) => (
+                  <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                onClick={openModal}
+                className="text-white font-semibold"
+                style={{ backgroundColor: "#3B3B39" }}
+              >
+                Get a Fixed-Price Proposal
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
             </div>
-            <div>
-              <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider">
-                Step {step.stage} · {step.duration}
-              </span>
-              <h3 className="text-lg font-bold uppercase text-slate-900">
-                {step.title}
-              </h3>
+            <div className="hidden lg:flex items-center justify-center overflow-hidden">
+              <img
+                src={hexagonGraphic}
+                alt=""
+                className="w-full h-auto max-h-[336px] object-contain opacity-80"
+              />
             </div>
           </div>
         </div>
       </div>
 
       {/* Mobile */}
-      <div className="lg:hidden space-y-3">
-        {pciSteps.map((s, i) => {
-          const StepIcon = s.icon;
-          return (
-            <div key={i} className="flex items-center gap-3 p-4 border border-slate-200 bg-white">
-              <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
-                <StepIcon className="w-5 h-5 text-orange-600" />
-              </div>
-              <div className="text-left">
-                <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
-                  Step {s.stage} · {s.duration}
-                </span>
-                <span className="text-sm font-bold uppercase text-slate-900">
-                  {s.title}
-                </span>
-              </div>
-            </div>
-          );
-        })}
+      <div className="lg:hidden">
+        <Accordion type="single" collapsible defaultValue="stage-0">
+          {pciSteps.map((s, i) => {
+            const StepIcon = s.icon;
+            return (
+              <AccordionItem key={i} value={`stage-${i}`} className="border-b border-slate-200">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <div className="flex items-center gap-3 min-h-[44px]">
+                    <div className="w-10 h-10 flex items-center justify-center border border-slate-300 bg-white flex-shrink-0">
+                      <StepIcon className="w-5 h-5 text-orange-600" />
+                    </div>
+                    <div className="text-left">
+                      <span className="text-[10px] font-mono text-orange-600 uppercase tracking-wider block">
+                        Step {s.stage} · {s.duration}
+                      </span>
+                      <span className="text-sm font-bold uppercase text-slate-900">
+                        {s.title}
+                      </span>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pl-[52px]">
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">{s.desc}</p>
+                  <ul className="space-y-2 mb-4">
+                    {s.details.map((d) => (
+                      <li key={d} className="flex items-start gap-2 text-sm text-slate-900">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-600" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    onClick={openModal}
+                    size="sm"
+                    className="text-white font-semibold"
+                    style={{ backgroundColor: "#3B3B39" }}
+                  >
+                    Get a Fixed-Price Proposal
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
       </div>
     </div>
   );
@@ -454,26 +543,23 @@ const PCIDSSPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is PCI DSS? */}
             <div className="px-6 lg:px-8">
-              <button
-                onClick={() => setCol1Open(!col1Open)}
-                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
-              >
-                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                  WHAT IS PCI DSS?
-                </h3>
-                <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? "rotate-180" : ""}`} />
-              </button>
-              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
-                WHAT IS PCI DSS?
-              </h3>
-              <div className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed">
-                  PCI DSS is the global security standard for protecting cardholder data. Compliance is required for any organization storing, processing, or transmitting payment card data.
-                </p>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
-                  Scope definition and reduction are the primary drivers of cost and complexity, more than any individual PCI DSS requirement. Reducing scope first dramatically simplifies the path to compliance.
-                </p>
-              </div>
+              <Accordion type="single" collapsible defaultValue="what-is">
+                <AccordionItem value="what-is" className="border-none">
+                  <AccordionTrigger className="py-0 hover:no-underline">
+                    <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
+                      WHAT IS PCI DSS?
+                    </h3>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-4">
+                      PCI DSS is the global security standard for protecting cardholder data. Compliance is required for any organization storing, processing, or transmitting payment card data.
+                    </p>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
+                      Scope definition and reduction are the primary drivers of cost and complexity, more than any individual PCI DSS requirement. Reducing scope first dramatically simplifies the path to compliance.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Column 2: You're in the right place if... */}
@@ -509,7 +595,7 @@ const PCIDSSPage = () => {
             {/* Column 3: Image & Disclaimer */}
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationIntroImg} alt="PCI DSS consultation meeting" className="w-full h-80 object-cover border border-slate-200" />
-              <div className="absolute left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200" style={{ bottom: "-25%" }}>
+              <div className="absolute bottom-0 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "As QSAs, we don't just prepare you for certification—we guide you through the entire journey. Whether you work with a chosen auditor or need us to perform the validation, we ensure a defensible, audit-proof result."
                 </p>
@@ -523,6 +609,7 @@ const PCIDSSPage = () => {
       {/* ═══ SUB-NAV BAR ═══ */}
       <section id="quick-nav" className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto max-w-6xl">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 text-center mb-4">Quick Nav</h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {subNavLinks.map((link) => {
               const LinkIcon = link.icon;
@@ -763,8 +850,11 @@ const PCIDSSPage = () => {
 
           {/* Pitfalls */}
           <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
-            HOW WE HELP YOU AVOID COMMON PCI DSS PITFALLS
+            How we help you avoid common PCI DSS pitfalls
           </h3>
+          <p className="text-sm text-slate-500 mb-2">
+            Our approach solves the frequent industry traps that sink most compliance projects.
+          </p>
           <p className="text-lg text-slate-600 mb-10">
             Our scope-first approach ensures your PCI program stays lean and effective.
           </p>

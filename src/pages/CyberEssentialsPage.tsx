@@ -434,26 +434,23 @@ const CyberEssentialsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
             {/* Column 1: What is Cyber Essentials? */}
             <div className="px-6 lg:px-8">
-              <button
-                onClick={() => setCol1Open(!col1Open)}
-                className="flex lg:hidden items-center justify-between w-full text-left mb-4 cursor-pointer"
-              >
-                <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                  WHAT IS CYBER ESSENTIALS?
-                </h3>
-                <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${col1Open ? "rotate-180" : ""}`} />
-              </button>
-              <h3 className="hidden lg:block text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
-                WHAT IS CYBER ESSENTIALS?
-              </h3>
-              <div className={`overflow-hidden transition-all duration-300 lg:!max-h-none lg:!opacity-100 ${col1Open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed">
-                  A UK government-backed scheme (developed by the NCSC) designed to protect organisations from the most common cyber attacks: the kind that look for "unlocked doors" like weak passwords or out-of-date software.
-                </p>
-                <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
-                  Certified organisations make 92% fewer insurance claims than those without it.
-                </p>
-              </div>
+              <Accordion type="single" collapsible defaultValue="what-is">
+                <AccordionItem value="what-is" className="border-none">
+                  <AccordionTrigger className="py-0 hover:no-underline">
+                    <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
+                      WHAT IS CYBER ESSENTIALS?
+                    </h3>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-4">
+                      A UK government-backed scheme (developed by the NCSC) designed to protect organisations from the most common cyber attacks: the kind that look for "unlocked doors" like weak passwords or out-of-date software.
+                    </p>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed mt-3">
+                      Certified organisations make 92% fewer insurance claims than those without it.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Column 2: You're in the right place if... */}
@@ -489,7 +486,7 @@ const CyberEssentialsPage = () => {
             {/* Column 3: Image & Disclaimer */}
             <div className="relative pb-8 px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img src={consultationImg} alt="Cyber Essentials consultation" className="w-full h-80 object-cover border border-slate-200" />
-              <div className="absolute -bottom-4 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
+              <div className="absolute bottom-0 left-2 p-5 shadow-xl max-w-[280px] z-10 bg-white border border-slate-200">
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "We don't just get you certified; we keep you certified with ongoing monitoring, automated patching, and a clear upgrade path."
                 </p>
@@ -503,6 +500,7 @@ const CyberEssentialsPage = () => {
       {/* ═══ SUB-NAV BAR ═══ */}
       <section id="quick-nav" className="py-6 px-6" style={{ backgroundColor: "#F8F9FA" }}>
         <div className="container mx-auto max-w-6xl">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-slate-500 text-center mb-4">Quick Nav</h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {subNavLinks.map((link) => {
               const LinkIcon = link.icon;
@@ -738,8 +736,11 @@ const CyberEssentialsPage = () => {
 
           {/* Pitfalls */}
           <h3 className="text-lg md:text-xl font-bold text-slate-900 uppercase mb-2">
-            HOW WE HELP YOU AVOID COMMON PITFALLS
+            How we help you avoid common Cyber Essentials pitfalls
           </h3>
+          <p className="text-sm text-slate-500 mb-2">
+            Our approach solves the frequent industry traps that sink most compliance projects.
+          </p>
           <p className="text-lg text-slate-600 mb-10">
             Our expert-led approach ensures your certification stays on track.
           </p>
