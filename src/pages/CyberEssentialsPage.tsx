@@ -38,7 +38,7 @@ import {
 } from "@/components/ui/accordion";
 import heroImg from "@/assets/cyber-essentials-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
-import consultationImg from "@/assets/homepage/section-conference.jpg";
+import consultationImg from "@/assets/cyber-essentials-consultation.jpg";
 
 /* ─── Data ─── */
 const pillars = [
