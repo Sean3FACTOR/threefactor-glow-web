@@ -776,6 +776,7 @@ const SOC2Page = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
+          <BackToNavButton />
         </div>
       </section>
 
