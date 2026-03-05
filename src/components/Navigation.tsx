@@ -61,12 +61,6 @@ const megaColumns = [
   {
     groups: [
       {
-        heading: "Cybersecurity",
-        items: [
-          { name: "Cyber Maturity on AWS", href: "/services/cyber-maturity-aws" },
-        ],
-      },
-      {
         heading: "Advisory",
         items: [
           { name: "Virtual CISO", href: "/services/vciso" },
