@@ -96,7 +96,7 @@ const teamMembers = [
 
 const featured = teamMembers.find((m) => m.featured);
 const rest = teamMembers.filter((m) => !m.featured);
-const PAGE_SIZES = [5, 3, 3];
+const PAGE_SIZES = [4, 3, 3];
 
 const getPageSlices = () => {
   const pages: (typeof rest)[] = [];
