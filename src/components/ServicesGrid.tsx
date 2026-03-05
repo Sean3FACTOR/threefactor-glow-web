@@ -198,7 +198,7 @@ const ServicesGrid = () => {
         {/* Certifications Carousel */}
         <div className="mt-12 max-w-6xl mx-auto" ref={carouselRef}>
           <p
-            className="text-center text-[11px] font-bold uppercase tracking-[0.15em] mb-6"
+            className="text-center text-[22px] font-bold uppercase tracking-[0.15em] mb-6"
             style={{ color: "rgba(59,59,57,0.5)" }}
           >
             Our Team's Certifications
