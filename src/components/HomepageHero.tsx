@@ -35,7 +35,7 @@ const HomepageHero = () => {
               <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left">
                 We build defensible certification programs that clear RFI hurdles, satisfy auditors, and turn complex regulations into market access.
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left mt-8">
+              <p className="text-base md:text-lg leading-relaxed text-white/90 font-bold text-left mt-7">
                 Scale into regulated sectors without the friction of security roadblocks.
                 <br />
                 <br />
