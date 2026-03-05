@@ -1,6 +1,31 @@
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+import CIPTLogo from "@/assets/certifications/CIPT_logo.avif";
+import CIPPLogo from "@/assets/certifications/CIPP_logo.avif";
+import CCNALogo from "@/assets/certifications/CCNA_logo.avif";
+import SSCPLogo from "@/assets/certifications/SSCP_logo.avif";
+import AWSLogo from "@/assets/certifications/aws_partner_logo.avif";
+import ISOLogo from "@/assets/certifications/ISO_logo.avif";
+import CISALogo from "@/assets/certifications/CISA_logo.svg";
+import CISMLogo from "@/assets/certifications/CISM_logo.svg";
+import CISSPLogo from "@/assets/certifications/CISSP_logo.webp";
+import PCILogo from "@/assets/certifications/PCI_logo.avif";
+
+const certifications = [
+  { name: "PCI", logo: PCILogo },
+  { name: "CISSP", logo: CISSPLogo },
+  { name: "CISM", logo: CISMLogo },
+  { name: "CISA", logo: CISALogo },
+  { name: "ISO 27001", logo: ISOLogo },
+  { name: "CIPT", logo: CIPTLogo },
+  { name: "CIPP", logo: CIPPLogo },
+  { name: "CCNA", logo: CCNALogo },
+  { name: "SSCP", logo: SSCPLogo },
+  { name: "AWS Partner", logo: AWSLogo },
+];
 
 interface ServiceItem {
   label: string;
