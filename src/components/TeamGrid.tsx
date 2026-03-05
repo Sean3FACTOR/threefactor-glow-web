@@ -120,13 +120,7 @@ const TeamGrid = () => {
         >
           Meet Your Guides
         </h2>
-        <p
-          className="text-base leading-relaxed mb-12 max-w-2xl mx-auto text-center"
-          style={{ color: "#5A5A58" }}
-        >
-          Every engagement is senior-led. No juniors learning on your dime — just
-          battle-tested experts who've been in the trenches.
-        </p>
+        <div className="mb-12" />
 
         {/* Carousel container */}
         <div className="relative">
