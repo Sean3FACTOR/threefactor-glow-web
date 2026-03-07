@@ -360,7 +360,7 @@ const VCISOPage = () => {
           <div className="text-center mb-16">
             
             <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
-              THE 3<span style={{ color: "#F36F21" }}>FACTOR</span> vCISO DOUBLE-ENGINE
+              THE 3<span style={{ color: "#F36F21" }}>FACTOR</span> <span className="normal-case">v</span>CISO DOUBLE-ENGINE
             </h2>
             <p className="text-sm max-w-2xl mx-auto" style={{ color: "#5A5A58" }}>
               Two interlocking systems. One unified mission. Technical defence
