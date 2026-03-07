@@ -30,7 +30,7 @@ const SuccessOutcomes = () => {
           </p>
         </div>
 
-        <h3 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase tracking-tight" style={{ color: "#3B3B39" }}>
+        <h3 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase tracking-tight text-center" style={{ color: "#3B3B39" }}>
           What Success Looks Like
         </h3>
 
