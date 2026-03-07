@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HomepageHero from "@/components/HomepageHero";
+import TrustBar from "@/components/TrustBar";
 import ClientChallenges from "@/components/ClientChallenges";
 import ServicesGrid from "@/components/ServicesGrid";
 import DealBlockers from "@/components/DealBlockers";
@@ -14,6 +15,7 @@ const Index = () => {
       <Navigation />
       <div className="pt-14">
         <HomepageHero />
+        <TrustBar />
         <ClientChallenges />
         <ServicesGrid />
         <DealBlockers />
