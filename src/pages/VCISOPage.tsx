@@ -280,7 +280,7 @@ const VCISOPage = () => {
                   security posture and your revenue growth."
                 </p>
                 <p className="text-xs text-slate-500 mt-2">
-                  3FACTOR vCISO Team
+                  Spyro Malaspinas — 3FACTOR Principal
                 </p>
               </div>
             </div>
