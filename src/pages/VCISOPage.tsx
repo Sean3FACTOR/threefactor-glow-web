@@ -251,18 +251,6 @@ const VCISOPage = () => {
                 alt="Boardroom strategy session"
                 className="w-full h-80 object-cover border border-slate-200"
               />
-              <div className="mt-4 p-5 shadow-xl max-w-[280px] bg-white border border-slate-200">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">
-                  Unbiased Advocacy
-                </h4>
-                <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
-                  "We don't sell tools or platforms. Our only agenda is your
-                  security posture and your revenue growth."
-                </p>
-                <p className="text-xs text-slate-500 mt-2">
-                  Spyro Malaspinas — 3FACTOR Principal
-                </p>
-              </div>
             </div>
           </div>
         </div>
