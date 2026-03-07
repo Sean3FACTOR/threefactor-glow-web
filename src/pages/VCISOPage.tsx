@@ -39,6 +39,7 @@ import VCISOTimeline from "@/components/vciso/VCISOTimeline";
 import isoHeroImg from "@/assets/hero-boardroom.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
+import greyLogo from "@/assets/3F_Grey.png";
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
@@ -427,8 +428,8 @@ const VCISOPage = () => {
             {/* CENTER: Vertical Divider / Engine Core */}
             <div className="hidden lg:flex flex-col items-center justify-center px-4">
               <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
-              <div className="w-14 h-14 flex items-center justify-center border-2 my-4 rotate-45" style={{ borderColor: "#F36F21" }}>
-                <Settings className="w-6 h-6 -rotate-45" style={{ color: "#F36F21" }} />
+              <div className="w-14 h-14 flex items-center justify-center my-4">
+                <img src={greyLogo} alt="3Factor" className="w-12 h-12 object-contain" />
               </div>
               <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
             </div>
@@ -436,8 +437,8 @@ const VCISOPage = () => {
             {/* Mobile divider */}
             <div className="flex lg:hidden items-center justify-center py-6">
               <div className="flex-1 h-px" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
-              <div className="w-10 h-10 flex items-center justify-center border-2 mx-4 rotate-45" style={{ borderColor: "#F36F21" }}>
-                <Settings className="w-5 h-5 -rotate-45" style={{ color: "#F36F21" }} />
+              <div className="w-10 h-10 flex items-center justify-center mx-4">
+                <img src={greyLogo} alt="3Factor" className="w-8 h-8 object-contain" />
               </div>
               <div className="flex-1 h-px" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
             </div>
