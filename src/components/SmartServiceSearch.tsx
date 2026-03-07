@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Search, ArrowRight, Shield, CreditCard, FileCheck, Layers, ShieldCheck } from "lucide-react";
+import { Search, ArrowRight, Shield, CreditCard, FileCheck, ShieldCheck, UserCog, Compass, ShieldAlert, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ServiceEntry {
@@ -14,37 +14,58 @@ const services: ServiceEntry[] = [
   {
     name: "ISO 27001",
     path: "/services/iso-27001",
-    keywords: ["iso", "27001", "isms", "information security", "management system", "certification", "audit"],
+    keywords: ["iso", "27001", "isms", "information security", "management system", "certification", "audit", "annex a", "iso certification", "isms buildout", "annex a controls", "8-10 month certification", "win more deals", "close rfps", "enterprise trust"],
     icon: Shield,
     description: "Information security management system certification & readiness",
   },
   {
     name: "PCI DSS",
-    path: "/services/strategy-risk",
-    keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data"],
+    path: "/services/pci-dss",
+    keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data", "payment card security", "qsa", "qsa audit", "saq", "saq support", "roc", "roc assessment", "cde", "cde minimization", "scope reduction"],
     icon: CreditCard,
     description: "Payment card industry data security standard compliance",
   },
   {
     name: "SOC 2",
     path: "/services/soc-2",
-    keywords: ["soc", "soc2", "service org", "audit", "trust", "aicpa", "type 1", "type 2", "type ii"],
+    keywords: ["soc", "soc2", "service org", "audit", "trust", "aicpa", "type 1", "type 2", "type ii", "service organization control", "trust services criteria", "saas audit", "saas audit readiness"],
     icon: FileCheck,
     description: "Service organisation control reporting & trust assurance",
   },
   {
-    name: "CCF (Common Control Framework)",
-    path: "/services/strategy-risk",
-    keywords: ["ccf", "common control", "framework", "integrated", "unified", "mapping", "reuse"],
-    icon: Layers,
-    description: "Unified control framework to reduce duplication across standards",
-  },
-  {
     name: "Cyber Essentials",
     path: "/services/cyber-essentials",
-    keywords: ["cyber essentials", "ce", "ce+", "plus", "ncsc", "baseline", "basic"],
+    keywords: ["cyber essentials", "ce", "ce+", "plus", "ncsc", "baseline", "basic", "cyber essentials plus", "uk government", "uk government certification", "iasme", "basic security hygiene", "government tender", "government tender requirements"],
     icon: ShieldCheck,
     description: "UK government-backed baseline cyber security certification",
+  },
+  {
+    name: "Virtual CISO",
+    path: "/services/vciso",
+    keywords: ["vciso", "virtual ciso", "outsourced ciso", "fractional security leadership", "fractional ciso", "sales enablement", "rfp support", "security white papers", "strategic growth engine", "security questionnaire", "security questionnaire help", "ciso advisory", "win more deals", "close rfps", "rfp black hole"],
+    icon: UserCog,
+    description: "Strategic security leadership that accelerates revenue & closes deals",
+  },
+  {
+    name: "Cyber Maturity",
+    path: "/services/strategy",
+    keywords: ["cyber maturity", "security posture", "security posture assessment", "cybersecurity gap analysis", "gap analysis", "maturity modeling", "maturity model", "strategic security roadmap", "security roadmap", "cmmc readiness", "cmmc"],
+    icon: Compass,
+    description: "Assess, benchmark, and elevate your organisation's security posture",
+  },
+  {
+    name: "Vendor Risk Management",
+    path: "/services/strategy",
+    keywords: ["vendor risk", "vendor risk management", "supply chain security", "supply chain", "third party risk", "third-party risk", "tprm", "vendor security vetting", "vendor vetting", "saas risk assessment", "saas risk", "vendor assessment"],
+    icon: ShieldAlert,
+    description: "Vet your supply chain so vendors don't become your liability",
+  },
+  {
+    name: "Cybersecurity Strategy",
+    path: "/services/strategy",
+    keywords: ["cybersecurity strategy", "security architecture", "strategic planning", "ciso advisory", "security governance", "board reporting", "security program", "security planning"],
+    icon: Brain,
+    description: "Board-level security governance & strategic architecture planning",
   },
 ];
 
@@ -71,7 +92,7 @@ const SmartServiceSearch = () => {
             Find Your Compliance Pathway
           </h2>
           <p className="text-sm text-slate-500">
-            Search for a specific standard (e.g., ISO, SOC 2, PCI) to view our dedicated service details.
+            Search for a standard, framework, or outcome (e.g., "win more deals", "vendor risk", "vCISO").
           </p>
         </div>
 
@@ -117,7 +138,7 @@ const SmartServiceSearch = () => {
             ) : (
               <div className="px-5 py-6 text-center">
                 <p className="text-sm text-slate-500">
-                  No matching services found. Try "ISO", "SOC", or "PCI".
+                  No matching services found. Try "ISO", "SOC", "vCISO", or "vendor risk".
                 </p>
               </div>
             )}
