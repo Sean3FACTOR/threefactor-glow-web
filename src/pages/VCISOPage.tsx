@@ -39,6 +39,7 @@ import VCISOTimeline from "@/components/vciso/VCISOTimeline";
 import isoHeroImg from "@/assets/hero-boardroom.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
+import greyLogo from "@/assets/3F_Grey.png";
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
