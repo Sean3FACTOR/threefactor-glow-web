@@ -78,12 +78,6 @@ const CustomerProblem = () => {
                     e.currentTarget.style.borderColor = "#E5E7EB";
                   }}
                 >
-                  <div
-                    className="w-10 h-10 flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: "rgba(243,111,33,0.08)" }}
-                  >
-                    <Icon className="w-5 h-5" style={{ color: "#F36F21" }} />
-                  </div>
                   <span
                     className="text-sm font-bold uppercase tracking-tight"
                     style={{ color: "#3B3B39" }}
