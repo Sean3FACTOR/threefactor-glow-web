@@ -346,128 +346,147 @@ const VCISOPage = () => {
         </div>
       </section>
 
-      {/* ═══ WHAT WE DELIVER (White) — Two-Column ═══ */}
+      {/* ═══ THE 3FACTOR vCISO DOUBLE-ENGINE ═══ */}
       <section id="deliverables" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase mb-4">
-              WHAT WE DELIVER
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <p className="text-xs font-mono uppercase tracking-[0.3em] mb-3" style={{ color: "#F36F21" }}>[SYS-DEL]</p>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
+              THE 3<span style={{ color: "#F36F21" }}>FACTOR</span> vCISO DOUBLE-ENGINE
             </h2>
-            <p className="text-sm text-slate-600 max-w-2xl mx-auto">
-              Our vCISO engagement delivers two interlocking streams: the
-              technical foundations that satisfy auditors and the commercial
-              assets that close deals.
+            <p className="text-sm max-w-2xl mx-auto" style={{ color: "#5A5A58" }}>
+              Two interlocking systems. One unified mission. Technical defence
+              and commercial offence working in lockstep to protect your
+              business and accelerate your revenue.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Column 1: The Security Vault */}
-            <div className="bg-white border border-slate-200 shadow-sm p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 flex items-center justify-center bg-slate-50 border border-slate-200">
-                  <Lock className="w-5 h-5 text-orange-600" />
-                </div>
+          {/* Double-Engine Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-0 items-stretch">
+
+            {/* LEFT: The Security Vault */}
+            <div className="flex flex-col gap-5 p-6 lg:p-8">
+              <div className="flex items-center gap-3 mb-2">
+                <Lock className="w-5 h-5" style={{ color: "#F36F21" }} />
                 <div>
-                  <h3 className="text-lg font-bold uppercase text-slate-900">
-                    The Security Vault
-                  </h3>
-                  <p className="text-xs font-mono uppercase tracking-widest text-slate-500">
-                    Technical Foundations
-                  </p>
+                  <h3 className="text-lg font-bold uppercase" style={{ color: "#3B3B39" }}>The Security Vault</h3>
+                  <p className="text-xs font-mono uppercase tracking-[0.2em]" style={{ color: "#5A5A58" }}>Technical Defence</p>
                 </div>
               </div>
-              <ul className="space-y-4">
-                {[
-                  {
-                    title: "Technical Gap Analysis",
-                    desc: "Full assessment of your control environment against enterprise buyer expectations and key frameworks.",
-                  },
-                  {
-                    title: "Regulatory Mapping",
-                    desc: "Map your controls across ISO 27001, SOC 2, NIS2, DORA, and industry-specific requirements.",
-                  },
-                  {
-                    title: "3rd Party Risk Management",
-                    desc: "Vendor risk assessments, supply chain security reviews, and sub-processor due diligence frameworks.",
-                  },
-                  {
-                    title: "Policy & Governance Suite",
-                    desc: "Tailored policies, procedures, and evidence workflows that operate day-to-day.",
-                  },
-                  {
-                    title: "Incident Response Framework",
-                    desc: "Battle-tested IR playbooks, communication templates, and tabletop exercise programmes.",
-                  },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
-                    <div>
-                      <p className="text-sm font-semibold text-slate-800">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Vault Card 1 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-01] The Roadmap</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <Compass className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>Risk Assessment Results</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>Detailed technical gap analysis and prioritised remediation roadmaps tailored to your threat landscape.</p>
+                </div>
+              </div>
+
+              {/* Vault Card 2 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-02] The Blueprint</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <ShieldCheck className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>Regulatory Mapping</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>Alignment with ISO 27001, SOC 2, CMMC, NIST, and FedRAMP — mapped to your specific control environment.</p>
+                </div>
+              </div>
+
+              {/* Vault Card 3 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-03] The Perimeter</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <Link2 className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>3rd Party Risk Management</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>We vet your vendors so your supply chain doesn't become your liability.</p>
+                </div>
+              </div>
             </div>
 
-            {/* Column 2: The Sales Accelerator */}
-            <div
-              className="bg-white border border-slate-200 shadow-sm p-8"
-              style={{ borderTop: "2px solid #F36F21" }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 flex items-center justify-center bg-slate-50 border border-slate-200">
-                  <TrendingUp className="w-5 h-5 text-orange-600" />
-                </div>
+            {/* CENTER: Vertical Divider / Engine Core */}
+            <div className="hidden lg:flex flex-col items-center justify-center px-4">
+              <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
+              <div className="w-14 h-14 flex items-center justify-center border-2 my-4 rotate-45" style={{ borderColor: "#F36F21" }}>
+                <Settings className="w-6 h-6 -rotate-45" style={{ color: "#F36F21" }} />
+              </div>
+              <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
+            </div>
+
+            {/* Mobile divider */}
+            <div className="flex lg:hidden items-center justify-center py-6">
+              <div className="flex-1 h-px" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
+              <div className="w-10 h-10 flex items-center justify-center border-2 mx-4 rotate-45" style={{ borderColor: "#F36F21" }}>
+                <Settings className="w-5 h-5 -rotate-45" style={{ color: "#F36F21" }} />
+              </div>
+              <div className="flex-1 h-px" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
+            </div>
+
+            {/* RIGHT: The Sales Accelerator */}
+            <div className="flex flex-col gap-5 p-6 lg:p-8">
+              <div className="flex items-center gap-3 mb-2">
+                <TrendingUp className="w-5 h-5" style={{ color: "#F36F21" }} />
                 <div>
-                  <h3 className="text-lg font-bold uppercase text-slate-900">
-                    The Sales Accelerator
-                  </h3>
-                  <p className="text-xs font-mono uppercase tracking-widest text-slate-500">
-                    Commercial Assets
-                  </p>
+                  <h3 className="text-lg font-bold uppercase" style={{ color: "#3B3B39" }}>The Sales Accelerator</h3>
+                  <p className="text-xs font-mono uppercase tracking-[0.2em]" style={{ color: "#5A5A58" }}>Commercial Offence</p>
                 </div>
               </div>
-              <ul className="space-y-4">
-                {[
-                  {
-                    title: "Security White Papers",
-                    desc: "Prospect-ready documentation that positions your security posture as a competitive differentiator.",
-                  },
-                  {
-                    title: "RFP & Questionnaire Support",
-                    desc: "Pre-built templates and direct vCISO involvement in completing security assessments.",
-                  },
-                  {
-                    title: "Prospect Call Participation",
-                    desc: "A senior CISO joins your sales calls to provide instant credibility and answer technical questions live.",
-                  },
-                  {
-                    title: "Trust Centre Content",
-                    desc: "Architecture diagrams, compliance summaries, and security FAQs for your customer-facing portal.",
-                  },
-                  {
-                    title: "Board & Investor Reporting",
-                    desc: "Quarterly security briefings that translate risk into business language for stakeholders.",
-                  },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 text-orange-600" />
-                    <div>
-                      <p className="text-sm font-semibold text-slate-800">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+
+              {/* Accelerator Card 1 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-01] The Narrative</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <Rocket className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>Security White Papers</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>Compelling narratives that explain your tool's security value to non-technical buyers.</p>
+                </div>
+              </div>
+
+              {/* Accelerator Card 2 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-02] The Win</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <Trophy className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>RFP Support</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>Technical authorship for security sections of high-value proposals.</p>
+                </div>
+              </div>
+
+              {/* Accelerator Card 3 */}
+              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-03] The Closer</p>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                    <Headset className="w-5 h-5" style={{ color: "#F36F21" }} />
+                  </div>
+                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>Prospect Call Participation</h4>
+                </div>
+                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>A senior CISO on your sales calls to provide instant credibility and close deals.</p>
+                </div>
+              </div>
             </div>
           </div>
 
