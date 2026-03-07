@@ -431,10 +431,10 @@ const VCISOPage = () => {
             </div>
 
             {/* CENTER: Vertical Divider / Engine Core */}
-            <div className="hidden lg:flex flex-col items-center justify-center px-4">
+            <div className="hidden lg:flex flex-col items-center px-4">
               <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
-              <div className="w-16 h-16 flex items-center justify-center my-4">
-                <img src={greyLogo} alt="3Factor" className="w-14 h-14 object-contain" />
+              <div className="w-[4.5rem] h-[4.5rem] flex items-center justify-center">
+                <img src={greyLogo} alt="3Factor" className="w-16 h-16 object-contain" />
               </div>
               <div className="w-px flex-1" style={{ backgroundColor: "rgba(59,59,57,0.12)" }} />
             </div>
