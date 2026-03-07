@@ -130,12 +130,15 @@ const VCISOPage = () => {
               border: "1px solid rgba(255,255,255,0.15)",
             }}
           >
-            <p className="text-sm md:text-base text-white/90 leading-relaxed">
-              At 3FACTOR, we provide boutique, senior-led security leadership
-              that bridges the gap between complex compliance and your bottom
-              line. We help you prove security to your most demanding prospects,
-              shortening sales cycles and winning enterprise-grade deals.
-            </p>
+             <p className="text-sm md:text-base text-white/90 leading-relaxed">
+               At 3FACTOR, we provide boutique, senior-led security leadership
+               that bridges the gap between complex compliance and your bottom
+               line.
+             </p>
+             <p className="text-sm md:text-base text-white/90 leading-relaxed mt-3">
+               We help you prove security to your most demanding prospects,
+               shortening sales cycles and winning enterprise-grade deals.
+             </p>
           </div>
 
           <Button
