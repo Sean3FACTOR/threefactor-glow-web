@@ -39,6 +39,7 @@ import VCISOTimeline from "@/components/vciso/VCISOTimeline";
 import vcisoHeroImg from "@/assets/vciso/vciso-hero.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
+import tabletMeetingImg from "@/assets/vciso/tablet-meeting.png";
 import greyLogo from "@/assets/3F_Grey.png";
 
 /* ─── Sub-Nav Links ─── */
@@ -269,7 +270,7 @@ const VCISOPage = () => {
             {/* Column 3: Image + Unbiased Advocacy */}
             <div className="relative px-6 lg:px-8 border-t lg:border-t-0 pt-8 lg:pt-0">
               <img
-                src={consultationImg}
+                src={tabletMeetingImg}
                 alt="Boardroom strategy session"
                 className="w-full h-80 object-cover border border-slate-200"
               />
