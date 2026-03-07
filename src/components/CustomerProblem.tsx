@@ -37,12 +37,6 @@ const CustomerProblem = () => {
               transform: visible ? "translateY(0)" : "translateY(20px)",
             }}
           >
-            <span
-              className="font-mono text-[10px] tracking-widest uppercase block mb-4"
-              style={{ color: "#F36F21" }}
-            >
-              [THE CHALLENGE]
-            </span>
             <h2
               className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-6"
               style={{ color: "#3B3B39" }}
