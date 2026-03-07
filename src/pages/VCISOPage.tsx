@@ -36,7 +36,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import VCISOTimeline from "@/components/vciso/VCISOTimeline";
-import isoHeroImg from "@/assets/hero-boardroom.jpg";
+import vcisoHeroImg from "@/assets/vciso/vciso-hero.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
 import greyLogo from "@/assets/3F_Grey.png";
@@ -97,7 +97,7 @@ const VCISOPage = () => {
       <section className="relative min-h-[420px] flex items-center justify-center overflow-hidden pt-24 md:pt-32">
         <div className="absolute inset-0 z-0">
           <img
-            src={isoHeroImg}
+            src={vcisoHeroImg}
             alt=""
             className="w-full h-full object-cover"
             aria-hidden="true"
