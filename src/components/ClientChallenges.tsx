@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -295,13 +295,13 @@ const ClientChallenges = () => {
         >
           3<span style={{ color: "#F36F21" }}>FACTOR</span> Client Challenges
         </h2>
-        <ul className="text-lg leading-relaxed space-y-2 text-center" style={{ color: "rgba(59,59,57,0.7)" }}>
-          <li className="flex items-center justify-center gap-3">
-            <span style={{ color: "#6B7280" }} className="shrink-0 leading-[1.75rem]">–</span>
+        <ul className="inline-flex flex-col items-start space-y-3 text-lg leading-relaxed">
+          <li className="flex items-center gap-3">
+            <Check className="w-5 h-5 shrink-0" style={{ color: "#F36F21" }} />
             <span style={{ color: "#3B3B39" }}>We meet you where you are and guide you to the finish line.</span>
           </li>
-          <li className="flex items-center justify-center gap-3">
-            <span style={{ color: "#6B7280" }} className="shrink-0 leading-[1.75rem]">–</span>
+          <li className="flex items-center gap-3">
+            <Check className="w-5 h-5 shrink-0" style={{ color: "#F36F21" }} />
             <span style={{ color: "#3B3B39" }}>We assist you through every step, including the final audit as your representative.</span>
           </li>
         </ul>
