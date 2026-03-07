@@ -41,12 +41,6 @@ const ThreeFactorFramework = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <span
-            className="font-mono text-[10px] tracking-widest uppercase block mb-4"
-            style={{ color: "#F36F21" }}
-          >
-            [OUR PROCESS]
-          </span>
           <h2
             className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4"
             style={{ color: "#3B3B39" }}
