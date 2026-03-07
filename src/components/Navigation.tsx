@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, ArrowRight, Shield, FileCheck, UserCog, Lock, ChevronUp, Search, X, CreditCard, Layers, ShieldCheck } from "lucide-react";
+import { Menu, ArrowRight, Shield, FileCheck, UserCog, Lock, ChevronUp, Search, X, CreditCard, Layers, ShieldCheck, Compass, ShieldAlert, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -26,11 +26,14 @@ import Logo from "@/assets/3factor-grey-logo.png";
 
 /* ── Search data ── */
 const searchServices = [
-  { name: "ISO 27001", path: "/services/iso-27001", keywords: ["iso", "27001", "isms", "information security", "management system", "certification"], icon: Shield, description: "Information security management system certification & readiness" },
-  { name: "PCI DSS", path: "/services/pci-dss", keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data"], icon: CreditCard, description: "Payment card industry data security standard compliance" },
-  { name: "SOC 2", path: "/services/soc-2", keywords: ["soc", "soc2", "service org", "audit", "trust", "aicpa", "type 1", "type 2", "type ii"], icon: FileCheck, description: "Service organisation control reporting & trust assurance" },
-  { name: "CCF (Common Control Framework)", path: "/services/strategy-risk", keywords: ["ccf", "common control", "framework", "integrated", "unified", "mapping", "reuse"], icon: Layers, description: "Unified control framework to reduce duplication across standards" },
-  { name: "Cyber Essentials", path: "/services/cyber-essentials", keywords: ["cyber essentials", "ce", "ce+", "plus", "ncsc", "baseline", "basic"], icon: ShieldCheck, description: "UK government-backed baseline cyber security certification" },
+  { name: "ISO 27001", path: "/services/iso-27001", keywords: ["iso", "27001", "isms", "information security", "management system", "certification", "annex a", "iso certification", "isms buildout", "annex a controls", "8-10 month certification", "win more deals", "close rfps", "enterprise trust"], icon: Shield, description: "Information security management system certification & readiness" },
+  { name: "PCI DSS", path: "/services/pci-dss", keywords: ["pci", "dss", "payment", "credit card", "cardholder", "merchant", "transaction", "card data", "payment card security", "qsa", "qsa audit", "saq", "saq support", "roc", "roc assessment", "cde", "cde minimization", "scope reduction"], icon: CreditCard, description: "Payment card industry data security standard compliance" },
+  { name: "SOC 2", path: "/services/soc-2", keywords: ["soc", "soc2", "service org", "audit", "trust", "aicpa", "type 1", "type 2", "type ii", "service organization control", "trust services criteria", "saas audit", "saas audit readiness"], icon: FileCheck, description: "Service organisation control reporting & trust assurance" },
+  { name: "Cyber Essentials", path: "/services/cyber-essentials", keywords: ["cyber essentials", "ce", "ce+", "plus", "ncsc", "baseline", "basic", "cyber essentials plus", "uk government", "uk government certification", "iasme", "basic security hygiene", "government tender", "government tender requirements"], icon: ShieldCheck, description: "UK government-backed baseline cyber security certification" },
+  { name: "Virtual CISO", path: "/services/vciso", keywords: ["vciso", "virtual ciso", "outsourced ciso", "fractional security leadership", "fractional ciso", "sales enablement", "rfp support", "security white papers", "strategic growth engine", "security questionnaire", "security questionnaire help", "ciso advisory", "win more deals", "close rfps", "rfp black hole"], icon: UserCog, description: "Strategic security leadership that accelerates revenue & closes deals" },
+  { name: "Cyber Maturity", path: "/services/strategy", keywords: ["cyber maturity", "security posture", "security posture assessment", "cybersecurity gap analysis", "gap analysis", "maturity modeling", "maturity model", "strategic security roadmap", "security roadmap", "cmmc readiness", "cmmc"], icon: Compass, description: "Assess, benchmark, and elevate your organisation's security posture" },
+  { name: "Vendor Risk Management", path: "/services/strategy", keywords: ["vendor risk", "vendor risk management", "supply chain security", "supply chain", "third party risk", "third-party risk", "tprm", "vendor security vetting", "vendor vetting", "saas risk assessment", "saas risk", "vendor assessment"], icon: ShieldAlert, description: "Vet your supply chain so vendors don't become your liability" },
+  { name: "Cybersecurity Strategy", path: "/services/strategy", keywords: ["cybersecurity strategy", "security architecture", "strategic planning", "ciso advisory", "security governance", "board reporting", "security program", "security planning"], icon: Brain, description: "Board-level security governance & strategic architecture planning" },
 ];
 
 /* ── Mega-menu structure (4 columns) ── */
@@ -481,7 +484,7 @@ const Navigation = () => {
 
               {searchQuery.trim().length === 0 && (
                 <p className="mt-3 text-xs text-slate-400 text-center">
-                  Try searching: ISO, SOC 2, PCI, Credit Card, Cyber Essentials, CCF
+                  Try searching: ISO, SOC 2, PCI, vCISO, Cyber Maturity, Vendor Risk, Cyber Essentials
                 </p>
               )}
             </div>
