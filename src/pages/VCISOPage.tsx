@@ -40,6 +40,7 @@ import vcisoHeroImg from "@/assets/vciso/vciso-hero.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
 import tabletMeetingImg from "@/assets/vciso/tablet-meeting.png";
+import pitfallsMeetingImg from "@/assets/vciso/pitfalls-meeting.png";
 import greyLogo from "@/assets/3F_Logo_Grey.png";
 
 /* ─── Sub-Nav Links ─── */
@@ -682,7 +683,7 @@ const VCISOPage = () => {
 
             <div className="lg:col-span-5">
               <img
-                src={boardroomPresentationImg}
+                src={pitfallsMeetingImg}
                 alt="Strategic security leadership session"
                 className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
                 style={{ border: "1px solid rgba(0,0,0,0.1)" }}
