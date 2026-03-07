@@ -383,18 +383,15 @@ const VCISOPage = () => {
                </div>
 
               {/* Vault Card 3 */}
-              <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                    <Link2 className="w-5 h-5" style={{ color: "#F36F21" }} />
-                  </div>
-                  <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>3rd Party Risk Management</h4>
-                </div>
-                <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                  <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>We vet your vendors so your supply chain doesn't become your liability.</p>
-                </div>
-              </div>
+               <div className="border bg-white p-6" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                 <div className="flex items-center gap-3 mb-2">
+                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
+                     <Link2 className="w-5 h-5" style={{ color: "#F36F21" }} />
+                   </div>
+                   <h4 className="text-sm font-bold uppercase" style={{ color: "#3B3B39" }}>3rd Party Risk Management</h4>
+                 </div>
+                 <p className="text-xs leading-relaxed pt-2" style={{ color: "#5A5A58" }}>We vet your vendors so your supply chain doesn't become your liability.</p>
+               </div>
             </div>
 
             {/* CENTER: Vertical Divider / Engine Core */}
