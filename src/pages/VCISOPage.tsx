@@ -162,71 +162,44 @@ const VCISOPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
-            {/* Column 1: Accordion — The vCISO Advantage */}
-            <div className="px-6 lg:px-8">
-              <Accordion type="single" collapsible defaultValue="vciso-advantage">
-                <AccordionItem value="vciso-advantage" className="border-none">
-                  <AccordionTrigger className="py-0 hover:no-underline">
-                    <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                      THE <span className="normal-case">v</span>CISO ADVANTAGE
-                    </h3>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="mt-4 space-y-4">
-                      <Accordion type="multiple">
-                        <AccordionItem
-                          value="cost"
-                          className="border-b border-slate-200"
-                        >
-                          <AccordionTrigger className="text-sm font-semibold text-slate-800 hover:no-underline py-3">
-                            Cost-Efficiency
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                              A full-time CISO costs £180K–£250K+ before
-                              benefits. Our vCISO gives you the same
-                              board-level leadership at a fraction of the cost,
-                              with zero recruitment risk.
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem
-                          value="expertise"
-                          className="border-b border-slate-200"
-                        >
-                          <AccordionTrigger className="text-sm font-semibold text-slate-800 hover:no-underline py-3">
-                            Elite Expertise on Demand
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                              Access senior security professionals with 14+
-                              years of cross-industry experience. No ramp-up
-                              time, no learning on the job.
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem
-                          value="cross-pollination"
-                          className="border-b border-slate-200"
-                        >
-                          <AccordionTrigger className="text-sm font-semibold text-slate-800 hover:no-underline py-3">
-                            Industry Cross-Pollination
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                              We work across SaaS, fintech, healthcare, and
-                              critical infrastructure. Best practices from one
-                              sector become your competitive advantage in
-                              another.
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
+             {/* Column 1: The vCISO Advantage — Always Expanded */}
+             <div className="px-6 lg:px-8">
+               <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800 mb-4">
+                 THE <span className="normal-case">v</span>CISO ADVANTAGE
+               </h3>
+               <div className="space-y-4">
+                 <div className="border-b border-slate-200 pb-4">
+                   <h4 className="text-sm font-semibold text-slate-800 mb-2">
+                     Cost-Efficiency
+                   </h4>
+                   <p className="text-sm text-slate-600 leading-relaxed">
+                     A full-time CISO costs £180K–£250K+ before benefits. Our vCISO
+                     gives you the same board-level leadership at a fraction of the
+                     cost, with zero recruitment risk.
+                   </p>
+                 </div>
+                 <div className="border-b border-slate-200 pb-4">
+                   <h4 className="text-sm font-semibold text-slate-800 mb-2">
+                     Elite Expertise on Demand
+                   </h4>
+                   <p className="text-sm text-slate-600 leading-relaxed">
+                     Access senior security professionals with 14+ years of
+                     cross-industry experience. No ramp-up time, no learning on the
+                     job.
+                   </p>
+                 </div>
+                 <div>
+                   <h4 className="text-sm font-semibold text-slate-800 mb-2">
+                     Industry Cross-Pollination
+                   </h4>
+                   <p className="text-sm text-slate-600 leading-relaxed">
+                     We work across SaaS, fintech, healthcare, and critical
+                     infrastructure. Best practices from one sector become your
+                     competitive advantage in another.
+                   </p>
+                 </div>
+               </div>
+             </div>
 
             {/* Column 2: Eliminate Sales Friction card */}
             <div className="px-6 lg:px-8 border-t lg:border-t-0 lg:border-l lg:border-r border-slate-200 pt-8 lg:pt-0">
