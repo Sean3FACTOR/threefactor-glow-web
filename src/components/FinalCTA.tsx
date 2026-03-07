@@ -6,7 +6,7 @@ import muralBg from "@/assets/homepage/3f-mural-3.jpg";
 const FinalCTA = () => {
   return (
     <>
-      <section className="relative bg-cover bg-center py-22 md:py-32" style={{ backgroundImage: `url(${muralBg})` }}>
+      <section className="relative bg-cover bg-center py-23 md:py-34" style={{ backgroundImage: `url(${muralBg})` }}>
         <div className="absolute inset-0" style={{ background: "rgba(59,59,57,0.55)" }} />
         <div className="container mx-auto px-4 relative z-10 flex items-center justify-center">
           <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center text-center p-6 md:p-12" style={{ backgroundColor: "rgba(59,59,57,0.65)", border: "1px solid rgba(255,255,255,0.15)" }}>
