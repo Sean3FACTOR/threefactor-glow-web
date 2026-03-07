@@ -168,7 +168,7 @@ const VCISOPage = () => {
                 <AccordionItem value="vciso-advantage" className="border-none">
                   <AccordionTrigger className="py-0 hover:no-underline">
                     <h3 className="text-base md:text-lg font-bold uppercase tracking-wide text-slate-800">
-                      THE vCISO ADVANTAGE
+                      THE <span className="normal-case">v</span>CISO ADVANTAGE
                     </h3>
                   </AccordionTrigger>
                   <AccordionContent>
