@@ -38,6 +38,7 @@ import { Link } from "react-router-dom";
 import VCISOTimeline from "@/components/vciso/VCISOTimeline";
 import isoHeroImg from "@/assets/hero-boardroom.jpg";
 import consultationImg from "@/assets/services/boardroom-strategy.jpg";
+import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
@@ -679,7 +680,7 @@ const VCISOPage = () => {
 
             <div className="lg:col-span-5">
               <img
-                src={consultationImg}
+                src={boardroomPresentationImg}
                 alt="Strategic security leadership session"
                 className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
                 style={{ border: "1px solid rgba(0,0,0,0.1)" }}
