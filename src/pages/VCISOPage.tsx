@@ -41,7 +41,7 @@ import consultationImg from "@/assets/services/boardroom-strategy.jpg";
 import boardroomPresentationImg from "@/assets/vciso/boardroom-presentation.png";
 import tabletMeetingImg from "@/assets/vciso/tablet-meeting.png";
 import pitfallsMeetingImg from "@/assets/vciso/pitfalls-meeting.png";
-import greyLogo from "@/assets/3F_Logo_Grey.png";
+import greyLogo from "@/assets/3factor-grey-logo.png";
 
 /* ─── Sub-Nav Links ─── */
 const subNavLinks = [
