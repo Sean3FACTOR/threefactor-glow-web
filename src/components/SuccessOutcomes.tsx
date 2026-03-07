@@ -28,9 +28,8 @@ const SuccessOutcomes = () => {
           <p className="text-lg" style={{ color: "#3B3B39" }}>
             Walk into your next board meeting with proof, not promises.
           </p>
-        </div>
 
-        <h3 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase tracking-tight text-center" style={{ color: "#3B3B39" }}>
+
           What Success Looks Like
         </h3>
 
