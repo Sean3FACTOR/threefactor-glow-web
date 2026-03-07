@@ -84,13 +84,6 @@ const ThreeFactorFramework = () => {
                   STEP {i + 1}
                 </span>
 
-                {/* Icon */}
-                <div
-                  className="w-14 h-14 mx-auto flex items-center justify-center mb-6 transition-colors duration-300"
-                  style={{ backgroundColor: "rgba(243,111,33,0.08)" }}
-                >
-                  <Icon className="w-7 h-7" style={{ color: "#F36F21" }} />
-                </div>
 
                 {/* Title */}
                 <h3
