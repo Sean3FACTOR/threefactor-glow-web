@@ -78,7 +78,7 @@ const ThreeFactorFramework = () => {
               >
                 {/* Step Number */}
                 <span
-                  className="font-mono text-[30px] tracking-widest uppercase block mb-5"
+                  className="font-mono text-2xl tracking-widest uppercase block mb-5"
                   style={{ color: "#F36F21" }}
                 >
                   STEP {i + 1}
@@ -87,7 +87,7 @@ const ThreeFactorFramework = () => {
 
                 {/* Title */}
                 <h3
-                  className="text-2xl font-bold uppercase tracking-tight mb-3"
+                  className="text-[30px] font-bold uppercase tracking-tight mb-3"
                   style={{ color: "#3B3B39" }}
                 >
                   {step.title}
