@@ -87,7 +87,7 @@ const ThreeFactorFramework = () => {
 
                 {/* Title */}
                 <h3
-                  className="text-xl font-bold uppercase tracking-tight mb-3"
+                  className="text-2xl font-bold uppercase tracking-tight mb-3"
                   style={{ color: "#3B3B39" }}
                 >
                   {step.title}
