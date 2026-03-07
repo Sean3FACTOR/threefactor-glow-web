@@ -356,7 +356,7 @@ const VCISOPage = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <p className="text-xs font-mono uppercase tracking-[0.3em] mb-3" style={{ color: "#F36F21" }}>[SYS-DEL]</p>
+            
             <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: "#3B3B39" }}>
               THE 3<span style={{ color: "#F36F21" }}>FACTOR</span> vCISO DOUBLE-ENGINE
             </h2>
@@ -373,7 +373,7 @@ const VCISOPage = () => {
             {/* LEFT: The Security Vault */}
             <div className="flex flex-col gap-5 p-6 lg:p-8">
               <div className="flex items-center gap-3 mb-2">
-                <Lock className="w-5 h-5" style={{ color: "#F36F21" }} />
+                
                 <div>
                   <h3 className="text-lg font-bold uppercase" style={{ color: "#3B3B39" }}>The Security Vault</h3>
                   <p className="text-xs font-mono uppercase tracking-[0.2em]" style={{ color: "#5A5A58" }}>Technical Defence</p>
@@ -382,7 +382,7 @@ const VCISOPage = () => {
 
               {/* Vault Card 1 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-01] The Roadmap</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <Compass className="w-5 h-5" style={{ color: "#F36F21" }} />
@@ -396,7 +396,7 @@ const VCISOPage = () => {
 
               {/* Vault Card 2 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-02] The Blueprint</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <ShieldCheck className="w-5 h-5" style={{ color: "#F36F21" }} />
@@ -410,7 +410,7 @@ const VCISOPage = () => {
 
               {/* Vault Card 3 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[V-03] The Perimeter</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <Link2 className="w-5 h-5" style={{ color: "#F36F21" }} />
@@ -444,7 +444,7 @@ const VCISOPage = () => {
             {/* RIGHT: The Sales Accelerator */}
             <div className="flex flex-col gap-5 p-6 lg:p-8">
               <div className="flex items-center gap-3 mb-2">
-                <TrendingUp className="w-5 h-5" style={{ color: "#F36F21" }} />
+                
                 <div>
                   <h3 className="text-lg font-bold uppercase" style={{ color: "#3B3B39" }}>The Sales Accelerator</h3>
                   <p className="text-xs font-mono uppercase tracking-[0.2em]" style={{ color: "#5A5A58" }}>Commercial Offence</p>
@@ -453,7 +453,7 @@ const VCISOPage = () => {
 
               {/* Accelerator Card 1 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-01] The Narrative</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <Rocket className="w-5 h-5" style={{ color: "#F36F21" }} />
@@ -467,7 +467,7 @@ const VCISOPage = () => {
 
               {/* Accelerator Card 2 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-02] The Win</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <Trophy className="w-5 h-5" style={{ color: "#F36F21" }} />
@@ -481,7 +481,7 @@ const VCISOPage = () => {
 
               {/* Accelerator Card 3 */}
               <div className="group relative border bg-white p-6 transition-all duration-300 hover:border-[#F36F21] cursor-default" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
-                <p className="text-[10px] font-mono uppercase tracking-widest mb-3" style={{ color: "rgba(59,59,57,0.4)" }}>[A-03] The Closer</p>
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 flex items-center justify-center border" style={{ borderColor: "rgba(59,59,57,0.12)" }}>
                     <Headset className="w-5 h-5" style={{ color: "#F36F21" }} />
