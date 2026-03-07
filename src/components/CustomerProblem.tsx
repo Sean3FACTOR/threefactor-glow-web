@@ -79,7 +79,7 @@ const CustomerProblem = () => {
                   }}
                 >
                   <span
-                    className="text-sm font-bold uppercase tracking-tight"
+                    className="text-base font-bold uppercase tracking-tight"
                     style={{ color: "#3B3B39" }}
                   >
                     {b.text}
