@@ -170,7 +170,7 @@ const VCISOPage = () => {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="mt-4 space-y-4">
-                      <Accordion type="single" collapsible>
+                      <Accordion type="multiple">
                         <AccordionItem
                           value="cost"
                           className="border-b border-slate-200"
