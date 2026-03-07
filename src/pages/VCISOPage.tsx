@@ -21,6 +21,11 @@ import {
   UserCheck,
   Briefcase,
   TrendingUp,
+  Link2,
+  Settings,
+  Rocket,
+  Trophy,
+  Headset,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
