@@ -78,7 +78,7 @@ const ThreeFactorFramework = () => {
               >
                 {/* Step Number */}
                 <span
-                  className="font-mono text-2xl tracking-widest uppercase block mb-5"
+                  className="font-mono text-[22px] tracking-widest uppercase block mb-5"
                   style={{ color: "#F36F21" }}
                 >
                   STEP {i + 1}
