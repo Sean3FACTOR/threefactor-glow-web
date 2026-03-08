@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 const Privacy = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO title="Privacy Policy" description="Read the 3FACTOR privacy policy. Learn how we handle and protect your personal information." canonical="https://threefactor-glow-web.lovable.app/privacy" />
       <Navigation />
       
       <main className="pt-24 pb-16">

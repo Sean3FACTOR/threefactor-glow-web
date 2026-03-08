@@ -390,6 +390,7 @@ const CyberEssentialsPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Cyber Essentials Certification" description="Achieve UK Cyber Essentials and Cyber Essentials Plus certification with 3FACTOR. Fast-track your certification in as little as 6 weeks." canonical="https://threefactor-glow-web.lovable.app/services/cyber-essentials" />
       <Navigation />
 
       {/* ═══ HERO BANNER (Dark Gray) ═══ */}

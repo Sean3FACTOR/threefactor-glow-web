@@ -500,6 +500,7 @@ const PCIDSSPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="PCI DSS Compliance" description="Navigate PCI DSS v4.0 compliance with 3FACTOR. Expert QSA-led assessments, gap remediation, and SAQ/ROC preparation for merchants and service providers." canonical="https://threefactor-glow-web.lovable.app/services/pci-dss" />
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 

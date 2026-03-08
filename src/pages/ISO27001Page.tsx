@@ -530,6 +530,7 @@ const ISO27001Page = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="ISO 27001 Certification" description="Get ISO 27001 certified with 3FACTOR. We guide you through implementation, gap analysis, and Stage 1 & 2 audit preparation." canonical="https://threefactor-glow-web.lovable.app/services/iso-27001" />
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 
