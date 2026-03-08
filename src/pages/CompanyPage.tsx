@@ -43,6 +43,7 @@ const CompanyPage = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F9FAFB" }}>
+      <SEO title="About Us" description="Meet the 3FACTOR team — boutique cybersecurity consultants with deep expertise in cloud security, compliance, and risk management." canonical="https://threefactor-glow-web.lovable.app/company" />
       <Navigation />
 
       {/* ═══════════════════════════════════════
