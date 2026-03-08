@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -93,6 +94,7 @@ const VCISOPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Virtual CISO Services" description="Get executive-level cybersecurity leadership without the full-time cost. 3FACTOR vCISO services provide strategic direction, board reporting, and compliance oversight." canonical="https://threefactor-glow-web.lovable.app/services/vciso" />
       <Navigation />
 
       {/* ═══ HERO BANNER ═══ */}

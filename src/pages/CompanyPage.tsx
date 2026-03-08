@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import TeamGrid from "@/components/TeamGrid";
@@ -42,6 +43,7 @@ const CompanyPage = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F9FAFB" }}>
+      <SEO title="About Us" description="Meet the 3FACTOR team — boutique cybersecurity consultants with deep expertise in cloud security, compliance, and risk management." canonical="https://threefactor-glow-web.lovable.app/company" />
       <Navigation />
 
       {/* ═══════════════════════════════════════

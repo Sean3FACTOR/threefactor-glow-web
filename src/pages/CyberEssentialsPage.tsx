@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -389,6 +390,7 @@ const CyberEssentialsPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Cyber Essentials Certification" description="Achieve UK Cyber Essentials and Cyber Essentials Plus certification with 3FACTOR. Fast-track your certification in as little as 6 weeks." canonical="https://threefactor-glow-web.lovable.app/services/cyber-essentials" />
       <Navigation />
 
       {/* ═══ HERO BANNER (Dark Gray) ═══ */}

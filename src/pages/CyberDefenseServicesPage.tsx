@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight, UserCheck, Target, Users, Search, Compass, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,7 @@ const pillars = [
 const CyberDefenseServicesPage = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO title="Cyber Risk Advisory" description="Translate technical risk into executive strategy. 3FACTOR provides vCISO, board advisory, and compliance services to build stakeholder confidence." canonical="https://threefactor-glow-web.lovable.app/services/cyber-defense" />
       <Navigation />
       <BlueprintHero breadcrumb="Cyber Risk Advisory" headline="Translate Risk Into Strategy." subhead="Stop getting lost in translation. We turn technical complexity into executive confidence and Board-level clarity." ctaText="View Advisory Services" ctaLink="/contact" />
 

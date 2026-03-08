@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -54,6 +55,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO title="Contact Us" description="Get in touch with 3FACTOR for a free cybersecurity consultation. Schedule a discovery call to discuss compliance, vCISO, and cloud security needs." canonical="https://threefactor-glow-web.lovable.app/contact" />
       <Navigation />
 
       <main className="pt-20 pb-24">

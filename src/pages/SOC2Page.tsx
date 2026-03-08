@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -514,6 +515,7 @@ const SOC2Page = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="SOC 2 Compliance" description="Achieve SOC 2 Type I & II compliance with 3FACTOR. Expert-led readiness assessments, gap analysis, and audit preparation for growing businesses." canonical="https://threefactor-glow-web.lovable.app/services/soc-2" />
       <Navigation />
       <ProposalModal open={modalOpen} onOpenChange={setModalOpen} />
 

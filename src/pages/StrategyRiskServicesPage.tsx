@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,7 @@ const pillars = [
 const StrategyRiskServicesPage = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO title="Cloud Security Services" description="Secure your cloud foundation with 3FACTOR. Cloud architecture review, FedRAMP authorization, and security assessments from certified cloud security experts." canonical="https://threefactor-glow-web.lovable.app/services/strategy-risk" />
       <Navigation />
       <BlueprintHero breadcrumb="Cloud Security" headline="Secure Your Cloud Foundation." subhead="We don't just scan for bugs; we architect the environment. Build security into your infrastructure from day one." ctaText="See Cloud Solutions" ctaLink="/contact" />
 

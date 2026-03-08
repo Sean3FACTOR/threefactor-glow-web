@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ const methodologyPoints = [
 const CyberMaturityAWS = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO title="Cyber Maturity Assessment on AWS" description="Assess your AWS security posture with 3FACTOR. Our adaptable methodology identifies risks and recommends prioritized remediation using AWS security best practices." canonical="https://threefactor-glow-web.lovable.app/services/cyber-maturity-aws" />
       <Navigation />
       
       <main className="pt-24 pb-20">
