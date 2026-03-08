@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import HomepageHero from "@/components/HomepageHero";
 import TrustBar from "@/components/TrustBar";
