@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";

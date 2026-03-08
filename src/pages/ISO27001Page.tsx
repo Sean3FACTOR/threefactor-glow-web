@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";

@@ -15,6 +15,11 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F8F9FA" }}>
+      <SEO
+        title="Cybersecurity Consulting & Advisory"
+        description="3FACTOR is a boutique cybersecurity consultancy offering white-glove solutions, vCISO services, and compliance expertise for global organizations."
+        canonical="https://threefactor-glow-web.lovable.app/"
+      />
       <Navigation />
       <div className="pt-14">
         <HomepageHero />

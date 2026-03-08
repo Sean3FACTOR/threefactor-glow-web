@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight, Cloud, Code, ShieldCheck, Shield, FileStack } from "lucide-react";
 import { Button } from "@/components/ui/button";
