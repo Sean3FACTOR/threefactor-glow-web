@@ -41,6 +41,7 @@ import {
 import heroImg from "@/assets/cyber-essentials-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationImg from "@/assets/cyber-essentials-consultation.jpg";
+import consultationBottomImg from "@/assets/cyber-essentials-consultation-bottom.jpg";
 
 /* ─── Data ─── */
 const pillars = [
@@ -799,7 +800,7 @@ const CyberEssentialsPage = () => {
 
             <div className="lg:col-span-5">
               <img
-                src={consultationImg}
+                src={consultationBottomImg}
                 alt="Cyber Essentials compliance consultation"
                 className="w-full h-full object-cover shadow-md min-h-[350px] opacity-80"
                 style={{ border: "1px solid rgba(0,0,0,0.1)" }} />
