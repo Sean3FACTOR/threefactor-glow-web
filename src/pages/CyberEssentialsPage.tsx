@@ -492,7 +492,7 @@ const CyberEssentialsPage = () => {
                 <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">
                   "We don't just get you certified; we keep you certified with ongoing monitoring, automated patching, and a clear upgrade path."
                 </p>
-                <p className="text-xs text-slate-500 mt-2">3FACTOR — Cyber Essentials Team</p>
+                <p className="text-xs text-slate-500 mt-2">Marcus Atkins — Director of Compliance Services</p>
               </div>
             </div>
           </div>
