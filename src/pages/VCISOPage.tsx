@@ -253,6 +253,10 @@ const VCISOPage = () => {
                 alt="Boardroom strategy session"
                 className="w-full h-80 object-cover border border-slate-200"
               />
+              <div className="mt-4 p-5 shadow-xl max-w-[280px] bg-white border border-slate-200">
+                <p className="text-xs font-semibold text-[#3B3B39] leading-relaxed">"We don't just protect your business — we make security a reason prospects choose you over the competition."</p>
+                <p className="text-xs text-slate-500 mt-2">Spyro Malaspinas — Principal</p>
+              </div>
             </div>
           </div>
         </div>
