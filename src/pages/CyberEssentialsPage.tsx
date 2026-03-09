@@ -41,6 +41,7 @@ import {
 import heroImg from "@/assets/cyber-essentials-hero.jpg";
 import hexagonGraphic from "@/assets/hexagon-network-hero.png";
 import consultationImg from "@/assets/cyber-essentials-consultation.jpg";
+import consultationBottomImg from "@/assets/cyber-essentials-consultation-bottom.jpg";
 
 /* ─── Data ─── */
 const pillars = [
